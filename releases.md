@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-08-30T19:59:33.975Z
+date: 2019-08-31T15:27:16.332Z
 tags: 
 ---
 
@@ -21,7 +21,13 @@ Keycloak is now supported as an authentication strategy. Thanks to [@D4uS1](http
 
 ## Bug fixes / Minor Improvements
 
-- **Fixed:** Media Assets are now imported from Git.
+- **Fixed:** Markdown Editor scroll sync
+- **Fixed:** Insert Media Modal is now displayed correctly over the editor ([#992](https://github.com/Requarks/wiki/issues/992))
+- **Fixed:** Page Not Found buttons are now displayed properly ([#990](https://github.com/Requarks/wiki/issues/990))
+- **Fixed:** Vuetify not being transpiled for MS Edge ([#994](https://github.com/Requarks/wiki/issues/994))
+- **Fixed:** Missing MDI icons on the registration dialog ([#996](https://github.com/Requarks/wiki/issues/996))
+
+<!-- - **Fixed:** Media Assets are now imported from Git. -->
 
 # 2.0.0-beta.275
 
