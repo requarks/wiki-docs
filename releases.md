@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-08-31T15:27:16.332Z
+date: 2019-08-31T21:52:32.155Z
 tags: 
 ---
 
@@ -26,6 +26,7 @@ Keycloak is now supported as an authentication strategy. Thanks to [@D4uS1](http
 - **Fixed:** Page Not Found buttons are now displayed properly ([#990](https://github.com/Requarks/wiki/issues/990))
 - **Fixed:** Vuetify not being transpiled for MS Edge ([#994](https://github.com/Requarks/wiki/issues/994))
 - **Fixed:** Missing MDI icons on the registration dialog ([#996](https://github.com/Requarks/wiki/issues/996))
+- **Fixed:** Incorrect default language selected in page-selector for new pages ([#1005](https://github.com/Requarks/wiki/issues/1005))
 
 <!-- - **Fixed:** Media Assets are now imported from Git. -->
 
