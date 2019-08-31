@@ -2,22 +2,11 @@
 title: Git
 description: Storage Module
 published: true
-date: 2019-06-05T04:12:55.645Z
+date: 2019-08-31T01:13:45.704Z
 tags: 
 ---
 
 Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.
-
-- [Getting Started](#getting-started)
-- [Providers](#providers)
-	- [Azure DevOps](#azure-devops)
-	- [BitBucket](#bitbucket)
-	- [GitHub](#github)
-	- [GitLab](#gitlab)
-- [Common Scenarios](#common-scenarios)
-	- [Import Content](#import-content)
-  - [Missing Content in Remote Repository](#missing-content-in-remote-repository)
-- [Frequently Asked Questions](#frequently-asked-questions)
 
 # Getting Started
 
