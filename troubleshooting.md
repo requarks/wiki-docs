@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2019-08-04T17:26:58.260Z
+date: 2019-09-01T20:01:45.890Z
 tags: 
 ---
 
@@ -43,7 +43,7 @@ Save and Deploy.
 **Resolution**: You can change an existing user to use a `mysql_native_password` using:
 
 ```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
 ![](https://a.icons8.com/IMfhdRiW/YNcdYW/svg.svg){.align-abstopright}
