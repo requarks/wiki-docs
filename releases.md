@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-04T04:51:49.479Z
+date: 2019-09-04T04:52:22.362Z
 tags: 
 ---
 
@@ -17,7 +17,7 @@ These are the remaining tasks to complete before the final 2.0.0 release:
 - Move / Rename Page
 - Hide / Disable UI elements that are not ready
 
-*\* Items in bold are being worked on and will be available in the upcoming build (see below).*{.caption}
+*\* Items in bold are currently being worked on and will be available in the upcoming build (see below).*{.caption}
 
 # Upcoming Build
 
