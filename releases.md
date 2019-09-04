@@ -2,9 +2,22 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-01T02:00:54.085Z
+date: 2019-09-04T04:51:49.479Z
 tags: 
 ---
+
+# Release 2.0.0 Milestone
+
+These are the remaining tasks to complete before the final 2.0.0 release:
+
+- **Tags**
+- **Link States**
+- Import Images from Git repository
+- Save Rendering Configuration
+- Move / Rename Page
+- Hide / Disable UI elements that are not ready
+
+*\* Items in bold are being worked on and will be available in the upcoming build (see below).*{.caption}
 
 # Upcoming Build
 
@@ -13,7 +26,13 @@ tags:
 
 ## Tags
 
-- Coming soon
+Tags can now be added to any page to enable quick and simple categorization. These tags are displayed below the table of contents on every page.
+
+A new **Browse Tags** page can be accessed by a button next to the top search bar. A list of matching pages to your tags selection will be shown and these results can be filtered / sorted.
+
+## Link States
+
+Links are now rendered differently based on whether the destination is an external site or an internal page. Links to non-existant pages are shown in red.
 
 ## Keycloak Authentication Module
 
