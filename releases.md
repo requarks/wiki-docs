@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-04T04:52:22.362Z
+date: 2019-09-05T02:33:23.835Z
 tags: 
 ---
 
@@ -33,6 +33,10 @@ A new **Browse Tags** page can be accessed by a button next to the top search ba
 ## Link States
 
 Links are now rendered differently based on whether the destination is an external site or an internal page. Links to non-existant pages are shown in red.
+
+## Automatic Database Connection Retries on Start
+
+In scenarios like Docker Compose where the database might not be ready yet when the first connection from Wiki.js is made would previously crash and end the process. In this new build, Wiki.js will now attempt to reconnect up to **10 times**, with a **3 seconds delay** between each attempts, leaving plenty of time for the database to finish initializing.
 
 ## Keycloak Authentication Module
 
