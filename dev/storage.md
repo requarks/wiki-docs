@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-09-07T05:24:54.804Z
+date: 2019-09-07T05:34:10.481Z
 tags: 
 ---
 
@@ -34,6 +34,10 @@ schedule: false
 props:
   firstExampleProperty: String
   secondExampleProperty: Number
+actions:
+	- handler: firstAction
+    label: First Action Example
+    hint: Description of what this action does
 ```
 
 ### Properties
@@ -52,6 +56,10 @@ props:
 * **defaultMode**: The default value from the choices listed above. Usually `push`.
 * **schedule**: An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals) formatted time interval at which the sync function will be triggered or `false` to disable.
 * **props**: An object of user editable properties. See [Module Properties](/dev/module-properties) for more info.
+* **actions**: *(optional)* A list of manual actions the administrator can execute on this storage module.
+  * **handler**: Function name that will be called
+  * **label**: Pretty name of the function
+  * **hint**: Description of what the action does.
 
 ## storage.js
 
@@ -68,17 +76,20 @@ module.exports = {
   async init () {
   
   },
-  async created () {
+  async created (page) {
 ​
   },
-  async updated () {
+  async updated (page) {
 ​
   },
-  async deleted () {
+  async deleted (page) {
 ​
   },
-  async renamed () {
+  async renamed (page) {
 ​
+  },
+  async sync () {
+  
   }
 }
 ```
@@ -102,7 +113,7 @@ Any error thrown \(or returning a rejected promise\) will be reported to the use
 Upon deactivation of the storage module from the administration area. This is where you disconnect from the storage provider if required. You should **never delete any content** upon deactivation, as the user may choose to re-enable this storage strategy later or simply want to keep the current content as backup.
 
 ```javascript
-async deactivated (opts) { }
+async deactivated () { }
 ```
 
 **this.config** is an object containing the configuration of the storage strategy. See the [activated](#activated) event for more details.
@@ -114,7 +125,7 @@ Any error thrown \(or returning a rejected promise\) will be reported to the use
 Upon initialization of Wiki.js \(both startups or restarts\) and directly after the `activated` event. This is useful to establish a connection in some storage strategies.
 
 ```javascript
-async init (opts) { }
+async init () { }
 ```
 
 **this.config** is an object containing the configuration of the storage strategy. See the [activated](#activated) event for more details.
@@ -126,18 +137,23 @@ Any error thrown \(or returning a rejected promise\) will prevent the storage st
 Upon creation of a new page.
 
 ```javascript
-async created (opts) { }
+async created (page) { }
 ```
 
 Use **this** context inside the method to access following properties:
 
 ```javascript
 {
-    config: Object, // Object containing the storage configuration
-    mode: String, // Sync mode (push, pull or sync)
-    page: {
+    config: Object // Object containing the storage configuration
+}
+```
+
+The first argument **page**:
+
+```javascript
+    {
         id: Number, // Unique ID of the page
-        locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+        localeCode: String, // 2 letter code (e.g. en).
         path: String, // Unique path of the page (e.g. some/page)
         title: String, // Title of the page
         description: String, // Short description of the page
@@ -152,7 +168,6 @@ Use **this** context inside the method to access following properties:
         authorName: String, // The full name of the author
         authorEmail: String // The email address of the author
     }
-}
 ```
 
 Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being created internally.
@@ -162,7 +177,7 @@ Any error thrown \(or returning a rejected promise\) will be logged but will not
 Upon modification of a page contents.
 
 ```javascript
-async updated (opts) { }
+async updated (page) { }
 ```
 
 Use **this** context inside the method to access following properties:
@@ -198,7 +213,7 @@ Any error thrown \(or returning a rejected promise\) will be logged but will not
 Upon deletion of a page.
 
 ```javascript
-async deleted (opts) { }
+async deleted (page) { }
 ```
 
 Use **this** context inside the method to access following properties:
@@ -229,7 +244,7 @@ Any error thrown \(or returning a rejected promise\) will be logged but will not
 Upon rename of a page or when a page is moved to another location.
 
 ```javascript
-async renamed (opts) { }
+async renamed (page) { }
 ```
 
 Use **this** context inside the method to access following properties:
