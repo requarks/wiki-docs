@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-02-15T04:28:18.234Z
+date: 2019-09-07T05:24:54.804Z
 tags: 
 ---
 
@@ -22,7 +22,15 @@ This file contains information about your module.
 ```yaml
 key: example
 title: Example Storage
+description: A short description about Example Storage
 author: John Doe
+logo: https://../example.svg
+website: https://www.example.com/
+isAvailable: true
+supportedModes:
+	- push
+defaultMode: push
+schedule: false
 props:
   firstExampleProperty: String
   secondExampleProperty: Number
@@ -32,7 +40,17 @@ props:
 
 * **key**: A short, unique and camelCase-formatted name for this module. It must match exactly the module folder name!
 * **title**: The full name of the module.
+* **description**: A short description of the module.
 * **author**: The name of the author of the module.
+* **logo**: Absolute URL to the logo of the module provider. An SVG vector is required.
+* **website**: URL to the website of the module provider.
+* **isAvailable**: Whether the module can be activated / configured by the administrator.
+* **supportedModes**: A list of supported modes. Unless your module specifically supports bi-directional sync, only the `push` option should be listed. Possible values:
+	* `sync`: Content is first pulled from the storage target. Any newer content overwrites local content. New content since last sync is then pushed to the storage target, overwriting any content on target if present.
+  * `push`: Content is always pushed to the storage target, overwriting any existing content.
+  * `pull`: Content is always pulled from the storage target, overwriting any local content which already exists.
+* **defaultMode**: The default value from the choices listed above. Usually `push`.
+* **schedule**: An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals) formatted time interval at which the sync function will be triggered or `false` to disable.
 * **props**: An object of user editable properties. See [Module Properties](/dev/module-properties) for more info.
 
 ## storage.js
