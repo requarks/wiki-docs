@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-09-07T05:34:10.481Z
+date: 2019-09-07T05:37:58.646Z
 tags: 
 ---
 
@@ -184,8 +184,16 @@ Use **this** context inside the method to access following properties:
 
 ```javascript
 {
+    config: Object // Object containing the storage configuration
+}
+```
+
+The first argument **page**:
+
+```javascript
+{
     id: Number, // Unique ID of the page
-    locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+    localeCode: String, // 2 letter code (e.g. en).
     path: String, // Unique path of the page (e.g. some/page)
     title: String, // Title of the page
     description: String, // Short description of the page
@@ -220,8 +228,16 @@ Use **this** context inside the method to access following properties:
 
 ```javascript
 {
+    config: Object // Object containing the storage configuration
+}
+```
+
+The first argument **page**:
+
+```javascript
+{
     id: Number, // Unique ID of the page
-    locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+    localeCode: String, // 2 letter code (e.g. en).
     path: String, // Unique path of the page (e.g. some/page)
     title: String, // Title of the page
     description: String, // Short description of the page
@@ -251,8 +267,16 @@ Use **this** context inside the method to access following properties:
 
 ```javascript
 {
+    config: Object // Object containing the storage configuration
+}
+```
+
+The first argument **page**:
+
+```javascript
+{
     id: Number, // Unique ID of the page
-    locale: String, // 2 letter code (e.g. en). Empty if locale disabled
+    localeCode: String, // 2 letter code (e.g. en).
     sourcePath: String, // Previous path of the page (e.g. some/oldpage)
     destinationPath: String, // New path of the page (e.g. some/newpage)
     title: String, // Title of the page
