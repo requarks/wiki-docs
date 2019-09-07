@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-09-07T05:38:28.396Z
+date: 2019-09-07T05:41:20.609Z
 tags: 
 ---
 
@@ -299,3 +299,22 @@ The first argument **page** has the following properties:
 ```
 
 Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being renamed internally.
+
+### sync
+
+Upon schedule trigger.
+
+```javascript
+async sync () { }
+```
+
+Use **this** context inside the method to access following properties:
+
+```javascript
+{
+    config: Object, // Object containing the storage configuration
+    mode: String // The selected sync mode (sync, push or pull)
+}
+```
+
+Any error thrown \(or returning a rejected promise\) will be logged.
