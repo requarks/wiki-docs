@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-09-07T05:37:58.646Z
+date: 2019-09-07T05:38:28.396Z
 tags: 
 ---
 
@@ -148,7 +148,7 @@ Use **this** context inside the method to access following properties:
 }
 ```
 
-The first argument **page**:
+The first argument **page** has the following properties:
 
 ```javascript
     {
@@ -188,7 +188,7 @@ Use **this** context inside the method to access following properties:
 }
 ```
 
-The first argument **page**:
+The first argument **page** has the following properties:
 
 ```javascript
 {
@@ -232,7 +232,7 @@ Use **this** context inside the method to access following properties:
 }
 ```
 
-The first argument **page**:
+The first argument **page** has the following properties:
 
 ```javascript
 {
@@ -271,7 +271,7 @@ Use **this** context inside the method to access following properties:
 }
 ```
 
-The first argument **page**:
+The first argument **page** has the following properties:
 
 ```javascript
 {
