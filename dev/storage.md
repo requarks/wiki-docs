@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-09-07T05:41:20.609Z
+date: 2019-09-07T05:42:39.985Z
 tags: 
 ---
 
@@ -301,6 +301,8 @@ The first argument **page** has the following properties:
 Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being renamed internally.
 
 ### sync
+
+> *Should only be implemented if a schedule is defined in the module properties.*
 
 Upon schedule trigger.
 
