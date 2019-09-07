@@ -2,7 +2,7 @@
 title: Storage
 description: Developing storage modules
 published: true
-date: 2019-09-07T05:42:39.985Z
+date: 2019-09-07T16:00:04.223Z
 tags: 
 ---
 
@@ -94,7 +94,7 @@ module.exports = {
 }
 ```
 
-All methods are required and must be implemented.
+All methods are required and must be implemented unless specified otherwise.
 
 ### activated
 
