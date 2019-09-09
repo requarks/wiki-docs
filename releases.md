@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-09T01:33:52.237Z
+date: 2019-09-09T01:36:04.491Z
 tags: 
 ---
 
@@ -41,6 +41,10 @@ Links are now rendered differently based on whether the destination is an extern
 ## Automatic Database Connection Retries on Start
 
 In scenarios like Docker Compose where the database might not be ready yet when the first connection from Wiki.js is made would previously crash and end the process. In this new build, Wiki.js will now attempt to reconnect up to **10 times**, with a **3 seconds delay** between each attempts, leaving plenty of time for the database to finish initializing.
+
+## AWS S3 + DigitalOcean Spaces Storage Modules
+
+Content can now be backup to AWS S3 and DigitalOcean Spaces with these new modules! Thanks to [@andrewsim](https://github.com/andrewsim).
 
 ## Keycloak Authentication Module
 
