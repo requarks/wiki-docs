@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-05T02:33:23.835Z
+date: 2019-09-09T01:33:52.237Z
 tags: 
 ---
 
@@ -30,6 +30,10 @@ Tags can now be added to any page to enable quick and simple categorization. The
 
 A new **Browse Tags** page can be accessed by a button next to the top search bar. A list of matching pages to your tags selection will be shown and these results can be filtered / sorted.
 
+## Rich-Text Visual Editor
+
+In addition to the existing Markdown editor, you can now choose a WYSIWYG editor when creating new pages! Perfect for non-technical users or if you need to create complex tables.
+
 ## Link States
 
 Links are now rendered differently based on whether the destination is an external site or an internal page. Links to non-existant pages are shown in red.
@@ -44,6 +48,7 @@ Keycloak is now supported as an authentication strategy. Thanks to [@D4uS1](http
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Search results are now filtered according to the user access rights
 - **Fixed:** Markdown Editor scroll sync
 - **Fixed:** Insert Media Modal is now displayed correctly over the editor ([#992](https://github.com/Requarks/wiki/issues/992))
 - **Fixed:** Page Not Found buttons are now displayed properly ([#990](https://github.com/Requarks/wiki/issues/990))
