@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-09T01:36:04.491Z
+date: 2019-09-10T19:32:24.086Z
 tags: 
 ---
 
@@ -61,6 +61,7 @@ Keycloak is now supported as an authentication strategy. Thanks to [@D4uS1](http
 - **Fixed:** Local Disk Storage - non-default language entries would overwrite default language entries ([#1000](https://github.com/Requarks/wiki/issues/1000))
 - **Fixed:** Incorrect default language selected in page-selector for new pages ([#1005](https://github.com/Requarks/wiki/issues/1005))
 - **Fixed:** Links to anchors within the page now scrolls to target correctly ([#1006](https://github.com/Requarks/wiki/issues/1006))
+- **Fixed:** Create an account link is now hidden when selecting a non-local strategy that is using the form.
 - **Improvements:** Most recent pages are now listed in the admin dashboard.
 
 <!-- - **Fixed:** Media Assets are now imported from Git. -->
