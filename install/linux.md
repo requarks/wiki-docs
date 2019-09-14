@@ -2,7 +2,7 @@
 title: Linux
 description: Getting started with a Wiki.js installation on Linux
 published: true
-date: 2019-08-27T04:08:07.864Z
+date: 2019-09-14T19:55:33.850Z
 tags: 
 ---
 
