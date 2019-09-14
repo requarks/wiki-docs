@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-08-25T20:35:10.472Z
+date: 2019-09-14T19:55:14.660Z
 tags: 
 ---
 
