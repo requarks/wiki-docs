@@ -2,7 +2,7 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2019-07-20T03:09:53.852Z
+date: 2019-09-14T20:01:46.012Z
 tags: 
 ---
 
