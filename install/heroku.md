@@ -2,7 +2,7 @@
 title: Heroku
 description: Getting started with a Wiki.js installation on Heroku
 published: true
-date: 2019-06-08T16:49:00.781Z
+date: 2019-09-14T19:55:53.478Z
 tags: 
 ---
 
