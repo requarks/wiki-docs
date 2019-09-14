@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-10T23:43:57.705Z
+date: 2019-09-14T19:42:36.698Z
 tags: 
 ---
 
@@ -10,19 +10,21 @@ tags:
 
 These are the remaining tasks to complete before the final 2.0.0 release:
 
-- **Tags**
-- **Link States**
 - Import Images from Git repository
 - Save Rendering Configuration
 - Move / Rename Page
-- Hide / Disable UI elements that are not ready
-
-*\* Items in bold are currently being worked on and will be available in the upcoming build (see below).*{.caption}
 
 # Upcoming Build
 
 > This build is **under active development** and has not yet been released.
 {.is-warning}
+
+- TBD
+
+# 2.0.0-beta.303
+
+> Will be released on **September 14th, 2019**
+{.is-info}
 
 ## Tags
 
@@ -64,7 +66,12 @@ Keycloak is now supported as an authentication strategy. Thanks to [@D4uS1](http
 - **Fixed:** Create an account link is now hidden when selecting a non-local strategy that is using the form.
 - **Improvements:** Most recent pages are now listed in the admin dashboard.
 
-<!-- - **Fixed:** Media Assets are now imported from Git. -->
+## Links
+
+- [Installation](/install)
+- [Upgrade from previous Beta (Build 275)](/install/upgrade)
+
+Consider supporting this project by [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.0.0-beta.275
 
