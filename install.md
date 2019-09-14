@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-06-02T22:20:11.871Z
+date: 2019-09-14T19:54:49.676Z
 tags: 
 ---
 
