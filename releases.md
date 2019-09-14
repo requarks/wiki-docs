@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-14T19:42:36.698Z
+date: 2019-09-14T20:00:43.668Z
 tags: 
 ---
 
@@ -23,7 +23,7 @@ These are the remaining tasks to complete before the final 2.0.0 release:
 
 # 2.0.0-beta.303
 
-> Will be released on **September 14th, 2019**
+> Released on **September 14th, 2019**
 {.is-info}
 
 ## Tags
