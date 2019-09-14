@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2019-08-27T04:09:00.891Z
+date: 2019-09-14T19:58:05.650Z
 tags: 
 ---
 
@@ -62,7 +62,7 @@ docker-compose up --force-recreate
   ```
 4) Download the latest version of Wiki.js.
   ```bash
-  wget https://github.com/Requarks/wiki/releases/download/2.0.0-beta.275/wiki-js.tar.gz
+  wget https://github.com/Requarks/wiki/releases/download/2.0.0-beta.303/wiki-js.tar.gz
   ```
 5) Extract the package
   ```bash
@@ -98,7 +98,7 @@ docker-compose up --force-recreate
   ```
 5. Download the latest version of Wiki.js:
   ```powershell
-  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.0.0-beta.275/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
+  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.0.0-beta.303/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
 4. Extract the package to the final destination of your choice:
