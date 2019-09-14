@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-09-14T19:49:49.749Z
+date: 2019-09-14T19:51:19.519Z
 tags: 
 ---
 
@@ -52,7 +52,7 @@ Wiki.js is compatible with any of the following database systems:
 - PostgreSQL **9.5 or later**
 - SQLite **3.9 or later**
 
-> :ok_hand: We recommend **PostgreSQL** for best performance and features. Development of Wiki.js is done using PostgreSQL and will therefore have better support.
+> :ok_hand: We highly recommend **PostgreSQL** for best performance and features. Development of Wiki.js is done using PostgreSQL and will therefore have better support.
 {.is-success}
 
 > :warning: SQLite is **not recommended** for mid to large deployments of Wiki.js.
