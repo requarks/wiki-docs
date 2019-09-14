@@ -2,11 +2,11 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-06-22T21:36:28.735Z
+date: 2019-09-14T19:49:49.749Z
 tags: 
 ---
 
-# Host Requirements
+# Server Requirements
 
 Wiki.js runs on virtually any system where Node.js is supported.
 This means it runs on **Linux**, **macOS**, **Windows** as well as container solutions such as **Docker / Kubernetes** and **Heroku**.
@@ -27,23 +27,22 @@ Wiki.js will automatically check for new updates, languages, themes, etc. from t
 
 An alternate method of [sideloading files](/install/sideload) is also available if your environment is cut from the internet.
 
-# Software Requirements
+# Node.js
 
-## Node.js
-
-Node.js **10.12 or later** is required. Wiki.js will not run on older versions such as 8.x, 6.x or any version below 10.12!
+Node.js **10.12 or later** is required.
+*Wiki.js will not run on older versions such as 8.x, 6.x or any version below 10.12!*
 
 > :whale: **Using Docker?**
 > 
-> Skip this requirement! You don't need to install Node.js on your machine!
+> Skip this requirement! You don't need to install Node.js on your machine! It's included in the Docker image already.
 {.is-info}
 
-> :information_source: **Web Server**
+> :cloud: **Web Server**
 >
 > Wiki.js doesn't need any actual web server (such as nginx or Apache). However, you might need to put a reverse proxy in front of Wiki.js if you require advanced network / DNS configuration.
 {.is-warning}
 
-## Database
+# Database
 
 Wiki.js is compatible with any of the following database systems:
 
@@ -59,7 +58,7 @@ Wiki.js is compatible with any of the following database systems:
 > :warning: SQLite is **not recommended** for mid to large deployments of Wiki.js.
 {.is-warning}
 
-# End-User Requirements
+# Supported Browsers
 
 The following browsers are supported:
 
