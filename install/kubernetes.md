@@ -2,7 +2,7 @@
 title: Kubernetes
 description: Getting started with a Kubernetes installation using Helm Charts
 published: true
-date: 2019-03-31T01:25:30.582Z
+date: 2019-09-14T19:59:28.970Z
 tags: 
 ---
 
