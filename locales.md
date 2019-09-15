@@ -2,7 +2,7 @@
 title: Locales
 description: Language & Regional Settings
 published: true
-date: 2019-06-19T02:33:07.913Z
+date: 2019-09-15T02:41:01.575Z
 tags: 
 ---
 
