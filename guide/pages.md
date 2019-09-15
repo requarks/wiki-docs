@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2019-09-15T20:30:39.296Z
+date: 2019-09-15T20:31:16.659Z
 tags: 
 ---
 
@@ -13,7 +13,7 @@ tags:
 
 There're multiple ways to create a new pages:
 
-- From the **Page Menu**, located at the top-left corner of the page.
+- From the **New Page** button, located at the top-right corner of the page.
 - By clicking a link pointing to a non-existing page.
 - Manually type the path in the browser address bar.
 
