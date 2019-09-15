@@ -2,7 +2,7 @@
 title: AWS CloudSearch
 description: Search Engine Module
 published: true
-date: 2019-03-17T20:13:00.936Z
+date: 2019-09-15T02:43:38.607Z
 tags: 
 ---
 
