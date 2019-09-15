@@ -2,7 +2,7 @@
 title: Azure Search
 description: Search Engine Module
 published: true
-date: 2019-06-08T04:27:40.142Z
+date: 2019-09-15T02:43:58.623Z
 tags: 
 ---
 
