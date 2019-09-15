@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2019-08-16T17:24:31.746Z
+date: 2019-09-15T20:30:39.296Z
 tags: 
 ---
 
@@ -20,7 +20,7 @@ There're multiple ways to create a new pages:
 
 # Edit a Page
 
-You can edit an existing page by clicking the **Pencil** icon at the top-right corner of any page or using the **Page Menu**, located at the top-left corner of the page.
+You can edit an existing page by clicking the **Pencil** icon at the bottom-right corner of any page or using the **Page Menu**, located at the top-right corner of the page.
 
 The editor selected when first creating the page will be loaded automatically. Note that it's not possible to change editor once a page is created.
 
