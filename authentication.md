@@ -2,7 +2,7 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2019-07-20T15:10:35.968Z
+date: 2019-09-15T02:39:42.263Z
 tags: 
 ---
 
