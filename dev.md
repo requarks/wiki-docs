@@ -2,7 +2,7 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2019-09-14T20:01:46.012Z
+date: 2019-09-15T20:28:20.326Z
 tags: 
 ---
 
@@ -101,7 +101,7 @@ docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki --push 
 
 ## Prerequisites
 
-* All standard Wiki.js [prerequisites](../installation/prerequisites.md)
+* All standard Wiki.js [prerequisites](/install/requirements)
 * Yarn 1.x \(`npm i -g yarn`\)
 * Native compilation dependencies
   * Ubuntu:  `apt-get install build-essential`
