@@ -2,7 +2,7 @@
 title: Auth0
 description: Authentication Module
 published: true
-date: 2019-05-21T21:05:34.171Z
+date: 2019-09-15T02:38:37.784Z
 tags: 
 ---
 
