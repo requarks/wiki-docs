@@ -2,7 +2,7 @@
 title: Storage
 description: List of supported storage targets
 published: true
-date: 2019-07-20T03:24:15.036Z
+date: 2019-09-15T02:44:55.466Z
 tags: 
 ---
 
