@@ -2,7 +2,7 @@
 title: Algolia
 description: Search Engine Module
 published: true
-date: 2019-05-21T22:40:34.081Z
+date: 2019-09-15T02:43:22.304Z
 tags: 
 ---
 
