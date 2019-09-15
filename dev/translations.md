@@ -2,7 +2,7 @@
 title: Translations
 description: Contribute a new language or test new keys
 published: true
-date: 2019-07-20T03:30:03.989Z
+date: 2019-09-15T02:46:26.686Z
 tags: 
 ---
 
