@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-16T00:58:12.777Z
+date: 2019-09-16T15:08:57.324Z
 tags: 
 ---
 
@@ -35,6 +35,9 @@ A basic code editor for raw HTML is now available.
 
 > Released on **September 14th, 2019**
 {.is-info}
+
+> **Notice:** Avoid upgrading if you're using MS SQL Server as the database engine. A bug can render the wiki innaccessible. We are investigating the issue.
+{.is-danger}
 
 ## Tags
 
