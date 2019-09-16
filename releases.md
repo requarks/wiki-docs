@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-14T20:04:03.800Z
+date: 2019-09-16T00:58:12.777Z
 tags: 
 ---
 
@@ -19,7 +19,17 @@ These are the remaining tasks to complete before the final 2.0.0 release:
 > This build is **under active development** and has not yet been released.
 {.is-warning}
 
-- TBD
+## Migration Tool from Wiki.js 1.x
+
+It's now possible to migrate content, uploads and users from a Wiki.js 1.x installation using a quick easy to use tool.
+
+## Raw HTML Code Editor
+
+A basic code editor for raw HTML is now available.
+
+## Bug fixes / Minor Improvements
+
+- **Fixed:** Selection in search results is now readable with dark mode enabled.
 
 # 2.0.0-beta.303
 
