@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-16T15:08:57.324Z
+date: 2019-09-21T17:41:34.903Z
 tags: 
 ---
 
@@ -30,6 +30,11 @@ A basic code editor for raw HTML is now available.
 ## Bug fixes / Minor Improvements
 
 - **Fixed:** Selection in search results is now readable with dark mode enabled.
+- **Fixed:** Ignore mailto links from link processing ([#1041](https://github.com/Requarks/wiki/issues/1041))
+- **Fixed:** Restore Unicode chars from render for search content ([#1043](https://github.com/Requarks/wiki/issues/1043))
+- **Fixed:** Display Admin Link for all admin permissions ([#1052](https://github.com/Requarks/wiki/issues/1052))
+- **Fixed:** Replace mail password unless changed in Admin Mail settings ([#1053](https://github.com/Requarks/wiki/issues/1053))
+- **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file
 
 # 2.0.0-beta.303
 
