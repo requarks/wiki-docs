@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-21T17:41:34.903Z
+date: 2019-09-22T20:41:34.881Z
 tags: 
 ---
 
@@ -22,6 +22,10 @@ These are the remaining tasks to complete before the final 2.0.0 release:
 ## Migration Tool from Wiki.js 1.x
 
 It's now possible to migrate content, uploads and users from a Wiki.js 1.x installation using a quick easy to use tool.
+
+## Automated Upgrade for Docker installations
+
+Wiki.js can now upgrade itself to the latest version when using the Dockerized version. *The host docker socket must be mounted into the container for this feature to be available.* This will be the default in the upcoming DigitalOcean Marketplace image.
 
 ## Raw HTML Code Editor
 
