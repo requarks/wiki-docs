@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2019-09-15T02:49:40.335Z
+date: 2019-09-26T04:53:42.590Z
 tags: 
 ---
 
@@ -29,6 +29,33 @@ Save and Deploy.
 **Cause**: Wiki.js cannot be used / installed in a subfolder.
 
 **Resolution**: Use a sub-domain instead (e.g. `wiki.yourcompany.com`).
+
+# Error: Listening on port XX requires elevated privileges!
+
+**Cause**: Some Linux installations prevent Node.js from binding to ports in the lower range *(e.g. < 1024)*. This occurs if you set a port such as 80 in config.yml.
+
+**Solution A**: Allow the node process to safely access the port requested:
+
+```bash
+# Ubuntu / Debian
+
+sudo apt-get install libcap2-bin
+sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
+```
+
+**Solution B**: Create a port redirection rule: *(In the example below, you must set the port to 3000 in config.yml)*
+
+```bash
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+```
+
+**Solution C**: Use a web server in front of Wiki.js. For example, use nginx to listen to port 80 / 443 and proxy all requests to Wiki.js running on a higher port *(e.g. 3000)*.
+
+# Error: Port XX is already in use!
+
+**Cause**: Another program is already listening to this port.
+
+**Resolution**: Use another port for Wiki.js or look for applications that could be using this port (web servers, http applications, etc.) and stop them.
 
 # Links inside emails are incorrect
 
