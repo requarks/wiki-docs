@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-27T15:51:03.209Z
+date: 2019-09-27T17:52:32.793Z
 tags: 
 ---
 
@@ -30,6 +30,33 @@ Wiki.js can now upgrade itself to the latest version when using the Dockerized v
 ## Raw HTML Code Editor
 
 A basic code editor for raw HTML is now available.
+
+## PlantUML diagrams in the Markdown Editor
+
+You can now include PlantUML diagrams from the Markdown Editor. Thanks to [@ethanmdavidson](https://github.com/ethanmdavidson).
+
+Example:
+```
+@startuml
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
+
+@enduml
+```
 
 ## Bug fixes / Minor Improvements
 
