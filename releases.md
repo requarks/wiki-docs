@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-27T17:52:32.793Z
+date: 2019-09-27T19:02:30.282Z
 tags: 
 ---
 
@@ -66,6 +66,7 @@ deactivate A
 - **Fixed:** Display Admin Link for all admin permissions ([#1052](https://github.com/Requarks/wiki/issues/1052))
 - **Fixed:** Replace mail password unless changed in Admin Mail settings ([#1053](https://github.com/Requarks/wiki/issues/1053))
 - **Fixed:** System users and groups are now set a fixed ID during setup ([#1056](https://github.com/Requarks/wiki/issues/1056))
+- **Fixed:** 5-letters locales are now loaded properly ([#1062](https://github.com/Requarks/wiki/issues/1062))
 - **Fixed:** Code blocks are now readable in print view ([#1068](https://github.com/Requarks/wiki/issues/1068))
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
 - **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
