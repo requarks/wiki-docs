@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2019-09-14T20:02:17.348Z
+date: 2019-10-03T02:38:43.204Z
 tags: 
 ---
 
@@ -102,3 +102,4 @@ Error codes in the **6xxx** range are dedicated to pages / rendering errors.
 | 6002 | PageDuplicateCreate | Cannot create this page because an entry already exists at the same path. |
 | 6003 | PageNotFound | This page does not exist. |
 | 6004 | PageEmptyContent | Page content cannot be empty. |
+| 6005 | PageIllegalPath | Page path cannot contains illegal characters. |
