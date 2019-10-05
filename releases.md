@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-09-27T19:02:30.282Z
+date: 2019-10-05T20:50:02.683Z
 tags: 
 ---
 
@@ -68,6 +68,7 @@ deactivate A
 - **Fixed:** System users and groups are now set a fixed ID during setup ([#1056](https://github.com/Requarks/wiki/issues/1056))
 - **Fixed:** 5-letters locales are now loaded properly ([#1062](https://github.com/Requarks/wiki/issues/1062))
 - **Fixed:** Code blocks are now readable in print view ([#1068](https://github.com/Requarks/wiki/issues/1068))
+- **Improvements:** The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
 - **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
 
