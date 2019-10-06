@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-06T16:20:37.608Z
+date: 2019-10-06T16:25:47.850Z
 tags: 
 ---
 
@@ -72,9 +72,13 @@ deactivate A
 - **Fixed:** System users and groups are now set a fixed ID during setup ([#1056](https://github.com/Requarks/wiki/issues/1056))
 - **Fixed:** 5-letters locales are now loaded properly ([#1062](https://github.com/Requarks/wiki/issues/1062))
 - **Fixed:** Code blocks are now readable in print view ([#1068](https://github.com/Requarks/wiki/issues/1068))
+- **Fixed:** Removing a Page Rule now deletes the correct one ([#1083](https://github.com/Requarks/wiki/issues/1083))
+- **Fixed:** Admin Navigation drag-n-drop dependency update ([#1085](https://github.com/Requarks/wiki/issues/1085))
+- **Fixed:** Groups Delete dialog is now triggered properly ([#1088](https://github.com/Requarks/wiki/issues/1088))
 - **Improvements:** The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
 - **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
+- **Improvements:** Baidu Tongji analytics module is now available ([#1087](https://github.com/Requarks/wiki/pull/1087))
 
 # 2.0.0-beta.303
 
