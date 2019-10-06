@@ -2,17 +2,13 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-05T20:50:02.683Z
+date: 2019-10-06T16:20:37.608Z
 tags: 
 ---
 
-# Release 2.0.0 Milestone
+# Release Candidate
 
-These are the remaining tasks to complete before the final 2.0.0 release:
-
-- Import Images from Git repository
-- Save Rendering Configuration
-- Move / Rename Page
+The next build will be a release candidate. A stabilization period will follow to fix any last-minute bug. Should no major bugs be found, a final 2.0 release will be available shortly after.
 
 # Upcoming Build
 
@@ -23,9 +19,17 @@ These are the remaining tasks to complete before the final 2.0.0 release:
 
 It's now possible to migrate content, uploads and users from a Wiki.js 1.x installation using a quick easy to use tool.
 
+## Assets Export/Import for Storage Modules
+
+Assets are now exported / imported from storage modules alongside the pages.
+
+## Move / Rename a Page
+
+You can now move or rename an existing page.
+
 ## Automated Upgrade for Docker installations
 
-Wiki.js can now upgrade itself to the latest version when using the Dockerized version. *The host docker socket must be mounted into the container for this feature to be available.* This will be the default in the upcoming DigitalOcean Marketplace image.
+Wiki.js can now upgrade itself to the latest version when using the Dockerized version and a companion docker agent. This will be the default in the upcoming DigitalOcean Marketplace image. *More information coming soon.*
 
 ## Raw HTML Code Editor
 
