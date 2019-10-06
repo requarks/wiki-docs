@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-06T16:25:47.850Z
+date: 2019-10-06T19:08:19.808Z
 tags: 
 ---
 
@@ -70,6 +70,7 @@ deactivate A
 - **Fixed:** Display Admin Link for all admin permissions ([#1052](https://github.com/Requarks/wiki/issues/1052))
 - **Fixed:** Replace mail password unless changed in Admin Mail settings ([#1053](https://github.com/Requarks/wiki/issues/1053))
 - **Fixed:** System users and groups are now set a fixed ID during setup ([#1056](https://github.com/Requarks/wiki/issues/1056))
+- **Fixed:** Removed per-item upload process which would always upload to root folder ([#1058](https://github.com/Requarks/wiki/issues/1058))
 - **Fixed:** 5-letters locales are now loaded properly ([#1062](https://github.com/Requarks/wiki/issues/1062))
 - **Fixed:** Code blocks are now readable in print view ([#1068](https://github.com/Requarks/wiki/issues/1068))
 - **Fixed:** Removing a Page Rule now deletes the correct one ([#1083](https://github.com/Requarks/wiki/issues/1083))
