@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-07T04:02:15.877Z
+date: 2019-10-07T04:03:33.296Z
 tags: 
 ---
 
@@ -76,7 +76,7 @@ deactivate A
 - **Fixed:** Code blocks are now readable in print view ([#1068](https://github.com/Requarks/wiki/issues/1068))
 - **Fixed:** Removing a Page Rule now deletes the correct one ([#1083](https://github.com/Requarks/wiki/issues/1083))
 - **Fixed:** Admin Navigation drag-n-drop dependency update ([#1085](https://github.com/Requarks/wiki/issues/1085))
-- **Fixed:** Groups Delete dialog is now triggered properly ([#1088](https://github.com/Requarks/wiki/issues/1088))
+- **Fixed:** Groups Delete dialog is now triggered properly ([#1009](https://github.com/Requarks/wiki/issues/1009), [#1088](https://github.com/Requarks/wiki/issues/1088))
 - **Improvements:** The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
 - **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
