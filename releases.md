@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-06T19:08:19.808Z
+date: 2019-10-07T04:02:15.877Z
 tags: 
 ---
 
@@ -65,6 +65,7 @@ deactivate A
 ## Bug fixes / Minor Improvements
 
 - **Fixed:** Selection in search results is now readable with dark mode enabled.
+- **Fixed:** Git Actions no longer crash at missing getFileExtension method ([#1040](https://github.com/Requarks/wiki/issues/1040))
 - **Fixed:** Ignore mailto links from link processing ([#1041](https://github.com/Requarks/wiki/issues/1041))
 - **Fixed:** Restore Unicode chars from render for search content ([#1043](https://github.com/Requarks/wiki/issues/1043))
 - **Fixed:** Display Admin Link for all admin permissions ([#1052](https://github.com/Requarks/wiki/issues/1052))
