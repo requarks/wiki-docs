@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-13T01:11:32.603Z
+date: 2019-10-13T21:50:13.786Z
 tags: 
 ---
 
@@ -25,7 +25,7 @@ Assets are now exported / imported from storage modules alongside the pages.
 
 ## Move / Rename a Page
 
-You can now move or rename an existing page.
+You can now move or rename an existing page, both from a dedicated move dialog or when editing a page through the Page Properties dialog. It's also possible to move pages across locales.
 
 ## Automated Upgrade for Docker installations
 
