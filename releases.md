@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-07T04:03:33.296Z
+date: 2019-10-13T01:11:32.603Z
 tags: 
 ---
 
@@ -78,6 +78,7 @@ deactivate A
 - **Fixed:** Admin Navigation drag-n-drop dependency update ([#1085](https://github.com/Requarks/wiki/issues/1085))
 - **Fixed:** Groups Delete dialog is now triggered properly ([#1009](https://github.com/Requarks/wiki/issues/1009), [#1088](https://github.com/Requarks/wiki/issues/1088))
 - **Improvements:** The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
+- **Improvements:** The SRI hash for CSS/JS resources can now be enabled / disabled from the admin UI.
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
 - **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
 - **Improvements:** Baidu Tongji analytics module is now available ([#1087](https://github.com/Requarks/wiki/pull/1087))
