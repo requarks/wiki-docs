@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2019-10-13T18:37:24.416Z
+date: 2019-10-13T20:38:37.709Z
 tags: 
 ---
 
@@ -104,3 +104,7 @@ Error codes in the **6xxx** range are dedicated to pages / rendering errors.
 | 6004 | PageEmptyContent | Page content cannot be empty. |
 | 6005 | PageIllegalPath | Page path cannot contains illegal characters. |
 | 6006 | PagePathCollision | Destination page path already exists. |
+| 6007 | PageMoveForbidden | You are not authorized to move this page. |
+| 6008 | PageCreateForbidden | You are not authorized to create this page. |
+| 6009 | PageUpdateForbidden | You are not authorized to update this page. |
+| 6010 | PageDeleteForbidden | You are not authorized to delete this page. |
