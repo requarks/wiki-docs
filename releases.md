@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-14T06:57:47.055Z
+date: 2019-10-14T06:59:07.935Z
 tags: 
 ---
 
@@ -81,6 +81,7 @@ deactivate A
 - **Fixed:** Removing a Page Rule now deletes the correct one ([#1083](https://github.com/Requarks/wiki/issues/1083))
 - **Fixed:** Admin Navigation drag-n-drop dependency update ([#1085](https://github.com/Requarks/wiki/issues/1085))
 - **Fixed:** Groups Delete dialog is now triggered properly ([#1009](https://github.com/Requarks/wiki/issues/1009), [#1088](https://github.com/Requarks/wiki/issues/1088))
+- **Fixed:** Page mutations are now checked against the group page rules in addition to global permissions.
 - **Improvements:** The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
 - **Improvements:** The SRI hash for CSS/JS resources can now be enabled / disabled from the admin UI.
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
