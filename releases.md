@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-14T07:17:26.380Z
+date: 2019-10-15T04:00:28.784Z
 tags: 
 ---
 
@@ -78,6 +78,7 @@ deactivate A
 - **Fixed:** Removed per-item upload process which would always upload to root folder ([#1058](https://github.com/Requarks/wiki/issues/1058))
 - **Fixed:** 5-letters locales are now loaded properly ([#1062](https://github.com/Requarks/wiki/issues/1062))
 - **Fixed:** Code blocks are now readable in print view ([#1068](https://github.com/Requarks/wiki/issues/1068))
+- **Fixed:** Prevent duplicate group assignment ([#1081](https://github.com/Requarks/wiki/issues/1081))
 - **Fixed:** Removing a Page Rule now deletes the correct one ([#1083](https://github.com/Requarks/wiki/issues/1083))
 - **Fixed:** Admin Navigation drag-n-drop dependency update ([#1085](https://github.com/Requarks/wiki/issues/1085))
 - **Fixed:** Groups Delete dialog is now triggered properly ([#1009](https://github.com/Requarks/wiki/issues/1009), [#1088](https://github.com/Requarks/wiki/issues/1088))
