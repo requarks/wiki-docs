@@ -2,18 +2,21 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-15T04:00:28.784Z
+date: 2019-10-21T00:15:28.219Z
 tags: 
 ---
 
 # Release Candidate
 
-The next build will be a release candidate. A stabilization period will follow to fix any last-minute bug. Should no major bugs be found, a final 2.0 release will be available shortly after.
+The first release candidate is now available. A stabilization period is now in effect to fix any last-minute bug. Should no major bugs be found, a final 2.0 release will be available shortly.
 
-# Upcoming Build
+<!-- > This build is **under active development** and has not yet been released.
+{.is-warning} -->
 
-> This build is **under active development** and has not yet been released.
-{.is-warning}
+# 2.0.0-rc.1
+
+> Released on **October 20th, 2019**
+{.is-info}
 
 ## Migration Tool from Wiki.js 1.x
 
