@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-21T00:15:28.219Z
+date: 2019-10-21T05:17:18.666Z
 tags: 
 ---
 
@@ -69,6 +69,26 @@ deactivate A
 @enduml
 ```
 
+@startuml
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
+
+@enduml
+
 ## Bug fixes / Minor Improvements
 
 - **Fixed:** Selection in search results is now readable with dark mode enabled.
@@ -91,6 +111,13 @@ deactivate A
 - **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
 - **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
 - **Improvements:** Baidu Tongji analytics module is now available ([#1087](https://github.com/Requarks/wiki/pull/1087))
+
+## Links
+
+- [Installation](/install)
+- [Upgrade from previous Beta (Build 303)](/install/upgrade)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.0.0-beta.303
 
