@@ -2,12 +2,9 @@
 title: Telemetry
 description: Help us improve Wiki.js!
 published: true
-date: 2019-06-30T20:54:47.633Z
+date: 2019-10-23T01:43:18.259Z
 tags: 
 ---
-
-> **Note that Telemetry is on by default during the beta.**
-{.is-warning}
 
 # What is telemetry?
 Telemetry allows the developers of Wiki.js to improve the software by collecting basic **anonymized** data about its usage and the host info.
