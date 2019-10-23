@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-21T05:17:18.666Z
+date: 2019-10-23T02:07:15.905Z
 tags: 
 ---
 
@@ -10,8 +10,14 @@ tags:
 
 The first release candidate is now available. A stabilization period is now in effect to fix any last-minute bug. Should no major bugs be found, a final 2.0 release will be available shortly.
 
-<!-- > This build is **under active development** and has not yet been released.
-{.is-warning} -->
+# Upcoming Unreleased RC
+
+> This build is **under active development** and has not yet been released.
+{.is-warning}
+
+## Bug fixes / Minor Improvements
+
+- **Fixed:** Page delete no longer produce a pageTree foreign key error ([#1119](https://github.com/Requarks/wiki/issues/1119))
 
 # 2.0.0-rc.1
 
