@@ -35,6 +35,9 @@ Before going any further, make sure your system meets all the [requirements](/in
 6. Wait until you are invited to open to the setup page in your browser.
 7. Complete the setup wizard to finish the installation.
 
+> Note that if you're using SQLite, you need to install the linux native bindings for SQLite by running `npm rebuild` from the Terminal.
+{.is-warning}
+
 # Run as service
 
 There are several solutions to run Wiki.js as a background service. We'll focus on **systemd** in this guide as it's available in nearly all linux distributions.
