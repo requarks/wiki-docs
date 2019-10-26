@@ -2,7 +2,7 @@
 title: Linux
 description: Getting started with a Wiki.js installation on Linux
 published: true
-date: 2019-10-21T00:16:32.532Z
+date: 2019-10-26T15:42:12.541Z
 tags: 
 ---
 
@@ -28,12 +28,16 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```bash
   nano config.yml
   ```
-5. Run Wiki.js
+5. ***For SQLite installations only:*** *(skip this step otherwise)* Fetch native bindings for SQLite3:
+  ```bash
+  npm rebuild sqlite3
+  ```
+6. Run Wiki.js
   ```bash
   node server
   ```
-6. Wait until you are invited to open to the setup page in your browser.
-7. Complete the setup wizard to finish the installation.
+7. Wait until you are invited to open to the setup page in your browser.
+8. Complete the setup wizard to finish the installation.
 
 # Run as service
 
