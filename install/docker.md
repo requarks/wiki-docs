@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-09-14T19:55:14.660Z
+date: 2019-10-26T15:46:46.022Z
 tags: 
 ---
 
@@ -68,8 +68,6 @@ services:
       driver: "none"
     volumes:
       - db-data:/var/lib/postgresql/data
-    networks:
-      - wikinet
 
   wiki:
     image: requarks/wiki:beta
@@ -82,13 +80,8 @@ services:
       DB_USER: wikijs
       DB_PASS: wikijsrocks
       DB_NAME: wiki
-    networks:
-      - wikinet
     ports:
       - "3000:3000" # <-- here you can replace with "80:3000" to listen on port 80 instead, as an example
-
-networks:
-  wikinet:
 
 volumes:
   db-data:
