@@ -2,7 +2,7 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2019-10-21T00:16:59.070Z
+date: 2019-10-26T15:42:46.991Z
 tags: 
 ---
 
@@ -36,12 +36,16 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```powershell
   notepad .\config.yml
   ```
-7. Run Wiki.js
+7. ***For SQLite installations only:*** *(skip this step otherwise)* Fetch native bindings for SQLite3:
+  ```bash
+  npm rebuild sqlite3
+  ```
+8. Run Wiki.js
   ```powershell
   node server
   ```
-8. Wait until you are invited to open to the setup page in your browser.
-9. Complete the setup wizard to finish the installation.
+9. Wait until you are invited to open to the setup page in your browser.
+10. Complete the setup wizard to finish the installation.
 
 # Run as service
 
