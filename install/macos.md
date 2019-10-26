@@ -2,7 +2,7 @@
 title: macOS
 description: Getting started with a Wiki.js installation on macOS
 published: true
-date: 2019-10-26T03:52:21.901Z
+date: 2019-10-26T15:41:42.974Z
 tags: 
 ---
 
@@ -29,15 +29,17 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```bash
   nano config.yml
   ```
-6. Run Wiki.js
+6. ***For SQLite installations only:*** *(skip this step otherwise)* Fetch native bindings for SQLite3:
+  ```bash
+  npm rebuild sqlite3
+  ```
+
+7. Run Wiki.js
   ```bash
   node server
   ```
-7. Wait until you are invited to open to the setup page in your browser.
-8. Complete the setup wizard to finish the installation.
-
-> Note that if you're using SQLite, you need to install the macOS native bindings for SQLite by running `npm rebuild` from the Terminal.
-{.is-warning}
+8. Wait until you are invited to open to the setup page in your browser.
+9. Complete the setup wizard to finish the installation.
 
 # Run as service
 
