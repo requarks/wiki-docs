@@ -2,7 +2,7 @@
 title: Azure Web App
 description: Installation Guide
 published: true
-date: 2019-09-14T19:58:40.074Z
+date: 2019-10-26T03:48:22.593Z
 tags: 
 ---
 
@@ -59,6 +59,7 @@ We can now create the App Service where our wiki will run.
 	 ```
    DB_TYPE: postgres
    DB_HOST: xyz.postgres.database.azure.com
+   DB_PORT: 5432
    DB_NAME: postgres
    DB_USER: xyz@xyz
    DB_PASS: xyz
