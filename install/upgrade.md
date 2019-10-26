@@ -2,13 +2,13 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2019-10-26T15:55:44.509Z
+date: 2019-10-26T16:36:21.597Z
 tags: 
 ---
 
-> :warning: **DO NOT** upgrade from `1.0.x` using these instructions! The upgrade procedure for `1.0.x` installations will come at a later date.
+> :warning: **DO NOT** upgrade from `1.0.x` using these instructions! Use the [Migrate from Wiki.js v1.x](/install/migrate) instructions instead.
 >
-> These instructions are for `2.0.0-beta.11` or later installations.
+> These instructions are for `2.x` installations.
 {.is-danger}
 
 **Choose your platform:**
