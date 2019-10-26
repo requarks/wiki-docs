@@ -2,7 +2,7 @@
 title: macOS
 description: Getting started with a Wiki.js installation on macOS
 published: true
-date: 2019-10-26T03:45:42.693Z
+date: 2019-10-26T03:52:21.901Z
 tags: 
 ---
 
