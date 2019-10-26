@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-26T03:59:44.754Z
+date: 2019-10-26T20:52:44.807Z
 tags: 
 ---
 
@@ -17,9 +17,11 @@ The first release candidate is now available. A stabilization period is now in e
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Nested lists are now indented correctly ([#1114](https://github.com/Requarks/wiki/issues/1114))
 - **Fixed:** Page delete no longer produce a pageTree foreign key error ([#1119](https://github.com/Requarks/wiki/issues/1119))
 - **Fixed:** MSSQL setup, pageTree, page delete, asset folders queries are now working ([#1125](https://github.com/Requarks/wiki/issues/1125), [#1141](https://github.com/Requarks/wiki/issues/1141))
 - **Fixed:** Analytics modules var replace is now made globally ([#1129](https://github.com/Requarks/wiki/issues/1129))
+- **Fixed:** Setup retries now correctly reset the table IDs to 0.
 - **Improvements:** dataPath variable can now be specified as the data folder location in config.yml ([#1118](https://github.com/Requarks/wiki/issues/1118))
 
 # 2.0.0-rc.1
