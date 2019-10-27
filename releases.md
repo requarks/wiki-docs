@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-26T20:52:44.807Z
+date: 2019-10-27T18:02:05.988Z
 tags: 
 ---
 
@@ -17,6 +17,7 @@ The first release candidate is now available. A stabilization period is now in e
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Azure AD will now fallback to preferred_username if email field is missing ([#1050](https://github.com/Requarks/wiki/issues/1050))
 - **Fixed:** Nested lists are now indented correctly ([#1114](https://github.com/Requarks/wiki/issues/1114))
 - **Fixed:** Page delete no longer produce a pageTree foreign key error ([#1119](https://github.com/Requarks/wiki/issues/1119))
 - **Fixed:** MSSQL setup, pageTree, page delete, asset folders queries are now working ([#1125](https://github.com/Requarks/wiki/issues/1125), [#1141](https://github.com/Requarks/wiki/issues/1141))
