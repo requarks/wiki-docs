@@ -8,7 +8,7 @@ tags:
 
 Module properties are settings that can be changed by the user from the administration area.
 
-A property must be in **camelCase**. They must be assigned a `type`, and optionally a `default` value, `title`, `hint` and `enum` list.
+A property must be in **camelCase**. They must be assigned a `type`, and optionally a `default` value, `title`, `hint`, `enum` list, `multiline`, and `order`.
 
 ## Property Types
 
@@ -33,12 +33,15 @@ props:
         title: 'Property Title'
         hint: 'An explanation of the field.'
     propertyWithEnumList:
-        type: String,
+        type: String
         default: 'first'
         enum:
             - 'first'
             - 'second'
             - 'third'
+    propertyWithMultiline:
+        type: String
+        multiline: true
 ```
 
 ## Options
@@ -57,7 +60,7 @@ The default value is **optional**. If omitted, the type default value will be in
 
 ### enum
 
-The enum value is **optional**. If provided, it must be an **array of strings**. A dropdown select will be presented to the user with the values of the array as possible choices. When using enum, the `default` value must be provided as well.
+The enum value is **optional** and only applies to properties with type String. If provided, it must be an **array of strings**. A dropdown select will be presented to the user with the values of the array as possible choices. When using enum, the `default` value must be provided as well.
 
 ### title
 
@@ -65,4 +68,12 @@ The title value is **optional**. If omitted, the title will be inferred from the
 
 ### hint
 
-The hint value is **optional**. The hint is displayed below the text field to provide the user with helpful info.
+The hint value is **optional**. The hint is displayed below the text field to provide the user with helpful info. If omitted, no hint will be displayed.
+
+### multiline
+
+The multiline value is **optional** and only applies to properties with type String. If this is `true` then a multiline textarea will be used instead of a single-line text field. If both enum and multiline properties are specified, multiline property will be ignored. If omitted, defaults to `false`.
+
+### order
+
+The order value is **optional**. This value controls the order in which properties are displayed. If two values have the same order, ties will be broken by the order they appear in definition.yml. If omitted, defaults to 100. 
