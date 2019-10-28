@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-28T01:13:16.748Z
+date: 2019-10-28T01:16:12.874Z
 tags: 
 ---
 
@@ -10,10 +10,15 @@ tags:
 
 The first release candidate is now available. A stabilization period is now in effect to fix any last-minute bug. Should no major bugs be found, a final 2.0 release will be available shortly.
 
-# Upcoming Unreleased RC
+<!-- # Upcoming Unreleased RC -->
 
-> This build is **under active development** and has not yet been released.
-{.is-warning}
+<!-- > This build is **under active development** and has not yet been released.
+{.is-warning} -->
+
+# 2.0.0-rc.17
+
+> Released on **October 27th, 2019**
+{.is-info}
 
 ## Bug fixes / Minor Improvements
 
@@ -27,6 +32,13 @@ The first release candidate is now available. A stabilization period is now in e
 - **Fixed:** Tags are now exported and imported during storage events ([#1149](https://github.com/Requarks/wiki/issues/1149))
 - **Fixed:** Setup retries now correctly reset the table IDs to 0
 - **Improvements:** dataPath variable can now be specified as the data folder location in config.yml ([#1118](https://github.com/Requarks/wiki/issues/1118))
+
+## Links
+
+- [Installation](/install)
+- [Upgrade from previous RC / Beta](/install/upgrade)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.0.0-rc.1
 
