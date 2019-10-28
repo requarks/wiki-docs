@@ -2,8 +2,8 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2019-10-26T15:42:46.991Z
-tags: 
+date: 2019-10-28T01:30:26.222Z
+tags: setup
 ---
 
 Before going any further, make sure your system meets all the [requirements](/install/requirements).
@@ -17,7 +17,7 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```
 3. Download the latest version of Wiki.js:
   ```powershell
-  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.0.0-rc.1/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
+  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.0.0-rc.17/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
 4. Extract the package to the final destination of your choice:
