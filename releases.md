@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-31T03:25:25.075Z
+date: 2019-10-31T04:19:47.039Z
 tags: 
 ---
 
@@ -19,6 +19,8 @@ The first release candidate is now available. A stabilization period is now in e
 
 - **Fixed:** HTML tags are now properly transformed into spaces for search analysis ([#1160](https://github.com/Requarks/wiki/issues/1160))
 - **Fixed:** Text is now selectable in Admin - System Info ([#1161](https://github.com/Requarks/wiki/issues/1161))
+- **Fixed:** Locale is no longer prefixed to links when using system links ([#1165](https://github.com/Requarks/wiki/issues/1165))
+- **Fixed:** Locale is no longer prefixed to links when namespacing is off ([#1166](https://github.com/Requarks/wiki/issues/1166))
 
 
 # 2.0.0-rc.17
