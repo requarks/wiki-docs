@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-31T03:13:15.490Z
+date: 2019-10-31T03:25:25.075Z
 tags: 
 ---
 
@@ -17,6 +17,7 @@ The first release candidate is now available. A stabilization period is now in e
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** HTML tags are now properly transformed into spaces for search analysis ([#1160](https://github.com/Requarks/wiki/issues/1160))
 - **Fixed:** Text is now selectable in Admin - System Info ([#1161](https://github.com/Requarks/wiki/issues/1161))
 
 
