@@ -2,15 +2,15 @@
 title: Translations
 description: Contribute a new language or test new keys
 published: true
-date: 2019-09-15T02:46:26.686Z
-tags: 
+date: 2019-11-02T00:23:35.367Z
+tags: dev, localization
 ---
 
 # Contribute a new language
 
 We are always looking for translation contributors to make Wiki.js accessible in as many language as possible!
 
-Contact us on [Slack](https://wiki.requarks.io/slack) to request access to the translation tools. No coding required!
+You can [join the project](https://lokalise.com/public/2994254859f751ea605a00.03473540/) to gain access to the translation tools. No coding required! Feel free to contact us on [Slack](https://wiki.requarks.io/slack) if you have any questions!
 
 # Development Mode
 
