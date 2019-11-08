@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-11-08T17:37:34.804Z
+date: 2019-11-08T20:14:03.910Z
 tags: 
 ---
 
@@ -33,12 +33,13 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 
 ## Modules
 Modules greatly expand the capabilities of your wiki.
-- :lock: [Authentication](/authentication): Configure how users can login and register to your wiki.
-- :pencil: [Editors](/editors): Manage the various editors used to create content.
-- :clipboard: [Logging](/logging): Forward logs to external logging services.
-- :hourglass: [Rendering](/rendering): Configure how content is parsed and rendered into its readable form.
-- :mag: [Search Engines](/search): Manage the search capabilities of your wiki.
-- :floppy_disk: [Storage](/storage): Backup or sync the content of your wiki with external storage services.
+- [:lock: Authentication *Configure how users can login and register to your wiki.*](/authentication)
+- [:pencil: Editors *Manage the various editors used to create content.*](/editors)
+- [:clipboard: Logging *Forward logs to external logging services.*](/logging)
+- [:hourglass: Rendering *Configure how content is parsed and rendered into its readable form.*](/rendering)
+- [:mag: Search Engines *Manage the search capabilities of your wiki.*](/search)
+- [:floppy_disk: Storage *Backup or sync the content of your wiki with external storage services.*](/storage)
+{.links-list}
 
 # Developers
 
