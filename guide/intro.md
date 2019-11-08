@@ -2,7 +2,7 @@
 title: Introduction to Wiki.js
 description: How to create your first page and more
 published: true
-date: 2019-11-08T19:25:04.371Z
+date: 2019-11-08T20:08:42.032Z
 tags: 
 ---
 
@@ -45,3 +45,6 @@ The following dialog will appear:
 3. Click **Select** to proceed.
 
 ## Select an Editor
+
+When creating a new page, you'll be prompted with the following dialog:
+![Select Editor Dialog](/assets/ui/ui-selecteditor-dialog.png =600x){.decor-shadow .radius-5}
