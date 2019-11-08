@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-09-14T19:53:42.848Z
+date: 2019-11-08T17:37:34.804Z
 tags: 
 ---
 
@@ -17,6 +17,12 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 - Follow the quick and simple [installation guide](/install).
 - Using **Docker**? Use the [Docker installation guide](/install/docker) instead.
 - Using **Heroku**? Use the [Heroku installation guide](/install/heroku) instead.
+
+# User Guide
+
+- [Creating your first page *New to Wiki.js? Learn how to use it.*](/guide/intro)
+- [Tags & Folder Structure *Learn how to categorize your pages for an easier browsing experience.*](/guide/tags)
+{.links-list}
 
 # Administration
 
@@ -33,10 +39,6 @@ Modules greatly expand the capabilities of your wiki.
 - :hourglass: [Rendering](/rendering): Configure how content is parsed and rendered into its readable form.
 - :mag: [Search Engines](/search): Manage the search capabilities of your wiki.
 - :floppy_disk: [Storage](/storage): Backup or sync the content of your wiki with external storage services.
-
-# User Guide
-
-- :bookmark: [Tags & Categorization](/guide/tags): Learn how to categorize your pages for an easier browsing experience.
 
 # Developers
 
