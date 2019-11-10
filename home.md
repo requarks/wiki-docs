@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-11-10T21:28:30.723Z
+date: 2019-11-10T21:29:14.299Z
 tags: 
 ---
 
@@ -22,8 +22,8 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 
 - [The Basics *New to Wiki.js? Learn how to use it and create your first page.*](/guide/intro)
 - [Folder Structure & Tags *Learn how to categorize your pages for an easier browsing experience.*](/guide/structure)
-- [Using Editors *Learn how to use the various editors.*](/editors)
 - [Manage Pages *How to create, edit and manage your pages.*](/guide/pages)
+- [Using Editors *Learn how to use the various editors.*](/editors)
 - [Using Assets *How to upload and manage assets such as images and documents.*](/guide/assets)
 {.links-list}
 
