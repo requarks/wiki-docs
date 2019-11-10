@@ -2,12 +2,9 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2019-10-12T20:56:43.855Z
+date: 2019-11-10T21:39:53.366Z
 tags: 
 ---
-
-> This page is under development!
-{.is-warning}
 
 # Create a Page
 
