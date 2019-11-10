@@ -2,8 +2,8 @@
 title: Introduction to Wiki.js
 description: How to create your first page and more
 published: true
-date: 2019-11-10T18:12:33.511Z
-tags: 
+date: 2019-11-10T19:41:57.898Z
+tags: user-guide
 ---
 
 # The Interface
