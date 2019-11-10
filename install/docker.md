@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-10T18:26:34.849Z
+date: 2019-11-10T19:43:29.575Z
 tags: setup, docker
 ---
 
@@ -31,7 +31,7 @@ You must set the following environment variables. They are all **required** unle
 
 *Alternative way to provide the database password, via a local file secret:*
 
-- **DB_PASS_FILE**: Path to the mapped file containing to the database password.
+- **DB_PASS_FILE**: Path to the mapped file containing to the database password. *(optional, replaces DB_PASS)*
 
 *For SQLite only:*
 
