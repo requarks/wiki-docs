@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-11-10T19:46:25.426Z
+date: 2019-11-10T19:46:48.092Z
 tags: setup
 ---
 
