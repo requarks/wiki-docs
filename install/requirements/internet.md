@@ -2,7 +2,7 @@
 title: Internet Access
 description: Learn about what content is downloaded from the Internet
 published: true
-date: 2019-06-03T03:49:14.000Z
+date: 2019-11-10T17:56:23.669Z
 tags: 
 ---
 
@@ -16,7 +16,7 @@ This ensures your wiki is always up-to-date and that you can be notified of new 
 
 These requests are made to `graph.requarks.io`, a cloud service managed by the developers of Wiki.js. No tracking data or private information about your wiki is sent to the servers. Only the data necessary to process your request at hand is sent (such as your IP and the data requested) and is not stored afterwards.
 
-An alternate method of downloading and sideloading content (such as language files) will be provided in the future, to allow for full offline installations.
+An alternate method of downloading and [sideloading content](/install/sideload) (such as language files) is provided to allow for full offline installations.
 
 # Module Requests
 
