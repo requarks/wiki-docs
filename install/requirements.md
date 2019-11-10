@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-11-10T19:41:28.122Z
+date: 2019-11-10T19:46:25.426Z
 tags: setup
 ---
 
@@ -31,21 +31,6 @@ An alternate method of [sideloading files](/install/sideload) is also available 
 
 Wiki.js requires a dedicated sub-domain / domain *(e.g. wiki.example.com)*. You cannot map Wiki.js to a subfolder.
 
-# Node.js
-
-Node.js **10.12 or later** is required.
-*Wiki.js will not run on older versions such as 8.x, 6.x or any version below 10.12!*
-
-> :whale: **Using Docker?**
-> 
-> Skip this requirement! You don't need to install Node.js on your machine! It's included in the Docker image already.
-{.is-info}
-
-> :cloud: **Web Server**
->
-> Wiki.js doesn't need any actual web server (such as nginx or Apache). However, you might need to put a reverse proxy in front of Wiki.js if you require advanced network / DNS configuration.
-{.is-warning}
-
 # Database
 
 Wiki.js is compatible with any of the following database systems:
@@ -60,6 +45,21 @@ Wiki.js is compatible with any of the following database systems:
 {.is-success}
 
 > :warning: SQLite is **not recommended** for mid to large deployments of Wiki.js.
+{.is-warning}
+
+# Node.js
+
+Node.js **10.12 or later** is required.
+*Wiki.js will not run on older versions such as 8.x, 6.x or any version below 10.12!*
+
+> :whale: **Using Docker?**
+> 
+> Skip this requirement! You don't need to install Node.js on your machine! It's included in the Docker image already.
+{.is-info}
+
+> :cloud: **Web Server**
+>
+> Wiki.js doesn't need any actual web server (such as nginx or Apache). However, you might need to put a reverse proxy in front of Wiki.js if you require advanced network / DNS configuration.
 {.is-warning}
 
 # Supported Browsers
