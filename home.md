@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-11-08T20:14:03.910Z
+date: 2019-11-10T17:54:04.957Z
 tags: 
 ---
 
@@ -26,10 +26,11 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 
 # Administration
 
-- :globe_with_meridians: [Locales](/locales): Display the wiki in a different language or enable multilingual capabilities.
-- :busts_in_silhouette: [User Groups](/groups): Permissions and access rights.
-- :satellite: [Telemetry](/telemetry): Help Wiki.js developers understand crashes by enabling anonymous telemetry.
-- :wrench: [Troubleshooting](/troubleshooting): Solutions to common issues. 
+- [:globe_with_meridians: Locales *Display the wiki in a different language or enable multilingual capabilities.*](/locales)
+- [:busts_in_silhouette: User Groups *Permissions and access rights.*](/groups)
+- [:satellite: Telemetry *Help Wiki.js developers understand crashes by enabling anonymous telemetry.*](/telemetry)
+- [:wrench: Troubleshooting *Solutions to common issues.*](/troubleshooting)
+{.links-list}
 
 ## Modules
 Modules greatly expand the capabilities of your wiki.
@@ -43,27 +44,22 @@ Modules greatly expand the capabilities of your wiki.
 
 # Developers
 
-[Getting Started](/dev) for Wiki.js development is your first step before making modules and themes.
+Wiki.js is fully extensible for maximum customization.
 
-## Modules
-- :closed_book: [Introduction](/dev/modules)
-- :lock: [Authentication](/dev/authentication)
-- :pencil: [Editors](/dev/editors)
-- :clipboard: [Logging](/dev/logging)
-- :hourglass: [Rendering](/dev/rendering)
-- :mag: [Search Engines](/dev/search)
-- :floppy_disk: [Storage](/dev/storage)
+- [:book: Getting Started *How to setup a dev environment for Wiki.js.*](/dev)
+- [:closed_book: Modules *Learn how to create a module.*](/dev/modules)
+- [:art: Themes *Learn how to create your own theme.*](/dev/themes)
+- [:dash: Publishing *Make your module / theme available to others!*](/dev/themes/publish)
+{.links-list}
 
-## Themes
-- :art: [Create a Theme](/dev/themes): Learn how to create your own theme.
-- :dash: [Publishing a Theme](/dev/themes/publish): Make your theme available to others!
-
-## Translations
-- :globe_with_meridians: [Translations](/dev/translations): Contribute a new language or test new keys
+# Localization
+- [:globe_with_meridians: Translations *Contribute a new language or test new keys*](/dev/translations)
+{.links-list}
 
 # Contribute
-- :fire: [Report a Bug](https://github.com/Requarks/wiki/issues): Help us squash those pesky bugs.
-- :bulb: [Suggest a New Feature](https://requests.requarks.io/wiki): We need your ideas!
-- :moneybag: [Donate](https://opencollective.com/wikijs): Make a small donation or become a sponsor of this wonderful project!
+- [:fire: Report a Bug *Help us squash those pesky bugs.*](https://github.com/Requarks/wiki/issues)
+- [:bulb: Suggest a New Feature *We need your ideas!*](https://requests.requarks.io/wiki)
+- [:moneybag: Donate *Make a small donation or become a sponsor of this wonderful project!*](https://opencollective.com/wikijs)
+{.links-list}
 
 ![Wiki.js](https://static.requarks.io/logo/wikijs-butterfly.svg){.align-abstopright}
