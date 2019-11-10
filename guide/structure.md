@@ -2,7 +2,7 @@
 title: Folder Structure & Tags
 description: Learn how to categorize your pages for easier navigation.
 published: true
-date: 2019-11-10T21:23:28.053Z
+date: 2019-11-10T21:24:18.675Z
 tags: user-guide
 ---
 
@@ -29,6 +29,8 @@ Tags are a great way to categorize your pages and easily find related content. T
 Multiple tags can be added to a page.
 
 For example, for a page about the city **Montreal**, you could add tags `cities`, `canada`, `north-america`. These tags can then be used to quickly find the page afterwards. By browsing by tags `canada` and `cities`, the page **Montreal** will come up in the results because both of these tags are present on the page.
+
+More tags can be added or removed from a page at any time.
 
 ## Browse Tags
 
