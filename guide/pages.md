@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2019-11-10T21:40:18.008Z
+date: 2019-11-10T21:44:18.920Z
 tags: 
 ---
 
@@ -13,6 +13,8 @@ There're multiple ways to create a new pages:
 - From the **New Page** button, located at the top-right corner of the page.
 - By clicking a link pointing to a non-existing page.
 - Manually type the path in the browser address bar.
+
+Check out the [Basics](/guide/intro) guide on how to create your first page step-by-step.
 
 
 # Edit a Page
@@ -30,6 +32,8 @@ For example, on a traditional system, in order to create a page at `universe/pla
 In Wiki.js, you can directly create a page at path `universe/planets/earth`. Folders `universe` and `planets` will be automatically inferred, but they don't really exist outside of the page path context. Therefore, you don't have to manage folders and you can instead focus solely on the path you want for your pages.
 
 For this reason, there's no option to create folders. Simply type the full path you want. Folders will be inferred automatically upon creation.
+
+Check out the [Folder Structure & Tags](/guide/structure) guide for more details.
 
 # Naming Restrictions
 
