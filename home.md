@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-11-10T17:54:04.957Z
+date: 2019-11-10T18:14:54.958Z
 tags: 
 ---
 
@@ -21,7 +21,7 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 # User Guide
 
 - [Creating your first page *New to Wiki.js? Learn how to use it.*](/guide/intro)
-- [Tags & Folder Structure *Learn how to categorize your pages for an easier browsing experience.*](/guide/tags)
+- [Folder Structure & Tags *Learn how to categorize your pages for an easier browsing experience.*](/guide/structure)
 {.links-list}
 
 # Administration
