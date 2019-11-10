@@ -2,8 +2,8 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-09-14T19:54:25.066Z
-tags: 
+date: 2019-11-10T19:41:28.122Z
+tags: setup
 ---
 
 # Server Requirements
@@ -26,6 +26,10 @@ At least 1 GB of storage dedicated to Wiki.js is recommended.
 Wiki.js will automatically check for new updates, languages, themes, etc. from time to time. You can [read more](/install/requirements/internet) about what data is downloaded.
 
 An alternate method of [sideloading files](/install/sideload) is also available if your environment is cut from the internet.
+
+# Domain
+
+Wiki.js requires a dedicated sub-domain / domain *(e.g. wiki.example.com)*. You cannot map Wiki.js to a subfolder.
 
 # Node.js
 
