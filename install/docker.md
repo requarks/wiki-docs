@@ -2,8 +2,8 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-10-26T15:47:06.370Z
-tags: 
+date: 2019-11-10T18:26:34.849Z
+tags: setup, docker
 ---
 
 # Using the Docker image
@@ -29,6 +29,10 @@ You must set the following environment variables. They are all **required** unle
 
 - **DB_SSL** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
 
+*Alternative way to provide the database password, via a local file secret:*
+
+- **DB_PASS_FILE**: Path to the mapped file containing to the database password.
+
 *For SQLite only:*
 
 - **DB_FILEPATH** : Path to the SQLite file
@@ -49,6 +53,8 @@ Create a new file based on the [sample config file](https://github.com/Requarks/
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml requarks/wiki:beta
 ```
+
+It's also possible to define an alternate location for the config file to be loaded from. This is useful in scenarios where you want to mount a configuration folder instead. Define the environment variable **CONFIG_FILE** with the path to the config file.
 
 # Using Docker Compose
 
