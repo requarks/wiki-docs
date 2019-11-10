@@ -2,9 +2,11 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-10T19:43:29.575Z
+date: 2019-11-10T19:44:46.879Z
 tags: setup, docker
 ---
+
+Before proceeding, make sure you meet the [system requirements](/install/requirements).
 
 # Using the Docker image
 
