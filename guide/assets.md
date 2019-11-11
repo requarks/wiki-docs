@@ -2,11 +2,15 @@
 title: Media Assets
 description: Add images and documents to your pages
 published: true
-date: 2019-05-19T17:42:42.706Z
+date: 2019-11-11T18:19:29.275Z
 tags: 
 ---
 
-*Coming soon*
+# Basics
+
+All editors have a button to open the Assets dialog. Refer to the documentation of each [editor](/editors) for more information.
+
+![Assets Dialog](/assets/ui/ui-assets-dialog.png =750x){.elevation-3 .radius-5}
 
 # Asset Folders
 
