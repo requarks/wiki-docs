@@ -2,7 +2,7 @@
 title: Media Assets
 description: Add images and documents to your pages
 published: true
-date: 2019-11-11T18:48:53.775Z
+date: 2019-11-11T19:26:42.333Z
 tags: 
 ---
 
@@ -28,12 +28,12 @@ Select the asset you want to insert, then click the **Insert** button.
 
 ### Image Alignment
 
-When inserting an image, you can also set a specic alignment.
+When inserting an image, you can also set a specic alignment using the **Image Alignment** dropdown menu (to the right of dialog).
 
-- **Left**: x
-- **Centered**: x
-- **Right**: x
-- **Absolute Top Right**: x
+- **Left**: Align to the left of the page.
+- **Centered**: Align to the center of the page.
+- **Right**: Align to the right of the page.
+- **Absolute Top Right**: Display as a logo in the top-right corner of the page.
 
 ## Manage an Asset
 
