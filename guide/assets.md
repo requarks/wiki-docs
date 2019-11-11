@@ -2,7 +2,7 @@
 title: Media Assets
 description: Add images and documents to your pages
 published: true
-date: 2019-11-11T18:44:35.829Z
+date: 2019-11-11T18:48:53.775Z
 tags: 
 ---
 
@@ -25,6 +25,15 @@ Once ready, click the **Upload** button to initiate the upload for all files.
 ## Use an Asset
 
 Select the asset you want to insert, then click the **Insert** button.
+
+### Image Alignment
+
+When inserting an image, you can also set a specic alignment.
+
+- **Left**: x
+- **Centered**: x
+- **Right**: x
+- **Absolute Top Right**: x
 
 ## Manage an Asset
 
