@@ -2,7 +2,7 @@
 title: Okta
 description: Authentication Module
 published: true
-date: 2019-11-14T23:30:09.414Z
+date: 2019-11-14T23:30:23.926Z
 tags: auth, module
 ---
 
@@ -28,7 +28,7 @@ Okta provide secure identity management and single sign-on to any application.
 1. Enter the **Client ID** and **Client Secret** values copied earlier.
 1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
 1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **GitHub** in the list of strategies is checked. The text should now say that the strategy is **active**.
+1. Make sure the checkbox next to **Okta** in the list of strategies is checked. The text should now say that the strategy is **active**.
 1. Click **Apply** on the upper right of the page to save and apply the configuration.
 
 ![](https://static.requarks.io/logo/okta.svg =x50){.align-abstopright}
