@@ -2,7 +2,7 @@
 title: Okta
 description: Authentication Module
 published: true
-date: 2019-11-14T23:30:23.926Z
+date: 2019-11-14T23:31:19.440Z
 tags: auth, module
 ---
 
