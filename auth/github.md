@@ -2,7 +2,7 @@
 title: GitHub
 description: Authentication Module
 published: true
-date: 2019-11-14T22:57:09.987Z
+date: 2019-11-14T22:58:00.798Z
 tags: auth, module
 ---
 
@@ -27,7 +27,7 @@ GitHub Inc. is a web-based hosting service for version control using Git.
 1. Click on **GitHub**.
 1. Enter the **Client ID** and **Client Secret** values copied earlier.
 	> **For GitHub Enterprise Only:**
-	> - Turn on the **Use GitHub Enterprise** toggle.
+		> - Turn on the **Use GitHub Enterprise** toggle.
   	> - Enter your **GitHub Enterprise Domain** *(without http/s prefix or trailing slash, e.g. github.yourdomain.com)*
     > - Enter your **GitHub Enterprise User Endpoint** *(e.g. https://api.github.yourdomain.com)*
 	{.is-info}
