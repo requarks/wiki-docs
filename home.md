@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-11-10T21:29:14.299Z
+date: 2019-11-16T21:31:20.397Z
 tags: 
 ---
 
@@ -37,7 +37,7 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 
 ## Modules
 Modules greatly expand the capabilities of your wiki.
-- [:lock: Authentication *Configure how users can login and register to your wiki.*](/authentication)
+- [:lock: Authentication *Configure how users can login and register to your wiki.*](/auth)
 - [:pencil: Editors *Manage the various editors used to create content.*](/editors)
 - [:clipboard: Logging *Forward logs to external logging services.*](/logging)
 - [:hourglass: Rendering *Configure how content is parsed and rendered into its readable form.*](/rendering)
