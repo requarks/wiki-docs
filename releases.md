@@ -2,26 +2,51 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-10-31T04:19:47.039Z
+date: 2019-11-17T21:46:14.276Z
 tags: 
 ---
 
-# Release Candidate
-
-The first release candidate is now available. A stabilization period is now in effect to fix any last-minute bug. Should no major bugs be found, a final 2.0 release will be available shortly.
-
-# Upcoming Unreleased RC
+# Upcoming
 
 > This build is **under active development** and has not yet been released.
 {.is-warning}
 
+- TBD
+
+# 2.0.1
+
+> Released on **November 17th, 2019**
+{.is-info}
+
+- Initial Stable release :tada:
+
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Search UI would hang when pressing enter before results ([#1086](https://github.com/Requarks/wiki/issues/1086))
+- **Fixed:** Nested Lists padding and spacing ([#1114](https://github.com/Requarks/wiki/issues/1114))
+- **Fixed:** Remove explicit ids for groups and users during setup ([#1156](https://github.com/Requarks/wiki/issues/1156))
 - **Fixed:** HTML tags are now properly transformed into spaces for search analysis ([#1160](https://github.com/Requarks/wiki/issues/1160))
-- **Fixed:** Text is now selectable in Admin - System Info ([#1161](https://github.com/Requarks/wiki/issues/1161))
 - **Fixed:** Locale is no longer prefixed to links when using system links ([#1165](https://github.com/Requarks/wiki/issues/1165))
 - **Fixed:** Locale is no longer prefixed to links when namespacing is off ([#1166](https://github.com/Requarks/wiki/issues/1166))
+- **Fixed:** Missing right padding on blockquotes ([#1168](https://github.com/Requarks/wiki/issues/1168))
+- **Fixed:** Handle link reformatting from home path ([#1169](https://github.com/Requarks/wiki/issues/1169))
+- **Fixed:** Exclude non-class attributes from markdown rendering ([#1174](https://github.com/Requarks/wiki/issues/1174))
+- **Fixed:** Cannot update user email from admin ([#1197](https://github.com/Requarks/wiki/issues/1197))
+- **Fixed:** Non-image assets are now inserted correctly in the Visual Editor ([#1207](https://github.com/Requarks/wiki/issues/1207))
+- **Fixed:** Git Private Key is now handled correctly when ending LF is missing ([#1209](https://github.com/Requarks/wiki/issues/1209))
+- **Fixed:** Marker Highlighting is now shown correctly on rendered pages
+- **Improvements:** Text is now selectable in Admin - System Info ([#1161](https://github.com/Requarks/wiki/issues/1161))
+- **Improvements:** Extended twemoji country flags support ([#1163](https://github.com/Requarks/wiki/issues/1163))
+- **Improvements:** Edit Group tab UI ([#1218](https://github.com/Requarks/wiki/issues/1218))
+- **Miscellaneous:** Stable DB migration + beta migration to stable
 
+## Links
+
+- [Installation](/install)
+- [Upgrade from previous RC / Beta](/install/upgrade)
+- [Migrate from 1.x](/install/migrate)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.0.0-rc.17
 
