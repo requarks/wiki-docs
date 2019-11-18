@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-18T23:04:01.321Z
+date: 2019-11-18T23:05:03.633Z
 tags: setup, docker
 ---
 
@@ -70,7 +70,7 @@ It's also possible to define an alternate location for the config file to be loa
 
 By default, Wiki.js runs as user `wiki`. If you get permissions issues while mounting files (such as SQLite db or private keys), you can override the runtime user to run as `root` using the `-u` parameter, e.g.:
 
-```
+```bash
 docker run -d -p 8080:3000 -u="root" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
