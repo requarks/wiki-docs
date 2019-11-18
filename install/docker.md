@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-18T04:05:25.112Z
+date: 2019-11-18T19:15:23.025Z
 tags: setup, docker
 ---
 
@@ -65,6 +65,14 @@ docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml
 ```
 
 It's also possible to define an alternate location for the config file to be loaded from. This is useful in scenarios where you want to mount a configuration folder instead. Define the environment variable **CONFIG_FILE** with the path to the config file.
+
+## Change User Mode
+
+By default, Wiki.js runs as user `wiki`. If you get permissions issues while mounting files (such as SQLite db or private keys), you can override the runtime user to run as `root`, e.g.:
+
+```
+docker run -d -p 8080:3000 -u="root" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+```
 
 # Using Docker Compose
 
