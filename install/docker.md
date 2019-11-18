@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-18T19:16:03.217Z
+date: 2019-11-18T23:04:01.321Z
 tags: setup, docker
 ---
 
@@ -13,7 +13,7 @@ tags: setup, docker
 
 Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki`
 
-> It's highly recommended to you do not use the `latest` tag but instead the major version you need, e.g. `requarks/wiki:2`
+> It's highly recommended that you don't use the `latest` tag but instead the major version you need, e.g. `requarks/wiki:2`
 >
 > It's also possible to point to a specific minor version (e.g. `requarks/wiki:2.0`), although you will not automatically get the latest features when pulling the latest image.
 {.is-info}
