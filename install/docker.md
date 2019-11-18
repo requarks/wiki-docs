@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-18T04:05:03.786Z
+date: 2019-11-18T04:05:25.112Z
 tags: setup, docker
 ---
 
@@ -46,12 +46,12 @@ You must set the following environment variables. They are all **required** unle
 
 Here's an example of a command to run Wiki.js with a PostgreSQL database:
 ```bash
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:beta
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
 or using a MySQL database:
 ```bash
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:beta
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
 ## Alternative: Mount the config file
@@ -61,7 +61,7 @@ If using environment variables is not your cup of tea, you can also mount a conf
 Create a new file based on the [sample config file](https://github.com/Requarks/wiki/blob/master/config.sample.yml) and modify the values to match your setup. You can then mount the config file in the container:
 
 ```bash
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml requarks/wiki:beta
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml requarks/wiki:2
 ```
 
 It's also possible to define an alternate location for the config file to be loaded from. This is useful in scenarios where you want to mount a configuration folder instead. Define the environment variable **CONFIG_FILE** with the path to the config file.
@@ -86,7 +86,7 @@ services:
       - db-data:/var/lib/postgresql/data
 
   wiki:
-    image: requarks/wiki:beta
+    image: requarks/wiki:2
     depends_on:
       - db
     environment:
@@ -107,7 +107,7 @@ volumes:
 
 # ARM images
 
-In order to use the ARM64 / ARMv7 image variants, you must use the image tag `requarks/wiki:beta-arm`.
+In order to use the ARM64 / ARMv7 image variants, you must use the image tag `requarks/wiki:2.0-arm`.
 
 This image is compatible with:
 
