@@ -2,8 +2,8 @@
 title: Azure Web App
 description: Installation Guide
 published: true
-date: 2019-10-26T03:48:22.593Z
-tags: 
+date: 2019-11-18T04:08:41.158Z
+tags: setup, guide
 ---
 
 This guide details the step-by-step procedure to install Wiki.js on an **Azure Web App** with an **Azure Database for PostgreSQL**.
@@ -49,7 +49,7 @@ We can now create the App Service where our wiki will run.
 	- **Single Container**
   	- Image Source: **Docker Hub**
     - Access Type: **Public**
-    - Image and Tag: `requarks/wiki:beta`
+    - Image and Tag: `requarks/wiki:2`
 1. Click **Review and create** (other steps are optional).
 
 ## 2.2 Configure Web App
