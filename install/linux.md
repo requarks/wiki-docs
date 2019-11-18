@@ -2,7 +2,7 @@
 title: Linux
 description: Getting started with a Wiki.js installation on Linux
 published: true
-date: 2019-10-28T01:29:55.963Z
+date: 2019-11-18T04:07:13.642Z
 tags: setup
 ---
 
@@ -12,7 +12,7 @@ Before going any further, make sure your system meets all the [requirements](/in
 
 1. Download the latest version of Wiki.js:
   ```bash
-  wget https://github.com/Requarks/wiki/releases/download/2.0.0-rc.17/wiki-js.tar.gz
+  wget https://github.com/Requarks/wiki/releases/download/2.0.1/wiki-js.tar.gz
   ```
 2. Extract the package to the final destination of your choice:
   ```bash
