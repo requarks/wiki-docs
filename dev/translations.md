@@ -2,7 +2,7 @@
 title: Translations
 description: Contribute a new language or test new keys
 published: true
-date: 2019-11-16T21:23:21.384Z
+date: 2019-11-18T23:16:38.451Z
 tags: dev, localization
 ---
 
@@ -21,6 +21,11 @@ There're various layers of cache before changes made to translations become visi
 - If you're using offline sideloading, [locale files](https://github.com/Requarks/wiki-localization) are updated every day at **12:00 AM Eastern Standard Time (EST)**.
 
 It's possible to force changes to be fetched immediately by restarting your Wiki.js instance. A job to fetch updated translations will start immediately after initialization. *Note that you must still wait the 5 minutes delay from the Requarks GraphQL server before seeing any updates.*
+
+> **Browser Cache**
+>
+> Translations are kept in the browser cache for 24h. Even though your Wiki.js instance could have the latest changes, you will not see them until the browser cache expires. You can flush this cache from the **Administration Area** > **Utilities** > **Flush Cache** > **Flush Client-Side Locale Cache**.
+{.is-info}
 
 # How contributions are selected
 
