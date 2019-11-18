@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-11-17T21:46:14.276Z
+date: 2019-11-18T23:09:54.178Z
 tags: 
 ---
 
@@ -11,7 +11,10 @@ tags:
 > This build is **under active development** and has not yet been released.
 {.is-warning}
 
-- TBD
+## Bug fixes / Minor Improvements
+
+- **Fixed:** Markdown help dialog shown below editor ([#1164](https://github.com/Requarks/wiki/issues/1164))
+- **Fixed:** Use HTTPS for PlantUML default server value ([#1223](https://github.com/Requarks/wiki/issues/1223))
 
 # 2.0.1
 
