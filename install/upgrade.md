@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2019-10-28T01:30:46.202Z
+date: 2019-11-18T03:58:37.640Z
 tags: setup
 ---
 
@@ -29,10 +29,10 @@ docker stop wiki
 docker rm wiki
 
 # Pull latest image of Wiki.js
-docker pull requarks/wiki:beta
+docker pull requarks/wiki:2
 
 # Create new container of Wiki.js based on latest image
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:beta
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
 Check out the [Docker installation guide](/install/docker) for all the possible options when creating a Wiki.js container.
@@ -62,7 +62,7 @@ docker-compose up --force-recreate
   ```
 4) Download the latest version of Wiki.js.
   ```bash
-  wget https://github.com/Requarks/wiki/releases/download/2.0.0-rc.17/wiki-js.tar.gz
+  wget https://github.com/Requarks/wiki/releases/download/2.0.1/wiki-js.tar.gz
   ```
 5) Extract the package
   ```bash
@@ -98,7 +98,7 @@ docker-compose up --force-recreate
   ```
 5. Download the latest version of Wiki.js:
   ```powershell
-  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.0.0-rc.17/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
+  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.0.1/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
 4. Extract the package to the final destination of your choice:
