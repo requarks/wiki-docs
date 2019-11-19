@@ -2,8 +2,8 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-09-14T19:54:49.676Z
-tags: 
+date: 2019-11-19T18:44:57.585Z
+tags: setup
 ---
 
 > Before going any further, make sure your system meets all the [requirements](/install/requirements).
@@ -21,6 +21,7 @@ tags:
 **Other step-by-step guides:**
 - [Install on DigitalOcean *coming soon*](/install/digitalocean)
 - [Install on Azure Web App](/install/azurewebapp)
+- [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
 {.links-list}
 
 ![](https://a.icons8.com/ajlQdsfa/FZhYWV/svg.svg){.align-abstopright}
