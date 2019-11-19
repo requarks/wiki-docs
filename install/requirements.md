@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-11-10T19:46:48.092Z
+date: 2019-11-19T17:48:54.300Z
 tags: setup
 ---
 
@@ -46,6 +46,8 @@ Wiki.js is compatible with any of the following database systems:
 
 > :warning: SQLite is **not recommended** for mid to large deployments of Wiki.js.
 {.is-warning}
+
+You're expected to have installed one of these database engines already *(either locally, on another server or using a cloud service)*. Wiki.js requires an empty database and preferably a unique user / pass to connect to the database.
 
 # Node.js
 
