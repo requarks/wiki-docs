@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for v2
 published: true
-date: 2019-11-16T21:31:20.397Z
+date: 2019-11-19T16:28:43.665Z
 tags: 
 ---
 
@@ -13,10 +13,9 @@ tags:
 
 Wiki.js is quick and easy to install. You should be up and running in no time.
 
-- Make sure you have read the [server requirements](/install/requirements).
-- Follow the quick and simple [installation guide](/install).
-- Using **Docker**? Use the [Docker installation guide](/install/docker) instead.
-- Using **Heroku**? Use the [Heroku installation guide](/install/heroku) instead.
+- [Requirements *Server and database prerequisites.*](/install/requirements)
+- [Installation Guide *Detailed installation instructions for all platforms.*](/install)
+{.links-list}
 
 # User Guide
 
