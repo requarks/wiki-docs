@@ -2,8 +2,8 @@
 title: Markdown
 description: Editor
 published: true
-date: 2019-09-14T20:16:24.106Z
-tags: 
+date: 2019-11-20T18:17:06.250Z
+tags: editors
 ---
 
 # Overview
@@ -174,12 +174,32 @@ By adding a class on a separate line, after the list, you can change the look of
 - `links-list`
 - `grid-list`
 
-```css
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Morbi vehicula aliquam
+#### Example
+
+```markdown
+- Grid Item 1
+- Grid Item 2
+- Grid Item 3
+{.grid-list}
+
+- [Lorem ipsum dolor sit amet *Subtitle description here*](https://www.google.com)
+- [Consectetur adipiscing elit *Another subtitle description here*](https://www.google.com)
+- [Morbi vehicula aliquam *Third subtitle description here*](https://www.google.com)
 {.links-list}
 ```
+will result in:
+
+- Grid Item 1
+- Grid Item 2
+- Grid Item 3
+{.grid-list}
+
+and:
+
+- [Link Title 1 *Subtitle description here*](https://www.google.com)
+- [Link Title 2 *Another subtitle description here*](https://www.google.com)
+- [Link Title 3 *Third subtitle description here*](https://www.google.com)
+{.links-list}
 
 > Note that these stylings are specific to Wiki.js and will fallback to standard list styling in other applications.
 {.is-warning}
