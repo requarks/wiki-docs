@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-21T21:42:04.892Z
+date: 2019-11-21T21:44:25.734Z
 tags: setup, docker
 ---
 
@@ -76,6 +76,8 @@ By default, Wiki.js runs as user `wiki`. If you get permissions issues while mou
 ```bash
 docker run -d -p 8080:3000 -u="root" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
+
+This is however not a secure way to run containers. Make sure you understand the security implications before doing so.
 
 # Using Docker Compose
 
