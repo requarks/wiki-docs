@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-21T21:44:25.734Z
+date: 2019-11-21T22:20:26.701Z
 tags: setup, docker
 ---
 
@@ -54,7 +54,8 @@ or to a MySQL database:
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
-> Both examples assume you have a database running in another container named `db` on the same network. Wiki.js does **NOT** come with a database engine. See the [requirements](/install/requirements) for more details.
+> Both examples assume you have a database running in another container named `db` on the same network.
+> Wiki.js does **NOT** come with a database engine. See the [requirements](/install/requirements) for more details.
 {.is-warning}
 
 ## Alternative: Mount the config file
