@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-18T23:05:03.633Z
+date: 2019-11-21T21:42:04.892Z
 tags: setup, docker
 ---
 
@@ -44,15 +44,18 @@ You must set the following environment variables. They are all **required** unle
 
 ## Example
 
-Here's an example of a command to run Wiki.js with a PostgreSQL database:
+Here's an example of a command to run Wiki.js connecting to a PostgreSQL database:
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
-or using a MySQL database:
+or to a MySQL database:
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
+
+> Both examples assume you have a database running in another container named `db` on the same network. Wiki.js does **NOT** come with a database engine. See the [requirements](/install/requirements) for more details.
+{.is-warning}
 
 ## Alternative: Mount the config file
 
