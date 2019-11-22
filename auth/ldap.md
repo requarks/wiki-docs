@@ -2,8 +2,8 @@
 title: LDAP / Active Directory
 description: Authentication Module
 published: true
-date: 2019-09-15T02:48:21.734Z
-tags: 
+date: 2019-11-22T18:53:16.657Z
+tags: auth, module
 ---
 
 LDAP / Active Directory is an enterprise authentication solution developed by Microsoft.
@@ -27,3 +27,10 @@ LDAP / Active Directory is an enterprise authentication solution developed by Mi
 1. Select the **group** new users should be assigned to when they login for the first time.
 1. Make sure the checkbox next to **LDAP / Active Directory** in the list of strategies is checked. The text should now say that the strategy is **active**.
 1. Click **Apply** on the upper right of the page to save and apply the configuration.
+
+# Troubleshooting
+
+If you get errors while trying to login, you can enable a LDAP debugging flag to report internal LDAP error messages to the console (or docker logs).
+
+From the **Administration Area**, click on **Developer Tools** in the sidebar, then on **Flags**. Enable the **LDAP Debug** flag.
+
