@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2019-11-20T18:17:06.250Z
+date: 2019-11-22T18:38:59.269Z
 tags: editors
 ---
 
@@ -331,6 +331,24 @@ Using the syntax `[Link Text](Link Target)`.
 
 Consectetur [adipiscing](/link/to/page) elit
 ```
+
+## Emojis
+
+Using the syntax `:identifier:`
+
+See the [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) for the full list of possible options.
+
+### *Example*
+
+```markdown
+:apple:
+
+Can be also be used :fire: inline
+```
+
+:apple:
+
+Can also be used :fire: inline.
 
 ## Keyboard Keys
 
