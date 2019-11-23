@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-11-18T23:09:54.178Z
+date: 2019-11-23T19:23:31.411Z
 tags: 
 ---
 
@@ -13,8 +13,12 @@ tags:
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Long Code blocks are no longer incorrectly broken into multiple lines ([#1079](https://github.com/Requarks/wiki/issues/1079))
 - **Fixed:** Markdown help dialog shown below editor ([#1164](https://github.com/Requarks/wiki/issues/1164))
 - **Fixed:** Use HTTPS for PlantUML default server value ([#1223](https://github.com/Requarks/wiki/issues/1223))
+- **Fixed:** Vertical page title positioning in Safari ([#1233](https://github.com/Requarks/wiki/issues/1233))
+- **Fixed:** Allow target property in markdown attributes ([#1240](https://github.com/Requarks/wiki/issues/1240))
+- **Improvements:** A copy button now appears on mouse-over of code blocks.
 
 # 2.0.1
 
