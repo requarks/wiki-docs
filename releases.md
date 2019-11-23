@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-11-23T19:23:31.411Z
+date: 2019-11-23T21:49:38.248Z
 tags: 
 ---
 
@@ -11,14 +11,35 @@ tags:
 > This build is **under active development** and has not yet been released.
 {.is-warning}
 
+- TBD
+
+# 2.0.12
+
+> Released on **November 23rd, 2019**
+{.is-info}
+
 ## Bug fixes / Minor Improvements
 
 - **Fixed:** Long Code blocks are no longer incorrectly broken into multiple lines ([#1079](https://github.com/Requarks/wiki/issues/1079))
+- **Fixed:** Markdown preview fails to load lang files for code blocks ([#1162](https://github.com/Requarks/wiki/issues/1162))
 - **Fixed:** Markdown help dialog shown below editor ([#1164](https://github.com/Requarks/wiki/issues/1164))
+- **Fixed:** PostgreSQL search engine error during page move ([#1181](https://github.com/Requarks/wiki/issues/1181))
+- **Fixed:** Exclude assets from internal link detection during render ([#1189](https://github.com/Requarks/wiki/issues/1189))
 - **Fixed:** Use HTTPS for PlantUML default server value ([#1223](https://github.com/Requarks/wiki/issues/1223))
+- **Fixed:** Handle email verification exceptions ([#1227](https://github.com/Requarks/wiki/issues/1227))
+- **Fixed:** Missing write:pages permission for editing existing pages ([#1228](https://github.com/Requarks/wiki/issues/1228))
 - **Fixed:** Vertical page title positioning in Safari ([#1233](https://github.com/Requarks/wiki/issues/1233))
 - **Fixed:** Allow target property in markdown attributes ([#1240](https://github.com/Requarks/wiki/issues/1240))
+- **Fixed:** Search hint display no results found error when empty ([#1255](https://github.com/Requarks/wiki/issues/1255))
 - **Improvements:** A copy button now appears on mouse-over of code blocks.
+
+## Links
+
+- [Installation](/install)
+- [Upgrade from 2.0.1 / RC / Beta](/install/upgrade)
+- [Migrate from 1.x](/install/migrate)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.0.1
 
