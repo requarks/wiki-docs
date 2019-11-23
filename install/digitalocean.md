@@ -2,7 +2,7 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2019-11-23T18:58:05.122Z
+date: 2019-11-23T18:59:01.479Z
 tags: install
 ---
 
@@ -60,4 +60,4 @@ When a new version is available, you'll be notified in the **Administration Area
 1. Wait for the process to complete.
 1. You should now be on the latest version. It's that simple!
 
-![](https://static.requarks.io/logo/digitalocean.svg){.align-abstopright}
+![](https://static.requarks.io/logo/digitalocean-alt.svg){.align-abstopright}
