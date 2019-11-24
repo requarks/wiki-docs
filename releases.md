@@ -2,16 +2,25 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-11-24T17:31:09.245Z
+date: 2019-11-24T20:10:07.036Z
 tags: 
 ---
 
-# Upcoming
+# Upcoming - 2.1
 
 > This build is **under active development** and has not yet been released.
 {.is-warning}
 
-- TBD
+
+## Planned Features
+- API Docs Editor
+- Browse Pages (Tree View / Site Map)
+- Default Theme Options
+	- Sidebar Position
+  - Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
+- Delete a User
+- Save Rendering Configuration
+
 
 # 2.0.12
 
