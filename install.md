@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-12-04T21:04:02.931Z
+date: 2019-12-04T21:04:14.611Z
 tags: setup
 ---
 
@@ -25,7 +25,7 @@ tags: setup
 - [Install on AWS *coming soon*](/install/aws)
 - [Install on Google Cloud *coming soon*](/install/gcp)
 - [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
-- [Install using Portainer *coming soon*](/install/portainer)
+- [Install using Portainer](/install/portainer)
 {.links-list}
 
 ![](https://a.icons8.com/ajlQdsfa/FZhYWV/svg.svg){.align-abstopright}
