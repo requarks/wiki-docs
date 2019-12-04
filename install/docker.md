@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-11-21T22:20:26.701Z
+date: 2019-12-04T20:54:09.284Z
 tags: setup, docker
 ---
 
@@ -82,20 +82,21 @@ This is however not a secure way to run containers. Make sure you understand the
 
 # Using Docker Compose
 
-Here's an example of a Docker Compose file, using PostgreSQL:
+Here's a full example of a Docker Compose file for Wiki.js, using PostgreSQL, listening on port 80:
 
 ```yaml
 version: "3"
 services:
 
   db:
-    image: postgres:9-alpine
+    image: postgres:11-alpine
     environment:
       POSTGRES_DB: wiki
       POSTGRES_PASSWORD: wikijsrocks
       POSTGRES_USER: wikijs
     logging:
       driver: "none"
+    restart: unless-stopped
     volumes:
       - db-data:/var/lib/postgresql/data
 
@@ -110,8 +111,9 @@ services:
       DB_USER: wikijs
       DB_PASS: wikijsrocks
       DB_NAME: wiki
+    restart: unless-stopped
     ports:
-      - "3000:3000" # <-- here you can replace with "80:3000" to listen on port 80 instead, as an example
+      - "80:3000"
 
 volumes:
   db-data:
