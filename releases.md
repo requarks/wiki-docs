@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-11-24T20:10:07.036Z
+date: 2019-12-04T02:40:34.619Z
 tags: 
 ---
 
@@ -20,6 +20,7 @@ tags:
   - Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 - Delete a User
 - Save Rendering Configuration
+- Let's Encrypt Built-In Support
 
 
 # 2.0.12
