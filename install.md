@@ -2,11 +2,11 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-12-04T18:01:05.350Z
+date: 2019-12-04T18:01:48.261Z
 tags: setup
 ---
 
-> **Before going any further**, make sure you meet all the [requirements](/install/requirements).
+> :warning: Before going any further, make sure you meet all the [requirements](/install/requirements).
 {.is-info}
 
 **Choose your platform:**
