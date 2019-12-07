@@ -2,15 +2,15 @@
 title: Heroku
 description: Getting started with a Wiki.js installation on Heroku
 published: true
-date: 2019-09-14T19:55:53.478Z
-tags: 
+date: 2019-12-07T00:44:47.017Z
+tags: setup
 ---
 
 Heroku is a popular platform to quickly run any type of web application.
 
 A preconfigured deploy template is provided for convenience:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/requarks/wiki-heroku/tree/beta)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/requarks/wiki-heroku/tree/2.x)
 
 # Important Notes
 
