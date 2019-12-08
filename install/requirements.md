@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-11-19T18:04:18.257Z
+date: 2019-12-08T17:56:25.175Z
 tags: setup
 ---
 
@@ -74,5 +74,8 @@ The following browsers are supported:
 - Apple Safari (including iOS version)
 
 Note that only the latest stable version of these browsers are supported. All browsers updates automatically in the background.
+
+> There's limited compatibility with **IE11**. Users will be able to read content but not perform any editing action or use interactive features.
+{.is-info}
 
 ![](https://a.icons8.com/ViUXyjOj/f4tFww/svg.svg){.align-abstopright}
