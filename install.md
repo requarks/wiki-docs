@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-12-08T17:52:11.576Z
+date: 2019-12-08T20:11:32.515Z
 tags: setup
 ---
 
@@ -10,6 +10,9 @@ tags: setup
 {.is-info}
 
 **Choose your platform:**
+<div class="row">
+	<div class="col col-6">
+
 - [Docker](/install/docker)
 - [Heroku](/install/heroku)
 - [Kubernetes *coming soon*](/install/kubernetes)
@@ -17,6 +20,9 @@ tags: setup
 - [macOS](/install/macos)
 - [Windows](/install/windows)
 {.links-list}
+    
+  </div>
+</div>
 
 **Other step-by-step guides:**
 - [Install on DigitalOcean Droplet *coming soon*](/install/digitalocean)
