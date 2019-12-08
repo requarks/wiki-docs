@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-12-08T17:51:06.448Z
+date: 2019-12-08T17:51:31.270Z
 tags: setup
 ---
 
@@ -20,7 +20,7 @@ tags: setup
 
 **Other step-by-step guides:**
 - [Install on DigitalOcean *coming soon*](/install/digitalocean)
-- [Install on Azure VM *coming soon*](/install/aws)
+- [Install on Azure VM *coming soon*](/install/azure)
 - [Install on Azure Web App](/install/azurewebapp)
 - [Install on AWS *coming soon*](/install/aws)
 - [Install on Google Cloud *coming soon*](/install/gcp)
