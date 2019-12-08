@@ -2,7 +2,7 @@
 title: Install on AWS
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2019-12-07T21:38:34.763Z
+date: 2019-12-08T17:50:03.813Z
 tags: setup, guide
 ---
 
@@ -25,21 +25,21 @@ Ubuntu 18.04 LTS with the following software pre-installed:
 
 ## Instance Type
 
-Wiki.js requires at least the **t3.micro** instance size. The **t3.nano** is not supported.
+Wiki.js requires at least the **t3.micro** instance size. *The **t3.nano** instance type is not supported.*{.red--text}
 
 However, for best performance, we recommend using at least the **t3.small** or preferrably the **c5.large** instance size. Wiki.js use background processes for CPU intensive tasks (e.g. page rendering). Therefore, having at least 2 dedicated CPU cores will results in improved performance for such tasks.
 
 # Getting Started
 
-1. From the [AWS Management Console](https://console.aws.amazon.com/), go to the **EC2** section and select **Instances** from the sidebar menu.
-1. Click on **Launch Instance**.
-1. Select a droplet size, datacenter region and additional options.
-1. Click **Create droplet** once you entered all necessary info.
-1. Wait for the droplet to be created.
-1. Click on the newly created droplet and copy the **public IP** address.
-1. In a new browser tab, navigate to http://YOUR-PUBLIC-IP *(replace with your IP)*
-1. A setup screen for Wiki.js should appear. Enter the desired **email address** and **password** for the administrator account.
-1. Enter the **full URL** to your wiki, without the trailing slash. It's recommended to point a sub-domain / domain to your public IP (e.g. wiki.example.com). If you don't have a domain setup yet, you can use your public IP as the URL (e.g. http://xx.xx.xx.xx). This can be changed later in the **Adminitration Area** (under the **General** section).
+1. From the [Wiki.js Product Page](https://aws.amazon.com/marketplace/pp/XXXXXXXXX) on AWS Marketplace, click the **Continue to subscribe** button located at the top of the page.
+1. Follow the on-screen instructions to launch an instance.
+1. Once the instance is running, go to the instance details in the AWS Management Console.
+1. Copy the **Public DNS** endpoint for your instance.
+1. In a new browser tab, navigate to http://YOUR-PUBLIC-DNS *(replace with your Public DNS endpoint or IP)*
+  > **It can take several minutes before the server starts accepting requests.** Various services must initialize for the first time before you'll be able to access your wiki. If it doesn't load on first attempt, wait 5 minutes and try again.
+  {.is-info}
+6. A setup screen for Wiki.js should appear. Enter the desired **email address** and **password** for the administrator account.
+1. Enter the **full URL** to your wiki, without the trailing slash. It's recommended to point a sub-domain / domain to your public IP (e.g. wiki.example.com). If you don't have a domain setup yet, you can use your public DNS endpoint or IP as the URL (e.g. http://xx.xx.xx.xx). This can be changed later in the **Adminitration Area** (under the **General** section).
 1. Click on **Install** to complete the installation. You'll automatically be redirected to the login page once completed. Enter the email and password for the administrator account you entered earlier.
 
 # Automatic HTTPS with Let's Encrypt
