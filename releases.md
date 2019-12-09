@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-04T02:40:34.619Z
+date: 2019-12-09T03:01:05.759Z
 tags: 
 ---
 
@@ -11,16 +11,16 @@ tags:
 > This build is **under active development** and has not yet been released.
 {.is-warning}
 
-
 ## Planned Features
-- API Docs Editor
-- Browse Pages (Tree View / Site Map)
-- Default Theme Options
-	- Sidebar Position
-  - Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
-- Delete a User
-- Save Rendering Configuration
-- Let's Encrypt Built-In Support
+- :waning_crescent_moon: API Docs Editor
+- :new_moon: Browse Pages (Tree View / Site Map)
+- :new_moon: Default Theme Options
+	- :new_moon: Sidebar Position
+  - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
+- :new_moon: Delete a User
+- :new_moon: Save Rendering Configuration
+- :waning_crescent_moon: Let's Encrypt Built-In Support
+- :full_moon: Specify a Custom Logo
 
 
 # 2.0.12
