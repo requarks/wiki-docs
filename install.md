@@ -2,14 +2,14 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-12-09T21:44:10.185Z
+date: 2019-12-09T21:49:41.885Z
 tags: setup
 ---
 
 > :warning: Before going any further, make sure you meet all the [requirements](/install/requirements).
 {.is-info}
 
-**Choose your platform:**
+## By Platform
 - [Docker](/install/docker)
 - [Heroku](/install/heroku)
 - [Kubernetes *coming soon*](/install/kubernetes)
@@ -18,12 +18,15 @@ tags: setup
 - [Windows](/install/windows)
 {.links-list}
 
-**Other step-by-step guides:**
+## Pre-built Cloud Images
 - [Install on DigitalOcean Droplet](/install/digitalocean)
 - [Install on Azure VM *coming soon*](/install/azure)
-- [Install on Azure Web App](/install/azurewebapp)
 - [Install on AWS EC2 *coming soon*](/install/aws)
 - [Install on Google Cloud *coming soon*](/install/gcp)
+{.links-list}
+
+## Other Guides
+- [Install on Azure Web App](/install/azurewebapp)
 - [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
 - [Install using Portainer](/install/portainer)
 {.links-list}
