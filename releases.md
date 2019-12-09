@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-09T03:01:29.308Z
+date: 2019-12-09T03:01:54.922Z
 tags: 
 ---
 
@@ -12,7 +12,7 @@ tags:
 {.is-warning}
 
 ## Planned Features
-- :last_quarter_moon: API Docs Editor
+- :waning_crescent_moon: API Docs Editor
 - :new_moon: Browse Pages (Tree View / Site Map)
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
