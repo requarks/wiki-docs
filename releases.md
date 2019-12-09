@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-09T03:01:05.759Z
+date: 2019-12-09T03:01:29.308Z
 tags: 
 ---
 
@@ -12,14 +12,14 @@ tags:
 {.is-warning}
 
 ## Planned Features
-- :waning_crescent_moon: API Docs Editor
+- :last_quarter_moon: API Docs Editor
 - :new_moon: Browse Pages (Tree View / Site Map)
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 - :new_moon: Delete a User
 - :new_moon: Save Rendering Configuration
-- :waning_crescent_moon: Let's Encrypt Built-In Support
+- :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Specify a Custom Logo
 
 
