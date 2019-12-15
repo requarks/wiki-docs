@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-09T03:01:54.922Z
+date: 2019-12-15T17:07:07.330Z
 tags: 
 ---
 
@@ -21,6 +21,7 @@ tags:
 - :new_moon: Save Rendering Configuration
 - :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Specify a Custom Logo
+- :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
 
 
 # 2.0.12
