@@ -2,9 +2,11 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-15T17:07:07.330Z
+date: 2019-12-16T23:28:31.489Z
 tags: 
 ---
+
+> Where's the detailed timeline? When is feature X being released? [Read this page](/releases/about)
 
 # Upcoming - 2.1
 
