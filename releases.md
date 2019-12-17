@@ -2,15 +2,17 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-16T23:28:31.489Z
+date: 2019-12-17T20:35:17.148Z
 tags: 
 ---
 
 > Where's the detailed timeline? When is feature X being released? [Read this page](/releases/about)
+{.is-info}
 
 # Upcoming - 2.1
 
 > This build is **under active development** and has not yet been released.
+> **ETA: January 2020**
 {.is-warning}
 
 ## Planned Features
