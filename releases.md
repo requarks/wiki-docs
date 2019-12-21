@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-19T04:46:49.661Z
+date: 2019-12-21T21:41:21.289Z
 tags: 
 ---
 
@@ -23,7 +23,7 @@ tags:
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 - :new_moon: Delete a User
 - :full_moon: LaTeX expressions rendering (KaTeX module)
-- :new_moon: Save Rendering Configuration
+- :full_moon: Save Rendering Configuration
 - :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Specify a Custom Logo
 - :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
