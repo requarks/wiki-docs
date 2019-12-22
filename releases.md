@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-21T21:41:21.289Z
+date: 2019-12-22T21:08:53.206Z
 tags: 
 ---
 
@@ -21,7 +21,7 @@ tags:
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
-- :new_moon: Delete a User
+- :full_moon: Delete a User
 - :full_moon: LaTeX expressions rendering (KaTeX module)
 - :full_moon: Save Rendering Configuration
 - :last_quarter_moon: Let's Encrypt Built-In Support
