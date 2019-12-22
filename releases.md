@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-22T21:08:53.206Z
+date: 2019-12-22T23:59:35.804Z
 tags: 
 ---
 
@@ -15,7 +15,9 @@ tags:
 > **ETA: January 2020**
 {.is-warning}
 
-## Planned Features
+## Major Features
+:new_moon: = Incomplete, :full_moon: = Completed {.caption}
+
 - :waning_crescent_moon: API Docs Editor
 - :new_moon: Browse Pages (Tree View / Site Map)
 - :new_moon: Default Theme Options
@@ -27,6 +29,15 @@ tags:
 - :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Specify a Custom Logo
 - :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
+
+## Bug fixes / Minor Improvements
+
+- **Fixed:** PostgreSQL search query now uses the configured locale ([#1269](https://github.com/Requarks/wiki/issues/1269))
+- **Fixed:** Nested lists bullets native implementation ([#1283](https://github.com/Requarks/wiki/issues/1283))
+- **Fixed:** Vuetify offset bug in RTL layouts ([#1326](https://github.com/Requarks/wiki/issues/1326))
+- **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
+- **Fixed:** Markdown editor is now reflects the proper direction in RTL layouts.
+- **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
 
 
 # 2.0.12
