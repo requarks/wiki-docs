@@ -2,8 +2,8 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2019-10-13T20:51:43.837Z
-tags: 
+date: 2019-12-22T20:41:17.403Z
+tags: dev, api
 ---
 
 # Overview
@@ -46,6 +46,8 @@ Error codes in the **1xxx** range are dedicated to authentication / users errors
 | 1014 | AuthAccountNotVerified | You must verify your account before your can login. |
 | 1015 | AuthValidationTokenInvalid | Invalid validation token. |
 | 1016 | UserNotFound | This user does not exist. |
+| 1017 | UserDeleteForeignConstraint | Cannot delete user because of content relational constraints. |
+| 1018 | UserDeleteProtected | Cannot delete a protected system account. |
 
 ## Assets
 
