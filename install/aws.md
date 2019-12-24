@@ -2,7 +2,7 @@
 title: Install on AWS
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2019-12-08T17:50:03.813Z
+date: 2019-12-24T03:11:58.384Z
 tags: setup, guide
 ---
 
@@ -31,7 +31,7 @@ However, for best performance, we recommend using at least the **t3.small** or p
 
 # Getting Started
 
-1. From the [Wiki.js Product Page](https://aws.amazon.com/marketplace/pp/XXXXXXXXX) on AWS Marketplace, click the **Continue to subscribe** button located at the top of the page.
+1. From the [Wiki.js Product Page](https://aws.amazon.com/marketplace/pp/B0832LDTKQ) on AWS Marketplace, click the **Continue to subscribe** button located at the top of the page.
 1. Follow the on-screen instructions to launch an instance.
 1. Once the instance is running, go to the instance details in the AWS Management Console.
 1. Copy the **Public DNS** endpoint for your instance.
