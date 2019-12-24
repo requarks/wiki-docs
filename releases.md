@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-23T05:14:04.644Z
+date: 2019-12-24T20:51:11.150Z
 tags: 
 ---
 
@@ -39,6 +39,7 @@ tags:
 - **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
 - **Fixed:** Markdown editor is now reflects the proper direction in RTL layouts.
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
+- **Improvements:** An Export All action has been added to the AWS S3 storage module.
 
 
 # 2.0.12
