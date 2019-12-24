@@ -2,12 +2,9 @@
 title: Install on AWS
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2019-12-24T03:11:58.384Z
+date: 2019-12-24T03:26:06.809Z
 tags: setup, guide
 ---
-
-> :warning: **The AWS Marketplace Wiki.js image is not yet available but will be shortly!** Thank you for your patience!
-{.is-warning}
 
 # Overview
 
