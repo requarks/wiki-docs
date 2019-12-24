@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2019-12-23T18:31:21.043Z
+date: 2019-12-24T03:28:03.384Z
 tags: setup
 ---
 
@@ -19,9 +19,9 @@ tags: setup
 {.links-list}
 
 ## Pre-built Cloud Images
-- [Install on DigitalOcean Droplet *Using the free Marketplace Image*](/install/digitalocean)
+- [Install on DigitalOcean Droplet *using the free Marketplace Image*](/install/digitalocean)
 - [Install on Azure VM *coming soon*](/install/azure)
-- [Install on AWS EC2 *coming soon*](/install/aws)
+- [Install on AWS EC2 *using the free Marketplace Image*](/install/aws)
 - [Install on Google Cloud *coming soon*](/install/gcp)
 {.links-list}
 
