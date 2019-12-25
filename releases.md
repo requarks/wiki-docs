@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-24T20:53:22.650Z
+date: 2019-12-25T06:48:16.371Z
 tags: 
 ---
 
@@ -24,12 +24,12 @@ tags:
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 - :last_quarter_moon: Let's Encrypt Built-In Support
-- :last_quarter_moon: SFTP Storage Module
 - :full_moon: Azure Blob Storage Module
 - :full_moon: Delete a User
 - :full_moon: LaTeX expressions rendering (KaTeX module)
 - :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
 - :full_moon: Save Rendering Configuration
+- :full_moon: SFTP Storage Module
 - :full_moon: Specify a Custom Logo
 
 ## Bug fixes / Minor Improvements
