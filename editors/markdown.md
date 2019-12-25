@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2019-11-22T18:39:58.175Z
+date: 2019-12-25T21:24:22.955Z
 tags: editors
 ---
 
@@ -260,7 +260,7 @@ By default, a code block is rendered as plain preformatted text. It's however pr
 ```
 ````
 
-Refer to the [reference list](https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html#language-names-and-aliases) of about 185 supported programming languages.
+Refer to the [reference list](https://github.com/highlightjs/highlight.js#supported-languages) of about 185 supported programming languages.
 
 ## Horizontal Line
 
