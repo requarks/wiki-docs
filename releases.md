@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-30T21:58:12.156Z
+date: 2019-12-30T21:59:40.789Z
 tags: 
 ---
 
@@ -38,7 +38,7 @@ tags:
 - **Fixed:** Nested lists bullets native implementation ([#1283](https://github.com/Requarks/wiki/issues/1283))
 - **Fixed:** Vuetify offset bug in RTL layouts ([#1326](https://github.com/Requarks/wiki/issues/1326))
 - **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
-- **Fixed:** Markdown editor is now reflects the proper direction in RTL layouts.
+- **Fixed:** Markdown editor now reflects the proper direction in RTL layouts.
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
 - **Improvements:** An Export All action has been added to the AWS S3 storage module.
 - **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
