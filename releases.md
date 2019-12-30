@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-30T17:23:36.670Z
+date: 2019-12-30T21:58:12.156Z
 tags: 
 ---
 
@@ -41,6 +41,8 @@ tags:
 - **Fixed:** Markdown editor is now reflects the proper direction in RTL layouts.
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
 - **Improvements:** An Export All action has been added to the AWS S3 storage module.
+- **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
+- **Improvements:** Display detailed error when db connection fails using pg driver.
 
 
 # 2.0.12
