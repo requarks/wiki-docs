@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-25T06:49:55.607Z
+date: 2019-12-30T17:23:36.670Z
 tags: 
 ---
 
@@ -19,7 +19,7 @@ tags:
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
 - :waning_crescent_moon: API Docs Editor
-- :new_moon: Browse Pages (Tree View / Site Map)
+- :last_quarter_moon: Browse Pages (Tree View / Site Map)
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
