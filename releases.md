@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-01T21:27:21.590Z
+date: 2020-01-01T21:27:57.077Z
 tags: 
 ---
 
@@ -32,7 +32,7 @@ tags:
 ## Major Features
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
-- :last_quarter_moon: Browse Pages (Tree View / Site Map)
+- :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
 - :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Azure Blob Storage Module
 - :full_moon: Delete / Deactivate a User
