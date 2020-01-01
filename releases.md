@@ -2,12 +2,26 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2019-12-30T21:59:40.789Z
+date: 2020-01-01T21:27:21.590Z
 tags: 
 ---
 
 > Where's the detailed timeline? When is feature X being released? [Read this page](/releases/about)
 {.is-info}
+
+# Upcoming - 2.2
+
+> This build is **under active development** and has not yet been released.
+> **ETA: February 2020**
+{.is-warning}
+
+## Major Features
+:new_moon: = Incomplete, :full_moon: = Completed {.caption}
+
+- :waning_crescent_moon: API Docs Editor
+- :new_moon: Default Theme Options
+	- :new_moon: Sidebar Position
+  - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 
 # Upcoming - 2.1
 
@@ -18,14 +32,11 @@ tags:
 ## Major Features
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
-- :waning_crescent_moon: API Docs Editor
 - :last_quarter_moon: Browse Pages (Tree View / Site Map)
-- :new_moon: Default Theme Options
-	- :new_moon: Sidebar Position
-  - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 - :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Azure Blob Storage Module
-- :full_moon: Delete a User
+- :full_moon: Delete / Deactivate a User
+- :full_moon: Manually verify a User
 - :full_moon: LaTeX expressions rendering (KaTeX module)
 - :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
 - :full_moon: Save Rendering Configuration
