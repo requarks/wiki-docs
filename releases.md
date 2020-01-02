@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-02T18:39:12.781Z
+date: 2020-01-02T18:39:21.591Z
 tags: 
 ---
 
@@ -50,7 +50,7 @@ tags:
 - **Fixed:** Vuetify offset bug in RTL layouts ([#1326](https://github.com/Requarks/wiki/issues/1326))
 - **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
 - **Fixed:** Markdown editor now reflects the proper direction in RTL layouts.
-- **Fixed:** Non-pages internal links being detected as pages on subsequent finds.
+- **Fixed:** Non-pages internal links being detected as invalid pages on subsequent finds.
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
 - **Improvements:** An Export All action has been added to the AWS S3 storage module.
 - **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
