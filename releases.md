@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-05T20:06:25.031Z
+date: 2020-01-05T22:41:43.385Z
 tags: 
 ---
 
@@ -42,6 +42,7 @@ tags:
 - :full_moon: Save Rendering Configuration
 - :full_moon: SFTP Storage Module
 - :full_moon: Specify a Custom Logo
+- :full_moon: Utility - Re-render all pages
 - :full_moon: Visualize Pages (Hierarchical Tree, Hierarchical Radial & Relational Radial)
 
 ## Bug fixes / Minor Improvements
