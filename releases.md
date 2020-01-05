@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-02T18:39:21.591Z
+date: 2020-01-05T20:06:25.031Z
 tags: 
 ---
 
@@ -22,6 +22,7 @@ tags:
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
+- :waning_crescent_moon: Let's Encrypt Built-In Support
 
 # Upcoming - 2.1
 
@@ -33,7 +34,6 @@ tags:
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
 - :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
-- :last_quarter_moon: Let's Encrypt Built-In Support
 - :full_moon: Azure Blob Storage Module
 - :full_moon: Delete / Deactivate a User
 - :full_moon: Manually verify a User
@@ -42,6 +42,7 @@ tags:
 - :full_moon: Save Rendering Configuration
 - :full_moon: SFTP Storage Module
 - :full_moon: Specify a Custom Logo
+- :full_moon: Visualize Pages (Hierarchical Tree, Hierarchical Radial & Relational Radial)
 
 ## Bug fixes / Minor Improvements
 
