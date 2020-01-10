@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2019-12-04T20:54:09.284Z
+date: 2020-01-10T21:01:06.560Z
 tags: setup, docker
 ---
 
@@ -21,6 +21,8 @@ Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki`
 ## Environment Variables
 You must set the following environment variables. They are all **required** unless specified otherwise.
 
+### Database
+
 *For PostgreSQL, MySQL, MariaDB and MSSQL only:*
 
 - **DB_TYPE** : Type of database (`mysql`, `postgres`, `mariadb`, `mssql` or `sqlite`)
@@ -29,18 +31,35 @@ You must set the following environment variables. They are all **required** unle
 - **DB_USER** : Username to connect to the database
 - **DB_PASS** : Password to connect to the database
 - **DB_NAME** : Database name
+{.grid-list}
 
 *When connecting to a database server with SSL enforced:*
 
 - **DB_SSL** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
+{.grid-list}
 
 *Alternative way to provide the database password, via a local file secret:*
 
 - **DB_PASS_FILE**: Path to the mapped file containing to the database password. *(optional, replaces DB_PASS)*
+{.grid-list}
 
 *For SQLite only:*
 
 - **DB_FILEPATH** : Path to the SQLite file
+{.grid-list}
+
+### HTTPS
+
+> This feature is only available from version **2.1 and up**
+{.is-info}
+
+Environment variables are provided for easy Let's Encrypt configuration.
+If you want to provide your own SSL certificate configuration, you must instead mount a config file as explained below.
+
+- **USE_HTTPS** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
+- **LETSENCRYPT_DOMAIN** : The domain / sub-domain to use when requesting a certificate from Let's Encrypt (e.g. `wiki.example.com`)
+- **LETSENCRYPT_EMAIL** : The administrator email used when requesting a certificate from Let's Encrypt.
+{.grid-list}
 
 ## Example
 
