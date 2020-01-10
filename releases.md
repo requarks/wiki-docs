@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-05T22:41:43.385Z
+date: 2020-01-10T21:03:06.117Z
 tags: 
 ---
 
@@ -22,7 +22,6 @@ tags:
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
-- :waning_crescent_moon: Let's Encrypt Built-In Support
 
 # Upcoming - 2.1
 
@@ -33,6 +32,7 @@ tags:
 ## Major Features
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
+- :waning_crescent_moon: Let's Encrypt Built-In Support
 - :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
 - :full_moon: Azure Blob Storage Module
 - :full_moon: Delete / Deactivate a User
@@ -57,6 +57,7 @@ tags:
 - **Improvements:** An Export All action has been added to the AWS S3 storage module.
 - **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
 - **Improvements:** Display detailed error when db connection fails using pg driver.
+- **Improvements:** Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
 
 
 # 2.0.12
