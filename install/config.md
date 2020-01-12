@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-12T23:14:50.553Z
+date: 2020-01-12T23:56:17.082Z
 tags: setup
 ---
 
@@ -170,6 +170,10 @@ The `port` is the port the HTTPS server will listen on. It **cannot** be the sam
 The `domain` is the fully-qualified domain name pointing to the wiki. **It must already resolve to the server.**
 
 The `subscriberEmail` is the email used when authenticating with Let's Encrypt to request a certificate. It should be set to your sysadmin so that important emails concerning the domain SSL certificate can be received.
+
+The following diagram details the certificate provisioning process:
+
+![Let's Encrypt Process](/assets/diagrams/diag-letsencrypt.png =800x){.decor-shadow .radius-5}
 
 ## Database over SSL
 
