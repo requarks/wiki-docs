@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2019-12-08T17:56:25.175Z
+date: 2020-01-12T23:09:06.814Z
 tags: setup
 ---
 
@@ -16,6 +16,8 @@ Wiki.js runs perfectly fine on a single CPU core. However, **2 cores or more are
 
 ### RAM
 Linux systems should have **at least 1GB of RAM** to run Wiki.js. Windows and macOS systems usually require a bit more RAM.
+
+While the process itself usually sits at around 70MB of RAM, some events *(such as page rendering, indexing, etc.)* result in short bursts in RAM usage.
 
 ### Storage
 Storage requirements are based on the content you will enter. Wikis that consists almost exclusively of text are not likely to exceed a few megabytes. However, as soon as you upload images, videos or other files, you should plan your storage requirements accordingly.
