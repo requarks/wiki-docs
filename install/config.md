@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-12T21:17:32.953Z
+date: 2020-01-12T21:27:14.393Z
 tags: setup
 ---
 
@@ -161,6 +161,11 @@ ssl:
   domain: wiki.yourdomain.com
   subscriberEmail: admin@example.com
 ```
+
+The `port` is the port the HTTPS server will listen on. It **cannot** be the same as the HTTP port.
+
+> The non-secure HTTP port **must be accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, all insecure requests made on the HTTP port will automatically be redirected to HTTPS.
+{.is-warning}
 
 ## Database over SSL
 
