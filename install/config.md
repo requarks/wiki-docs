@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-12T21:12:06.291Z
+date: 2020-01-12T21:17:32.953Z
 tags: setup
 ---
 
@@ -112,11 +112,11 @@ Wiki.js supports both user-provided custom certificates or automated Let's Encry
 
 ### Custom Certificate
 
-You need both the **private key** and **certificate** in **PEM** format:
+You need both the **private key** (`key`) and **certificate** (`cert`) in **PEM** format:
 
 ```yml
 ssl:
-  enabled: false
+  enabled: true
   port: 3443
   provider: custom
   
@@ -131,15 +131,17 @@ It's also possible to use a **PFX** formatted certificate instead:
 
 ```yml
 ssl:
-  enabled: false
+  enabled: true
   port: 3443
   provider: custom
   
   format: pfx
-  key: path/to/cert.pfx
+  pfx: path/to/cert.pfx
   passphrase: null
   dhparam: null
 ```
+
+The `port` is the port the HTTPS server will listen on. It **cannot** be the same as the HTTP port.
 
 The `passphrase` is optional and is only required when the certificate is encrypted passphrase. It should be set to `null` otherwise.
 
@@ -149,6 +151,16 @@ The `dhparam` is optional and can be used to set the Diffie Hellman parameters, 
 
 > This feature is available in version **2.1 and later**.
 {.is-info}
+
+```yml
+ssl:
+  enabled: true
+  port: 3443
+  provider: letsencrypt
+
+  domain: wiki.yourdomain.com
+  subscriberEmail: admin@example.com
+```
 
 ## Database over SSL
 
