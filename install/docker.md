@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-01-10T21:01:06.560Z
+date: 2020-01-12T20:32:39.856Z
 tags: setup, docker
 ---
 
@@ -54,7 +54,7 @@ You must set the following environment variables. They are all **required** unle
 {.is-info}
 
 Environment variables are provided for easy Let's Encrypt configuration.
-If you want to provide your own SSL certificate configuration, you must instead mount a config file as explained below.
+If you want to provide your own SSL certificate configuration, you must instead mount a config file [as explained below](#alternative-mount-the-config-file).
 
 - **USE_HTTPS** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
 - **LETSENCRYPT_DOMAIN** : The domain / sub-domain to use when requesting a certificate from Let's Encrypt (e.g. `wiki.example.com`)
