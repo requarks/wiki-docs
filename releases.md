@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-12T03:26:26.988Z
+date: 2020-01-12T20:26:21.696Z
 tags: 
 ---
 
@@ -22,6 +22,7 @@ tags:
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
+- :new_moon: View History / Compare Versions
 
 # Upcoming - 2.1
 
