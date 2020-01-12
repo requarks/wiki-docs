@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-10T21:03:06.117Z
+date: 2020-01-12T03:26:26.988Z
 tags: 
 ---
 
@@ -32,13 +32,13 @@ tags:
 ## Major Features
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
-- :waning_crescent_moon: Let's Encrypt Built-In Support
 - :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
 - :full_moon: Azure Blob Storage Module
 - :full_moon: Delete / Deactivate a User
-- :full_moon: Manually verify a User
-- :full_moon: LaTeX expressions rendering (KaTeX module)
 - :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
+- :full_moon: LaTeX expressions rendering (KaTeX module)
+- :full_moon: Let's Encrypt Built-In Support
+- :full_moon: Manually verify a User
 - :full_moon: Save Rendering Configuration
 - :full_moon: SFTP Storage Module
 - :full_moon: Specify a Custom Logo
