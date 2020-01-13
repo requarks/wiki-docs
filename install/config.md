@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T04:49:23.537Z
+date: 2020-01-13T04:50:19.777Z
 tags: setup
 ---
 
@@ -295,3 +295,19 @@ dataPath: /path/to/directory
 # Sample Config File
 
 The latest version of the complete sample config file can be found on [GitHub](https://github.com/Requarks/wiki/blob/master/config.sample.yml).
+
+```php
+<?php
+
+include __DIR__ . "/../../../vendor/autoload.php"; // chemin à adapter selon l'emplacement du script
+
+\Pimcore\Bootstrap::setProjectRoot();
+\Pimcore\Bootstrap::bootstrap();
+
+// On peut maintenant appeler les méthodes Pimcore
+
+// On peut aussi paramétrer PHP
+error_reporting(E_ALL); // on affiche même les erreurs de niveau notice
+set_time_limit(0); // pas de limite de temps
+ini_set('memory_limit', '2048M'); // on alloue davantage de mémoire
+```
