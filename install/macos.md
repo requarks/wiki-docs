@@ -2,7 +2,7 @@
 title: macOS
 description: Getting started with a Wiki.js installation on macOS
 published: true
-date: 2019-11-23T22:22:44.587Z
+date: 2020-01-13T02:41:12.003Z
 tags: setup
 ---
 
@@ -25,7 +25,7 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```bash
   mv config.sample.yml config.yml
   ```
-5. Edit the config file and fill in your database, redis and port settings:
+5. Edit the config file and fill in your database and port settings ([Configuration Reference](/install/config)):
   ```bash
   nano config.yml
   ```
