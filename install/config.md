@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T02:24:34.920Z
+date: 2020-01-13T02:36:28.895Z
 tags: setup
 ---
 
@@ -142,9 +142,7 @@ ssl:
 ```
 
 The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
-
 The `passphrase` is optional and is only required when the certificate is encrypted passphrase. It should be set to `null` otherwise.
-
 The `dhparam` is optional and can be used to set the Diffie Hellman parameters, with a key length being greater or equal to 1024 bits. It should be set to `null` if not used.
 
 ### Let's Encrypt
@@ -246,10 +244,52 @@ Refer to to the [tarn.js](https://github.com/vincit/tarn.js) project page for al
 
 ## Bind IP
 
+If you have multiple ethernet interfaces and would like to specify which IP should be used for listening, use the `bindIP` parameter:
+
+```yml
+bindIP: 0.0.0.0
+```
+
+Leave the default `0.0.0.0` to listen on all interfaces.
+
+
 ## Logging
+
+Define how much logs you want printed to the output by defining the `logLevel` parameter.
+
+```yml
+logLevel: info
+```
+
+The accepted values are: `error`, `warn`, `info` *(default)*, `verbose`, `debug`, `silly`.
 
 ## Upload Limits
 
+Set the maximum file size for user uploads:
+
+```yml
+uploads:
+  maxFileSize: 5242880
+  maxFiles: 10
+```
+
+The `maxFileSize` parameter is defined in bytes. The default is `5242880`, which translates to 5MB.
+The `maxFiles` parameter defines the maximum number of files accepted in a single upload. The default is `10`.
+
 ## Offline Mode
 
+If your wiki installation cannot access the internet, set the `offline` parameter to `true`.  This will prevent the wiki from attempting to download the latest file updates.
+
+Setting this option will also enable [sideloading](/install/sideload).
+
 ## Data Paths
+
+Wiki.js needs a folder to write temporary data. By default, this path is `./data` which is relative to the wiki installation. If write access cannot be given to this path, you can change it by setting the `dataPath` parameter:
+
+```yml
+dataPath: /path/to/directory
+```
+
+# Sample Config File
+
+The latest version of the complete sample config file can be found on [GitHub](https://github.com/Requarks/wiki/blob/master/config.sample.yml).
