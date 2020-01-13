@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T00:13:22.045Z
+date: 2020-01-13T02:23:57.138Z
 tags: setup
 ---
 
@@ -235,7 +235,7 @@ Wiki.js uses a pool of connections to the database to efficiently manage request
 
 ```yml
 pool:
-	min: 2
+  min: 2
   max: 10
 ```
 
