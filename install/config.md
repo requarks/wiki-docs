@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T02:23:57.138Z
+date: 2020-01-13T02:24:34.920Z
 tags: setup
 ---
 
@@ -199,6 +199,9 @@ db:
 ```
 
 ### Custom
+
+> This feature is available from version **2.1 and up**.
+{.is-info}
 
 If your server requires a specific or self-generated certificate, you can specify the custom TLS options in the `db.sslOptions` parameter (in addition to setting the `db.ssl` flag to `true`):
 
