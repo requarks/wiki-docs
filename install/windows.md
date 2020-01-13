@@ -2,7 +2,7 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2019-11-23T22:23:18.349Z
+date: 2020-01-13T02:41:30.605Z
 tags: setup
 ---
 
@@ -32,7 +32,7 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```powershell
   Rename-Item -Path config.sample.yml -NewName config.yml
   ```
-6. Edit the config file using your favorite text editor (e.g. Notepad) and fill in your database and port settings:
+6. Edit the config file using your favorite text editor (e.g. Notepad) and fill in your database and port settings ([Configuration Reference](/install/config)):
   ```powershell
   notepad .\config.yml
   ```
