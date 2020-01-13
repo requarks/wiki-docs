@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-12T23:56:17.082Z
+date: 2020-01-13T00:13:09.032Z
 tags: setup
 ---
 
@@ -141,7 +141,7 @@ ssl:
   dhparam: null
 ```
 
-The `port` is the port the HTTPS server will listen on. It **cannot** be the same as the HTTP port.
+The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
 
 The `passphrase` is optional and is only required when the certificate is encrypted passphrase. It should be set to `null` otherwise.
 
@@ -151,6 +151,8 @@ The `dhparam` is optional and can be used to set the Diffie Hellman parameters, 
 
 > This feature is available from version **2.1 and up**.
 {.is-info}
+
+Let's Encrypt allows for free, automated and auto-renewing SSL certificates for your wiki.
 
 ```yml
 ssl:
@@ -162,7 +164,7 @@ ssl:
   subscriberEmail: admin@example.com
 ```
 
-The `port` is the port the HTTPS server will listen on. It **cannot** be the same as the HTTP port.
+The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
 
 > The non-secure HTTP port **must be accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, all insecure requests made on the HTTP port will automatically be redirected to HTTPS.
 {.is-warning}
@@ -171,13 +173,73 @@ The `domain` is the fully-qualified domain name pointing to the wiki. **It must 
 
 The `subscriberEmail` is the email used when authenticating with Let's Encrypt to request a certificate. It should be set to your sysadmin so that important emails concerning the domain SSL certificate can be received.
 
-The following diagram details the certificate provisioning process:
+The following diagram details the certificate provisioning process. Although all these steps are performed automatically for you, it gives you a better understanding of the process.
 
 ![Let's Encrypt Process](/assets/diagrams/diag-letsencrypt.png =800x){.decor-shadow .radius-5}
 
 ## Database over SSL
 
+Some database servers require an SSL connection for extra security.
+
+### Automatic
+
+In most scenarios, the SSL connection can be automatically established by the database client driver. You simply need to set the `db.ssl` parameter to `true`:
+
+For example, using a PostgreSQL configuration, note the additional `db.ssl` flag:
+
+```yaml
+db:
+  type: postgres
+  host: localhost
+  port: 5432
+  user: wikijs
+  pass: wikijsrocks
+  db: wiki
+  ssl: true
+```
+
+### Custom
+
+If your server requires a specific or self-generated certificate, you can specify the custom TLS options in the `db.sslOptions` parameter (in addition to setting the `db.ssl` flag to `true`):
+
+```yaml
+db:
+  type: postgres
+  host: localhost
+  port: 5432
+  user: wikijs
+  pass: wikijsrocks
+  db: wiki
+  ssl: true
+  
+  sslOptions:
+    auto: false
+    # rejectUnauthorized: false
+    ca: path/to/ca.crt
+    cert: path/to/cert.crt
+    key: path/to/key.pem
+    # pfx: path/to/cert.pfx
+    passphrase: xyz123
+```
+
+The `auto` flag must be set to `false`. Comment the lines you don't need.
+
+You can find a complete list of accepted parameters for the `sslOptions` object in the [Node.js TLS documentation](https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options).
+
 ## Database Connection Pool
+
+> It's not recommended to change these settings unless you know what you're doing.
+{.is-warning}
+
+Wiki.js uses a pool of connections to the database to efficiently manage requests. You can change the default settings using the `pool` option:
+
+```yml
+pool:
+	min: 2
+  max: 10
+```
+
+Refer to to the [tarn.js](https://github.com/vincit/tarn.js) project page for all possible options.
 
 ## Bind IP
 
