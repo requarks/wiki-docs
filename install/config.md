@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T00:13:09.032Z
+date: 2020-01-13T00:13:22.045Z
 tags: setup
 ---
 
