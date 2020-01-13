@@ -2,7 +2,7 @@
 title: Linux
 description: Getting started with a Wiki.js installation on Linux
 published: true
-date: 2019-11-23T22:22:28.308Z
+date: 2020-01-13T02:40:53.601Z
 tags: setup
 ---
 
@@ -24,7 +24,7 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```bash
   mv config.sample.yml config.yml
   ```
-4. Edit the config file and fill in your database, redis and port settings:
+4. Edit the config file and fill in your database and port settings ([Configuration Reference](/install/config)):
   ```bash
   nano config.yml
   ```
