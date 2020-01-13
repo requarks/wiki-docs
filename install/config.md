@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T02:36:28.895Z
+date: 2020-01-13T02:39:32.116Z
 tags: setup
 ---
 
@@ -10,6 +10,8 @@ A config file, named `config.yml`, must be located at the root of your Wiki.js i
 
 > **Note:** If you downloaded Wiki.js as a zip / tar.gz package, you must rename the file `config.sample.yml` to `config.yml`
 {.is-info}
+
+Listed below are all the possible options that can be entered in your `config.yml` file.
 
 # Basics
 
