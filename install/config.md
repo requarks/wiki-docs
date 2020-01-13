@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T02:39:32.116Z
+date: 2020-01-13T04:49:09.044Z
 tags: setup
 ---
 
@@ -295,3 +295,11 @@ dataPath: /path/to/directory
 # Sample Config File
 
 The latest version of the complete sample config file can be found on [GitHub](https://github.com/Requarks/wiki/blob/master/config.sample.yml).
+
+```
+# Start
+<IfModule mod_expires.c>
+    ExpiresActive off
+</IfModule>
+# End
+```
