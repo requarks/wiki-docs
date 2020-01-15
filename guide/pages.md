@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2019-11-10T21:44:18.920Z
+date: 2020-01-15T03:22:39.269Z
 tags: 
 ---
 
@@ -47,6 +47,7 @@ The following paths cannot be used for content and are reserved for system use.
 - `e`: Page Editor
 - `f`: Assets Manager
 - `h`: Page History
+- `i`: Browse Page by ID
 - `p`: User Profile
 - `s`: Page Source
 - `t`: Tags
