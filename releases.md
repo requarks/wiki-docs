@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-15T03:28:32.625Z
+date: 2020-01-15T03:30:19.797Z
 tags: 
 ---
 
@@ -50,6 +50,7 @@ tags:
 
 - **Fixed:** PostgreSQL search query now uses the configured locale ([#1269](https://github.com/Requarks/wiki/issues/1269))
 - **Fixed:** Nested lists bullets native implementation ([#1283](https://github.com/Requarks/wiki/issues/1283))
+- **Fixed:** Truncate picture URL from 3rd-party auth strategy when too long ([#1311](https://github.com/Requarks/wiki/issues/1311))
 - **Fixed:** Vuetify offset bug in RTL layouts ([#1326](https://github.com/Requarks/wiki/issues/1326))
 - **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
 - **Fixed:** Markdown editor now reflects the proper direction in RTL layouts.
