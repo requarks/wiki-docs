@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-13T02:44:36.302Z
+date: 2020-01-15T03:28:32.625Z
 tags: 
 ---
 
@@ -59,6 +59,7 @@ tags:
 - **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
 - **Improvements:** Display detailed error when db connection fails using pg driver.
 - **Improvements:** Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
+- **Improvements:** Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
 
 
 # 2.0.12
