@@ -2,7 +2,7 @@
 title: Users, Groups & Permissions
 description: Manage access to your wiki
 published: true
-date: 2019-07-20T03:22:54.795Z
+date: 2020-01-15T03:52:12.751Z
 tags: 
 ---
 
@@ -57,7 +57,25 @@ If we combine all the concepts together, the group would:
 
 ---
 
-***So why have global permissions at all, instead of simply using page rules?***
+***In which order are rules applied?***
+
+Rules are applied in order of path specificity. A more precise path will always override a less defined path.
+
+For example, `/geography/countries` will override `/geography`.
+
+When 2 rules have the same specificity, the priority is given from lowest to highest as follows:
+- Path Starts With... *(lowest)*{.caption}
+- Path Ends With...
+- Path Matches Regex...
+- Path Is Exactly... *(highest)*{.caption}
+
+When 2 rules have the same path specificity AND the same match type, `Deny` will always override an `Allow` rule.
+
+***What is the default behavior for a permission?***
+
+Unless you explicitely grant `Allow` on a permission, it will always be denied by default. Therefore, giving no permission is the same as adding a `Deny` rule for all permissions. As such, `Deny` rules are only needed to override a previous `Allow` rule. You do not need to add a `Deny` rule if you didn't `Allow` it in the first place at a lower level.
+
+***Why have global permissions at all, instead of simply using page rules?***
 
 Some actions are not tied to any particular path. For example, the ability to create users or manage groups. It's also useful to have a quick view of what a group can do without having to review a bunch of page rules to see whether a permission is applied. It's also easier to remove access globally to a specific action without modifying any page rule.
 
