@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-13T04:50:32.545Z
+date: 2020-01-18T17:54:27.579Z
 tags: setup
 ---
 
@@ -283,6 +283,10 @@ The `maxFiles` parameter defines the maximum number of files accepted in a singl
 If your wiki installation cannot access the internet, set the `offline` parameter to `true`.  This will prevent the wiki from attempting to download the latest file updates.
 
 Setting this option will also enable [sideloading](/install/sideload).
+
+```yml
+offline: true
+```
 
 ## Data Paths
 
