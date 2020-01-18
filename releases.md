@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-15T03:30:44.633Z
+date: 2020-01-18T20:47:32.907Z
 tags: 
 ---
 
@@ -53,6 +53,7 @@ tags:
 - **Fixed:** Truncate picture URL from 3rd-party auth strategy when too long ([#1311](https://github.com/Requarks/wiki/issues/1311))
 - **Fixed:** Vuetify offset bug in RTL layouts ([#1326](https://github.com/Requarks/wiki/issues/1326))
 - **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
+- **Fixed:** View source is now using `read:source` permission ([#1388](https://github.com/Requarks/wiki/issues/1388))
 - **Fixed:** Markdown editor now reflects the proper direction in RTL layouts.
 - **Fixed:** Non-pages internal links being detected as invalid pages on subsequent finds.
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
@@ -61,6 +62,7 @@ tags:
 - **Improvements:** Display detailed error when db connection fails using pg driver.
 - **Improvements:** Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
 - **Improvements:** Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
+- **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
 
 
 # 2.0.12
