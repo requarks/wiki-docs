@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-01-19T21:08:27.836Z
+date: 2020-01-19T21:09:23.731Z
 tags: dev, api
 ---
 
@@ -113,7 +113,7 @@ Error codes in the **6xxx** range are dedicated to pages / rendering errors.
 
 ## System
 
-Error codes in the **7xxx** range are dedicated to pages / rendering errors.
+Error codes in the **7xxx** range are dedicated to system related errors.
 
 | Code | Slug | Message |
 |------|------------------|-------------------------------------------|
