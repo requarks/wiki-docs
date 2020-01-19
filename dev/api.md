@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2019-12-22T21:07:45.006Z
+date: 2020-01-19T21:08:27.836Z
 tags: dev, api
 ---
 
@@ -110,3 +110,13 @@ Error codes in the **6xxx** range are dedicated to pages / rendering errors.
 | 6008 | PageCreateForbidden | You are not authorized to create this page. |
 | 6009 | PageUpdateForbidden | You are not authorized to update this page. |
 | 6010 | PageDeleteForbidden | You are not authorized to delete this page. |
+
+## System
+
+Error codes in the **7xxx** range are dedicated to pages / rendering errors.
+
+| Code | Slug | Message |
+|------|------------------|-------------------------------------------|
+| 7001 | SystemGenericError | An unexpected error occured. |
+| 7002 | SystemSSLDisabled | SSL is not enabled. |
+| 7003 | SystemSSLRenewInvalidProvider | Current provider does not support SSL certificate renewal. |
