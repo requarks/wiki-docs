@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-01-19T23:30:06.607Z
+date: 2020-01-19T23:42:34.474Z
 tags: dev, api
 ---
 
