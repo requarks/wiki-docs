@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-01-19T21:09:23.731Z
+date: 2020-01-19T23:30:06.607Z
 tags: dev, api
 ---
 
@@ -120,3 +120,4 @@ Error codes in the **7xxx** range are dedicated to system related errors.
 | 7001 | SystemGenericError | An unexpected error occured. |
 | 7002 | SystemSSLDisabled | SSL is not enabled. |
 | 7003 | SystemSSLRenewInvalidProvider | Current provider does not support SSL certificate renewal. |
+| 7004 | SystemSSLLEUnavailable | Let's Encrypt is not initialized. |
