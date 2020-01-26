@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-18T20:47:32.907Z
+date: 2020-01-26T18:15:49.106Z
 tags: 
 ---
 
@@ -23,6 +23,10 @@ tags:
 	- :new_moon: Sidebar Position
   - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
 - :new_moon: View History / Compare Versions
+- :new_moon: Login Dialog UX Improvements
+	- :new_moon: OAuth2 / OpenID Connect Strategy
+  - :new_moon: Multiple Instances of the same Strategy
+  - :new_moon: Strategy name / logo customization
 
 # Upcoming - 2.1
 
