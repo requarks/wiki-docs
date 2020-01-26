@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-26T20:45:57.844Z
+date: 2020-01-26T20:47:08.856Z
 tags: 
 ---
 
@@ -68,7 +68,7 @@ tags:
 - **Improvements:** Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
 - **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
 - **Improvements:** In the editor, <kbd>CTRL</kbd> + Click the save button will automatically close the editor upon saving.
-
+- **Improvements:** CSS Injection content is now automatically beautified in the Admin area.
 
 # 2.0.12
 
