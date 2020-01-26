@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-26T20:47:08.856Z
+date: 2020-01-26T22:46:10.772Z
 tags: 
 ---
 
@@ -69,6 +69,7 @@ tags:
 - **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
 - **Improvements:** In the editor, <kbd>CTRL</kbd> + Click the save button will automatically close the editor upon saving.
 - **Improvements:** CSS Injection content is now automatically beautified in the Admin area.
+- **Improvements:** Code Injection fields under Admin Theme are now using monospaced font.
 
 # 2.0.12
 
