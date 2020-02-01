@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-02-01T05:19:00.081Z
+date: 2020-02-01T05:27:54.129Z
 tags: setup, docker
 ---
 
@@ -60,6 +60,17 @@ If you want to provide your own SSL certificate configuration, you must instead 
 - **LETSENCRYPT_DOMAIN** : The domain / sub-domain to use when requesting a certificate from Let's Encrypt (e.g. `wiki.example.com`)
 - **LETSENCRYPT_EMAIL** : The administrator email used when requesting a certificate from Let's Encrypt.
 {.grid-list}
+
+The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when using Let's Encrypt, e.g.:
+```bash
+docker run -d -p 80:3000 -p 443:3443 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+```
+
+> **The HTTP port must be accessible from the internet for the certificate provisioning to complete!**
+> Once the certificate is generated, you can enable automatic HTTPS redirection from the **Administration** area, under the **SSL** section.
+> 
+> Note that you must leave the HTTP port open and accessible at all times for the certificate renewal process to work. This is **NOT** a security risk when the above option (HTTPS Redirection) is enabled.
+{.is-warning}
 
 ## Example
 
