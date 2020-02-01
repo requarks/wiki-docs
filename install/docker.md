@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-02-01T05:27:54.129Z
+date: 2020-02-01T05:40:37.919Z
 tags: setup, docker
 ---
 
@@ -63,7 +63,7 @@ If you want to provide your own SSL certificate configuration, you must instead 
 
 The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when using Let's Encrypt, e.g.:
 ```bash
-docker run -d -p 80:3000 -p 443:3443 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e "LETSENCRYPT_EMAIL=admin@example.com" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
 ```
 
 > **The HTTP port must be accessible from the internet for the certificate provisioning to complete!**
