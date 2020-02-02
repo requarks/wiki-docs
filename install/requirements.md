@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2020-01-12T23:09:06.814Z
+date: 2020-02-02T18:52:11.887Z
 tags: setup
 ---
 
@@ -35,18 +35,27 @@ Wiki.js requires a dedicated sub-domain / domain *(e.g. wiki.example.com)*. You 
 
 # Database
 
-Wiki.js is compatible with any of the following database systems:
+For best performance, features and future compatibility, it's highly recommended to use **PostgreSQL**.
 
-- MySQL **8.0 or later** *(MySQL **5.7.8** is partially supported, [read more](/install/requirements/mysql5))*
-- MariaDB **10.2.7 or later**
-- MS SQL Server **2012 or later**
-- PostgreSQL **9.5 or later**
-- SQLite **3.9 or later**
+- ![](https://static.requarks.io/logo/postgresql.svg =24x) PostgreSQL **9.5 or later**
+{.grid-list}
 
-> :ok_hand: We highly recommend **PostgreSQL** for best performance and features. Development of Wiki.js is done using PostgreSQL and will therefore have better support.
-{.is-success}
+> :information_source: It's recommended you use the latest version of PostgreSQL when possible.
+{.is-info}
 
-> :warning: SQLite is **not recommended** for mid to large deployments of Wiki.js.
+---
+
+Wiki.js is also compatible with the following database systems:
+
+- ![](https://static.requarks.io/logo/mysql.svg =24x) MySQL **8.0 or later** *(MySQL **5.7.8** is partially supported, [read more](/install/requirements/mysql5))*
+- ![](https://static.requarks.io/logo/mariadb.svg =24x) MariaDB **10.2.7 or later**
+- ![](https://static.requarks.io/logo/microsoft-sql-server-alt.svg =24x) MS SQL Server **2012 or later**
+- ![](https://static.requarks.io/logo/sqlite-alt.svg =24x) SQLite **3.9 or later**
+{.grid-list}
+
+> :warning: **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* may not be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years.
+> 
+> :warning: SQLite is **not recommended** for production deployments.
 {.is-warning}
 
 You're expected to have installed one of these database engines already *(either locally, on another server or using a cloud service)*. Wiki.js requires an empty database and preferably a unique user / pass to connect to the database.
