@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-01-18T17:54:27.579Z
+date: 2020-02-02T19:02:29.844Z
 tags: setup
 ---
 
@@ -33,7 +33,7 @@ Wiki.js requires one of the many [supported database engines](/install/requireme
 
 ### Using PostgreSQL
 
-> **PostgreSQL** is the recommended engine for best performance and features.
+> **PostgreSQL** is the recommended engine for best performance, features and future compatibility.
 {.is-success}
 
 ```yml
