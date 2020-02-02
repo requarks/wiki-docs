@@ -2,12 +2,14 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-01-26T22:46:10.772Z
+date: 2020-02-02T21:06:03.625Z
 tags: 
 ---
 
 > Where's the detailed timeline? When is feature X being released? [Read this page](/releases/about)
 {.is-info}
+
+Read the [Future Releases](/releases/future) planning to learn about long term plans and future major releases.
 
 # Upcoming - 2.2
 
@@ -27,6 +29,7 @@ tags:
 	- :new_moon: OAuth2 / OpenID Connect Strategy
   - :new_moon: Multiple Instances of the same Strategy
   - :new_moon: Strategy name / logo customization
+- :new_moon: Multiple Instances cache synchronization (Kubernetes / HA)
 
 # Upcoming - 2.1
 
