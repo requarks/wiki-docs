@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-02T21:06:03.625Z
+date: 2020-02-02T21:19:36.775Z
 tags: 
 ---
 
