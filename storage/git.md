@@ -33,6 +33,9 @@ For convenience, instructions for the most popular Git providers are listed belo
 
 [GitHub](https://www.github.com) is the most popular git source control provider.
 
+### Create a new repository
+Do not include create a `readme.md`
+
 ### Generate a new key
 
 1. Open Terminal.
@@ -43,7 +46,7 @@ For convenience, instructions for the most popular Git providers are listed belo
 3. When prompted to save the generated file, enter a path which can be accessed by Wiki.js *(e.g. `/etc/wiki/github.pem`)* and press **Enter**.
 4. Leave the passphrase empty and press **Enter** twice. Password-protected keys will NOT work.
 
-> On Windows, you can use [Git Bash](https://git-scm.com/download/win) or Windows Subsystem for Linux (WSL) distrutions like [Ubuntu for Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) to run the commands above. You can also generate keys manually using the [puttygen](https://www.ssh.com/ssh/putty/download) utility.
+> On Windows, you can use [Git Bash](https://git-scm.com/download/win) or Windows Subsystem for Linux (WSL) distrutions like [Ubuntu for Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) to run the commands above. You can also generate keys manually using the [PuTTYgen](https://www.ssh.com/ssh/putty/download) utility. If you use PuTTYgen, on the top of your puttygen window, go to Conversion > Export OpenSSH key (force new file format). 
 {.is-info}
 
 ### Add the key to GitHub
@@ -66,12 +69,13 @@ For convenience, instructions for the most popular Git providers are listed belo
    - Repository URI: *On your GitHub repository page, in the **Code** tab, click on the **Clone or download** green button and copy the URI shown below **Clone with SSH**.*
    - Branch: `master`
    - SSH Private Key Path: *The path to your private key generated earlier.*
+   - SSH Private Key Contents: 	*The contents of your private key generated earlier including the `-----BEGIN OPENSSH PRIVATE KEY-----` and `-----END OPENSSH PRIVATE KEY-----`*
+   - Verify SSL Certificate: **On** *(blue)*
    - Username: *Empty*
    - Password: *Empty*
    - Default Author Email: *Should match your GitHub account email.*
    - Default Author Name: *Should match your GitHub account name.*
-   - Local Repository Path: *Choose where the repo will be cloned locally or leave the default `./data/repo` value.*
-   - Verify SSL Certificate: **On**
+   - Local Repository Path: *Choose where the repo will be cloned locally or leave the default `./data/repo` value. Optionally leave it empty.*
 5. Set the **Sync Direction** to **Bi-directional**.
 6. Set the **Sync Schedule** to **5 minutes**.
 7. Click the **Apply Changes** button at the top of the page.
