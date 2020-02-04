@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-04T04:17:04.825Z
+date: 2020-02-04T04:49:46.999Z
 tags: 
 ---
 
@@ -47,32 +47,43 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 - :full_moon: LaTeX expressions rendering (KaTeX module)
 - :full_moon: Let's Encrypt Built-In Support
 - :full_moon: Manually verify a User
+- :full_moon: Page Rules for matching Tags ([#1418](https://github.com/Requarks/wiki/issues/1418))
 - :full_moon: Save Rendering Configuration
 - :full_moon: SFTP Storage Module
 - :full_moon: Specify a Custom Logo
+- :full_moon: Tags Autocomplete in Page Properties
 - :full_moon: Utility - Re-render all pages
 - :full_moon: Visualize Pages (Hierarchical Tree, Hierarchical Radial & Relational Radial)
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Search results are not paginated. ([#942](https://github.com/Requarks/wiki/issues/942))
 - **Fixed:** PostgreSQL search query now uses the configured locale ([#1269](https://github.com/Requarks/wiki/issues/1269))
 - **Fixed:** Nested lists bullets native implementation ([#1283](https://github.com/Requarks/wiki/issues/1283))
 - **Fixed:** Truncate picture URL from 3rd-party auth strategy when too long ([#1311](https://github.com/Requarks/wiki/issues/1311))
 - **Fixed:** Vuetify offset bug in RTL layouts ([#1326](https://github.com/Requarks/wiki/issues/1326))
 - **Fixed:** Missing indentation in nested lists for RTL layouts ([#1327](https://github.com/Requarks/wiki/issues/1327))
 - **Fixed:** View source is now using `read:source` permission ([#1388](https://github.com/Requarks/wiki/issues/1388))
+- **Fixed:** Hide new page button when path is not available. ([#1394](https://github.com/Requarks/wiki/issues/1394))
+- **Fixed:** List formatting multiline with fancy bullets. ([#1406](https://github.com/Requarks/wiki/issues/1406))
 - **Fixed:** Markdown editor now reflects the proper direction in RTL layouts.
 - **Fixed:** Non-pages internal links being detected as invalid pages on subsequent finds.
+- **Fixed:** Page History content column field is migrated to LONGTEXT for MySQL/MariaDB and MS SQL Server.
+- **Fixed:** SRI is now disabled at build time. *To be reintroduced when a proper solution for turning it on/off is found.*
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
 - **Improvements:** An Export All action has been added to the AWS S3 storage module.
 - **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
+- **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
+- **Improvements:** Clear new password field in Admin User edit upon saving.
+- **Improvements:** Code Injection fields under Admin Theme are now using monospaced font.
+- **Improvements:** CSS Injection content is now automatically beautified in the Admin area.
 - **Improvements:** Display detailed error when db connection fails using pg driver.
+- **Improvements:** Git Local Repository can now be purged and reinitialized from the admin.
+- **Improvements:** Git Connection SSH port can now be overriden. ([#1432](https://github.com/Requarks/wiki/issues/1432))
+- **Improvements:** In the editor, <kbd>CTRL</kbd> + Click the save button will automatically close the editor upon saving.
 - **Improvements:** Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
 - **Improvements:** Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
-- **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
-- **Improvements:** In the editor, <kbd>CTRL</kbd> + Click the save button will automatically close the editor upon saving.
-- **Improvements:** CSS Injection content is now automatically beautified in the Admin area.
-- **Improvements:** Code Injection fields under Admin Theme are now using monospaced font.
+
 
 # 2.0.12
 
