@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-02T21:19:36.775Z
+date: 2020-02-04T04:17:04.825Z
 tags: 
 ---
 
@@ -20,6 +20,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 ## Major Features
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
+- :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
 - :waning_crescent_moon: API Docs Editor
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
@@ -40,7 +41,6 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 ## Major Features
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
-- :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
 - :full_moon: Azure Blob Storage Module
 - :full_moon: Delete / Deactivate a User
 - :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
