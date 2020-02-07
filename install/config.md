@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-02-03T00:43:31.538Z
+date: 2020-02-07T20:09:21.250Z
 tags: setup
 ---
 
@@ -290,7 +290,7 @@ offline: true
 
 ## High-Availability
 
-> This feature is available from version **2.1 and up**.
+> This feature is available from version **2.2 and up**.
 {.is-info}
 
 Set to `true` if you have multiple concurrent instances running off the same DB (e.g. Kubernetes pods / load balanced instances). Leave `false` otherwise.
