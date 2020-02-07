@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-04T04:49:46.999Z
+date: 2020-02-07T22:30:10.346Z
 tags: 
 ---
 
@@ -13,7 +13,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 
 # Upcoming - 2.2
 
-> This build has not yet been released.
+> This build is **under active development** and has not yet been released.
 > **ETA: March 2020**
 {.is-warning}
 
@@ -32,28 +32,27 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
   - :new_moon: Strategy name / logo customization
 - :new_moon: Multiple Instances cache synchronization (Kubernetes / HA)
 
-# Upcoming - 2.1
+# BETA - 2.1
 
-> This build is **under active development** and has not yet been released.
-> **ETA: January / February 2020**
+> This build is currently in **BETA** and should not be used in production.
+> **GA ETA: February 2020**
 {.is-warning}
 
 ## Major Features
-:new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
-- :full_moon: Azure Blob Storage Module
-- :full_moon: Delete / Deactivate a User
-- :full_moon: Integrate ARM64 & ARMv7 images into standard build pipeline
-- :full_moon: LaTeX expressions rendering (KaTeX module)
-- :full_moon: Let's Encrypt Built-In Support
-- :full_moon: Manually verify a User
-- :full_moon: Page Rules for matching Tags ([#1418](https://github.com/Requarks/wiki/issues/1418))
-- :full_moon: Save Rendering Configuration
-- :full_moon: SFTP Storage Module
-- :full_moon: Specify a Custom Logo
-- :full_moon: Tags Autocomplete in Page Properties
-- :full_moon: Utility - Re-render all pages
-- :full_moon: Visualize Pages (Hierarchical Tree, Hierarchical Radial & Relational Radial)
+- Azure Blob Storage Module
+- Delete / Deactivate a User
+- Integrate ARM64 & ARMv7 images into standard build pipeline
+- LaTeX expressions rendering (KaTeX module)
+- Let's Encrypt Built-In Support
+- Manually verify a User
+- Page Rules for matching Tags ([#1418](https://github.com/Requarks/wiki/issues/1418))
+- Save Rendering Configuration
+- SFTP Storage Module
+- Specify a Custom Logo
+- Tags Autocomplete in Page Properties
+- Utility - Re-render all pages
+- Visualize Pages (Hierarchical Tree, Hierarchical Radial & Relational Radial)
 
 ## Bug fixes / Minor Improvements
 
