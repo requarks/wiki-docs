@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2020-02-02T18:52:11.887Z
+date: 2020-02-08T03:32:38.142Z
 tags: setup
 ---
 
@@ -37,7 +37,7 @@ Wiki.js requires a dedicated sub-domain / domain *(e.g. wiki.example.com)*. You 
 
 For best performance, features and future compatibility, it's highly recommended to use **PostgreSQL**.
 
-- ![](https://static.requarks.io/logo/postgresql.svg =24x) PostgreSQL **9.5 or later**
+- ![](https://static.requarks.io/logo/postgresql.svg =24x){.mr-2} PostgreSQL **9.5 or later**
 {.grid-list}
 
 > :information_source: It's recommended you use the latest version of PostgreSQL when possible.
@@ -47,10 +47,10 @@ For best performance, features and future compatibility, it's highly recommended
 
 Wiki.js is also compatible with the following database systems:
 
-- ![](https://static.requarks.io/logo/mysql.svg =24x) MySQL **8.0 or later** *(MySQL **5.7.8** is partially supported, [read more](/install/requirements/mysql5))*
-- ![](https://static.requarks.io/logo/mariadb.svg =24x) MariaDB **10.2.7 or later**
-- ![](https://static.requarks.io/logo/microsoft-sql-server-alt.svg =24x) MS SQL Server **2012 or later**
-- ![](https://static.requarks.io/logo/sqlite-alt.svg =24x) SQLite **3.9 or later**
+- ![](https://static.requarks.io/logo/mysql.svg =24x){.mr-2} MySQL **8.0 or later** *(MySQL **5.7.8** is partially supported, [read more](/install/requirements/mysql5))*
+- ![](https://static.requarks.io/logo/mariadb.svg =24x){.mr-2} MariaDB **10.2.7 or later**
+- ![](https://static.requarks.io/logo/microsoft-sql-server-alt.svg =24x){.mr-2} MS SQL Server **2012 or later**
+- ![](https://static.requarks.io/logo/sqlite-alt.svg =24x){.mr-2} SQLite **3.9 or later**
 {.grid-list}
 
 > :warning: **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* may not be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years.
