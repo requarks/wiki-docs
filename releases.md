@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-08T03:30:09.549Z
+date: 2020-02-08T17:27:12.700Z
 tags: 
 ---
 
@@ -65,13 +65,16 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 - **Fixed:** View source is now using `read:source` permission ([#1388](https://github.com/Requarks/wiki/issues/1388))
 - **Fixed:** Hide new page button when path is not available. ([#1394](https://github.com/Requarks/wiki/issues/1394))
 - **Fixed:** List formatting multiline with fancy bullets. ([#1406](https://github.com/Requarks/wiki/issues/1406))
+- **Fixed:** Page Rules roles are now validated per rule. ([#1447](https://github.com/Requarks/wiki/issues/1447))
 - **Fixed:** Markdown editor now reflects the proper direction in RTL layouts.
 - **Fixed:** Non-pages internal links being detected as invalid pages on subsequent finds.
 - **Fixed:** Page History content column field is migrated to LONGTEXT for MySQL/MariaDB and MS SQL Server.
 - **Fixed:** SRI is now disabled at build time. *To be reintroduced when a proper solution for turning it on/off is found.*
+- **Fixed:** Redirect login page from home page only if user is guest.
+- **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
 - **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
 - **Improvements:** An Export All action has been added to the AWS S3 storage module.
-- **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
+- **Improvements:** Automatically redirect to previous path after login.
 - **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
 - **Improvements:** Clear new password field in Admin User edit upon saving.
 - **Improvements:** Code Injection fields under Admin Theme are now using monospaced font.
