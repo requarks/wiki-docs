@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-09T05:51:42.651Z
+date: 2020-02-09T19:10:12.236Z
 tags: 
 ---
 
@@ -50,6 +50,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 - Page Rules for matching Tags ([#1418](https://github.com/Requarks/wiki/issues/1418))
 - Save Rendering Configuration
 - SFTP Storage Module
+- Social Sharing Menu
 - Specify a Custom Logo
 - Tags Autocomplete in Page Properties
 - Utility - Re-render all pages
