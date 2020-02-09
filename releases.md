@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-08T17:30:09.856Z
+date: 2020-02-09T05:51:19.245Z
 tags: 
 ---
 
@@ -45,6 +45,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 - Integrate ARM64 & ARMv7 images into standard build pipeline
 - LaTeX expressions rendering (KaTeX module)
 - Let's Encrypt Built-In Support
+- Manage / Delete Tags
 - Manually verify a User
 - Page Rules for matching Tags ([#1418](https://github.com/Requarks/wiki/issues/1418))
 - Save Rendering Configuration
