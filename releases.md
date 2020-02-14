@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-14T18:16:54.041Z
+date: 2020-02-14T18:30:14.834Z
 tags: 
 ---
 
@@ -32,11 +32,10 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
   - :new_moon: Strategy name / logo customization
 - :new_moon: Multiple Instances cache synchronization (Kubernetes / HA)
 
-# BETA - 2.1.107
+# 2.1.112
 
-> This build is currently in **BETA** and should not be used in production.
-> **GA ETA: February 2020**
-{.is-warning}
+> Released on **February 14th, 2020**
+{.is-info}
 
 ## Major Features
 
@@ -88,6 +87,13 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 - **Improvements:** Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
 - **Improvements:** Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
 
+## Links
+
+- [Installation](/install)
+- [Upgrade from 2.0.12](/install/upgrade)
+- [Migrate from 1.x](/install/migrate)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.0.12
 
