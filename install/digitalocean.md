@@ -2,7 +2,7 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2019-12-09T21:41:44.671Z
+date: 2020-02-14T19:12:59.716Z
 tags: install
 ---
 
@@ -37,6 +37,8 @@ Note that you can always upgrade to a more powerful droplet configuration in the
 1. Wait for the droplet to be created.
 1. Click on the newly created droplet and copy the **public IP** address.
 1. In a new browser tab, navigate to http://YOUR-PUBLIC-IP *(replace with your IP)*
+  > **It can take several minutes before the server starts accepting requests.** Various services must initialize for the first time before you'll be able to access your wiki. If it doesn't load on first attempt, wait 5 minutes and try again.
+  {.is-info}
 1. A setup screen for Wiki.js should appear. Enter the desired **email address** and **password** for the administrator account.
 1. Enter the **full URL** to your wiki, without the trailing slash. It's recommended to point a sub-domain / domain to your public IP (e.g. wiki.example.com). If you don't have a domain setup yet, you can use your public IP as the URL (e.g. http://xx.xx.xx.xx). This can be changed later in the **Adminitration Area** (under the **General** section).
 1. Click on **Install** to complete the installation. You'll automatically be redirected to the login page once completed. Enter the email and password for the administrator account you entered earlier.
