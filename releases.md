@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-14T18:30:14.834Z
+date: 2020-02-14T21:23:53.518Z
 tags: 
 ---
 
@@ -32,7 +32,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
   - :new_moon: Strategy name / logo customization
 - :new_moon: Multiple Instances cache synchronization (Kubernetes / HA)
 
-# 2.1.112
+# 2.1.113
 
 > Released on **February 14th, 2020**
 {.is-info}
