@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-02-15T17:42:58.399Z
+date: 2020-02-15T17:46:11.901Z
 tags: setup
 ---
 
@@ -147,6 +147,8 @@ The `port` is the port the HTTPS server will listen on. **It cannot be the same 
 The `passphrase` is optional and is only required when the certificate is encrypted passphrase. It should be set to `null` otherwise.
 The `dhparam` is optional and can be used to set the Diffie Hellman parameters, with a key length being greater or equal to 1024 bits. It should be set to `null` if not used.
 
+[Read the instructions](#http-to-https-redirection) to automatically redirect HTTP requests to HTTPS.
+
 ### Let's Encrypt
 
 > This feature is available from version **2.1 and up**.
@@ -166,7 +168,7 @@ ssl:
 
 The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
 
-> The non-secure HTTP port **must be accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, all insecure requests made on the HTTP port will automatically be redirected to HTTPS.
+> The non-secure HTTP port **must be accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, you can automatically redirect all insecure requests made on the HTTP port to HTTPS by [enabling the HTTP to HTTPS Redirection](#http-to-https-redirection) option.
 {.is-warning}
 
 The `domain` is the fully-qualified domain name pointing to the wiki. **It must already resolve to the server.**
