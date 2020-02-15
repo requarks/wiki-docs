@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-02-15T03:41:44.907Z
+date: 2020-02-15T03:42:34.064Z
 tags: dev, api
 ---
 
@@ -10,8 +10,8 @@ tags: dev, api
 
 Wiki.js exposes a [GraphQL](https://graphql.org/) API from which you can access and modify all the resources of your wiki.
 
-> The GraphQL endpoint is located at `/graphql`
-{.is-info}
+> The **GraphQL endpoint** is located at `/graphql`
+{.is-success}
 
 You can access this endpoint from your browser to load the **GraphQL Playground** tool which lets you build and test queries, as well as explore all the possible resources you can access.
 
