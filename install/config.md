@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-02-15T17:46:11.901Z
+date: 2020-02-15T17:47:42.493Z
 tags: setup
 ---
 
@@ -147,7 +147,8 @@ The `port` is the port the HTTPS server will listen on. **It cannot be the same 
 The `passphrase` is optional and is only required when the certificate is encrypted passphrase. It should be set to `null` otherwise.
 The `dhparam` is optional and can be used to set the Diffie Hellman parameters, with a key length being greater or equal to 1024 bits. It should be set to `null` if not used.
 
-[Read the instructions](#http-to-https-redirection) to automatically redirect HTTP requests to HTTPS.
+> It's recommended to automatically redirect all insecure requests made on the HTTP port to HTTPS by [enabling the HTTP to HTTPS Redirection](#http-to-https-redirection) option.
+{.is-warning}
 
 ### Let's Encrypt
 
