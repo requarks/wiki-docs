@@ -2,7 +2,7 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2020-02-15T02:46:37.020Z
+date: 2020-02-15T02:46:48.530Z
 tags: setup
 ---
 
