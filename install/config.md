@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-02-07T20:09:21.250Z
+date: 2020-02-15T17:42:58.399Z
 tags: setup
 ---
 
@@ -176,6 +176,10 @@ The `subscriberEmail` is the email used when authenticating with Let's Encrypt t
 The following diagram details the certificate provisioning process. Although all these steps are performed automatically for you, it gives you a better understanding of the process.
 
 ![Let's Encrypt Process](/assets/diagrams/diag-letsencrypt.png =800x){.decor-shadow .radius-5}
+
+### HTTP to HTTPS Redirection
+
+Once your HTTPS is up and working correctly, you can enable HTTP to HTTPS redirection under the **Administration Area** > **SSL**.
 
 ## Database over SSL
 
