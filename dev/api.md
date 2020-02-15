@@ -2,13 +2,31 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-01-19T23:42:34.474Z
+date: 2020-02-15T03:41:44.907Z
 tags: dev, api
 ---
 
 # Overview
 
-*Coming soon*
+Wiki.js exposes a [GraphQL](https://graphql.org/) API from which you can access and modify all the resources of your wiki.
+
+> The GraphQL endpoint is located at `/graphql`
+{.is-info}
+
+You can access this endpoint from your browser to load the **GraphQL Playground** tool which lets you build and test queries, as well as explore all the possible resources you can access.
+
+There're various [client libraries](https://github.com/chentsulin/awesome-graphql#libraries) available for most programming languages to easily make GraphQL queries. Desktop API clients like **Postman**, **Insomnia** and **Firecamp** all support GraphQL queries.
+
+# Authentication
+
+> The API Access feature is available from version **2.2 and up**.
+{.is-info}
+
+Access to resources requires a **valid API token**, which can be generated from the **Administration Area** (under **API Access**).
+
+The token must be passed in the `Authorization` header of any request made to the GraphQL endpoint.
+
+Different **permission scopes** are required based on the resource you wish to query / mutate. Ensure the API token you created contains these permission scopes.
 
 # Error Reference
 
