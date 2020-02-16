@@ -2,8 +2,8 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2019-09-26T04:53:42.590Z
-tags: 
+date: 2020-02-16T17:49:50.553Z
+tags: setup, guide
 ---
 
 # Cannot upload files larger than X
@@ -72,5 +72,11 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
+
+# Some HTML tags are rendered as plain text
+
+Starting in version **2.1**, a new HTML sanitization step is added by default to the rendering pipeline. This feature prevents potentially unsafe HTML tags / properties from being present in the final render. Any HTML tag or property that isn't whitelisted will be rendered as plain text.
+
+If you are the sole editor / trust your editors, you can disable this feature in the **Administration Area**, under **Rendering** > **HTML** > **Security** > **Sanitize HTML**.
 
 ![](https://a.icons8.com/IMfhdRiW/YNcdYW/svg.svg){.align-abstopright}
