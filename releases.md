@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-22T06:24:29.310Z
+date: 2020-02-22T06:25:23.269Z
 tags: 
 ---
 
@@ -17,7 +17,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 > **ETA: March 2020**
 {.is-warning}
 
-<iframe class="clickup-embed" src="https://share.clickup.com/l/h/26kmy-77/c9c2a61a12be55d" frameborder="0" onmousewheel="" width="100%" height="700px" style="background: transparent; border: 1px solid #ccc;"></iframe>
+<iframe class="clickup-embed decor-shadow" src="https://share.clickup.com/l/h/26kmy-77/c9c2a61a12be55d" frameborder="0" onmousewheel="" width="100%" height="750px" style="background: transparent; border: 1px solid #fff; border-radius: 5px;"></iframe>
 
 # 2.1.113
 
