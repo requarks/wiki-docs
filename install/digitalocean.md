@@ -2,7 +2,7 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2020-02-22T00:06:51.574Z
+date: 2020-02-22T19:24:48.434Z
 tags: install
 ---
 
@@ -31,7 +31,7 @@ Note that you can always upgrade to a more powerful droplet configuration in the
 # Getting Started
 
 1. From the DigitalOcean control panel, click on **Marketplace**.
-1. Find the [**Wiki.js**](https://marketplace.digitalocean.com/apps/wiki-js) listing and click **Create Wiki.js Droplet**.
+1. Find the [**Wiki.js**](https://marketplace.digitalocean.com/apps/wiki-js?refcode=5f7445bfa4d0) listing and click **Create Wiki.js Droplet**.
 1. Select a droplet size, datacenter region and additional options.
 1. Click **Create droplet** once you entered all necessary info.
 1. Wait for the droplet to be created.
