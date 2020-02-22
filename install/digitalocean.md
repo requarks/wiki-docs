@@ -2,7 +2,7 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2020-02-22T19:24:48.434Z
+date: 2020-02-22T19:25:36.417Z
 tags: install
 ---
 
