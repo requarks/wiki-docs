@@ -2,7 +2,7 @@
 title: Install on AWS
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2019-12-24T03:26:06.809Z
+date: 2020-02-22T02:42:27.349Z
 tags: setup, guide
 ---
 
@@ -41,10 +41,63 @@ However, for best performance, we recommend using at least the **t3.small** or p
 
 # Automatic HTTPS with Let's Encrypt
 
-> *Native Let's Encrypt support is coming soon!*
-{.is-warning}
+> Your instance must be updated to **Wiki.js 2.1** before you can use Let's Encrypt functionality!
+{.is-info}
 
-*In the meantime, use a reverse-proxy such as nginx (hard) or a cloud solution like Cloudflare (easy). Both options are free.*
+1. Create an **A record** on your domain registrar to point a domain / sub-domain (e.g. wiki.example.com) to your EC2 instance **public IP**.
+2. Make sure you're able to load your wiki using that domain / sub-domain on HTTP (e.g. http://wiki.example.com).
+3. Connect to your EC2 instance via **SSH**.
+4. **Stop** and **remove** the existing wiki container *(no data will be lost)* by running the commands below:
+
+```bash
+docker stop wiki
+docker rm wiki
+```
+
+5. Run the following command by replacing the `wiki.example.com` and `admin@example.com` values with **your own domain / sub-domain** and the **email address** of your wiki administrator:
+
+```bash
+docker create --name=wiki -e LETSENCRYPT_DOMAIN=wiki.example.com -e LETSENCRYPT_EMAIL=admin@example.com -e SSL_ACTIVE=1 -e DB_TYPE=postgres -e DB_HOST=db -e DB_PORT=5432 -e DB_PASS_FILE=/etc/wiki/.db-secret -v /etc/wiki/.db-secret:/etc/wiki/.db-secret:ro -e DB_USER=wiki -e DB_NAME=wiki -e UPGRADE_COMPANION=1 --restart=unless-stopped -h wiki --network=wikinet -p 80:3000 -p 443:3443 requarks/wiki:2
+```
+
+6. Start the container by running the command:
+```bash
+docker start wiki
+```
+
+7. **Wait** for the container to start and the Let's Encrypt provisioning process to complete. You can optionaly view the container logs by running the command:
+```
+docker logs wiki
+```
+> The process will be completed once you see the following lines in the logs:
+>
+> `(LETSENCRYPT) New certifiate received successfully: [ COMPLETED ]`
+> `HTTPS Server on port: [ 3443 ]`
+> `HTTPS Server: [ RUNNING ]`
+{.is-success}
+
+8. Load your wiki in your web browser using HTTPS (e.g. https://wiki.example.com). Your wiki is now accepting HTTPS requests using a free Let's Encrypt certificate!
+
+## Automatic HTTP to HTTPS Redirect
+
+By default, requests made to the HTTP port will not be redirect to HTTPS. You can enable this option using these instructions:
+
+1. Navigate to the **Administration Area** by clicking on your avatar at the top-right corner of the page.
+2. From the left navigation menu, click on **SSL**.
+3. Next to the `Redirect HTTP requests to HTTPS` section, click on **TURN ON** to enable HTTP to HTTPS redirection.
+4. Any requests made to the HTTP port will now automatically redirect to HTTPS!
+
+## Renew the Certificate
+
+You can renew the certificate at any time from the **Administration Area** > **SSL**.
+
+If your certificate has expired and you cannot load the wiki UI to renew it, simply restart the container:
+
+```bash
+docker restart wiki
+```
+
+The renewal process will run automatically during initialization.
 
 # Upgrade
 
