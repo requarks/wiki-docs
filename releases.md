@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-14T21:23:53.518Z
+date: 2020-02-22T05:37:36.881Z
 tags: 
 ---
 
@@ -21,6 +21,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 :new_moon: = Incomplete, :full_moon: = Completed {.caption}
 
 - :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
+- :last_quarter_moon: Create / Manage API Keys from Administration Area
 - :waning_crescent_moon: API Docs Editor
 - :new_moon: Default Theme Options
 	- :new_moon: Sidebar Position
