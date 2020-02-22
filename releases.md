@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-22T05:37:36.881Z
+date: 2020-02-22T06:24:29.310Z
 tags: 
 ---
 
@@ -17,21 +17,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 > **ETA: March 2020**
 {.is-warning}
 
-## Major Features
-:new_moon: = Incomplete, :full_moon: = Completed {.caption}
-
-- :last_quarter_moon: Browse Pages (Tree View / Site Map), Group-based Navigation
-- :last_quarter_moon: Create / Manage API Keys from Administration Area
-- :waning_crescent_moon: API Docs Editor
-- :new_moon: Default Theme Options
-	- :new_moon: Sidebar Position
-  - :new_moon: Show/Hide Table of Contents, Tags, Author, Ratings, Social Bar, Edit Speed Dial
-- :new_moon: View History / Compare Versions
-- :new_moon: Login Dialog UX Improvements
-	- :new_moon: OAuth2 / OpenID Connect Strategy
-  - :new_moon: Multiple Instances of the same Strategy
-  - :new_moon: Strategy name / logo customization
-- :new_moon: Multiple Instances cache synchronization (Kubernetes / HA)
+<iframe class="clickup-embed" src="https://share.clickup.com/l/h/26kmy-77/c9c2a61a12be55d" frameborder="0" onmousewheel="" width="100%" height="700px" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 # 2.1.113
 
