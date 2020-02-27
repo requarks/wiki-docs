@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2020-01-15T03:22:39.269Z
+date: 2020-02-27T06:05:36.273Z
 tags: 
 ---
 
@@ -83,3 +83,11 @@ Paths cannot match exactly the terms below or be the first part of path. For exa
 - register
 - svg
 {.grid-list}
+
+## Illegal Characters
+
+Paths cannot contain the following characters:
+
+- Space *(use dashes instead)*
+- Period *(reserved for file extensions)*
+- Unsafe URL characters *(such as punctuation marks, quotes, math symbols, etc.)*
