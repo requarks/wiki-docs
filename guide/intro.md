@@ -2,7 +2,7 @@
 title: Introduction to Wiki.js
 description: How to create your first page and more
 published: true
-date: 2019-11-10T19:41:57.898Z
+date: 2020-02-27T05:56:48.886Z
 tags: user-guide
 ---
 
@@ -39,7 +39,7 @@ The following dialog will appear:
 
 1. Select the language to create the page for *(the current locale is selected by default)*.
 2. Enter the full path to the page you want to create.
-	- The path should contain no spaces *(use dashes instead)* and consists of URL-safe characters.
+	- The path should contain no spaces *(use dashes instead)*, no periods and consists of URL-safe characters.
   	- **DO NOT** put a trailing slash.
   	- You don't need to create folders. Enter the full path you want to create and folders will be created automatically. For example, enter `universe/planets/earth` to automatically create the universe and planets subfolders.
 3. Click **Select** to proceed.
