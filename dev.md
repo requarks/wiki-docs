@@ -2,8 +2,8 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2019-09-15T20:28:20.326Z
-tags: 
+date: 2020-02-28T22:31:52.614Z
+tags: dev
 ---
 
 Wiki.js is fully modular, which allows any developer to write their own module or theme.
@@ -16,71 +16,38 @@ There are 2 methods to develop for Wiki.js. You can either use the dockerized de
 
 * Docker
 * Docker Compose
-* Linux / macOS
-
-> :information_source: **Developing on Docker for Windows**
->
-> The instructions and commands below are made using `make` and unix-based commands. They will not work on Windows. While you can port these commands to their Windows equivalent, they will not be provided here. It's recommended that you use the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) if you wish to use the commands below. It provides a native GNU/Linux environment without the overhead of a virtual machine.
->
-> Otherwise, consider using the [non-docker instructions](#manually).
-{.is-warning}
+* Linux / macOS / Windows 10 Pro or Enterprise
+* Visual Studio Code
 
 ## Run the project
 
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
-2. Start the development environment:
+2. Open the project folder in **Visual Studio Code**
+3. From the **Extensions** tab, install the **Remote Development** extension by Microsoft (*ms-vscode-remote.vscode-remote-extensionpack*)
+4. Click the **green button** located in the bottom-left corner of VS Code: *(or open the command palette)*
+	![ui-dev-vscode-remotebtn.png](/assets/ui/ui-dev-vscode-remotebtn.png =350x){.radius-5 .decor-shadow .ml-5}
+5. Select **Remote Containers - Reopen in Container**
+6. VS Code will now reload and start initializing the containers. Wait for it to complete. This **may take a while the very first time** as npm dependencies must be installed.
+	![ui-dev-vscode-init.png](/assets/ui/ui-dev-vscode-init.png =500x){.radius-5 .decor-shadow .ml-5}
+7. Open the **Terminal** *(View > Terminal)* and select "**1: bash**" from the dropdown selector on the right:
+	![ui-dev-vscode-bash.png](/assets/ui/ui-dev-vscode-bash.png =400x){.radius-5 .decor-shadow .ml-5}
+8. From the command line, type the following command to start Wiki.js in development mode:
     ```bash
-    make docker-dev-up
-
-    # You may need to start the above command with `sudo` depending on your OS configuration.
+      yarn dev
     ```
-3. Wait for the initialization to complete. This **may take a while the very first time** as the wiki container image must be built. Subsequent startups will be extremely fast.
-4. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
-5. Complete the setup wizard to finish the installation.
+9. Wait for the initialization to complete. You'll be prompted to load **http://localhost:3000/** when ready.
+9. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
+10. Complete the setup wizard to finish the installation.
 
 ## Stopping the project
 
-When you're done and no longer need the development environment. Simply run the following command to stop and remove the containers:
+Click on **File > Close Remote Connection** to stop the containers and close the Visual Studio Code instance.
 
-```bash
-make docker-dev-down
+## Removing the containers
 
-# You may need to start the above command with `sudo` depending on your OS configuration.
-```
+When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `containers`.
 
-## Other commands
-
-| Command | Description |
-| :--- | :--- |
-| docker-dev-up | Starts the development environment. |
-| docker-dev-down | Stops and remove the development environment. |
-| docker-dev-clean | Flush DB and cache. *(Must run `docker-dev-up` first!)* |
-| docker-dev-rebuild | Rebuilds the wiki container image. *(Must run `docker-dev-down` first!)* |
-| docker-build | Builds the client assets files using a temporary environment. |
-
-## Using alternate databases
-
-The default docker environment is using PostgreSQL as the database engine. However it's sometimes useful to debug using other database engines. You can switch to any of the supported engines (`mariadb`, `mssql`, `mysql`, `postgres`, `sqlite`) by adding the `DEVDB` variable at the end of any of commands above, e.g.:
-
-```bash
-make docker-dev-up DEVDB=mariadb
-
-make docker-dev-rebuild DEVDB=mssql
-```
-> :warning: Make sure to shutdown any running instances **BEFORE** switching engines and then **REBUILD** the wiki image using `make docker-dev-rebuild`. Otherwise Wiki.js will still use the old configuration file and connect to the previous database configuration.
-{.is-warning}
-
-### MS SQL Server - Additional Notes
-
-The MS SQL image does not allow for a default database to be created by default. To create the database, you must:
-1. Run `make docker-dev-up DEVDB=mssql`
-2. Wait for all containers to start. The Wiki.js process should crash, being unable to connect to the DB.
-3. Exit the dev process: <kbd>CTRL</kbd>+<kbd>C</kbd>
-4. Run `make docker-dev-clean DEVDB=mssql`
-5. Wait for the database to be created.
-6. Run `make docker-dev-up DEVDB=mssql` again
-
-Alternatively, you can also use [Microsoft SQL Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) to connect to the container and create the initial database.
+An alternate method is to open a command prompt in the `dev/containers` folder and run `docker-compose down`.
 
 ## Build Production Images
 
@@ -112,7 +79,7 @@ docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki --push 
 1. Clone the project from GitHub \(make sure to use the `dev` branch\).
 2. From the project folder, run the command: `yarn`
 3. Rename `config.sample.yml` to `config.yml`.
-4. Edit `config.yml` with your local dev machine settings *(db, redis, etc.)*
+4. Edit `config.yml` with your local dev machine settings *(port, database, etc.)*
 
 ## Run the project
 
