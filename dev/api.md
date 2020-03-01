@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-03-01T03:46:33.912Z
+date: 2020-03-01T03:49:49.308Z
 tags: dev, api
 ---
 
@@ -24,7 +24,10 @@ There're various [client libraries](https://github.com/chentsulin/awesome-graphq
 
 Access to resources requires a **valid API token**, which can be generated from the **Administration Area** (under **API Access**).
 
-The token must be passed in the `Authorization` header of any request made to the GraphQL endpoint.
+The token must be passed in the `Authorization` header, as a `Bearer` token, of any request made to the GraphQL endpoint, e.g.:
+```css
+Authorization: Bearer eyJhbGc...aXczt18H6437W
+```
 
 Different **permission scopes** are required based on the resource you wish to query / mutate. Ensure the API token you created contains these permission scopes.
 
