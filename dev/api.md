@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-02-15T03:42:34.064Z
+date: 2020-03-01T03:46:33.912Z
 tags: dev, api
 ---
 
@@ -128,6 +128,7 @@ Error codes in the **6xxx** range are dedicated to pages / rendering errors.
 | 6008 | PageCreateForbidden | You are not authorized to create this page. |
 | 6009 | PageUpdateForbidden | You are not authorized to update this page. |
 | 6010 | PageDeleteForbidden | You are not authorized to delete this page. |
+| 6011 | PageRestoreForbidden | You are not authorized to restore this page version. |
 
 ## System
 
