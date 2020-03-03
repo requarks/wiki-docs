@@ -151,6 +151,11 @@ volumes:
 
 ![](https://a.icons8.com/jihZbhdR/4WJoF7/svg.svg){.align-abstopright}
 
+To update wiki.js to the latest version, use the relevant docker-compose command:
+``` bash
+docker-compose up -d --no-deps --build wiki
+```
+
 # ARM images
 
 In order to use the ARM64 / ARMv7 image variants, you must use the image tag `requarks/wiki:2.1-arm`.
