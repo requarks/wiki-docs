@@ -362,3 +362,23 @@ Using `<kbd>` before and `</kbd>` after the text selection.
 ```html
 Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
 ```
+
+## Spoiler tags
+
+Using `<details>` tag, before and `</details>` after the text selection. 
+
+Add text to be shown before expanding a spoiler with `<summary>Insert text before expanding here</summary>` You can then view the spoiler by clicking the arrow.
+
+### *Example*
+
+```html
+<details>
+	<summary>This text is shown before expanding</summary>
+	Lorem ipsum dolor
+</details>
+```
+
+<details>
+	<summary>This text is shown before expanding</summary>
+	Lorem ipsum dolor
+</details>
