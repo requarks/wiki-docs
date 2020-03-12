@@ -10,7 +10,7 @@ tags: editors
 
 Markdown is a lightweight markup language with plain text formatting syntax. It's the de-facto syntax for writing documentation on major code repositories such as GitHub.
 
-Wiki.js supports the full [CommonMark specification](https://shttps://docs-beta.requarks.io/pec.commonmark.org/) + adds some useful extensions (including the Github Flavored Markdown addons).
+Wiki.js supports the full [CommonMark specification](https://spec.commonmark.org/) + adds some useful extensions (including the Github Flavored Markdown addons).
 
 # User Guide
 
