@@ -2,7 +2,7 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2020-02-28T22:31:52.614Z
+date: 2020-03-13T21:44:47.665Z
 tags: dev
 ---
 
@@ -112,5 +112,11 @@ Any changes made to client files will automatically trigger a build and the site
 Any changes made to the server files will automatically trigger a server restart. You can also force a restart by typing `rs` in the terminal followed by **Enter**.
 
 To stop the development server, use **CTRL-C** until the process exits.
+
+# Official Builds
+
+Because the master branch contains pre-release code, it is not recommended to build directly from the source code. Doing so will result in a red warning banner being displayed during setup and in the header on all pages. **You should instead follow the [installation instructions](/install).**
+
+A reproducable build process is however documented [here](/dev/build-process) should you want to build it yourself **from a production release tag**.
 
 ![](https://a.icons8.com/mZbXwZWa/PdY3mQ/svg.svg){.align-abstopright}
