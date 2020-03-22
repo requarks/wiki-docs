@@ -2,7 +2,7 @@
 title: Introduction to Wiki.js
 description: How to create your first page and more
 published: true
-date: 2020-02-27T05:56:48.886Z
+date: 2020-03-22T23:58:49.221Z
 tags: user-guide
 ---
 
