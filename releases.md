@@ -2,14 +2,14 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-02-22T06:31:56.108Z
+date: 2020-03-22T23:20:48.425Z
 tags: 
 ---
 
-> Where's the detailed timeline? When is feature X being released? [Read this page](/releases/about)
-{.is-info}
-
-Read the [Future Releases](/releases/future) planning to learn about long term plans and future major releases.
+- [Current Development Roadmap *View the tasks currently being worked on and their status for the next release.*](/releases/current)
+- [Future Releases Roadmap *Learn about long term plans and future major releases.*](/releases/future)
+- [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
+{.links-list}
 
 # Upcoming - 2.2
 
@@ -17,7 +17,7 @@ Read the [Future Releases](/releases/future) planning to learn about long term p
 > **ETA: March 2020**
 {.is-warning}
 
-<iframe class="clickup-embed decor-shadow" src="https://share.clickup.com/l/h/26kmy-77/c9c2a61a12be55d" frameborder="0" onmousewheel="" width="100%" height="750px" style="background: transparent; border: 1px solid #EEE; border-radius: 5px;"></iframe>
+*TBA*
 
 # 2.1.113
 
