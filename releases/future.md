@@ -2,7 +2,7 @@
 title: Future Releases
 description:  Long term plans and future major releases
 published: true
-date: 2020-02-02T21:19:26.210Z
+date: 2020-03-22T23:50:58.481Z
 tags: 
 ---
 
@@ -11,7 +11,9 @@ This page list possible important features and refactoring ideas for future majo
 > These are not set in stone and only serve as a discussion point.
 {.is-warning}
 
-# Use PostgreSQL as sole database engine
+# 3.x
+
+## Use PostgreSQL as sole database engine
 
 The current implementation for database handling is done via Knex.js and Objection.js, which allows for various drivers to be used for PostgreSQL, MySQL, MariaDB, SQL Server and SQLite. While it offers broad compatibility for users, it also brings major limitations for the architecture and development in general:
 
