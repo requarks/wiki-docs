@@ -2,7 +2,7 @@
 title: Introduction to Wiki.js
 description: How to create your first page and more
 published: true
-date: 2020-03-22T23:58:49.221Z
+date: 2020-03-22T23:59:08.462Z
 tags: user-guide
 ---
 
@@ -11,7 +11,6 @@ tags: user-guide
 ![Interface](/assets/ui/ui-basics.jpg){.decor-radius .decor-shadow}
 
 ### Global
-- **Navigation Menu** - Menu to go Home, Browse the Wiki Structure or Browse by Tags.
 - **Global Navigation** - A persistent navigation menu, displayed on all pages. Usually consists of important pages or links to external websites.
 - **Global Search** - Quickly find a page by performing a search.
 - **Create New Page** - Create a new page.
