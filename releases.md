@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-22T23:20:48.425Z
+date: 2020-03-22T23:50:21.303Z
 tags: 
 ---
 
@@ -17,7 +17,35 @@ tags:
 > **ETA: March 2020**
 {.is-warning}
 
-*TBA*
+## Major Features
+- Page History
+	- Compare 2 versions
+  - View version source
+  - Download version
+  - Restore version
+  - Branch off version
+- Create / Manage API Keys
+- Save Conflict Detection + Compare Screen
+- Content License option for the footer
+
+## Bug fixes / Minor Improvements
+
+- **Fixed:** Apply request increased body limit to GraphQL ([#1480](https://github.com/Requarks/wiki/issues/1480))
+- **Fixed:** Hide sidebar on smaller screen and auto-detect on resize.
+- **Fixed:** Delete User Keys when deleting a User ([#1586](https://github.com/Requarks/wiki/issues/1586))
+- **Fixed:** XML-like tags in code blocks now render correctly as code ([#1559](https://github.com/Requarks/wiki/issues/1559))
+- **Fixed:** Task lists are now rendered correctly with HTML Sanitization enabled.
+- **Fixed:** `figcaption` and `details` tags are now rendered correctly with HTML Sanitization enabled ([#1542](https://github.com/Requarks/wiki/issues/1542))
+- **Fixed:** KaTeX expressions are now rendered correctly with HTML Sanitization enabled ([#1566](https://github.com/Requarks/wiki/issues/1566))
+- **Fixed:** Twitch module is now using the latest OAuth method ([#1561](https://github.com/Requarks/wiki/issues/1561))
+- **Fixed:** Toggling the preview panel in markdown no longer results in unstyled code blocks ([#1484](https://github.com/Requarks/wiki/issues/1484))
+- **Improvements:** KaTeX expressions are now rendered in the Preview panel.
+- **Improvements:** Option to open all External Links in New Tab ([#1453](https://github.com/Requarks/wiki/issues/1453))
+- **Improvements:** Show Save button as Saved when no content is modified.
+- **Improvements:** Edit Title from header in Editors.
+- **Improvements:** Twemoji images are now loaded locally instead of MaxCDN.
+- **Improvements:** Remote development in VS Code is now supported and is now the preferred development environment ([#1533](https://github.com/Requarks/wiki/issues/1533))
+- **Improvements:** Option to restrict Discord authentication to a specific server ([#1548](https://github.com/Requarks/wiki/issues/1548))
 
 # 2.1.113
 
