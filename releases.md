@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-22T23:50:21.303Z
+date: 2020-03-23T03:32:34.129Z
 tags: 
 ---
 
@@ -11,10 +11,20 @@ tags:
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
 
-# Upcoming - 2.2
+# Upcoming - 2.3
 
 > This build is **under active development** and has not yet been released.
-> **ETA: March 2020**
+> **ETA: April / May 2020**
+{.is-warning}
+
+*TBA*
+
+# BETA - 2.2
+
+> Released on **March 22nd, 2020** in **BETA** for testing and evaluation.
+{.is-info}
+
+> :warning: This release should **NOT** be used in production environments!
 {.is-warning}
 
 ## Major Features
