@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-03-01T23:20:23.983Z
+date: 2020-03-23T00:04:29.595Z
 tags: dev, api
 ---
 
@@ -40,6 +40,18 @@ type ResponseStatus {
   errorCode: Int!
   slug: String!
   message: String
+}
+```
+
+*Example Response:*
+```json
+{
+  "responseResult": {
+    "succeeded": true
+    "errorCode": 0
+    "slug": "success",
+    "message": "The operation completed successfully"
+  }
 }
 ```
 
