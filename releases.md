@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-29T02:10:59.701Z
+date: 2020-03-29T02:23:09.968Z
 tags: 
 ---
 
@@ -51,6 +51,11 @@ tags:
 - **Fixed:** KaTeX expressions are now rendered correctly with HTML Sanitization enabled ([#1566](https://github.com/Requarks/wiki/issues/1566))
 - **Fixed:** Twitch module is now using the latest OAuth method ([#1561](https://github.com/Requarks/wiki/issues/1561))
 - **Fixed:** Toggling the preview panel in markdown no longer results in unstyled code blocks ([#1484](https://github.com/Requarks/wiki/issues/1484))
+- **Fixed:** Right-aligned images are now shown above header lines ([#1588](https://github.com/Requarks/wiki/issues/1588))
+- **Fixed:** Footnotes are now shown correctly in the Markdown editor preview.
+- **Fixed:** Lists are now nested and stacked with proper spacing ([#1609](https://github.com/Requarks/wiki/issues/1609))
+- **Fixed:** The page selector dialog no longer displays duplicate items.
+- **Fixed:** Saving and close a page no longer results in a permanent loading dialog if an error occurs.
 - **Improvements:** KaTeX expressions are now rendered in the Preview panel.
 - **Improvements:** Option to open all External Links in New Tab ([#1453](https://github.com/Requarks/wiki/issues/1453))
 - **Improvements:** Show Save button as Saved when no content is modified.
