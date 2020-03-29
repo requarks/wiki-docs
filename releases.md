@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-29T02:23:09.968Z
+date: 2020-03-29T18:08:29.921Z
 tags: 
 ---
 
@@ -24,9 +24,10 @@ tags:
 
 *TBA*
 
-# 2.2.50
+# 2.2.51
 
-> Released on **March 28th, 2020**.
+> Initially released on **March 28th, 2020** as `2.2.50`. An hotfix was released on **March 29th, 2020** for MySQL installations as `2.2.51`.
+> If you successfully upgraded to `2.2.50`, you do not need to upgrade to `2.2.51`.
 {.is-info}
 
 ## Major Features
