@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-03-29T18:15:44.422Z
+date: 2020-03-29T18:16:07.587Z
 tags: setup, docker
 ---
 
@@ -153,7 +153,7 @@ volumes:
 
 # ARM images
 
-In order to use the ARM64 / ARMv7 image variants, you must use the image tag `requarks/wiki:2.1-arm`.
+In order to use the ARM64 / ARMv7 image variants, you must use the image tag `requarks/wiki:2.2-arm`.
 
 This image is compatible with:
 
