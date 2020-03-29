@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-29T18:08:29.921Z
+date: 2020-03-29T21:15:48.127Z
 tags: 
 ---
 
@@ -22,7 +22,9 @@ tags:
 {.is-warning}
 -->
 
-*TBA*
+## Major Features
+
+- Support for Chemical Equations in KaTeX
 
 # 2.2.51
 
