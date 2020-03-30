@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-29T21:49:16.219Z
+date: 2020-03-30T00:56:56.517Z
 tags: 
 ---
 
@@ -26,6 +26,7 @@ tags:
 
 - Duplicate Page
 - Support for Chemical Equations in KaTeX
+- Support for Mermaid diagrams
 
 # 2.2.51
 
