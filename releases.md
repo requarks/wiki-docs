@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-30T00:56:56.517Z
+date: 2020-03-30T01:16:45.494Z
 tags: 
 ---
 
@@ -27,6 +27,10 @@ tags:
 - Duplicate Page
 - Support for Chemical Equations in KaTeX
 - Support for Mermaid diagrams
+
+## Bug fixes / Minor Improvements
+
+- **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 
 # 2.2.51
 
