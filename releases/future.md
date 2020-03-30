@@ -2,7 +2,7 @@
 title: Future Releases
 description:  Long term plans and future major releases
 published: true
-date: 2020-03-22T23:50:58.481Z
+date: 2020-03-30T01:21:18.505Z
 tags: 
 ---
 
@@ -26,3 +26,9 @@ The current implementation for database handling is done via Knex.js and Objecti
 - Some migrations can be complex (specifically MS SQL Server)
 
 Supporting PostgreSQL as the only database engine in 3.x would greatly simplify development.
+
+## Switch to a full SPA model for navigation
+
+At the moment, only the administration area is using a SPA navigation model (switch views without reloading the page). Standard view pages don't use this model for easier SEO.
+
+In 3.x, site-wide SPA should be implemented in addition to server-side rendering of page contents.
