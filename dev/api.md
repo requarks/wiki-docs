@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-03-23T02:50:20.801Z
+date: 2020-03-30T04:32:44.589Z
 tags: dev, api
 ---
 
@@ -81,6 +81,7 @@ Error codes in the **1xxx** range are dedicated to authentication / users errors
 | 1016 | UserNotFound | This user does not exist. |
 | 1017 | UserDeleteForeignConstraint | Cannot delete user because of content relational constraints. |
 | 1018 | UserDeleteProtected | Cannot delete a protected system account. |
+| 1019 | AuthRequired | You must be authenticated to access this resource. |
 
 ## Assets
 
