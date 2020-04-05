@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-03-30T05:13:02.285Z
+date: 2020-04-05T23:31:43.491Z
 tags: 
 ---
 
@@ -32,6 +32,7 @@ tags:
 ## Bug fixes / Minor Improvements
 
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
+- **Improvements:** View the last login date of any user in Administration Area
 
 # 2.2.51
 
