@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-05T23:31:43.491Z
+date: 2020-04-06T03:39:05.350Z
 tags: 
 ---
 
@@ -28,6 +28,11 @@ tags:
 - Support for Chemical Equations in KaTeX
 - Support for Mermaid diagrams
 - User Profile / Account Management
+	- Change Account Info
+  - Change Password *(local authentication only)*
+  - List of Groups user is part of
+  - Activity Panel
+  - Pages user created / last modified
 
 ## Bug fixes / Minor Improvements
 
