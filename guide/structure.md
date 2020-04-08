@@ -2,7 +2,7 @@
 title: Folder Structure & Tags
 description: Learn how to categorize your pages for easier navigation.
 published: true
-date: 2019-11-10T21:24:18.675Z
+date: 2020-04-08T23:30:26.349Z
 tags: user-guide
 ---
 
