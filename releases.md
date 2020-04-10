@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-06T03:39:05.350Z
+date: 2020-04-10T02:00:29.181Z
 tags: 
 ---
 
@@ -36,8 +36,10 @@ tags:
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Tags are now always normalized and trimmed ([#1364](https://github.com/Requarks/wiki/issues/1364))
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 - **Improvements:** View the last login date of any user in Administration Area
+- **Improvements:** Tags selector in Page Properties no longer remove tags on backspace and new tags automatically empty the field.
 
 # 2.2.51
 
