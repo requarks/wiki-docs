@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-11T04:05:39.191Z
+date: 2020-04-11T04:20:29.413Z
 tags: 
 ---
 
@@ -34,6 +34,7 @@ tags:
   - Activity Panel
   - Pages user created / last modified
 - Link Autocomplete in Markdown editor
+- Insert Link Dialog
 
 ## Bug fixes / Minor Improvements
 
