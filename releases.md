@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-11T04:20:29.413Z
+date: 2020-04-11T19:02:40.765Z
 tags: 
 ---
 
@@ -38,6 +38,7 @@ tags:
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** MSSQL + MariaDB (older versions) migrations 2.2.17 are now executing correctly ([#1610](https://github.com/Requarks/wiki/issues/1610), [#1642](https://github.com/Requarks/wiki/issues/1642))
 - **Fixed:** Tags are now always normalized and trimmed ([#1364](https://github.com/Requarks/wiki/issues/1364))
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 - **Improvements:** View the last login date of any user in Administration Area
