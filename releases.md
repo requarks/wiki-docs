@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-10T02:00:29.181Z
+date: 2020-04-11T04:05:39.191Z
 tags: 
 ---
 
@@ -33,6 +33,7 @@ tags:
   - List of Groups user is part of
   - Activity Panel
   - Pages user created / last modified
+- Link Autocomplete in Markdown editor
 
 ## Bug fixes / Minor Improvements
 
