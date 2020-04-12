@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-11T19:02:40.765Z
+date: 2020-04-12T22:11:05.407Z
 tags: 
 ---
 
@@ -24,6 +24,10 @@ tags:
 
 ## Major Features
 
+- Updated Navigation
+	- 3 Navigation Modes: Tree, Mixed or None
+	- Tree-based Navigation
+  - Permission-based Navigation
 - Duplicate Page
 - Support for Chemical Equations in KaTeX
 - Support for Mermaid diagrams
