@@ -2,7 +2,7 @@
 title: Telemetry
 description: Help us improve Wiki.js!
 published: true
-date: 2019-10-23T01:43:18.259Z
+date: 2020-04-18T00:00:54.045Z
 tags: 
 ---
 
@@ -16,15 +16,15 @@ For maximum privacy, a random client ID is generated during setup. This ID is us
 # What is collected?
 When telemetry is enabled, only the following data is transmitted:
 
-- Version of Wiki.js installed
-- Basic OS information:
-	- Platform type *(Linux, macOS or Windows)*
-  - Total CPU Cores
-  - Type of DB *(PostgreSQL, MySQL, MariaDB, SQLite or SQL Server)*
-- Crash debug data *(stack trace of the error)*
+- Wiki.js version 
+- Node.js version
+- OS Platform *(Linux, macOS or Windows)* and version
+- Total CPU Cores / RAM available
+- Type of DB *(PostgreSQL, MySQL, MariaDB, SQLite or SQL Server)* and version
 - Setup analytics *(installation checkpoint reached)*
+- Crash debug data *(stack trace of the error)*
 
-Note that crash debug data is stored for a maximum of 30 days while analytics are stored for a maximum of 16 months, after which it is permanently deleted.
+Note that crash debug data is stored for a maximum of 30 days, after which it is permanently deleted.
 
 # What is it used for?
 
@@ -34,7 +34,10 @@ Telemetry is used by developers to improve Wiki.js, mostly for the following rea
 - Understand the upgrade rate of current installations.
 - Optimize performance and testing scenarios based on most popular environments.
 
-Only authorized developers have access to the data. It is not shared to any 3rd party nor is it used for any other application than improving Wiki.js.
+Only authorized developers have access to the crash debug data. It is not shared to any 3rd party nor is it used for any other application than improving Wiki.js.
+
+> :chart_with_upwards_trend: The aggregated anonymized telemetry stats are public and available at all times [here](https://wiki.js.org/telemetry).
+{.is-info}
 
 # How to enable / disable telemetry
 
