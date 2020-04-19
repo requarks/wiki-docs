@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-19T18:57:08.833Z
+date: 2020-04-19T19:44:17.452Z
 tags: 
 ---
 
@@ -53,7 +53,9 @@ tags:
 - **Fixed:** Tags are now always normalized and trimmed ([#1364](https://github.com/Requarks/wiki/issues/1364))
 - **Fixed:** Footer is now shown in print view ([#1593](https://github.com/Requarks/wiki/issues/1593))
 - **Fixed:** Print view now displays content past the second page ([#1034](https://github.com/Requarks/wiki/issues/1034))
+- **Fixed:** API keys are now automatically reloaded after creation ([#1713](https://github.com/Requarks/wiki/issues/1713))
 - **Fixed:** Add `i` tag + `start` property for `ol` tag to HTML sanitizer whitelist ([#1724](https://github.com/Requarks/wiki/issues/1724))
+- **Fixed:** All enabled locales are now available in group page rules ([#1739](https://github.com/Requarks/wiki/issues/1739))
 - **Fixed:** Guest group is now reloaded immediately on update.
 - **Improvements:** Replace GA with hosted graph telemetry.
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
