@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-17T23:47:28.768Z
+date: 2020-04-19T18:52:36.451Z
 tags: 
 ---
 
@@ -39,6 +39,12 @@ tags:
   - Pages user created / last modified
 - Link Autocomplete in Markdown editor
 - Insert Link Dialog
+- High Availability Support *(event propagation across instances)*:
+	- Delete Page Cache
+  - Flush Cache
+  - Reload Group Permissions
+  - Reload Auth Strategies
+  - Reload Config
 
 ## Bug fixes / Minor Improvements
 
@@ -47,6 +53,7 @@ tags:
 - **Fixed:** Footer is now shown in print view ([#1593](https://github.com/Requarks/wiki/issues/1593))
 - **Fixed:** Print view now displays content past the second page ([#1034](https://github.com/Requarks/wiki/issues/1034))
 - **Fixed:** Add `i` tag + `start` property for `ol` tag to HTML sanitizer whitelist ([#1724](https://github.com/Requarks/wiki/issues/1724))
+- **Fixed:** Guest group is now reloaded immediately on update.
 - **Improvements:** Replace GA with hosted graph telemetry.
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 - **Improvements:** View the last login date of any user in Administration Area
