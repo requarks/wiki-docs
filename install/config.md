@@ -2,8 +2,8 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-04-19T00:15:33.186Z
-tags: setup
+date: 2020-04-19T16:31:11.240Z
+tags: 
 ---
 
 A config file, named `config.yml`, must be located at the root of your Wiki.js installation.
@@ -298,6 +298,17 @@ Setting this option will also enable [sideloading](/install/sideload).
 
 ```yml
 offline: true
+```
+
+## High-Availability
+
+> This feature is available from version **2.3 and up**.
+{.is-info}
+
+Set to `true` if you have multiple concurrent instances running off the same DB (e.g. Kubernetes pods / load balanced instances). Leave `false` otherwise.
+
+```yml
+ha: true
 ```
 
 ## Data Paths
