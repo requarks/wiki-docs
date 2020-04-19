@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-04-19T16:33:32.109Z
+date: 2020-04-19T16:34:01.754Z
 tags: 
 ---
 
@@ -303,9 +303,10 @@ offline: true
 ## High-Availability
 
 > This feature is available from version **2.3 and up**.
->
-> :warning: PostgreSQL is **required** to enable this option.
 {.is-info}
+
+> :warning: PostgreSQL is **required** to enable this option.
+{.is-warning}
 
 Set to `true` if you have multiple concurrent instances running off the same DB (e.g. Kubernetes pods / load balanced instances). Leave `false` otherwise.
 
