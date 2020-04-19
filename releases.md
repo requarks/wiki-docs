@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-19T18:52:36.451Z
+date: 2020-04-19T18:57:08.833Z
 tags: 
 ---
 
@@ -44,6 +44,7 @@ tags:
   - Flush Cache
   - Reload Group Permissions
   - Reload Auth Strategies
+  - Reload API Keys
   - Reload Config
 
 ## Bug fixes / Minor Improvements
