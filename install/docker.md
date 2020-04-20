@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-03-29T18:16:07.587Z
+date: 2020-04-20T02:02:51.198Z
 tags: setup, docker
 ---
 
@@ -61,10 +61,7 @@ If you want to provide your own SSL certificate configuration, you must instead 
 - **LETSENCRYPT_EMAIL** : The administrator email used when requesting a certificate from Let's Encrypt.
 {.grid-list}
 
-The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when using Let's Encrypt, e.g.:
-```bash
-docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e "LETSENCRYPT_EMAIL=admin@example.com" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
-```
+The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when using Let's Encrypt.
 
 > **The HTTP port must be accessible from the internet for the certificate provisioning to complete!**
 > Once the certificate is generated, you can enable automatic HTTPS redirection from the **Administration** area, under the **SSL** section.
@@ -72,7 +69,7 @@ docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e
 > Note that you must leave the HTTP port open and accessible at all times for the certificate renewal process to work. This is **NOT** a security risk when the above option (HTTPS Redirection) is enabled.
 {.is-warning}
 
-## Example
+## Examples
 
 Here's an example of a command to run Wiki.js connecting to a PostgreSQL database:
 ```bash
@@ -87,6 +84,11 @@ docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysq
 > Both examples assume you have a database running in another container named `db` on the same network.
 > Wiki.js does **NOT** come with a database engine. See the [requirements](/install/requirements) for more details.
 {.is-warning}
+
+Let's Encrypt example:
+```bash
+docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e "LETSENCRYPT_EMAIL=admin@example.com" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+```
 
 ## Alternative: Mount the config file
 
