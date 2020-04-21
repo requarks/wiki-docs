@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-04-21T02:31:18.583Z
+date: 2020-04-21T02:34:23.493Z
 tags: setup, docker
 ---
 
@@ -68,6 +68,16 @@ The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when
 > Once the certificate is generated, you can enable automatic HTTPS redirection from the **Administration** area, under the **SSL** section.
 > 
 > Note that you must leave the HTTP port open and accessible at all times for the certificate renewal process to work. This is **NOT** a security risk when the above option (HTTPS Redirection) is enabled.
+{.is-warning}
+
+### High-Availability
+
+When running Wiki.js with multiple replicas (e.g. Kubernetes cluster / Docker Swarm), you must enable High-Availability to ensure any change is propagated to other instances.
+
+- **HA_ACTIVE** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
+{.grid-list}
+
+> You must be using a **PostgreSQL** database in order to enable this feature. It will not work with any other database engine!
 {.is-warning}
 
 ## Examples
