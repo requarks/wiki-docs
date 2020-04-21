@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-19T19:44:37.684Z
+date: 2020-04-21T02:27:15.824Z
 tags: 
 ---
 
@@ -11,16 +11,26 @@ tags:
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
 
-# Upcoming - 2.3
+# Upcoming - 2.4
 
 > This build is **under active development** and has not yet been released.
-> **ETA: End of April 2020**
+> **ETA: May 2020**
 {.is-warning}
 
 <!--
 > :warning: This release should **NOT** be used in production environments!
 {.is-warning}
 -->
+
+- TBD
+
+# BETA - 2.3.51
+
+> Released on **April 20th, 2020** as a beta build, scheduled for final release at the end of April.
+{.is-info}
+
+> :warning: This release should **NOT** be used in production environments!
+{.is-warning}
 
 ## Major Features
 
@@ -61,6 +71,7 @@ tags:
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 - **Improvements:** View the last login date of any user in Administration Area
 - **Improvements:** Tags selector in Page Properties no longer remove tags on backspace and new tags automatically empty the field.
+- **Improvements:** Added `DB_SSL_CA` env variable to pass the CA certificate as a single-line value.
 
 # 2.2.51
 
