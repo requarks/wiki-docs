@@ -2,7 +2,7 @@
 title: About
 description: Timeline of new releases and general notes
 published: true
-date: 2019-12-16T23:23:45.080Z
+date: 2020-04-22T20:09:38.744Z
 tags: 
 ---
 
@@ -11,6 +11,7 @@ Wiki.js is built almost exclusively by 1 developer, without compensation, on his
 - *I need feature X urgently! When can I expect feature X? My company needs it now!*
 - *Why don't you have a fully detailed timeline, with precise dates for new releases?*
 - *Feature X is most important to us. Please work on it as a priority.*
+- *I posted a ticket on GitHub a few hours ago and you haven't replied yet!*
 
 With the exception of issues that are deamed **critical** *(security hole, major crash, etc.)* that are usually fixed within days, it's simply not possible to have a clear release schedule planned for months in advance and with fixed release dates.
 
