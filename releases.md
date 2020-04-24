@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-22T03:39:20.059Z
+date: 2020-04-24T04:54:34.744Z
 tags: 
 ---
 
@@ -65,14 +65,17 @@ tags:
 - **Fixed:** Print view now displays content past the second page ([#1034](https://github.com/Requarks/wiki/issues/1034))
 - **Fixed:** User/Pass are now URI-encoded in HTTPS git remotes ([#1709](https://github.com/Requarks/wiki/issues/1709))
 - **Fixed:** API keys are now automatically reloaded after creation ([#1713](https://github.com/Requarks/wiki/issues/1713))
+- **Fixed:** Daily backups are now correctly triggered for Local Disk storage module ([#1714](https://github.com/Requarks/wiki/issues/1714))
 - **Fixed:** Add `i` tag + `start` property for `ol` tag to HTML sanitizer whitelist ([#1724](https://github.com/Requarks/wiki/issues/1724))
 - **Fixed:** All enabled locales are now available in group page rules ([#1739](https://github.com/Requarks/wiki/issues/1739))
 - **Fixed:** Guest group is now reloaded immediately on update.
+- **Fixed:** Site URL field in Admin > General is now trimmed and trailing-slash removed automatically.
 - **Improvements:** Replace GA with hosted graph telemetry.
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 - **Improvements:** View the last login date of any user in Administration Area
 - **Improvements:** Tags selector in Page Properties no longer remove tags on backspace and new tags automatically empty the field.
 - **Improvements:** Added `DB_SSL_CA` env variable to pass the CA certificate as a single-line value.
+- **Improvements:** Added option in LDAP authentication module to disable TLS certificate validation.
 
 # 2.2.51
 
