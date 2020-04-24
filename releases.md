@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-24T19:25:00.457Z
+date: 2020-04-24T19:29:22.906Z
 tags: 
 ---
 
@@ -71,6 +71,7 @@ tags:
 - **Fixed:** Icons in Admin Navigation page are now squared, matching the normal pages display. ([#1767](https://github.com/Requarks/wiki/issues/1767))
 - **Fixed:** Guest group is now reloaded immediately on update.
 - **Fixed:** Site URL field in Admin > General is now trimmed and trailing-slash removed automatically.
+- **Fixed:** Registration form is now displayed correctly in dark mode.
 - **Improvements:** Replace GA with hosted graph telemetry.
 - **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
 - **Improvements:** View the last login date of any user in Administration Area
