@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-25T03:16:33.889Z
+date: 2020-04-25T07:08:35.089Z
 tags: 
 ---
 
@@ -24,9 +24,10 @@ tags:
 
 - TBD
 
-# 2.3.71
+# 2.3.72
 
 > Released on **April 24th, 2020**
+> Users that upgraded to `2.3.71` should upgrade immediately to `2.3.72` to fix a page creation bug.
 {.is-info}
 
 ## Major Features
