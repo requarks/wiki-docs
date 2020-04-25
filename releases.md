@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-25T00:48:17.694Z
+date: 2020-04-25T03:16:33.889Z
 tags: 
 ---
 
@@ -24,13 +24,10 @@ tags:
 
 - TBD
 
-# BETA - 2.3.51
+# 2.3.71
 
-> Released on **April 20th, 2020** as a beta build, scheduled for final release at the end of April.
+> Released on **April 24th, 2020**
 {.is-info}
-
-> :warning: This release should **NOT** be used in production environments!
-{.is-warning}
 
 ## Major Features
 
