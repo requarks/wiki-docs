@@ -2,7 +2,7 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2020-03-14T00:00:57.964Z
+date: 2020-04-25T03:50:00.306Z
 tags: dev
 ---
 
@@ -61,7 +61,14 @@ docker build -t requarks/wiki -f dev/build/Dockerfile .
 Multi-architecture images for arm64 and arm/v7 can be built using the Docker experimental **buildx** plugin and **QEMU**. You can read more about how it works in [this article](https://engineering.docker.com/2019/04/multi-arch-images/).
 
 ```bash
-docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki --push -f dev/build/Dockerfile .
+docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki:arm --push -f dev/build/Dockerfile .
+```
+
+Multiple architectures can be merged into a single manifest file using the `docker manifest` command. In the example below, the first reference is the final manifest list, followed by a list of docker image digest SHA256 that should be included in the manifest list:
+
+```bash
+docker manifest create requarks/wiki:arm requarks/wiki@sha256:abcdef123456 requarks/wiki@sha256:fedcba654321
+docker manifest push requarks/wiki:arm
 ```
 
 # Manually
