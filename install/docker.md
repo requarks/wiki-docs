@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-04-21T02:34:23.493Z
+date: 2020-04-25T03:54:10.444Z
 tags: setup, docker
 ---
 
@@ -36,7 +36,7 @@ You must set the following environment variables. They are all **required** unle
 *When connecting to a database server with SSL enforced:*
 
 - **DB_SSL** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
-- **DB_SSL_CA** : Database CA certificate content, as a single line string (without spaces or new lines), without the prefix and suffix lines. *(optional)*
+- **DB_SSL_CA** : Database CA certificate content, as a single line string (without spaces or new lines), without the prefix and suffix lines. *(optional, requires 2.3+)*
 {.grid-list}
 
 *Alternative way to provide the database password, via a local file secret:*
