@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-24T19:29:22.906Z
+date: 2020-04-25T00:48:17.694Z
 tags: 
 ---
 
@@ -68,7 +68,9 @@ tags:
 - **Fixed:** Daily backups are now correctly triggered for Local Disk storage module ([#1714](https://github.com/Requarks/wiki/issues/1714))
 - **Fixed:** Add `i` tag + `start` property for `ol` tag to HTML sanitizer whitelist ([#1724](https://github.com/Requarks/wiki/issues/1724))
 - **Fixed:** All enabled locales are now available in group page rules ([#1739](https://github.com/Requarks/wiki/issues/1739))
+- **Fixed:** Git rename is now performed via rm + add to avoid a bad source error. ([#1750](https://github.com/Requarks/wiki/issues/1750))
 - **Fixed:** Icons in Admin Navigation page are now squared, matching the normal pages display. ([#1767](https://github.com/Requarks/wiki/issues/1767))
+- **Fixed:** Trailing slashes are now removed automatically when creating a page or during a page move. ([#1769](https://github.com/Requarks/wiki/issues/1769))
 - **Fixed:** Guest group is now reloaded immediately on update.
 - **Fixed:** Site URL field in Admin > General is now trimmed and trailing-slash removed automatically.
 - **Fixed:** Registration form is now displayed correctly in dark mode.
