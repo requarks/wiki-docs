@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-25T18:14:34.893Z
+date: 2020-04-25T18:19:58.538Z
 tags: 
 ---
 
@@ -84,6 +84,14 @@ tags:
 - **Improvements:** Added `DB_SSL_CA` env variable to pass the CA certificate as a single-line value.
 - **Improvements:** Added option in LDAP authentication module to disable TLS certificate validation.
 
+## Links
+
+- [Installation](/install)
+- [Upgrade from 2.2.51](/install/upgrade)
+- [Migrate from 1.x](/install/migrate)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
+
 # 2.2.51
 
 > Initially released on **March 28th, 2020** as `2.2.50`. An hotfix was released on **March 29th, 2020** for MySQL installations as `2.2.51`.
@@ -124,6 +132,14 @@ tags:
 - **Improvements:** Twemoji images are now loaded locally instead of MaxCDN.
 - **Improvements:** Remote development in VS Code is now supported and is now the preferred development environment ([#1533](https://github.com/Requarks/wiki/issues/1533))
 - **Improvements:** Option to restrict Discord authentication to a specific server ([#1548](https://github.com/Requarks/wiki/issues/1548))
+
+## Links
+
+- [Installation](/install)
+- [Upgrade from 2.1.113](/install/upgrade)
+- [Migrate from 1.x](/install/migrate)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.1.113
 
