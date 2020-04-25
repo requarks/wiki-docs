@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-25T07:08:35.089Z
+date: 2020-04-25T18:14:34.893Z
 tags: 
 ---
 
@@ -24,13 +24,18 @@ tags:
 
 - TBD
 
-# 2.3.72
+# 2.3.77
 
-> Released on **April 24th, 2020**
-> Users that upgraded to `2.3.71` should upgrade immediately to `2.3.72` to fix a page creation bug.
+> Initially released on **April 24th, 2020** as `2.3.71-73`. An hotfix was released on **April 25th, 2020** to address the issues listed below.
+> Users that upgraded to `2.3.71-73` should upgrade immediately to `2.3.77`.
 {.is-info}
 
-## Major Features
+## Hotfix *(2.3.77)*{.caption}
+- Added option to copy navigation items from other locale ([#1774](https://github.com/Requarks/wiki/issues/1774))
+- Navigation mode is now persisted correctly ([#1776](https://github.com/Requarks/wiki/issues/1776))
+- Git SSH port is no longer explictly defined ([#1777](https://github.com/Requarks/wiki/issues/1777))
+
+## Major Features *(2.3.71)*{.caption}
 
 - Updated Navigation
 	- 3 Navigation Modes: Tree, Mixed or None
@@ -55,7 +60,7 @@ tags:
   - Reload API Keys
   - Reload Config
 
-## Bug fixes / Minor Improvements
+## Bug fixes / Minor Improvements *(2.3.71)*{.caption}
 
 - **Fixed:** MSSQL + MariaDB (older versions) migrations 2.2.17 are now executing correctly ([#1610](https://github.com/Requarks/wiki/issues/1610), [#1642](https://github.com/Requarks/wiki/issues/1642))
 - **Fixed:** Tags are now always normalized and trimmed ([#1364](https://github.com/Requarks/wiki/issues/1364))
