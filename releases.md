@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-25T18:19:58.538Z
+date: 2020-04-25T21:57:20.843Z
 tags: 
 ---
 
@@ -22,7 +22,9 @@ tags:
 {.is-warning}
 -->
 
-- TBD
+## Bug fixes / Minor Improvements
+
+- **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
 
 # 2.3.77
 
