@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-26T18:08:11.268Z
+date: 2020-04-26T18:10:16.586Z
 tags: 
 ---
 
@@ -403,4 +403,4 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 
 # Previous Releases
 
-- [2.0 Beta Releases](/releases-beta)
+- [2.0 Beta Releases](/releases/beta)
