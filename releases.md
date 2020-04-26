@@ -2,11 +2,11 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-26T18:20:59.786Z
+date: 2020-04-26T18:23:01.980Z
 tags: 
 ---
 
-- [Current Development Roadmap *View the tasks currently being worked on and their status for the next release.*](/releases/current)
+<!-- - [Current Development Roadmap *View the tasks currently being worked on and their status for the next release.*](/releases/current) -->
 - [Future Releases Roadmap *Learn about long term plans and future major releases.*](/releases/future)
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
