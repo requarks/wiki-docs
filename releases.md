@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-25T21:57:20.843Z
+date: 2020-04-26T18:08:11.268Z
 tags: 
 ---
 
@@ -24,6 +24,7 @@ tags:
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** Removed the extra `)` added to some links in Visual Editor ([#1788](https://github.com/Requarks/wiki/issues/1788))
 - **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
 
 # 2.3.77
