@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-04-27T01:15:35.136Z
+date: 2020-04-27T01:17:11.414Z
 tags: setup
 ---
 
@@ -11,6 +11,8 @@ tags: setup
 
 > :minidisc: While upgrades are generally safe and it's very unlikely that it would result in data loss, it's your responsability to have a proper backup of your database before performing an upgrade. Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
 {.is-warning}
+
+Select your platform:
 
 # Platforms {.tabset}
 
