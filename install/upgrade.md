@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-04-27T01:14:34.934Z
+date: 2020-04-27T01:15:35.136Z
 tags: setup
 ---
 
@@ -14,7 +14,7 @@ tags: setup
 
 # Platforms {.tabset}
 
-## Docker
+## Docker <i class="mdi mdi-docker"></i>
 
 ### Standalone Container
 
@@ -43,7 +43,7 @@ docker-compose pull wiki
 docker-compose up --force-recreate
 ```
 
-## Linux / macOS
+## Linux / macOS <i class="mdi mdi-ubuntu"></i>
 
 > The commands below assume an installation within a subfolder named `wiki`.
 {.is-info}
@@ -75,7 +75,7 @@ docker-compose up --force-recreate
   node server
   ```
 
-## Windows
+## Windows <i class="mdi mdi-microsoft-windows"></i>
 
 > The commands below assume an installation at folder location `C:\wiki`.
 {.is-info}
