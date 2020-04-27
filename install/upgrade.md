@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-04-27T01:17:11.414Z
+date: 2020-04-27T01:32:30.610Z
 tags: setup
 ---
 
