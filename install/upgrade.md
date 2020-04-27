@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-04-25T07:05:15.123Z
+date: 2020-04-27T01:14:34.934Z
 tags: setup
 ---
 
@@ -12,15 +12,11 @@ tags: setup
 > :minidisc: While upgrades are generally safe and it's very unlikely that it would result in data loss, it's your responsability to have a proper backup of your database before performing an upgrade. Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
 {.is-warning}
 
-**Choose your platform:**
-- [Docker](#docker)
-- [Linux / macOS](#linux-macos)
-- [Windows](#windows)
-{.links-list}
+# Platforms {.tabset}
 
-# Docker
+## Docker
 
-## Standalone Container
+### Standalone Container
 
 Upgrading is simply a matter of recreating the container with the latest image version:
 
@@ -38,7 +34,7 @@ docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysq
 
 Check out the [Docker installation guide](/install/docker) for all the possible options when creating a Wiki.js container.
 
-## Docker Compose
+### Docker Compose
 
 The following commands will pull the latest image and recreate the containers defined in the docker-compose file:
 
@@ -47,7 +43,7 @@ docker-compose pull wiki
 docker-compose up --force-recreate
 ```
 
-# Linux / macOS
+## Linux / macOS
 
 > The commands below assume an installation within a subfolder named `wiki`.
 {.is-info}
@@ -63,7 +59,7 @@ docker-compose up --force-recreate
   ```
 4) Download the latest version of Wiki.js.
   ```bash
-  wget https://github.com/Requarks/wiki/releases/download/2.3.72/wiki-js.tar.gz
+  wget https://github.com/Requarks/wiki/releases/download/2.3.77/wiki-js.tar.gz
   ```
 5) Extract the package
   ```bash
@@ -79,7 +75,7 @@ docker-compose up --force-recreate
   node server
   ```
 
-# Windows
+## Windows
 
 > The commands below assume an installation at folder location `C:\wiki`.
 {.is-info}
@@ -99,7 +95,7 @@ docker-compose up --force-recreate
   ```
 5. Download the latest version of Wiki.js:
   ```powershell
-  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.3.72/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
+  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/2.3.77/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
 4. Extract the package to the final destination of your choice:
