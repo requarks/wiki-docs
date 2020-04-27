@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-26T18:23:01.980Z
+date: 2020-04-27T01:06:21.715Z
 tags: 
 ---
 
@@ -21,6 +21,10 @@ tags:
 > :warning: This release should **NOT** be used in production environments!
 {.is-warning}
 -->
+
+## Major Features
+
+- Content Tabs
 
 ## Bug fixes / Minor Improvements
 
