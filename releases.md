@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-04-30T05:23:12.315Z
+date: 2020-05-01T21:00:54.074Z
 tags: 
 ---
 
@@ -34,13 +34,18 @@ tags:
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
 
-# 2.3.77
+# 2.3.81
 
-> Initially released on **April 24th, 2020** as `2.3.71-73`. An hotfix was released on **April 25th, 2020** to address the issues listed below.
-> Users that upgraded to `2.3.71-73` should upgrade immediately to `2.3.77`.
+> Initially released on **April 24th, 2020** as `2.3.71-73`.
+> Hotfix `2.3.77` was released on **April 25th, 2020**.
+> Hotfix `2.3.81` was released on **May 1st, 2020**.
+> Users that upgraded to versions `< 2.3.81` should upgrade immediately to `2.3.81`.
 {.is-info}
 
-## Hotfix *(2.3.77)*{.caption}
+## Hotfix 2 *(2.3.81)*{.caption}
+- Sanitize HTML in Preview panel of the Markdown Editor ([GHSA-vj72-c9vq-qxrv](https://github.com/Requarks/wiki/security/advisories/GHSA-vj72-c9vq-qxrv))
+
+## Hotfix 1 *(2.3.77)*{.caption}
 - Added option to copy navigation items from other locale ([#1774](https://github.com/Requarks/wiki/issues/1774))
 - Navigation mode is now persisted correctly ([#1776](https://github.com/Requarks/wiki/issues/1776))
 - Git SSH port is no longer explictly defined ([#1777](https://github.com/Requarks/wiki/issues/1777))
