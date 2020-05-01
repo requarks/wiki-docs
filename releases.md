@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-01T21:00:54.074Z
+date: 2020-05-01T21:07:16.877Z
 tags: 
 ---
 
@@ -341,8 +341,28 @@ A basic code editor for raw HTML is now available.
 You can now include PlantUML diagrams from the Markdown Editor. Thanks to [@ethanmdavidson](https://github.com/ethanmdavidson).
 
 Example:
+````
+```plantuml
+participant User
+
+User -> A: DoWork
+activate A #FFBBBB
+
+A -> A: Internal call
+activate A #DarkSalmon
+
+A -> B: << createRequest >>
+activate B
+
+B --> A: RequestCreated
+deactivate B
+deactivate A
+A -> User: Done
+deactivate A
 ```
-@startuml
+````
+
+```plantuml
 participant User
 
 User -> A: DoWork
@@ -360,28 +380,7 @@ deactivate A
 A -> User: Done
 deactivate A
 
-@enduml
 ```
-
-@startuml
-participant User
-
-User -> A: DoWork
-activate A #FFBBBB
-
-A -> A: Internal call
-activate A #DarkSalmon
-
-A -> B: << createRequest >>
-activate B
-
-B --> A: RequestCreated
-deactivate B
-deactivate A
-A -> User: Done
-deactivate A
-
-@enduml
 
 ## Bug fixes / Minor Improvements
 
