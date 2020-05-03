@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-03T04:40:14.387Z
+date: 2020-05-03T20:01:19.088Z
 tags: 
 ---
 
@@ -25,6 +25,8 @@ tags:
 ## Major Features
 
 - Content Tabs
+- Create New Page from Template
+- Create Redirect Page
 - MathJax Rendering Module
 - Timezone, Date Format and Appearance (light/dark) per User Profile
 
