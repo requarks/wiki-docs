@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-02T19:15:58.237Z
+date: 2020-05-03T04:40:14.387Z
 tags: 
 ---
 
@@ -26,6 +26,7 @@ tags:
 
 - Content Tabs
 - MathJax Rendering Module
+- Timezone, Date Format and Appearance (light/dark) per User Profile
 
 ## Bug fixes / Minor Improvements
 
