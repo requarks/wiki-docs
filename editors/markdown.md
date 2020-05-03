@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2019-12-25T21:24:22.955Z
+date: 2020-05-03T20:40:56.775Z
 tags: editors
 ---
 
@@ -118,7 +118,7 @@ Using a **greater-than** symbol, followed by a space, before each line of text.
 
 ### *Stylings*
 
-By adding a class on a separate line, after the blockquote, you can change the look of the blockquote:
+By adding a class on a separate line, after the blockquote, you can change the look of the blockquote. Note that these stylings are specific to Wiki.js and will fallback to standard blockquote styling in other applications.
 
 - Blue: `is-info`
 - Green: `is-success`
@@ -131,8 +131,19 @@ By adding a class on a separate line, after the blockquote, you can change the l
 {.is-info}
 ```
 
-> Note that these stylings are specific to Wiki.js and will fallback to standard blockquote styling in other applications.
+> This is a default unstyled blockquote.
+
+> This is a `{.is-info}` blockquote.
+{.is-info}
+
+> This is a `{.is-success}` blockquote.
+{.is-success}
+
+> This is a `{.is-warning}` blockquote.
 {.is-warning}
+
+> This is a `{.is-danger}` blockquote.
+{.is-danger}
 
 ## Ordered Lists
 
