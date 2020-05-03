@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-03T20:40:56.775Z
+date: 2020-05-03T20:50:40.700Z
 tags: editors
 ---
 
@@ -75,6 +75,44 @@ Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the tex
 ###### Header 6
 ```
 
+## Content Tabs
+
+> This feature is only available from version 2.4 and up.
+{.is-info}
+
+Using headers and adding the `{.tabset}` class to the parent header. The parent header text will not be shown in the final result.
+
+Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `###` *(h3)*, the tabs headers must be `####` *(h4)*. The maximum header level for a parent being 5 and the children 6.
+
+### *Example*
+
+```
+# Tabs {.tabset}
+## First Tab
+
+Any content here will go into the first tab...
+
+## Second Tab
+
+Any content here will go into the second tab...
+
+## Third Tab
+
+Any content here will go int the third tab...
+```
+
+#### Tabs {.tabset}
+##### First Tab
+
+Any content here will go into the first tab...
+
+##### Second Tab
+
+Any content here will go into the second tab...
+
+##### Third Tab
+
+Any content here will go int the third tab...
 
 ## Subscript
 
