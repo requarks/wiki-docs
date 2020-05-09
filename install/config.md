@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-05-09T23:05:47.919Z
+date: 2020-05-09T23:06:53.171Z
 tags: 
 ---
 
@@ -92,6 +92,9 @@ db:
   pass: wikijsrocks
   db: wiki
 ```
+
+**Notes**:
+- The database must already be created. Wiki.js will **not** create it for you.
 
 #### SQLite
 
