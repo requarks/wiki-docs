@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T17:59:06.908Z
+date: 2020-05-09T18:02:03.670Z
 tags: editors
 ---
 
@@ -166,18 +166,14 @@ Using a **greater-than** symbol, followed by a space, before each line of text.
 #### Shortcuts
 - By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-blockquotes.png =x30){.radius-4} button in the toolbar.
 
-#### Example
+#### Examples
 
 ```js
 > Lorem ipsum dolor sit amet
 > Consectetur adipiscing elit
 ```
 
-### *Stylings*
-
-### Tab {.tabset}
-
-#### Usage
+#### Stylings
 
 By adding a class on a separate line, after the blockquote, you can change the look of the blockquote. Note that these stylings are specific to Wiki.js and will fallback to standard blockquote styling in other applications.
 
@@ -185,8 +181,6 @@ By adding a class on a separate line, after the blockquote, you can change the l
 - Green: `is-success`
 - Yellow: `is-warning`
 - Red: `is-danger`
-
-#### Examples
 
 ```css
 > Lorem ipsum dolor sit amet
@@ -232,12 +226,16 @@ Using an **number**, followed by a **dot** symbol, followed by a space, before e
 
 ## Unordered Lists
 
+### Tab {.tabset}
+
+#### Usage
+
 Using an **asterisk** or a **dash** symbol, followed by a space, before each line of text.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ul.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Examples
 
 ```
 - Lorem ipsum dolor sit amet
@@ -245,14 +243,14 @@ Using an **asterisk** or a **dash** symbol, followed by a space, before each lin
 - Morbi vehicula aliquam
 ```
 
-### *Stylings*
+#### Stylings
 
 By adding a class on a separate line, after the list, you can change the look of the list:
 
 - `links-list`
 - `grid-list`
 
-#### Example
+For example:
 
 ```markdown
 - Grid Item 1
@@ -284,9 +282,13 @@ and:
 
 ## Task Lists
 
+### Tab {.tabset}
+
+#### Usage
+
 Using the syntax `- [ ]` or a `- [x]`.
 
-### *Example*
+#### Examples
 
 ```
 - [x] Checked task item
@@ -300,12 +302,16 @@ Using the syntax `- [ ]` or a `- [x]`.
 
 ## Inline Code
 
+### Tab {.tabset}
+
+#### Usage
+
 Using a **backtick** symbol before and after the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Inline Code](/assets/ui/ui-markdown-inlinecode.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Examples
 
 ```js
 Lorem `ipsum` dolor
@@ -313,12 +319,16 @@ Lorem `ipsum` dolor
 
 ## Code Blocks
 
+### Tab {.tabset}
+
+#### Usage
+
 Using **triple backticks** symbols before and after the text selection, on dedicated lines.
 
-### *Shortcuts*
+#### Shortcuts
 - Using the **Code Block** tool in the left toolbar.
 
-### *Example*
+#### Examples
 
 ````
 ```
@@ -328,7 +338,7 @@ function lorem (ipsum) {
 ```
 ````
 
-### *Syntax Highlighting*
+#### Syntax Highlighting
 
 By default, a code block is rendered as plain preformatted text. It's however preferable to use syntax highlighting for programming code, allowing for easier readability. To specify the programming language used in the code block, simply add the language keyword right after the opening triple backticks:
 
@@ -342,12 +352,16 @@ Refer to the [reference list](https://github.com/highlightjs/highlight.js#suppor
 
 ## Horizontal Line
 
+### Tab {.tabset}
+
+#### Usage
+
 Using **triple dash** symbols on a dedicated line.
 
-### *Shortcuts*
+#### Shortcuts
 - By clicking the ![Horizontal Rule](/assets/ui/ui-markdown-hr.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Example
 
 ```js
 Lorem ipsum dolor
@@ -359,12 +373,16 @@ Consectetur adipiscing elit
 
 ## Images
 
+### Tab {.tabset}
+
+#### Usage
+
 Using the syntax `![Image Caption](Image Source)`.
 
-### *Shortcuts*
+#### Shortcuts
 - Using the **Assets** tool in the left toolbar.
 
-### *Examples*
+#### Examples
 
 ```markdown
 ![Lorem ipsum](https://dolor.example.com/sit/amet.jpg)
@@ -372,7 +390,7 @@ Using the syntax `![Image Caption](Image Source)`.
 Consectetur ![adipiscing](/link/to/image.jpg) elit
 ```
 
-### *Dimensions*
+#### Dimensions
 
 Sometimes images are too large or maybe you want the image to fill up all the available space.
 
