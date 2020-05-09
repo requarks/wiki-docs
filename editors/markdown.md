@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:02:03.670Z
+date: 2020-05-09T18:04:10.532Z
 tags: editors
 ---
 
@@ -415,12 +415,16 @@ It's also possible to use other units, like %. Useful when you need the image to
 
 ## Links
 
+### Tab {.tabset}
+
+#### Usage
+
 Using the syntax `[Link Text](Link Target)`.
 
-### *Shortcuts*
+#### Shortcuts
 - Using the **Link** tool in the left toolbar.
 
-### *Examples*
+#### Examples
 
 ```markdown
 [Lorem ipsum](https://dolor.example.com/sit/amet)
@@ -430,11 +434,15 @@ Consectetur [adipiscing](/link/to/page) elit
 
 ## Emojis
 
+### Tab {.tabset}
+
+#### Usage
+
 Using the syntax `:identifier:`
 
 See the [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) for the full list of possible options.
 
-### *Example*
+#### Examples
 
 ```markdown
 :apple:
@@ -448,12 +456,16 @@ Can also be used :fire: inline.
 
 ## Keyboard Keys
 
+### Tab {.tabset}
+
+#### Usage
+
 Using `<kbd>` before and `</kbd>` after the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Keyboard Keys](/assets/ui/ui-markdown-kbd.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Examples
 
 ```html
 Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
