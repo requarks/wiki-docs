@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T17:54:38.223Z
+date: 2020-05-09T17:56:33.235Z
 tags: editors
 ---
 
@@ -34,13 +34,17 @@ Lorem **ipsum** dolor
 
 ## Italic
 
+### Tab {.tabset}
+
+#### Usage
+
 Using a **single asterisk** symbol before and after the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Italic](/assets/ui/ui-markdown-italic.png =x30){.radius-4} button in the toolbar.
 - By selecting text, then pressing <kbd>CTRL</kbd> + <kbd>I</kbd>
 
-### *Example*
+#### Example
 
 ```js
 Lorem *ipsum* dolor
@@ -48,12 +52,16 @@ Lorem *ipsum* dolor
 
 ## Strikethrough
 
+### Tab {.tabset}
+
+#### Usage
+
 Using **double tildes** symbols before and after the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Strikethrough](/assets/ui/ui-markdown-strike.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Example
 
 ```js
 Lorem ~~ipsum~~ dolor
@@ -61,14 +69,18 @@ Lorem ~~ipsum~~ dolor
 
 ## Headers
 
+### Tab {.tabset}
+
+#### Usage
+
 Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - On the desired line, then clicking the ![Header](/assets/ui/ui-markdown-headers.png =x30){.radius-4} dropdown button in the toolbar.
 - On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Right</kbd> to increase the header level.
 - On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Left</kbd> to decrease the header level.
 
-### *Example*
+#### Example
 
 ```
 # Header 1
@@ -81,6 +93,10 @@ Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the tex
 
 ## Content Tabs
 
+### Tab {.tabset}
+
+#### Usage
+
 > This feature is only available from version 2.4 and up.
 {.is-info}
 
@@ -88,7 +104,7 @@ Using headers and adding the `{.tabset}` class to the parent header. The parent 
 
 Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `###` *(h3)*, the tabs headers must be `####` *(h4)*. The maximum header level for a parent being 5 and the children 6.
 
-### *Example*
+#### Example
 
 ```
 # Tabs {.tabset}
@@ -105,16 +121,16 @@ Any content here will go into the second tab...
 Any content here will go int the third tab...
 ```
 
-#### Tabs {.tabset}
-##### First Tab
+##### Tabs {.tabset}
+###### First Tab
 
 Any content here will go into the first tab...
 
-##### Second Tab
+###### Second Tab
 
 Any content here will go into the second tab...
 
-##### Third Tab
+###### Third Tab
 
 Any content here will go int the third tab...
 
