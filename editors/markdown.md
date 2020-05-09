@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:28:24.767Z
+date: 2020-05-09T18:31:37.513Z
 tags: editors
 ---
 
@@ -320,6 +320,44 @@ Using the syntax `[Link Text](Link Target)`.
 [Lorem ipsum](https://dolor.example.com/sit/amet)
 
 Consectetur [adipiscing](/link/to/page) elit
+```
+
+## Mermaid Diagrams
+
+### Tab {.tabset}
+
+#### Usage
+
+Using a code block with the language **mermaid**.
+
+Refer to [Mermaid website](https://mermaid-js.github.io/mermaid) for the language reference.
+
+#### Examples
+
+````
+```mermaid
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob-->>John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+    Bob-->Alice: Checking with John...
+    Alice->John: Yes... John, how are you?
+```
+````
+
+```mermaid
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob-->>John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+    Bob-->Alice: Checking with John...
+    Alice->John: Yes... John, how are you?
 ```
 
 
