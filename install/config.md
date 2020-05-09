@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-05-09T23:04:40.588Z
+date: 2020-05-09T23:05:47.919Z
 tags: 
 ---
 
@@ -33,7 +33,6 @@ Wiki.js requires one of the many [supported database engines](/install/requireme
 
 ### Tabset {.tabset}
 
-![](https://static.requarks.io/logo/postgresql.svg =48x){.align-right}
 #### PostgreSQL
 
 > **PostgreSQL** is the recommended engine for best performance, features and future compatibility.
@@ -52,7 +51,6 @@ db:
 - The database must already be created. Wiki.js will **not** create it for you.
 - If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
 
-![](https://static.requarks.io/logo/mysql.svg =48x){.align-right}
 #### MySQL
 
 ```yml
@@ -68,7 +66,6 @@ db:
 - The database must already be created. Wiki.js will **not** create it for you.
 - If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
 
-![](https://static.requarks.io/logo/mariadb.svg =48x){.align-right}
 #### MariaDB
 
 ```yml
@@ -84,7 +81,6 @@ db:
 - The database must already be created. Wiki.js will **not** create it for you.
 - If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
 
-![](https://static.requarks.io/logo/microsoft-sql-server-alt.svg =48x){.align-right}
 #### MS SQL Server
 
 ```yml
@@ -97,7 +93,6 @@ db:
   db: wiki
 ```
 
-![](https://static.requarks.io/logo/sqlite.svg =48x){.align-right}
 #### SQLite
 
 > **SQLite** is not recommended for production use. It is only provided for low-end systems and development purposes.
