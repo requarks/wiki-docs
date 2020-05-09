@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:27:37.555Z
+date: 2020-05-09T18:28:24.767Z
 tags: editors
 ---
 
@@ -362,6 +362,10 @@ Refer to [PlantUML website](https://plantuml.com/) for the language reference.
 Bob->Alice : hello
 ```
 ````
+
+```plantuml
+Bob->Alice : hello
+```
 
 ## Strikethrough
 
