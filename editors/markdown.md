@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T17:54:20.326Z
+date: 2020-05-09T17:54:38.223Z
 tags: editors
 ---
 
@@ -22,11 +22,11 @@ Wiki.js supports the full [CommonMark specification](https://spec.commonmark.org
 
 Using **double asterisks** symbols before and after the text selection.
 
-### Shortcuts
+#### Shortcuts
 - By selecting text, then clicking the ![Bold](/assets/ui/ui-markdown-bold.png =x30){.radius-4} button in the toolbar.
 - By selecting text, then pressing <kbd>CTRL</kbd> + <kbd>B</kbd>
 
-### Examples
+#### Examples
 
 ```js
 Lorem **ipsum** dolor
