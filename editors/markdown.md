@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:36:35.679Z
+date: 2020-05-09T18:38:01.068Z
 tags: editors
 ---
 
@@ -204,7 +204,7 @@ Using **triple dash** symbols on a dedicated line.
 #### Shortcuts
 - By clicking the ![Horizontal Rule](/assets/ui/ui-markdown-hr.png =x30){.radius-4} button in the toolbar.
 
-#### Example
+#### Examples
 
 ```js
 Lorem ipsum dolor
@@ -387,6 +387,10 @@ Using an **number**, followed by a **dot** symbol, followed by a space, before e
 1. Consectetur adipiscing elit
 1. Morbi vehicula aliquam
 ```
+
+1. Lorem ipsum dolor sit amet
+1. Consectetur adipiscing elit
+1. Morbi vehicula aliquam
 
 > While you can number each line numerically in order, it's easier to use the number **1** on each line. The final result will be incremented automatically. This way you don't need to re-number every single line when adding or removing a line later on.
 {.is-info}
