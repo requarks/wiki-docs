@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:16:44.424Z
+date: 2020-05-09T18:27:37.555Z
 tags: editors
 ---
 
@@ -344,6 +344,24 @@ Using an **number**, followed by a **dot** symbol, followed by a space, before e
 
 > While you can number each line numerically in order, it's easier to use the number **1** on each line. The final result will be incremented automatically. This way you don't need to re-number every single line when adding or removing a line later on.
 {.is-info}
+
+## PlantUML Diagrams
+
+### Tab {.tabset}
+
+#### Usage
+
+Using a code block with the language **plantuml**.
+
+Refer to [PlantUML website](https://plantuml.com/) for the language reference.
+
+#### Examples
+
+````
+```plantuml
+Bob->Alice : hello
+```
+````
 
 ## Strikethrough
 
