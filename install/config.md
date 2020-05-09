@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-04-19T16:34:01.754Z
+date: 2020-05-09T23:02:36.001Z
 tags: 
 ---
 
@@ -278,6 +278,9 @@ logLevel: info
 The accepted values are: `error`, `warn`, `info` *(default)*, `verbose`, `debug`, `silly`.
 
 ## Upload Limits
+
+> **This option was deprecated in 2.4** and is now controlled via the administration web interface.
+{.is-warning}
 
 Set the maximum file size for user uploads:
 
