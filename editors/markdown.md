@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:15:23.493Z
+date: 2020-05-09T18:16:44.424Z
 tags: editors
 ---
 
@@ -142,6 +142,28 @@ Any content here will go into the second tab...
 Any content here will go into the third tab...
 ```
 
+## Emojis
+
+### Tab {.tabset}
+
+#### Usage
+
+Using the syntax `:identifier:`
+
+See the [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) for the full list of possible options.
+
+#### Examples
+
+```markdown
+:apple:
+
+Can be also be used :fire: inline
+```
+
+:apple:
+
+Can also be used :fire: inline.
+
 ## Headers
 
 ### Tab {.tabset}
@@ -165,28 +187,6 @@ Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the tex
 ##### Header 5
 ###### Header 6
 ```
-
-## Emojis
-
-### Tab {.tabset}
-
-#### Usage
-
-Using the syntax `:identifier:`
-
-See the [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) for the full list of possible options.
-
-#### Examples
-
-```markdown
-:apple:
-
-Can be also be used :fire: inline
-```
-
-:apple:
-
-Can also be used :fire: inline.
 
 ## Horizontal Line
 
