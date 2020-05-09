@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T18:32:41.782Z
+date: 2020-05-09T18:36:35.679Z
 tags: editors
 ---
 
@@ -31,6 +31,9 @@ Using a **greater-than** symbol, followed by a space, before each line of text.
 > Lorem ipsum dolor sit amet
 > Consectetur adipiscing elit
 ```
+
+> Lorem ipsum dolor sit amet
+> Consectetur adipiscing elit
 
 #### Stylings
 
@@ -78,6 +81,8 @@ Using **double asterisks** symbols before and after the text selection.
 ```js
 Lorem **ipsum** dolor
 ```
+
+Lorem **ipsum** dolor
 
 ## Code Blocks
 
@@ -209,6 +214,12 @@ Lorem ipsum dolor
 Consectetur adipiscing elit
 ```
 
+Lorem ipsum dolor
+
+---
+
+Consectetur adipiscing elit
+
 ## Images
 
 ### Tab {.tabset}
@@ -268,6 +279,8 @@ Using a **backtick** symbol before and after the text selection.
 Lorem `ipsum` dolor
 ```
 
+Lorem `ipsum` dolor
+
 ## Italic
 
 ### Tab {.tabset}
@@ -286,6 +299,8 @@ Using a **single asterisk** symbol before and after the text selection.
 Lorem *ipsum* dolor
 ```
 
+Lorem *ipsum* dolor
+
 ## Keyboard Keys
 
 ### Tab {.tabset}
@@ -303,6 +318,8 @@ Using `<kbd>` before and `</kbd>` after the text selection.
 Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
 ```
 
+Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
+
 ## Links
 
 ### Tab {.tabset}
@@ -317,10 +334,14 @@ Using the syntax `[Link Text](Link Target)`.
 #### Examples
 
 ```markdown
-[Lorem ipsum](https://dolor.example.com/sit/amet)
+[Lorem ipsum](https://wiki.js.org/about)
 
-Consectetur [adipiscing](/link/to/page) elit
+Consectetur [adipiscing](/install/requirements) elit
 ```
+
+[Lorem ipsum](https://wiki.js.org/about)
+
+Consectetur [adipiscing](/install/requirements) elit
 
 ## Mermaid Diagrams
 
@@ -409,6 +430,8 @@ Using **double tildes** symbols before and after the text selection.
 Lorem ~~ipsum~~ dolor
 ```
 
+Lorem ~~ipsum~~ dolor
+
 ## Subscript
 
 ### Tab {.tabset}
@@ -426,6 +449,8 @@ Using a **single tilde** symbol before and after the text selection.
 Lorem ~ipsum~ dolor
 ```
 
+Lorem ~ipsum~ dolor
+
 ## Superscript
 
 ### Tab {.tabset}
@@ -442,6 +467,8 @@ Using a **single caret** symbol before and after the text selection.
 ```js
 Lorem ^ipsum^ dolor
 ```
+
+Lorem ^ipsum^ dolor
 
 ## Task Lists
 
@@ -481,6 +508,10 @@ Using an **asterisk** or a **dash** symbol, followed by a space, before each lin
 - Consectetur adipiscing elit
 - Morbi vehicula aliquam
 ```
+
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Morbi vehicula aliquam
 
 #### Stylings
 
