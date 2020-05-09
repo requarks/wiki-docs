@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-09T17:56:33.235Z
+date: 2020-05-09T17:59:06.908Z
 tags: editors
 ---
 
@@ -44,7 +44,7 @@ Using a **single asterisk** symbol before and after the text selection.
 - By selecting text, then clicking the ![Italic](/assets/ui/ui-markdown-italic.png =x30){.radius-4} button in the toolbar.
 - By selecting text, then pressing <kbd>CTRL</kbd> + <kbd>I</kbd>
 
-#### Example
+#### Examples
 
 ```js
 Lorem *ipsum* dolor
@@ -61,7 +61,7 @@ Using **double tildes** symbols before and after the text selection.
 #### Shortcuts
 - By selecting text, then clicking the ![Strikethrough](/assets/ui/ui-markdown-strike.png =x30){.radius-4} button in the toolbar.
 
-#### Example
+#### Examples
 
 ```js
 Lorem ~~ipsum~~ dolor
@@ -80,7 +80,7 @@ Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the tex
 - On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Right</kbd> to increase the header level.
 - On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Left</kbd> to decrease the header level.
 
-#### Example
+#### Examples
 
 ```
 # Header 1
@@ -104,7 +104,7 @@ Using headers and adding the `{.tabset}` class to the parent header. The parent 
 
 Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `###` *(h3)*, the tabs headers must be `####` *(h4)*. The maximum header level for a parent being 5 and the children 6.
 
-#### Example
+#### Examples
 
 ```
 # Tabs {.tabset}
@@ -118,30 +118,21 @@ Any content here will go into the second tab...
 
 ## Third Tab
 
-Any content here will go int the third tab...
+Any content here will go into the third tab...
 ```
-
-##### Tabs {.tabset}
-###### First Tab
-
-Any content here will go into the first tab...
-
-###### Second Tab
-
-Any content here will go into the second tab...
-
-###### Third Tab
-
-Any content here will go int the third tab...
 
 ## Subscript
 
+### Tab {.tabset}
+
+#### Usage
+
 Using a **single tilde** symbol before and after the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Subscript](/assets/ui/ui-markdown-sub.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Examples
 
 ```js
 Lorem ~ipsum~ dolor
@@ -149,12 +140,16 @@ Lorem ~ipsum~ dolor
 
 ## Superscript
 
+### Tab {.tabset}
+
+#### Usage
+
 Using a **single caret** symbol before and after the text selection.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Superscript](/assets/ui/ui-markdown-sup.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Examples
 
 ```js
 Lorem ^ipsum^ dolor
@@ -162,12 +157,16 @@ Lorem ^ipsum^ dolor
 
 ## Blockquotes
 
+### Tab {.tabset}
+
+#### Usage
+
 Using a **greater-than** symbol, followed by a space, before each line of text.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-blockquotes.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Example
 
 ```js
 > Lorem ipsum dolor sit amet
@@ -176,12 +175,18 @@ Using a **greater-than** symbol, followed by a space, before each line of text.
 
 ### *Stylings*
 
+### Tab {.tabset}
+
+#### Usage
+
 By adding a class on a separate line, after the blockquote, you can change the look of the blockquote. Note that these stylings are specific to Wiki.js and will fallback to standard blockquote styling in other applications.
 
 - Blue: `is-info`
 - Green: `is-success`
 - Yellow: `is-warning`
 - Red: `is-danger`
+
+#### Examples
 
 ```css
 > Lorem ipsum dolor sit amet
@@ -205,12 +210,16 @@ By adding a class on a separate line, after the blockquote, you can change the l
 
 ## Ordered Lists
 
+### Tab {.tabset}
+
+#### Usage
+
 Using an **number**, followed by a **dot** symbol, followed by a space, before each line of text.
 
-### *Shortcuts*
+#### Shortcuts
 - By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ol.png =x30){.radius-4} button in the toolbar.
 
-### *Example*
+#### Examples
 
 ```
 1. Lorem ipsum dolor sit amet
