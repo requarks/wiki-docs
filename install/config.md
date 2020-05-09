@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-05-09T23:02:36.001Z
+date: 2020-05-09T23:04:40.588Z
 tags: 
 ---
 
@@ -31,8 +31,10 @@ Note that if you choose to listen directly on port `80`, some operating systems 
 
 Wiki.js requires one of the many [supported database engines](/install/requirements#database).
 
+### Tabset {.tabset}
+
 ![](https://static.requarks.io/logo/postgresql.svg =48x){.align-right}
-### Using PostgreSQL
+#### PostgreSQL
 
 > **PostgreSQL** is the recommended engine for best performance, features and future compatibility.
 {.is-success}
@@ -51,7 +53,7 @@ db:
 - If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
 
 ![](https://static.requarks.io/logo/mysql.svg =48x){.align-right}
-### Using MySQL
+#### MySQL
 
 ```yml
 db:
@@ -67,7 +69,7 @@ db:
 - If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
 
 ![](https://static.requarks.io/logo/mariadb.svg =48x){.align-right}
-### Using MariaDB
+#### MariaDB
 
 ```yml
 db:
@@ -83,7 +85,7 @@ db:
 - If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
 
 ![](https://static.requarks.io/logo/microsoft-sql-server-alt.svg =48x){.align-right}
-### Using MS SQL Server
+#### MS SQL Server
 
 ```yml
 db:
@@ -96,7 +98,7 @@ db:
 ```
 
 ![](https://static.requarks.io/logo/sqlite.svg =48x){.align-right}
-### Using SQLite
+#### SQLite
 
 > **SQLite** is not recommended for production use. It is only provided for low-end systems and development purposes.
 {.is-warning}
