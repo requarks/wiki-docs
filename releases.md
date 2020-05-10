@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-10T01:20:51.224Z
+date: 2020-05-10T01:24:43.968Z
 tags: 
 ---
 
@@ -40,7 +40,9 @@ tags:
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
 - **Improvements:** Added option for navigation links to open in a new window.
+- **Improvements:** Added rel option for external content links for increased XSS security.
 - **Improvements:** Certificate verification can now be disabled in Mail settings.
+- **Improvements:** Page TOC is now sticky during scroll.
 
 # 2.3.81
 
