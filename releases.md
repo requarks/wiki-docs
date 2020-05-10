@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-03T20:01:19.088Z
+date: 2020-05-10T01:20:51.224Z
 tags: 
 ---
 
@@ -28,7 +28,9 @@ tags:
 - Create New Page from Template
 - Create Redirect Page
 - MathJax Rendering Module
+- PlantUML live rendering in Markdown preview
 - Timezone, Date Format and Appearance (light/dark) per User Profile
+- Upload limits configuration from the Administration area
 
 ## Bug fixes / Minor Improvements
 
@@ -37,6 +39,8 @@ tags:
 - **Fixed:** Markdown Footnotes IDs are no longer stripped by HTML Sanitization module ([#1819](https://github.com/Requarks/wiki/issues/1819))
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
+- **Improvements:** Added option for navigation links to open in a new window.
+- **Improvements:** Certificate verification can now be disabled in Mail settings.
 
 # 2.3.81
 
