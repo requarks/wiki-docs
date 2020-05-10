@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-10T01:24:43.968Z
+date: 2020-05-10T22:32:23.631Z
 tags: 
 ---
 
@@ -42,6 +42,7 @@ tags:
 - **Improvements:** Added option for navigation links to open in a new window.
 - **Improvements:** Added rel option for external content links for increased XSS security.
 - **Improvements:** Certificate verification can now be disabled in Mail settings.
+- **Improvements:** DOMPurify is now used instead of the xss module as the HTML sanitizer.
 - **Improvements:** Page TOC is now sticky during scroll.
 
 # 2.3.81
