@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2020-02-08T03:32:38.142Z
+date: 2020-05-11T03:59:01.570Z
 tags: setup
 ---
 
@@ -40,7 +40,7 @@ For best performance, features and future compatibility, it's highly recommended
 - ![](https://static.requarks.io/logo/postgresql.svg =24x){.mr-2} PostgreSQL **9.5 or later**
 {.grid-list}
 
-> :information_source: It's recommended you use the latest version of PostgreSQL when possible.
+> It's recommended you use the latest version of PostgreSQL when possible.
 {.is-info}
 
 ---
@@ -53,9 +53,9 @@ Wiki.js is also compatible with the following database systems:
 - ![](https://static.requarks.io/logo/sqlite-alt.svg =24x){.mr-2} SQLite **3.9 or later**
 {.grid-list}
 
-> :warning: **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* may not be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years.
+> **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* may not be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years.
 > 
-> :warning: SQLite is **not recommended** for production deployments.
+> SQLite is **not recommended** for production deployments.
 {.is-warning}
 
 You're expected to have installed one of these database engines already *(either locally, on another server or using a cloud service)*. Wiki.js requires an empty database and preferably a unique user / pass to connect to the database.
