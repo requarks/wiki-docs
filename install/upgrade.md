@@ -2,14 +2,14 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-05-01T21:09:43.178Z
+date: 2020-05-11T04:00:29.096Z
 tags: setup
 ---
 
-> :warning: **DO NOT** upgrade from `1.0.x` using these instructions! Use the [Migrate from Wiki.js v1.x](/install/migrate) instructions instead. These instructions are for `2.x` installations.
+> **DO NOT** upgrade from `1.0.x` using these instructions! Use the [Migrate from Wiki.js v1.x](/install/migrate) instructions instead. These instructions are for `2.x` installations.
 {.is-danger}
 
-> :minidisc: While upgrades are generally safe and it's very unlikely that it would result in data loss, it's your responsability to have a proper backup of your database before performing an upgrade. Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
+> While upgrades are generally safe and it's very unlikely that it would result in data loss, it's your responsability to have a proper backup of your database before performing an upgrade. Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
 {.is-warning}
 
 Select your platform:
