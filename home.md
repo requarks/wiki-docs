@@ -2,11 +2,11 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2019-12-25T21:22:52.647Z
+date: 2020-05-11T03:58:18.971Z
 tags: 
 ---
 
-> :warning: Documentation is being worked on! Some pages may be incomplete or not exist yet.
+> Documentation is being worked on! Some pages may be incomplete or not exist yet.
 {.is-warning}
 
 # Getting Started
