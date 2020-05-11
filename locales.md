@@ -2,8 +2,8 @@
 title: Locales
 description: Language & Regional Settings
 published: true
-date: 2019-09-15T02:41:01.575Z
-tags: 
+date: 2020-05-11T04:01:31.634Z
+tags: localization
 ---
 
 Wiki.js can be displayed in various languages and offer multi-lingual versions of the same page.
@@ -18,7 +18,7 @@ In the left sidebar, click on **Locales**. A list of available locales will be d
 
 Click the :cloud: **cloud icon** next to the locale you wish to download. When completed, the locale will be available in the **Site Locale** dropdown list.
 
-> :information_source: Some locales are tagged with `RTL` which means they are displayed right-to-left. The site becomes mirrored with the exception of code blocks which stays in left-to-right mode.
+> Some locales are tagged with `RTL` which means they are displayed right-to-left. The site becomes mirrored with the exception of code blocks which stays in left-to-right mode.
 {.is-info}
 
 # Set the default Locale
