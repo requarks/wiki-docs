@@ -2,7 +2,7 @@
 title: Module Properties
 description: Structure of module properties
 published: true
-date: 2019-02-15T04:27:34.158Z
+date: 2020-05-15T20:31:20.527Z
 tags: 
 ---
 
@@ -48,7 +48,7 @@ props:
 
 ### type
 
-The type is **required**. It can be either the property direct value _\(as shown in the first two examples above\)_ or as an object property named `type`. Must be one of the allowed types listed [above](properties.md#property-types).
+The type is **required**. It can be either the property direct value _\(as shown in the first two examples above\)_ or as an object property named `type`. Must be one of the allowed types listed [above](#property-types).
 
 ### default
 
