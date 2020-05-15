@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2020-02-27T06:05:36.273Z
+date: 2020-05-15T01:14:19.414Z
 tags: 
 ---
 
@@ -66,6 +66,20 @@ Language tags in the formats listed below are reserved to specify the locale nam
 ## Words
 
 Paths cannot match exactly the terms below or be the first part of path. For example, `register` or `register/test` are not valid paths, but `registering` is fine.
+
+### 2.4 and later
+
+- _assets
+- favicon *\[.ico]*
+- graphql
+- healthz
+- home *(reserved for the root homepage)*
+- login
+- logout
+- register
+{.grid-list}
+
+### 2.0 to 2.3
 
 - browserconfig *\[.xml]*
 - css
