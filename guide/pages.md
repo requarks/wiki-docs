@@ -2,7 +2,7 @@
 title: Pages
 description: Create and edit content
 published: true
-date: 2020-05-15T01:14:19.414Z
+date: 2020-05-15T17:55:58.198Z
 tags: 
 ---
 
@@ -44,6 +44,7 @@ The following paths cannot be used for content and are reserved for system use.
 **All** single character paths are reserved to access various parts of the Wiki:
 
 - `a`: Administration Area
+- `c`: Comments
 - `e`: Page Editor
 - `f`: Assets Manager
 - `h`: Page History
