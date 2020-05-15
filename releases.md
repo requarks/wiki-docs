@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-15T21:17:04.396Z
+date: 2020-05-15T21:18:01.086Z
 tags: 
 ---
 
@@ -50,6 +50,7 @@ tags:
 - **Improvements:** Added rel option for external content links for increased XSS security.
 - **Improvements:** Admin Users list now shows active/disabled indicator + last login date.
 - **Improvements:** Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
+- **Improvements:** Blockquotes now have a built-in icon + color margin for increased visibility.
 - **Improvements:** Certificate verification can now be disabled in Mail settings.
 - **Improvements:** DOMPurify is now used instead of the xss module as the HTML sanitizer.
 - **Improvements:** Elasticsearch can now do partial match by default. ([#1882](https://github.com/Requarks/wiki/issues/1882))
