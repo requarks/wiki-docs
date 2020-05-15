@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-10T22:32:23.631Z
+date: 2020-05-15T21:17:04.396Z
 tags: 
 ---
 
@@ -24,6 +24,7 @@ tags:
 
 ## Major Features
 
+- Comments
 - Content Tabs
 - Create New Page from Template
 - Create Redirect Page
@@ -37,12 +38,21 @@ tags:
 - **Fixed:** Removed the extra `)` added to some links in Visual Editor ([#1788](https://github.com/Requarks/wiki/issues/1788))
 - **Fixed:** HTML from Visual Editor is now beautified before saving for proper diff versioning ([#1804](https://github.com/Requarks/wiki/issues/1804))
 - **Fixed:** Markdown Footnotes IDs are no longer stripped by HTML Sanitization module ([#1819](https://github.com/Requarks/wiki/issues/1819))
+- **Fixed:** Anchor scrolling will now handle image loading offset correctly after load ([#1870](https://github.com/Requarks/wiki/issues/1870))
+- **Fixed:** Removed unsuitable font for Persian language ([#1871](https://github.com/Requarks/wiki/issues/1871))
+- **Fixed:** Keycloak module is now using fullname field with username fallback. ([#1888](https://github.com/Requarks/wiki/issues/1888))
+- **Fixed:** Bullet list markers in RTL mode are now aligned correctly. ([#1892](https://github.com/Requarks/wiki/issues/1892))
 - **Fixed:** Added missing directory page to the browse sidebar menu.
+- **Fixed:** Write permissions can no longer be selected for the Guest group.
+- **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
 - **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
 - **Improvements:** Added option for navigation links to open in a new window.
 - **Improvements:** Added rel option for external content links for increased XSS security.
+- **Improvements:** Admin Users list now shows active/disabled indicator + last login date.
+- **Improvements:** Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
 - **Improvements:** Certificate verification can now be disabled in Mail settings.
 - **Improvements:** DOMPurify is now used instead of the xss module as the HTML sanitizer.
+- **Improvements:** Elasticsearch can now do partial match by default. ([#1882](https://github.com/Requarks/wiki/issues/1882))
 - **Improvements:** Page TOC is now sticky during scroll.
 
 # 2.3.81
