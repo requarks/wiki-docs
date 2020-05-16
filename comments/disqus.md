@@ -2,7 +2,7 @@
 title: Disqus
 description: Comments Module
 published: true
-date: 2020-05-16T23:00:30.325Z
+date: 2020-05-16T23:01:39.579Z
 tags: 
 ---
 
@@ -30,5 +30,5 @@ Disqus is a discussion service to add commenting and sharing capabilities to all
 
 Disqus will now be displayed at the end of all your wiki pages.
 
-![](https://static.requarks.io/logo/disqus.svg =x50){.align-abstopright}
+![](https://static.requarks.io/logo/disqus.svg =200x){.align-abstopright}
   
