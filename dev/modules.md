@@ -2,7 +2,7 @@
 title: Modules
 description: Introduction to Modules for developers
 published: true
-date: 2020-05-16T19:48:54.476Z
+date: 2020-05-16T20:05:46.219Z
 tags: dev
 ---
 
