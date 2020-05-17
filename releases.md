@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-15T21:18:01.086Z
+date: 2020-05-17T02:47:01.670Z
 tags: 
 ---
 
@@ -25,6 +25,9 @@ tags:
 ## Major Features
 
 - Comments
+	- Commento
+  - Default (native)
+  - Disqus
 - Content Tabs
 - Create New Page from Template
 - Create Redirect Page
