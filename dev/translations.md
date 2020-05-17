@@ -2,7 +2,7 @@
 title: Translations
 description: Contribute a new language or test new keys
 published: true
-date: 2020-05-17T06:03:32.690Z
+date: 2020-05-17T06:05:42.143Z
 tags: dev, localization
 ---
 
@@ -16,6 +16,8 @@ You can join our Lokalise project below to gain access to the translation tools.
 {.is-warning}
 
 [![btn-join-the-project.png](/assets/buttons/btn-join-the-project.png)](https://lokalise.com/public/2994254859f751ea605a00.03473540/)
+
+If you can't find your language in the list, contact us on [Slack](https://wiki.requarks.io/slack) and we'll add it!
 
 # View latest changes on your wiki
 
