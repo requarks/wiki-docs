@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-04-25T19:10:56.543Z
+date: 2020-05-17T06:34:17.510Z
 tags: setup, docker
 ---
 
@@ -71,6 +71,9 @@ The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when
 {.is-warning}
 
 ### High-Availability
+
+> This feature is only available from version **2.3 and up**
+{.is-info}
 
 When running Wiki.js with multiple replicas (e.g. Kubernetes cluster / Docker Swarm), you must enable High-Availability to ensure any change is propagated to other instances.
 
