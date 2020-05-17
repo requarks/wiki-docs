@@ -2,7 +2,7 @@
 title: Translations
 description: Contribute a new language or test new keys
 published: true
-date: 2019-11-18T23:16:38.451Z
+date: 2020-05-17T06:03:32.690Z
 tags: dev, localization
 ---
 
@@ -10,7 +10,12 @@ tags: dev, localization
 
 We are always looking for translation contributors to make Wiki.js accessible in as many language as possible!
 
-You can [join the project](https://lokalise.com/public/2994254859f751ea605a00.03473540/) to gain access to the translation tools. No coding required! Feel free to contact us on [Slack](https://wiki.requarks.io/slack) if you have any questions!
+You can join our Lokalise project below to gain access to the translation tools. No coding required! Feel free to contact us on [Slack](https://wiki.requarks.io/slack) if you have any questions!
+
+> **Only select the language(s) you're going to actively contribute to!** Users that select too many or all languages at once will be removed.
+{.is-warning}
+
+[![btn-join-the-project.png](/assets/buttons/btn-join-the-project.png)](https://lokalise.com/public/2994254859f751ea605a00.03473540/)
 
 # View latest changes on your wiki
 
