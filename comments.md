@@ -2,7 +2,7 @@
 title: Comments
 description: List of supported Commenting Modules
 published: true
-date: 2020-05-17T06:11:31.171Z
+date: 2020-05-17T06:15:49.404Z
 tags: 
 ---
 
@@ -26,6 +26,11 @@ The **Comments** feature must be enabled under **Administration > General** befo
 {.links-list}
 
 # Permissions
+
+> This only applies to the **Default** module.
+>
+> External modules like Commento or Disqus are not tied to any group permissions or internal users. Moderation and authentication is handled by the module provider.
+{.is-warning}
 
 The ability to read, post or manage comments is controlled via group permissions.
 
