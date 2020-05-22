@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T20:44:10.135Z
+date: 2020-05-22T20:49:05.687Z
 tags: 
 ---
 
@@ -134,6 +134,47 @@ will result in
 
 *This module doesn't have any configurable parameters.*
 
+
+## Katex
+
+
+## Kroki
+
+
+## Mathjax
+
+
+## PlantUML
+
+
+## Subscript/Superscript
+
+### Tabset {.tabset}
+
+#### Definition
+
+Transform text into subscript and superscript tags.
+
+#### Example
+
+```
+H~2~0
+Exp^10^
+```
+will result in
+```html
+H<sub>2</sub>O
+Exp<sup>10</sup>
+```
+
+#### Parameters
+
+- **Subscript**: Enable subscript tags.
+- **Superscript**: Enable supercript tags
+{.grid-list}
+
+
+## Task Lists
 
 # HTML
 
