@@ -2,13 +2,21 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T20:23:47.987Z
+date: 2020-05-22T20:40:23.476Z
 tags: 
 ---
 
 # Overview
 
 The rendering pipeline defines how your content is rendered into it's final readable form.
+
+Rendering modules are attached to a core language module. Depending on the editor used, content will go through several **core rendering modules <kbd>CRM</kbd>**. For example, using the Markdown editor will result in the content being transformed through the Markdown CRM, then by the HTML CRM modules.
+
+Each core rendering module can consists of multiple **extension rendering modules <kbd>ERM</kbd>**. These modules extend the capabilities of the core rendering module.
+
+![Rendering Pipeline Diagram](/assets/diagrams/diag-rendering-pipeline.jpg =1000x){.radius-7 .decor-shadow}
+
+Each module can be enabled / disabled individually and configured in the **Administration Area** under the **Rendering** sidebar menu.
 
 # Markdown
 
@@ -47,7 +55,11 @@ is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
 
 #### Definition
 
-Convert tags into emojis. (e.g. `:apple:` into :apple:)
+Convert tags into emojis.
+
+#### Example
+
+ `:apple:` will produce :apple:
 
 #### Parameters
 
@@ -67,6 +79,47 @@ Automatically convert tabs into spaces for consistent indentation spacing in HTM
 - **Tab Width**: The number of spaces to use when converting from tabs.
 {.grid-list}
 
+
+## Footnotes
+
+### Tabset {.tabset}
+
+#### Definition
+
+Generates footnote definitions.
+
+#### Example
+
+See https://github.com/markdown-it/markdown-it-footnote
+
+#### Parameters
+
+*This module doesn't have any configurable parameters.*
+
+
+## Image Size
+
+### Tabset {.tabset}
+
+#### Definition
+
+Add image dimensions to img tags.
+
+#### Example
+
+```
+![test](image.png =100x200)
+```
+will result in
+```html
+<p><img src="image.png" alt="test" width="100" height="200"></p>
+```
+
+#### Parameters
+
+*This module doesn't have any configurable parameters.*
+
+
 # HTML
 
-# OpenAPI
+*Coming soon*
