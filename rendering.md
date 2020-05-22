@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T23:31:13.370Z
+date: 2020-05-22T23:40:28.592Z
 tags: 
 ---
 
@@ -226,15 +226,34 @@ will result in
 #### Parameters
 *This module doesn't have any configurable parameters.*
 
-# HTML
 
-*Coming soon*
+# HTML
+### Tabset {.tabset}
+#### Definition
+Process HTML through extension modules.
+
+#### Parameters
+- **Treat relative links as root absolute**: For example, a link to foo/bar on page xyz will render as /foo/bar instead of /xyz/foo/bar.
+- **Open external links in a new tab**: External links will have a _blank target attribute added automatically.
+- **Protect against XSS when opening _blank target links**: External links with _blank attribute will have an additional rel attribute.
+{.grid-list}
+
 
 ## Asciinema
 *Coming soon*
 
+
 ## Blockquotes
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Parse blockquotes box styling.
+
+#### Example
+See https://docs.requarks.io/en/editors/markdown#blockquotes
+
+#### Parameters
+*This module doesn't have any configurable parameters.*
+
 
 ## Code Highlighting Post-Processor
 ### Tabset {.tabset}
@@ -244,8 +263,10 @@ Automatically detect programming code syntax and apply the correct code coloring
 #### Parameters
 *This module doesn't have any configurable parameters.*
 
+
 ## Media Players
 *Coming soon*
+
 
 ## Mermaid
 ### Tabset {.tabset}
@@ -255,8 +276,17 @@ Transform Mermaid code blocks into Mermaid diagrams.
 #### Parameters
 *This module doesn't have any configurable parameters.*
 
+
 ## Security
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Generate diagrams from PlantUML description.
+
+#### Parameters
+- **Sanitize HTML**: Sanitize HTML from unsafe attributes and tags that could lead to XSS attacks.
+- **Allow iframes**: iframes will not be stripped if enabled. *(Not recommended)*
+{.grid-list}
+
 
 ## Tabsets
 ### Tabset {.tabset}
@@ -271,6 +301,7 @@ See https://docs.requarks.io/en/editors/markdown#content-tabs
 
 #### Parameters
 *This module doesn't have any configurable parameters.*
+
 
 ## Twemoji
 ### Tabset {.tabset}
