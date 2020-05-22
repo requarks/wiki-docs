@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T23:14:26.108Z
+date: 2020-05-22T23:31:13.370Z
 tags: 
 ---
 
@@ -130,6 +130,9 @@ Generate diagrams from various textual descriptions.
 The diagram type must be put on the second line, in lowercase.
 See https://kroki.io/#support for the full list of supported diagram types.
 
+> This module is only available from version **2.4 and up**.
+{.is-info}
+
 #### Example
 ````markdown
 ```kroki
@@ -158,6 +161,9 @@ Generate visual Math / Chemical expressions from TeX expressions, using the Math
 
 > This module is incompatible with the **Katex** module. Only one of them should be enabled at once.
 {.is-danger}
+
+> This module is only available from version **2.4 and up**.
+{.is-info}
 
 #### Parameters
 - **Inline TeX**: Process inline TeX expressions surrounded by $ symbols.
@@ -231,19 +237,45 @@ will result in
 *Coming soon*
 
 ## Code Highlighting Post-Processor
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Automatically detect programming code syntax and apply the correct code coloring classes.
+
+#### Parameters
+*This module doesn't have any configurable parameters.*
 
 ## Media Players
 *Coming soon*
 
 ## Mermaid
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Transform Mermaid code blocks into Mermaid diagrams.
+
+#### Parameters
+*This module doesn't have any configurable parameters.*
 
 ## Security
 *Coming soon*
 
 ## Tabsets
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Create tabs to organize content.
+
+> This module is only available from version **2.4 and up**.
+{.is-info}
+
+#### Example
+See https://docs.requarks.io/en/editors/markdown#content-tabs
+
+#### Parameters
+*This module doesn't have any configurable parameters.*
 
 ## Twemoji
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Convert emojis into their Twemoji equivalent *(Twitter emoji design)*.
+
+#### Parameters
+*This module doesn't have any configurable parameters.*
