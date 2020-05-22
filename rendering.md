@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T20:52:18.550Z
+date: 2020-05-22T23:00:31.494Z
 tags: 
 ---
 
@@ -19,15 +19,11 @@ Each core rendering module can consists of multiple **extension rendering module
 Each module can be enabled / disabled individually and configured in the **Administration Area** under the **Rendering** sidebar menu.
 
 # Markdown
-
 ## Tabset {.tabset}
-
 ### Definition
-
 Converts Markdown content into HTML.
 
 ### Parameters
-
 - **Allow HTML**: Enable HTML tabs in content.
 - **Automatically convert links**: Links will automatically be converted into clickable links.
 - **Automatically convert line breaks**: Add linebreaks within paragraphs.
@@ -37,15 +33,11 @@ Converts Markdown content into HTML.
 
 
 ## Abbreviations
-
 ### Tabset {.tabset}
-
 #### Definition
-
 Transform abbreviation words into `<abbr>` tags for an expanding definition.
 
 #### Example
-
 ```
 *[HTML]: Hyper Text Markup Language
 *[W3C]:  World Wide Web Consortium
@@ -60,68 +52,50 @@ is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
 ```
 
 #### Parameters
-
 *This module doesn't have any configurable parameters.*
 
 
 ## Emoji
-
 ### Tabset {.tabset}
-
 #### Definition
-
 Convert tags into emojis.
 
 #### Example
-
  `:apple:` will produce :apple:
 
 #### Parameters
-
 *This module doesn't have any configurable parameters.*
 
 
 ## Expand Tabs
-
 ### Tabset {.tabset}
-
 #### Definition
-
 Automatically convert tabs into spaces for consistent indentation spacing in HTML.
 
 #### Parameters
-
 - **Tab Width**: The number of spaces to use when converting from tabs.
 {.grid-list}
 
 
 ## Footnotes
-
 ### Tabset {.tabset}
-
 #### Definition
-
 Generates footnote definitions.
 
 #### Example
-
 See https://github.com/markdown-it/markdown-it-footnote
 
 #### Parameters
-
 *This module doesn't have any configurable parameters.*
 
 
 ## Image Size
-
 ### Tabset {.tabset}
-
 #### Definition
 
 Add image dimensions to img tags.
 
 #### Example
-
 ```
 ![test](image.png =100x200)
 ```
@@ -131,19 +105,38 @@ will result in
 ```
 
 #### Parameters
-
 *This module doesn't have any configurable parameters.*
 
 
 ## Katex
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Generate visual Math / Chemical expressions from TeX expressions, using the KaTeX engine.
+
+> This module is incompatible with the **Mathjax** module. Only one of them should be enabled at once.
+{.is-danger}
+
+#### Parameters
+- **Inline TeX**: Process inline TeX expressions surrounded by $ symbols.
+- **TeX Blocks**: Process TeX blocks enclosed by $$ symbols.
+{.grid-list}
 
 ## Kroki
 *Coming soon*
 
 
 ## Mathjax
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Generate visual Math / Chemical expressions from TeX expressions, using the Mathjax engine.
+
+> This module is incompatible with the **Katex** module. Only one of them should be enabled at once.
+{.is-danger}
+
+#### Parameters
+- **Inline TeX**: Process inline TeX expressions surrounded by $ symbols.
+- **TeX Blocks**: Process TeX blocks enclosed by $$ symbols.
+{.grid-list}
 
 
 ## PlantUML
@@ -151,9 +144,7 @@ will result in
 
 
 ## Subscript/Superscript
-
 ### Tabset {.tabset}
-
 #### Definition
 
 Transform text into subscript and superscript tags.
@@ -178,7 +169,24 @@ Exp<sup>10</sup>
 
 
 ## Task Lists
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Convert square brackets list into HTML checkboxes.
+
+#### Example
+```
+- [ ] Item 1
+- [ ] Item 2
+- [x] Item 3
+```
+will result in
+
+- [ ] Item 1
+- [ ] Item 2
+- [x] Item 3
+
+#### Parameters
+*This module doesn't have any configurable parameters.*
 
 # HTML
 
