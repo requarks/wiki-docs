@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-21T04:43:45.351Z
+date: 2020-05-22T17:41:14.882Z
 tags: 
 ---
 
@@ -39,6 +39,8 @@ tags:
 
 ## Bug fixes / Minor Improvements
 
+- **Fixed:** CKEditor (Visual Editor) now handles RTL locales correctly. ([#1636](https://github.com/Requarks/wiki/issues/1636))
+- **Fixed:** Long words are now broken into multiple lines in Markdown editor. ([#1743](https://github.com/Requarks/wiki/issues/1743))
 - **Fixed:** Removed the extra `)` added to some links in Visual Editor. ([#1788](https://github.com/Requarks/wiki/issues/1788))
 - **Fixed:** HTML from Visual Editor is now beautified before saving for proper diff versioning. ([#1804](https://github.com/Requarks/wiki/issues/1804))
 - **Fixed:** Markdown Footnotes IDs are no longer stripped by HTML Sanitization module. ([#1819](https://github.com/Requarks/wiki/issues/1819))
@@ -48,6 +50,7 @@ tags:
 - **Fixed:** Keycloak module is now using fullname field with username fallback. ([#1888](https://github.com/Requarks/wiki/issues/1888))
 - **Fixed:** Bullet list markers in RTL mode are now aligned correctly. ([#1892](https://github.com/Requarks/wiki/issues/1892))
 - **Fixed:** Some Pages Visualization tree nodes were not sorted correctly and would display the wrong title. ([#1914](https://github.com/Requarks/wiki/issues/1914))
+- **Fixed:** S3 Export All is triggered correctly. ([#1922](https://github.com/Requarks/wiki/issues/1922))
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Fixed:** Write permissions can no longer be selected for the Guest group.
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
