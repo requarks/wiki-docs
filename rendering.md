@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T20:40:23.476Z
+date: 2020-05-22T20:43:52.733Z
 tags: 
 ---
 
@@ -19,6 +19,21 @@ Each core rendering module can consists of multiple **extension rendering module
 Each module can be enabled / disabled individually and configured in the **Administration Area** under the **Rendering** sidebar menu.
 
 # Markdown
+
+## Tabset {.tabset}
+
+### Definition
+
+Converts Markdown content into HTML.
+
+#### Parameters
+
+- **Allow HTML**: Enable HTML tabs in content.
+- **Automatically convert links**: Links will automatically be converted into clickable links.
+- **Automatically convert line breaks**: Add linebreaks within paragraphs.
+- **Typographer**: Enable some language-neutral replacement + quotes beautification.
+- **Quotes style**: When typographer is enabled. Double + single quotes replacement pairs. e.g. «»„“ for Russian, „“‚‘ for German, etc.
+{.grid-list}
 
 
 ## Abbreviations
