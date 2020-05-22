@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T23:00:31.494Z
+date: 2020-05-22T23:14:26.108Z
 tags: 
 ---
 
@@ -121,8 +121,34 @@ Generate visual Math / Chemical expressions from TeX expressions, using the KaTe
 - **TeX Blocks**: Process TeX blocks enclosed by $$ symbols.
 {.grid-list}
 
+
 ## Kroki
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Generate diagrams from various textual descriptions.
+
+The diagram type must be put on the second line, in lowercase.
+See https://kroki.io/#support for the full list of supported diagram types.
+
+#### Example
+````markdown
+```kroki
+mermaid
+
+graph TD
+  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
+  B --> C{ How to contribute? }
+  C --> D[ Reporting bugs ]
+  C --> E[ Sharing ideas ]
+  C --> F[ Advocating ]
+```
+````
+
+#### Parameters
+- **Kroki Server**: Kroki server used for image generation
+- **Open Marker**: String to use as opening delimiter. Diagram type must be put in the next line in lowercase.
+- **Close Marker**: String to use as closing delimiter
+{.grid-list}
 
 
 ## Mathjax
@@ -140,17 +166,24 @@ Generate visual Math / Chemical expressions from TeX expressions, using the Math
 
 
 ## PlantUML
-*Coming soon*
+### Tabset {.tabset}
+#### Definition
+Generate diagrams from PlantUML description.
+
+#### Parameters
+- **Kroki Server**: PlantUML server used for image generation.
+- **Open Marker**: String to use as opening delimiter.
+- **Close Marker**: String to use as closing delimiter.
+- **Image Format**: Format to use for rendered PlantUML images
+{.grid-list}
 
 
 ## Subscript/Superscript
 ### Tabset {.tabset}
 #### Definition
-
 Transform text into subscript and superscript tags.
 
 #### Example
-
 ```
 H~2~0
 Exp^10^
@@ -162,7 +195,6 @@ Exp<sup>10</sup>
 ```
 
 #### Parameters
-
 - **Subscript**: Enable subscript tags.
 - **Superscript**: Enable supercript tags
 {.grid-list}
