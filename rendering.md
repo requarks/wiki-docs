@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T20:43:52.733Z
+date: 2020-05-22T20:44:10.135Z
 tags: 
 ---
 
@@ -26,7 +26,7 @@ Each module can be enabled / disabled individually and configured in the **Admin
 
 Converts Markdown content into HTML.
 
-#### Parameters
+### Parameters
 
 - **Allow HTML**: Enable HTML tabs in content.
 - **Automatically convert links**: Links will automatically be converted into clickable links.
