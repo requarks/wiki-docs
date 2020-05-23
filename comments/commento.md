@@ -2,8 +2,8 @@
 title: Commento
 description: Comments Module
 published: true
-date: 2020-05-17T06:11:17.377Z
-tags: 
+date: 2020-05-23T05:22:48.129Z
+tags: module, comments
 ---
 
 Commento is a fast, privacy-focused commenting platform with cloud or self-hosted options.
