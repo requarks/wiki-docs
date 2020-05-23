@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-23T05:51:30.684Z
+date: 2020-05-23T05:58:40.083Z
 tags: 
 ---
 
@@ -51,21 +51,21 @@ tags:
 
 ### Minor Improvements
 
-- **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
-- **Improvements:** Added help links to administration are Modules sections.
-- **Improvements:** Added option for navigation links to open in a new window.
-- **Improvements:** Added rel option for external content links for increased XSS security.
-- **Improvements:** Admin Users list now shows active/disabled indicator + last login date.
-- **Improvements:** Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
-- **Improvements:** Blockquotes now have a built-in icon + color margin for increased visibility.
-- **Improvements:** Certificate verification can now be disabled in Mail settings.
-- **Improvements:** Dev Docker-Compose improvements and cleanup. ([#1905](https://github.com/Requarks/wiki/issues/1905))
-- **Improvements:** DOMPurify is now used instead of the xss module as the HTML sanitizer.
-- **Improvements:** Elasticsearch can now do partial match by default. ([#1882](https://github.com/Requarks/wiki/issues/1882))
-- **Improvements:** New Extensions section in the administration area. *(WIP)*
-- **Improvements:** Page TOC is now sticky during scroll.
-- **Improvements:** Setup success screen now display a confetti animation!
-- **Improvements:** Pages Visualization diagram can now be zoomed and panned.
+- Added a Static Navigation only option for navigation *(pre-2.3 display)*.
+- Added help links to administration are Modules sections.
+- Added option for navigation links to open in a new window.
+- Added rel option for external content links for increased XSS security.
+- Admin Users list now shows active/disabled indicator + last login date.
+- Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
+- Blockquotes now have a built-in icon + color margin for increased visibility.
+- Certificate verification can now be disabled in Mail settings.
+- Dev Docker-Compose improvements and cleanup. ([#1905](https://github.com/Requarks/wiki/issues/1905))
+- DOMPurify is now used instead of the xss module as the HTML sanitizer.
+- Elasticsearch can now do partial match by default. ([#1882](https://github.com/Requarks/wiki/issues/1882))
+- New Extensions section in the administration area. *(WIP)*
+- Page TOC is now sticky during scroll.
+- Setup success screen now display a confetti animation!
+- Pages Visualization diagram can now be zoomed and panned.
 
 ### Bug fixes
 
@@ -94,15 +94,15 @@ tags:
 > Users that upgraded to versions `< 2.3.81` should upgrade immediately to `2.3.81`.
 {.is-info}
 
-## Hotfix 2 *(2.3.81)*{.caption}
+### Hotfix 2 *(2.3.81)*{.caption}
 - Sanitize HTML in Preview panel of the Markdown Editor ([GHSA-vj72-c9vq-qxrv](https://github.com/Requarks/wiki/security/advisories/GHSA-vj72-c9vq-qxrv))
 
-## Hotfix 1 *(2.3.77)*{.caption}
+### Hotfix 1 *(2.3.77)*{.caption}
 - Added option to copy navigation items from other locale ([#1774](https://github.com/Requarks/wiki/issues/1774))
 - Navigation mode is now persisted correctly ([#1776](https://github.com/Requarks/wiki/issues/1776))
 - Git SSH port is no longer explictly defined ([#1777](https://github.com/Requarks/wiki/issues/1777))
 
-## Major Features *(2.3.71)*{.caption}
+### Major Features *(2.3.71)*{.caption}
 
 - Updated Navigation
 	- 3 Navigation Modes: Tree, Mixed or None
@@ -126,8 +126,17 @@ tags:
   - Reload Auth Strategies
   - Reload API Keys
   - Reload Config
+  
+### Minor Improvements *(2.3.71)*{.caption}
 
-## Bug fixes / Minor Improvements *(2.3.71)*{.caption}
+- Replace GA with hosted graph telemetry.
+- PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
+- View the last login date of any user in Administration Area
+- Tags selector in Page Properties no longer remove tags on backspace and new tags automatically empty the field.
+- Added `DB_SSL_CA` env variable to pass the CA certificate as a single-line value.
+- Added option in LDAP authentication module to disable TLS certificate validation.
+
+### Bug fixes *(2.3.71)*{.caption}
 
 - **Fixed:** MSSQL + MariaDB (older versions) migrations 2.2.17 are now executing correctly ([#1610](https://github.com/Requarks/wiki/issues/1610), [#1642](https://github.com/Requarks/wiki/issues/1642))
 - **Fixed:** Tags are now always normalized and trimmed ([#1364](https://github.com/Requarks/wiki/issues/1364))
@@ -144,14 +153,8 @@ tags:
 - **Fixed:** Guest group is now reloaded immediately on update.
 - **Fixed:** Site URL field in Admin > General is now trimmed and trailing-slash removed automatically.
 - **Fixed:** Registration form is now displayed correctly in dark mode.
-- **Improvements:** Replace GA with hosted graph telemetry.
-- **Improvements:** PlantUML default enclosing markers are now ` ```plantuml ` and ` ``` `
-- **Improvements:** View the last login date of any user in Administration Area
-- **Improvements:** Tags selector in Page Properties no longer remove tags on backspace and new tags automatically empty the field.
-- **Improvements:** Added `DB_SSL_CA` env variable to pass the CA certificate as a single-line value.
-- **Improvements:** Added option in LDAP authentication module to disable TLS certificate validation.
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from 2.2.51](/install/upgrade)
@@ -165,7 +168,7 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 > If you successfully upgraded to `2.2.50`, you do not need to upgrade to `2.2.51`.
 {.is-info}
 
-## Major Features
+### Major Features
 - Page History
 	- Compare 2 versions
   - View version source
@@ -176,7 +179,17 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - Save Conflict Detection + Compare Screen
 - Content License option for the footer
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- KaTeX expressions are now rendered in the Preview panel.
+- Option to open all External Links in New Tab ([#1453](https://github.com/Requarks/wiki/issues/1453))
+- Show Save button as Saved when no content is modified.
+- Edit Title from header in Editors.
+- Twemoji images are now loaded locally instead of MaxCDN.
+- Remote development in VS Code is now supported and is now the preferred development environment ([#1533](https://github.com/Requarks/wiki/issues/1533))
+- Option to restrict Discord authentication to a specific server ([#1548](https://github.com/Requarks/wiki/issues/1548))
+
+### Bug fixes
 
 - **Fixed:** Apply request increased body limit to GraphQL ([#1480](https://github.com/Requarks/wiki/issues/1480))
 - **Fixed:** Hide sidebar on smaller screen and auto-detect on resize.
@@ -192,15 +205,8 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - **Fixed:** Lists are now nested and stacked with proper spacing ([#1609](https://github.com/Requarks/wiki/issues/1609))
 - **Fixed:** The page selector dialog no longer displays duplicate items.
 - **Fixed:** Saving and close a page no longer results in a permanent loading dialog if an error occurs.
-- **Improvements:** KaTeX expressions are now rendered in the Preview panel.
-- **Improvements:** Option to open all External Links in New Tab ([#1453](https://github.com/Requarks/wiki/issues/1453))
-- **Improvements:** Show Save button as Saved when no content is modified.
-- **Improvements:** Edit Title from header in Editors.
-- **Improvements:** Twemoji images are now loaded locally instead of MaxCDN.
-- **Improvements:** Remote development in VS Code is now supported and is now the preferred development environment ([#1533](https://github.com/Requarks/wiki/issues/1533))
-- **Improvements:** Option to restrict Discord authentication to a specific server ([#1548](https://github.com/Requarks/wiki/issues/1548))
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from 2.1.113](/install/upgrade)
@@ -213,7 +219,7 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 > Released on **February 14th, 2020**
 {.is-info}
 
-## Major Features
+### Major Features
 
 - Azure Blob Storage Module
 - Delete / Deactivate a User
@@ -231,7 +237,24 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - Utility - Re-render all pages
 - Visualize Pages (Hierarchical Tree, Hierarchical Radial & Relational Radial)
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
+- Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
+- An Export All action has been added to the AWS S3 storage module.
+- Automatically redirect to previous path after login.
+- Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
+- Clear new password field in Admin User edit upon saving.
+- Code Injection fields under Admin Theme are now using monospaced font.
+- CSS Injection content is now automatically beautified in the Admin area.
+- Display detailed error when db connection fails using pg driver.
+- Git Local Repository can now be purged and reinitialized from the admin.
+- Git Connection SSH port can now be overriden. ([#1432](https://github.com/Requarks/wiki/issues/1432))
+- In the editor, <kbd>CTRL</kbd> + Click the save button will automatically close the editor upon saving.
+- Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
+- Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
+
+### Bug fixes
 
 - **Fixed:** Search results are not paginated. ([#942](https://github.com/Requarks/wiki/issues/942))
 - **Fixed:** PostgreSQL search query now uses the configured locale ([#1269](https://github.com/Requarks/wiki/issues/1269))
@@ -248,22 +271,8 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - **Fixed:** Page History content column field is migrated to LONGTEXT for MySQL/MariaDB and MS SQL Server.
 - **Fixed:** SRI is now disabled at build time. *To be reintroduced when a proper solution for turning it on/off is found.*
 - **Fixed:** Redirect login page from home page only if user is guest.
-- **Improvements:** Accept custom SSL configuration for database connection using PostgreSQL, MySQL and MariaDB.
-- **Improvements:** Admin Pages are now sorted by last updated by default ([#1271](https://github.com/Requarks/wiki/issues/1271))
-- **Improvements:** An Export All action has been added to the AWS S3 storage module.
-- **Improvements:** Automatically redirect to previous path after login.
-- **Improvements:** Backers from Patreon and GitHub Sponsors are now displayed in the Contribute admin section.
-- **Improvements:** Clear new password field in Admin User edit upon saving.
-- **Improvements:** Code Injection fields under Admin Theme are now using monospaced font.
-- **Improvements:** CSS Injection content is now automatically beautified in the Admin area.
-- **Improvements:** Display detailed error when db connection fails using pg driver.
-- **Improvements:** Git Local Repository can now be purged and reinitialized from the admin.
-- **Improvements:** Git Connection SSH port can now be overriden. ([#1432](https://github.com/Requarks/wiki/issues/1432))
-- **Improvements:** In the editor, <kbd>CTRL</kbd> + Click the save button will automatically close the editor upon saving.
-- **Improvements:** Predefine `/wiki/data/content` as a volume with `node:node` permissions in Dockerfile. ([#1288](https://github.com/Requarks/wiki/issues/1288))
-- **Improvements:** Redirect to a page by its internal ID using path `/i/123`, only with read permissions.
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from 2.0.12](/install/upgrade)
@@ -276,7 +285,11 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 > Released on **November 23rd, 2019**
 {.is-info}
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- A copy button now appears on mouse-over of code blocks.
+
+### Bug fixes
 
 - **Fixed:** Long Code blocks are no longer incorrectly broken into multiple lines ([#1079](https://github.com/Requarks/wiki/issues/1079))
 - **Fixed:** Markdown preview fails to load lang files for code blocks ([#1162](https://github.com/Requarks/wiki/issues/1162))
@@ -289,9 +302,8 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - **Fixed:** Vertical page title positioning in Safari ([#1233](https://github.com/Requarks/wiki/issues/1233))
 - **Fixed:** Allow target property in markdown attributes ([#1240](https://github.com/Requarks/wiki/issues/1240))
 - **Fixed:** Search hint display no results found error when empty ([#1255](https://github.com/Requarks/wiki/issues/1255))
-- **Improvements:** A copy button now appears on mouse-over of code blocks.
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from 2.0.1 / RC / Beta](/install/upgrade)
@@ -306,7 +318,13 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 
 - Initial Stable release :tada:
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- Text is now selectable in Admin - System Info ([#1161](https://github.com/Requarks/wiki/issues/1161))
+- Extended twemoji country flags support ([#1163](https://github.com/Requarks/wiki/issues/1163))
+- Edit Group tab UI ([#1218](https://github.com/Requarks/wiki/issues/1218))
+
+### Bug fixes
 
 - **Fixed:** Search UI would hang when pressing enter before results ([#1086](https://github.com/Requarks/wiki/issues/1086))
 - **Fixed:** Nested Lists padding and spacing ([#1114](https://github.com/Requarks/wiki/issues/1114))
@@ -321,12 +339,9 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - **Fixed:** Non-image assets are now inserted correctly in the Visual Editor ([#1207](https://github.com/Requarks/wiki/issues/1207))
 - **Fixed:** Git Private Key is now handled correctly when ending LF is missing ([#1209](https://github.com/Requarks/wiki/issues/1209))
 - **Fixed:** Marker Highlighting is now shown correctly on rendered pages
-- **Improvements:** Text is now selectable in Admin - System Info ([#1161](https://github.com/Requarks/wiki/issues/1161))
-- **Improvements:** Extended twemoji country flags support ([#1163](https://github.com/Requarks/wiki/issues/1163))
-- **Improvements:** Edit Group tab UI ([#1218](https://github.com/Requarks/wiki/issues/1218))
 - **Miscellaneous:** Stable DB migration + beta migration to stable
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from previous RC / Beta](/install/upgrade)
@@ -339,7 +354,11 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 > Released on **October 27th, 2019**
 {.is-info}
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- dataPath variable can now be specified as the data folder location in config.yml ([#1118](https://github.com/Requarks/wiki/issues/1118))
+
+### Bug fixes
 
 - **Fixed:** Breadcrumbs links on 3rd level or higher are now processed correctly ([#930](https://github.com/Requarks/wiki/issues/930))
 - **Fixed:** Azure AD will now fallback to preferred_username if email field is missing ([#1050](https://github.com/Requarks/wiki/issues/1050))
@@ -350,9 +369,8 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 - **Fixed:** Analytics modules var replace is now made globally ([#1129](https://github.com/Requarks/wiki/issues/1129))
 - **Fixed:** Tags are now exported and imported during storage events ([#1149](https://github.com/Requarks/wiki/issues/1149))
 - **Fixed:** Setup retries now correctly reset the table IDs to 0
-- **Improvements:** dataPath variable can now be specified as the data folder location in config.yml ([#1118](https://github.com/Requarks/wiki/issues/1118))
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from previous RC / Beta](/install/upgrade)
@@ -364,31 +382,33 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 > Released on **October 20th, 2019**
 {.is-info}
 
-## Migration Tool from Wiki.js 1.x
+### Major Features
+
+#### Migration Tool from Wiki.js 1.x
 
 It's now possible to migrate content, uploads and users from a Wiki.js 1.x installation using a quick easy to use tool.
 
-## Assets Export/Import for Storage Modules
+#### Assets Export/Import for Storage Modules
 
 Assets are now exported / imported from storage modules alongside the pages.
 
-## Move / Rename a Page
+#### Move / Rename a Page
 
 You can now move or rename an existing page, both from a dedicated move dialog or when editing a page through the Page Properties dialog. It's also possible to move pages across locales.
 
-## Page Selector
+#### Page Selector
 
 It's now possible to see the full structure of your wiki when creating a new page or moving an existing page.
 
-## Automated Upgrade for Docker installations
+#### Automated Upgrade for Docker installations
 
 Wiki.js can now upgrade itself to the latest version when using the Dockerized version and a companion docker agent. This will be the default in the upcoming DigitalOcean Marketplace image. *More information coming soon.*
 
-## Raw HTML Code Editor
+#### Raw HTML Code Editor
 
 A basic code editor for raw HTML is now available.
 
-## PlantUML diagrams in the Markdown Editor
+#### PlantUML diagrams in the Markdown Editor
 
 You can now include PlantUML diagrams from the Markdown Editor. Thanks to [@ethanmdavidson](https://github.com/ethanmdavidson).
 
@@ -434,7 +454,15 @@ deactivate A
 
 ```
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
+- The SRI hash for CSS/JS resources can now be enabled / disabled from the admin UI.
+- Support for DB_PASS_FILE env variable for Docker Secret file.
+- Support for CONFIG_FILE env variable for specifying a custom path for the config file.
+- Baidu Tongji analytics module is now available ([#1087](https://github.com/Requarks/wiki/pull/1087))
+
+### Bug fixes
 
 - **Fixed:** Selection in search results is now readable with dark mode enabled.
 - **Fixed:** Git Actions no longer crash at missing getFileExtension method ([#1040](https://github.com/Requarks/wiki/issues/1040))
@@ -451,13 +479,8 @@ deactivate A
 - **Fixed:** Admin Navigation drag-n-drop dependency update ([#1085](https://github.com/Requarks/wiki/issues/1085))
 - **Fixed:** Groups Delete dialog is now triggered properly ([#1009](https://github.com/Requarks/wiki/issues/1009), [#1088](https://github.com/Requarks/wiki/issues/1088))
 - **Fixed:** Page mutations are now checked against the group page rules in addition to global permissions.
-- **Improvements:** The X-Forwarded-* headers can now be trusted / ignored from the admin UI.
-- **Improvements:** The SRI hash for CSS/JS resources can now be enabled / disabled from the admin UI.
-- **Improvements:** Support for DB_PASS_FILE env variable for Docker Secret file.
-- **Improvements:** Support for CONFIG_FILE env variable for specifying a custom path for the config file.
-- **Improvements:** Baidu Tongji analytics module is now available ([#1087](https://github.com/Requarks/wiki/pull/1087))
 
-## Links
+### Links
 
 - [Installation](/install)
 - [Upgrade from previous Beta (Build 303)](/install/upgrade)
