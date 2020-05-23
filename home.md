@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2020-05-11T03:58:18.971Z
+date: 2020-05-23T05:40:11.421Z
 tags: 
 ---
 
