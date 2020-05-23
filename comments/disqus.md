@@ -2,8 +2,8 @@
 title: Disqus
 description: Comments Module
 published: true
-date: 2020-05-16T23:01:55.787Z
-tags: 
+date: 2020-05-23T05:23:09.180Z
+tags: module, comments
 ---
 
 Disqus is a discussion service to add commenting and sharing capabilities to all your wiki pages.
