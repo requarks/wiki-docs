@@ -2,7 +2,7 @@
 title: Users, Groups & Permissions
 description: Manage access to your wiki
 published: true
-date: 2020-01-15T03:52:12.751Z
+date: 2020-05-23T05:39:15.990Z
 tags: 
 ---
 
@@ -104,25 +104,45 @@ They are identified by a lock icon in the list. The **administrators** group can
 
 Manage users in the **Administration Area** by clicking the **Users** sidebar menu item.
 
-You can either create new users or pre-authorize users from external authentication systems.
-
 ## Create New User
 
-When selecting the **Local** authentication strategy, you are creating a new user that lives in the database. For all other strategies, refer to the **Pre-authorize External User** chapter below.
+Click on the **New User** button to display the user creation dialog.
 
-*-- Coming soon --*
+Select the authentication **Provider** to use for the user to be created. When selecting the **Local** authentication provider, you are creating a new user that lives uniquely in the database. For all other providers, a reference to the external service will be kept in the database to identify the user during login.
 
-## Pre-authorize External User
+Fill in the details about the user:
 
-*-- Coming soon --*
+![ui-user-create.png](/assets/ui/ui-user-create.png =450x){.radius-4 .decor-shadow}
+
+**Tip:** You can click the dice icon to automatically generate a strong random password.
+
+> **You must assign the user to at least 1 group.** Otherwise, he will not be able to access anything.
+{.is-warning}
+
+Click **Create and Close** to create the user. You can also click **Create** to create another user afterwards.
+
 
 ## Edit User
 
-*-- Coming soon --*
+From the **Users** list, click on the user you want to edit.
+
+Click the **pencil** icon next to the field(s) you want to edit. Click the **Update User** button, located at the top-right corner of the page to apply the modifications.
+
+### Deactivate / Activate User
+
+You can disable access to an account, without deleting it, by deactivating the user account. To do so, click on the **Actions** button and select **Deactivate**. The user will no longer be able to login.
+
+Select **Activate** to enable access again.
+
+### Manually Verify User
+
+If the user was unable to verify his account or didn't receive the verification email, you can manually verify the action by clicking the **Actions** button and select **Set as Verified**.
 
 ## Delete User
 
-*-- Coming soon --*
+While it's possible to delete an account, it's not recommended. It's always preferrable to deactivate the user instead.
+
+To delete a user, select the account from the **Users** list, click the **Actions** button and select **Delete**. Confirm that you want to delete the account to proceed.
 
 > Note that the **Guest** account cannot be deleted and some of its fields are locked.
 {.is-info}
