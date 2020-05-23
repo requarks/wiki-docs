@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-23T03:30:56.084Z
+date: 2020-05-23T05:48:56.832Z
 tags: 
 ---
 
@@ -22,6 +22,7 @@ tags:
 - New Login Experience
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
+- Create Redirect Page
 
 # Upcoming - 2.4
 
@@ -42,7 +43,6 @@ tags:
   - Disqus
 - Content Tabs
 - Create New Page from Template
-- Create Redirect Page
 - Kroki Rendering Module ([#1900](https://github.com/Requarks/wiki/issues/1900))
 - MathJax Rendering Module
 - PlantUML live rendering in Markdown preview
