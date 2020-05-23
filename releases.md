@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-22T17:41:14.882Z
+date: 2020-05-23T02:18:56.870Z
 tags: 
 ---
 
@@ -11,10 +11,22 @@ tags:
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
 
-# Upcoming - 2.4
+# Upcoming - 2.5
 
 > This build is **under active development** and has not yet been released.
 > **ETA: June 2020**
+{.is-warning}
+
+## Major Features
+
+- New Login Experience
+- OAuth2 Authentication Module
+- OpenID Connect Authentication Module
+
+# Upcoming - 2.4
+
+> This build is **under active development** and has not yet been released.
+> **ETA: May 2020**
 {.is-warning}
 
 <!--
