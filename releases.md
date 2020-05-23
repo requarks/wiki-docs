@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-23T05:48:56.832Z
+date: 2020-05-23T05:51:30.684Z
 tags: 
 ---
 
@@ -17,7 +17,7 @@ tags:
 > **ETA: June 2020**
 {.is-warning}
 
-## Major Features
+### Major Features
 
 - New Login Experience
 - OAuth2 Authentication Module
@@ -35,7 +35,7 @@ tags:
 {.is-warning}
 -->
 
-## Major Features
+### Major Features
 
 - Comments
 	- Commento
@@ -49,7 +49,25 @@ tags:
 - Timezone, Date Format and Appearance (light/dark) per User Profile
 - Upload limits configuration from the Administration area
 
-## Bug fixes / Minor Improvements
+### Minor Improvements
+
+- **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
+- **Improvements:** Added help links to administration are Modules sections.
+- **Improvements:** Added option for navigation links to open in a new window.
+- **Improvements:** Added rel option for external content links for increased XSS security.
+- **Improvements:** Admin Users list now shows active/disabled indicator + last login date.
+- **Improvements:** Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
+- **Improvements:** Blockquotes now have a built-in icon + color margin for increased visibility.
+- **Improvements:** Certificate verification can now be disabled in Mail settings.
+- **Improvements:** Dev Docker-Compose improvements and cleanup. ([#1905](https://github.com/Requarks/wiki/issues/1905))
+- **Improvements:** DOMPurify is now used instead of the xss module as the HTML sanitizer.
+- **Improvements:** Elasticsearch can now do partial match by default. ([#1882](https://github.com/Requarks/wiki/issues/1882))
+- **Improvements:** New Extensions section in the administration area. *(WIP)*
+- **Improvements:** Page TOC is now sticky during scroll.
+- **Improvements:** Setup success screen now display a confetti animation!
+- **Improvements:** Pages Visualization diagram can now be zoomed and panned.
+
+### Bug fixes
 
 - **Fixed:** CKEditor (Visual Editor) now handles RTL locales correctly. ([#1636](https://github.com/Requarks/wiki/issues/1636))
 - **Fixed:** Long words are now broken into multiple lines in Markdown editor. ([#1743](https://github.com/Requarks/wiki/issues/1743))
@@ -67,21 +85,6 @@ tags:
 - **Fixed:** Write permissions can no longer be selected for the Guest group.
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
 - **Fixed:** Legacy (IE11) page view is now displayed correctly.
-- **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
-- **Improvements:** Added help links to administration are Modules sections.
-- **Improvements:** Added option for navigation links to open in a new window.
-- **Improvements:** Added rel option for external content links for increased XSS security.
-- **Improvements:** Admin Users list now shows active/disabled indicator + last login date.
-- **Improvements:** Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
-- **Improvements:** Blockquotes now have a built-in icon + color margin for increased visibility.
-- **Improvements:** Certificate verification can now be disabled in Mail settings.
-- **Improvements:** Dev Docker-Compose improvements and cleanup. ([#1905](https://github.com/Requarks/wiki/issues/1905))
-- **Improvements:** DOMPurify is now used instead of the xss module as the HTML sanitizer.
-- **Improvements:** Elasticsearch can now do partial match by default. ([#1882](https://github.com/Requarks/wiki/issues/1882))
-- **Improvements:** New Extensions section in the administration area. *(WIP)*
-- **Improvements:** Page TOC is now sticky during scroll.
-- **Improvements:** Setup success screen now display a confetti animation!
-- **Improvements:** Pages Visualization diagram can now be zoomed and panned.
 
 # 2.3.81
 
