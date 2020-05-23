@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2020-02-16T17:50:14.376Z
+date: 2020-05-23T20:16:06.107Z
 tags: setup, guide
 ---
 
@@ -56,6 +56,17 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 **Cause**: Another program is already listening to this port.
 
 **Resolution**: Use another port for Wiki.js or look for applications that could be using this port (web servers, http applications, etc.) and stop them.
+
+# How to manually reset the admin password?
+
+The only way to change a password, without access to the web UI, is via the database. Use a tool like **pgAdmin** *(postgres)*, **DBeaver** *(mysql, mariadb)*, **SQL Management Studio** *(mssql)* or **DB Browser for SQLite**.
+
+Connect to your DB, browse to the `users` table and locate your user.
+
+Edit the password column and insert a new **bcrypt**-formatted value. You can use a tool like https://bcrypt-generator.com/ to generate one.
+
+> **It is NOT possible to read the current password value.** Passwords are stored using a one-way bcrypt hashing process, which is not reversible. You can only overwrite it with a new value.
+{.is-warning}
 
 # Links inside emails are incorrect
 
