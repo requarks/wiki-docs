@@ -2,7 +2,7 @@
 title: Rendering Pipeline
 description: Control how your content is rendered
 published: true
-date: 2020-05-22T23:40:28.592Z
+date: 2020-05-23T05:16:48.570Z
 tags: 
 ---
 
@@ -273,6 +273,9 @@ Automatically detect programming code syntax and apply the correct code coloring
 #### Definition
 Transform Mermaid code blocks into Mermaid diagrams.
 
+> This module is only available from version **2.3 and up**.
+{.is-info}
+
 #### Parameters
 *This module doesn't have any configurable parameters.*
 
@@ -280,7 +283,7 @@ Transform Mermaid code blocks into Mermaid diagrams.
 ## Security
 ### Tabset {.tabset}
 #### Definition
-Generate diagrams from PlantUML description.
+Filter and strip potentially dangerous content.
 
 #### Parameters
 - **Sanitize HTML**: Sanitize HTML from unsafe attributes and tags that could lead to XSS attacks.
