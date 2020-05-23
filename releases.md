@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-23T02:18:56.870Z
+date: 2020-05-23T03:30:56.084Z
 tags: 
 ---
 
@@ -68,6 +68,7 @@ tags:
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
 - **Fixed:** Legacy (IE11) page view is now displayed correctly.
 - **Improvements:** Added a Static Navigation only option for navigation *(pre-2.3 display)*.
+- **Improvements:** Added help links to administration are Modules sections.
 - **Improvements:** Added option for navigation links to open in a new window.
 - **Improvements:** Added rel option for external content links for increased XSS security.
 - **Improvements:** Admin Users list now shows active/disabled indicator + last login date.
