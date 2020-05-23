@@ -2,8 +2,8 @@
 title: Comments
 description: List of supported Commenting Modules
 published: true
-date: 2020-05-17T06:17:28.095Z
-tags: 
+date: 2020-05-23T05:22:17.236Z
+tags: comments
 ---
 
 > Available from version **2.4 and up**
