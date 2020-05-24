@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-23T05:58:40.083Z
+date: 2020-05-24T22:03:42.955Z
 tags: 
 ---
 
@@ -66,6 +66,7 @@ tags:
 - Page TOC is now sticky during scroll.
 - Setup success screen now display a confetti animation!
 - Pages Visualization diagram can now be zoomed and panned.
+- Twemoji assets are now packaged as an ASAR archive, significantly reducing file count + dev compilation time.
 
 ### Bug fixes
 
