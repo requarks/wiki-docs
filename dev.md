@@ -56,7 +56,7 @@ Alternatively, see the [generic method](#generic-removing-the-containers) below.
 2. Run the following commands:
 ```
 docker-compose -f dev/containers/docker-compose.yml up -d
-docker exec wiki-app yarn   # only necessary the first time (todo: why is it necessary at all?)
+docker exec wiki-app yarn   # only necessary the first time
 docker exec wiki-app yarn dev
 
 ```
