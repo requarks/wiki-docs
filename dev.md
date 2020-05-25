@@ -17,10 +17,10 @@ There are 2 methods to develop for Wiki.js. You can either use the dockerized de
 * Docker
 * Docker Compose
 * Linux / macOS / Windows 10 Pro or Enterprise
-* Visual Studio Code
 
-## Run the project
+## Visual Studio Code
 
+### Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
 2. Open the project folder in **Visual Studio Code**
 3. From the **Extensions** tab, install the **Remote Development** extension by Microsoft (*ms-vscode-remote.vscode-remote-extensionpack*)
@@ -39,15 +39,42 @@ There are 2 methods to develop for Wiki.js. You can either use the dockerized de
 9. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
 10. Complete the setup wizard to finish the installation.
 
-## Stopping the project
+### Stopping the project
 
 Click on **File > Close Remote Connection** to stop the containers and close the Visual Studio Code instance.
 
-## Removing the containers
+### Removing the containers
 
-When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `containers`.
+When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `wiki`.
 
-An alternate method is to open a command prompt in the `dev/containers` folder and run `docker-compose down`.
+Alternatively, see the [generic method](#generic-removing-the-containers) below.
+
+## Generic
+
+### Running the project
+1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
+2. Run the following commands:
+```
+docker-compose -f dev/containers/docker-compose.yml up -d
+docker exec wiki-app yarn   # only necessary the first time
+docker exec wiki-app yarn dev
+
+```
+>Run your `docker-compose` commands from the `dev/containers/` directory if you'd prefer to omit the `-f` flag.
+{.is-info}
+
+### Stopping the project
+1. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd>
+2. Run `docker-compose -f dev/containers/docker-compose.yml stop`
+
+### <a name="generic-removing-the-containers">Removing the containers</a>
+```
+docker-compose -f dev/containers/docker-compose.yml down
+```
+To wipe the database as well, use
+```
+docker-compose -f dev/containers/docker-compose.yml down --volumes
+```
 
 ## Build Production Images
 
