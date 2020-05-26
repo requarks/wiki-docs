@@ -2,7 +2,7 @@
 title: Comments
 description: Developer guide for Commenting modules
 published: true
-date: 2020-05-16T20:05:17.187Z
+date: 2020-05-26T01:25:37.326Z
 tags: 
 ---
 
@@ -75,29 +75,24 @@ body: |
 This file contains methods that will be called on specific events.
 
 ```js
-/* global WIKI */
-
 // ------------------------------------
 // Example Comments Provider
 // ------------------------------------
 
-const ExampleStrategy = require('example')
-
 module.exports = {
-  add (args) {
-    // Code here to add a comment
+  async create ({ pageId, replyTo, content, guestName, guestEmail, user }) {
+		// Code to create a comment here...
+  },
+  async update ({ id, content, user }) {
+		// Code to update a comment here...
+  },
+  async remove ({ id, user }) {
+		// Code to delete a comment here...
+  },
+  async count ({ pageId }) {
+		// Code to get the comment count for a page...
   }
 }
 ```
 
 All methods are required and must be implemented.
-
-### add
-
-Upon initialization of Wiki.js \(both startups or restarts\).
-
-```js
-add (args) { }
-```
-
-Parameter **args** is... TODO
