@@ -2,25 +2,24 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2020-04-25T03:50:00.306Z
+date: 2020-05-26T01:16:42.666Z
 tags: dev
 ---
 
 Wiki.js is fully modular, which allows any developer to write their own module or theme.
 
-There are 2 methods to develop for Wiki.js. You can either use the dockerized development environment *(recommended)* or install all dependencies manually on your machine.
+There are 2 methods to develop for Wiki.js. You can either use the dockerized development environment for VS Code *(recommended)*, a generic docker environment or install all dependencies manually on your machine.
 
-# Using Docker
+# Using Docker + Visual Studio Code
 
 ## Prerequisites
 
 * Docker
 * Docker Compose
 * Linux / macOS / Windows 10 Pro or Enterprise
+* Visual Studio Code
 
-## Visual Studio Code
-
-### Running the project
+## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
 2. Open the project folder in **Visual Studio Code**
 3. From the **Extensions** tab, install the **Remote Development** extension by Microsoft (*ms-vscode-remote.vscode-remote-extensionpack*)
@@ -39,63 +38,47 @@ There are 2 methods to develop for Wiki.js. You can either use the dockerized de
 9. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
 10. Complete the setup wizard to finish the installation.
 
-### Stopping the project
+## Stopping the project
 
 Click on **File > Close Remote Connection** to stop the containers and close the Visual Studio Code instance.
 
-### Removing the containers
+## Removing the containers
 
 When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `wiki`.
 
-Alternatively, see the [generic method](#generic-removing-the-containers) below.
+Alternatively, see the [generic method](#removing-the-containers-1) below.
 
-## Generic
+# Using Docker (Generic)
 
-### Running the project
+## Prerequisites
+
+* Docker
+* Docker Compose
+* Linux / macOS / Windows 10 Pro or Enterprise
+
+## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
 2. Run the following commands:
-```
+```bash
 docker-compose -f dev/containers/docker-compose.yml up -d
 docker exec wiki-app yarn   # only necessary the first time
 docker exec wiki-app yarn dev
 
 ```
->Run your `docker-compose` commands from the `dev/containers/` directory if you'd prefer to omit the `-f` flag.
+> Run your `docker-compose` commands from the `dev/containers/` directory if you'd prefer to omit the `-f` flag.
 {.is-info}
 
-### Stopping the project
+## Stopping the project
 1. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd>
 2. Run `docker-compose -f dev/containers/docker-compose.yml stop`
 
-### <a name="generic-removing-the-containers">Removing the containers</a>
+## Removing the containers
 ```
 docker-compose -f dev/containers/docker-compose.yml down
 ```
 To wipe the database as well, use
 ```
 docker-compose -f dev/containers/docker-compose.yml down --volumes
-```
-
-## Build Production Images
-
-Production docker images can be built using the following command:
-```bash
-docker build -t requarks/wiki -f dev/build/Dockerfile .
-```
-
-### ARM
-
-Multi-architecture images for arm64 and arm/v7 can be built using the Docker experimental **buildx** plugin and **QEMU**. You can read more about how it works in [this article](https://engineering.docker.com/2019/04/multi-arch-images/).
-
-```bash
-docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki:arm --push -f dev/build/Dockerfile .
-```
-
-Multiple architectures can be merged into a single manifest file using the `docker manifest` command. In the example below, the first reference is the final manifest list, followed by a list of docker image digest SHA256 that should be included in the manifest list:
-
-```bash
-docker manifest create requarks/wiki:arm requarks/wiki@sha256:abcdef123456 requarks/wiki@sha256:fedcba654321
-docker manifest push requarks/wiki:arm
 ```
 
 # Manually
@@ -147,7 +130,29 @@ Any changes made to the server files will automatically trigger a server restart
 
 To stop the development server, use **CTRL-C** until the process exits.
 
-# Official Builds
+## Build Production Images
+
+Production docker images can be built using the following command:
+```bash
+docker build -t requarks/wiki -f dev/build/Dockerfile .
+```
+
+### ARM
+
+Multi-architecture images for arm64 and arm/v7 can be built using the Docker experimental **buildx** plugin and **QEMU**. You can read more about how it works in [this article](https://engineering.docker.com/2019/04/multi-arch-images/).
+
+```bash
+docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki:arm --push -f dev/build/Dockerfile .
+```
+
+Multiple architectures can be merged into a single manifest file using the `docker manifest` command. In the example below, the first reference is the final manifest list, followed by a list of docker image digest SHA256 that should be included in the manifest list:
+
+```bash
+docker manifest create requarks/wiki:arm requarks/wiki@sha256:abcdef123456 requarks/wiki@sha256:fedcba654321
+docker manifest push requarks/wiki:arm
+```
+
+## Official Builds
 
 Because the master branch contains pre-release code, it is not recommended to build directly from the source code. Doing so will result in a red warning banner being displayed during setup and in the header on all pages. **You should instead follow the [installation instructions](/install).**
 
