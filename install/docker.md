@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-05-17T06:34:17.510Z
+date: 2020-05-29T03:57:59.596Z
 tags: setup, docker
 ---
 
@@ -23,9 +23,11 @@ You must set the following environment variables. They are all **required** unle
 
 ### Database
 
+- **DB_TYPE** : Type of database (`mysql`, `postgres`, `mariadb`, `mssql` or `sqlite`)
+{.grid-list}
+
 *For PostgreSQL, MySQL, MariaDB and MSSQL only:*
 
-- **DB_TYPE** : Type of database (`mysql`, `postgres`, `mariadb`, `mssql` or `sqlite`)
 - **DB_HOST** : Hostname or IP of the database
 - **DB_PORT** : Port of the database
 - **DB_USER** : Username to connect to the database
