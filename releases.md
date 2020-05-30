@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-24T22:03:42.955Z
+date: 2020-05-30T18:24:58.386Z
 tags: 
 ---
 
@@ -82,6 +82,9 @@ tags:
 - **Fixed:** Bullet list markers in RTL mode are now aligned correctly. ([#1892](https://github.com/Requarks/wiki/issues/1892))
 - **Fixed:** Some Pages Visualization tree nodes were not sorted correctly and would display the wrong title. ([#1914](https://github.com/Requarks/wiki/issues/1914))
 - **Fixed:** S3 Export All is triggered correctly. ([#1922](https://github.com/Requarks/wiki/issues/1922))
+- **Fixed:** Links to subtitles with special characters are now decoded correctly. ([#1949](https://github.com/Requarks/wiki/issues/1949))
+- **Fixed:** Android + iOS favicons are now referenced correctly. ([#1959](https://github.com/Requarks/wiki/issues/1959), [#1965](https://github.com/Requarks/wiki/issues/1965))
+- **Fixed:** Open Redirect Vulnerability mitigation. ([#1963](https://github.com/Requarks/wiki/issues/1963))
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Fixed:** Write permissions can no longer be selected for the Guest group.
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
