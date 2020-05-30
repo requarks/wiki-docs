@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-30T18:24:58.386Z
+date: 2020-05-30T20:37:27.096Z
 tags: 
 ---
 
@@ -55,6 +55,7 @@ tags:
 - Added help links to administration are Modules sections.
 - Added option for navigation links to open in a new window.
 - Added rel option for external content links for increased XSS security.
+- Added target user option when deleting a user with content.
 - Admin Users list now shows active/disabled indicator + last login date.
 - Assets (js, css, svg, fonts, etc.) have been relocated to subdirectory _assets.
 - Blockquotes now have a built-in icon + color margin for increased visibility.
