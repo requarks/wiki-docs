@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-04-05T20:40:29.163Z
+date: 2020-05-30T22:18:55.206Z
 tags: dev, api
 ---
 
@@ -159,3 +159,13 @@ Error codes in the **7xxx** range are dedicated to system related errors.
 | 7002 | SystemSSLDisabled | SSL is not enabled. |
 | 7003 | SystemSSLRenewInvalidProvider | Current provider does not support SSL certificate renewal. |
 | 7004 | SystemSSLLEUnavailable | Let's Encrypt is not initialized. |
+
+## Comments
+
+Error codes in the **7xxx** range are dedicated to comments related errors.
+
+| Code | Slug | Message |
+|------|------------------|-------------------------------------------|
+| 8001 | CommentGenericError | An unexpected error occured. |
+| 8002 | CommentPostForbidden | You are not authorized to post a comment on this page. |
+| 8003 | CommentContentMissing | Comment content is missing or too short. |
