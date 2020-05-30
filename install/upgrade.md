@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-05-11T04:00:29.096Z
+date: 2020-05-30T21:48:14.898Z
 tags: setup
 ---
 
@@ -105,7 +105,7 @@ docker-compose up --force-recreate
   tar xzf wiki-js.tar.gz -C "C:\wiki"
   cd C:\wiki
   ```
-  > :warning: The **tar** utility is only available on Windows 10. On earlier versions, you'll need a 3rd-party utility like [7-zip](https://www.7-zip.org/) to extract the file.
+  > The **tar** utility is only available on Windows 10. On earlier versions, you'll need a 3rd-party utility like [7-zip](https://www.7-zip.org/) to extract the file.
   {.is-warning}
 5. Copy your `config.yml` backup file back to it's original location.
   ```powershell
