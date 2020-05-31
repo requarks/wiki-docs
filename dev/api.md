@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-05-31T05:38:45.930Z
+date: 2020-05-31T05:51:34.585Z
 tags: dev, api
 ---
 
@@ -170,3 +170,4 @@ Error codes in the **7xxx** range are dedicated to comments related errors.
 | 8002 | CommentPostForbidden | You are not authorized to post a comment on this page. |
 | 8003 | CommentContentMissing | Comment content is missing or too short. |
 | 8004 | CommentManageForbidden | You are not authorized to manage comments on this page. |
+| 8005 | CommentNotFound | This comment does not exist. |
