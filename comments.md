@@ -2,7 +2,7 @@
 title: Comments
 description: List of supported Commenting Modules
 published: true
-date: 2020-05-31T22:49:35.277Z
+date: 2020-05-31T22:51:02.356Z
 tags: comments
 ---
 
@@ -17,6 +17,9 @@ Most modules require some configuration. Check out the links below for module sp
 # Enable Comments
 
 The **Comments** feature must be enabled under **Administration > General** before you can start using comments.
+
+This toggle applies to all pages on the site.
+*A per-page option will be added in a future release.*
 
 # Modules
 
