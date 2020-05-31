@@ -2,7 +2,7 @@
 title: Comments
 description: List of supported Commenting Modules
 published: true
-date: 2020-05-31T22:51:02.356Z
+date: 2020-05-31T23:00:10.984Z
 tags: comments
 ---
 
@@ -23,16 +23,23 @@ This toggle applies to all pages on the site.
 
 # Modules
 
-- [Commento](/comments/commento)
+## Internal
+
 - [Default](/comments/default)
+{.links-list}
+
+## External
+
+- [Commento](/comments/commento)
 - [Disqus](/comments/disqus)
 {.links-list}
 
 # Permissions
 
-> Permissions only apply to the **Default** module.
+> Permissions only apply to **Internal** modules.
 >
-> External modules like Commento or Disqus are not tied to any Wiki.js group permissions or users. Moderation and authentication is handled exclusively by the module provider.
+> **External** modules are not tied to any Wiki.js group permissions or users. Moderation and authentication is handled exclusively by the module provider.
+> **You must however grant the `read:comments` permission in order to display the module interface, even for external modules.**
 {.is-warning}
 
 The ability to read, post or manage comments is controlled via group permissions. Ensure the group the user is member of has both the global permission and the page rule assigned to perform the desired comment action.
