@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-30T20:37:27.096Z
+date: 2020-05-31T20:23:39.109Z
 tags: 
 ---
 
@@ -14,7 +14,7 @@ tags:
 # Upcoming - 2.5
 
 > This build is **under active development** and has not yet been released.
-> **ETA: June 2020**
+> **ETA: July 2020**
 {.is-warning}
 
 ### Major Features
@@ -27,7 +27,7 @@ tags:
 # Upcoming - 2.4
 
 > This build is **under active development** and has not yet been released.
-> **ETA: May 2020**
+> **ETA: Early June 2020**
 {.is-warning}
 
 <!--
