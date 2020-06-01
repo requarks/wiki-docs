@@ -2,8 +2,9 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-05-31T20:23:39.109Z
+date: 2020-06-01T04:12:08.090Z
 tags: 
+editor: markdown
 ---
 
 <!-- - [Current Development Roadmap *View the tasks currently being worked on and their status for the next release.*](/releases/current) -->
@@ -17,6 +18,11 @@ tags:
 > **ETA: July 2020**
 {.is-warning}
 
+<!--
+> This release should **NOT** be used in production environments!
+{.is-warning}
+-->
+
 ### Major Features
 
 - New Login Experience
@@ -24,16 +30,10 @@ tags:
 - OpenID Connect Authentication Module
 - Create Redirect Page
 
-# Upcoming - 2.4
+# BETA - 2.4.75
 
-> This build is **under active development** and has not yet been released.
-> **ETA: Early June 2020**
+> This is a **BETA** release and should **NOT** be used in production environments!
 {.is-warning}
-
-<!--
-> :warning: This release should **NOT** be used in production environments!
-{.is-warning}
--->
 
 ### Major Features
 
@@ -91,7 +91,7 @@ tags:
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
 - **Fixed:** Legacy (IE11) page view is now displayed correctly.
 
-# 2.3.81
+# STABLE - 2.3.81
 
 > Initially released on **April 24th, 2020** as `2.3.71-73`.
 > Hotfix `2.3.77` was released on **April 25th, 2020**.
