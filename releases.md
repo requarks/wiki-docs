@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-01T04:13:45.325Z
+date: 2020-06-02T01:25:46.549Z
 tags: 
 editor: markdown
 ---
@@ -88,6 +88,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Links to subtitles with special characters are now decoded correctly. ([#1949](https://github.com/Requarks/wiki/issues/1949))
 - **Fixed:** Android + iOS favicons are now referenced correctly. ([#1959](https://github.com/Requarks/wiki/issues/1959), [#1965](https://github.com/Requarks/wiki/issues/1965))
 - **Fixed:** Open Redirect Vulnerability mitigation. ([#1963](https://github.com/Requarks/wiki/issues/1963))
+- **Fixed:** An invalid LDAP configuration no longer prevent the local auth module from initializing. ([#1978](https://github.com/Requarks/wiki/issues/1978))
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Fixed:** Write permissions can no longer be selected for the Guest group.
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
