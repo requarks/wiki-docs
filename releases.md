@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-02T01:25:46.549Z
+date: 2020-06-02T01:38:47.823Z
 tags: 
 editor: markdown
 ---
@@ -83,6 +83,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Font Awesome icons are now sized correctly in the sidebar. ([#1887](https://github.com/Requarks/wiki/issues/1887))
 - **Fixed:** Keycloak module is now using fullname field with username fallback. ([#1888](https://github.com/Requarks/wiki/issues/1888))
 - **Fixed:** Bullet list markers in RTL mode are now aligned correctly. ([#1892](https://github.com/Requarks/wiki/issues/1892))
+- **Fixed:** Search progress bar is no longer shown when exiting ([#1912](https://github.com/Requarks/wiki/issues/1912))
 - **Fixed:** Some Pages Visualization tree nodes were not sorted correctly and would display the wrong title. ([#1914](https://github.com/Requarks/wiki/issues/1914))
 - **Fixed:** S3 Export All is triggered correctly. ([#1922](https://github.com/Requarks/wiki/issues/1922))
 - **Fixed:** Links to subtitles with special characters are now decoded correctly. ([#1949](https://github.com/Requarks/wiki/issues/1949))
