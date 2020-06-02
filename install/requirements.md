@@ -2,8 +2,9 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2020-05-11T03:59:01.570Z
+date: 2020-06-02T02:09:07.872Z
 tags: setup
+editor: markdown
 ---
 
 # Server Requirements
@@ -62,18 +63,26 @@ You're expected to have installed one of these database engines already *(either
 
 # Node.js
 
-Node.js **10.12 or later** is required.
-*Wiki.js will not run on older versions such as 8.x, 6.x or any version below 10.12!*
+The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
 
-> :whale: **Using Docker?**
-> 
-> Skip this requirement! You don't need to install Node.js on your machine! It's included in the Docker image already.
+- **10.12** or later
+- **12.0** or later
+- **14.0** or later
+{.grid-list}
+
+> Wiki.js will **NOT** run on older versions such as 8.x, 6.x or any version below **10.12**!
+>
+> For `13.x`, due to a bug introduced in Node.js 13.0, versions prior to `13.3` are not compatible.
+{.is-warning}
+
+### **Using Docker?** :whale:
+
+> **Skip this requirement!** You don't need to install Node.js on your machine! It's included in the Docker image already.
 {.is-info}
 
-> :cloud: **Web Server**
->
-> Wiki.js doesn't need any actual web server (such as nginx or Apache). However, you might need to put a reverse proxy in front of Wiki.js if you require advanced network / DNS configuration.
-{.is-warning}
+### **Web Server** :cloud:
+
+Wiki.js doesn't need any actual web server (such as nginx or Apache). However, you might need to put a reverse proxy in front of Wiki.js if you require advanced network / DNS configuration.
 
 # Supported Browsers
 
