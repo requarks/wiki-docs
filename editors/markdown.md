@@ -169,6 +169,27 @@ Can be also be used :fire: inline
 
 Can also be used :fire: inline.
 
+## Footnotes
+
+### Tab {.tabset}
+
+#### Usage
+
+Use the syntax `[^1]` for the location of the footnote in the main text, and `[^1]: this is a footnote` for the actual footnote.  Footnotes themselves will automatically appear at the bottom of the page under a horizontal line.
+
+#### Examples
+
+```markdown
+This sentence[^1] needs a few footnotes.[^2]
+
+[^1]: A string of syntactic words.
+[^2]: A useful example sentence.
+```
+This sentence[^1] needs a few footnotes.[^2]
+
+[^1]: A string of syntactic words.
+[^2]: A useful example sentence.
+
 ## Headers
 
 ### Tab {.tabset}
