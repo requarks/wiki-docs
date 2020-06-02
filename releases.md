@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-02T01:54:17.191Z
+date: 2020-06-02T02:15:57.097Z
 tags: 
 editor: markdown
 ---
@@ -74,6 +74,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 ### Bug fixes
 
 - **Fixed:** CKEditor (Visual Editor) now handles RTL locales correctly. ([#1636](https://github.com/Requarks/wiki/issues/1636))
+- **Fixed:** Roboto-Mono font is now fetched properly when using Arabic. ([#1708](https://github.com/Requarks/wiki/issues/1708))
 - **Fixed:** Long words are now broken into multiple lines in Markdown editor. ([#1743](https://github.com/Requarks/wiki/issues/1743))
 - **Fixed:** Removed the extra `)` added to some links in Visual Editor. ([#1788](https://github.com/Requarks/wiki/issues/1788))
 - **Fixed:** HTML from Visual Editor is now beautified before saving for proper diff versioning. ([#1804](https://github.com/Requarks/wiki/issues/1804))
