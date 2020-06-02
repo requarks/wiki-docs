@@ -182,12 +182,12 @@ Use the syntax `[^1]` for the location of the footnote in the main text, and `[^
 ```markdown
 This sentence[^1] needs a few footnotes.[^2]
 
-[^1]: A string of syntatic words.
+[^1]: A string of syntactic words.
 [^2]: A useful example sentence.
 ```
 This sentence[^1] needs a few footnotes.[^2]
 
-[^1]: A string of syntatic words.
+[^1]: A string of syntactic words.
 [^2]: A useful example sentence.
 
 ## Headers
