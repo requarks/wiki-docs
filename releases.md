@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-02T01:38:47.823Z
+date: 2020-06-02T01:54:17.191Z
 tags: 
 editor: markdown
 ---
@@ -78,6 +78,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Removed the extra `)` added to some links in Visual Editor. ([#1788](https://github.com/Requarks/wiki/issues/1788))
 - **Fixed:** HTML from Visual Editor is now beautified before saving for proper diff versioning. ([#1804](https://github.com/Requarks/wiki/issues/1804))
 - **Fixed:** Markdown Footnotes IDs are no longer stripped by HTML Sanitization module. ([#1819](https://github.com/Requarks/wiki/issues/1819))
+- **Fixed:** Saved state is now updated for page properties. ([#1826](https://github.com/Requarks/wiki/issues/1826))
 - **Fixed:** Anchor scrolling will now handle image loading offset correctly after load. ([#1870](https://github.com/Requarks/wiki/issues/1870))
 - **Fixed:** Removed unsuitable font for Persian language. ([#1871](https://github.com/Requarks/wiki/issues/1871))
 - **Fixed:** Font Awesome icons are now sized correctly in the sidebar. ([#1887](https://github.com/Requarks/wiki/issues/1887))
