@@ -2,8 +2,9 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-05-29T03:57:59.596Z
+date: 2020-06-05T21:16:19.234Z
 tags: setup, docker
+editor: markdown
 ---
 
 > Before proceeding, make sure you meet the [system requirements](/install/requirements).
@@ -15,7 +16,7 @@ Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki`
 
 > It's highly recommended that you don't use the `latest` tag but instead the major version you need, e.g. `requarks/wiki:2`
 >
-> It's also possible to point to a specific minor version (e.g. `requarks/wiki:2.2`), although you will not automatically get the latest features when pulling the latest image.
+> It's also possible to point to a specific minor version (e.g. `requarks/wiki:2.4`), although you will not automatically get the latest features when pulling the latest image.
 {.is-info}
 
 ## Environment Variables
@@ -171,7 +172,8 @@ volumes:
 
 # ARM images
 
-In order to use the ARM64 / ARMv7 image variants, you must use the image tag `requarks/wiki:2.3-arm`.
+> Since version **2.4**, ARMv7 and ARM64 images are part of the same docker image tags as AMD64. Simply use the same tags as above.
+{.is-info}
 
 This image is compatible with:
 
