@@ -2,8 +2,9 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-05-09T23:06:53.171Z
+date: 2020-06-05T21:27:08.634Z
 tags: 
+editor: markdown
 ---
 
 A config file, named `config.yml`, must be located at the root of your Wiki.js installation.
@@ -308,7 +309,7 @@ offline: true
 > This feature is available from version **2.3 and up**.
 {.is-info}
 
-> :warning: PostgreSQL is **required** to enable this option.
+> PostgreSQL is **required** to enable this option.
 {.is-warning}
 
 Set to `true` if you have multiple concurrent instances running off the same DB (e.g. Kubernetes pods / load balanced instances). Leave `false` otherwise.
