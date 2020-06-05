@@ -2,8 +2,9 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2020-05-31T23:03:03.490Z
+date: 2020-06-05T21:26:37.793Z
 tags: 
+editor: markdown
 ---
 
 > Documentation is being worked on! Some pages may be incomplete or not exist yet.
