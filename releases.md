@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-02T23:54:07.657Z
+date: 2020-06-05T18:17:55.835Z
 tags: 
 editor: markdown
 ---
@@ -45,6 +45,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
   - Disqus
 - Content Tabs
 - Create New Page from Template
+- Cypress E2E testing added to CI pipeline for all 5 DB engines.
 - Kroki Rendering Module ([#1900](https://github.com/Requarks/wiki/issues/1900))
 - MathJax Rendering Module
 - PlantUML live rendering in Markdown preview
