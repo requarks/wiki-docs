@@ -2,8 +2,9 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2020-05-26T01:16:42.666Z
+date: 2020-06-05T21:13:07.024Z
 tags: dev
+editor: markdown
 ---
 
 Wiki.js is fully modular, which allows any developer to write their own module or theme.
@@ -149,7 +150,7 @@ Multiple architectures can be merged into a single manifest file using the `dock
 
 ```bash
 docker manifest create requarks/wiki:arm requarks/wiki@sha256:abcdef123456 requarks/wiki@sha256:fedcba654321
-docker manifest push requarks/wiki:arm
+docker manifest push -p requarks/wiki:arm
 ```
 
 ## Official Builds
