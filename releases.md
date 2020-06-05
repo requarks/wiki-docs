@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-05T18:54:23.814Z
+date: 2020-06-05T20:39:31.217Z
 tags: 
 editor: markdown
 ---
@@ -19,8 +19,10 @@ editor: markdown
 {.is-warning}
 
 <!--
-> This release should **NOT** be used in production environments!
+> This is a **BETA** release and should **NOT** be used in production environments!
 {.is-warning}
+
+Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
 ### Major Features
@@ -30,12 +32,10 @@ editor: markdown
 - OpenID Connect Authentication Module
 - Create Redirect Page
 
-# BETA - 2.4.75
+# STABLE - 2.4.105
 
-> This is a **BETA** release and should **NOT** be used in production environments!
-{.is-warning}
-
-Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
+> Released on **June 5th, 2020**.
+{.is-info}
 
 ### Major Features
 
@@ -100,7 +100,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
 - **Fixed:** Legacy (IE11) page view is now displayed correctly.
 
-# STABLE - 2.3.81
+# 2.3.81
 
 > Initially released on **April 24th, 2020** as `2.3.71-73`.
 > Hotfix `2.3.77` was released on **April 25th, 2020**.
