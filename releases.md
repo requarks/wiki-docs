@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-05T18:17:55.835Z
+date: 2020-06-05T18:54:23.814Z
 tags: 
 editor: markdown
 ---
@@ -94,6 +94,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Open Redirect Vulnerability mitigation. ([#1963](https://github.com/Requarks/wiki/issues/1963))
 - **Fixed:** An invalid LDAP configuration no longer prevent the local auth module from initializing. ([#1978](https://github.com/Requarks/wiki/issues/1978))
 - **Fixed:** Proper image floating alignment when using Visual Editor ([#1981](https://github.com/Requarks/wiki/issues/1981))
+- **Fixed:** Page paths starting with a slash are now stripped correctly ([#1982](https://github.com/Requarks/wiki/issues/1982))
 - **Fixed:** Added missing directory page to the browse sidebar menu.
 - **Fixed:** Write permissions can no longer be selected for the Guest group.
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
