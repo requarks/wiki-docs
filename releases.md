@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-05T20:39:31.217Z
+date: 2020-06-06T03:54:58.059Z
 tags: 
 editor: markdown
 ---
@@ -28,6 +28,9 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 ### Major Features
 
 - New Login Experience
+	- Add multiple instances of the same authentication strategy
+	- Change the display order of instances
+  - Rename the instances
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
 - Create Redirect Page
