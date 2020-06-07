@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-07T20:36:21.798Z
+date: 2020-06-07T20:38:28.331Z
 tags: 
 editor: markdown
 ---
@@ -11,6 +11,13 @@ editor: markdown
 - [Future Releases Roadmap *Learn about long term plans and future major releases.*](/releases/future)
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
+
+# Upcoming - 2.6
+
+### Planned
+
+- API Editor *(REST/GraphQL)*
+- Create Redirect Page
 
 # Upcoming - 2.5
 
@@ -34,7 +41,6 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
 - 2FA (Two-Factor Authentication)
-- Create Redirect Page
 
 # STABLE - 2.4.105
 
