@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-07T20:38:28.331Z
+date: 2020-06-07T20:41:22.444Z
 tags: 
 editor: markdown
 ---
@@ -41,6 +41,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
 - 2FA (Two-Factor Authentication)
+- Generic S3 Storage Module
 
 # STABLE - 2.4.105
 
