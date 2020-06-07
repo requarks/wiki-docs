@@ -2,13 +2,14 @@
 title: DB - PostgreSQL
 description: Search Engine Module
 published: true
-date: 2019-07-20T02:55:00.609Z
+date: 2020-06-07T17:15:39.358Z
 tags: 
+editor: markdown
 ---
 
 This engine makes use of the advanced capabilities of PostgreSQL to provide a "good enough" search solution.
 
-> :warning: You must be running Wiki.js using a PostgreSQL database in order to use this engine!
+> You must be running Wiki.js using a PostgreSQL database in order to use this engine!
 {.is-warning}
 
 # Requirements
@@ -18,6 +19,7 @@ The **pg_trgm** extension must be enabled on the PostgreSQL for this engine to f
 ```sql
 CREATE EXTENSION pg_trgm;
 ```
+> The extension has to be activated **per database** so make sure to enable it for your Wiki.js database.{.is-info}
 
 # Setup
 
