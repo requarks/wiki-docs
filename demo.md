@@ -2,7 +2,7 @@
 title: Demo
 description: Test Drive Wiki.js
 published: true
-date: 2020-06-08T16:51:29.743Z
+date: 2020-06-08T16:53:37.576Z
 tags: 
 editor: markdown
 ---
@@ -42,3 +42,7 @@ The administration area contains a vast array of customization options.
 Click on the <kbd><i class="mdi mdi-account-circle"></i></kbd> **Account** icon in the top-right corner of the page, then select **Administration**.
 
 Explore the various sections from the left side navigation.
+
+# Next Steps
+
+Are you ready to install Wiki.js on your own infrastructure? Read the [requirements](/install/requirements) and [installation instructions](/install).
