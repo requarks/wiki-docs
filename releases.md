@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-07T20:41:22.444Z
+date: 2020-06-08T01:28:36.821Z
 tags: 
 editor: markdown
 ---
@@ -42,6 +42,15 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - OpenID Connect Authentication Module
 - 2FA (Two-Factor Authentication)
 - Generic S3 Storage Module
+
+### Minor Improvements
+
+- The plain blockquote icon is now a quote icon instead of an info symbol.
+
+### Bug fixes
+
+- **Fixed:** Listing assets are now validated against the `read:assets` permission. ([#1928](https://github.com/Requarks/wiki/issues/1928))
+- **Fixed:** Target attribute is no longer stripped by the HTML Security module. ([#2012](https://github.com/Requarks/wiki/issues/2012))
 
 # STABLE - 2.4.105
 
@@ -110,6 +119,14 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Write permissions can no longer be selected for the Guest group.
 - **Fixed:** Semver is now used to determine if latest version is more recent than currently installed version.
 - **Fixed:** Legacy (IE11) page view is now displayed correctly.
+
+### Links
+
+- [Installation](/install)
+- [Upgrade from 2.3.81](/install/upgrade)
+- [Migrate from 1.x](/install/migrate)
+
+Consider supporting this project by [becoming a GitHub Sponsor](https://github.com/sponsors/NGPixel), [becoming a Patron](https://www.patreon.com/requarks) or donating to our [Open Collective](https://opencollective.com/wikijs).
 
 # 2.3.81
 
