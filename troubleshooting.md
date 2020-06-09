@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2020-06-09T16:49:18.437Z
+date: 2020-06-09T16:50:05.133Z
 tags: setup, guide
 editor: markdown
 ---
@@ -58,6 +58,12 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 
 **Resolution**: Use another port for Wiki.js or look for applications that could be using this port (web servers, http applications, etc.) and stop them.
 
+# Error: Unknown authentication strategy "jwt"
+
+**Cause**: This error is shown when attempting to load the site before the server is done initializing.
+
+**Resolution**: Simply reload the page again.
+
 # How to manually reset the admin password?
 
 The only way to change a password, without access to the web UI, is via the database. Use a tool like **pgAdmin** *(postgres)*, **DBeaver** *(mysql, mariadb)*, **SQL Management Studio** *(mssql)* or **DB Browser for SQLite**.
@@ -90,11 +96,5 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 Starting in version **2.1**, a new HTML sanitization step is added by default to the rendering pipeline. This feature prevents potentially unsafe HTML tags / properties from being present in the final render. Any HTML tag or property that isn't whitelisted will be rendered as plain text.
 
 If you are the sole editor / trust your editors, you can disable this feature in the **Administration Area**, under **Rendering** > **HTML** > **Security** > **Sanitize HTML**.
-
-# Unknown authentication strategy "jwt"
-
-**Cause**: This error is shown when attempting to load the site before the server is done initializing.
-
-**Resolution**: Simply reload the page again.
 
 ![](https://a.icons8.com/IMfhdRiW/YNcdYW/svg.svg){.align-abstopright}
