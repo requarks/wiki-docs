@@ -2,8 +2,9 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2020-05-23T20:16:06.107Z
+date: 2020-06-09T16:49:18.437Z
 tags: setup, guide
+editor: markdown
 ---
 
 # Cannot upload files larger than X
@@ -89,5 +90,11 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 Starting in version **2.1**, a new HTML sanitization step is added by default to the rendering pipeline. This feature prevents potentially unsafe HTML tags / properties from being present in the final render. Any HTML tag or property that isn't whitelisted will be rendered as plain text.
 
 If you are the sole editor / trust your editors, you can disable this feature in the **Administration Area**, under **Rendering** > **HTML** > **Security** > **Sanitize HTML**.
+
+# Unknown authentication strategy "jwt"
+
+**Cause**: This error is shown when attempting to load the site before the server is done initializing.
+
+**Resolution**: Simply reload the page again.
 
 ![](https://a.icons8.com/IMfhdRiW/YNcdYW/svg.svg){.align-abstopright}
