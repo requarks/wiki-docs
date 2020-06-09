@@ -2,7 +2,7 @@
 title: Code
 description: Editor
 published: true
-date: 2020-06-09T21:57:55.169Z
+date: 2020-06-09T21:58:10.931Z
 tags: editors
 editor: markdown
 ---
@@ -31,7 +31,7 @@ Using headers and adding the `tabset` css class to the parent header. The parent
 
 Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `<h3>`, the tabs headers must be `<h4>`. The maximum header level for a parent being `<h5>` and the children `<h6>`.
 
-#### Examples
+#### Code Example
 
 ```html
 <h2 class="tabset">Tabs</h2>
