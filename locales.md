@@ -2,8 +2,9 @@
 title: Locales
 description: Language & Regional Settings
 published: true
-date: 2020-05-11T04:01:31.634Z
+date: 2020-06-11T00:28:49.088Z
 tags: localization
+editor: markdown
 ---
 
 Wiki.js can be displayed in various languages and offer multi-lingual versions of the same page.
