@@ -2,8 +2,9 @@
 title: LDAP / Active Directory
 description: Authentication Module
 published: true
-date: 2020-05-11T03:57:45.533Z
+date: 2020-06-12T20:34:21.239Z
 tags: auth, module
+editor: markdown
 ---
 
 LDAP / Active Directory is an enterprise authentication solution developed by Microsoft.
@@ -28,9 +29,18 @@ LDAP / Active Directory is an enterprise authentication solution developed by Mi
 1. Make sure the checkbox next to **LDAP / Active Directory** in the list of strategies is checked. The text should now say that the strategy is **active**.
 1. Click **Apply** on the upper right of the page to save and apply the configuration.
 
+# Test Your Configuration
+
+Saving your LDAP configuration doesn't actually perform a connection to your LDAP Server. You need to perform an actual login to establish a connection.
+
+To do so, open an incognito window in your browser and attempt to login to your wiki with a user in your directory.
+
 # Troubleshooting
 
 If you get errors while trying to login, you can enable a LDAP debugging flag to report internal LDAP error messages to the console (or docker logs).
 
 From the **Administration Area**, click on **Developer Tools** in the sidebar, then on **Flags**. Enable the **LDAP Debug** flag.
+
+> When using docker, type the command `docker logs wiki` to view the logs *(assuming a container named `wiki`)*. 
+{.is-info}
 
