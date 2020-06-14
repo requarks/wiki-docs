@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-08T01:28:36.821Z
+date: 2020-06-14T18:34:12.955Z
 tags: 
 editor: markdown
 ---
@@ -41,23 +41,23 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
 - 2FA (Two-Factor Authentication)
-- Generic S3 Storage Module
 
-### Minor Improvements
+# STABLE - 2.4.107
 
-- The plain blockquote icon is now a quote icon instead of an info symbol.
-
-### Bug fixes
-
-- **Fixed:** Listing assets are now validated against the `read:assets` permission. ([#1928](https://github.com/Requarks/wiki/issues/1928))
-- **Fixed:** Target attribute is no longer stripped by the HTML Security module. ([#2012](https://github.com/Requarks/wiki/issues/2012))
-
-# STABLE - 2.4.105
-
-> Released on **June 5th, 2020**.
+> Initially released on **June 5th, 2020** as `2.4.105`.
+> Hotfix `2.4.107` was released on **June 14th, 2020**.
+> Users that upgraded to versions `2.4.105` should upgrade immediately to `2.4.107`.
 {.is-info}
 
-### Major Features
+### Hotfix 1 *(2.4.107)*{.caption}
+- The plain blockquote icon is now a quote icon instead of an info symbol.
+- Added Generic S3 Storage Module
+- **Fixed:** Prevent mustache template injection bypass via encoded/unencoded root level text elements ([GHSA-9jgg-4xj2-vjjj](https://github.com/Requarks/wiki/security/advisories/GHSA-9jgg-4xj2-vjjj))
+- **Fixed:** Listing assets are now validated against the `read:assets` permission. ([#1928](https://github.com/Requarks/wiki/issues/1928))
+- **Fixed:** Target attribute is no longer stripped by the HTML Security module. ([#2012](https://github.com/Requarks/wiki/issues/2012))
+- **Fixed:** Sidebar is no longer empty when the JWT is expired ([#2037](https://github.com/Requarks/wiki/issues/2037))
+
+### Major Features *(2.4.105)*{.caption}
 
 - Comments
 	- Commento
@@ -72,7 +72,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Timezone, Date Format and Appearance (light/dark) per User Profile
 - Upload limits configuration from the Administration area
 
-### Minor Improvements
+### Minor Improvements *(2.4.105)*{.caption}
 
 - Added a Static Navigation only option for navigation *(pre-2.3 display)*.
 - Added help links to administration are Modules sections.
@@ -92,7 +92,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Pages Visualization diagram can now be zoomed and panned.
 - Twemoji assets are now packaged as an ASAR archive, significantly reducing file count + dev compilation time.
 
-### Bug fixes
+### Bug fixes *(2.4.105)*{.caption}
 
 - **Fixed:** CKEditor (Visual Editor) now handles RTL locales correctly. ([#1636](https://github.com/Requarks/wiki/issues/1636))
 - **Fixed:** Roboto-Mono font is now fetched properly when using Arabic. ([#1708](https://github.com/Requarks/wiki/issues/1708))
@@ -137,12 +137,12 @@ Consider supporting this project by [becoming a GitHub Sponsor](https://github.c
 {.is-info}
 
 ### Hotfix 2 *(2.3.81)*{.caption}
-- Sanitize HTML in Preview panel of the Markdown Editor ([GHSA-vj72-c9vq-qxrv](https://github.com/Requarks/wiki/security/advisories/GHSA-vj72-c9vq-qxrv))
+- **Fixed:** Sanitize HTML in Preview panel of the Markdown Editor ([GHSA-vj72-c9vq-qxrv](https://github.com/Requarks/wiki/security/advisories/GHSA-vj72-c9vq-qxrv))
 
 ### Hotfix 1 *(2.3.77)*{.caption}
 - Added option to copy navigation items from other locale ([#1774](https://github.com/Requarks/wiki/issues/1774))
-- Navigation mode is now persisted correctly ([#1776](https://github.com/Requarks/wiki/issues/1776))
-- Git SSH port is no longer explictly defined ([#1777](https://github.com/Requarks/wiki/issues/1777))
+- **Fixed:** Navigation mode is now persisted correctly ([#1776](https://github.com/Requarks/wiki/issues/1776))
+- **Fixed:** Git SSH port is no longer explictly defined ([#1777](https://github.com/Requarks/wiki/issues/1777))
 
 ### Major Features *(2.3.71)*{.caption}
 
