@@ -105,6 +105,12 @@ function lorem (ipsum) {
 ```
 ````
 
+```
+function lorem (ipsum) {
+	const dolor = 'consectetur adipiscing elit'
+}
+```
+
 #### Syntax Highlighting
 
 By default, a code block is rendered as plain preformatted text. It's however preferable to use syntax highlighting for programming code, allowing for easier readability. To specify the programming language used in the code block, simply add the language keyword right after the opening triple backticks:
@@ -196,7 +202,7 @@ This sentence[^1] needs a few footnotes.[^2]
 
 #### Usage
 
-Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the text selection.
+Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the text selection.  Headers in levels 1 an 2 automatically appear in the ToC on the left-hand side of the page.
 
 #### Shortcuts
 - On the desired line, then clicking the ![Header](/assets/ui/ui-markdown-headers.png =x30){.radius-4} dropdown button in the toolbar.
@@ -255,10 +261,13 @@ Using the syntax `![Image Caption](Image Source)`.
 #### Examples
 
 ```markdown
-![Lorem ipsum](https://dolor.example.com/sit/amet.jpg)
+![Lorem ipsum](https://picsum.photos/200)
 
 Consectetur ![adipiscing](/link/to/image.jpg) elit
 ```
+
+![Lorem ipsum](https://picsum.photos/200)
+Consectetur ![adipiscing](https://picsum.photos/200) elit
 
 #### Dimensions
 
@@ -389,6 +398,18 @@ sequenceDiagram
     Alice->John: Yes... John, how are you?
 ```
 ````
+
+```mermaid
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob-->>John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+    Bob-->Alice: Checking with John...
+    Alice->John: Yes... John, how are you?
+```
 
 ## Ordered Lists
 
