@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-14T18:34:12.955Z
+date: 2020-06-16T00:05:26.016Z
 tags: 
 editor: markdown
 ---
@@ -41,6 +41,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
 - 2FA (Two-Factor Authentication)
+- Per-Group Redirection on Successful Login
 
 # STABLE - 2.4.107
 
