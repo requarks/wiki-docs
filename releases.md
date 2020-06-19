@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-16T04:12:59.409Z
+date: 2020-06-19T02:19:35.732Z
 tags: 
 editor: markdown
 ---
@@ -43,8 +43,15 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - 2FA (Two-Factor Authentication)
 - Per-Group Redirection on Successful Login
 
+### Minor Improvements
+
+- Image prefetching module for Kroki / PlantUML svg images.
+- Optional underline parsing for Markdown using `_foo_` syntax.
+
 ### Bug Fixes
 
+- **Fixed:** Include the locale code in sidebar browse links ([#1807](https://github.com/Requarks/wiki/issues/1807))
+- **Fixed:** Use config value for tokenRenewal expiration ([#2042](https://github.com/Requarks/wiki/issues/2042))
 - **Fixed:** Use first email address when retrieving multiple from LDAP ([#2051](https://github.com/Requarks/wiki/issues/2051))
 
 # STABLE - 2.4.107
