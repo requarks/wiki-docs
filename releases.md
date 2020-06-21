@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-21T02:10:00.664Z
+date: 2020-06-21T22:08:10.395Z
 tags: 
 editor: markdown
 ---
@@ -49,6 +49,11 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 
 - Image prefetching module for Kroki / PlantUML svg images.
 - Optional underline parsing for Markdown using `_foo_` syntax.
+- Improved Visual Editor Capabilities
+	- Inline Code / Code Blocks
+  - Table / Cell Properties
+  - Sub / Superscript
+  - Horizontal Line
 
 ### Bug Fixes
 
