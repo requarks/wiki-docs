@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-20T05:11:54.837Z
+date: 2020-06-21T02:10:00.664Z
 tags: 
 editor: markdown
 ---
@@ -43,6 +43,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - 2FA (Two-Factor Authentication)
 - Per-Group Redirection on Successful Login
 - Per-Page JS Scripts + CSS Styles
+- Page Publishing State (start/end date, private)
 
 ### Minor Improvements
 
