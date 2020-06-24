@@ -2,8 +2,9 @@
 title: Users, Groups & Permissions
 description: Manage access to your wiki
 published: true
-date: 2020-05-23T05:39:15.990Z
+date: 2020-06-24T17:45:20.824Z
 tags: 
+editor: markdown
 ---
 
 While a good wiki is one where anyone can contribute new content, it's always a good idea to restrict certain sections and specific actions to a list of selected users.
@@ -147,8 +148,21 @@ To delete a user, select the account from the **Users** list, click the **Action
 > Note that the **Guest** account cannot be deleted and some of its fields are locked.
 {.is-info}
 
-# Private Wiki
+# Guides
+
+## Private Wiki
 
 To make your wiki completely private and require authentication in order to view any page, simply modify the **Guest** group in the **Administration Area -> Groups** section. Either change the default **Page Rule** from **Allow** to **Deny**, or remove all global permissions on the account. Both methods will result in the same behavior.
+
+## Departments
+
+To give a private space to each department of your company, create a **group** for each.
+
+For each group, add a **Page Rule** with access to **path starting with...** a specific subfolder (e.g. `/accounting`, `/marketing`, etc.).
+
+> Note that you cannot use 2 letters paths. Therefore, paths like `/hr` or `/it` will not work as they are reserved for languages.
+{.is-warning}
+
+Starting in Wiki.js **2.5**, you can redirect users directly to their subfolder upon login, instead of the homepage. In earlier versions, you should give read access to the `/home` path (using **Path matches exactly...** match) as this is the landing page for all users upon login.
 
 ![](https://a.icons8.com/kkjevabe/OINR8w/svg.svg){.align-abstopright}
