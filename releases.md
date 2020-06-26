@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-21T22:08:10.395Z
+date: 2020-06-26T02:27:09.185Z
 tags: 
 editor: markdown
 ---
@@ -54,12 +54,20 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
   - Table / Cell Properties
   - Sub / Superscript
   - Horizontal Line
+  - Spellcheck
+- Improved tables styling / match visual editor UI
+- Experimental spellcheck mode for Markdown editor
 
 ### Bug Fixes
 
-- **Fixed:** Include the locale code in sidebar browse links ([#1807](https://github.com/Requarks/wiki/issues/1807))
-- **Fixed:** Use config value for tokenRenewal expiration ([#2042](https://github.com/Requarks/wiki/issues/2042))
-- **Fixed:** Use first email address when retrieving multiple from LDAP ([#2051](https://github.com/Requarks/wiki/issues/2051))
+- **Fixed:** Include the locale code in sidebar browse links. ([#1807](https://github.com/Requarks/wiki/issues/1807))
+- **Fixed:** Use config value for tokenRenewal expiration. ([#2042](https://github.com/Requarks/wiki/issues/2042))
+- **Fixed:** Editing buttons are no longer shown for pages the user doesn't have access to. ([#2043](https://github.com/Requarks/wiki/issues/2043))
+- **Fixed:** Use first email address when retrieving multiple from LDAP. ([#2051](https://github.com/Requarks/wiki/issues/2051))
+- **Fixed:** Visualize Pages no longer return an SQL error for MySQL / MariaDB / SQLite installations. ([#2104](https://github.com/Requarks/wiki/issues/2104))
+- **Fixed:** Deactivated users can no longer renew active tokens. ([#2105](https://github.com/Requarks/wiki/issues/2105))
+- **Fixed:** Any user / group modification now forces tokens to be revalidated on the next request.
+- **Fixed:** A server restart / new instance forces tokens to be revalidated if issued before server start.
 
 # STABLE - 2.4.107
 
