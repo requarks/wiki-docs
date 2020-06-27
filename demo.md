@@ -2,7 +2,7 @@
 title: Demo
 description: Test Drive Wiki.js
 published: true
-date: 2020-06-08T16:53:37.576Z
+date: 2020-06-27T03:44:57.125Z
 tags: 
 editor: markdown
 ---
@@ -25,7 +25,7 @@ Follow the instructions below to get started:
 7. Login with the **email address** and **password** you entered previously.
 
 > Note that demo instances are only available for **10 minutes** after the deployment is completed.
-{.is-info}
+{.is-warning}
 
 # First Steps
 
