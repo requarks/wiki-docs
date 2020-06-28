@@ -2,8 +2,9 @@
 title: Kubernetes
 description: Getting started with a Kubernetes installation using Helm Charts
 published: true
-date: 2020-04-19T22:49:08.309Z
+date: 2020-06-28T23:57:59.929Z
 tags: setup, docker
+editor: markdown
 ---
 
 # Prerequisites
@@ -19,4 +20,4 @@ tags: setup, docker
 
 # Install the Helm Chart
 
-*Coming soon*
+https://github.com/Requarks/wiki/tree/master/dev/helm
