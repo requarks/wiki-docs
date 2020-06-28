@@ -2,8 +2,9 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2020-05-11T03:59:16.093Z
+date: 2020-06-28T23:58:51.228Z
 tags: setup
+editor: markdown
 ---
 
 > Before going any further, make sure you meet all the [requirements](/install/requirements).
@@ -12,7 +13,7 @@ tags: setup
 ## By Platform
 - [Docker](/install/docker)
 - [Heroku](/install/heroku)
-- [Kubernetes *coming soon*](/install/kubernetes)
+- [Kubernetes](/install/kubernetes)
 - [Linux](/install/linux)
 - [macOS](/install/macos)
 - [Windows](/install/windows)
