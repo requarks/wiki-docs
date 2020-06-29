@@ -2,8 +2,9 @@
 title: Telemetry
 description: Help us improve Wiki.js!
 published: true
-date: 2020-04-18T00:00:54.045Z
+date: 2020-06-29T00:10:20.048Z
 tags: 
+editor: markdown
 ---
 
 # What is telemetry?
