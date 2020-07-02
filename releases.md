@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-06-29T01:37:02.471Z
+date: 2020-07-02T02:30:49.829Z
 tags: 
 editor: markdown
 ---
@@ -59,6 +59,8 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
   - Spellcheck
 - Improved tables styling / match visual editor UI
 - Experimental spellcheck mode for Markdown editor
+- Improved Print View (with hidden comments)
+- Improved display for Tabsets in Markdown Editor preview
 
 ### Bug Fixes
 
