@@ -38,6 +38,8 @@ The locale package file `xx.json` or `xx-zz.json` contains all the translations 
 {.is-warning}
 
 Place the file(s) inside the `sideload` folder created previously alongside the master file. You should now have `locales.json`, `en.json` and any additional languages in your folder.
+> The `locales.json` should only contain the selected locale package files. Otherwise the import would fail. 
+{.is-info}
 
 ## 3 - Sideload
 
