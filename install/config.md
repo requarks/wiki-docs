@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-06-05T21:27:08.634Z
+date: 2020-07-04T21:26:15.124Z
 tags: 
 editor: markdown
 ---
@@ -117,6 +117,10 @@ The configuration settings in the advanced section are optional and can be omitt
 ## HTTPS
 
 Wiki.js supports both user-provided custom certificates or automated Let's Encrypt certificate provisioning.
+
+> If you have a reverse-proxy server (e.g. **nginx** / **apache**)  in front of Wiki.js, the SSL termination should be handled by the reverse-proxy, **NOT** Wiki.js.
+>  The instructions below are meant for use cases where Wiki.js is exposed directly to the internet.
+{.is-warning}
 
 ### Custom Certificate
 
