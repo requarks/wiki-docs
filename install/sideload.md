@@ -2,8 +2,9 @@
 title: Sideloading
 description: Enable your wiki to run without internet access
 published: true
-date: 2019-06-21T22:21:09.334Z
+date: 2020-07-04T21:15:31.336Z
 tags: 
+editor: markdown
 ---
 
 # Basics
@@ -42,6 +43,11 @@ Place the file(s) inside the `sideload` folder created previously alongside the 
 ## 3 - Sideload
 
 Run Wiki.js (or restart the process if already running) to automatically sideload the files localed in the `data/sideload` folder.
+
+> Because of a bug in versions prior to 2.5, the locale files are loaded in incorrect order, causing the clients to be unable to fetch the translations.
+> 
+> As a workaround, once Wiki.js is fully started, restart the server again. The locale data (which is now in the database) will be loaded correctly.
+{.is-danger}
 
 # Themes
 
