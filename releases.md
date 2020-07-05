@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-02T02:30:49.829Z
+date: 2020-07-05T05:47:06.271Z
 tags: 
 editor: markdown
 ---
@@ -61,17 +61,24 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Experimental spellcheck mode for Markdown editor
 - Improved Print View (with hidden comments)
 - Improved display for Tabsets in Markdown Editor preview
+- Added MultiMarkdown Tables capabilities to Markdown Editor
 
 ### Bug Fixes
 
+- **Fixed:** Sideloaded locales are now processed before server starts. ([#1248](https://github.com/Requarks/wiki/issues/1248))
 - **Fixed:** Include the locale code in sidebar browse links. ([#1807](https://github.com/Requarks/wiki/issues/1807))
+- **Fixed:** Some links were not reconnected correctly during page move. ([#1991](https://github.com/Requarks/wiki/issues/1991))
 - **Fixed:** Use config value for tokenRenewal expiration. ([#2042](https://github.com/Requarks/wiki/issues/2042))
 - **Fixed:** Editing buttons are no longer shown for pages the user doesn't have access to. ([#2043](https://github.com/Requarks/wiki/issues/2043))
 - **Fixed:** Use first email address when retrieving multiple from LDAP. ([#2051](https://github.com/Requarks/wiki/issues/2051))
+- **Fixed:** Tags are now filtered by access. ([#2100](https://github.com/Requarks/wiki/issues/2100))
 - **Fixed:** Visualize Pages no longer return an SQL error for MySQL / MariaDB / SQLite installations. ([#2104](https://github.com/Requarks/wiki/issues/2104))
 - **Fixed:** Deactivated users can no longer renew active tokens. ([#2105](https://github.com/Requarks/wiki/issues/2105))
+- **Fixed:** Discord module was updated to use new endpoint URL. ([#2117](https://github.com/Requarks/wiki/issues/2117))
+- **Fixed:** User is now added correctly via git when deleting a page. ([#2132](https://github.com/Requarks/wiki/issues/2132))
 - **Fixed:** Any user / group modification now forces tokens to be revalidated on the next request.
 - **Fixed:** A server restart / new instance forces tokens to be revalidated if issued before server start.
+- **Fixed:** Matomo module siteId is now set correctly for users with javascript disabled.
 
 # STABLE - 2.4.107
 
