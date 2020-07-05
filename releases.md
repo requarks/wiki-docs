@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-05T05:47:06.271Z
+date: 2020-07-05T05:48:50.694Z
 tags: 
 editor: markdown
 ---
@@ -40,6 +40,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
   - Rename the instances
   - Bypass Login Screen
   - Customize Login Background
+  - Hide Local Provider
 - OAuth2 Authentication Module
 - OpenID Connect Authentication Module
 - 2FA (Two-Factor Authentication)
