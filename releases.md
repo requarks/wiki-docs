@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-05T05:48:50.694Z
+date: 2020-07-06T03:58:56.049Z
 tags: 
 editor: markdown
 ---
@@ -34,17 +34,17 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 
 ### Major Features
 
-- New Login Experience
+- New Login Experience <i class="mdi mdi-shovel brown--text"></i>
 	- Add multiple instances of the same authentication strategy
 	- Change the display order of instances
   - Rename the instances
   - Bypass Login Screen
   - Customize Login Background
   - Hide Local Provider
-- OAuth2 Authentication Module
-- OpenID Connect Authentication Module
-- 2FA (Two-Factor Authentication)
-- Per-Group Redirection on Successful Login
+- OAuth2 Authentication Module <i class="mdi mdi-shovel brown--text"></i>
+- OpenID Connect Authentication Module <i class="mdi mdi-shovel brown--text"></i>
+- 2FA (Two-Factor Authentication) <i class="mdi mdi-shovel brown--text"></i>
+- Per-Group Redirection on Successful Login <i class="mdi mdi-shovel brown--text"></i>
 - Per-Page JS Scripts + CSS Styles
 - Page Publishing State (start/end date, private)
 
