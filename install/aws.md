@@ -2,8 +2,9 @@
 title: Install on AWS
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2020-02-22T02:42:27.349Z
+date: 2020-07-09T16:54:27.741Z
 tags: setup, guide
+editor: markdown
 ---
 
 # Overview
@@ -36,7 +37,7 @@ However, for best performance, we recommend using at least the **t3.small** or p
   > **It can take several minutes before the server starts accepting requests.** Various services must initialize for the first time before you'll be able to access your wiki. If it doesn't load on first attempt, wait 5 minutes and try again.
   {.is-info}
 6. A setup screen for Wiki.js should appear. Enter the desired **email address** and **password** for the administrator account.
-1. Enter the **full URL** to your wiki, without the trailing slash. It's recommended to point a sub-domain / domain to your public IP (e.g. wiki.example.com). If you don't have a domain setup yet, you can use your public DNS endpoint or IP as the URL (e.g. http://xx.xx.xx.xx). This can be changed later in the **Adminitration Area** (under the **General** section).
+1. Enter the **full URL** to your wiki, without the trailing slash. It's recommended to point a sub-domain / domain to your public IP (e.g. wiki.example.com). If you don't have a domain setup yet, you can use your public DNS endpoint or IP as the URL (e.g. http://xx.xx.xx.xx). This can be changed later in the **Administration Area** (under the **General** section).
 1. Click on **Install** to complete the installation. You'll automatically be redirected to the login page once completed. Enter the email and password for the administrator account you entered earlier.
 
 # Automatic HTTPS with Let's Encrypt
