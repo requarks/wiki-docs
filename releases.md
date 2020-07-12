@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-12T23:21:33.050Z
+date: 2020-07-12T23:22:50.873Z
 tags: 
 editor: markdown
 ---
@@ -47,7 +47,9 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Per-Group Redirection on Successful Login <i class="mdi mdi-shovel brown--text"></i>
 - Per-Page JS Scripts + CSS Styles
 - Page Publishing State (start/end date, private)
-- Draw&#46;io Integration <i class="mdi mdi-shovel brown--text"></i>
+- Draw&#46;io Diagrams Integration
+	- Markdown Editor
+  - Visual Editor <i class="mdi mdi-shovel brown--text"></i>
 
 ### Minor Improvements
 
