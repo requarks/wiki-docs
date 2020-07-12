@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-11T22:39:49.612Z
+date: 2020-07-12T23:21:33.050Z
 tags: 
 editor: markdown
 ---
@@ -64,6 +64,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Improved Print View (with hidden comments)
 - Improved display for Tabsets in Markdown Editor preview
 - Added MultiMarkdown Tables capabilities to Markdown Editor
+- Code Folding for Markdown Editor
 
 ### Bug Fixes
 
