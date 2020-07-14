@@ -2,8 +2,9 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2020-04-02T18:58:56.655Z
+date: 2020-07-14T04:10:25.411Z
 tags: install
+editor: markdown
 ---
 
 # Overview
@@ -44,6 +45,9 @@ Note that you can always upgrade to a more powerful droplet configuration in the
 1. Click on **Install** to complete the installation. You'll automatically be redirected to the login page once completed. Enter the email and password for the administrator account you entered earlier.
 
 # Automatic HTTPS with Let's Encrypt
+
+> You must complete the setup wizard (see [Getting Started](#getting-started)) **BEFORE** enabling Let's Encrypt!
+{.is-warning}
 
 1. Create an **A record** on your domain registrar to point a domain / sub-domain (e.g. wiki.example.com) to your droplet **public IP**.
 2. Make sure you're able to load your wiki using that domain / sub-domain on HTTP (e.g. http://wiki.example.com).
