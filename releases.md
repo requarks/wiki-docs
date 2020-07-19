@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-18T21:07:44.537Z
+date: 2020-07-19T19:15:17.166Z
 tags: 
 editor: markdown
 ---
@@ -45,7 +45,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - OAuth2 Authentication Module <i class="mdi mdi-shovel brown--text"></i>
 - OpenID Connect Authentication Module <i class="mdi mdi-shovel brown--text"></i>
 - 2FA (Two-Factor Authentication) <i class="mdi mdi-shovel brown--text"></i>
-- Per-Group Redirection on Successful Login <i class="mdi mdi-shovel brown--text"></i>
+- Per-Group Redirection on Successful Login
 - Per-Page JS Scripts + CSS Styles
 - Page Publishing State (start/end date, private)
 - Draw&#46;io Diagrams Integration for Markdown Editor
