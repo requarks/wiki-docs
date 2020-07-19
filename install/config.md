@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-07-04T21:26:15.124Z
+date: 2020-07-19T17:26:14.992Z
 tags: 
 editor: markdown
 ---
@@ -314,6 +314,8 @@ offline: true
 {.is-info}
 
 > PostgreSQL is **required** to enable this option.
+>
+> **You must deploy a single instance in order to setup the application.** Once setup is completed, you can increase the number of replicas to any amount.
 {.is-warning}
 
 Set to `true` if you have multiple concurrent instances running off the same DB (e.g. Kubernetes pods / load balanced instances). Leave `false` otherwise.
