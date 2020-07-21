@@ -20,4 +20,4 @@ editor: markdown
 
 # Install the Helm Chart
 
-https://github.com/Requarks/wiki/tree/master/dev/helm
+https://github.com/Requarks/wiki/tree/dev/dev/helm
