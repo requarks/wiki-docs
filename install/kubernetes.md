@@ -2,7 +2,7 @@
 title: Kubernetes
 description: Getting started with a Kubernetes installation using Helm Charts
 published: true
-date: 2020-06-28T23:57:59.929Z
+date: 2020-07-22T18:22:19.673Z
 tags: setup, docker
 editor: markdown
 ---
@@ -20,4 +20,4 @@ editor: markdown
 
 # Install the Helm Chart
 
-https://github.com/Requarks/wiki/tree/dev/dev/helm
+See the [Wiki.js Helm repo](https://github.com/Requarks/wiki/tree/dev/dev/helm#introduction) for detailed installation instructions.
