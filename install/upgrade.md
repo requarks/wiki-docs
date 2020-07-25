@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-06-14T18:03:24.347Z
+date: 2020-07-25T02:33:38.153Z
 tags: setup
 editor: markdown
 ---
@@ -10,7 +10,7 @@ editor: markdown
 > **DO NOT** upgrade from `1.0.x` using these instructions! Use the [Migrate from Wiki.js v1.x](/install/migrate) instructions instead. These instructions are for `2.x` installations.
 {.is-danger}
 
-> While upgrades are generally safe and it's very unlikely that it would result in data loss, it's your responsability to have a proper backup of your database before performing an upgrade. Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
+> While upgrades are generally safe and it's very unlikely that it would result in data loss, **it's your responsability to have a proper backup of your database before performing an upgrade.** Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
 {.is-warning}
 
 Select your platform:
