@@ -2,12 +2,15 @@
 title: Linux
 description: Getting started with a Wiki.js installation on Linux
 published: true
-date: 2020-06-14T18:03:42.230Z
+date: 2020-07-25T02:30:08.210Z
 tags: setup
 editor: markdown
 ---
 
 Before going any further, make sure your system meets all the [requirements](/install/requirements).
+
+> Looking for a complete, easy step-by-step installation guide, including all dependencies and an auto-updater? Check out the [Ubuntu-based](/install/ubuntu) installation guide.
+{.is-info}
 
 # Install
 
