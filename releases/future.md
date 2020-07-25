@@ -2,8 +2,9 @@
 title: Future Releases
 description:  Long term plans and future major releases
 published: true
-date: 2020-03-30T01:21:18.505Z
+date: 2020-07-25T19:28:04.692Z
 tags: 
+editor: markdown
 ---
 
 This page list possible important features and refactoring ideas for future major versions.
@@ -32,3 +33,8 @@ Supporting PostgreSQL as the only database engine in 3.x would greatly simplify 
 At the moment, only the administration area is using a SPA navigation model (switch views without reloading the page). Standard view pages don't use this model for easier SEO.
 
 In 3.x, site-wide SPA should be implemented in addition to server-side rendering of page contents.
+
+## Switch to Quasar Vue framework
+
+- Allows for easier server-side rendering and mobile capabilities.
+- Better components *(specifically the table component)*
