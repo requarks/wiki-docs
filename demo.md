@@ -2,7 +2,7 @@
 title: Demo
 description: Test Drive Wiki.js
 published: true
-date: 2020-06-27T03:44:57.125Z
+date: 2020-07-27T02:04:44.379Z
 tags: 
 editor: markdown
 ---
@@ -16,7 +16,7 @@ Thanks to runme.io and [DigitalOcean](https://m.do.co/c/5f7445bfa4d0), anyone ca
 
 Follow the instructions below to get started:
 
-1. [Launch a New Demo Instance](https://runme.io/run?app_id=a1d17016-fc2f-43dd-8268-4754dee72dcb)
+1. [Launch a New Demo Instance](https://runme.io/run?app_id=5ad463aa-078d-4471-aac9-199dc41ed896)
 2. Wait for the deployment to complete. You'll automatically be redirected to the wiki upon completion.
 3. Enter an **email address** and a **password** of your choice for the root administrator account.
 4. Leave the **Site URL** as-is, it won't be needed for this demo.
