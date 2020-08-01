@@ -2,8 +2,9 @@
 title: Themes
 description: Customize the look & feel of your wiki
 published: true
-date: 2020-04-26T03:57:51.368Z
+date: 2020-08-01T18:11:08.358Z
 tags: 
+editor: markdown
 ---
 
 # Overview
