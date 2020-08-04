@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-07-19T19:15:17.166Z
+date: 2020-08-04T14:51:22.958Z
 tags: 
 editor: markdown
 ---
@@ -23,7 +23,7 @@ editor: markdown
 # Upcoming - 2.5
 
 > This build is **under active development** and has not yet been released.
-> **ETA: July 2020**
+> **ETA: August 2020**
 {.is-warning}
 
 <!--
