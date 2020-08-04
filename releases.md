@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-08-04T14:51:22.958Z
+date: 2020-08-04T14:58:33.657Z
 tags: 
 editor: markdown
 ---
@@ -20,7 +20,7 @@ editor: markdown
 - Create Redirect Page
 - Draw&#46;io Diagrams Integration for Visual Editor
 
-# Upcoming - 2.5
+# DEV - 2.5
 
 > This build is **under active development** and has not yet been released.
 > **ETA: August 2020**
