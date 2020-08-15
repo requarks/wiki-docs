@@ -2,7 +2,7 @@
 title: Navigation
 description: Manage the sidebar navigation
 published: true
-date: 2020-08-15T21:11:42.461Z
+date: 2020-08-15T21:17:05.112Z
 tags: 
 editor: markdown
 ---
@@ -29,6 +29,8 @@ The sidebar displays a static list of links, defined by the administrator(s). Th
 - **Divider**: A separator line, to clearly separate 2 group of links.
 
 Each navigation item can be either visible to everyone or to specific groups only.
+
+![ui-admin-nav-static.png](/assets/ui/ui-admin-nav-static.png =850x){.decor-shadow .radius-4}
 
 > When using multilingual namespacing, each language has its own navigation.
 {.is-info}
