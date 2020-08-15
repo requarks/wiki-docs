@@ -2,7 +2,7 @@
 title: Navigation
 description: Manage the sidebar navigation
 published: true
-date: 2020-08-15T21:17:05.112Z
+date: 2020-08-15T21:18:56.807Z
 tags: 
 editor: markdown
 ---
