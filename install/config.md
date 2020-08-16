@@ -2,7 +2,7 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-07-19T17:26:14.992Z
+date: 2020-08-16T00:28:21.594Z
 tags: 
 editor: markdown
 ---
@@ -285,7 +285,7 @@ The accepted values are: `error`, `warn`, `info` *(default)*, `verbose`, `debug`
 ## Upload Limits
 
 > **This option was deprecated in 2.4** and is now controlled via the administration web interface.
-{.is-warning}
+{.is-danger}
 
 Set the maximum file size for user uploads:
 
