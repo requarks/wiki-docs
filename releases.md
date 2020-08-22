@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-08-22T17:52:39.811Z
+date: 2020-08-22T17:52:59.473Z
 tags: 
 editor: markdown
 ---
@@ -11,14 +11,6 @@ editor: markdown
 - [Roadmap *See planned feature / improvements for future releases.*](/releases/roadmap)
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
-
-# Upcoming - 2.6
-
-### Planned
-
-- API Editor *(REST/GraphQL)*
-- Create Redirect Page
-- Draw&#46;io Diagrams Integration for Visual Editor
 
 # DEV - 2.5
 
