@@ -2,8 +2,9 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2019-09-15T02:39:42.263Z
-tags: 
+date: 2020-08-22T00:33:32.721Z
+tags: auth
+editor: markdown
 ---
 
 Authentication modules allows for secure and simple login.
@@ -53,3 +54,42 @@ Finally, select the group new users will be assigned to the first time they log 
 Click **Apply** to save the configuration.
 
 ![](https://a.icons8.com/dhhZkYZk/0ICOP9/svg.svg){.align-abstopright}
+
+# Two-Factor Authentication
+
+> This feature is available from version **2.5 and up**.
+{.is-info}
+
+Two-Factor Authentication (2FA) adds an extra layer of protection to user accounts. It combines something you know *(your password)* with something you have *(mobile phone, fingerprint, security key, etc.)*.
+
+Even if a malicious user obtain your password, he will be unable to login because he doesn't have the second authentication factor.
+
+## Getting Started
+
+2FA can be enabled globally to all users or on per-user basis.
+
+### Global
+
+To force all users to use 2FA on their account, go to the **Administration Area** and click on **Security** in the sidebar navigation.
+
+Enable the **Enforce 2FA** option and click **Apply**.
+
+All users will be required to setup 2FA on their account the next time they login.
+
+### Per User
+
+In the **Administration Area**, click on **Users** in the sidebar navigation.
+
+Select the user to edit and click on the **ON** switch next to the **Two Factor Authentication** row.
+
+The user will be required to setup 2FA on their account the next time they login.
+
+## Supported Methods
+
+- **OTP (One-Time Passwords)** <i class="mdi mdi-check green--text"></i>
+	- TOTP *(Authy, Google Authenticator, Microsoft Authenticator)*{.caption} <i class="mdi mdi-check green--text"></i>
+- **WebAuthn** <i class="mdi mdi-clock-outline orange--text"></i> *(Coming in a future update)*{.caption .orange--text .text--darken-3}
+	- Windows Hello
+  - FIDO2 *(Yubikey 5)*{.caption}
+  - FIDO U2F *(Yubikey 4 and earlier, Google Titan Key)*{.caption}
+- **SMS Codes** <i class="mdi mdi-close red--text"></i> *(No plan to support in the future. This method is **unsafe** and unreliable.)*{.caption .red--text}
