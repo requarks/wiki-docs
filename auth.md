@@ -2,7 +2,7 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2020-08-22T03:42:26.187Z
+date: 2020-08-22T03:51:27.316Z
 tags: auth
 editor: markdown
 ---
