@@ -2,7 +2,7 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2020-08-22T03:51:27.316Z
+date: 2020-08-22T03:53:50.723Z
 tags: auth
 editor: markdown
 ---
@@ -83,6 +83,9 @@ In the **Administration Area**, click on **Users** in the sidebar navigation.
 Select the user to edit and click on the **ON** switch next to the **Two Factor Authentication** row.
 
 The user will be required to setup 2FA on their account the next time they login.
+
+> At the moment, only the administrator can enable 2FA for a user. Users will be able to self-enable 2FA in a future release.
+{.is-info}
 
 ## Supported Methods
 
