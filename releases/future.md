@@ -1,8 +1,8 @@
 ---
-title: Future Releases
-description:  Long term plans and future major releases
+title: Roadmap
+description: Planned features / improvements for future releases
 published: true
-date: 2020-07-25T19:28:04.692Z
+date: 2020-08-22T17:50:53.889Z
 tags: 
 editor: markdown
 ---
