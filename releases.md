@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-08-22T17:52:59.473Z
+date: 2020-08-22T18:23:45.590Z
 tags: 
 editor: markdown
 ---
@@ -24,6 +24,8 @@ editor: markdown
 
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
+
+<i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 
 ### Major Features
 
