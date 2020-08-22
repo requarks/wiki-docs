@@ -2,7 +2,7 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2020-08-22T00:33:32.721Z
+date: 2020-08-22T03:42:26.187Z
 tags: auth
 editor: markdown
 ---
@@ -60,7 +60,7 @@ Click **Apply** to save the configuration.
 > This feature is available from version **2.5 and up**.
 {.is-info}
 
-Two-Factor Authentication (2FA) adds an extra layer of protection to user accounts. It combines something you know *(your password)* with something you have *(mobile phone, fingerprint, security key, etc.)*.
+Two-Factor Authentication (2FA) adds an extra layer of protection to user accounts. It combines something you know *(your password)* with something you have / are *(mobile phone, fingerprint, security key, etc.)*.
 
 Even if a malicious user obtain your password, he will be unable to login because he doesn't have the second authentication factor.
 
@@ -88,8 +88,8 @@ The user will be required to setup 2FA on their account the next time they login
 
 - **OTP (One-Time Passwords)** <i class="mdi mdi-check green--text"></i>
 	- TOTP *(Authy, Google Authenticator, Microsoft Authenticator)*{.caption} <i class="mdi mdi-check green--text"></i>
-- **WebAuthn** <i class="mdi mdi-clock-outline orange--text"></i> *(Coming in a future update)*{.caption .orange--text .text--darken-3}
+- **WebAuthn** <i class="mdi mdi-clock-outline orange--text"></i> *(Planned for a future update)*{.caption .orange--text .text--darken-3}
 	- Windows Hello
   - FIDO2 *(Yubikey 5)*{.caption}
   - FIDO U2F *(Yubikey 4 and earlier, Google Titan Key)*{.caption}
-- **SMS Codes** <i class="mdi mdi-close red--text"></i> *(No plan to support in the future. This method is **unsafe** and unreliable.)*{.caption .red--text}
+- **SMS Codes** <i class="mdi mdi-close red--text"></i> *(No plan to support in the future as this method is **unsafe** and unreliable.)*{.caption .red--text}
