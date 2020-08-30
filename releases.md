@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-08-30T05:37:45.063Z
+date: 2020-08-30T18:19:20.524Z
 tags: 
 editor: markdown
 ---
@@ -38,7 +38,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
   - Hide Local Provider
 - OAuth2 Authentication Module <i class="mdi mdi-shovel brown--text"></i>
 - OpenID Connect Authentication Module <i class="mdi mdi-shovel brown--text"></i>
-- 2FA (Two-Factor Authentication) <i class="mdi mdi-shovel brown--text"></i>
+- 2FA (Two-Factor Authentication)
 - Per-Group Redirection on Successful Login
 - Per-Page JS Scripts + CSS Styles
 - Page Publishing State (start/end date, private)
