@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-08-30T20:25:05.223Z
+date: 2020-09-02T01:45:11.053Z
 tags: 
 editor: markdown
 ---
@@ -25,7 +25,9 @@ editor: markdown
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
+<!--
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
+-->
 
 ### Major Features
 
@@ -36,8 +38,8 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
   - Bypass Login Screen
   - Customize Login Background
   - Hide Local Provider
-  - Reset Password <i class="mdi mdi-shovel brown--text"></i>
-- OpenID Connect Authentication Module
+  - Reset Password
+- OpenID Connect Authentication Module ([#2282](https://github.com/Requarks/wiki/issues/2282))
 - 2FA (Two-Factor Authentication)
 - Per-Group Redirection on Successful Login
 - Per-Page JS Scripts + CSS Styles
@@ -65,7 +67,9 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 
 - **Fixed:** Sideloaded locales are now processed before server starts. ([#1248](https://github.com/Requarks/wiki/issues/1248))
 - **Fixed:** Include the locale code in sidebar browse links. ([#1807](https://github.com/Requarks/wiki/issues/1807))
+- **Fixed:** Logout can now trigger Keycloak logout endpoint. ([#1934](https://github.com/Requarks/wiki/issues/1934))
 - **Fixed:** Some links were not reconnected correctly during page move. ([#1991](https://github.com/Requarks/wiki/issues/1991))
+- **Fixed:** Unauthorized admin access now returns status code 403 instead of 200. ([#2041](https://github.com/Requarks/wiki/issues/2041))
 - **Fixed:** Use config value for tokenRenewal expiration. ([#2042](https://github.com/Requarks/wiki/issues/2042))
 - **Fixed:** Editing buttons are no longer shown for pages the user doesn't have access to. ([#2043](https://github.com/Requarks/wiki/issues/2043))
 - **Fixed:** Use first email address when retrieving multiple from LDAP. ([#2051](https://github.com/Requarks/wiki/issues/2051))
@@ -74,6 +78,15 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Deactivated users can no longer renew active tokens. ([#2105](https://github.com/Requarks/wiki/issues/2105))
 - **Fixed:** Discord module was updated to use new endpoint URL. ([#2117](https://github.com/Requarks/wiki/issues/2117))
 - **Fixed:** User is now added correctly via git when deleting a page. ([#2132](https://github.com/Requarks/wiki/issues/2132))
+- **Fixed:** Navigation resolver is no longer public. ([#2178](https://github.com/Requarks/wiki/issues/2178))
+- **Fixed:** Locale is now set correctly on edit, history and source pages. ([#2194](https://github.com/Requarks/wiki/issues/2194))
+- **Fixed:** Pages with comments can now be deleted successfully. ([#2199](https://github.com/Requarks/wiki/issues/2199))
+- **Fixed:** Search results can now scroll on overflow. ([#2232](https://github.com/Requarks/wiki/issues/2232))
+- **Fixed:** Tags can now be fetched in the page GraphQL resolver. ([#2247](https://github.com/Requarks/wiki/issues/2247))
+- **Fixed:** DB Password is now injected with surrounding quotes in docker config. ([#2293](https://github.com/Requarks/wiki/issues/2293))
+- **Fixed:** Site title is now stripped of illegal characters upon saving. ([#2315](https://github.com/Requarks/wiki/issues/2315))
+- **Fixed:** Error UserDeleteForeignConstraint is now reporting the correct type. ([#2331](https://github.com/Requarks/wiki/issues/2331))
+- **Fixed:** Creation date is now included in content dump metadata. ([#2345](https://github.com/Requarks/wiki/issues/2345))
 - **Fixed:** Any user / group modification now forces tokens to be revalidated on the next request.
 - **Fixed:** A server restart / new instance forces tokens to be revalidated if issued before server start.
 - **Fixed:** Matomo module siteId is now set correctly for users with javascript disabled.
