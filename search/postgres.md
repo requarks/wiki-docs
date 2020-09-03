@@ -25,7 +25,7 @@ CREATE EXTENSION pg_trgm;
 
 1. In the Wiki.js administration area, click on **Search Engine** in the sidebar.
 1. Select **DB - PostgreSQL** as the search engine.
-1. Select the dictionnary language to use in the dropdown list.
+1. Select the dictionary language to use in the dropdown list.
 1. Click the **Apply** button to save and initialize the search engine. An index will be created automatically.
 
 Note that if you already have content in your wiki, you must click on **Rebuild Index** afterwards to import all your existing content into the search engine. Any change (new, edit, delete page) will be handled automatically from this point forward.
