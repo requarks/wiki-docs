@@ -2,9 +2,10 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-02T01:45:11.053Z
+date: 2020-09-04T01:08:30.984Z
 tags: 
 editor: markdown
+dateCreated: 2019-05-26T03:34:27.819Z
 ---
 
 <!-- - [Current Development Roadmap *View the tasks currently being worked on and their status for the next release.*](/releases/current) -->
@@ -12,11 +13,13 @@ editor: markdown
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
 
-# DEV - 2.5
+<!--
+# DEV - 3.0
 
 > This build is **under active development** and has not yet been released.
-> **ETA: September 2020**
+> **ETA: Q4 2020**
 {.is-warning}
+-->
 
 <!--
 > This is a **BETA** release and should **NOT** be used in production environments!
@@ -28,6 +31,16 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 <!--
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 -->
+
+# BETA - 2.5
+
+> This is a **BETA** release and should **NOT** be used in production environments!
+{.is-warning}
+
+Use the following docker image *(based on your platform)* for testing:
+- Linux / macOS / Windows x64: `requarks/wiki:beta`
+- ARM: `requarks/wiki:beta-arm`
+- ARM64: `requarks/wiki:beta-arm64`
 
 ### Major Features
 
