@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-04T01:08:30.984Z
+date: 2020-09-06T21:29:12.861Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -75,6 +75,7 @@ Use the following docker image *(based on your platform)* for testing:
 - Improved display for Tabsets in Markdown Editor preview
 - Added MultiMarkdown Tables capabilities to Markdown Editor
 - Code Folding for Markdown Editor
+- Purge History Utility
 
 ### Bug Fixes
 
@@ -98,8 +99,10 @@ Use the following docker image *(based on your platform)* for testing:
 - **Fixed:** Tags can now be fetched in the page GraphQL resolver. ([#2247](https://github.com/Requarks/wiki/issues/2247))
 - **Fixed:** DB Password is now injected with surrounding quotes in docker config. ([#2293](https://github.com/Requarks/wiki/issues/2293))
 - **Fixed:** Site title is now stripped of illegal characters upon saving. ([#2315](https://github.com/Requarks/wiki/issues/2315))
+- **Fixed:** Prevent chrome from autofilling username in searchbar. ([#2324](https://github.com/Requarks/wiki/issues/2324))
 - **Fixed:** Error UserDeleteForeignConstraint is now reporting the correct type. ([#2331](https://github.com/Requarks/wiki/issues/2331))
 - **Fixed:** Creation date is now included in content dump metadata. ([#2345](https://github.com/Requarks/wiki/issues/2345))
+- **Fixed:** Elasticsearch APM RUM client script now loads correctly. ([#2352](https://github.com/Requarks/wiki/issues/2352))
 - **Fixed:** Any user / group modification now forces tokens to be revalidated on the next request.
 - **Fixed:** A server restart / new instance forces tokens to be revalidated if issued before server start.
 - **Fixed:** Matomo module siteId is now set correctly for users with javascript disabled.
