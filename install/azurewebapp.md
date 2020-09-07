@@ -75,3 +75,23 @@ We can now create the App Service where our wiki will run.
 1. Follow the instructions to create the admin account and start using your wiki.
 
 ![](https://a.icons8.com/cqaghpTd/Zi0crm/svg.svg){.align-abstopright}
+
+# 4. Troubleshooting
+
+## 4.1 431 Request Header Fields Too Large Issues 
+
+Enabling App Service Authentication in Azure Cloud might cause you to get Request Header Fields Too Large errors.  
+To fix this:
+1. Navigate to **Configuration**
+1. Add the following **Application Settings**:
+   ```
+   WEBSITE_AUTH_DISABLE_IDENTITY_FLOW: true
+   ```
+
+The issue can re-appear for graphql queries if enabling SAML 2.0 authentication in WikiJS, even with above fix.  
+To solve that we need to increase the max header size for NodeJS.
+1. Navigate to **Configuration**
+1. Add the following **Application Settings**:
+   ```
+   NODE_OPTIONS: --max-http-header-size=81920
+   ```
