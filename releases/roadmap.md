@@ -2,9 +2,10 @@
 title: Roadmap
 description: Planned features / improvements for future releases
 published: true
-date: 2020-08-30T05:39:07.833Z
+date: 2020-09-07T00:37:52.580Z
 tags: 
 editor: markdown
+dateCreated: 2020-02-02T21:19:26.210Z
 ---
 
 This page list possible important features and refactoring ideas for future major versions.
@@ -14,7 +15,20 @@ This page list possible important features and refactoring ideas for future majo
 
 [Suggest new features / improvements](https://requarks.canny.io/wiki)
 
-# 2.x
+# 3.0
+
+## Switch to a full SPA model for navigation
+
+At the moment, only the administration area is using a SPA navigation model (switch views without reloading the page). Standard view pages don't use this model for easier SEO.
+
+In 3.x, site-wide SPA should be implemented in addition to server-side rendering of page contents.
+
+## Switch to Quasar Vue framework
+
+- Allows for easier server-side rendering and mobile capabilities.
+- Better components *(specifically the table component)*
+
+# 3.x
 
 ## Authentication
 - Account Linking
@@ -76,19 +90,6 @@ This page list possible important features and refactoring ideas for future majo
 - Page Rating
 - Embed mode for Pages
 - Messaging System
-
-# 3.x
-
-## Switch to a full SPA model for navigation
-
-At the moment, only the administration area is using a SPA navigation model (switch views without reloading the page). Standard view pages don't use this model for easier SEO.
-
-In 3.x, site-wide SPA should be implemented in addition to server-side rendering of page contents.
-
-## Switch to Quasar Vue framework
-
-- Allows for easier server-side rendering and mobile capabilities.
-- Better components *(specifically the table component)*
 
 # 4.x
 
