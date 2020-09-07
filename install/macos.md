@@ -2,7 +2,7 @@
 title: macOS
 description: Getting started with a Wiki.js installation on macOS
 published: true
-date: 2020-09-07T00:39:03.890Z
+date: 2020-09-07T19:36:45.168Z
 tags: setup
 editor: markdown
 dateCreated: 2019-05-04T04:13:20.311Z
@@ -15,7 +15,7 @@ Before going any further, make sure your system meets all the [requirements](/in
 1. Open **Terminal**.
 2. Download the latest version of Wiki.js:
   ```bash
-  wget https://github.com/Requarks/wiki/releases/download/2.5.117/wiki-js.tar.gz
+  wget https://github.com/Requarks/wiki/releases/download/2.5.121/wiki-js.tar.gz
   ```
 3. Extract the package to the final destination of your choice:
   ```bash
