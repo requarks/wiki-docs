@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-07T00:37:11.513Z
+date: 2020-09-08T00:21:41.850Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -36,12 +36,19 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 -->
 
-# STABLE - 2.5.117
+# STABLE - 2.5.126
 
-> Released on **September 6th, 2020**
+> Initially released on **September 6th, 2020** as `2.5.117`.
+> Hotfix `2.5.126` was released on **September 7th, 2020**.
 {.is-info}
 
-### Major Features
+### Hotfix 1 *(2.5.126)*{.caption}
+- **Fixed:** LDAP user avatar binary is now processed correctly. ([#849](https://github.com/Requarks/wiki/issues/849))
+- **Fixed:** Login page is no longer empty on new installations. ([#2375](https://github.com/Requarks/wiki/issues/2375))
+- **Fixed:** LDAP authentication is now passing strategy ID correctly. ([#2378](https://github.com/Requarks/wiki/issues/2378))
+- **Fixed:** Discord auth is now using the updated endpoint URL. ([#2390](https://github.com/Requarks/wiki/issues/2390))
+
+### Major Features *(2.5.117)*{.caption}
 
 - New Login Experience
 	- Add multiple instances of the same authentication strategy
@@ -58,7 +65,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Page Publishing State (start/end date, private)
 - Draw&#46;io Diagrams Integration for Markdown Editor
 
-### Minor Improvements
+### Minor Improvements *(2.5.117)*{.caption}
 
 - Image prefetching module for Kroki / PlantUML svg images.
 - Optional underline parsing for Markdown using `_foo_` syntax.
@@ -76,7 +83,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - Code Folding for Markdown Editor
 - Purge History Utility
 
-### Bug Fixes
+### Bug Fixes *(2.5.117)*{.caption}
 
 - **Fixed:** Sideloaded locales are now processed before server starts. ([#1248](https://github.com/Requarks/wiki/issues/1248))
 - **Fixed:** Include the locale code in sidebar browse links. ([#1807](https://github.com/Requarks/wiki/issues/1807))
