@@ -2,9 +2,10 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2020-08-22T03:53:50.723Z
+date: 2020-09-08T15:58:04.399Z
 tags: auth
 editor: markdown
+dateCreated: 2019-04-29T00:57:43.566Z
 ---
 
 Authentication modules allows for secure and simple login.
@@ -29,8 +30,7 @@ Most strategies require some configuration. Check out the links below for module
 - [LDAP / Active Directory](/auth/ldap)
 - [Local](/auth/local)
 - Microsoft
-- Generic OAuth2
-- Generic OpenID
+- Generic OpenID / OAuth2
 - [Okta](/auth/okta)
 - [SAML 2.0](/auth/saml)
 - [Slack](/auth/slack)
@@ -96,3 +96,28 @@ The user will be required to setup 2FA on their account the next time they login
   - FIDO2 *(Yubikey 5)*{.caption}
   - FIDO U2F *(Yubikey 4 and earlier, Google Titan Key)*{.caption}
 - **SMS Codes** <i class="mdi mdi-close red--text"></i> *(No plan to support in the future as this method is **unsafe** and unreliable.)*{.caption .red--text}
+
+# Customize Login Flow
+
+It's possible to modify how the login experience is presented to the user from the **Administration Area** > **Security** section:
+
+## Login Background Image
+
+An alternate image background can be set for the login screen. Enter the full path to an image *(.jpg / .png)*.
+
+> Note that if you upload an image directly to the wiki, you must ensure that this path is accessible to guest users! It's recommended to upload the image to a dedicated asset folder and give `read:assets` permission to that folder path on the **Guests** group.
+{.is-warning}
+
+## Bypass Login Screen
+
+When using a social provider *(e.g. Google authentication)*, you may want to skip the login screen altogether and redirect the user directly to the social provider for a faster login.
+
+> You can always access the login screen even when this option is enabled by adding `/all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
+{.is-info}
+
+## Hide Local Provider
+
+If you have multiple authentication providers enabled but wish to hide the default local provider, you can enable this option to hide it.
+
+> You can always unhide it when this option is enabled by adding `/all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
+{.is-info}
