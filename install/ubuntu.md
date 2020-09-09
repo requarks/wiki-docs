@@ -2,14 +2,15 @@
 title: Install on Ubuntu 18.04 LTS
 description: Complete A to Z guide to setup a fully functioning Wiki.js installation
 published: true
-date: 2020-08-25T15:55:40.273Z
+date: 2020-09-09T01:33:38.511Z
 tags: setup, guide
 editor: markdown
+dateCreated: 2019-12-23T18:29:29.240Z
 ---
 
 # Overview
 
-This guide is a fully detailed guide to install everything necessary to run Wiki.js on a brand new Ubuntu 18.04 LTS machine.
+This guide is a fully detailed guide to install everything necessary to run Wiki.js on a brand new Ubuntu 18.04 / 20.04 LTS machine.
 
 ## What's Included
 
