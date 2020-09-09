@@ -1,8 +1,8 @@
 ---
-title: Install on Ubuntu 18.04 LTS
+title: Install on Ubuntu 18.04 / 20.04 LTS
 description: Complete A to Z guide to setup a fully functioning Wiki.js installation
 published: true
-date: 2020-09-09T01:33:38.511Z
+date: 2020-09-09T01:35:44.054Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-12-23T18:29:29.240Z
