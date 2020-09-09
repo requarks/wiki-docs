@@ -2,9 +2,10 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2020-06-28T23:58:51.228Z
+date: 2020-09-09T01:36:06.289Z
 tags: setup
 editor: markdown
+dateCreated: 2019-02-15T04:22:28.058Z
 ---
 
 > Before going any further, make sure you meet all the [requirements](/install/requirements).
@@ -25,7 +26,7 @@ editor: markdown
 {.links-list}
 
 ## Other Guides
-- [Install on Ubuntu 18.04 LTS *Complete Installation Guide with DB setup*](/install/ubuntu)
+- [Install on Ubuntu 18.04 / 20.04 LTS *Complete Installation Guide with DB setup*](/install/ubuntu)
 - [Install on Azure Web App](/install/azurewebapp)
 - [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
 - [Install using Portainer](/install/portainer)
