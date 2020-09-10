@@ -2,7 +2,7 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2020-09-08T15:58:04.399Z
+date: 2020-09-10T18:51:33.063Z
 tags: auth
 editor: markdown
 dateCreated: 2019-04-29T00:57:43.566Z
@@ -112,12 +112,12 @@ An alternate image background can be set for the login screen. Enter the full pa
 
 When using a social provider *(e.g. Google authentication)*, you may want to skip the login screen altogether and redirect the user directly to the social provider for a faster login.
 
-> You can always access the login screen even when this option is enabled by adding `/all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
+> You can always access the login screen even when this option is enabled by adding `?all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
 {.is-info}
 
 ## Hide Local Provider
 
 If you have multiple authentication providers enabled but wish to hide the default local provider, you can enable this option to hide it.
 
-> You can always unhide it when this option is enabled by adding `/all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
+> You can always unhide it when this option is enabled by adding `?all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
 {.is-info}
