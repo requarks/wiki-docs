@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-08T00:21:41.850Z
+date: 2020-09-11T03:35:46.726Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -36,11 +36,19 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 -->
 
-# STABLE - 2.5.126
+# STABLE - 2.5.132
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix `2.5.126` was released on **September 7th, 2020**.
+> Hotfix `2.5.132` was released on **September 10th, 2020**.
 {.is-info}
+
+### Hotfix 2 *(2.5.132)*{.caption}
+- **Fixed:** Users with `write:groups` permission can no longer self-promote their group to admin. ([#2294](https://github.com/Requarks/wiki/issues/2294))
+- **Fixed:** Added logout endpoint for OAuth2 / OpenIDConnect module. ([#2395](https://github.com/Requarks/wiki/issues/849))
+- **Fixed:** 2FA QR code now handles site names with invalid characters. ([#2397](https://github.com/Requarks/wiki/issues/849))
+- **Fixed:** Force lowercase for email address on local auth. ([#2400](https://github.com/Requarks/wiki/issues/2400))
+- **Fixed:** Permission validation no longer incorrectly fail for checks without page info. ([#2407](https://github.com/Requarks/wiki/issues/2407))
 
 ### Hotfix 1 *(2.5.126)*{.caption}
 - **Fixed:** LDAP user avatar binary is now processed correctly. ([#849](https://github.com/Requarks/wiki/issues/849))
