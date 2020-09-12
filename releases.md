@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-11T03:35:46.726Z
+date: 2020-09-12T18:48:51.169Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -36,12 +36,18 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 -->
 
-# STABLE - 2.5.132
+# STABLE - 2.5.136
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
-> Hotfix `2.5.126` was released on **September 7th, 2020**.
-> Hotfix `2.5.132` was released on **September 10th, 2020**.
+> Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
+> Hotfix 2 - `2.5.132` was released on **September 10th, 2020**.
+> Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
 {.is-info}
+
+### Hotfix 3 *(2.5.136)*{.caption}
+- **Fixed:** Draw-io diagrams with texts linebreaks are no longer removed. ([#2415](https://github.com/Requarks/wiki/issues/2415))
+- **Fixed:** Admins with `manage:system` are longer blocked from editing / assign users to elevated groups. ([#2424](https://github.com/Requarks/wiki/issues/2378))
+- **Fixed:** API requests no longer fail / timeout due to token revalidation. ([#2426](https://github.com/Requarks/wiki/issues/2426))
 
 ### Hotfix 2 *(2.5.132)*{.caption}
 - **Fixed:** Users with `write:groups` permission can no longer self-promote their group to admin. ([#2294](https://github.com/Requarks/wiki/issues/2294))
