@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-09-13T03:46:34.085Z
+date: 2020-09-13T03:47:14.777Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T23:53:12.166Z
@@ -16,11 +16,13 @@ dateCreated: 2019-02-15T23:53:12.166Z
 
 Select your platform:
 
-# Platforms {.tabset}
+# In-place Upgrade
 
-## Docker <i class="mdi mdi-docker"></i>
+## Platforms {.tabset}
 
-### Standalone Container
+### Docker <i class="mdi mdi-docker"></i>
+
+#### Standalone Container
 
 Upgrading is simply a matter of recreating the container with the latest image version:
 
@@ -38,7 +40,7 @@ docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysq
 
 Check out the [Docker installation guide](/install/docker) for all the possible options when creating a Wiki.js container.
 
-### Docker Compose
+#### Docker Compose
 
 The following commands will pull the latest image and recreate the containers defined in the docker-compose file:
 
@@ -47,7 +49,7 @@ docker-compose pull wiki
 docker-compose up --force-recreate
 ```
 
-## Linux / macOS <i class="mdi mdi-ubuntu"></i>
+### Linux / macOS <i class="mdi mdi-ubuntu"></i>
 
 > The commands below assume an installation within a subfolder named `wiki`.
 {.is-info}
@@ -79,7 +81,7 @@ docker-compose up --force-recreate
   node server
   ```
 
-## Windows <i class="mdi mdi-microsoft-windows"></i>
+### Windows <i class="mdi mdi-microsoft-windows"></i>
 
 > The commands below assume an installation at folder location `C:\wiki`.
 {.is-info}
