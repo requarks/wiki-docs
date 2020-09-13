@@ -2,7 +2,7 @@
 title: Transfer Wiki.js between servers
 description: How to migrate your installation to a new server
 published: true
-date: 2020-09-13T17:45:14.456Z
+date: 2020-09-13T18:54:42.037Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-13T03:44:51.774Z
@@ -17,11 +17,15 @@ This guide assumes you're currently using a **PostgreSQL** database installation
 
 # 1. Setup New Server
 
+***Context:** New server*{.caption}
+
 Let's start by setting up the destination server. Follow the [Ubuntu installation guide](/install/ubuntu) up until the "**Access the setup wizard**" step *(don't do this step, stop right after starting the Docker containers)*.
 
 You should now have a fully setup server with a PostgreSQL database, a Wiki.js installation and the Wiki.js auto-updater all running in Docker containers.
 
 # 2. Backup Database
+
+***Context:** Old server*{.caption}
 
 On your old server where your previous installation is located, make a full database dump:
 ```bash
@@ -34,6 +38,8 @@ This will create a new file `wikibackup.sql` in the current directory.
 
 # 3. Transfer Backup
 
+***Context:** Old server*{.caption}
+
 We'll now transfer the backup file onto the new server. There're several methods to copy files between servers but we'll use rsync for this example. Replace `YOUR-NEW-SERVER-IP` in the command below with the IP address of your new server.
 
 ```bash
@@ -45,9 +51,11 @@ rsync -P wikibackup.dump root@YOUR-NEW-SERVER-IP:~/wikibackup.dump
 
 # 4. Restore Database
 
+***Context:** New server*{.caption}
+
 We're now ready to restore the database dump into the new database.
 
-First, let's stop the `wiki` docker container:
+On the new server, stop the `wiki` docker container:
 
 ```bash
 docker stop wiki
