@@ -2,7 +2,7 @@
 title: Transfer Wiki.js between servers
 description: How to migrate your installation to a new server
 published: true
-date: 2020-09-13T03:44:51.774Z
+date: 2020-09-13T17:45:14.456Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-13T03:44:51.774Z
