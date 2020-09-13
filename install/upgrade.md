@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-09-12T20:32:19.749Z
+date: 2020-09-13T03:46:34.085Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T23:53:12.166Z
@@ -117,5 +117,9 @@ docker-compose up --force-recreate
   ```powershell
   node server
   ```
+  
+# Migrate between servers
+
+Read the [transfer between servers](/install/transfer) guide to learn how to move an existing 2.x Wiki.js installation to a new server.
 
 ![](https://a.icons8.com/YTSPoggQ/4CQtQD/svg.svg){.align-abstopright}
