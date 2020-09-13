@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2020-09-13T03:47:14.777Z
+date: 2020-09-13T03:50:33.320Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T23:53:12.166Z
@@ -14,9 +14,9 @@ dateCreated: 2019-02-15T23:53:12.166Z
 > While upgrades are generally safe and it's very unlikely that it would result in data loss, **it's your responsibility to have a proper backup of your database before performing an upgrade.** Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
 {.is-warning}
 
-Select your platform:
-
 # In-place Upgrade
+
+Select your platform:
 
 ## Platforms {.tabset}
 
@@ -123,5 +123,8 @@ docker-compose up --force-recreate
 # Migrate between servers
 
 Read the [transfer between servers](/install/transfer) guide to learn how to move an existing 2.x Wiki.js installation to a new server.
+
+> Note that the new server Wiki.js version doesn't need to match the old server. The installation will automatically be updated to the latest version upon restore. For example, it's perfectly safe to migrate a 2.2 installation on the old server to 2.5 on the new server.
+{.is-info}
 
 ![](https://a.icons8.com/YTSPoggQ/4CQtQD/svg.svg){.align-abstopright}
