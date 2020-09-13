@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-12T18:48:51.169Z
+date: 2020-09-13T21:51:54.136Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -23,6 +23,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 	- Site-wide SPA
   - Server-side rendering
   - Progressive Web App support
+  - Theming
   - Improved UI (notifications)
 
 <!--
