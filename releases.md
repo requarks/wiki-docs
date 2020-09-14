@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-13T21:51:54.136Z
+date: 2020-09-14T04:10:11.926Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -37,13 +37,22 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 -->
 
-# STABLE - 2.5.136
+# STABLE - 2.5.144
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
 > Hotfix 2 - `2.5.132` was released on **September 10th, 2020**.
 > Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
+> Hotfix 3 - `2.5.144` was released on **September 14th, 2020**.
 {.is-info}
+
+### Hotfix 4 *(2.5.144)*{.caption}
+- **Fixed:** Security rendering module no longer strips `allow` attribute when iframes are whitelisted. ([#2354](https://github.com/Requarks/wiki/issues/2354))
+- **Fixed:** Basic search engine now supports tags permission filtering. ([#2416](https://github.com/Requarks/wiki/issues/2416))
+- **Fixed:** Download button for locales is no longer hidden on smaller screens. ([#2429](https://github.com/Requarks/wiki/issues/2429))
+- **Fixed:** Custom login backgrounds selected from the upload asset dialog are now set correctly. ([#2437](https://github.com/Requarks/wiki/issues/2437))
+- **Fixed:** All strings are now localized on the login page and select page dialog. ([#2438](https://github.com/Requarks/wiki/issues/2438), [#2439](https://github.com/Requarks/wiki/issues/2439))
+- **Fixed:** All authentication provider icons are now in their proper color formats. ([#2441](https://github.com/Requarks/wiki/issues/2441))
 
 ### Hotfix 3 *(2.5.136)*{.caption}
 - **Fixed:** Draw-io diagrams with texts linebreaks are no longer removed. ([#2415](https://github.com/Requarks/wiki/issues/2415))
