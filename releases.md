@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-14T04:10:11.926Z
+date: 2020-09-20T19:08:33.691Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -19,22 +19,24 @@ dateCreated: 2019-05-26T03:34:27.819Z
 > **ETA: Q4 2020**
 {.is-warning}
 
-- Migrate to Quasar Vue framework
+<i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
+
+- Migrate to Quasar Vue framework <i class="mdi mdi-shovel brown--text"></i>
 	- Site-wide SPA
   - Server-side rendering
   - Progressive Web App support
   - Theming
   - Improved UI (notifications)
+- Remove heavy / deprecated dependencies:
+	- Moment.js <i class="mdi mdi-check green--text"></i>
+  - Winston <i class="mdi mdi-check green--text"></i>
+- Remove setup step + dual boot system <i class="mdi mdi-shovel brown--text"></i>
 
 <!--
 > This is a **BETA** release and should **NOT** be used in production environments!
 {.is-warning}
 
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
--->
-
-<!--
-<i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
 -->
 
 # STABLE - 2.5.144
