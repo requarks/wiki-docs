@@ -46,7 +46,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
 > Hotfix 2 - `2.5.132` was released on **September 10th, 2020**.
 > Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
-> Hotfix 3 - `2.5.144` was released on **September 14th, 2020**.
+> Hotfix 4 - `2.5.144` was released on **September 14th, 2020**.
 {.is-info}
 
 ### Hotfix 4 *(2.5.144)*{.caption}
