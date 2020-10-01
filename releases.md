@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-09-20T19:08:33.691Z
+date: 2020-10-01T03:51:06.732Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -31,6 +31,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 	- Moment.js <i class="mdi mdi-check green--text"></i>
   - Winston <i class="mdi mdi-check green--text"></i>
 - Remove setup step + dual boot system <i class="mdi mdi-shovel brown--text"></i>
+- Migrate to Azure Pipelines YAML format <i class="mdi mdi-check green--text"></i>
 
 <!--
 > This is a **BETA** release and should **NOT** be used in production environments!
