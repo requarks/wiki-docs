@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-10-01T03:51:06.732Z
+date: 2020-10-03T22:55:00.867Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -40,14 +40,26 @@ dateCreated: 2019-05-26T03:34:27.819Z
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
-# STABLE - 2.5.144
+# STABLE - 2.5.159
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
 > Hotfix 2 - `2.5.132` was released on **September 10th, 2020**.
 > Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
 > Hotfix 3 - `2.5.144` was released on **September 14th, 2020**.
+> Hotfix 3 - `2.5.159` was released on **October 3rd, 2020**.
 {.is-info}
+
+### Hotfix 5 *(2.5.159)*{.caption}
+- Added Rocket.chat authentication module
+- **Fixed:** Asset directory traversal with some storage modules. ([GHSA-whpv-5xg2-w527](https://github.com/Requarks/wiki/security/advisories/GHSA-whpv-5xg2-w527))
+- **Fixed:** Tabsets tabs can now be scrolled when view is too small. ([#2442](https://github.com/Requarks/wiki/issues/2442))
+- **Fixed:** Markdown editor URL autocompletion misbehaving in certain scenarios. ([#2452](https://github.com/Requarks/wiki/issues/2452))
+- **Fixed:** Bypass auth redirect cookie when set to homepage. ([#2478](https://github.com/Requarks/wiki/issues/2478))
+- **Fixed:** Handle missing extra field during page render. ([#2499](https://github.com/Requarks/wiki/issues/2499))
+- **Fixed:** Set enableArithAbort explicit value for tedious driver. ([#2510](https://github.com/Requarks/wiki/issues/2510))
+- **Fixed:** Check for email array during processProfile. ([#2515](https://github.com/Requarks/wiki/issues/2515))
+- **Fixed:** Updated Matomo integration client code. ([#2526](https://github.com/Requarks/wiki/issues/2526))
 
 ### Hotfix 4 *(2.5.144)*{.caption}
 - **Fixed:** Security rendering module no longer strips `allow` attribute when iframes are whitelisted. ([#2354](https://github.com/Requarks/wiki/issues/2354))
