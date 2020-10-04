@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-10-03T22:55:00.867Z
+date: 2020-10-04T17:07:47.572Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -46,8 +46,8 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
 > Hotfix 2 - `2.5.132` was released on **September 10th, 2020**.
 > Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
-> Hotfix 3 - `2.5.144` was released on **September 14th, 2020**.
-> Hotfix 3 - `2.5.159` was released on **October 3rd, 2020**.
+> Hotfix 4 - `2.5.144` was released on **September 14th, 2020**.
+> Hotfix 5 - `2.5.159` was released on **October 3rd, 2020**.
 {.is-info}
 
 ### Hotfix 5 *(2.5.159)*{.caption}
