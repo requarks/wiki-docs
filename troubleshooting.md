@@ -2,9 +2,10 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2020-06-09T16:50:05.133Z
+date: 2020-10-08T16:07:37.417Z
 tags: setup, guide
 editor: markdown
+dateCreated: 2019-04-08T05:56:27.927Z
 ---
 
 # Cannot upload files larger than X
@@ -64,6 +65,22 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 
 **Resolution**: Simply reload the page again.
 
+# How to manually disable HTTPS / SSL Redirection
+
+If you are unable to load the site because of a SSL certificate error, you can manually disable SSL Redirection.
+
+In the database, under the `settings` table, you must set the `sslRedir` property to false for the `server` key.
+Restart Wiki.js to load the new setting.
+
+### For docker users
+
+When running PostgreSQL inside a docker container (e.g. DigitalOcean / AWS official image), you can run the following commands:
+
+```bash
+docker exec db psql -U wiki -d wiki -c "DELETE FROM settings WHERE key = 'server';"
+docker restart wiki
+```
+
 # How to manually reset the admin password?
 
 The only way to change a password, without access to the web UI, is via the database. Use a tool like **pgAdmin** *(postgres)*, **DBeaver** *(mysql, mariadb)*, **SQL Management Studio** *(mssql)* or **DB Browser for SQLite**.
@@ -74,6 +91,18 @@ Edit the password column and insert a new **bcrypt**-formatted value. You can us
 
 > **It is NOT possible to read the current password value.** Passwords are stored using a one-way bcrypt hashing process, which is not reversible. You can only overwrite it with a new value.
 {.is-warning}
+
+### For docker users
+
+When running PostgreSQL inside a docker container (e.g. DigitalOcean / AWS official image), follow these steps:
+
+1. Use a tool like https://bcrypt-generator.com/ to generate a bcrypt hash of the password you want.
+2. Connect to your machine / droplet via SSH.
+3. Run the following command, replacing `HASH-PASSWORD` with the hash generated in step 1 and `YOUR-EMAIL` with the email address of the account you want to reset:
+
+```bash
+docker exec db psql -U wiki -d wiki -c "UPDATE users SET password = 'HASH-PASSWORD' WHERE email = 'YOUR-EMAIL';"
+```
 
 # Links inside emails are incorrect
 
