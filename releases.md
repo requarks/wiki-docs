@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-10-04T17:07:47.572Z
+date: 2020-10-12T21:15:23.932Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -27,10 +27,12 @@ dateCreated: 2019-05-26T03:34:27.819Z
   - Progressive Web App support
   - Theming
   - Improved UI (notifications)
+- Add multi-site support <i class="mdi mdi-shovel brown--text"></i>
 - Remove heavy / deprecated dependencies:
 	- Moment.js <i class="mdi mdi-check green--text"></i>
   - Winston <i class="mdi mdi-check green--text"></i>
-- Remove setup step + dual boot system <i class="mdi mdi-shovel brown--text"></i>
+- Fully separate UI and Server <i class="mdi mdi-check green--text"></i>
+- Remove setup step + dual boot system <i class="mdi mdi-check green--text"></i>
 - Migrate to Azure Pipelines YAML format <i class="mdi mdi-check green--text"></i>
 
 <!--
