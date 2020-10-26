@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-10-26T03:21:11.850Z
+date: 2020-10-26T03:35:26.337Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -42,7 +42,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
-# STABLE - 2.5.168
+# STABLE - 2.5.170
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -50,10 +50,10 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
 > Hotfix 4 - `2.5.144` was released on **September 14th, 2020**.
 > Hotfix 5 - `2.5.159` was released on **October 3rd, 2020**.
-> Hotfix 5 - `2.5.168` was released on **October 25th, 2020**.
+> Hotfix 6 - `2.5.170` was released on **October 25th, 2020**.
 {.is-info}
 
-### Hotfix 6 *(2.5.168)*{.caption}
+### Hotfix 6 *(2.5.170)*{.caption}
 - **Fixed:** Unescaped page title in search results. ([GHSA-pgjv-84m7-62q7](https://github.com/Requarks/wiki/security/advisories/GHSA-pgjv-84m7-62q7))
 - **Fixed:** Incorrect translation key for comments cancel button. ([#2543](https://github.com/Requarks/wiki/issues/2543))
 
