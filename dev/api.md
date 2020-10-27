@@ -162,7 +162,7 @@ Error codes in the **7xxx** range are dedicated to system related errors.
 
 ## Comments
 
-Error codes in the **7xxx** range are dedicated to comments related errors.
+Error codes in the **8xxx** range are dedicated to comments related errors.
 
 | Code | Slug | Message |
 |------|------------------|-------------------------------------------|
