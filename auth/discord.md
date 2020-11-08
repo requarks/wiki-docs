@@ -17,7 +17,7 @@ https://discordapp.com/
 1. Click on **New Application** and enter a **name** (e.g. Wiki). Click **Create**.
 1. Copy the **Client ID** and **Client Secret** values. We'll need them later.
 
-## B) Enable the Auth0 strategy in Wiki.js
+## B) Enable the Discord strategy in Wiki.js
 
 1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
 1. Click on **Discord**.
