@@ -6,7 +6,7 @@ date: 2019-09-15T02:39:01.946Z
 tags: 
 ---
 
-[Azure Active Directory (Azure AD)](](https://azure.microsoft.com/en-ca/services/active-directory/)) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources.
+[Azure Active Directory (Azure AD)](https://azure.microsoft.com/en-ca/services/active-directory/) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources.
 
 # Setup
 
