@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-11-23T04:26:34.405Z
+date: 2020-11-23T04:27:41.188Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -26,7 +26,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
   - Server-side rendering
   - Progressive Web App support
   - Theming
-  - Improved UI (notifications)
+  - Improved UI (notifications) <i class="mdi mdi-check green--text"></i>
 - Add multi-site support <i class="mdi mdi-shovel brown--text"></i>
 - Remove heavy / deprecated dependencies:
 	- Moment.js <i class="mdi mdi-check green--text"></i>
