@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2020-10-26T03:35:26.337Z
+date: 2020-11-23T04:26:34.405Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -16,7 +16,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 # DEV - 3.0
 
 > This build is **under active development** and has not yet been released.
-> **ETA: Q4 2020**
+> **ETA: Q1 2021**
 {.is-warning}
 
 <i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
