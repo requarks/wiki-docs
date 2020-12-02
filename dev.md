@@ -2,12 +2,13 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2020-06-12T20:30:09.946Z
+date: 2020-12-02T06:41:08.738Z
 tags: dev
 editor: markdown
+dateCreated: 2019-02-15T04:25:01.768Z
 ---
 
-Wiki.js is fully modular, which allows any developer to write their own module or theme.
+Wiki.js is fully modular, which allows any developer to write their own module.
 
 There are 3 methods to develop for Wiki.js. You can either use the dockerized development environment for VS Code *(recommended)*, a generic docker environment or install all dependencies manually on your machine.
 
