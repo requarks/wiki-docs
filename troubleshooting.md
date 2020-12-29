@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2020-10-08T16:07:37.417Z
+date: 2020-12-29T08:11:12.537Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-04-08T05:56:27.927Z
@@ -87,7 +87,7 @@ The only way to change a password, without access to the web UI, is via the data
 
 Connect to your DB, browse to the `users` table and locate your user.
 
-Edit the password column and insert a new **bcrypt**-formatted value. You can use a tool like https://bcrypt-generator.com/ to generate one.
+Edit the password column and insert a new **bcrypt**-formatted value. You can use a tool like https://bcrypt-generator.com/ to generate one. The number of rounds must be **12**.
 
 > **It is NOT possible to read the current password value.** Passwords are stored using a one-way bcrypt hashing process, which is not reversible. You can only overwrite it with a new value.
 {.is-warning}
@@ -96,7 +96,7 @@ Edit the password column and insert a new **bcrypt**-formatted value. You can us
 
 When running PostgreSQL inside a docker container (e.g. DigitalOcean / AWS official image), follow these steps:
 
-1. Use a tool like https://bcrypt-generator.com/ to generate a bcrypt hash of the password you want.
+1. Use a tool like https://bcrypt-generator.com/ to generate a bcrypt hash of the password you want. The number of rounds must be **12**.
 2. Connect to your machine / droplet via SSH.
 3. Run the following command, replacing `HASH-PASSWORD` with the hash generated in step 1 and `YOUR-EMAIL` with the email address of the account you want to reset:
 
