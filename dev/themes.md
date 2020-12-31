@@ -2,9 +2,10 @@
 title: Themes
 description: Customize the look & feel of your wiki
 published: true
-date: 2020-08-01T18:11:08.358Z
+date: 2020-12-31T19:11:02.344Z
 tags: 
 editor: markdown
+dateCreated: 2020-04-26T03:57:51.368Z
 ---
 
 # Overview
@@ -84,4 +85,4 @@ Run the build command:
 yarn build
 ```
 
-This will generate a new folder named `assets`. Copy + Paste this folder to your production server and restart your wiki.
+This will generate a new folder named `assets` along with views under the `/server/views` folder. Copy + Paste both folders to your production server and restart your wiki.
