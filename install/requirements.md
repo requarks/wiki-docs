@@ -2,9 +2,10 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2020-06-02T02:09:07.872Z
+date: 2021-02-04T04:29:14.808Z
 tags: setup
 editor: markdown
+dateCreated: 2019-02-15T04:21:32.940Z
 ---
 
 # Server Requirements
@@ -54,7 +55,7 @@ Wiki.js is also compatible with the following database systems:
 - ![](https://static.requarks.io/logo/sqlite-alt.svg =24x){.mr-2} SQLite **3.9 or later**
 {.grid-list}
 
-> **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* may not be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years.
+> **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* will NOT be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years. An export + import tool will be made available at / shortly after release.
 > 
 > SQLite is **not recommended** for production deployments.
 {.is-warning}
