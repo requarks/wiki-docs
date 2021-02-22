@@ -2,9 +2,10 @@
 title: Configuration
 description: Detailed configuration options for Wiki.js
 published: true
-date: 2020-08-16T00:28:21.594Z
+date: 2021-02-22T18:32:32.630Z
 tags: 
 editor: markdown
+dateCreated: 2020-01-12T21:12:06.291Z
 ---
 
 A config file, named `config.yml`, must be located at the root of your Wiki.js installation.
@@ -330,6 +331,39 @@ Wiki.js needs a folder to write temporary data. By default, this path is `./data
 
 ```yml
 dataPath: /path/to/directory
+```
+
+# ENV Variables Interpolation
+
+Any value can be replaced with `$(ENV_NAME)` to be interpolated at runtime with an environment variable.
+
+### Example
+
+Using the following `config.yml` example:
+```yaml
+db:
+  type: $(DB_TYPE)
+  host: '$(DB_HOST)'
+  port: $(DB_PORT)
+  user: '$(DB_USER)'
+  pass: '$(DB_PASS)'
+```
+and the following environment variables:
+- DB_TYPE=postgres
+- DB_HOST=db.example.com
+- DB_PORT=5432
+- DB_USER=wiki
+- DB_PASS=secret
+{.grid-list}
+
+would result in the following config being used at runtime:
+```yaml
+db:
+  type: postgres
+  host: 'db.example.com'
+  port: 5432
+  user: 'wiki'
+  pass: 'secret'
 ```
 
 # Sample Config File
