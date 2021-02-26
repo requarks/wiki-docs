@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-02-05T21:32:47.988Z
+date: 2021-02-26T06:04:11.058Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -16,7 +16,8 @@ dateCreated: 2019-05-26T03:34:27.819Z
 # DEV - 3.0
 
 > This build is **under active development** and has not yet been released.
-> **ETA: Q2 2021**
+>
+> **ETA: Beta planned for Summer 2021 with final release in Fall 2021**
 {.is-warning}
 
 > See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
