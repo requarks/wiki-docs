@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-02-26T06:04:11.058Z
+date: 2021-03-13T05:30:19.070Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -46,7 +46,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
-# STABLE - 2.5.170
+# STABLE - 2.5.190
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -55,7 +55,26 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 4 - `2.5.144` was released on **September 14th, 2020**.
 > Hotfix 5 - `2.5.159` was released on **October 3rd, 2020**.
 > Hotfix 6 - `2.5.170` was released on **October 25th, 2020**.
+> Hotfix 7 - `2.5.190` was released on **March 13th, 2021**.
 {.is-info}
+
+### Hotfix 7 *(2.5.190)*{.caption}
+- **Fixed:** Stored XSS through code blocks with mustache expressions. ([GHSA-6xx4-m8gx-826r](https://github.com/Requarks/wiki/security/advisories/GHSA-6xx4-m8gx-826r))
+- **Fixed:** Code blocks no longer show duplicate characters in print view. ([#2593](https://github.com/Requarks/wiki/issues/2593))
+- **Fixed:** Enable passport-azure-ad workaround for SameSite cookies. ([#2567](https://github.com/Requarks/wiki/issues/2567))
+- **Fixed:** Logo in emails is now an absolute URL if path is relative. ([#2628](https://github.com/Requarks/wiki/issues/2628))
+- **Fixed:** Set autocommit flag for MySQL. ([#2638](https://github.com/Requarks/wiki/issues/2638))
+- **Fixed:** Inline Math interpreted as attributes. ([#2645](https://github.com/Requarks/wiki/issues/2645))
+- **Fixed:** Improved ElasticSearch configuration + Draw.io display in RTL mode. ([#2647](https://github.com/Requarks/wiki/issues/2647))
+- **Fixed:** Special chars in tags are now parsed properly from URL. ([#2748](https://github.com/Requarks/wiki/issues/2748))
+- **Fixed:** Set analyzer for ElasticSearch module. ([#2793](https://github.com/Requarks/wiki/issues/2793))
+- **Fixed:** Search index is now updated properly when moving pages. ([#2815](https://github.com/Requarks/wiki/issues/2815))
+- **Fixed:** `write:scripts` and `write:styles` are now configurable in group permissions. ([#2829](https://github.com/Requarks/wiki/issues/2829))
+- **Fixed:** Tree rebuild no longer fails when batches are too large for SQLite. ([#2830](https://github.com/Requarks/wiki/issues/2830))
+- **Fixed:** Local Disk + Git modules now matches injectPageMetadata helper behavior. ([#2832](https://github.com/Requarks/wiki/issues/2832))
+- **Fixed:** Search results can now be opened in a new tab via middle-click. ([#2919](https://github.com/Requarks/wiki/issues/2919))
+- **Fixed:** LDAP auth module no longer incorrectly reads an empty TLS cert file. ([#2980](https://github.com/Requarks/wiki/issues/2980))
+- **Fixed:** Storage sync interval is now read from saved settings instead of module data. ([#3003](https://github.com/Requarks/wiki/issues/3003))
 
 ### Hotfix 6 *(2.5.170)*{.caption}
 - **Fixed:** Unescaped page title in search results. ([GHSA-pgjv-84m7-62q7](https://github.com/Requarks/wiki/security/advisories/GHSA-pgjv-84m7-62q7))
