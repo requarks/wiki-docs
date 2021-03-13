@@ -2,9 +2,10 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2020-06-05T21:16:19.234Z
+date: 2021-03-13T05:57:06.779Z
 tags: setup, docker
 editor: markdown
+dateCreated: 2019-02-15T04:23:08.720Z
 ---
 
 > Before proceeding, make sure you meet the [system requirements](/install/requirements).
@@ -117,7 +118,10 @@ Create a new file based on the [sample config file](https://github.com/Requarks/
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml requarks/wiki:2
 ```
 
-It's also possible to define an alternate location for the config file to be loaded from. This is useful in scenarios where you want to mount a configuration folder instead. Define the environment variable **CONFIG_FILE** with the path to the config file.
+It's also possible to define an alternate location for the config file to be loaded from, using the CONFIG_FILE env variable. This is useful in scenarios where you want to mount a configuration folder instead.
+
+- **CONFIG_FILE** : Path to the config.yml file
+{.grid-list}
 
 ## Change User Mode
 
