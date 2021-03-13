@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-03-13T05:30:19.070Z
+date: 2021-03-13T05:52:17.222Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -46,7 +46,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
-# STABLE - 2.5.190
+# STABLE - 2.5.191
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -55,10 +55,10 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 4 - `2.5.144` was released on **September 14th, 2020**.
 > Hotfix 5 - `2.5.159` was released on **October 3rd, 2020**.
 > Hotfix 6 - `2.5.170` was released on **October 25th, 2020**.
-> Hotfix 7 - `2.5.190` was released on **March 13th, 2021**.
+> Hotfix 7 - `2.5.191` was released on **March 13th, 2021**.
 {.is-info}
 
-### Hotfix 7 *(2.5.190)*{.caption}
+### Hotfix 7 *(2.5.191)*{.caption}
 - **Fixed:** Stored XSS through code blocks with mustache expressions. ([GHSA-6xx4-m8gx-826r](https://github.com/Requarks/wiki/security/advisories/GHSA-6xx4-m8gx-826r))
 - **Fixed:** Code blocks no longer show duplicate characters in print view. ([#2593](https://github.com/Requarks/wiki/issues/2593))
 - **Fixed:** Enable passport-azure-ad workaround for SameSite cookies. ([#2567](https://github.com/Requarks/wiki/issues/2567))
