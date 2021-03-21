@@ -2,8 +2,10 @@
 title: Git
 description: Storage Module
 published: true
-date: 2019-09-15T02:45:12.062Z
-tags: 
+date: 2021-03-21T00:41:57.739Z
+tags: module, storage
+editor: markdown
+dateCreated: 2019-02-17T22:58:31.273Z
 ---
 
 Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.
@@ -64,7 +66,7 @@ For convenience, instructions for the most popular Git providers are listed belo
 4. Enter the following settings:
    - Authentication Type: `ssh`
    - Repository URI: *On your GitHub repository page, in the **Code** tab, click on the **Clone or download** green button and copy the URI shown below **Clone with SSH**.*
-   - Branch: `master`
+   - Branch: `main`
    - SSH Private Key Path: *The path to your private key generated earlier.*
    - Username: *Empty*
    - Password: *Empty*
