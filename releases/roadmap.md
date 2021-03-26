@@ -2,7 +2,7 @@
 title: Roadmap
 description: Planned features / improvements for future releases
 published: true
-date: 2020-09-07T00:37:52.580Z
+date: 2021-03-26T18:52:25.715Z
 tags: 
 editor: markdown
 dateCreated: 2020-02-02T21:19:26.210Z
@@ -91,7 +91,6 @@ In 3.x, site-wide SPA should be implemented in addition to server-side rendering
 - Embed mode for Pages
 - Messaging System
 
-# 4.x
 
 ## Use PostgreSQL as sole database engine
 
