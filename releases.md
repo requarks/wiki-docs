@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-03-26T04:43:43.338Z
+date: 2021-03-26T04:46:15.723Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -63,8 +63,8 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** Login redirect is now working correctly for non-local strategies. ([#3222](https://github.com/Requarks/wiki/issues/3222))
 - **Fixed:** HSTS max-age header is no longer undefined. ([#3225](https://github.com/Requarks/wiki/issues/3225))
 - **Fixed:** AWS S3 storage is now copying to the correct bucket for renames. ([#3745](https://github.com/Requarks/wiki/issues/3745))
-- **Fixed:** CORS is now disabled to prevent cross-origin requests.
-- **Fixed:** Mustache expressions at root level from Raw HTML editor are now escaped properly.
+- **Fixed:** CORS is now disabled to prevent cross-origin requests. ([#3056](https://github.com/Requarks/wiki/issues/3056))
+- **Fixed:** Mustache expressions at root level from Raw HTML editor are now escaped properly. *(thanks to [Mina M. Edwar](http://linkedin.com/in/mina-mohsen-edwar-0a229025))*
 
 ### Hotfix 7 *(2.5.191)*{.caption}
 - **Fixed:** Stored XSS through code blocks with mustache expressions. ([GHSA-6xx4-m8gx-826r](https://github.com/Requarks/wiki/security/advisories/GHSA-6xx4-m8gx-826r))
