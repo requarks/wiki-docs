@@ -2,7 +2,7 @@
 title: Roadmap
 description: Planned features / improvements for future releases
 published: true
-date: 2021-03-26T18:52:25.715Z
+date: 2021-03-26T18:53:33.525Z
 tags: 
 editor: markdown
 dateCreated: 2020-02-02T21:19:26.210Z
@@ -27,6 +27,20 @@ In 3.x, site-wide SPA should be implemented in addition to server-side rendering
 
 - Allows for easier server-side rendering and mobile capabilities.
 - Better components *(specifically the table component)*
+
+## Use PostgreSQL as sole database engine
+
+The current implementation for database handling is done via Knex.js and Objection.js, which allows for various drivers to be used for PostgreSQL, MySQL, MariaDB, SQL Server and SQLite. While it offers broad compatibility for users, it also brings major limitations for the architecture and development in general:
+
+- Many different configurations to support
+- Some functions require different implementations based on the driver
+- Some functions are simply not implemented in some database engines:
+	- *Recursive Queries*
+  - *Pub/Sub Notification*
+  - *Advanced Search Capabilities*
+- Some migrations can be complex (specifically MS SQL Server)
+
+Supporting PostgreSQL as the only database engine in 3.x would greatly simplify development.
 
 # 3.x
 
@@ -90,18 +104,3 @@ In 3.x, site-wide SPA should be implemented in addition to server-side rendering
 - Page Rating
 - Embed mode for Pages
 - Messaging System
-
-
-## Use PostgreSQL as sole database engine
-
-The current implementation for database handling is done via Knex.js and Objection.js, which allows for various drivers to be used for PostgreSQL, MySQL, MariaDB, SQL Server and SQLite. While it offers broad compatibility for users, it also brings major limitations for the architecture and development in general:
-
-- Many different configurations to support
-- Some functions require different implementations based on the driver
-- Some functions are simply not implemented in some database engines:
-	- *Recursive Queries*
-  - *Pub/Sub Notification*
-  - *Advanced Search Capabilities*
-- Some migrations can be complex (specifically MS SQL Server)
-
-Supporting PostgreSQL as the only database engine in 3.x would greatly simplify development.
