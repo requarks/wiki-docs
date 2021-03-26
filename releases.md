@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-03-26T18:43:44.260Z
+date: 2021-03-26T19:56:37.702Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -56,7 +56,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 5 - `2.5.159` was released on **October 3rd, 2020**.
 > Hotfix 6 - `2.5.170` was released on **October 25th, 2020**.
 > Hotfix 7 - `2.5.191` was released on **March 13th, 2021**.
-> Hotfix 7 - `2.5.197` was released on **March 26th, 2021**.
+> Hotfix 8 - `2.5.197` was released on **March 26th, 2021**.
 {.is-info}
 
 ### Hotfix 8 *(2.5.197)*{.caption}
