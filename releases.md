@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-03-26T19:56:37.702Z
+date: 2021-03-29T15:38:04.680Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -190,7 +190,7 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 - **Fixed:** A server restart / new instance forces tokens to be revalidated if issued before server start.
 - **Fixed:** Matomo module siteId is now set correctly for users with javascript disabled.
 
-# STABLE - 2.4.107
+# 2.4.107
 
 > Initially released on **June 5th, 2020** as `2.4.105`.
 > Hotfix `2.4.107` was released on **June 14th, 2020**.
