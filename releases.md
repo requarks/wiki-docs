@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-03-29T15:38:04.680Z
+date: 2021-04-02T21:44:50.741Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -46,7 +46,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
 -->
 
-# STABLE - 2.5.197
+# STABLE - 2.5.201
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -57,7 +57,11 @@ Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for 
 > Hotfix 6 - `2.5.170` was released on **October 25th, 2020**.
 > Hotfix 7 - `2.5.191` was released on **March 13th, 2021**.
 > Hotfix 8 - `2.5.197` was released on **March 26th, 2021**.
+> Hotfix 9 - `2.5.201` was released on **April 2nd, 2021**.
 {.is-info}
+
+### Hotfix 9 *(2.5.201)*{.caption}
+- Added page conversion functionality to switch between editors.
 
 ### Hotfix 8 *(2.5.197)*{.caption}
 - **Fixed:** Login redirect is now working correctly for non-local strategies. ([#3222](https://github.com/Requarks/wiki/issues/3222))
