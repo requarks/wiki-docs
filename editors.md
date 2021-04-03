@@ -2,7 +2,7 @@
 title: Editors
 description: Using the various editors of Wiki.js
 published: true
-date: 2021-04-03T00:51:13.191Z
+date: 2021-04-03T00:52:28.023Z
 tags: editors
 editor: markdown
 dateCreated: 2019-05-22T03:11:37.479Z
@@ -48,7 +48,7 @@ Select the editor you want to use going forward and click **Convert**.
 
 As a reference, the following format conversions occur based on the source / target editor selected:
 
-| Source | Target | Conversion
+| Source | Target | Format Conversion
 | -- | -- | -- |
 | Markdown | Visual Editor | Markdown -> HTML |
 | Markdown | Raw HTML | Markdown -> HTML |
