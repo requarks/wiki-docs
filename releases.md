@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-04-07T21:09:17.041Z
+date: 2021-04-07T21:09:41.509Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
