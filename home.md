@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2021-03-13T05:10:20.517Z
+date: 2021-04-09T21:08:42.037Z
 tags: 
 editor: markdown
 dateCreated: 2019-02-15T04:20:30.188Z
@@ -64,7 +64,7 @@ Wiki.js is fully extensible for maximum customization.
 - [:question: Ask a Question *We're here to help.*](https://github.com/Requarks/wiki/discussions)
 - [:fire: Report a Bug *Help us squash those pesky bugs.*](https://github.com/Requarks/wiki/issues)
 - [:bulb: Suggest a New Feature *We need your ideas!*](https://requests.requarks.io/wiki)
-- [:moneybag: Donate *Make a small donation or become a sponsor of this wonderful project!*](https://opencollective.com/wikijs)
+- [:moneybag: Donate *Make a small donation or become a sponsor of this wonderful project!*](https://js.wiki/donate)
 {.links-list}
 
 ![Wiki.js](https://static.requarks.io/logo/wikijs-butterfly.svg){.align-abstopright}
