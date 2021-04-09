@@ -2,7 +2,7 @@
 title: Roadmap
 description: Planned features / improvements for future releases
 published: true
-date: 2021-03-26T18:53:33.525Z
+date: 2021-04-09T20:31:32.980Z
 tags: 
 editor: markdown
 dateCreated: 2020-02-02T21:19:26.210Z
@@ -82,7 +82,6 @@ Supporting PostgreSQL as the only database engine in 3.x would greatly simplify 
   - From DokuWiki
   - From Confluence
 - Purge old history automatically
-- Switch editor for an existing page
 - Recycle Bin
 
 ## Site Administration
