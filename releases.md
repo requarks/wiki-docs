@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-04-26T15:53:22.024Z
+date: 2021-04-26T15:55:51.424Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -19,24 +19,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 > **ETA: Beta planned for Summer 2021 with final release in Fall 2021**
 {.is-warning}
 
-> See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
-{.is-info}
-
-<i class="mdi mdi-shovel brown--text"></i> *= Work in progress*{.caption}
-
-- Migrate to Quasar Vue framework <i class="mdi mdi-shovel brown--text"></i>
-	- Site-wide SPA
-  - Server-side rendering
-  - Progressive Web App support
-  - Theming
-  - Improved UI (notifications) <i class="mdi mdi-check green--text"></i>
-- Add multi-site support <i class="mdi mdi-shovel brown--text"></i>
-- Remove heavy / deprecated dependencies:
-	- Moment.js <i class="mdi mdi-check green--text"></i>
-  - Winston <i class="mdi mdi-check green--text"></i>
-- Fully separate UI and Server <i class="mdi mdi-check green--text"></i>
-- Remove setup step + dual boot system <i class="mdi mdi-check green--text"></i>
-- Migrate to Azure Pipelines YAML format <i class="mdi mdi-check green--text"></i>
+See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
 # STABLE - 2.5.201
 
