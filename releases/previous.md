@@ -1,8 +1,8 @@
 ---
 title: Previous Stable Releases
-description: 
+description: List of new features, bug fixes and improvements
 published: true
-date: 2021-04-26T15:54:07.425Z
+date: 2021-04-26T15:55:00.810Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-26T15:54:07.425Z
