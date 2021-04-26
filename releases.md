@@ -2,13 +2,12 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-04-26T15:50:03.472Z
+date: 2021-04-26T15:52:42.293Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
 ---
 
-<!-- - [Current Development Roadmap *View the tasks currently being worked on and their status for the next release.*](/releases/current) -->
 - [Roadmap *See planned features / improvements for future releases.*](/releases/roadmap)
 - [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
 {.links-list}
@@ -38,13 +37,6 @@ dateCreated: 2019-05-26T03:34:27.819Z
 - Fully separate UI and Server <i class="mdi mdi-check green--text"></i>
 - Remove setup step + dual boot system <i class="mdi mdi-check green--text"></i>
 - Migrate to Azure Pipelines YAML format <i class="mdi mdi-check green--text"></i>
-
-<!--
-> This is a **BETA** release and should **NOT** be used in production environments!
-{.is-warning}
-
-Use docker image `requarks/wiki:beta` (or `requarks/wiki:beta-arm` for ARM) for testing.
--->
 
 # STABLE - 2.5.201
 
