@@ -2,8 +2,10 @@
 title: Storage
 description: List of supported storage targets
 published: true
-date: 2019-12-25T21:20:55.695Z
+date: 2021-06-24T20:28:08.078Z
 tags: storage
+editor: markdown
+dateCreated: 2019-02-17T22:46:42.792Z
 ---
 
 Storage modules allows for simple content backup and synchronization.
@@ -16,13 +18,13 @@ Some modules are also capable to synchronizing content in both directions (such 
 
 - [AWS S3](/storage/s3)
 - [Azure Blob Storage](/storage/azure)
-- Box
+- [Box *coming soon*]()
 - [DigitalOcean Spaces](/storage/digitalocean)
-- Dropbox
+- [Dropbox *coming soon*]()
 - [Git](/storage/git)
-- Google Drive
+- [Google Drive *coming soon*]()
 - [Local FileSystem](/storage/disk)
-- Microsoft OneDrive
+- [Microsoft OneDrive *coming soon*]()
 - [SFTP](/storage/sftp)
 {.links-list}
 
