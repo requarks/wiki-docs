@@ -2,15 +2,16 @@
 title: Kubernetes
 description: Getting started with a Kubernetes installation using Helm Charts
 published: true
-date: 2020-07-22T18:22:19.673Z
+date: 2021-07-09T04:06:09.498Z
 tags: setup, docker
 editor: markdown
+dateCreated: 2019-03-31T01:25:29.636Z
 ---
 
 # Prerequisites
 
 - A Kubernetes cluster
-- [Helm](https://helm.sh/docs/using_helm/#installing-helm)
+- [Helm 3](https://helm.sh/docs/using_helm/#installing-helm)
 - PostgreSQL Database
 
 # Important
