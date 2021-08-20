@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2021-03-13T05:57:06.779Z
+date: 2021-08-20T03:39:01.589Z
 tags: setup, docker
 editor: markdown
 dateCreated: 2019-02-15T04:23:08.720Z
@@ -13,12 +13,15 @@ dateCreated: 2019-02-15T04:23:08.720Z
 
 # Using the Docker image
 
-Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki`
+Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki` and on GitHub Packages as `ghcr.io/requarks/wiki`
 
 > It's highly recommended that you don't use the `latest` tag but instead the major version you need, e.g. `requarks/wiki:2`
 >
-> It's also possible to point to a specific minor version (e.g. `requarks/wiki:2.4`), although you will not automatically get the latest features when pulling the latest image.
+> It's also possible to point to a specific minor version (e.g. `requarks/wiki:2.5`), although you will not automatically get the latest features when pulling the latest image.
 {.is-info}
+
+- View on [Docker Hub](https://hub.docker.com/r/requarks/wiki)
+- View on [GitHub Packages](https://github.com/Requarks/wiki/pkgs/container/wiki)
 
 ## Environment Variables
 You must set the following environment variables. They are all **required** unless specified otherwise.
