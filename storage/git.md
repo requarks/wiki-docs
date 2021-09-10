@@ -87,12 +87,12 @@ For convenience, instructions for the most popular Git providers are listed belo
 
 ## Import Content
 
-When enabling the Git storage module the first time with a remote repository that already have content, you might need to initiate a manual import. By default, only changes between the latest local commit and the latest remote commit will be imported.
+When enabling the Git storage module for the first time with a remote repository that already has content, you might need to initiate a manual import. By default, only changes between the latest local commit and the latest remote commit will be imported.
 
 > **Heads up!** Make sure the Git module is already configured and working before proceeding any further!
 {.is-warning}
 
-To force all content currently present in the local repository to be imported, load the **Git** module settings tab in the Administration Area (under **Storage**), scroll to the very bottom of the page and click **Run** button on the **Import Everything** action card.
+To force an import of all content currently present in the local repository, load the **Git** module settings tab in the Administration Area (under **Storage**), scroll to the very bottom of the page and click **Run** button on the **Import Everything** action card.
 
 ## Missing Content in Remote Repository
 
