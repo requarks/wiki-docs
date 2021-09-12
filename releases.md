@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-09-12T00:01:48.790Z
+date: 2021-09-12T00:02:53.918Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -38,7 +38,7 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 
 ### Hotfix 10 *(2.5.212)*{.caption}
 - Added hosted domain parameter for G Suite authentication. ([#4010](https://github.com/Requarks/wiki/issues/4010))
-- **Fixed:** Replace Slack passport mode with newer implementation. ([#4369](https://github.com/Requarks/wiki/issues/4369))
+- **Fixed:** Replaced Slack passport mode with newer implementation. ([#4369](https://github.com/Requarks/wiki/issues/4369))
 - **Fixed:** Renamed files from git storage are now handled correctly. ([#4307](https://github.com/Requarks/wiki/issues/4307))
 - **Fixed:** Administration Pages pagination count is now accurate. ([#4280](https://github.com/Requarks/wiki/issues/4280))
 - **Fixed:** Jump to anchor hashes are now decoded properly. ([#4244](https://github.com/Requarks/wiki/issues/4244))
