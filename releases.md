@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-09-06T21:11:54.734Z
+date: 2021-09-12T00:01:48.790Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.201
+# STABLE - 2.5.212
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -33,7 +33,20 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 7 - `2.5.191` was released on **March 13th, 2021**.
 > Hotfix 8 - `2.5.197` was released on **March 26th, 2021**.
 > Hotfix 9 - `2.5.201` was released on **April 2nd, 2021**.
+> Hotfix 10 - `2.5.212` was released on **September 11th, 2021**.
 {.is-info}
+
+### Hotfix 10 *(2.5.212)*{.caption}
+- Added hosted domain parameter for G Suite authentication. ([#4010](https://github.com/Requarks/wiki/issues/4010))
+- **Fixed:** Replace Slack passport mode with newer implementation. ([#4369](https://github.com/Requarks/wiki/issues/4369))
+- **Fixed:** Renamed files from git storage are now handled correctly. ([#4307](https://github.com/Requarks/wiki/issues/4307))
+- **Fixed:** Administration Pages pagination count is now accurate. ([#4280](https://github.com/Requarks/wiki/issues/4280))
+- **Fixed:** Jump to anchor hashes are now decoded properly. ([#4244](https://github.com/Requarks/wiki/issues/4244))
+- **Fixed:** Clicks on anchors with sub-elements are now handled correctly. ([#4236](https://github.com/Requarks/wiki/issues/4236))
+- **Fixed:** Prevent possible crash during page rendering with null checks. ([#3823](https://github.com/Requarks/wiki/issues/3823))
+- **Fixed:** Worker errors are now passed through the main process for easier debugging. ([#3822](https://github.com/Requarks/wiki/issues/3822))
+- **Fixed:** Improve graceful shutdown sequence. ([#3821](https://github.com/Requarks/wiki/issues/3821))
+- **Fixed:** Add hashtag to file uploads disallowed chars. ([#3770](https://github.com/Requarks/wiki/issues/3770))
 
 ### Hotfix 9 *(2.5.201)*{.caption}
 - Added page conversion functionality to switch between editors. *(thanks to the Bern University of Applied Sciences for sponsoring the development of this feature)*
