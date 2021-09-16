@@ -30,7 +30,7 @@ Most strategies require some configuration. Check out the links below for module
 - [LDAP / Active Directory](/auth/ldap)
 - [Local](/auth/local)
 - Microsoft
-- Generic OpenID / OAuth2
+- [Generic OpenID / OAuth2](/auth/generic)
 - [Okta](/auth/okta)
 - [SAML 2.0](/auth/saml)
 - [Slack](/auth/slack)
