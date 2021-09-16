@@ -16,7 +16,8 @@ GitHub Inc. is a web-based hosting service for version control using Git.
  	- You can also use your organization instead of your personal account by going into your organization settings page and click on `OAuth Apps`, then `New OAuth App`.
 1. Enter an **Application Name** (e.g. Wiki.js).
 1. Enter the **Homepage URL** to your wiki.
-1. Enter the **Authorization callback URL** in the format `https://YOUR-WIKI-DOMAIN/login/github/callback`.
+1. Enter the **Authorization callback URL**.  
+	This value can be found in Wiki.js under **Configuration Reference**, displayed below the settings of the GitHub strategy.
 1. Click **Register application**.
 1. A **Client ID** and **Client Secret** will be shown. Copy these 2 keys. We'll need them later.
 1. *(Optional)*{.caption} Upload an avatar for this application.
