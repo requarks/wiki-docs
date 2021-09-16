@@ -27,6 +27,7 @@ Most strategies require some configuration. Check out the links below for module
 - Firebase
 - [GitHub](/auth/github)
 - [Google](/auth/google)
+- [Keycloak OpenID Connect](/auth/keycloak)
 - [LDAP / Active Directory](/auth/ldap)
 - [Local](/auth/local)
 - Microsoft
