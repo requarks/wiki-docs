@@ -14,12 +14,11 @@ tags: auth, module
 - [Keycloak OIDC Clients](https://www.keycloak.org/docs/latest/server_admin/#_clients)
 
 ## Setup
-### Create Keycloak strategy instance on WikiJS
+### Create Keycloak strategy instance on Wiki.js
 1. In the Administration area of your wiki, click on `Authentication` in the left navigation menu
 2. Click on `+ ADD STRATEGY`, scroll down and select `Keycloak`
-3. Click `Apply` (Just to make sure the instance ID will not be regenerated if the page is reloaded. This produces an error in the logs, so it might display an error on the frontend too in the future. If so just skip this step and double check the ID when setting it up)
-4. Go to the bottom of the page and copy/note the `Callback URL / Redirect URI`
-5. We will fill out the rest after setting up the Keycloak client
+3. Go to the bottom of the page and copy/note the `Callback URL / Redirect URI`
+4. Keep this page/tab open. We will fill out the rest after setting up the Keycloak client
 
 ### Creating a Keycloak client
 1. At the Keycloak administration page, go to the `Clients` menu, and click `Create` button on the right
@@ -28,7 +27,7 @@ tags: auth, module
 4. And **Root URL** is the base URL to Wikijs (for example `https://wiki.example.com`)
 5. Click **Save**
 6. Change **Access Type** to `confidential`
-7. Enter the **Valid Redirect URIs**, which is the `Callback URL / Redirect URI` from WikiJS (ex. `https://wiki.example.com/login/d03f689b-0dd0-44d6-90ca-6386ec41d799/callback`, or just the path `/login/{GUID}/callback`)
+7. Enter the **Valid Redirect URIs**, which is the `Callback URL / Redirect URI` from Wiki.js (ex. `https://wiki.example.com/login/d03f689b-0dd0-44d6-90ca-6386ec41d799/callback`, or just the path `/login/{GUID}/callback`)
 8. Set **Base URL** to the same as `Root URL`
 9. Set **Web Origins** to `+`, which means to use the URIs in the `Valid Redirect URIs` entry.
 10. Now click **Save** at the bottom of the page
@@ -44,11 +43,11 @@ tags: auth, module
 7. Enter the **Authorization Endpoint URL**, which is `https://keycloak.example.com/auth/realms/master/protocol/openid-connect/auth`
 8. Enter the **Token URL**, which is `https://keycloak.example.com/auth/realms/master/protocol/openid-connect/token`
 9. Enter the **User Info URL**, which is `https://keycloak.example.com/auth/realms/master/protocol/openid-connect/userinfo`
-10. If you want the user to be logged out of Keycloak when logging out of WikiJS, enable `Logout from Keycloak on Logout`
+10. If you want the user to be logged out of Keycloak when logging out of Wiki.js, enable `Logout from Keycloak on Logout`
 11. Enter the `Logout Endpoint URL`, which is `https://keycloak.example.com/auth/realms/master/protocol/openid-connect/logout`
 12. Check **Allow self-registration** to enable the Keycloak login button, and auto create users as they login for the first time.
 13. Remember to add a group with at least read permissions in the **Assign to group** list
-14. Click `Apply` in the top-left corner and try to login
+14. Click `Apply` in the top-right corner and try to login
 
 ### Seamless login
 If the login worked, you can enable `Bypass Login Screen` under the `Security` tab in the left navigation menu.  
