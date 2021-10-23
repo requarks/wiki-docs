@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2021-02-04T04:29:14.808Z
+date: 2021-10-23T00:34:34.984Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:21:32.940Z
@@ -66,14 +66,15 @@ You're expected to have installed one of these database engines already *(either
 
 The [Node.js](https://nodejs.org/) runtime is required. The following versions are supported:
 
-- **10.12** or later
-- **12.0** or later
-- **14.0** or later
+- **Node.js 10**: version **10.12** or later.
+- **Node.js 12**: version **12.0** or later.
+- **Node.js 14**: version **14.0** or later.
+- **Node.js 16**: version **16.0** or later.
 {.grid-list}
 
 > Wiki.js will **NOT** run on older versions such as 8.x, 6.x or any version below **10.12**!
 >
-> For `13.x`, due to a bug introduced in Node.js 13.0, versions prior to `13.3` are not compatible.
+> Odd-numbered versions (e.g. `11.x`, `13.x`, `15.x`, `17.x`) are **NOT** supported.
 {.is-warning}
 
 ### **Using Docker?** :whale:
