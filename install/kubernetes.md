@@ -2,7 +2,7 @@
 title: Kubernetes
 description: Getting started with a Kubernetes installation using Helm Charts
 published: true
-date: 2021-10-24T19:28:38.298Z
+date: 2021-10-24T19:39:21.328Z
 tags: setup, docker
 editor: markdown
 dateCreated: 2019-03-31T01:25:29.636Z
@@ -91,6 +91,9 @@ The following table lists the configurable parameters of the Wiki.js chart and t
 | `ingress.annotations`                | Ingress annotations                         | `{}`                                                       |
 | `ingress.hosts`                      | List of ingress rules                        | `[{"host": "wiki.local", "paths": ["/"]}]`                |
 | `ingress.tls`                        | Ingress TLS configuration                   | `[]`                                                       |
+| `sideload.enabled`                   | Enable sideloading of locale files from git | `false`                                                    |
+| `sideload.repoURL`                   | Git repository URL containing locale files  | `https://github.com/Requarks/wiki-localization`            |
+| `sideload.env`                       | Environment variables for sideload Container | `{}`                                                      |
 | `postgresql.enabled`                 | Deploy postgres server (see below)          | `true`                                                     |
 | `postgresql.postgresqlDatabase`        | Postgres database name                      | `wiki`                                                   |
 | `postgresql.postgresqlUser`            | Postgres username                           | `postgres`                                                   |
