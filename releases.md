@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-09-12T00:02:53.918Z
+date: 2021-12-04T07:08:53.287Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.212
+# STABLE - 2.5.250
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -33,12 +33,38 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 7 - `2.5.191` was released on **March 13th, 2021**.
 > Hotfix 8 - `2.5.197` was released on **March 26th, 2021**.
 > Hotfix 9 - `2.5.201` was released on **April 2nd, 2021**.
-> Hotfix 10 - `2.5.212` was released on **September 11th, 2021**.
+> Hotfix 10 - `2.5.214` was released on **September 11th, 2021**.
+> Hotfix 11 - `2.5.219` was released on **September 24th, 2021**.
+> Hotfix 12 - `2.5.250` was released on **December 4th, 2021**.
 {.is-info}
 
-### Hotfix 10 *(2.5.212)*{.caption}
+### Hotfix 12 *(2.5.250)*{.caption}
+- Added Generic OAuth2 authentication module. ([#3094](https://github.com/Requarks/wiki/issues/3094))
+- Added Plausible Analytics module.
+- **Fixed:** Asset directory traversal on Windows server host with some storage modules. ([GHSA-r363-73gj-6j25](https://github.com/Requarks/wiki/security/advisories/GHSA-r363-73gj-6j25))
+- **Fixed:** Missing query parameters are now handled correctly on tags page. ([#4668](https://github.com/Requarks/wiki/issues/4668))
+- **Fixed:** Import everything functionality restored in git module. ([#4559](https://github.com/Requarks/wiki/issues/4559))
+- **Fixed:** Outdated icons in social sharing menu have been updated. ([#4556](https://github.com/Requarks/wiki/issues/4556))
+- **Fixed:** Prevent malformed paths in page dialog. ([#4533](https://github.com/Requarks/wiki/issues/4533))
+- **Fixed:** Footnotes keyline is now hidden when preceded by header. ([#4529](https://github.com/Requarks/wiki/issues/4529))
+- **Fixed:** Additional div wrappers are now removed properly. ([#4528](https://github.com/Requarks/wiki/issues/4528))
+- **Fixed:** Some incorrect custom header IDs are now generated correctly. ([#4527](https://github.com/Requarks/wiki/issues/4527))
+- **Fixed:** Force admin email to lowercase during setup. ([#4516](https://github.com/Requarks/wiki/issues/4516))
+- **Fixed:** Display of headers within details summary element. ([#4491](https://github.com/Requarks/wiki/issues/4491))
+- **Fixed:** Summary and detail elements styling specificity. ([#4156](https://github.com/Requarks/wiki/issues/4156))
+- **Fixed:** Use first email address in Rocket.Chat auth response. ([#3122](https://github.com/Requarks/wiki/issues/3122))
+- **Fixed:** Spoiler summary element no longer overflows it's parent. ([#2502](https://github.com/Requarks/wiki/issues/2502))
+
+
+### Hotfix 11 *(2.5.219)*{.caption}
+- Added beacon parameter for NewRelic module to support EU region. ([#4421](https://github.com/Requarks/wiki/issues/4421))
+- Added PostgreSQL schema configuration option. ([#4161](https://github.com/Requarks/wiki/issues/4161))
+- **Fixed:** Scheduled git sync no longer crash because of queue reassignment. ([#4481](https://github.com/Requarks/wiki/issues/4481))
+- **Fixed:** Handle SFTP directory already exists scenario. ([#4024](https://github.com/Requarks/wiki/issues/4024))
+
+### Hotfix 10 *(2.5.214)*{.caption}
 - Added hosted domain parameter for G Suite authentication. ([#4010](https://github.com/Requarks/wiki/issues/4010))
-- **Fixed:** Replaced Slack passport mode with newer implementation. ([#4369](https://github.com/Requarks/wiki/issues/4369))
+- **Fixed:** Replaced Slack passport module with newer implementation. ([#4369](https://github.com/Requarks/wiki/issues/4369))
 - **Fixed:** Renamed files from git storage are now handled correctly. ([#4307](https://github.com/Requarks/wiki/issues/4307))
 - **Fixed:** Administration Pages pagination count is now accurate. ([#4280](https://github.com/Requarks/wiki/issues/4280))
 - **Fixed:** Jump to anchor hashes are now decoded properly. ([#4244](https://github.com/Requarks/wiki/issues/4244))
