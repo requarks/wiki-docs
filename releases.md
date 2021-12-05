@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-12-04T07:09:25.021Z
+date: 2021-12-05T03:34:16.860Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.250
+# STABLE - 2.5.254
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -35,10 +35,10 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 9 - `2.5.201` was released on **April 2nd, 2021**.
 > Hotfix 10 - `2.5.214` was released on **September 11th, 2021**.
 > Hotfix 11 - `2.5.219` was released on **September 24th, 2021**.
-> Hotfix 12 - `2.5.250` was released on **December 4th, 2021**.
+> Hotfix 12 - `2.5.254` was released on **December 4th, 2021**.
 {.is-info}
 
-### Hotfix 12 *(2.5.250)*{.caption}
+### Hotfix 12 *(2.5.254)*{.caption}
 - Added Generic OAuth2 authentication module. ([#3094](https://github.com/Requarks/wiki/issues/3094))
 - Added Plausible Analytics module.
 - **Fixed:** Asset directory traversal on Windows server host with some storage modules. ([GHSA-r363-73gj-6j25](https://github.com/Requarks/wiki/security/advisories/GHSA-r363-73gj-6j25))
