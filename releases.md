@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-12-06T19:26:52.049Z
+date: 2021-12-18T03:36:35.179Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -38,6 +38,10 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 12 - `2.5.254` was released on **December 4th, 2021**.
 > Hotfix 13 - `2.5.255` was released on **December 6th, 2021**.
 {.is-info}
+
+### Unreleased Hotfix *(TBA)*{.caption}
+- **Fixed:** SVG file upload sanitization. ([GHSA-3qv4-gp35-rgh7](https://github.com/Requarks/wiki/security/advisories/GHSA-3qv4-gp35-rgh7))
+- **Fixed:** Markdown task lists with links are now rendered correctly.
 
 ### Hotfix 13 *(2.5.255)*{.caption}
 - **Fixed:** Restored compatibility with pre-Node.js 16.x installations and ARM docker builds.
