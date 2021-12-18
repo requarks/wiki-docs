@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-12-18T03:36:35.179Z
+date: 2021-12-18T04:23:08.862Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -42,6 +42,7 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 ### Unreleased Hotfix *(TBA)*{.caption}
 - **Fixed:** SVG file upload sanitization. ([GHSA-3qv4-gp35-rgh7](https://github.com/Requarks/wiki/security/advisories/GHSA-3qv4-gp35-rgh7))
 - **Fixed:** Markdown task lists with links are now rendered correctly.
+- **Fixed:** Scrolling to header anchors inside a tabset initially hidden tab is now working.
 
 ### Hotfix 13 *(2.5.255)*{.caption}
 - **Fixed:** Restored compatibility with pre-Node.js 16.x installations and ARM docker builds.
