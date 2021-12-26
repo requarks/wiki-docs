@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-12-18T04:27:50.983Z
+date: 2021-12-26T05:09:57.979Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.260
+# STABLE - 2.5.264
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -38,7 +38,13 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 12 - `2.5.254` was released on **December 4th, 2021**.
 > Hotfix 13 - `2.5.255` was released on **December 6th, 2021**.
 > Hotfix 14 - `2.5.260` was released on **December 17th, 2021**.
+> Hotfix 15 - `2.5.264` was released on **December 24th, 2021**.
 {.is-info}
+
+### Hotfix 15 *(2.5.264)*{.caption}
+- **Fixed:** SVG file upload scanning is now using server file extension in addition to client mime type. ([GHSA-4893-pj5w-3hq9](https://github.com/Requarks/wiki/security/advisories/GHSA-4893-pj5w-3hq9))
+- **Fixed:** Uploads with unsafe file extensions are now forced to download by default. ([GHSA-rhpf-929m-7fm2](https://github.com/Requarks/wiki/security/advisories/GHSA-rhpf-929m-7fm2))
+- **Fixed:** Font sizes set via visual editor are now displayed correctly.
 
 ### Hotfix 14 *(2.5.260)*{.caption}
 - **Fixed:** SVG file upload sanitization. ([GHSA-3qv4-gp35-rgh7](https://github.com/Requarks/wiki/security/advisories/GHSA-3qv4-gp35-rgh7))
