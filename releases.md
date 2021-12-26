@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-12-26T05:09:57.979Z
+date: 2021-12-26T23:25:16.472Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.264
+# STABLE - 2.5.268
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -39,7 +39,13 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 13 - `2.5.255` was released on **December 6th, 2021**.
 > Hotfix 14 - `2.5.260` was released on **December 17th, 2021**.
 > Hotfix 15 - `2.5.264` was released on **December 24th, 2021**.
+> Hotfix 16 - `2.5.268` was released on **December 26th, 2021**.
 {.is-info}
+
+### Hotfix 16 *(2.5.268)*{.caption}
+- Added support for self-hosted Plausible installations with custom host. ([#4824](https://github.com/Requarks/wiki/issues/4824))
+- **Fixed:** File uploads no longer hang when scanSVG is enabled. ([#4825](https://github.com/Requarks/wiki/issues/4825))
+- **Fixed:** Large drawIO diagrams can now be scrolled horizontaly when overflowing. ([#4120](https://github.com/Requarks/wiki/issues/4120))
 
 ### Hotfix 15 *(2.5.264)*{.caption}
 - **Fixed:** SVG file upload scanning is now using server file extension in addition to client mime type. ([GHSA-4893-pj5w-3hq9](https://github.com/Requarks/wiki/security/advisories/GHSA-4893-pj5w-3hq9))
