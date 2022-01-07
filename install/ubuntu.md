@@ -2,7 +2,7 @@
 title: Install on Ubuntu 18.04 / 20.04 LTS
 description: Complete A to Z guide to setup a fully functioning Wiki.js installation
 published: true
-date: 2020-09-09T01:35:44.054Z
+date: 2022-01-07T05:17:03.803Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-12-23T18:29:29.240Z
@@ -94,7 +94,7 @@ docker start wiki-update-companion
 
 On your browser, navigate to your server IP / domain name (e.g. http://your-server-ip/ ).
 
-> If you can't load the page, wait 5 minutes and try again. It may take some minutes for the containers to initialize on some systems.
+> If you can't load the page, wait 5 minutes and try again. It may take a few minutes for the containers to initialize on some systems.
 {.is-info}
 
 Complete the on-screen setup to finish your installation.
