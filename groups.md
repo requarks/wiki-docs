@@ -27,7 +27,7 @@ A group contains multiple users, a set of permissions and a list of page rules.
 
 A **user** can be part of **one or more** groups.
 
-A **group** defines what users can see and what can do. This is achieved by using 2 concepts: **Global Permissions** and **Page Rules**.
+A **group** defines what users can see and what they can do. This is achieved by using 2 concepts: **Global Permissions** and **Page Rules**.
 
 A **global permission** gives the right to a user to perform a very specific action. For example, the global permission `read:pages` allows the user to view pages, while the global permission `write:assets` allows the user to upload images and files. These global permissions act as a master switch to **allow or deny** a specific action on the wiki.
 
