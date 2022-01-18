@@ -27,7 +27,7 @@ A group contains multiple users, a set of permissions and a list of page rules.
 
 A **user** can be part of **one or more** groups.
 
-A **group** defines what the user can see and what he can do. This is achieved by using 2 concepts: **Global Permissions** and **Page Rules**.
+A **group** defines what users can see and what they can do. This is achieved by using 2 concepts: **Global Permissions** and **Page Rules**.
 
 A **global permission** gives the right to a user to perform a very specific action. For example, the global permission `read:pages` allows the user to view pages, while the global permission `write:assets` allows the user to upload images and files. These global permissions act as a master switch to **allow or deny** a specific action on the wiki.
 
@@ -117,7 +117,7 @@ Fill in the details about the user:
 
 **Tip:** You can click the dice icon to automatically generate a strong random password.
 
-> **You must assign the user to at least 1 group.** Otherwise, he will not be able to access anything.
+> **You must assign the user to at least 1 group.** Otherwise, they will not be able to access anything.
 {.is-warning}
 
 Click **Create and Close** to create the user. You can also click **Create** to create another user afterwards.
@@ -137,7 +137,7 @@ Select **Activate** to enable access again.
 
 ### Manually Verify User
 
-If the user was unable to verify his account or didn't receive the verification email, you can manually verify the action by clicking the **Actions** button and select **Set as Verified**.
+If the user was unable to verify their account or didn't receive the verification email, you can manually verify the action by clicking the **Actions** button and select **Set as Verified**.
 
 ## Delete User
 
