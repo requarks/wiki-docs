@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2021-12-26T23:25:16.472Z
+date: 2022-01-23T04:24:48.450Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.268
+# STABLE - 2.5.272
 
 > Initially released on **September 6th, 2020** as `2.5.117`.
 > Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
@@ -40,7 +40,12 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 > Hotfix 14 - `2.5.260` was released on **December 17th, 2021**.
 > Hotfix 15 - `2.5.264` was released on **December 24th, 2021**.
 > Hotfix 16 - `2.5.268` was released on **December 26th, 2021**.
+> Hotfix 17 - `2.5.272` was released on **January 22nd, 2022**.
 {.is-info}
+
+### Hotfix 17 *(2.5.272)*{.caption}
+- **Fixed:** File uploads are now authenticated using auth header instead of cookies. ([huntr report](https://huntr.dev/bounties/238d8df2-961b-4b26-9987-5526cb7c78e4/))
+- **Fixed:** Viewing source of a page version no longer crash. ([#3297](https://github.com/Requarks/wiki/issues/3297))
 
 ### Hotfix 16 *(2.5.268)*{.caption}
 - Added support for self-hosted Plausible installations with custom host. ([#4824](https://github.com/Requarks/wiki/issues/4824))
