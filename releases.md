@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2022-01-23T04:24:48.450Z
+date: 2022-01-23T04:29:47.191Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -23,49 +23,29 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 
 # STABLE - 2.5.272
 
-> Initially released on **September 6th, 2020** as `2.5.117`.
-> Hotfix 1 - `2.5.126` was released on **September 7th, 2020**.
-> Hotfix 2 - `2.5.132` was released on **September 10th, 2020**.
-> Hotfix 3 - `2.5.136` was released on **September 12th, 2020**.
-> Hotfix 4 - `2.5.144` was released on **September 14th, 2020**.
-> Hotfix 5 - `2.5.159` was released on **October 3rd, 2020**.
-> Hotfix 6 - `2.5.170` was released on **October 25th, 2020**.
-> Hotfix 7 - `2.5.191` was released on **March 13th, 2021**.
-> Hotfix 8 - `2.5.197` was released on **March 26th, 2021**.
-> Hotfix 9 - `2.5.201` was released on **April 2nd, 2021**.
-> Hotfix 10 - `2.5.214` was released on **September 11th, 2021**.
-> Hotfix 11 - `2.5.219` was released on **September 24th, 2021**.
-> Hotfix 12 - `2.5.254` was released on **December 4th, 2021**.
-> Hotfix 13 - `2.5.255` was released on **December 6th, 2021**.
-> Hotfix 14 - `2.5.260` was released on **December 17th, 2021**.
-> Hotfix 15 - `2.5.264` was released on **December 24th, 2021**.
-> Hotfix 16 - `2.5.268` was released on **December 26th, 2021**.
-> Hotfix 17 - `2.5.272` was released on **January 22nd, 2022**.
-{.is-info}
-
-### Hotfix 17 *(2.5.272)*{.caption}
+### Hotfix 17 *(2.5.272 - **January 22nd, 2022**)*{.caption}
 - **Fixed:** File uploads are now authenticated using auth header instead of cookies. ([huntr report](https://huntr.dev/bounties/238d8df2-961b-4b26-9987-5526cb7c78e4/))
 - **Fixed:** Viewing source of a page version no longer crash. ([#3297](https://github.com/Requarks/wiki/issues/3297))
 
-### Hotfix 16 *(2.5.268)*{.caption}
+### Hotfix 16 *(2.5.268 - **December 26th, 2021**)*{.caption}
 - Added support for self-hosted Plausible installations with custom host. ([#4824](https://github.com/Requarks/wiki/issues/4824))
 - **Fixed:** File uploads no longer hang when scanSVG is enabled. ([#4825](https://github.com/Requarks/wiki/issues/4825))
 - **Fixed:** Large drawIO diagrams can now be scrolled horizontaly when overflowing. ([#4120](https://github.com/Requarks/wiki/issues/4120))
 
-### Hotfix 15 *(2.5.264)*{.caption}
+### Hotfix 15 *(2.5.264 - **December 24th, 2021**)*{.caption}
 - **Fixed:** SVG file upload scanning is now using server file extension in addition to client mime type. ([GHSA-4893-pj5w-3hq9](https://github.com/Requarks/wiki/security/advisories/GHSA-4893-pj5w-3hq9))
 - **Fixed:** Uploads with unsafe file extensions are now forced to download by default. ([GHSA-rhpf-929m-7fm2](https://github.com/Requarks/wiki/security/advisories/GHSA-rhpf-929m-7fm2))
 - **Fixed:** Font sizes set via visual editor are now displayed correctly.
 
-### Hotfix 14 *(2.5.260)*{.caption}
+### Hotfix 14 *(2.5.260 - **December 17th, 2021**)*{.caption}
 - **Fixed:** SVG file upload sanitization. ([GHSA-3qv4-gp35-rgh7](https://github.com/Requarks/wiki/security/advisories/GHSA-3qv4-gp35-rgh7))
 - **Fixed:** Markdown task lists with links are now rendered correctly.
 - **Fixed:** Scrolling to header anchors inside a tabset initially hidden tab is now working.
 
-### Hotfix 13 *(2.5.255)*{.caption}
+### Hotfix 13 *(2.5.255 - **December 6th, 2021**)*{.caption}
 - **Fixed:** Restored compatibility with pre-Node.js 16.x installations and ARM docker builds.
 
-### Hotfix 12 *(2.5.254)*{.caption}
+### Hotfix 12 *(2.5.254 - **December 4th, 2021**)*{.caption}
 - Added Generic OAuth2 authentication module. ([#3094](https://github.com/Requarks/wiki/issues/3094))
 - Added Plausible Analytics module.
 - **Fixed:** Asset directory traversal on Windows server host with some storage modules. ([GHSA-r363-73gj-6j25](https://github.com/Requarks/wiki/security/advisories/GHSA-r363-73gj-6j25))
@@ -83,13 +63,13 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - **Fixed:** Spoiler summary element no longer overflows it's parent. ([#2502](https://github.com/Requarks/wiki/issues/2502))
 
 
-### Hotfix 11 *(2.5.219)*{.caption}
+### Hotfix 11 *(2.5.219 - **September 24th, 2021**)*{.caption}
 - Added beacon parameter for NewRelic module to support EU region. ([#4421](https://github.com/Requarks/wiki/issues/4421))
 - Added PostgreSQL schema configuration option. ([#4161](https://github.com/Requarks/wiki/issues/4161))
 - **Fixed:** Scheduled git sync no longer crash because of queue reassignment. ([#4481](https://github.com/Requarks/wiki/issues/4481))
 - **Fixed:** Handle SFTP directory already exists scenario. ([#4024](https://github.com/Requarks/wiki/issues/4024))
 
-### Hotfix 10 *(2.5.214)*{.caption}
+### Hotfix 10 *(2.5.214 - **September 11th, 2021**)*{.caption}
 - Added hosted domain parameter for G Suite authentication. ([#4010](https://github.com/Requarks/wiki/issues/4010))
 - **Fixed:** Replaced Slack passport module with newer implementation. ([#4369](https://github.com/Requarks/wiki/issues/4369))
 - **Fixed:** Renamed files from git storage are now handled correctly. ([#4307](https://github.com/Requarks/wiki/issues/4307))
@@ -101,17 +81,17 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - **Fixed:** Improve graceful shutdown sequence. ([#3821](https://github.com/Requarks/wiki/issues/3821))
 - **Fixed:** Add hashtag to file uploads disallowed chars. ([#3770](https://github.com/Requarks/wiki/issues/3770))
 
-### Hotfix 9 *(2.5.201)*{.caption}
+### Hotfix 9 *(2.5.201 - **April 2nd, 2021**)*{.caption}
 - Added page conversion functionality to switch between editors. *(thanks to the Bern University of Applied Sciences for sponsoring the development of this feature)*
 
-### Hotfix 8 *(2.5.197)*{.caption}
+### Hotfix 8 *(2.5.197 - **March 26th, 2021**)*{.caption}
 - **Fixed:** Login redirect is now working correctly for non-local strategies. ([#3222](https://github.com/Requarks/wiki/issues/3222))
 - **Fixed:** HSTS max-age header is no longer undefined. ([#3225](https://github.com/Requarks/wiki/issues/3225))
 - **Fixed:** AWS S3 storage is now copying to the correct bucket for renames. ([#3745](https://github.com/Requarks/wiki/issues/3745))
 - **Fixed:** CORS is now disabled to prevent cross-origin requests. ([#3056](https://github.com/Requarks/wiki/issues/3056), thanks to [@pylr](https://github.com/pylr))
 - **Fixed:** Mustache expressions at root level from Raw HTML editor are now escaped properly. *(thanks to [Mina M. Edwar](http://linkedin.com/in/mina-mohsen-edwar-0a229025))*
 
-### Hotfix 7 *(2.5.191)*{.caption}
+### Hotfix 7 *(2.5.191 - **March 13th, 2021**)*{.caption}
 - **Fixed:** Stored XSS through code blocks with mustache expressions. ([GHSA-6xx4-m8gx-826r](https://github.com/Requarks/wiki/security/advisories/GHSA-6xx4-m8gx-826r))
 - **Fixed:** Code blocks no longer show duplicate characters in print view. ([#2593](https://github.com/Requarks/wiki/issues/2593))
 - **Fixed:** Enable passport-azure-ad workaround for SameSite cookies. ([#2567](https://github.com/Requarks/wiki/issues/2567))
@@ -129,11 +109,11 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - **Fixed:** LDAP auth module no longer incorrectly reads an empty TLS cert file. ([#2980](https://github.com/Requarks/wiki/issues/2980))
 - **Fixed:** Storage sync interval is now read from saved settings instead of module data. ([#3003](https://github.com/Requarks/wiki/issues/3003))
 
-### Hotfix 6 *(2.5.170)*{.caption}
+### Hotfix 6 *(2.5.170 - **October 25th, 2020**)*{.caption}
 - **Fixed:** Unescaped page title in search results. ([GHSA-pgjv-84m7-62q7](https://github.com/Requarks/wiki/security/advisories/GHSA-pgjv-84m7-62q7))
 - **Fixed:** Incorrect translation key for comments cancel button. ([#2543](https://github.com/Requarks/wiki/issues/2543))
 
-### Hotfix 5 *(2.5.159)*{.caption}
+### Hotfix 5 *(2.5.159 - **October 3rd, 2020**)*{.caption}
 - Added Rocket.chat authentication module
 - **Fixed:** Asset directory traversal with some storage modules. ([GHSA-whpv-5xg2-w527](https://github.com/Requarks/wiki/security/advisories/GHSA-whpv-5xg2-w527))
 - **Fixed:** Tabsets tabs can now be scrolled when view is too small. ([#2442](https://github.com/Requarks/wiki/issues/2442))
@@ -144,7 +124,7 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - **Fixed:** Check for email array during processProfile. ([#2515](https://github.com/Requarks/wiki/issues/2515))
 - **Fixed:** Updated Matomo integration client code. ([#2526](https://github.com/Requarks/wiki/issues/2526))
 
-### Hotfix 4 *(2.5.144)*{.caption}
+### Hotfix 4 *(2.5.144 - **September 14th, 2020**)*{.caption}
 - **Fixed:** Security rendering module no longer strips `allow` attribute when iframes are whitelisted. ([#2354](https://github.com/Requarks/wiki/issues/2354))
 - **Fixed:** Basic search engine now supports tags permission filtering. ([#2416](https://github.com/Requarks/wiki/issues/2416))
 - **Fixed:** Download button for locales is no longer hidden on smaller screens. ([#2429](https://github.com/Requarks/wiki/issues/2429))
@@ -152,25 +132,25 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - **Fixed:** All strings are now localized on the login page and select page dialog. ([#2438](https://github.com/Requarks/wiki/issues/2438), [#2439](https://github.com/Requarks/wiki/issues/2439))
 - **Fixed:** All authentication provider icons are now in their proper color formats. ([#2441](https://github.com/Requarks/wiki/issues/2441))
 
-### Hotfix 3 *(2.5.136)*{.caption}
+### Hotfix 3 *(2.5.136 - **September 12th, 2020**)*{.caption}
 - **Fixed:** Draw-io diagrams with texts linebreaks are no longer removed. ([#2415](https://github.com/Requarks/wiki/issues/2415))
 - **Fixed:** Admins with `manage:system` are longer blocked from editing / assign users to elevated groups. ([#2424](https://github.com/Requarks/wiki/issues/2378))
 - **Fixed:** API requests no longer fail / timeout due to token revalidation. ([#2426](https://github.com/Requarks/wiki/issues/2426))
 
-### Hotfix 2 *(2.5.132)*{.caption}
+### Hotfix 2 *(2.5.132 - **September 10th, 2020**)*{.caption}
 - **Fixed:** Users with `write:groups` permission can no longer self-promote their group to admin. ([#2294](https://github.com/Requarks/wiki/issues/2294))
 - **Fixed:** Added logout endpoint for OAuth2 / OpenIDConnect module. ([#2395](https://github.com/Requarks/wiki/issues/849))
 - **Fixed:** 2FA QR code now handles site names with invalid characters. ([#2397](https://github.com/Requarks/wiki/issues/849))
 - **Fixed:** Force lowercase for email address on local auth. ([#2400](https://github.com/Requarks/wiki/issues/2400))
 - **Fixed:** Permission validation no longer incorrectly fail for checks without page info. ([#2407](https://github.com/Requarks/wiki/issues/2407))
 
-### Hotfix 1 *(2.5.126)*{.caption}
+### Hotfix 1 *(2.5.126 - **September 7th, 2020**)*{.caption}
 - **Fixed:** LDAP user avatar binary is now processed correctly. ([#849](https://github.com/Requarks/wiki/issues/849))
 - **Fixed:** Login page is no longer empty on new installations. ([#2375](https://github.com/Requarks/wiki/issues/2375))
 - **Fixed:** LDAP authentication is now passing strategy ID correctly. ([#2378](https://github.com/Requarks/wiki/issues/2378))
 - **Fixed:** Discord auth is now using the updated endpoint URL. ([#2390](https://github.com/Requarks/wiki/issues/2390))
 
-### Major Features *(2.5.117)*{.caption}
+### Major Features *(2.5.117 - **September 6th, 2020**)*{.caption}
 
 - New Login Experience
 	- Add multiple instances of the same authentication strategy
@@ -187,7 +167,7 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - Page Publishing State (start/end date, private)
 - Draw&#46;io Diagrams Integration for Markdown Editor
 
-### Minor Improvements *(2.5.117)*{.caption}
+### Minor Improvements *(2.5.117 - **September 6th, 2020**)*{.caption}
 
 - Image prefetching module for Kroki / PlantUML svg images.
 - Optional underline parsing for Markdown using `_foo_` syntax.
@@ -205,7 +185,7 @@ See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming releas
 - Code Folding for Markdown Editor
 - Purge History Utility
 
-### Bug Fixes *(2.5.117)*{.caption}
+### Bug Fixes *(2.5.117 - **September 6th, 2020**)*{.caption}
 
 - **Fixed:** Sideloaded locales are now processed before server starts. ([#1248](https://github.com/Requarks/wiki/issues/1248))
 - **Fixed:** Include the locale code in sidebar browse links. ([#1807](https://github.com/Requarks/wiki/issues/1807))
