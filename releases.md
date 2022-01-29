@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2022-01-23T04:29:47.191Z
+date: 2022-01-29T23:58:33.885Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,10 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.272
+# STABLE - 2.5.274
+
+### Hotfix 18 *(2.5.274 - **January 29th, 2022**)*{.caption}
+- **Fixed:** Prevent upload bypass using uppercase path. ([huntr report](https://huntr.dev/bounties/6c6975ca-2b04-43c6-8052-9f0de636c064/))
 
 ### Hotfix 17 *(2.5.272 - **January 22nd, 2022**)*{.caption}
 - **Fixed:** File uploads are now authenticated using auth header instead of cookies. ([huntr report](https://huntr.dev/bounties/238d8df2-961b-4b26-9987-5526cb7c78e4/))
