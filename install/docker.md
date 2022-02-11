@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2021-08-20T03:39:01.589Z
+date: 2022-02-11T22:48:39.365Z
 tags: setup, docker
 editor: markdown
 dateCreated: 2019-02-15T04:23:08.720Z
@@ -13,15 +13,15 @@ dateCreated: 2019-02-15T04:23:08.720Z
 
 # Using the Docker image
 
-Wiki.js is published as a Docker image on Docker Hub as `requarks/wiki` and on GitHub Packages as `ghcr.io/requarks/wiki`
+Wiki.js is published as a Docker image on GitHub Packages as `ghcr.io/requarks/wiki` and on Docker Hub as `requarks/wiki`.
 
-> It's highly recommended that you don't use the `latest` tag but instead the major version you need, e.g. `requarks/wiki:2`
+> It's highly recommended that you don't use the `latest` tag but instead the major version you need, e.g. `ghcr.io/requarks/wiki:2`
 >
-> It's also possible to point to a specific minor version (e.g. `requarks/wiki:2.5`), although you will not automatically get the latest features when pulling the latest image.
+> It's also possible to point to a specific minor version (e.g. `ghcr.io/requarks/wiki:2.5`), although you will not automatically get the latest features when pulling the latest image.
 {.is-info}
 
-- View on [Docker Hub](https://hub.docker.com/r/requarks/wiki)
 - View on [GitHub Packages](https://github.com/Requarks/wiki/pkgs/container/wiki)
+- View on [Docker Hub](https://hub.docker.com/r/requarks/wiki)
 
 ## Environment Variables
 You must set the following environment variables. They are all **required** unless specified otherwise.
@@ -94,12 +94,12 @@ When running Wiki.js with multiple replicas (e.g. Kubernetes cluster / Docker Sw
 
 Here's an example of a command to run Wiki.js connecting to a PostgreSQL database:
 ```bash
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
 or to a MySQL database:
 ```bash
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
 > Both examples assume you have a database running in another container named `db` on the same network.
@@ -108,7 +108,7 @@ docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysq
 
 Let's Encrypt example:
 ```bash
-docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e "LETSENCRYPT_EMAIL=admin@example.com" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e "LETSENCRYPT_EMAIL=admin@example.com" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
 ## Alternative: Mount the config file
@@ -118,7 +118,7 @@ If using environment variables is not your cup of tea, you can also mount a conf
 Create a new file based on the [sample config file](https://github.com/Requarks/wiki/blob/master/config.sample.yml) and modify the values to match your setup. You can then mount the config file in the container:
 
 ```bash
-docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml requarks/wiki:2
+docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml ghcr.io/requarks/wiki:2
 ```
 
 It's also possible to define an alternate location for the config file to be loaded from, using the CONFIG_FILE env variable. This is useful in scenarios where you want to mount a configuration folder instead.
@@ -131,7 +131,7 @@ It's also possible to define an alternate location for the config file to be loa
 By default, Wiki.js runs as user `wiki`. If you get permissions issues while mounting files (such as SQLite db or private keys), you can override the runtime user to run as `root` using the `-u` parameter, e.g.:
 
 ```bash
-docker run -d -p 8080:3000 -u="root" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" requarks/wiki:2
+docker run -d -p 8080:3000 -u="root" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
 This is however not a secure way to run containers. Make sure you understand the security implications before doing so.
@@ -157,7 +157,7 @@ services:
       - db-data:/var/lib/postgresql/data
 
   wiki:
-    image: requarks/wiki:2
+    image: ghcr.io/requarks/wiki:2
     depends_on:
       - db
     environment:
