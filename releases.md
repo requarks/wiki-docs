@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2022-01-29T23:58:33.885Z
+date: 2022-02-13T10:43:09.122Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,12 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.274
+# STABLE - 2.5.275
+
+### Hotfix 19 *(2.5.275 - **February 13th, 2022**)*{.caption}
+- Added body parser limit option to config file. ([#4985](https://github.com/Requarks/wiki/issues/4985))
+- Added link to administration area on the welcome page. ([#4035](https://github.com/Requarks/wiki/issues/4035))
+- **Fixed:** Task lists are now rendered correctly, matching the preview. ([#3297](https://github.com/Requarks/wiki/issues/3297))
 
 ### Hotfix 18 *(2.5.274 - **January 29th, 2022**)*{.caption}
 - **Fixed:** Prevent upload bypass using uppercase path. ([huntr report](https://huntr.dev/bounties/6c6975ca-2b04-43c6-8052-9f0de636c064/))
