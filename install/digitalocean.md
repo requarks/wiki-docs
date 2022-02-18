@@ -2,9 +2,10 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2020-07-14T04:11:53.182Z
+date: 2022-02-18T07:50:53.766Z
 tags: install
 editor: markdown
+dateCreated: 2019-11-23T18:58:05.122Z
 ---
 
 # Overview
@@ -13,7 +14,7 @@ The DigitalOcean Marketplace Wiki.js image is a pre-configured environment, made
 
 ## Image Specifications
 
-Ubuntu 18.04 LTS with the following software pre-installed:
+Ubuntu 20.04 LTS with the following software pre-installed:
 
 - Docker
 - PostgreSQL 11 *(dockerized)*{.caption}
@@ -31,8 +32,7 @@ Note that you can always upgrade to a more powerful droplet configuration in the
 
 # Getting Started
 
-1. From the DigitalOcean control panel, click on **Marketplace**.
-1. Find the [**Wiki.js**](https://marketplace.digitalocean.com/apps/wiki-js?refcode=5f7445bfa4d0) listing and click **Create Wiki.js Droplet**.
+1. Go to the [**Wiki.js**](https://marketplace.digitalocean.com/apps/wiki-js?refcode=5f7445bfa4d0) listing in the DigitalOcean Marketplace and click **Create Wiki.js Droplet**.
 1. Select a droplet size, datacenter region and additional options.
 1. Click **Create droplet** once you entered all necessary info.
 1. Wait for the droplet to be created.
