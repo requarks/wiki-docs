@@ -2,7 +2,7 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2022-02-14T00:16:06.736Z
+date: 2022-02-21T03:50:30.275Z
 tags: setup
 editor: markdown
 dateCreated: 2019-05-04T04:36:05.505Z
@@ -19,7 +19,7 @@ Before going any further, make sure your system meets all the [requirements](/in
   ```
 3. Download the latest version of Wiki.js:
   ```powershell
-  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/v2.5.275/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
+  Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/download/v2.5.276/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
 4. Extract the package to the final destination of your choice:
