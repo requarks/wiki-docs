@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2022-02-19T04:58:22.389Z
+date: 2022-02-21T03:49:19.934Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -21,7 +21,13 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
 
-# STABLE - 2.5.275
+# STABLE - 2.5.276
+
+### Hotfix 20 *(2.5.276 - **February 20th, 2022**)*{.caption}
+- Added logFormat option to configure JSON logging. ([#5022](https://github.com/Requarks/wiki/issues/5022))
+- Added option to specify default value in config file for environment variables. ([#5020](https://github.com/Requarks/wiki/issues/5020))
+- **Fixed:** Access control when updating pages is now checked against the page ID instead of the user provided path. ([GHSA-3cv9-795v-6j7j](https://github.com/Requarks/wiki/security/advisories/GHSA-3cv9-795v-6j7j))
+- **Fixed:** Locale restrictions in page rules are now applied correctly.
 
 ### Hotfix 19 *(2.5.275 - **February 13th, 2022**)*{.caption}
 - Added body parser limit option to config file. ([#4985](https://github.com/Requarks/wiki/issues/4985))
