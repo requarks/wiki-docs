@@ -44,6 +44,22 @@ Before going any further, make sure your system meets all the [requirements](/in
 7. Wait until you are invited to open to the setup page in your browser.
 8. Complete the setup wizard to finish the installation.
 
+## Nodemon
+  > If you want to use Wiki.js in a screen:
+  ```bash
+  apt install screen -y
+  ```
+  {.is-info}
+
+  > Instead of the command from 6th from above:
+
+  ```bash
+  screen -S <session_name> node server
+  ```
+
+  <session_name> is replaced with any name.
+  {.is-info}
+
 # Run as service
 
 There are several solutions to run Wiki.js as a background service. We'll focus on **systemd** in this guide as it's available in nearly all linux distributions.
