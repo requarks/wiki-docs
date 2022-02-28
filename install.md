@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2021-10-27T00:55:42.031Z
+date: 2022-02-28T03:52:46.998Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:22:28.058Z
@@ -26,7 +26,8 @@ dateCreated: 2019-02-15T04:22:28.058Z
 {.links-list}
 
 ## Other Guides
-- [Install on AWS EC2 *using the free Marketplace Image*](/install/aws)
+> These guides are provided by the community.
+<!-- - [Install on AWS EC2 *using the free Marketplace Image*](/install/aws) -->
 - [Install on Azure Web App](/install/azurewebapp)
 - [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
 - [Install using Portainer](/install/portainer)
