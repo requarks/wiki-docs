@@ -2,7 +2,7 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2022-04-04T05:10:35.403Z
+date: 2022-04-04T05:10:47.894Z
 tags: setup
 editor: markdown
 dateCreated: 2019-05-04T04:36:05.505Z
@@ -28,7 +28,7 @@ Before going any further, make sure your system meets all the [requirements](/in
   tar xzf wiki-js.tar.gz -C "C:\wiki"
   cd C:\wiki
   ```
-  > The **tar** utility is only available on Windows 10. On earlier versions, you'll need a 3rd-party utility like [7-zip](https://www.7-zip.org/) to extract the file.
+  > The **tar** utility is only available on Windows 10 and later. On earlier versions, you'll need a 3rd-party utility like [7-zip](https://www.7-zip.org/) to extract the file.
   {.is-warning}
 5. Rename the sample config file to `config.yml`:
   ```powershell
