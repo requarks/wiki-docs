@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2022-02-28T03:52:46.998Z
+date: 2022-03-03T13:02:46.998Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:22:28.058Z
@@ -19,6 +19,7 @@ dateCreated: 2019-02-15T04:22:28.058Z
 ## By Platform
 - [Docker](/install/docker)
 - [Heroku](/install/heroku)
+- [alwaysdata](/install/alwaysdata)
 - [Kubernetes](/install/kubernetes)
 - [Linux](/install/linux)
 - [macOS](/install/macos)
