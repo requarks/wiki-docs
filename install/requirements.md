@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2021-10-23T00:34:34.984Z
+date: 2022-04-30T01:54:29.716Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:21:32.940Z
@@ -33,7 +33,7 @@ An alternate method of [sideloading files](/install/sideload) is also available 
 
 # Domain
 
-Wiki.js requires a dedicated sub-domain / domain *(e.g. wiki.example.com)*. You cannot map Wiki.js to a subfolder.
+Wiki.js requires a dedicated sub-domain / domain *(e.g. `wiki.example.com`)*. You cannot map Wiki.js to a subfolder.
 
 # Database
 
