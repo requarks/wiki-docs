@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2022-04-30T01:54:29.716Z
+date: 2022-05-03T22:59:31.225Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:21:32.940Z
@@ -43,6 +43,9 @@ For best performance, features and future compatibility, it's highly recommended
 {.grid-list}
 
 > It's recommended you use the latest version of PostgreSQL when possible.
+{.is-success}
+
+> Note that in order to use the PostgreSQL search module, the `pg_trgm` extension must be available on the host. The extension is part of the `postgresql-contrib` package in most Linux distributions. The docker PostgreSQL image already includes the extension.
 {.is-info}
 
 ---
