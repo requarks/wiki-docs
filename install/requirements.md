@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2022-05-03T22:59:31.225Z
+date: 2022-05-07T21:43:55.404Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:21:32.940Z
@@ -98,7 +98,7 @@ The following browsers are supported:
 - Microsoft Edge
 - Apple Safari (including iOS version)
 
-Note that only the latest stable version of these browsers are supported. All browsers updates automatically in the background.
+Note that only the latest stable version of these browsers are supported. All browsers are automatically updated in the background by default.
 
 > There's limited compatibility with **IE11**. Users will be able to read content but not perform any editing action or use interactive features.
 {.is-info}
