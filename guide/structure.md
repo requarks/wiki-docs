@@ -2,8 +2,10 @@
 title: Folder Structure & Tags
 description: Learn how to categorize your pages for easier navigation.
 published: true
-date: 2020-04-08T23:30:26.349Z
+date: 2022-05-26T07:30:51.103Z
 tags: user-guide
+editor: markdown
+dateCreated: 2019-11-10T18:15:56.841Z
 ---
 
 # Folder Structure
@@ -19,6 +21,33 @@ This system allows for greater flexibility and less dependencies between pages. 
 ## Breadcrumbs
 
 The breadcrumbs bar shown on top of every page is generated automatically from the path.
+
+## Nesting
+
+When creating multi-level pages, you may want to have a landing page for each of the virtual folders.
+
+For example, if you have a page at path `/foo/bar`, you should create a new page at path `/foo`. This will ensure that clicking the "**foo**" breadcrumbs link on the `/foo/bar` page leads to the `/foo` page.
+
+If you're using the **Site Tree** navigation mode (or **Custom Navigation**), the page title for each level is taken from its corresponding page.
+
+### Nesting Example
+
+For example, by creating the following pages:
+
+- Page at path `/universe` with title "*The Universe*"
+- Page at path `/universe/planets` with title "*The Planets*"
+- Page at path `/universe/planets/earth` with title "*The Blue Marble*"
+
+would create a site tree with the following entries:
+- **The Universe**
+	- **The Planets**
+  		- **The Blue Marble**
+      
+On "*The Blue Marble*" page, you would have a breadcrumb similar to:
+
+*:*{.mdi .mdi-home} / **universe** / **planets** / **earth**
+
+with each link corresponding to the 3 pages created above.
 
 # Tags
 
