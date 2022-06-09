@@ -55,7 +55,7 @@ Wiki.js is also compatible with the following database systems:
 - ![](https://static.requarks.io/logo/mysql.svg =24x){.mr-2} MySQL **8.0 or later** *(MySQL **5.7.8** is partially supported, [read more](/install/requirements/mysql5))*
 - ![](https://static.requarks.io/logo/mariadb.svg =24x){.mr-2} MariaDB **10.2.7 or later**
 - ![](https://static.requarks.io/logo/microsoft-sql-server-alt.svg =24x){.mr-2} MS SQL Server **2012 or later**
-- ![](https://static.requarks.io/logo/sqlite-alt.svg =24x){.mr-2} SQLite **3.9 or later**
+- ![](https://static.requarks.io/logo/sqlite-alt.svg =24x){.mr-2} SQLite **3.35 or later**
 {.grid-list}
 
 > **These engines *(MySQL, MariaDB, MS SQL Server and SQLite)* will NOT be supported in the next major version of Wiki.js**. Make sure you understand the implications of migrating your database to PostgreSQL if you plan on upgrading to 3.x+ in the coming years. An export + import tool will be made available at / shortly after release.
