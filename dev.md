@@ -2,7 +2,7 @@
 title: Developers
 description: Getting started on Wiki.js development
 published: true
-date: 2020-12-02T06:41:08.738Z
+date: 2022-06-11T20:18:43.212Z
 tags: dev
 editor: markdown
 dateCreated: 2019-02-15T04:25:01.768Z
@@ -16,10 +16,9 @@ There are 3 methods to develop for Wiki.js. You can either use the dockerized de
 
 ## Prerequisites
 
-* Docker
-* Docker Compose
-* Linux / macOS / Windows 10 Pro or Enterprise
-* Visual Studio Code
+* Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
+* Linux / macOS / Windows 10-11 Pro or Enterprise
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
@@ -54,9 +53,8 @@ Alternatively, see the [generic method](#removing-the-containers-1) below.
 
 ## Prerequisites
 
-* Docker
-* Docker Compose
-* Linux / macOS / Windows 10 Pro or Enterprise
+* Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
+* Linux / macOS / Windows 10-11 Pro or Enterprise
 
 ## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
@@ -158,6 +156,6 @@ docker manifest push -p requarks/wiki:arm
 
 Because the master branch contains pre-release code, it is not recommended to build directly from the source code. Doing so will result in a red warning banner being displayed during setup and in the header on all pages. **You should instead follow the [installation instructions](/install).**
 
-A reproducable build process is however documented [here](/dev/build-process) should you want to build it yourself **from a production release tag**.
+A reproducable build workflow is however available [here](https://github.com/requarks/wiki/blob/main/.github/workflows/build.yml) should you want to build it yourself **from a production release tag**.
 
 ![](https://a.icons8.com/mZbXwZWa/PdY3mQ/svg.svg){.align-abstopright}
