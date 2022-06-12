@@ -2,8 +2,10 @@
 title: Modules
 description: Introduction to Modules for developers
 published: true
-date: 2020-05-16T20:05:46.219Z
+date: 2022-06-12T21:10:33.633Z
 tags: dev
+editor: markdown
+dateCreated: 2019-02-15T04:25:49.728Z
 ---
 
 Wiki.js 2.0 introduces a fully modular approach to critical components such as authentication and storage. This allows developers to easily integrate the app with their existing infrastructure.
@@ -14,8 +16,6 @@ In-depth guides for available for each module type:
 
 * [Authentication](/dev/authentication)
 * [Comments](/dev/comments)
-* Editor
-* [Logging](/dev/logging)
 * [Rendering](/dev/rendering)
 * [Search Engine](/dev/search)
 * [Storage](/dev/storage)
