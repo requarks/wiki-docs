@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2022-02-28T03:52:46.998Z
+date: 2022-06-12T21:03:58.667Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:22:28.058Z
@@ -14,6 +14,7 @@ dateCreated: 2019-02-15T04:22:28.058Z
 ## Recommended Guides
 - [Install on Ubuntu Server *Complete installation guide with PostgreSQL database, docker and optional SSL setup*](/install/ubuntu)
 - [Install on DigitalOcean *Launch a prebuilt droplet using the free marketplace image*](/install/digitalocean)
+- [Install on your local machine *Easiest and fastest way to install Wiki.js on your machine using Docker Desktop*](/install/digitalocean)
 {.links-list}
 
 ## By Platform
