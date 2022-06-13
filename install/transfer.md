@@ -2,7 +2,7 @@
 title: Transfer Wiki.js between servers
 description: How to migrate your installation to a new server
 published: true
-date: 2020-09-13T18:54:42.037Z
+date: 2022-06-13T21:34:23.202Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-13T03:44:51.774Z
@@ -46,7 +46,7 @@ We'll now transfer the backup file onto the new server. There're several methods
 rsync -P wikibackup.dump root@YOUR-NEW-SERVER-IP:~/wikibackup.dump
 ```
 
-> This assumes that you have previously configured your new server to accept SSH connections from your old server. To do so, you need to add the public key of the old server into the authorized_keys of the new server. You can learn how [in this tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2).
+> This assumes that you have previously configured your new server to accept SSH connections from your old server. To do so, you need to add the public key of the old server into the authorized_keys of the new server. You can learn how [in this tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-22-04).
 {.is-info}
 
 # 4. Restore Database
