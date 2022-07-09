@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2020-12-29T08:11:12.537Z
+date: 2022-07-09T22:44:58.586Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-04-08T05:56:27.927Z
@@ -63,7 +63,11 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 
 **Cause**: This error is shown when attempting to load the site before the server is done initializing.
 
-**Resolution**: Simply reload the page again.
+**Resolution**: Simply reload the page again. If the error still occurs after a while, check your server logs for an error preventing Wiki.js from fully initializing.
+
+# How to hide the footer Wiki.js mention
+
+**Seriously?** This software is provided to you completely free. Volunteers have put thousands of hours of their time into this project. We believe a small mention in the footer is a very small thing to ask in return...
 
 # How to manually disable HTTPS / SSL Redirection
 
