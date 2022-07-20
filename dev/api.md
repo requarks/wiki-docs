@@ -2,7 +2,7 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2022-07-20T06:23:37.897Z
+date: 2022-07-20T06:32:16.669Z
 tags: dev, api
 editor: markdown
 dateCreated: 2019-05-21T01:34:03.418Z
@@ -10,9 +10,9 @@ dateCreated: 2019-05-21T01:34:03.418Z
 
 # Overview
 
-Wiki.js exposes a [GraphQL](https://graphql.org/) API from which you can access and modify all the resources of your wiki.
+Wiki.js exposes a [GraphQL](https://graphql.org/) API from which you can access and modify all the resources of your wiki. If you are new to GraphQL, the site [How to GraphQL](https://www.howtographql.com/) is a great learning resource.
 
-> The **GraphQL endpoint** is located at `/graphql`
+> The **GraphQL endpoint** is located at `/graphql` on your wiki.js site.
 {.is-success}
 
 You can access this endpoint from your browser to load the **GraphQL Playground** tool which lets you build and test queries, as well as explore all the possible resources you can access. The docs for all available queries and mutations are accessible on the right side of the screen.
@@ -32,6 +32,9 @@ Authorization: Bearer eyJhbGc...aXczt18H6437W
 ```
 
 Different **permission scopes** are required based on the resource you wish to query / mutate. Ensure the API token you created contains these permission scopes.
+
+> Note that for simplicity, the examples below have hardcoded values. In a real-world application, it is best practice to use [variables](https://graphql.org/learn/queries/#variables) instead.
+{.is-info}
 
 # Examples
 
