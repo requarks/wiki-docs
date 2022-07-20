@@ -2,8 +2,10 @@
 title: GraphQL API
 description: Access ressources and perform actions using the GraphQL API
 published: true
-date: 2020-05-31T21:46:50.626Z
+date: 2022-07-20T06:23:37.897Z
 tags: dev, api
+editor: markdown
+dateCreated: 2019-05-21T01:34:03.418Z
 ---
 
 # Overview
@@ -13,7 +15,7 @@ Wiki.js exposes a [GraphQL](https://graphql.org/) API from which you can access 
 > The **GraphQL endpoint** is located at `/graphql`
 {.is-success}
 
-You can access this endpoint from your browser to load the **GraphQL Playground** tool which lets you build and test queries, as well as explore all the possible resources you can access.
+You can access this endpoint from your browser to load the **GraphQL Playground** tool which lets you build and test queries, as well as explore all the possible resources you can access. The docs for all available queries and mutations are accessible on the right side of the screen.
 
 There're various [client libraries](https://github.com/chentsulin/awesome-graphql#libraries) available for most programming languages to easily make GraphQL queries. Desktop API clients like **Postman**, **Insomnia** and **Firecamp** all support GraphQL queries.
 
@@ -30,6 +32,112 @@ Authorization: Bearer eyJhbGc...aXczt18H6437W
 ```
 
 Different **permission scopes** are required based on the resource you wish to query / mutate. Ensure the API token you created contains these permission scopes.
+
+# Examples
+
+The following examples expect a valid bearer token to be provided in the `Authorization` header, as explained in the [Authentication](#authentication) section above.
+
+For GraphQL Playground, you would use the following format in the **HTTP Headers** panel:
+```json
+{ "Authorization": "Bearer eyJhbGc...aXczt18H6437W" }
+```
+
+
+## Fetch all pages
+
+Query to fetch a list of all pages, ordered by title, returning only the `id`, `path` and `title` properties.
+
+```graphql
+{
+  pages {
+    list (orderBy: TITLE) {
+      id
+      path
+      title
+    }
+  }
+}
+```
+
+## Fetch a specific page
+
+Query to fetch a single page, with ID `15`, returning only the `path`, `title`, `createdAt` and `updatedAt` properties.
+
+```graphql
+{
+  pages {
+    single (id: 15) {
+      path
+      title
+      createdAt
+      updatedAt
+    }
+  }
+}
+```
+
+
+## Fetch all groups
+
+Query to fetch all user groups, returning only the `id` and `name` properties.
+
+```graphql
+{
+  groups {
+    list {
+      id
+      name
+    }
+  }
+}
+```
+
+## Search users
+
+Query to list all users matching `john` in their name or email address, returning only the `id`, `name` and `email` properties.
+
+```graphql
+{
+  users {
+    search (query: "john") {
+      id
+      name
+      email
+    }
+  }
+}
+```
+
+## Create New User
+
+Mutation to create a new local user, assign it to group ID `1` and return the generated user `id`. The property `succeeded` will be `true` in the response if the operation succeeded. Otherwise, the `message` property will contain the error message that prevented the user creation.
+
+```graphql
+mutation {
+  users {
+    create (
+      email: "john.doe@example.com"
+      name: "John Doe"
+      passwordRaw: "Password123"
+      providerKey: "local"
+      groups: [1]
+      mustChangePassword: true
+      sendWelcomeEmail: false
+    ) {
+      responseResult {
+        succeeded
+        slug
+        message
+      }
+      user {
+        id
+      }
+    }
+  }
+}
+
+```
+
 
 # Error Reference
 
