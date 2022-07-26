@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2022-07-09T22:44:58.586Z
+date: 2022-07-26T06:33:54.304Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-04-08T05:56:27.927Z
@@ -64,6 +64,20 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 **Cause**: This error is shown when attempting to load the site before the server is done initializing.
 
 **Resolution**: Simply reload the page again. If the error still occurs after a while, check your server logs for an error preventing Wiki.js from fully initializing.
+
+# How to execute javascript code on page load
+
+You may have noticed that running javascript code on the standard page load or dom ready event don't work because the page content isn't rendered yet.
+
+You need to register a callback via `window.boot.register(evt, clb)` instead, where the triggering event is `vue`, e.g.:
+
+```js
+window.boot.register('vue', () => {
+	// code to execute
+})
+```
+
+Your code will now execute once the page is loaded and the Vue instance is ready.
 
 # How to hide the footer Wiki.js mention
 
