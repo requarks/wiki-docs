@@ -14,7 +14,7 @@ tags:
 
 1. From the Azure Portal, open the **Azure Active Directory** resource.
 1. Click on **App registrations** in the left navigation and then click **New registration** at the top.
-1. Enter a **Name** (e.g. Wiki.js) and enter the **Redirect URI** in the following format: `https://YOUR-WIKI.DOMAIN.COM/login/azure/callback`
+1. Enter a **Name** (e.g. Wiki.js) and enter the **Redirect URI** in the following format: `https://YOUR-WIKI.DOMAIN.COM/login/YOUR_TENANT_ID/callback`
 1. Click **Register**.
 1. Copy the **Application (client) ID**, you'll need it later.
 1. Click on **Endpoints** at the top and copy the endpoint value for **OpenID Connect metadata document** (e.g. `https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration`), you'll need it later.
