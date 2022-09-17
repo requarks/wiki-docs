@@ -114,13 +114,29 @@ Edit the password column and insert a new **bcrypt**-formatted value. You can us
 
 When running PostgreSQL inside a docker container (e.g. DigitalOcean / AWS official image), follow these steps:
 
-1. Use a tool like https://bcrypt-generator.com/ to generate a bcrypt hash of the password you want. The number of rounds must be **12**.
+1. Use a tool like https://bcrypt-generator.com/ to generate a bcrypt hash of the password you want. The number of rounds must be **12**. Note that, in the command below, every dollar sign ($) in your hashed password has to be *escaped* by a single backslash (\\), otherwise your password won't get recognized properly.
 2. Connect to your machine / droplet via SSH.
-3. Run the following command, replacing `HASH-PASSWORD` with the hash generated in step 1 and `YOUR-EMAIL` with the email address of the account you want to reset:
+3. Run the following command, replacing `CONTAINER` with the name of the docker container running your database, `USERNAME` with the username used for your database, `DATABASE` with the name of your database, `HASH-PASSWORD` with the hash generated in step 1 and `YOUR-EMAIL` with the email address of the account you want to reset:
 
 ```bash
-docker exec db psql -U wiki -d wiki -c "UPDATE users SET password = 'HASH-PASSWORD' WHERE email = 'YOUR-EMAIL';"
+docker exec CONTAINER psql -U USERNAME -d DATABASE -c "UPDATE users SET password = 'HASH-PASSWORD' WHERE email = 'YOUR-EMAIL';"
 ```
+
+#### Forgot user email
+If you forgot which email you used for logging in, run the following command to list all users' emails and passwords:
+
+```bash
+docker exec CONTAINER psql -U USERNAME -d DATABASE -c "SELECT email, password FROM users;"
+```
+
+#### Username and password of the database
+If you forgot your username/password for your database, try looking at the environment variables of your docker container by running 
+
+```bash
+docker exec CONTAINER printenv
+```
+
+You're looking for the variables called `POSTGRES_PASSWORD`, `POSTGRES_USER` and `POSTGRES_DB`. Use them in their respective places in the command above.
 
 # Links inside emails are incorrect
 
