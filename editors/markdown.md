@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2022-11-09T06:33:19.404Z
+date: 2022-11-09T06:34:32.121Z
 tags: editors
 editor: markdown
 dateCreated: 2019-05-22T02:59:46.078Z
@@ -506,7 +506,7 @@ Lorem ^ipsum^ dolor
 Using the syntax:
 
 ```md
-| Header A1 | Header C2 | Header C1 |
+| Header A1 | Header B1 | Header C1 |
 |-----------|-----------|-----------|
 | Cell A2   | Cell B2   | Cell C2   |
 | Cell A3   | Cell B3   | Cell C3   |
