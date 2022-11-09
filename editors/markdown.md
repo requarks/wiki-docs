@@ -2,8 +2,10 @@
 title: Markdown
 description: Editor
 published: true
-date: 2020-05-14T15:03:27.792Z
+date: 2022-11-09T06:33:19.404Z
 tags: editors
+editor: markdown
+dateCreated: 2019-05-22T02:59:46.078Z
 ---
 
 # Overview
@@ -494,6 +496,59 @@ Lorem ^ipsum^ dolor
 ```
 
 Lorem ^ipsum^ dolor
+
+## Table
+
+### Tab {.tabset}
+
+#### Usage
+
+Using the syntax:
+
+```md
+| Header A1 | Header C2 | Header C1 |
+|-----------|-----------|-----------|
+| Cell A2   | Cell B2   | Cell C2   |
+| Cell A3   | Cell B3   | Cell C3   |
+...
+```
+
+#### Examples
+
+```md
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Foo      | Bar      | Xyz      |
+| Abc      | Def      | 123      |
+```
+
+will result in:
+
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Foo      | Bar      | Xyz      |
+| Abc      | Def      | 123      |
+
+#### Stylings
+
+By adding the class `dense` on a separate line, after the table, you can make the table use a smaller font and smaller padding. For example:
+
+```md
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Foo      | Bar      | Xyz      |
+| Abc      | Def      | 123      |
+{.dense}
+```
+
+will result in:
+
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Foo      | Bar      | Xyz      |
+| Abc      | Def      | 123      |
+{.dense}
+
 
 ## Task Lists
 
