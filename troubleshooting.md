@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2022-07-26T06:33:54.304Z
+date: 2022-11-19T02:56:53.546Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-04-08T05:56:27.927Z
@@ -143,5 +143,21 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 Starting in version **2.1**, a new HTML sanitization step is added by default to the rendering pipeline. This feature prevents potentially unsafe HTML tags / properties from being present in the final render. Any HTML tag or property that isn't whitelisted will be rendered as plain text.
 
 If you are the sole editor / trust your editors, you can disable this feature in the **Administration Area**, under **Rendering** > **HTML** > **Security** > **Sanitize HTML**.
+
+# Unable to upgrade from the Administration Area
+
+If clicking the <kbd>Perform Upgrade</kbd> button doesn't actually upgrade the wiki instance, you need to upgrade the wiki-update-companion container to the latest version. A bug was present in an earlier version that failed to properly fetch the latest image.
+
+Assuming you're running the [DigitalOcean Wiki.js droplet](/install/digitalocean) or you followed the [Ubuntu Install Guide](/install/ubuntu), connect to your server via SSH and run the following commands:
+
+```
+docker stop wiki-update-companion
+docker rm wiki-update-companion
+docker pull ghcr.io/requarks/wiki-update-companion:latest
+docker create --name=wiki-update-companion -v /var/run/docker.sock:/var/run/docker.sock:ro --restart=unless-stopped -h wiki-update-companion --network=wikinet ghcr.io/requarks/wiki-update-companion:latest
+docker start wiki-update-companion
+```
+
+The <kbd>Perform Upgrade</kbd> button should now work correctly.
 
 ![](https://a.icons8.com/IMfhdRiW/YNcdYW/svg.svg){.align-abstopright}
