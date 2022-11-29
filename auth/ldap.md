@@ -24,8 +24,7 @@ LDAP / Active Directory is an enterprise authentication solution developed by Mi
   	- **Email Field Mapping**
   	- **Display Name Field Mapping**
   	- **Avatar Picture Field Mapping**
-1. If you want your wiki to assign groups to users that match their LDAP groups, enable the **Map Groups** option.
-> This also removes any existing group assignments that don't match LDAP, so consider this carefully before enabling for existing installations. If you have disabled any local wiki accounts you can lock yourself out. {.is-warning}
+1. If you want your wiki to assign groups to users that match their LDAP groups, enable the **Map Groups** option. This also removes any existing group assignments that don't match LDAP, so consider this carefully before enabling for existing installations. If you have disabled any local wiki accounts you can lock yourself out. 
 1. If you enabled the **Map Groups** option, enter the base DN to search for your LDAP groups in the **Group Search Base**.
 1. The **Group Search Filter** is to specify the LDAP group property that contains group membership. The default works in most LDAP configurations, but will not search nested groups in Active Directory. For Active Directory, use something like **(member:1.2.840.113556.1.4.1941:={{dn}})** to search nested groups. See [Microsoft's documentation](https://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx) for more information. Any other LDAP provider you will need to modify the filter accordingly. {{dn}} will get replaced with the user property specified in **Group DN Property**.
 1. Change the **Group Search Scope** from **sub** (search the base dn and any entries below the base dn) to **base** (search only the base dn) or **one** (search the base dn and one level below) only if your environment requires it.
