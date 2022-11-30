@@ -249,7 +249,11 @@ Consectetur adipiscing elit
 
 #### Usage
 
-Using the syntax `![Image Caption](Image Source)`.
+Using the syntax `![Image alt text](Image source "Image title")`.
+
+Image alt text - text that is displayed when the image could not be loaded
+Image source - file path of image
+Image title - is displayed when the user hovers over the picture
 
 #### Shortcuts
 - Using the **Assets** tool in the left toolbar.
@@ -257,7 +261,7 @@ Using the syntax `![Image Caption](Image Source)`.
 #### Examples
 
 ```markdown
-![Lorem ipsum](https://dolor.example.com/sit/amet.jpg)
+![Lorem ipsum](https://dolor.example.com/sit/amet.jpg "Lorem ipsum")
 
 Consectetur ![adipiscing](/link/to/image.jpg) elit
 ```
