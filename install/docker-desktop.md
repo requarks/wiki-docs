@@ -67,7 +67,7 @@ This file simply defines a PostgreSQL container *(our database)* and the Wiki.js
 
 ## 3. Open Terminal / Command Prompt
 
-On **macOS**, launch **Terminal** and navigate to the `wiki` folder your created earlier.
+On **macOS**, launch **Terminal** and navigate to the `wiki` folder you created earlier.
 
 On **Windows**, open the folder `wiki` you created earlier in **File Explorer**.  
 In the address bar, type `cmd` and press <kbd>ENTER</kbd> to launch a **Command Prompt** at that location.
