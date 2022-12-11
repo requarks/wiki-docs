@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Common issues and solutions
 published: true
-date: 2022-11-19T02:56:53.546Z
+date: 2022-12-11T02:59:52.328Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-04-08T05:56:27.927Z
@@ -69,10 +69,10 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-po
 
 You may have noticed that running javascript code on the standard page load or dom ready event don't work because the page content isn't rendered yet.
 
-You need to register a callback via `window.boot.register(evt, clb)` instead, where the triggering event is `vue`, e.g.:
+You need to register a callback via `window.boot.register(evt, clb)` instead, where the triggering event is `page-ready`, e.g.:
 
 ```js
-window.boot.register('vue', () => {
+window.boot.register('page-ready', () => {
 	// code to execute
 })
 ```
