@@ -2,7 +2,7 @@
 title: Editors
 description: Using the various editors of Wiki.js
 published: true
-date: 2021-04-03T00:52:28.023Z
+date: 2022-12-24T02:41:58.125Z
 tags: editors
 editor: markdown
 dateCreated: 2019-05-22T03:11:37.479Z
@@ -12,11 +12,9 @@ When creating a page, you can use the editor of your choice. Some users prefer t
 
 # List of  Editors
 
-- [API Docs *REST / GraphQL *(coming soon)**](/editors/api) 
-- [Blog *Timeline of Posts *(coming soon)**](/editors/blog)
+- [AsciiDoc *Plain Text Formatting*](/editors/asciidoc) 
 - [Code *Raw HTML*](/editors/code)
 - [Markdown *Plain Text Formatting*](/editors/markdown)
-- [Tabular *Excel-like *(coming soon)**](/editors/tabular)
 - [Visual Editor *Rich-Text WYSIWYG*](/editors/visualeditor)
 {.links-list}
 
