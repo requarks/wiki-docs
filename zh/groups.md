@@ -2,104 +2,106 @@
 title: Users, Groups & Permissions
 description: Manage access to your wiki
 published: true
-date: 2020-06-24T17:45:20.824Z
+date: 2023-01-08T14:34:04.069Z
 tags: 
 editor: markdown
+dateCreated: 2023-01-08T10:33:27.804Z
 ---
 
-While a good wiki is one where anyone can contribute new content, it's always a good idea to restrict certain sections and specific actions to a list of selected users.
+虽然一个好的wiki是任何人都可以贡献新内容的地方，但最好将某些部分和特定操作限制在您选定的用户中。
 
-Wiki.js has a powerful permission system with fine grained control over what your users can see and do.
+Wiki.js拥有强大的权限系统，可以精细控制用户能看到的内容和能执行的操作。
 
-# Overview
+# 概述
 
-The permission system of Wiki.js is based on 4 concepts:
+Wiki.js的权限系统基于4个概念设计：
 
-- **Groups**
-- **Users**
-- **Permissions**
-- **Page Rules**
+- **用户组**
+- **用户**
+- **权限**
+- **页面规则**
 {.grid-list}
 
-A group contains multiple users, a set of permissions and a list of page rules.
+一个用户组包含数个用户、一组权限和一组页面规则。
 
-![diag-permissions.jpg](/assets/diagrams/diag-permissions.jpg =1000x){.decor-shadow .radius-4}
+![diag-permissions.jpg](/assets/diagrams/diag-permissions.webp =1000x){.decor-shadow .radius-4}
 
-A **user** can be part of **one or more** groups.
+**用户** 可以属于 **一个或多个** 用户组。
 
-A **group** defines what users can see and what they can do. This is achieved by using 2 concepts: **Global Permissions** and **Page Rules**.
+**用户组** 规定用户能看到的内容和能执行的操作。 它通过两个概念来实现这一点： **全局权限** 和 **页面规则**.
 
-A **global permission** gives the right to a user to perform a very specific action. For example, the global permission `read:pages` allows the user to view pages, while the global permission `write:assets` allows the user to upload images and files. These global permissions act as a master switch to **allow or deny** a specific action on the wiki.
+**全局权限** 授权用户执行特定操作。例如，全局权限 `read:pages` 允许用户访问页面，而全局权限 `write:assets` 允许用户上传图片和文件。 这些全局权限起总开关的作用，以 **允许或拒绝** 用户在wiki上执行特定操作。
 
-While global permissions are great a limiting the user to perform only a specific set of actions, it lacks control on **where** these permissions are applied. For example, you might want a user to be able to view pages under `/cities` but not pages under `/secret`. This is where **Page Rules** come into play.
+全局权限可以有效控制用户可以执行的操作，但它不能控制权限被应用在**在哪些地方**。 比如，你有可能想要一名用户能查看在 `/cities` 目录下的页面， 但不能查看在 `/secret` 目录下的页面。 这就是 **页面规则** 发挥作用的地方。
 
-A **page rule** specifies exactly where permissions are applicable.
+**页面规则** 确定全局权限的生效范围。
 
 ---
 
-**Let's use the following example:**
-*We want users of group XYZ to be able to view pages and view assets where the path is exactly `/cities/montreal`.*
+**让我们用下面的例子来解释：**
+*我们想让用户组 XYZ 下的用户可以查看路径 `/cities/montreal` 的页面和资源*
 
-The page rule would be defined as:
+需要设定如下的页面规则：
 
-- Allow or Deny: `Allow`
-- Permissions: `read:pages, read:assets`
-- Rule Pattern: `Path matches exactly...`
-- Rule Value: `/cities/montreal`
+- 允许或拒绝: `允许`
+- 权限: `read:pages, read:assets`
+- 匹配规则: `路径精确匹配...`
+- 匹配值: `/cities/montreal`
 {.grid-list}
 
-![ss-pagerule-ex1.png](/assets/examples/ss-pagerule-ex1.png =1000x)
+![ss-pagerule-ex1.png](/assets/examples/ss-pagerule-ex1.webp =1000x)
 
-If we combine all the concepts together, the group would:
+将上述内容汇总起来，这个用户组需要被这样设置：
 
-- Have one or more users
-- Have the global permissions `read:pages` and `read:assets` enabled
-- Have a page rule of `Allow` permissions `read:pages, read:assets` where `Path matches exactly`... `/cities/montreal`
+- 拥有数名用户
+- 启用全局权限 `read:pages` 和 `read:assets`
+- 有一条权限为 `允许` `read:pages, read:assets`，使用匹配规则为 `路径精确匹配`... `/cities/montreal` 的页面规则。
 
 ---
 
-***In which order are rules applied?***
+***规则的应用顺序是？***
 
-Rules are applied in order of path specificity. A more precise path will always override a less defined path.
+规则按精确度应用。更精确的路径的页面规则将覆盖之前的页面规则。
 
-For example, `/geography/countries` will override `/geography`.
+比如, 应用于`/geography/countries`的页面规则将覆盖应用于`/geography`的页面规则。
 
-When 2 rules have the same specificity, the priority is given from lowest to highest as follows:
-- Path Starts With... *(lowest)*{.caption}
-- Path Ends With...
-- Path Matches Regex...
-- Path Is Exactly... *(highest)*{.caption}
+当两条规则精确度相同（目录的层数相同）时，将按照如下顺序从低优先级到高优先级确定规则：
+- 路径开头匹配... *(优先级最低)*{.caption}
+- 路径结尾匹配...
+- 路径通配符匹配...
+- 路径精确匹配... *(优先级最高)*{.caption}
 
-When 2 rules have the same path specificity AND the same match type, `Deny` will always override an `Allow` rule.
+当两条页面规则的精确度和匹配规则均相同时, `拒绝` 规则将默认覆盖 `允许` 规则.
 
-***What is the default behavior for a permission?***
+***默认的权限行为是？***
 
-Unless you explicitely grant `Allow` on a permission, it will always be denied by default. Therefore, giving no permission is the same as adding a `Deny` rule for all permissions. As such, `Deny` rules are only needed to override a previous `Allow` rule. You do not need to add a `Deny` rule if you didn't `Allow` it in the first place at a lower level.
+除非您明确对某一权限添加一条 `允许` 规则, 它将始终被默认拒绝. 因此, 不分配权限等同于对所有权限设定 `拒绝` 规则. 因此, `拒绝` 规则只需覆盖之前的（同优先级或更低优先级的） `允许` 规则（上面我们就是这么规定的）。 如果您并没有在相同或更低的优先级上设定`允许`规则，您就不需要在这一优先级上设定`拒绝`规则。
 
-***Why have global permissions at all, instead of simply using page rules?***
+***有了页面规则，为什么你还要设计全局权限？***
 
-Some actions are not tied to any particular path. For example, the ability to create users or manage groups. It's also useful to have a quick view of what a group can do without having to review a bunch of page rules to see whether a permission is applied. It's also easier to remove access globally to a specific action without modifying any page rule.
+某些操作不与任何特定路径相关联。例如，创建用户或管理组的能力。全局权限还可以让管理员快速查看用户组可以做什么，而不必查看一堆页面规则来查看是否应用了权限。在不修改任何页面规则的情况下，全局删除对特定操作的访问也更容易。
 
-***Can I define a page rule with permissions that are not enabled in the global permissions?***
+***我可以定义具有未在全局权限中启用的权限的页面规则吗？***
 
-No. The global permissions always have priority over page rules. If a global permission is not enabled, the page rule will have no effect.
+不行。全局权限始终优先于页面规则。如果未启用全局权限，页面规则将无效。
 
-***Do I need to define page rules if I want users to have the permissions applied everywhere?***
+***如果我希望用户在所有位置都能使用全局权限，我是否还需要定义页面规则？***
 
-Yes, for content permissions only. You need to define at least 1 page rule with the selected permissions and using the rule pattern where `Path starts with...` and a blank value.
+是，但只有内容权限需要您这么做。您需要定义至少一个针对相关内容权限的页面规则，并使用`路径开头匹配`规则并配以空白值。
 
 
-# Groups
+# 用户组
 
-Manage groups in the **Administration Area** by clicking the **Groups** sidebar menu item.
+你可以在 **管理区** 点击侧边栏的 **用户组** 选项来管理用户组。
 
-There're 2 system groups that are predefined and cannot be deleted:
+有两个用户组是系统预先定义好的，不能被删除：
 
 - **Administrators**
 - **Guests**
 {.grid-list}
 
-They are identified by a lock icon in the list. The **administrators** group cannot be modified other than adding/removing users. The **guests** group can be modified with the exception of administrative roles which are locked.
+你可以在用户组列表中通过锁🔒图标认出它们。您只能向 **Administrators** 用户组增加或删除用户，不能修改其它内容。**Guests**用户组只能被拥有管理员权限的用户编辑。
+
 
 # Users
 
