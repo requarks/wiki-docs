@@ -2,68 +2,67 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2022-06-12T21:20:29.807Z
+date: 2023-01-08T13:48:54.497Z
 tags: 
 editor: markdown
-dateCreated: 2019-02-15T04:20:30.188Z
+dateCreated: 2023-01-08T10:33:30.645Z
 ---
 
-> This documentation site is running on Wiki.js!
+> 此文档网站由Wiki.js驱动！
 {.is-success}
 
-# Getting Started
+# 开始使用
 
-Wiki.js is quick and easy to install. You should be up and running in no time.
+安装Wiki.js很快速而且十分简单。用不了几分钟你就能成功部署它。
 
-- [Requirements *Server and database prerequisites.*](/install/requirements)
-- [Installation Guide *Detailed installation instructions for all platforms.*](/install)
+- [配置要求 *服务器、数据库配置要求*](/install/requirements)
+- [安装指南 *针对全平台的详细安装指南*](/install)
 {.links-list}
 
-# User Guide
+# 用户指南
 
-- [The Basics *New to Wiki.js? Learn how to use it and create your first page.*](/guide/intro)
-- [Folder Structure & Tags *Learn how to categorize your pages for an easier browsing experience.*](/guide/structure)
-- [Manage Pages *How to create, edit and manage your pages.*](/guide/pages)
-- [Using Editors *Learn how to use the various editors.*](/editors)
-- [Using Assets *How to upload and manage assets such as images and documents.*](/guide/assets)
+- [基础操作 *你是Wiki.js小白？在此学习使用方法并创建你的第一个页面*](/guide/intro)
+- [目录结构 & 标签 *将你的页面分类存放，简化浏览体验*](/guide/structure)
+- [页面管理 *如何创建、编辑和管理你的页面*](/guide/pages)
+- [编辑器使用 *学习使用Wiki.js内置的各种编辑器*](/editors)
+- [使用资源 *上传和管理资源（图片、文档等）*](/guide/assets)
 {.links-list}
 
-# Administration
+# 管理手册
 
-- [:globe_with_meridians: Locales *Display the wiki in a different language or enable multilingual capabilities.*](/locales)
-- [:busts_in_silhouette: User Groups *Permissions and access rights.*](/groups)
-- [:satellite: Telemetry *Help Wiki.js developers understand crashes by enabling anonymous telemetry.*](/telemetry)
-- [:wrench: Troubleshooting *Solutions to common issues.*](/troubleshooting)
+- [:globe_with_meridians: 语言 *更改您wiki的语言，或为其启用多语言能力*](/locales)
+- [:busts_in_silhouette: 用户组 *进行访问和编辑权限管理*](/groups)
+- [:satellite: 遥测 *启用匿名遥测，帮Wiki.js开发者理清程序故障*](/telemetry)
+- [:wrench: 故障处理 *常见问题的修复方法*](/troubleshooting)
 {.links-list}
 
-## Modules
-Modules greatly expand the capabilities of your wiki.
-- [:lock: Authentication *Configure how users can login and register to your wiki.*](/auth)
-- [:speech_balloon: Comments *Add discussion capabilities to your wiki.*](/comments)
-- [:pencil: Editors *Manage the various editors used to create content.*](/editors)
-- [:hourglass: Rendering *Configure how content is parsed and rendered into its readable form.*](/rendering)
-- [:mag: Search Engines *Manage the search capabilities of your wiki.*](/search)
-- [:floppy_disk: Storage *Backup or sync the content of your wiki with external storage services.*](/storage)
+## 模块
+模块大幅增强了您wiki的能力。
+- [:lock: 认证 *配置用户注册和登录您wiki的方式*](/auth)
+- [:speech_balloon: 评论 *为您的wiki添加讨论功能*](/comments)
+- [:pencil: 编辑器 *管理您wiki的各种用于生产内容的编辑器*](/editors)
+- [:hourglass: 渲染 *配置内容被解析和渲染为可读形式时的规则*](/rendering)
+- [:mag: 搜索 *管理您wiki的搜索能力*](/search)
+- [:floppy_disk: 存储 *使用外部存储对您的wiki进行备份或同步*](/storage)
 {.links-list}
 
-# Developers
+# 开发者指南
+Wiki.js本身完全可扩展，供您实现最大程度的定制。
 
-Wiki.js is fully extensible for maximum customization.
-
-- [:book: Getting Started *How to setup a dev environment for Wiki.js.*](/dev)
-- [:closed_book: Modules *Learn how to create a module.*](/dev/modules)
-- [:art: Themes *Learn how to create your own theme.*](/dev/themes)
+- [:book: 起步 *配置Wiki.js的开发环境*](/dev)
+- [:closed_book: 模块 *学习如何开发一个模块*](/dev/modules)
+- [:art: 主题 *学习如何创建您自己的主题*](/dev/themes)
 {.links-list}
 
-# Localization
-- [:globe_with_meridians: Translations *Contribute a new language or test new keys*](/dev/translations)
+# 本地化
+- [:globe_with_meridians: 翻译 *贡献新语言翻译或测试新的语言键*](/dev/translations)
 {.links-list}
 
-# Contribute
-- [:question: Ask a Question *We're here to help.*](https://github.com/Requarks/wiki/discussions)
-- [:fire: Report a Bug *Help us squash those pesky bugs.*](https://github.com/Requarks/wiki/discussions)
-- [:bulb: Suggest a New Feature *We need your ideas!*](https://requests.requarks.io/wiki)
-- [:moneybag: Donate *Make a small donation or become a sponsor of this wonderful project!*](https://js.wiki/donate)
+# 贡献
+- [:question: 提问 *我们可以为您提供帮助*](https://github.com/Requarks/wiki/discussions)
+- [:fire: 反馈Bug *帮我们一起捉虫*](https://github.com/Requarks/wiki/discussions)
+- [:bulb: 提出新功能建议 *我们需要您的创意！*](https://requests.requarks.io/wiki)
+- [:moneybag: 捐助 *小捐一笔，或直接成为我们的赞助者*](https://js.wiki/donate)
 {.links-list}
 
 ![Wiki.js](https://static.requarks.io/logo/wikijs-butterfly.svg){.align-abstopright}
