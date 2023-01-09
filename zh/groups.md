@@ -2,7 +2,7 @@
 title: Users, Groups & Permissions
 description: Manage access to your wiki
 published: true
-date: 2023-01-08T14:34:04.069Z
+date: 2023-01-09T01:32:14.862Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:27.804Z
@@ -103,14 +103,15 @@ Wiki.js的权限系统基于4个概念设计：
 你可以在用户组列表中通过锁🔒图标认出它们。您只能向 **Administrators** 用户组增加或删除用户，不能修改其它内容。**Guests**用户组只能被拥有管理员权限的用户编辑。
 
 
-# Users
+# 用户
 
-Manage users in the **Administration Area** by clicking the **Users** sidebar menu item.
+你可以在 **管理区** 点击侧边栏的 **用户** 选项来管理用户组。
 
-## Create New User
+## 创建新用户
 
-Click on the **New User** button to display the user creation dialog.
+点击 **创建新用户** 按钮以弹出创建用户的对话框。
 
+选择要创建用户的认证服务 **提供者**。当提供者被设为 本地认证 时，你将在数据库
 Select the authentication **Provider** to use for the user to be created. When selecting the **Local** authentication provider, you are creating a new user that lives uniquely in the database. For all other providers, a reference to the external service will be kept in the database to identify the user during login.
 
 Fill in the details about the user:
