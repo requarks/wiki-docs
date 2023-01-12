@@ -1,8 +1,8 @@
 ---
-title: Users, Groups & Permissions
-description: Manage access to your wiki
+title: 用户、用户组与权限
+description: 管理对您wiki的访问
 published: true
-date: 2023-01-10T03:21:58.201Z
+date: 2023-01-12T21:38:58.403Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:27.804Z
@@ -111,38 +111,38 @@ Wiki.js的权限系统基于4个概念设计：
 
 点击 **创建新用户** 按钮以弹出创建用户的对话框。
 
-选择要创建用户的认证服务 **提供者**。当提供者被设为 本地认证 时，你将在数据库
-Select the authentication **Provider** to use for the user to be created. When selecting the **Local** authentication provider, you are creating a new user that lives uniquely in the database. For all other providers, a reference to the external service will be kept in the database to identify the user during login.
+选择要创建用户的认证服务 **提供者**。当提供者被设为 本地认证 时，你将在数据库创建一个唯一的用户。当提供者为本地认证以外的服务时，数据库中将储存到外部服务的索引，以在用户登录时识别用户身份。
 
-Fill in the details about the user:
+填写要创建的用户的详细信息：
 
 ![ui-user-create.png](/assets/ui/ui-user-create.png =450x){.radius-4 .decor-shadow}
 
-**Tip:** You can click the dice icon to automatically generate a strong random password.
+**提示：** 你可以点击骰子图标，让系统自动生成一个强密码。
 
-> **You must assign the user to at least 1 group.** Otherwise, they will not be able to access anything.
+> **你必须为用户指定至少一个用户组。** 否则，用户将无法访问任何内容。
 {.is-warning}
 
-Click **Create and Close** to create the user. You can also click **Create** to create another user afterwards.
+点击 **创建并关闭** 来创建用户。 你也可以点击  **创建** 以在创建这个用户之后继续创建。
 
 
-## Edit User
+## 编辑用户
 
-From the **Users** list, click on the user you want to edit.
+在 **用户** 列表中，选择您想要编辑的用户。
 
-Click the **pencil** icon next to the field(s) you want to edit. Click the **Update User** button, located at the top-right corner of the page to apply the modifications.
+点击你想要修改的项旁边的 **铅笔✏** 图标。 点击 **更新用户** 按钮（位于页面右上角）来应用修改。
 
-### Deactivate / Activate User
+### 停用 / 激活用户
 
-You can disable access to an account, without deleting it, by deactivating the user account. To do so, click on the **Actions** button and select **Deactivate**. The user will no longer be able to login.
+您可以在不删除用户账户的情况下停用账户，以暂停其的访问。要停用账户，点击 **操作** 按钮并选择 **停用**，被停用的用户将不能继续登录。
 
-Select **Activate** to enable access again.
+点击 **激活** 就可重新恢复用户的访问。
 
-### Manually Verify User
+### 手动验证用户
 
-If the user was unable to verify their account or didn't receive the verification email, you can manually verify the action by clicking the **Actions** button and select **Set as Verified**.
+如果用户无法验证自己的账户或无法接收验证邮件，你可以通过点击 **操作** 按钮并选择 **设为已验证** 来手动验证用户。
 
-## Delete User
+## 删除用户
+
 
 While it's possible to delete an account, it's not recommended. It's always preferrable to deactivate the user instead.
 
