@@ -61,8 +61,8 @@ Alternatively, see the [generic method](#removing-the-containers-1) below.
 2. Run the following commands:
 ```bash
 docker-compose -f dev/containers/docker-compose.yml up -d
-docker exec wiki-app yarn   # only necessary the first time
-docker exec wiki-app yarn dev
+docker exec -it wiki-app yarn   # only necessary the first time
+docker exec -it wiki-app yarn dev
 
 ```
 > Run your `docker-compose` commands from the `dev/containers/` directory if you'd prefer to omit the `-f` flag.
