@@ -2,7 +2,7 @@
 title: Authentication
 description: List of supported Authentication Modules
 published: true
-date: 2020-09-10T18:51:33.063Z
+date: 2023-01-15T02:28:15.032Z
 tags: auth
 editor: markdown
 dateCreated: 2019-04-29T00:57:43.566Z
@@ -53,8 +53,6 @@ You can optionally set a domain whitelist so that only users with a specific ema
 Finally, select the group new users will be assigned to the first time they log in.
 
 Click **Apply** to save the configuration.
-
-![](https://a.icons8.com/dhhZkYZk/0ICOP9/svg.svg){.align-abstopright}
 
 # Two-Factor Authentication
 
