@@ -2,7 +2,7 @@
 title: 用户、用户组与权限
 description: 管理对您wiki的访问
 published: true
-date: 2023-01-12T21:38:58.403Z
+date: 2023-01-16T08:57:49.933Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:27.804Z
@@ -129,7 +129,7 @@ Wiki.js的权限系统基于4个概念设计：
 
 在 **用户** 列表中，选择您想要编辑的用户。
 
-点击你想要修改的项旁边的 **铅笔✏** 图标。 点击 **更新用户** 按钮（位于页面右上角）来应用修改。
+点击你想要修改的项旁边的 **铅笔:pencil:** 图标。 点击 **更新用户** 按钮（位于页面右上角）来应用修改。
 
 ### 停用 / 激活用户
 
@@ -143,29 +143,28 @@ Wiki.js的权限系统基于4个概念设计：
 
 ## 删除用户
 
+您可以删除账户，但我们并不推荐这样做。我们更建议您停用用户。
 
-While it's possible to delete an account, it's not recommended. It's always preferrable to deactivate the user instead.
+要删除一名用户，请从 **用户** 列表中选中要删除的账户，单击 **操作** 按钮并点击 ** 删除。然后确认你的操作已继续删除流程。
 
-To delete a user, select the account from the **Users** list, click the **Actions** button and select **Delete**. Confirm that you want to delete the account to proceed.
-
-> Note that the **Guest** account cannot be deleted and some of its fields are locked.
+> 请注意，**Guest**账户不能被删除，而且它的某些信息项时被锁定的。
 {.is-info}
 
-# Guides
+# 指南
 
-## Private Wiki
+## 私人Wiki
 
-To make your wiki completely private and require authentication in order to view any page, simply modify the **Guest** group in the **Administration Area -> Groups** section. Either change the default **Page Rule** from **Allow** to **Deny**, or remove all global permissions on the account. Both methods will result in the same behavior.
+要让你的wiki完全私有并要求访问任何页面都需要认证，你只需要在 **管理区 -> 用户组** 修改 **Guest** 用户组。你可以将默认的 **页面规则** 从 **允许** 改为 **拒绝**，或移除该账户的所有全局权限。上述两种方法都能实现要求。 
 
-## Departments
+## 部门
 
-To give a private space to each department of your company, create a **group** for each.
+要分别给您公司的每个部门单独的私有空间，您需要为它们分别创建一个**用户组**。
 
-For each group, add a **Page Rule** with access to **path starting with...** a specific subfolder (e.g. `/accounting`, `/marketing`, etc.).
+然后，你需要为刚刚创建的用户组逐个添加**路径开头匹配**的**页面规则**，匹配对应的子目录（如：`/accounting`、`/marketing`等）。
 
-> Note that you cannot use 2 letters paths. Therefore, paths like `/hr` or `/it` will not work as they are reserved for languages.
+> 注意：您不能使用2个英文字符作为一级子目录。因此，`/hr`或`it`这样的路径会是无效的，因为它们是为特定语言而预留的。
 {.is-warning}
 
-Starting in Wiki.js **2.5**, you can redirect users directly to their subfolder upon login, instead of the homepage. In earlier versions, you should give read access to the `/home` path (using **Path matches exactly...** match) as this is the landing page for all users upon login.
+从Wiki.js **2.5**，您可以在用户登录后直接将其跳转到其对应的子目录，而不是wiki主页。在早期版本中，`/home`是所有用户登录后被跳转岛的页面。你需要（使用**路径精确匹配**规则）开放`/home`路径的读权限。
 
 ![](https://a.icons8.com/kkjevabe/OINR8w/svg.svg){.align-abstopright}
