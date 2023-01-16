@@ -1,42 +1,41 @@
 ---
-title: Troubleshooting
-description: Common issues and solutions
+title: 常见问题
+description: 常见问题和解决方案
 published: true
-date: 2022-12-11T02:59:52.328Z
+date: 2023-01-16T14:53:25.562Z
 tags: setup, guide
 editor: markdown
-dateCreated: 2019-04-08T05:56:27.927Z
+dateCreated: 2023-01-08T10:33:56.747Z
 ---
 
-# Cannot upload files larger than X
+# 无法上传大小超过 X 的文件
 
-**Cause:** You are most likely using a reverse proxy such as nginx or apache.
+**原因**： 这很有可能是因为你使用了反向代理（如nginx、apache）。它们的配置阻止了超过特定大小文件的上传。
+**解决方案**： 在您使用的反向代理的配置文件中增大有关文件上传大小限制的参数。
 
-**Resolution**: Increase your reverse proxy configuration for file uploads.
+# Cloudflare - JS / CSS / Emojis 无法加载
 
-# Cloudflare - JS / CSS / Emojis fail to load
+**原因**： CloudFlare在传输某些文件时执行了一些“优化”。这些优化破坏了文件内容与其完整性签名的一致性，进而被浏览器所阻止。
 
-**Cause:** CloudFlare performs some "optimizations" to some files during delivery. This breaks the integrity signatures of the files which are then blocked by the browser.
-
-**Resolution**: In the Cloudflare dashboard for your site, create a new Page Rule. Enter the root path, in the following format: `wiki.yourdomain.com/*` and add the following settings:
+**解决方案**： 在您的Cloudflare面板上为您的站点创建一条新的页面规则。进入根目录`wiki.yourdomain.com/`，添加如下设置：
 
 - **Auto Minify**: Uncheck all
 - **Mirage**: Off
 - **Rocket Loader**: Off
 
-Save and Deploy.
+保存并部署上述页面规则。
 
-# Errors when using a subdirectory reverse-proxy
+# 在使用反向代理将网站置于子目录时出错
 
-**Cause**: Wiki.js cannot be used / installed in a subfolder.
+**原因**： Wiki.js 无法在子目录下安装和使用。
 
-**Resolution**: Use a sub-domain instead (e.g. `wiki.yourcompany.com`).
+**解决方案**: 使用子域名。 （如： `wiki.yourcompany.com`）
 
 # Error: Listening on port XX requires elevated privileges!
 
-**Cause**: Some Linux installations prevent Node.js from binding to ports in the lower range *(e.g. < 1024)*. This occurs if you set a port such as 80 in config.yml.
+**原因**: 部分Linux会阻止Node.js绑定特定范围的端口 *(如：端口号低于1024的端口)*. 如果在config.yml中设置了位于阻止范围内的端口（例如80），就会发生这种情况。
 
-**Solution A**: Allow the node process to safely access the port requested:
+**解决方案 A**: 允许node进程安全访问指定端口：
 
 ```bash
 # Ubuntu / Debian
@@ -45,31 +44,31 @@ sudo apt-get install libcap2-bin
 sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 ```
 
-**Solution B**: Create a port redirection rule: *(In the example below, you must set the port to 3000 in config.yml)*
+**解决方案 B**: 创建端口转发规则 *(下面的示例设置对应在config.yml中指定3000端口，并将经由网卡eth0、目标端口为80的流量转发至3000端口的配置)*
 
 ```bash
 sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
 ```
 
-**Solution C**: Use a web server in front of Wiki.js. For example, use nginx to listen to port 80 / 443 and proxy all requests to Wiki.js running on a higher port *(e.g. 3000)*.
+**解决方案 C**: 使用web server程序。例如，使用nginx监听 80/443 端口并将所有请求转发到绑定至更高端口的Wiki.js （如：3000端口）。
 
 # Error: Port XX is already in use!
 
-**Cause**: Another program is already listening to this port.
+**原因**: 另一个进程占用了你指定的端口。
 
-**Resolution**: Use another port for Wiki.js or look for applications that could be using this port (web servers, http applications, etc.) and stop them.
+**解决方案**: 为Wiki.js指定其他端口，或找到占用端口的进程（如：web server，http应用等）并终止它们。
 
 # Error: Unknown authentication strategy "jwt"
 
-**Cause**: This error is shown when attempting to load the site before the server is done initializing.
+**原因**: 当尝试在服务端完成初始化之前就访问网站时，就会出现此错误。
 
-**Resolution**: Simply reload the page again. If the error still occurs after a while, check your server logs for an error preventing Wiki.js from fully initializing.
+**解决方案**: 刷新页面即可。如果一段时间之后错误仍然存在，请检查服务端日志，查找阻碍Wiki.js完成初始化的错误。
 
-# How to execute javascript code on page load
+# 如何在页面加载时执行JavaScript代码
 
-You may have noticed that running javascript code on the standard page load or dom ready event don't work because the page content isn't rendered yet.
+您可能已经注意到，在标准页面加载或dom就绪事件上运行javascript代码不起作用，因为页面内容还没有被渲染。
 
-You need to register a callback via `window.boot.register(evt, clb)` instead, where the triggering event is `page-ready`, e.g.:
+你需要通过`window.boot.register(evt, clb)`注册一个触发事件为`page-ready`的回调函数，例如：
 
 ```js
 window.boot.register('page-ready', () => {
@@ -77,75 +76,76 @@ window.boot.register('page-ready', () => {
 })
 ```
 
-Your code will now execute once the page is loaded and the Vue instance is ready.
+您的代码将在页面加载完毕、Vue实例就绪后执行。
 
-# How to hide the footer Wiki.js mention
+# 如何隐藏页脚对Wiki.js的提及
 
-**Seriously?** This software is provided to you completely free. Volunteers have put thousands of hours of their time into this project. We believe a small mention in the footer is a very small thing to ask in return...
+**你认真的吗?** 本软件完全免费。贡献者们为这个项目投入了数千小时。我们觉得，作为回报，在页脚中的一个小小的提及是一件非常小的事情。。。
 
-# How to manually disable HTTPS / SSL Redirection
+# 如何手动禁用HTTPS/SSL重定向
 
-If you are unable to load the site because of a SSL certificate error, you can manually disable SSL Redirection.
+如果您因为SSL证书错误无法加载站点，您可以手动禁用SSL重定向。
 
-In the database, under the `settings` table, you must set the `sslRedir` property to false for the `server` key.
-Restart Wiki.js to load the new setting.
+在数据库的`settings`表中，你需要将`server`键的`sslRedir`属性改为否。
+重启Wiki.js以应用设置更改。
 
-### For docker users
+### 如果你是Docker用户
 
-When running PostgreSQL inside a docker container (e.g. DigitalOcean / AWS official image), you can run the following commands:
+如果你的PostgreSQL是在docker镜像中运行的话（如：DigitalOcean/AWS官方镜像），你可以执行如下命令：
 
 ```bash
 docker exec db psql -U wiki -d wiki -c "DELETE FROM settings WHERE key = 'server';"
 docker restart wiki
 ```
 
-# How to manually reset the admin password?
+# 如何手动重置管理员密码？
 
-The only way to change a password, without access to the web UI, is via the database. Use a tool like **pgAdmin** *(postgres)*, **DBeaver** *(mysql, mariadb)*, **SQL Management Studio** *(mssql)* or **DB Browser for SQLite**.
+在无法访问网络界面的情况下，修改密码的唯一方法是通过数据库修改。你可以使用 **pgAdmin** *(postgres)*, **DBeaver** *(mysql, mariadb)*, **SQL Management Studio** *(mssql)* 或 **DB Browser for SQLite** 等数据库管理工具。
 
-Connect to your DB, browse to the `users` table and locate your user.
+连接到您的数据库，进入`users`表并找到要修改的用户。
 
-Edit the password column and insert a new **bcrypt**-formatted value. You can use a tool like https://bcrypt-generator.com/ to generate one. The number of rounds must be **12**.
+修改`password`项并插入一个**bcrypt**格式的值。你可以使用 https://bcrypt-generator.com/ 这样的工具来生成这个值。加密轮数须设定为 **12**。
 
-> **It is NOT possible to read the current password value.** Passwords are stored using a one-way bcrypt hashing process, which is not reversible. You can only overwrite it with a new value.
+> **你不可能读取当前的明文密码。** 密码是经过单向bcrypt哈希后存储的，这是不可逆的。只能用新值覆盖它。
 {.is-warning}
 
-### For docker users
+### 如果你是docker用户
 
-When running PostgreSQL inside a docker container (e.g. DigitalOcean / AWS official image), follow these steps:
+如果你的PostgreSQL是在docker镜像中运行的话（如：DigitalOcean/AWS官方镜像），你可以执行如下操作：
 
-1. Use a tool like https://bcrypt-generator.com/ to generate a bcrypt hash of the password you want. The number of rounds must be **12**.
-2. Connect to your machine / droplet via SSH.
-3. Run the following command, replacing `HASH-PASSWORD` with the hash generated in step 1 and `YOUR-EMAIL` with the email address of the account you want to reset:
+1. 使用 https://bcrypt-generator.com/ 这样的工具来生成你想要的新密码，加密轮数须设定为 **12**。
+2. 通过SSH连接到您的服务器。
+3. 将下面指令中的`HASH-PASSWORD`改为您在第1步生成的值，`YOUR-EMAIL`改为你想要重置密码的账户的电子邮件地址，并执行。
 
 ```bash
 docker exec db psql -U wiki -d wiki -c "UPDATE users SET password = 'HASH-PASSWORD' WHERE email = 'YOUR-EMAIL';"
 ```
 
-# Links inside emails are incorrect
+# 电子邮件中的链接不正确
 
-**Cause**: You did not set the `Site URL` in the **Administration Area**.
+**原因**: 你还没有在 **管理区** 中设定 `站点地址`。
 
-**Resolution**: In the **Administrator Area**, under **General**, set the **Site Url**.
+**解决方案**: 在 **管理区** 中的 **基本设置**下, 设定 **站点地址**.
 
 # MySQL - Client does not support authentication protocol requested by server; consider upgrading MySQL client
 
-**Cause**: The user used by Wiki.js to connect to the DB must use `mysql_native_password`. The newer `caching_sha2_password` method introduced in MySQL 8.0 is not yet supported in Node.js. Support will be added when the functionnality is made available in Node.js drivers.
+**原因**: 用于让Wiki.js连接到数据库的数据库用户必须使用`mysql_native_password`。 更新的 `caching_sha2_password`方法在MySQL 8.0之后才被引入，且还未被Node.js支持。Wiki.js将在Node.js数据库驱动提供相关支持后支持这个方法。
 
-**Resolution**: You can change an existing user to use a `mysql_native_password` using:
+**解决方案**: 你可以使用如下语句将对应用户的密码认证方法改为 `mysql_native_password`:
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
-# Some HTML tags are rendered as plain text
+# 某些HTML标签被渲染为纯文本
 
-Starting in version **2.1**, a new HTML sanitization step is added by default to the rendering pipeline. This feature prevents potentially unsafe HTML tags / properties from being present in the final render. Any HTML tag or property that isn't whitelisted will be rendered as plain text.
+从**2.1**版本开始，渲染流程中新增了HTML净化步骤。加入这一功能是为了避免潜在的不安全HTML标签/属性出现在最终渲染的页面中。任何不在白名单内的HTML标签或属性都将被以纯文本格式渲染。
 
-If you are the sole editor / trust your editors, you can disable this feature in the **Administration Area**, under **Rendering** > **HTML** > **Security** > **Sanitize HTML**.
+如果您是wiki中唯一的编辑者/信任您的编辑团队，您可以在**管理区**的 **渲染** > **HTML** > **安全** > **净化HTML**中禁用此功能。
 
-# Unable to upgrade from the Administration Area
+# 无法从管理区升级
 
+如果点击<kbd>执行升级</kbd>按钮无法升级wiki实例，您需要把wiki-update-companion
 If clicking the <kbd>Perform Upgrade</kbd> button doesn't actually upgrade the wiki instance, you need to upgrade the wiki-update-companion container to the latest version. A bug was present in an earlier version that failed to properly fetch the latest image.
 
 Assuming you're running the [DigitalOcean Wiki.js droplet](/install/digitalocean) or you followed the [Ubuntu Install Guide](/install/ubuntu), connect to your server via SSH and run the following commands:
