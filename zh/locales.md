@@ -2,33 +2,34 @@
 title: Locales
 description: Language & Regional Settings
 published: true
-date: 2020-06-11T00:28:49.088Z
+date: 2023-01-22T13:35:44.913Z
 tags: localization
 editor: markdown
+dateCreated: 2023-01-08T10:33:36.534Z
 ---
 
-Wiki.js can be displayed in various languages and offer multi-lingual versions of the same page.
+Wiki.js可以以多种语言显示，并提供同一页面的多语言版本。
 
-New installations ship with the **English** locale by default.
+默认情况下，新安装的wiki实例使用**英语**语言环境。
 
-# Download Locales
+# 下载语言包
 
-You can download new locale packages, made by contributors, via the **Administration Area**.
+你可以在**管理区**新下载由贡献者制作的语言包。
 
-In the left sidebar, click on **Locales**. A list of available locales will be displayed on the right.
+在左侧侧边栏中，单击**语言环境**。右侧将显示可用语言环境的列表。
 
-Click the :cloud: **cloud icon** next to the locale you wish to download. When completed, the locale will be available in the **Site Locale** dropdown list.
+点击你想要下载的语言包之后的:cloud: **云形状的图标**。安装完成后，你添加的语言环境就会出现在**基本语言环境**下拉菜单中。
 
-> Some locales are tagged with `RTL` which means they are displayed right-to-left. The site becomes mirrored with the exception of code blocks which stays in left-to-right mode.
+> 某些区域设置标记为“RTL”，这意味着它们从右向左显示。除了代码块保持从左到右的模式外，站点将以镜像形式显示。
 {.is-info}
 
-# Set the default Locale
+# 设定默认语言环境
 
-In the **Administration Area**, under **Locales**, change the **Site Locale** from the dropdown list. Only the downloaded locales are displayed. Check the guide above to download new ones.
+在 **管理区**的**语言环境**项下, 你可以在**基本语言环境**下拉菜单中更改站点的默认语言环境。只有已经下载的语言包会被显示。如果你还不知道如何下载新语言包，请查看上面的指南。
 
-# Multilingual Namespacing
+# 多语言命名空间
 
-The multilingual namespacing feature allows for pages to be available in multiple language. The user is able to switch between languages for the same page.
+多语言命名空间功能允许页面以多种语言提供。用户可以在同一页面的语言之间切换。
 
 ## Setup
 
