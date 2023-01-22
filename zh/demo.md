@@ -2,35 +2,35 @@
 title: Demo
 description: Test Drive Wiki.js
 published: true
-date: 2022-02-19T00:00:43.664Z
+date: 2023-01-22T14:05:33.669Z
 tags: 
 editor: markdown
-dateCreated: 2020-06-08T16:51:29.743Z
+dateCreated: 2023-01-08T10:33:19.066Z
 ---
 
-> **Did you know?** This documentation website is running Wiki.js!
+> **你知道吗？** 这个文档网站就运行在Wiki.js上！
 {.is-info}
 
-Because of potential abuse and spam, we don't offer a public test instance of Wiki.js. You can however launch your own Wiki.js instance using the methods below, completely free:
+由于担心潜在的滥用与诈骗，我们不提供Wiki.js的公共测试实例。但是，您可以使用以下方法启动自己的Wiki.js实例，而且完全免费：
 
-# Pre-configured Wiki.js on DigitalOcean
+# 已预先配置的 DigitalOcean 上的 Wiki.js 实例
 
-DigitalOcean offers a free 60-day 100$ credits to launch your own Wiki.js instance.
+DigitalOcean 免费提供60天的100美元额度，可以被用来启动您自己的Wiki.js实例。
 
-Follow the [installation instructions for DigitalOcean](https://docs.requarks.io/install/digitalocean) to get started.
+参照 [DigitalOcean安装指南](https://docs.requarks.io/install/digitalocean) 来开始安装。
 
-## First Steps
+## 第一步
 
-You'll first be prompted to create the home page.
+首先，Wiki.js将提示您创建主页。
 
-Select your preferred editor (**Markdown** or **Visual Editor**), enter a **Title** *(e.g. Home)* and click **OK**. You can now enter some content in the editor. Click the <kbd>CREATE</kbd> button in the top-right corner of the page when done.
+选择你想要的编辑器（**Markdown**或**可视化编辑器**），输入一个**标题**（例如：主页）并点击**确定**。现在你可以在编辑器中输入一些内容。完成后，点击右上角的<kbd>创建</kbd>按钮。
 
-You'll automatically be redirected to your newly created page.
+你将被自动跳转到你新创建的主页。
 
-## Explore the Administration Area
+## 探索管理区
 
-The administration area contains a vast array of customization options.
+管理区包含大量的自定义选项。
 
-Click on the <kbd><i class="mdi mdi-account-circle"></i></kbd> **Account** icon in the top-right corner of the page, then select **Administration**.
+点击右上角的 <kbd><i class="mdi mdi-cog"></i></kbd> **管理** 图标，进入 **管理区**。
 
-Explore the various sections from the left side navigation.
+在左侧的导航栏中探索各种设置项。
