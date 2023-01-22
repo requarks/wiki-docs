@@ -2,7 +2,7 @@
 title: Locales
 description: Language & Regional Settings
 published: true
-date: 2023-01-22T13:35:44.913Z
+date: 2023-01-22T13:42:06.086Z
 tags: localization
 editor: markdown
 dateCreated: 2023-01-08T10:33:36.534Z
@@ -25,17 +25,17 @@ Wiki.js可以以多种语言显示，并提供同一页面的多语言版本。
 
 # 设定默认语言环境
 
-在 **管理区**的**语言环境**项下, 你可以在**基本语言环境**下拉菜单中更改站点的默认语言环境。只有已经下载的语言包会被显示。如果你还不知道如何下载新语言包，请查看上面的指南。
+在**管理区**的**语言环境**项下, 你可以在**基本语言环境**下拉菜单中更改站点的默认语言环境。只有已经下载的语言包会被显示。如果你还不知道如何下载新语言包，请查看上面的指南。
 
 # 多语言命名空间
 
 多语言命名空间功能允许页面以多种语言提供。用户可以在同一页面的语言之间切换。
 
-## Setup
+## 设置
 
-From the **Administration Area**, under **Locales**, enable the **Multilingual Namespaces** option, then select the namespaces to make available for editing in the **Active Namespaces** field.
+在**管理区**的**语言环境**项下, 启用**多语言命名空间**选项，然后在**已启用的命名空间**项中选择要启用并用于编辑的命名空间。
 
-## Writing an alternate locale version of a page
+## 为页面编写其它语言版本
 
 *TODO*
 
