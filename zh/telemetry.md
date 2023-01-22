@@ -1,55 +1,55 @@
 ---
-title: Telemetry
-description: Help us improve Wiki.js!
+title: 遥测
+description: 帮助我们改善Wiki.js！
 published: true
-date: 2020-06-29T00:10:20.048Z
+date: 2023-01-22T08:04:32.614Z
 tags: 
 editor: markdown
+dateCreated: 2023-01-08T10:33:53.954Z
 ---
 
-# What is telemetry?
-Telemetry allows the developers of Wiki.js to improve the software by collecting basic **anonymized** data about its usage and the host info.
+# 什么是遥测？
+遥测允许Wiki.js的开发人员通过收集有关其使用和主机信息的基本**匿名**数据来改进软件。
 
-This is entirely **OPTIONAL** and **absolutely NO private data** (such as content or personal data) is collected.
+遥测是完全**非强制的**，**没有任何私人信息**（例如wiki内容或用户个人信息）会被收集。
 
-For maximum privacy, a random client ID is generated during setup. This ID is used to group requests together (instead of IP addresses) while keeping complete anonymity.
+为了最大程度确保隐私，Wiki.js在初始化时会随机生成一个客户端ID。这个ID会被用于（代替IP地址）统一整理发出的请求，从而保证完全的匿名性。
 
-# What is collected?
-When telemetry is enabled, only the following data is transmitted:
+# 遥测收集了什么信息？
+启用遥测后，只有下列数据会被收集：
 
-- Wiki.js version 
-- Node.js version
-- OS Platform *(Linux, macOS or Windows)* and version
-- Total CPU Cores / RAM available
-- Type of DB *(PostgreSQL, MySQL, MariaDB, SQLite or SQL Server)* and version
-- Setup analytics *(installation checkpoint reached)*
-- Crash debug data *(stack trace of the error)*
+- Wiki.js 版本 
+- Node.js 版本
+- 操作系统 *(Linux, macOS 或 Windows)* 及其版本
+- CPU 总核心数 / 可用内存
+- 数据库类型 *(PostgreSQL, MySQL, MariaDB, SQLite or SQL Server)* 及把那本
+- 安装分析数据 *(是否到达安装检查点)*
+- 崩溃的调试数据 *(错误堆栈)*
 
-Note that crash debug data is stored for a maximum of 30 days, after which it is permanently deleted.
+注意，崩溃调试数据最多只存放30天，之后它将被永久删除。
+# 遥测数据会被用来做什么？
 
-# What is it used for?
+遥测数据将被开发人员用来改进Wiki.js，收集遥测数据主要出于以下几点原因：
 
-Telemetry is used by developers to improve Wiki.js, mostly for the following reasons:
+- 可以更轻松地识别关键错误并及时加以修复。
+- 理解当前版本的升级率。
+- 基于使用量最多的几个场景进行优化和测试。
 
-- Identify critical bugs more easily and fix them in a timely manner.
-- Understand the upgrade rate of current installations.
-- Optimize performance and testing scenarios based on most popular environments.
+只有经过授权的开发者才能访问崩溃调试数据。该数据不会与任何第三方分享，也不会被用于任何改善Wiki.js之外的用途。
 
-Only authorized developers have access to the crash debug data. It is not shared to any 3rd party nor is it used for any other application than improving Wiki.js.
-
-> :chart_with_upwards_trend: The aggregated anonymized telemetry stats are public and available at all times [here](https://wiki.js.org/telemetry).
+> :chart_with_upwards_trend: 匿名遥测信息的统计数据是公开的，你可以在[这里](https://wiki.js.org/telemetry)找到它。
 {.is-info}
 
-# How to enable / disable telemetry
+# 如何启用/禁用遥测
 
-Telemetry can be turned on / off during the installation wizard and anytime afterwards in the administration area under **Utilities** > **Telemetry**.
+你可以在安装时启用/禁用遥测，也可以在完成安装之后的任何时候通过管理区的 **其它** > **遥测** 修改这一项设置。
 
-# How to reset the client ID
+# 如何重设客户端ID？
 
-A random client ID is generated at the time of installation. This client ID is used to group requests together while providing complete anonymity. In case you want to continue sending telemetry but under a new random identifier, you can simply reset the client ID in the administration area under **Utilities** > **Telemetry**. A new random client ID will be generated and used for future transmissions.
+Wiki.js在安装时会随机生成客户端ID。客户端ID会被用于在保证完全匿名的前提下统计从客户端发出的请求。如果你想使用一个新的随机客户端ID继续发送遥测数据，你可以在管理区的 **其它** > **遥测** 直接重设客户端ID。系统将会为之后发送的数据生成一个新的客户端ID。
 
-# Questions / Feedback
+# 问题 / 反馈
 
-Feel free to contact us on [Slack](https://wiki.requarks.io/slack) should you have any question or feedback on telemetry.
+如果你对遥测有任何疑问或想要发送反馈，欢迎通过[Slack](https://wiki.requarks.io/slack)联系我们。
 
 ![](https://a.icons8.com/gojSbjmc/1rnPd3/svg.svg){.align-abstopright}
