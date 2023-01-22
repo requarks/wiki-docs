@@ -1,8 +1,8 @@
 ---
-title: Locales
-description: Language & Regional Settings
+title: 语言环境
+description: 语言与区域设置
 published: true
-date: 2023-01-22T13:42:06.086Z
+date: 2023-01-22T13:42:33.394Z
 tags: localization
 editor: markdown
 dateCreated: 2023-01-08T10:33:36.534Z
