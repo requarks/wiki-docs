@@ -1,315 +1,317 @@
 ---
-title: Rendering Pipeline
-description: Control how your content is rendered
+title: 渲染流程
+description: 控制您的内容的渲染方式
 published: true
-date: 2020-05-23T05:16:48.570Z
+date: 2023-01-22T10:09:19.120Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:33:45.162Z
 ---
 
-# Overview
+# 概述
 
-The rendering pipeline defines how your content is rendered into it's final readable form.
+渲染流程规定了您的内容是如何被渲染为最终呈现的可读形式的。
 
-Rendering modules are attached to a core language module. Depending on the editor used, content will go through several **core rendering modules <kbd>CRM</kbd>**. For example, using the Markdown editor will result in the content being transformed through the Markdown CRM, then by the HTML CRM modules.
+渲染模块隶属于核心语言模块。根据使用的编辑器的不同，内容将经过几个**核心渲染模块（Core rendering module, <kbd>CRM</kbd>）** 的处理。例如：使用Markdown编辑器的内容将经过Markdown CRM的处理，然后再被HTML CRM处理。
 
-Each core rendering module can consists of multiple **extension rendering modules <kbd>ERM</kbd>**. These modules extend the capabilities of the core rendering module.
+每个核心渲染模块可由数个**拓展渲染模块（extension rendering module, <kbd>ERM</kbd>）** 组成。这些模块拓展了核心渲染模块的能力。
 
-![Rendering Pipeline Diagram](/assets/diagrams/diag-rendering-pipeline.jpg =1000x){.radius-7 .decor-shadow}
+![渲染流水线图示](/assets/diagrams/diag-rendering-pipeline.jpg =1000x){.radius-7 .decor-shadow}
 
-Each module can be enabled / disabled individually and configured in the **Administration Area** under the **Rendering** sidebar menu.
+每个模块都可以被单独启用/停用，并通过 **管理区** 菜单栏的 **渲染** 项进行配置。
 
 # Markdown
 ## Tabset {.tabset}
-### Definition
-Converts Markdown content into HTML.
+### 定义
+将Markdown内容转换为HTML。
 
-### Parameters
-- **Allow HTML**: Enable HTML tabs in content.
-- **Automatically convert links**: Links will automatically be converted into clickable links.
-- **Automatically convert line breaks**: Add linebreaks within paragraphs.
-- **Typographer**: Enable some language-neutral replacement + quotes beautification.
-- **Quotes style**: When typographer is enabled. Double + single quotes replacement pairs. e.g. «»„“ for Russian, „“‚‘ for German, etc.
+### 参数
+- **允许 HTML**: 允许转换内容中的HTML标签。
+- **自动转换链接**: 链接将被自动转换为可点击的形式。
+- **自动转换换行符**: 在段落之间添加换行符。
+- **样式修正**: 进行一些语言中立性质的替换和引用美化。
+- **引用样式**: 当样式修正启用时，单/双引号替换对。When typographer is enabled. Double + single quotes replacement pairs. e.g. «»„“ for Russian, „“‚‘ for German, etc.
+> 译者并不理解**引用样式**参数的描述，在此保留原文供读者自行判断。欢迎通过issue或pull request等进行修正。
+{.is-warning}
+
 {.grid-list}
 
 
-## Abbreviations
+## 缩写
 ### Tabset {.tabset}
-#### Definition
-Transform abbreviation words into `<abbr>` tags for an expanding definition.
+#### 定义
+将缩写词转换为`<abbr>`标签以方便进一步解释。
 
-#### Example
+#### 示例
 ```
-*[HTML]: Hyper Text Markup Language
-*[W3C]:  World Wide Web Consortium
-The HTML specification
-is maintained by the W3C.
+*[HTML]: 超文本标记语言
+*[W3C]:  万维网联盟
+HTML规范由W3C维护。
 ```
-will result in
+将被渲染为
 
 ```html
-<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification
-is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<p><abbr title="超文本标记语言">HTML</abbr> 规范由<abbr title="万维网联盟">W3C</abbr>维护。</p>
 ```
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
 ## Emoji
 ### Tabset {.tabset}
-#### Definition
-Convert tags into emojis.
+#### 定义
+将特定标签转为emoji。
 
-#### Example
- `:apple:` will produce :apple:
+#### 示例
+ `:apple:` 将被转换为 :apple:
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
-## Expand Tabs
+## 拓展制表符
 ### Tabset {.tabset}
-#### Definition
-Automatically convert tabs into spaces for consistent indentation spacing in HTML.
+#### 定义
+自动将制表符转换为空格，以确保HTML中的缩进间距一致。
 
-#### Parameters
-- **Tab Width**: The number of spaces to use when converting from tabs.
+#### 参数
+- **制表符宽度**: 转换为制表符时每个制表符对应的空格符数量。
 {.grid-list}
 
 
-## Footnotes
+## 脚注
 ### Tabset {.tabset}
-#### Definition
-Generates footnote definitions.
+#### 定义
+生成脚注规范。
 
-#### Example
-See https://github.com/markdown-it/markdown-it-footnote
+#### 示例
+参见 https://github.com/markdown-it/markdown-it-footnote
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
-## Image Size
+## 图片大小
 ### Tabset {.tabset}
-#### Definition
+#### 定义
+向图片标签添加图片大小参数。
 
-Add image dimensions to img tags.
-
-#### Example
+#### 示例
 ```
-![test](image.png =100x200)
+![测试](image.png =100x200)
 ```
-will result in
+将被渲染为
 ```html
 <p><img src="image.png" alt="test" width="100" height="200"></p>
 ```
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
 ## Katex
 ### Tabset {.tabset}
-#### Definition
-Generate visual Math / Chemical expressions from TeX expressions, using the KaTeX engine.
+#### 定义
+使用KaTeX引擎从TeX表达式生成可视化的数学/化学表达式。
 
-> This module is incompatible with the **Mathjax** module. Only one of them should be enabled at once.
+> 此模块与**Mathjax**模块不兼容。一次只能启用其中一个。
 {.is-danger}
 
-#### Parameters
-- **Inline TeX**: Process inline TeX expressions surrounded by $ symbols.
-- **TeX Blocks**: Process TeX blocks enclosed by $$ symbols.
+#### 参数
+- **行内TeX语句识别**: 处理由$符号包围的行内TeX表达式。
+- **TeX区块识别**: 处理由$$符号包围的TeX块。
 {.grid-list}
 
 
 ## Kroki
 ### Tabset {.tabset}
-#### Definition
-Generate diagrams from various textual descriptions.
+#### 定义
+根据各种文本描述生成图表。
 
-The diagram type must be put on the second line, in lowercase.
-See https://kroki.io/#support for the full list of supported diagram types.
+图表类型必须放在第二行，且须为小写。
+您可以查阅 https://kroki.io/#support 获取支持的图表类型的完整列表。
 
-> This module is only available from version **2.4 and up**.
+> 该模块只在**2.4 及以上版本**可用。
 {.is-info}
 
-#### Example
+#### 示例
 ````markdown
 ```kroki
 mermaid
 
 graph TD
-  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
-  B --> C{ How to contribute? }
-  C --> D[ Reporting bugs ]
-  C --> E[ Sharing ideas ]
-  C --> F[ Advocating ]
+  A[ 任何人 ] -->|都可以帮助 | B( 到 github.com/yuzutech/kroki )
+  B --> C{ 如何贡献？ }
+  C --> D[ 报告Bug ]
+  C --> E[ 分享想法 ]
+  C --> F[ 推广 ]
 ```
 ````
 
 #### Parameters
-- **Kroki Server**: Kroki server used for image generation
-- **Open Marker**: String to use as opening delimiter. Diagram type must be put in the next line in lowercase.
-- **Close Marker**: String to use as closing delimiter
+- **Kroki服务端**: 用于生成图片的Kroki服务端
+- **开头标记**: 用作开头分隔符的字符串。图表类型必须以小写形式放在下一行。
+- **结尾标记**: 用作结束分隔符的字符串。
 {.grid-list}
 
 
 ## Mathjax
 ### Tabset {.tabset}
-#### Definition
-Generate visual Math / Chemical expressions from TeX expressions, using the Mathjax engine.
+#### 定义
+使用Mathjax引擎从TeX表达式生成可视化的Math/Chemical表达式。
 
-> This module is incompatible with the **Katex** module. Only one of them should be enabled at once.
+> 此模块与**Katex**模块不兼容。一次只能启用其中一个。
 {.is-danger}
 
-> This module is only available from version **2.4 and up**.
+> 该模块只在**2.4 及以上版本**可用。
 {.is-info}
 
-#### Parameters
-- **Inline TeX**: Process inline TeX expressions surrounded by $ symbols.
-- **TeX Blocks**: Process TeX blocks enclosed by $$ symbols.
+#### 参数
+- **行内TeX语句识别**: 处理由$符号包围的行内TeX表达式。
+- **TeX区块识别**: 处理由$$符号包围的TeX块。
 {.grid-list}
 
 
 ## PlantUML
 ### Tabset {.tabset}
-#### Definition
-Generate diagrams from PlantUML description.
+#### 定义
+根据PlantUML描述生成图表。
 
-#### Parameters
-- **Kroki Server**: PlantUML server used for image generation.
-- **Open Marker**: String to use as opening delimiter.
-- **Close Marker**: String to use as closing delimiter.
-- **Image Format**: Format to use for rendered PlantUML images
+#### 参数
+- **PlantUML 服务端**: 用于生成图表的PlantUML服务端。
+- **开头标记**: 用作开头分隔符的字符串。
+- **结尾标记**: 用作结束分隔符的字符串。
+- **图片格式**: PlantUML图标要被渲染成的格式。
 {.grid-list}
 
 
-## Subscript/Superscript
+## 下标/上标
 ### Tabset {.tabset}
-#### Definition
-Transform text into subscript and superscript tags.
+#### 定义
+将文本转换为下标或上标标签。
 
-#### Example
+#### 示例
 ```
 H~2~0
 Exp^10^
 ```
-will result in
+将被渲染为
 ```html
 H<sub>2</sub>O
 Exp<sup>10</sup>
 ```
 
-#### Parameters
-- **Subscript**: Enable subscript tags.
-- **Superscript**: Enable supercript tags
+#### 参数
+- **下标**: 启用下标标签。
+- **上标**: 启用上标标签。
 {.grid-list}
 
 
-## Task Lists
+## 任务列表
 ### Tabset {.tabset}
-#### Definition
-Convert square brackets list into HTML checkboxes.
+#### 定义
+将方括号列表转换为HTML复选框。
 
-#### Example
+#### 示例
 ```
-- [ ] Item 1
-- [ ] Item 2
-- [x] Item 3
+- [ ] 列表项 1
+- [ ] 列表项 2
+- [x] 列表项 3
 ```
-will result in
+将被渲染为
 
-- [ ] Item 1
-- [ ] Item 2
-- [x] Item 3
+- [ ] 列表项 1
+- [ ] 列表项 2
+- [x] 列表项 3
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
 # HTML
 ### Tabset {.tabset}
-#### Definition
-Process HTML through extension modules.
+#### 定义
+通过拓展模块处理HTML。
 
-#### Parameters
-- **Treat relative links as root absolute**: For example, a link to foo/bar on page xyz will render as /foo/bar instead of /xyz/foo/bar.
-- **Open external links in a new tab**: External links will have a _blank target attribute added automatically.
-- **Protect against XSS when opening _blank target links**: External links with _blank attribute will have an additional rel attribute.
+#### 参数
+- **将相对路径视为绝对路径**: 例如，在xyz页面指向foo/bar的链接将被渲染为/foo/bar而不是/xyz/foo/bar。
+- **在新标签页打开外链**: 外链将被自动添加_blank目标属性。
+- **打开_blank目标链接时防止XSS**: 具有_blank属性的外链将被自动添加额外的rel属性。
 {.grid-list}
 
 
 ## Asciinema
-*Coming soon*
+*即将上线*
 
 
-## Blockquotes
+## 引用区块
 ### Tabset {.tabset}
-#### Definition
-Parse blockquotes box styling.
+#### 定义
+解析引用区块样式。
 
-#### Example
-See https://docs.requarks.io/en/editors/markdown#blockquotes
+#### 示例
+参见 https://docs.requarks.io/en/editors/markdown#blockquotes
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
-## Code Highlighting Post-Processor
+## 代码高亮后处理
 ### Tabset {.tabset}
-#### Definition
-Automatically detect programming code syntax and apply the correct code coloring classes.
+#### 定义
+自动检测编程代码的语法并应用正确的代码着色类。
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
-## Media Players
-*Coming soon*
+## 媒体播放器
+*即将上线*
 
 
 ## Mermaid
 ### Tabset {.tabset}
-#### Definition
-Transform Mermaid code blocks into Mermaid diagrams.
+#### 定义
+将Mermaid代码区块转换为Mermaid图表。
 
-> This module is only available from version **2.3 and up**.
+> 该模块只在**2.3 及以上版本**可用。
 {.is-info}
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
-## Security
+## 安全
 ### Tabset {.tabset}
-#### Definition
-Filter and strip potentially dangerous content.
+#### 定义
+过滤并去除具有潜在危险的内容。
 
-#### Parameters
-- **Sanitize HTML**: Sanitize HTML from unsafe attributes and tags that could lead to XSS attacks.
-- **Allow iframes**: iframes will not be stripped if enabled. *(Not recommended)*
+#### 参数
+- **清理 HTML**: 清除HTML中可能导致XSS攻击的不安全属性和标记。
+- **允许 iframes**: 如果启用，则渲染时不会删除iframe。 *（不推荐）*
 {.grid-list}
 
 
-## Tabsets
+## 选项卡
 ### Tabset {.tabset}
-#### Definition
-Create tabs to organize content.
+#### 定义
+创建选项卡以组织内容。
 
-> This module is only available from version **2.4 and up**.
+> 该模块只在**2.4 及以上版本**可用。
 {.is-info}
 
-#### Example
-See https://docs.requarks.io/en/editors/markdown#content-tabs
+#### 示例
+参见 https://docs.requarks.io/en/editors/markdown#content-tabs
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
 
 
 ## Twemoji
 ### Tabset {.tabset}
-#### Definition
-Convert emojis into their Twemoji equivalent *(Twitter emoji design)*.
+#### 定义
+将 emojis 转换为对应的 Twemoji。*(Twitter设计的emoji)*.
 
-#### Parameters
-*This module doesn't have any configurable parameters.*
+#### 参数
+*该模块不含任何可供配置的参数。*
