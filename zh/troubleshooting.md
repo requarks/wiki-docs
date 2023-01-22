@@ -2,7 +2,7 @@
 title: 常见问题
 description: 常见问题和解决方案
 published: true
-date: 2023-01-16T14:53:25.562Z
+date: 2023-01-22T06:02:10.782Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2023-01-08T10:33:56.747Z
@@ -145,10 +145,10 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 
 # 无法从管理区升级
 
-如果点击<kbd>执行升级</kbd>按钮无法升级wiki实例，您需要把wiki-update-companion
-If clicking the <kbd>Perform Upgrade</kbd> button doesn't actually upgrade the wiki instance, you need to upgrade the wiki-update-companion container to the latest version. A bug was present in an earlier version that failed to properly fetch the latest image.
+如果点击<kbd>执行升级</kbd>按钮无法升级wiki实例，您需要把 wiki-update-companion 镜像更新到最新版本。之前的某个版本存在无法拉去最新镜像的bug。
 
-Assuming you're running the [DigitalOcean Wiki.js droplet](/install/digitalocean) or you followed the [Ubuntu Install Guide](/install/ubuntu), connect to your server via SSH and run the following commands:
+
+如果你正在使用[DigitalOcean Wiki,js实例](/install/digitalocean)或根据[Ubuntu系统下安装指南](/install/ubuntu)安装的Wiki.js，您可以通过SSH连接到您的服务器，并执行以下指令：
 
 ```
 docker stop wiki-update-companion
@@ -158,6 +158,6 @@ docker create --name=wiki-update-companion -v /var/run/docker.sock:/var/run/dock
 docker start wiki-update-companion
 ```
 
-The <kbd>Perform Upgrade</kbd> button should now work correctly.
+<kbd>执行升级</kbd>按钮应该就恢复正常工作了。
 
 ![](https://a.icons8.com/IMfhdRiW/YNcdYW/svg.svg){.align-abstopright}
