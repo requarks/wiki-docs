@@ -1,49 +1,50 @@
 ---
-title: Navigation
-description: Manage the sidebar navigation
+title: 导航
+description: 管理侧边栏导航
 published: true
-date: 2020-08-15T21:19:55.203Z
+date: 2023-01-22T10:19:43.089Z
 tags: 
 editor: markdown
+dateCreated: 2023-01-08T10:33:39.419Z
 ---
 
-# Edit Navigation
+# 编辑导航栏
 
-The navigation mode and its configuration can be modified from the **Administration Area**, under the **Navigation** section.
+您可以在 **管理区** 的 **导航** 项下修改导航栏的导航模式及其配置。
 
-# Navigation Modes
+# 导航模式
 
-There're 4 navigation modes.
+Wiki.js支持4种导航模式。
 
-## Site Tree
+## 站点内容树
 
-The sidebar lists all pages and folders on your wiki, in a structured tree manner. Only pages the user has access to will be displayed. This is similar to the directory tree found in most operating systems.
+侧边栏以内容树的形式结构化地列出wiki上的所有页面及文件夹。只有用户有权访问的页面会被显示，这与大多数操作系统中的目录树相似。
 
-## Static Navigation
+## 静态导航
 
-The sidebar displays a static list of links, defined by the administrator(s). This is useful when you want to control precisely what the user sees. Links are added manually in the **Administration Area**, under the **Navigation** section.
+侧边栏显示由管理员定义的静态链接列表。当您想要精确控制用户所看到的内容时，这非常有用。你可以在**管理区**中的**导航**项下手动添加链接。
 
-3 types of navigation items can be added:
-- **Header**: Simple text used to categorize a group of links.
-- **Link**: A clickable link pointing to an internal page or an external URL, with an icon on the left.
-- **Divider**: A separator line, to clearly separate 2 group of links.
+您可以添加3中导航项：
+- **标题**: 用于对一组链接进行分类的简单文本。
+- **链接**: 指向内部页面或外部URL的可点击链接，左侧带有图标。
+- **分隔符**: 分隔线，用于清楚地分隔两组链接。
 
-Each navigation item can be either visible to everyone or to specific groups only.
+每个导航项可以对所有人可见，也可以对指定用户组可见。
 
 ![ui-admin-nav-static.png](/assets/ui/ui-admin-nav-static.png =850x){.decor-shadow .radius-4}
 
-Navigation items can be freely re-ordered using drag-n-drop.
+您可以通过拖拽对导航项进行自由排序。
 
-> When using multilingual namespacing, each language has its own navigation.
+> 当使用多语言命名空间时，每种语言都有自己的导航。
 {.is-info}
 
-## Custom Navigation
+## 自定义导航
 
-Custom Navigation combines the **Site Tree** and **Static Navigation** modes together. Both modes are available in the sidebar and the user can switch between them by clicking either the **Main Menu** or **Browse** button at the top of the sidebar. A link to the homepage is also displayed to the left of this button.
+自定义导航将**站点内容树**和**静态导航**模式结合在一起。这两种模式都在侧边栏中可用，用户可以通过单击侧边栏顶部的**主菜单**或**浏览**按钮在它们之间切换。主页的链接也显示在该按钮的左侧。
 
-> This is the default navigation mode.
+> 这是默认的导航模式
 {.is-info}
 
-## None
+## 无导航
 
-This hides the sidebar navigation altogether. Users are expected to browse your wiki solely from the pages content or via the search bar.
+这将完全隐藏侧边栏导航。用户只能从页面内容或通过搜索栏浏览wiki。
