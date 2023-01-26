@@ -1,20 +1,20 @@
 ---
-title: Authentication
-description: List of supported Authentication Modules
+title: 身份验证
+description: 支持的身份验证模块列表
 published: true
-date: 2020-09-10T18:51:33.063Z
-tags: auth
+date: 2023-01-26T12:32:02.616Z
+tags: auth, 身份验证
 editor: markdown
-dateCreated: 2019-04-29T00:57:43.566Z
+dateCreated: 2023-01-08T10:33:13.500Z
 ---
 
-Authentication modules allows for secure and simple login.
+身份验证模块允许安全和简单的登录。
 
-From the administration area, you can enable authentication strategies that work best for you. Multiple strategies can be enabled at the same time. For example, you could allow your users to login using their Google, Facebook or GitHub account.
+在管理区，您可以启用最适合您的身份验证策略，可以同时启用多种策略。例如，您可以允许用户使用其Google、Facebook或GitHub账户登录。
 
-Note that the default **Local** strategy cannot be disabled as it is required for root administrator login.
+需要注意的是，默认的 **本地** 验证策略需要供全局管理员登录使用，无法被禁用。
 
-Most strategies require some configuration. Check out the links below for module specific configuration instructions.
+大多数验证策略都需要进行一些配置。您可以查看下面的链接来获取配置指导。
 
 # Modules
 
@@ -29,7 +29,7 @@ Most strategies require some configuration. Check out the links below for module
 - [Google](/auth/google)
 - [Keycloak OpenID Connect](/auth/keycloak)
 - [LDAP / Active Directory](/auth/ldap)
-- [Local](/auth/local)
+- [本地](/auth/local)
 - Microsoft
 - Generic OpenID / OAuth2
 - [Okta](/auth/okta)
@@ -38,87 +38,87 @@ Most strategies require some configuration. Check out the links below for module
 - [Twitch](/auth/twitch)
 {.links-list}
 
-# Self-registration
+# 自助注册
 
-**By default, new users are not authorized to access anything.** They must either be pre-authorized by an administrator or be put into an existing group using the self-registration option.
+**默认情况下，新用户无权访问任何内容。** 新用户必须由管理员预先授权，或使用自助注册纳入现有用户组。
 
-The latter greatly simplifies the onboarding of new users. The self-registration option can be enabled on a per authentication strategy basis.
+后者大大简化了新用户的注册流程。您可以根据每个身份验证策略启用自助注册。
 
-## Setup
+## 配置
 
-On the authentication module configuration page, enable the **Self-registration** option.
+在身份验证模块配置页面上，启用**自助注册**选项。
 
-You can optionally set a domain whitelist so that only users with a specific email domain can proceed. To do so, enter a list of domains, e.g.: `company.com` then press <kbd>Enter</kbd>. Repeat for all domains you want to authorize.
+作为可选措施，您可以设定一个域名白名单，这样只有指定域的用户可以注册。要启用这项措施，您需要输入一组域名，例如： `company.com`，然后按下 <kbd>Enter</kbd> 键。对所有需要授权的域重复这个操作。
 
-Finally, select the group new users will be assigned to the first time they log in.
+最后，选择一个新用户首次登录会被自动分配到的用户组。
 
-Click **Apply** to save the configuration.
+点击**应用**来保存这项设置。
 
 ![](https://a.icons8.com/dhhZkYZk/0ICOP9/svg.svg){.align-abstopright}
 
-# Two-Factor Authentication
+# 两步验证
 
-> This feature is available from version **2.5 and up**.
+> 此功能只在 **2.5 及以上版本** 可用。
 {.is-info}
 
-Two-Factor Authentication (2FA) adds an extra layer of protection to user accounts. It combines something you know *(your password)* with something you have / are *(mobile phone, fingerprint, security key, etc.)*.
+两步验证（2FA）为用户帐户添加了一层额外保护。它将你知道的东西（你的密码）与你拥有的东西（*手机、指纹、安全钥匙等*）结合在一起。
 
-Even if a malicious user obtain your password, they will be unable to login because they don't have the second authentication factor.
+即使恶意用户获取了您的密码，他们也无法登录，因为他们没有“第二身份验证要素”。
 
-## Getting Started
+## 开始配置
 
-2FA can be enabled globally to all users or on per-user basis.
+两步验证可以对所有用户启用，也可以对每个用户分别配置。
 
-### Global
+### 全局启用
 
-To force all users to use 2FA on their account, go to the **Administration Area** and click on **Security** in the sidebar navigation.
+要强制所有用户启用两步验证，转到**管理区**并点击侧边栏中的**安全**选项。
 
-Enable the **Enforce 2FA** option and click **Apply**.
+启用 **强制两步验证** 选项并点击**应用**。
 
-All users will be required to setup 2FA on their account the next time they login.
+所有用户都将在下次登录时被要求为他们的账户设定两步验证。
 
-### Per User
+### 对特定用户启用
 
-In the **Administration Area**, click on **Users** in the sidebar navigation.
+在**管理区**，点击侧边栏中的**用户**选项。
 
-Select the user to edit and click on the **ON** switch next to the **Two Factor Authentication** row.
+选择要启用两步验证的用户，并点击**两步验证**这一列的开关使其变为**启用**状态。
 
-The user will be required to setup 2FA on their account the next time they login.
+该用户会在下次登录时被要求为他的账户设置两步验证。
 
-> At the moment, only the administrator can enable 2FA for a user. Users will be able to self-enable 2FA in a future release.
+> 目前，只有管理员才能为用户启用两步验证。未来将支持让用户自行启用两步验证。
 {.is-info}
 
-## Supported Methods
+## 支持的验证方法
 
-- **OTP (One-Time Passwords)** <i class="mdi mdi-check green--text"></i>
+- **OTP (一次性密码)** <i class="mdi mdi-check green--text"></i>
 	- TOTP *(Authy, Google Authenticator, Microsoft Authenticator)*{.caption} <i class="mdi mdi-check green--text"></i>
-- **WebAuthn** <i class="mdi mdi-clock-outline orange--text"></i> *(Planned for a future update)*{.caption .orange--text .text--darken-3}
+- **WebAuthn** <i class="mdi mdi-clock-outline orange--text"></i> *(计划之后支持)*{.caption .orange--text .text--darken-3}
 	- Windows Hello
   - FIDO2 *(Yubikey 5)*{.caption}
   - FIDO U2F *(Yubikey 4 and earlier, Google Titan Key)*{.caption}
-- **SMS Codes** <i class="mdi mdi-close red--text"></i> *(No plan to support in the future as this method is **unsafe** and unreliable.)*{.caption .red--text}
+- **短信验证码** <i class="mdi mdi-close red--text"></i> *(由于此方法**不安全**且不可靠，不计划在将来提供支持。)*{.caption .red--text}
 
-# Customize Login Flow
+# 自定义登录流程
 
-It's possible to modify how the login experience is presented to the user from the **Administration Area** > **Security** section:
+在**管理区** > **安全** 中，您可以修改登录流程对用户的呈现方式。
 
-## Login Background Image
+## 登录页背景图
 
-An alternate image background can be set for the login screen. Enter the full path to an image *(.jpg / .png)*.
+您可以为登录页设置另外的背景图。在相应设置项中输入图像的完整路径即可*(.jpg / .png)*。
 
-> Note that if you upload an image directly to the wiki, you must ensure that this path is accessible to guest users! It's recommended to upload the image to a dedicated asset folder and give `read:assets` permission to that folder path on the **Guests** group.
+> 需要注意的是，如果您直接向wiki上传图片，您需要保证Guest用户组有权访问对应路径！建议您将图片上传到专门的目录，并授予Guest用户组对该目录路径的`read:assets`权限。
 {.is-warning}
 
-## Bypass Login Screen
+## 跳过登录界面
 
-When using a social provider *(e.g. Google authentication)*, you may want to skip the login screen altogether and redirect the user directly to the social provider for a faster login.
+当使用社交网络 *（如：谷歌认证）* 作为登录服务提供商时，你可能希望直接跳过登录界面，将用户直接跳转到登录服务提供商的界面以加快登录流程。
 
-> You can always access the login screen even when this option is enabled by adding `?all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
+> 在这项设置启用的情况下，您仍然可以通过在登录URL后加上`?all=1`来访问登陆界面。 *(如： `https://wiki.example.com/login?all=1`)*
 {.is-info}
 
-## Hide Local Provider
+## 隐藏本地登录
 
-If you have multiple authentication providers enabled but wish to hide the default local provider, you can enable this option to hide it.
+如果您启用了多个身份验证提供程序，但希望隐藏默认的本地提供程序，则可以启用此选项来隐藏它。
 
-> You can always unhide it when this option is enabled by adding `?all=1` to the login URL. *(e.g. `https://wiki.example.com/login?all=1`)*
+> 在这项设置启用的情况下，您仍然可以通过在登录URL后加上`?all=1`来显示本地登录。 *(如： `https://wiki.example.com/login?all=1`)*
 {.is-info}
