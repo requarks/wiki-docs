@@ -2,37 +2,39 @@
 title: Dropbox
 description: Authentication Module
 published: true
-date: 2019-12-25T21:17:17.481Z
+date: 2023-01-26T14:27:58.885Z
 tags: auth, module
+editor: markdown
+dateCreated: 2023-01-08T10:34:13.852Z
 ---
 
-Dropbox is a file hosting service that offers cloud storage, file synchronization, personal cloud, and client software.
+Dropbox是一个文件托管服务，提供云存储、文件同步、个人云和客户端软件。
 https://www.dropbox.com
 
-# Setup
-## A) Create an OAuth app
+# 配置
+## A) 创建一个 OAuth 应用
 
-1. Browse to https://www.dropbox.com/developers/apps
-1. Click on **Create app**
-1. Choose **Dropbox API** and the access type **App folder**
-1. Name your app, e.g. `Wiki.js` and click **Create app**
-1. Copy the **App key** and **App secret** values. We'll need them later.
-1. Keep this tab opened, we'll need to enter some more settings later.
+1. 访问 https://www.dropbox.com/developers/apps
+1. 点击 **创建应用**
+1. 选择 **Dropbox API** 和访问类别为 **App folder**
+1. 为您的应用起名， 如： `Wiki.js` ，并点击 **创建应用**
+1. 复制 **应用key** 和 **应用secret**的值，供后续使用。
+1. 保持此页面打开，供后续添加更多设置。
 
-## B) Enable the Dropbox strategy in Wiki.js
+## B) 在Wiki.js中启用Dropbox登录策略
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Click on **Dropbox**.
-1. Enter the **App key** and **App secret** values copied earlier.
-1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **Dropbox** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 在您wiki的**管理区**，点击左侧导航栏中的**身份验证**。
+1. 点击**Dropbox**.
+1. 输入之前复制的**应用key** 和 **应用secret**的值。
+1. 启用 **开放注册** *(除非你想人工验证每一个用户)*.
+1. 选择新用户首次登录时会被分配到的**用户组**。
+1. 确保登陆策略列表中**Dropbox**旁边的复选框为已勾选状态，对应的文本现在应该提示此策略处于**启用**状态。
+1. 点击此页右上角的 **应用** 来保存并应用配置。
 
-## C) Enter the allowed endpoints on Dropbox
+## C) 在Dropbox中输入允许的endpoints
 
-Going back to the application page on the Dropbox app dashboard, you'll need to enter the **Redirect URIs**. This value can be found in Wiki.js under **Configuration Reference**, displayed below the settings of the Dropbox strategy.
+回到之前打开的Dropbox应用面板，你将需要输入**跳转URI**。这个值可以在您Wiki中Dropbox配置下方的**配置参考**下找到。
 
-Click the **Add** button  when done. While optional, it's also recommended to fill in the **Branding** section for easy identification by your end users.
+填写完毕后，点击**添加**按钮. 作为可选选项，建议您填写**品牌识别**一栏的信息以便终端用户识别。
 
 ![](https://static.requarks.io/logo/dropbox.svg =x50){.align-abstopright}
