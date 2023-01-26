@@ -2,37 +2,38 @@
 title: Discord
 description: Authentication Module
 published: true
-date: 2019-09-15T02:39:23.450Z
+date: 2023-01-26T13:59:12.493Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:34:11.093Z
 ---
 
-Discord is a popular gaming communication tool.
+Discord是一种流行的游戏交流工具。
 https://discordapp.com/
 
-# Setup
+# 配置
 
-## A) Create the application on Discord
+## A) 在Discord上创建应用
 
-1. Browse the [Discord Developer Portal](https://discordapp.com/developers/applications/). You'll need an existing account to proceed.
-1. Click on **New Application** and enter a **name** (e.g. Wiki). Click **Create**.
-1. Copy the **Client ID** and **Client Secret** values. We'll need them later.
+1. 访问 [Discord 开发者门户](https://discordapp.com/developers/applications/)。 您需要拥有一个账号才可以继续。
+1. 点击 **新应用** 并输入一个 **应用名称** (如：Wiki)。点击 **创建**。
+1. 复制 **客户端ID** 和 **客户端密钥**的值，供后续使用。
 
-## B) Enable the Discord strategy in Wiki.js
+## B) 在Wiki.js上启用Discord登陆策略
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Click on **Discord**.
-1. Enter the **Client ID** and **Client Secret** values copied earlier.
-1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **Discord** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 在您wiki的 **管理区**，点击左侧导航栏中的**身份验证**。
+1. 点击**Discord**。
+1. 输入之前复制的 **客户端ID** 和 **客户端密钥** 的值。
+1. 启用 **开放注册** *（除非你想人工验证每一个用户）*.
+1. 选择新用户首次登录时会被分配到的 **用户组**。
+1. 确保**Discord**旁边的复选框为已勾选状态。您现在应该可以看到文字提示此策略处于**启用**状态。
+1. 点击此页右上角的**应用**以保存并应用设置。
 
-## C) Enter the OAuth2 settings on Discord
+## C) 在Discord中输入OAuth2设置
+回到Discord开发者门户，你将需要设置跳转URI。在应用页面中，点击左侧边栏中的**OAuth2**并添加回调跳转URI。您可以在Wiki.js中Discord登陆策略下的**配置参考**中中找到要填入的值。
 
-Going back to the Discord developer portal, you'll need to set the redirect URI. On the application page, click on **OAuth2** in the left sidebar and add the callback redirect URI. This value can be found in Wiki.js under **Configuration Reference**, displayed below the settings of the Discord strategy.
+填写完成后，点击页面底部的 **保存更改** 按钮。
 
-Click the **Save Changes** button at the bottom of the page when done.
-
-While optional, it's also recommended to set an **Application Logo** for easy identification by your end users.
+虽然设置应用徽标是可选的, 但仍然推荐设置一个**应用徽标**以便最终用户识别。
 
 ![](https://static.requarks.io/logo/discord.svg){.align-abstopright}
