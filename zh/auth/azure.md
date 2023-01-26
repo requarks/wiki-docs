@@ -2,43 +2,43 @@
 title: Azure Active Directory
 description: Authentication Module
 published: true
-date: 2022-08-31T17:01:57.649Z
+date: 2023-01-26T13:47:52.633Z
 tags: auth, module
 editor: markdown
-dateCreated: 2019-07-20T15:31:49.465Z
+dateCreated: 2023-01-08T10:34:08.166Z
 ---
 
-[Azure Active Directory (Azure AD)](https://azure.microsoft.com/en-ca/services/active-directory/) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources.
+[Azure Active Directory (Azure AD)](https://azure.microsoft.com/en-ca/services/active-directory/)是Microsoft基于云的身份和访问管理服务，可帮助您的员工登录和访问资源。
 
-# Setup
+# 配置
 
-## A) Copy the redirect URI
+## A) 复制跳转URI
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Add a new **Azure Active Directory** auth strategy.
-1. Copy the **Redirect URI** value found under the configuration reference section. Keep this page opened. We'll come back to it later.
+1. 在您wiki的**管理区**，点击左侧导航栏中的**身份验证**。
+1. 添加一个新的**Azure Active Directory**验证策略。
+1. 复制配置参考部分中**跳转URI**的值，并保持此页面打开，供后续使用。
 
-## B) Create Azure AD Application
+## B) 创建Azure AD应用
 
-1. From the Azure Portal, open the **Azure Active Directory** resource.
-1. Click on **App registrations** in the left navigation and then click **New registration** at the top.
-1. Enter a **Name** (e.g. Wiki.js) and enter the **Redirect URI** you copied earlier.
-1. Click **Register**.
-1. Copy the **Application (client) ID**, you'll need it later.
-1. Click on **Endpoints** at the top and copy the endpoint value for **OpenID Connect metadata document** (e.g. `https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration`), you'll need it later.
-1. *(Optional)* Click on **Branding** in the left navigation and enter the necessary info to make it easier for your users.
-1. Click on **Authentication** in the left navigation and enter the **Logout URL** (`https://YOUR-WIKI.DOMAIN.COM`) and make sure the **ID tokens** checkbox under **Implicit grant** is checked, then click **Save** at the top.
-1. Click on **API permissions** in the left navigation and ensure the **Microsoft Graph > User.Read** permission is listed.
-1. *(Optional)* In the **API permissions** section, you can **Grant admin consent** on behalf of all users in the directory. This will prevent the consent screen from being shown to the user the first time they login, which is often preferable in an internal organization environment.
+1. 在Azure门户中，打开**Azure Active Directory**资源。
+1. 点击左侧导航栏中的**应用注册**，然后点击顶部的**新注册**。
+1. 输入**应用名称** （如：Wiki.js）并填入之前复制的**跳转URI**。
+1. 点击**注册**。
+1. 复制**应用 (客户端) ID**，供后续使用。
+1. 点击顶部的**Endpoints**，然后复制**OpenID Connect元数据文档**的Endpoint值， （如： `https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration`），供后续使用。
+1. *(可选)* 点击左侧导航栏中的 **品牌配置** 并填入必要的信息，以使登录流程对您的用户更加友好。
+1. 点击左侧导航栏中的 **身份验证** 并填入 **登出URL** (`https://YOUR-WIKI.DOMAIN.COM`) 并确保**隐性授权（Implicit grant）** 下的 **ID 密钥** 复选框为已勾选状态，然后点击顶部的**保存**。
+1. 点击左侧导航栏中的**API权限**并确保**Microsoft Graph > User.Read** 权限被列出。
+1. *(可选)* 在**API 权限**中， 您可以代表您域下的所有用户 **授予管理员许可**，这在内部组织环境中通常更合适。
 
-## C) Enable the Azure AD strategy in Wiki.js
+## C) 在Wiki.js中启用Azure AD登录策略
 
-1. Go back to the Wiki.js administration page from step A.
-1. Enter the **Identity Metadata Endpoint** and **Client ID** values copied earlier.
-1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **Azure Active Directory** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 回到步骤A中打开的Wiki.js管理区页面。
+1. 输入之前复制的 **身份元信息Endpoint** 和 **客户端ID**的值。
+1. 启用 **开放注册** *(除非你想人工验证每一个用户)*.
+1. 选择新用户首次登录时会被分配到的**用户组**。
+1. 确保登陆策略列表中**Azure Active Directory**旁边的复选框为已勾选状态，对应的文本现在应该提示此策略处于**启用**状态。
+1. 点击此页右上角的 **应用** 来保存并应用配置。
 
 <img src="https://static.requarks.io/logo/azure.svg" class="align-abstopright" style="width:150px;" />
   
