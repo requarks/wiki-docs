@@ -2,60 +2,62 @@
 title: Google
 description: Authentication Module
 published: true
-date: 2019-09-14T23:12:15.831Z
+date: 2023-01-28T14:58:03.413Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:34:19.798Z
 ---
 
-Google specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware.
+谷歌专注于互联网相关服务和产品，包括在线广告技术、搜索引擎、云计算、软件和硬件。
 [Google Cloud Console](https://console.developers.google.com/)
 
-# Setup
+# 配置
 
-## A) Create Google Cloud Project
+## A) 创建 Google Cloud 项目
 
-1. Launch the [Google Cloud Console](https://console.cloud.google.com/) and create a new project *(if not already the case)*.
-1. From the left sidebar, click on **APIs & Services**.
-1. At the top, click on **Enable APIs and Services**
-1. Click on the **Google+ API** tile and enable it.
-1. From the left sidebar, mouse over **APIs & Services** and choose **Credentials** in the sub-menu.
-1. Click on the blue **Create credentials** button and choose **OAuth client ID**.
-1. Select **Web application** as the application type.
-1. Give a proper name *(e.g. Wiki.js)*
-1. Leave the other fields empty for now, we'll fill them later.
-1. Click **Create** to be presented with the **Client ID** and **Client Secret**. Copy these 2 keys. We'll need them later.
+1. 打开 [Google Cloud Console](https://console.cloud.google.com/) 并创建一个新项目 *(如果还没有创建)*.
+1. 在左侧边栏中,点击 **API与服务**.
+1. 点击最上方的 **启用API与服务**
+1. 点击**Google+ API** 并启用.
+1. 在左侧边栏中，将鼠标悬停在**API与服务**上，然后在子菜单中选择**凭据**。
+1. 点击蓝色的 **创建凭据** 按钮并选择 **OAuth客户端ID**.
+1. 选择应用类型为**Web应用**.
+1. 为应用起一个合适的名字 *(如: Wiki.js)*
+1. 暂时将其他字段留空,待稍后填写
+1. 点击 **创建** 就能看到 **客户端ID** 和 **客户端密钥**. 复制这两个键的值,供稍后使用
 
-## B) Enable the Google strategy in Wiki.js
+## B) 在Wiki.js中启用Google登录策略
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Click on **Google**.
-1. Enter the **Client ID** and **Client Secret** values copied earlier.
-1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **Google** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 在您wiki的 **管理区**中，点击左侧导航栏中的 **身份验证**。
+1. 点击 **Google**。
+1. 输入之前复制的**客户端ID**和**客户端密钥**的值。
+1. 启用 **开放注册** 选项 *(除非您希望人工验证每一个用户)*。
+1. 选择用户首次登陆时会被分配到的**用户组**。
+1. 确保**Google**旁边的复选框为已勾选状态。您现在应该可以看到文字提示此策略处于**启用**状态。
+1. 点击此页右上角的**应用**以保存并应用设置。
 
-## C) Enter the allowed endpoints on Google
+## C) 在Google中输入允许的endpoints
 
-Going back to the **Credentials** page on the Google Cloud Console, click the edit icon next to the OAuth client you created earlier.
+回到Google Cloud Console上的**凭据** 页面, 单击之前创建的OAuth客户端旁边的编辑图标。
 
-Enter the wiki's domain for **Authorized JavaScript origins**.
+在 **已授权的JavaScript源** 内输入您wiki的域名.
 
-Enter the redirect URI (found under **Configuration Reference** displayed below the settings of the Google strategy in Wiki.js) in **Authorized redirect URIs**
+在**授权重定向URI**中输入重定向URI（位于Wiki.js中Google策略设置下方的**配置参考**下）
 
-Click **Save**.
+点击 **保存**.
 
-## D) Set the OAuth consent screen
+## D) 设置OAuth授权界面
 
-From the same Credentials page, click on the **OAuth consent screen** tab.
+在上一步打开的凭据页面, 点击**OAuth授权界面**选项卡.
 
-Fill in the name, logos, emails, etc. as needed.
+填入需要的名称、徽标、email等。
 
-In the **Scopes for Google APIs**, make sure the following scopes are listed:
+在**Google API范围**中，确保覆盖以下范围
 - email
 - profile
 - openid
 
-In the **Authorized domains**, make sure the domain of your wiki is listed.
+在**已授权域**中，确保您wiki的域名已被列出。
 
 ![](https://static.requarks.io/logo/google.svg =x50){.align-abstopright}
   
