@@ -1,29 +1,31 @@
 ---
 title: Commento
-description: Comments Module
+description: 评论模块
 published: true
-date: 2020-05-23T05:22:48.129Z
-tags: module, comments
+date: 2023-01-29T14:37:26.331Z
+tags: comments, module, 模块, 评论
+editor: markdown
+dateCreated: 2023-01-08T10:34:39.423Z
 ---
 
-Commento is a fast, privacy-focused commenting platform with cloud or self-hosted options.
+Commento是一个快速、注重隐私的评论平台，提供云或自托管选项。
 [commento.io](https://commento.io/)
 
-# Setup
+# 配置
 
-## A) Create Commento Site
+## A) 创建Commento站点
 
-1. If not already the case, create an account on [Commento](https://commento.io/)
-1. Add a new **Domain**.
-1. Enter the domain (host) to your wiki. The host must match your current wiki domain (e.g. `https://wiki.example.com/`)
+1. 如果还未创建站点，请在[Commento](https://commento.io/)上创建一个站点
+1. 添加一个新**域名**.
+1. 输入您wiki的域名，这个域名必须与您wiki的当前域名相符 (如： `https://wiki.example.com/`)
 
-## B) Enable the Commento provider in Wiki.js
+## B)在Wiki.js中启用Commento提供者
 
-1. In the **Administration Area** of your wiki, click on **Comments** in the left navigation.
-1. Click on **Commento**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 在您wiki的**管理区**, 点击左侧边栏中的**Comments**。
+1. 点击**Commento**.
+1. 点击右上角的**应用**以保存并应用配置。
 
-Commento will now be displayed at the end of all your wiki pages.
+Commento将在您所有wiki页面的底部显示。
 
 ![](https://static.requarks.io/logo/commento.svg =x50){.align-abstopright}
   
