@@ -1,9 +1,9 @@
 ---
 title: Discord
-description: Authentication Module
+description: 身份验证模块
 published: true
-date: 2023-01-26T13:59:12.493Z
-tags: 
+date: 2023-01-29T08:46:06.048Z
+tags: auth, module, 身份验证, 模块
 editor: markdown
 dateCreated: 2023-01-08T10:34:11.093Z
 ---
