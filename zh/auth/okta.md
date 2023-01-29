@@ -2,33 +2,35 @@
 title: Okta
 description: Authentication Module
 published: true
-date: 2019-11-14T23:31:19.440Z
+date: 2023-01-29T13:10:36.921Z
 tags: auth, module
+editor: markdown
+dateCreated: 2023-01-08T10:34:31.005Z
 ---
 
-Okta provide secure identity management and single sign-on to any application.
+Okta可为任意应用提供安全的身份管理和单点登录。
 
-# Setup
+# 配置
 
-## A) Create Okta Application
+## A) 创建Okta应用
 
-1. From the Okta control panel, click on **Applications** in the top navigation bar.
-1. Click on **Add Application**, then on **Create New App**.
-1. Select **Web** as the platform and **OpenID Connect** as the sign-in method.
-1. Enter the **Application Name** (e.g. Wiki.js) and optionally a logo.
-1. Enter the **Login redirect URIs** using the format `https://YOUR-WIKI-DOMAIN/login/okta/callback`
-1. Enter the **Logout redirect URIs** using the format `https://YOUR-WIKI-DOMAIN/`.
-1. Click **Save**.
-1. A **Client ID** and **Client Secret** will be shown to the bottom of the page. Copy these 2 keys. We'll need them later.
+1. 在Okta控制面板中，点击顶部导航栏中的**应用**。
+1. 点击**添加应用**, 然后点击**创建新应用**。
+1. 选择平台为**Web**， 登录方式为**OpenID Connect**。
+1. 输入**应用名称** (如： Wiki.js) 并设置应用徽标（可选）
+1. 以此格式输入**登录重定向URI**：`https://YOUR-WIKI-DOMAIN/login/okta/callback`
+1. 以此格式输入**登出重定向URI**：`https://YOUR-WIKI-DOMAIN/`.
+1. 点击**保存**.
+1. 一个**客户端ID**和**客户端密钥**将会显示。复制这两项内容，以便后续使用。
 
-## B) Enable the Okta strategy in Wiki.js
+## B) 在Wiki.js中启用Okta登录策略
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Click on **Okta**.
-1. Enter the **Client ID** and **Client Secret** values copied earlier.
-1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **Okta** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 在您wiki的 **管理区**中，点击左侧导航栏中的 **身份验证**。
+1. 点击 **Okta**。
+1. 输入之前复制的**客户端ID**和**客户端密钥**的值。
+1. 启用 **开放注册** 选项 *(除非您希望人工验证每一个用户)*。
+1. 选择用户首次登陆时会被分配到的**用户组**。
+1. 确保**Okta**旁边的复选框为已勾选状态。您现在应该可以看到文字提示此策略处于**启用**状态。
+1. 点击此页右上角的**应用**以保存并应用设置。
 
 ![](https://static.requarks.io/logo/okta.svg =x50){.align-abstopright}
