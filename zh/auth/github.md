@@ -1,9 +1,9 @@
 ---
 title: GitHub
-description: Authentication Module
+description: 身份验证模块
 published: true
-date: 2023-01-28T14:13:21.979Z
-tags: auth, module
+date: 2023-01-29T08:47:07.130Z
+tags: auth, module, 身份验证, 模块
 editor: markdown
 dateCreated: 2023-01-08T10:34:16.712Z
 ---
