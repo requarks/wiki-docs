@@ -1,55 +1,56 @@
 ---
-title: Comments
-description: List of supported Commenting Modules
+title: 评论
+description: 支持的评论模块列表
 published: true
-date: 2020-05-31T23:00:10.984Z
-tags: comments
+date: 2023-01-29T14:32:24.741Z
+tags: comments, 评论
+editor: markdown
+dateCreated: 2023-01-08T10:33:16.337Z
 ---
 
-> Available from version **2.4 and up**
+> 在**2.4及以上版本**可用。
 {.is-info}
 
-Comments modules add discussion capabilities to your pages.
+评论模块为页面添加了讨论功能。
 
-From the administration area, you can enable a comment provider that work best for you.
-Most modules require some configuration. Check out the links below for module specific configuration instructions.
+在管理区，您可以启用最适合您的评论提供者。
+大多数模块需要一些配置。查看以下链接以获取特定模块的配置指导。
 
-# Enable Comments
+# 启用评论
+在使用评论功能前， 您需要先在 **管理区 > 通用** 下启用评论功能。
 
-The **Comments** feature must be enabled under **Administration > General** before you can start using comments.
+该选项对站点上的全部页面有效。
+*精确到页的设置功能将在后续版本中加入。*
 
-This toggle applies to all pages on the site.
-*A per-page option will be added in a future release.*
+# 模块
 
-# Modules
+## 内部
 
-## Internal
-
-- [Default](/comments/default)
+- [默认](/comments/default)
 {.links-list}
 
-## External
+## 外部
 
 - [Commento](/comments/commento)
 - [Disqus](/comments/disqus)
 {.links-list}
 
-# Permissions
+# 权限
 
-> Permissions only apply to **Internal** modules.
+> 权限仅对 **内部** 模块有效.
 >
-> **External** modules are not tied to any Wiki.js group permissions or users. Moderation and authentication is handled exclusively by the module provider.
-> **You must however grant the `read:comments` permission in order to display the module interface, even for external modules.**
+> **外部** 模块不与Wiki.js的用户组或用户的权限绑定。管理与身份验证均由模块提供者负责。
+> **但您必须授予`read:comments`权限才能让用户看到评论界面，即使对外部模块也是如此。**
 {.is-warning}
 
-The ability to read, post or manage comments is controlled via group permissions. Ensure the group the user is member of has both the global permission and the page rule assigned to perform the desired comment action.
+阅读、发布或管理评论的能力由用户组权限控制。请确保用户所属的用户组组同时具有全局权限和页面规则，以执行所需的评论操作。
 
-The following permissions are applied on a per-page basis as specified by the page rules:
+以下权限根据页面规则按页面应用：
 
-- The `read:comments` permission grants the ability to read all comments.
-- The `write:comments` permission grants the ability write new comments.
-- The `manage:comments` permission grants the ability to edit and delete **all** comments *(not just their own)*. This should be given for moderation purposes only.
+- `read:comments` 权限授予读取所有评论的能力。
+- `write:comments` 权限授予发布新评论的能力。
+- `manage:comments` 权限授予编辑与删除**所有**评论的能力*（并非只有用户自己的评论）*。这项权限仅应给予管理用户。
 {.grid-list}
 
-> If guests are allowed to post comments, they will be prompted to enter a **name** and an **email address**. This info will be stored along the comment. The guest email address and IP address can only be seen by administrators with the `manage:system` permission.
+> 如果允许游客发表评论，游客将被提示输入**姓名**与**电子邮件地址**。此信息将与评论一起存储。只有具有`manage:system`权限的管理员才能查看游客的电子邮件地址和IP地址。
 {.is-info}
