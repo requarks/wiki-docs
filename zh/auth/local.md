@@ -1,30 +1,33 @@
 ---
-title: Local
-description: Authentication Module
+title: 本地登录
+description: 身份认证模块
 published: true
-date: 2019-09-15T02:40:22.142Z
-tags: 
+date: 2023-01-29T12:36:41.724Z
+tags: auth, module, 模块, 身份认证
+editor: markdown
+dateCreated: 2023-01-08T10:34:28.333Z
 ---
 
-This is the default, built-in authentication module for Wiki.js.
+这是Wiki.js的默认内置身份验证模块。
 
-It's enabled by default and cannot be disabled.
+该模块默认启用，且无法禁用。
 
-# Setup
+# 配置
+您无需进行任何配置就可使用此身份验证策略。但是，您可以启用其它设置，如开放注册。
 
 There's nothing to configure in order to use this authentication strategy. However, there're extra settings you can enable, such as self-registration.
 
-From the **Administration Area**, click on **Authentication** in the left navigation and click on **Local** in the strategies list.
+在您wiki的 **管理区**中，点击左侧导航栏中的 **身份验证**，然后点击**本地登录**
 
-## Self-registration
+## 开放注册
 
-Users can create accounts on your wiki when you enable the **Self-registration** option.
+如果您启用了**开放注册**选项，用户就可以自行在您的wiki上创建账户。
 
-Unless your wiki is public and allow anyone to create an account, it's generally a good idea to set an email **domain whitelist**. Enter a valid domain (e.g. example.com) and press <kbd>Enter</kbd>. You can add as many domains as needed.
+一般情况下，建议您设置email**后缀白名单**。除非您的wiki完全开放，允许任何人创建账户。输入一个合法的域名并按下<kbd>Enter</kbd>，将其加入白名单。您可以根据需要添加任意多个域名。
 
-Make sure to set a **group** to be assigned to when the user login for the first time.
+请确保为新用户指定首次登录时会被分配到的**用户组**。
 
-Click **Apply** at the upper right of the page to save and apply the configuration.
+点击此页右上角的**应用**以保存并应用设置。
 
-> :warning: You **must** setup the mail SMTP settings (under **Mail** in the Administration Area) for the registration emails to be sent. Users won't be able to login until they verify their account, using a link sent to their email address.
+> :warning: 您**必须**配置好SMTP邮件设置（在管理区的**邮件**处）以发送注册邮件。用户只有使用发送到其电子邮件地址的链接验证其帐户后才能登录。
 {.is-danger}
