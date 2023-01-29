@@ -1,16 +1,17 @@
 ---
 title: SAML
-description: Authentication Module
+description: 身份验证模块
 published: true
-date: 2020-08-22T03:51:08.646Z
-tags: auth, module
+date: 2023-01-29T13:13:16.206Z
+tags: auth, module, 身份验证, 模块
 editor: markdown
+dateCreated: 2023-01-08T10:34:33.875Z
 ---
 
-This module is using the [passport-saml](https://github.com/node-saml/passport-saml) package as-is.
+此模块复用了 [passport-saml](https://github.com/node-saml/passport-saml) 包。
 
-Detailed information for each parameter can be found [in the project README](https://github.com/node-saml/passport-saml#config-parameter-details).
+各参数的详细信息参见[此项目的README](https://github.com/node-saml/passport-saml#config-parameter-details).
 
-**For any issues using the SAML module, please open an issue on the [passport-saml GitHub project](https://github.com/node-saml/passport-saml/issues) repository directly.**
-> Wiki.js developers are not knowledgeable on SAML and cannot help you with any configuration issues.
+**对于使用SAML模块的任何问题，请向[passport-saml GitHub项目仓库](https://github.com/node-saml/passport-saml/issues)直接提出issue.**
+> Wiki.js开发人员不熟悉SAML，无法帮助您解决任何配置问题。
 {.is-warning}
