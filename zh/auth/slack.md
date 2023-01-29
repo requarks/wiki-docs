@@ -1,49 +1,51 @@
 ---
 title: Slack
-description: Authentication Module
+description: 身份验证模块
 published: true
-date: 2019-10-05T03:48:02.570Z
-tags: 
+date: 2023-01-29T13:51:07.854Z
+tags: auth, module, 身份验证, 模块
+editor: markdown
+dateCreated: 2023-01-08T10:34:36.683Z
 ---
 
-Slack is a cloud-based set of proprietary team collaboration tools and services.
+Slack是一个基于云的专有团队协作工具和服务。
 [slack.com](https://slack.com)
 
-# Setup
+# 配置
 
-## A) Create Slack Application
+## A) 创建Slack应用
 
-1. If not already the case, create a workspace for your organization on [Slack](https://slack.com/).
-1. Nagivate to the [Your Apps](https://api.slack.com/apps?new_app=1) page to create a new app.
-1. Enter a **name** (e.g. Wiki) and select your workspace.
-1. Click **Create App**.
-1. Once the app is created, click on **OAuth & Permissions** from the left sidebar.
-1. Under the **Scope** section, add the following scopes:
-	- `identity.avatar` - *View user’s Slack avatar*
-  	- `identity.basic` - *Confirm user’s identity*
-  	- `identity.email` - *View user’s email address*
-1. Click on **Basic Information** from the left sidebar.
-1. Under the **App Credentials** section, copy the **Client ID** and **Client Secret** values. We'll need them later.
+1. 如果还未创建工作区，请在[Slack](https://slack.com/)上为您的组织创建一个工作区。
+1. 转到[您的应用](https://api.slack.com/apps?new_app=1)页面来新建应用。
+1. 输入一个**应用名称** (如：Wiki) 并选择您的工作区。
+1. 点击**创建应用**.
+1. 应用创建完成后，点击左侧边栏中的**OAuth与权限**。
+1. 在**范围**部分, 选中以下范围:
+	- `identity.avatar` - *查看用户的Slack头像*
+  	- `identity.basic` - *确认用户身份*
+  	- `identity.email` - *查看用户的email地址*
+1. 点击左侧边栏中的**基本信息**。
+1. 在**应用凭据**部分, 复制**客户端ID** 和 **客户端密钥** 的值，供后续使用。
 
-## B) Enable the Slack strategy in Wiki.js
+## B) 在Wiki.js中启用Slack登录策略
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Click on **Slack**.
-1. Enter the **Client ID** and **Client Secret** values copied earlier.
-1. Enter the **Team / Workspace ID**. (e.g. If your url is **acme**.slack.com, you would enter **acme**)
-1. Enable the **Self-registration** option *(unless you plan on authorizing users manually)*.
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **Slack** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
-1. Copy the **Callback URL / Redirect URI** value found below the settings.
+1. 在您wiki的 **管理区**中，点击左侧导航栏中的 **身份验证**。
+1. 点击 **Slack**。
+1. 输入之前复制的**客户端ID**和**客户端密钥**的值。
+1. 输入**团队 / 工作区 ID**. (例： 如果您的地址是**acme**.slack.com, 您就需要输入**acme**)
+1. 启用 **开放注册** 选项 *(除非您希望人工验证每一个用户)*。
+1. 选择用户首次登陆时会被分配到的**用户组**。
+1. 确保**Slack**旁边的复选框为已勾选状态。您现在应该可以看到文字提示此策略处于**启用**状态。
+1. 点击此页右上角的**应用**以保存并应用设置。
+1. 复制设置下方**回调URL / 重定向URI**的值。
 
-## C) Enter the allowed endpoints on Slack
+## C) 在Slack上填入允许的endpoint
 
-Going back to the app page on the Slack website, click on **OAuth & Permissions** in the left sidebar. Under the **Redirect URLs** section, add the redirect URL to your wiki you just copied. Click the **Save URLs** button when done.
+回到Slack网站上的app页面，点击左侧边栏中的**OAuth与权限**。在 **重定向URL** 部分下， 添加您之前从wiki设置页面复制的重定向URL，完成后点击**保存URL**按钮。
 
-While optional, it's also recommended to set a description and logo under **Basic Information** > **Display Information** for easy identification by your end users.
+作为可选选项，建议您在 **基本信息** > **显示信息** 下设置应用描述和徽标，便于最终用户识别。
 
-Finally, click the **Install App to Workspace** button at the top to authorize this application on your workspace.
+最后，点击顶部的**将应用安装至工作区**按钮来在您的工作区上授权应用。
 
 ![](https://static.requarks.io/logo/slack.svg =x50){.align-abstopright}
   
