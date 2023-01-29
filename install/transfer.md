@@ -29,12 +29,12 @@ You should now have a fully setup server with a PostgreSQL database, a Wiki.js i
 
 On your old server where your previous installation is located, make a full database dump:
 ```bash
-docker exec db pg_dump wiki -U wiki -F c > wikibackup.dump
+docker exec db pg_dump wiki -U wiki -F c > wikijs_backup.sql
 ```
 > In the above command, the PostgreSQL docker container is named `db` and we're using the database name `wiki` and user `wiki`. This is the default if you followed the tutorial mentionned in the Getting Started section above.
 {.is-info}
 
-This will create a new file `wikibackup.sql` in the current directory.
+This will create a new file `wikijs_backup.sql` in the current directory.
 
 # 3. Transfer Backup
 
@@ -43,7 +43,7 @@ This will create a new file `wikibackup.sql` in the current directory.
 We'll now transfer the backup file onto the new server. There're several methods to copy files between servers but we'll use rsync for this example. Replace `YOUR-NEW-SERVER-IP` in the command below with the IP address of your new server.
 
 ```bash
-rsync -P wikibackup.dump root@YOUR-NEW-SERVER-IP:~/wikibackup.dump
+rsync -P wikijs_backup.sql root@YOUR-NEW-SERVER-IP:~/wikijs_backup.sql
 ```
 
 > This assumes that you have previously configured your new server to accept SSH connections from your old server. To do so, you need to add the public key of the old server into the authorized_keys of the new server. You can learn how [in this tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-22-04).
