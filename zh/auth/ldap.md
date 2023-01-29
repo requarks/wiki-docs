@@ -1,46 +1,52 @@
 ---
 title: LDAP / Active Directory
-description: Authentication Module
+description: 身份认证模块
 published: true
-date: 2020-06-12T20:34:21.239Z
-tags: auth, module
+date: 2023-01-29T10:55:42.869Z
+tags: auth, module, 模块, 身份认证
 editor: markdown
+dateCreated: 2023-01-08T10:34:25.546Z
 ---
 
-LDAP / Active Directory is an enterprise authentication solution developed by Microsoft.
+LDAP/Active Directory是Microsoft开发的企业身份验证解决方案。
 
-# Setup
+# 配置
 
-1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
-1. Click on **LDAP / Active Directory**.
-1. Enter the **LDAP URL** where the LDAP server can be reached.
-1. Enter the distinguished name in **Admin Bind DN** of the account used for binding.
-1. Enter the password in **Admin Bind Credentials** for the account specified above.
-1. Enter the base DN to search users from, in the **Search Base** field.
-1. Enter the query to match a user with the entered username/email in the **Search Filter** field. The value MUST include the `{{username}}` tag. For example, if the username is stored in the `uid` field, the query would be `(uid={{username}})`. The `{{username}}` tag will be interpolated at runtime when performing the search.
-1. If a TLS certificate must be provided to the LDAP server, enable the **Use TLS** option and enter the absolute path to the certificate file in the **TLS Certificate Path** field.
-1. In case your directory fields are different than those used by Wiki.js, you can specify a mapping for each using the following fields:
-	- **Unique ID Field Mapping**
-  	- **Email Field Mapping**
-  	- **Display Name Field Mapping**
-  	- **Avatar Picture Field Mapping**
-1. Enable the **Self-registration** option. *(unless you plan on authorizing users manually)*
-1. Select the **group** new users should be assigned to when they login for the first time.
-1. Make sure the checkbox next to **LDAP / Active Directory** in the list of strategies is checked. The text should now say that the strategy is **active**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
+1. 在您wiki的 **管理区**中，点击左侧导航栏中的 **身份验证**。
+1. 点击 **LDAP / Active Directory**.
+1. 输入可访问的 **LDAP URL**
+1. 在用于绑定的账户的**管理员绑定DN**中输入可识别的名称。
+1. 在上面指定的账户的**管理员绑定凭据**中输入密码。
+1. 在**搜索基准**字段中输入要在其中搜索用户的基准DN。
+1. 在**搜索筛选**字段中输入用于匹配用户与用户名/email的筛选语句。输入的值必须含有`{{username}}`标签。例如，若用户名存储与`uid`字段中，对应的筛选语句为`(uid={{username}})`。在执行搜索时，`{{username}}`标签将在执行匹配时被替换为对应的用户名。
+1. 如果LDAP服务端要求必须提供TLS证书，请启用**使用TLS**选项并在**TLS证书路径**中输入TLS证书的绝对路径。
+1. 如果您的directory字段与Wiki.js使用的directory字段不同，您可以使用以下字段为每个directory字段指定映射：
+	- **Unique ID 字段映射**
+  	- **Email 字段映射**
+  	- **Display Name 字段映射**
+  	- **Avatar Picture 字段映射**
+1. 启用 **开放注册** 选项 *(除非您希望人工验证每一个用户)*。
+1. 选择用户首次登陆时会被分配到的**用户组**。
+1. 确保**LDAP / Active Directory**旁边的复选框为已勾选状态。您现在应该可以看到文字提示此策略处于**启用**状态。
+1. 点击此页右上角的**应用**以保存并应用设置。
 
-# Test Your Configuration
+# 测试配置
 
 Saving your LDAP configuration doesn't actually perform a connection to your LDAP Server. You need to perform an actual login to establish a connection.
 
 To do so, open an incognito window in your browser and attempt to login to your wiki with a user in your directory.
 
-# Troubleshooting
+保存LDAP配置并未执行到LDAP服务器的连接。您需要进行实际登录以建立连接。
+
+为此，请在浏览器中打开一个无痕浏览窗口，并尝试使用目录中的用户登录到wiki。
+
+# 疑难解答
+如果在尝试登录时出现错误，可以启用LDAP调试标志以向控制台（或docker日志）报告内部LDAP错误消息。
 
 If you get errors while trying to login, you can enable a LDAP debugging flag to report internal LDAP error messages to the console (or docker logs).
 
-From the **Administration Area**, click on **Developer Tools** in the sidebar, then on **Flags**. Enable the **LDAP Debug** flag.
+在 **管理区**中, 点击侧边栏内的 **开发者工具**, 转到**标志**. 启用**LDAP Debug** 标志.
 
-> When using docker, type the command `docker logs wiki` to view the logs *(assuming a container named `wiki`)*. 
+> 如果您使用docker，输入命令 `docker logs wiki` 来查看日志 *(假定您的容器名是`wiki`)*. 
 {.is-info}
 
