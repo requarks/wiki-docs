@@ -1,161 +1,160 @@
 ---
-title: Developers
-description: Getting started on Wiki.js development
+title: 开发
+description: Wiki.js开发入门
 published: true
-date: 2022-06-11T20:18:43.212Z
-tags: dev
+date: 2023-01-30T08:13:26.064Z
+tags: dev, 开发
 editor: markdown
-dateCreated: 2019-02-15T04:25:01.768Z
+dateCreated: 2023-01-08T10:33:21.906Z
 ---
 
-Wiki.js is fully modular, which allows any developer to write their own module.
+Wiki.js是完全模块化的，允许任何开发人员编写自己的模块。
 
-There are 3 methods to develop for Wiki.js. You can either use the dockerized development environment for VS Code *(recommended)*, a generic docker environment or install all dependencies manually on your machine.
+进行Wiki.js相关开发有3中方法。您可以使用VS Code的docker化开发环境 *（推荐）*、通用docker开发环境，或手动在您的机器上安装所有依赖。
 
-# Using Docker + Visual Studio Code
+# 使用 Docker + Visual Studio Code
 
-## Prerequisites
+## 要求
 
-* Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
-* Linux / macOS / Windows 10-11 Pro or Enterprise
+* Docker + Docker Compose (使用 [Docker Desktop](https://www.docker.com/products/docker-desktop/))
+* Linux / macOS / Windows 10-11 专业版或企业版
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-## Running the project
-1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
-2. Open the project folder in **Visual Studio Code**
-3. From the **Extensions** tab, install the **Remote Development** extension by Microsoft (*ms-vscode-remote.vscode-remote-extensionpack*)
-4. Click the **green button** located in the bottom-left corner of VS Code: *(or open the command palette)*
+## 运行项目
+1. 从[GitHub](https://github.com/Requarks/wiki) clone此项目。
+2. 在**Visual Studio Code**中打开项目目录
+3. 在**拓展**标签页中，安装Microsoft开发的**远程拓展**插件。 (*ms-vscode-remote.vscode-remote-extensionpack*)
+4. 点击VS Code左下角的**绿色按钮**: *(或打开命令选项板)*
 	![ui-dev-vscode-remotebtn.png](/assets/ui/ui-dev-vscode-remotebtn.png =350x){.radius-5 .decor-shadow .ml-5}
-5. Select **Remote Containers - Reopen in Container**
-6. VS Code will now reload and start initializing the containers. Wait for it to complete. This **may take a while the very first time** as npm dependencies must be installed.
+5. 选择**远程容器 - 在容器中打开**
+6. VS Code将重新加载并开始初始化容器。请等待初始化完成。**首次加载可能需要一定时间**来安装npm依赖。
 	![ui-dev-vscode-init.png](/assets/ui/ui-dev-vscode-init.png =500x){.radius-5 .decor-shadow .ml-5}
-7. Open the **Terminal** *(View > Terminal)* and select "**1: bash**" from the dropdown selector on the right:
+7. 打开**终端** *(查看 > 终端)* 并在右侧的下拉菜单中选择 "**1: bash**" ：
 	![ui-dev-vscode-bash.png](/assets/ui/ui-dev-vscode-bash.png =400x){.radius-5 .decor-shadow .ml-5}
-8. From the command line, type the following command to start Wiki.js in development mode:
+8. 在命令行中，输入以下命令以开发模式启动Wiki.js：
     ```bash
       yarn dev
     ```
-9. Wait for the initialization to complete. You'll be prompted to load **http://localhost:3000/** when ready.
-9. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
-10. Complete the setup wizard to finish the installation.
+9. 等待初始化完成，准备就绪后系统将提示您打开 **http://localhost:3000/**。
+9. 转到 **http://localhost:3000/** _(如果合适，用您计算机的主机名提婚localhost)_.
+10. 完成安装向导以完成安装
 
-## Stopping the project
+## 停止项目
 
-Click on **File > Close Remote Connection** to stop the containers and close the Visual Studio Code instance.
+点击 **文件 > 关闭远程连接** 以停止容器并关闭Visual Studio Code实例。
 
-## Removing the containers
+## 删除容器
 
-When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `wiki`.
+当您完成开发，不再需要开发环境后，请打开**远程资源管理器**选项卡并删除所有名称以`wiki`开头的容器。
 
-Alternatively, see the [generic method](#removing-the-containers-1) below.
+或者，您也可以使用下面的[通用方法](#removing-the-containers-1)
 
-# Using Docker (Generic)
+# 使用 Docker (通用)
 
-## Prerequisites
+## 要求
 
-* Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
-* Linux / macOS / Windows 10-11 Pro or Enterprise
+* Docker + Docker Compose (使用 [Docker Desktop](https://www.docker.com/products/docker-desktop/))
+* Linux / macOS / Windows 10-11 专业版或企业版
 
-## Running the project
-1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
-2. Run the following commands:
+## 运行项目
+1. 从[GitHub](https://github.com/Requarks/wiki) clone此项目。
+2. 执行如下命令：
 ```bash
 docker-compose -f dev/containers/docker-compose.yml up -d
 docker exec wiki-app yarn   # only necessary the first time
 docker exec wiki-app yarn dev
 
 ```
-> Run your `docker-compose` commands from the `dev/containers/` directory if you'd prefer to omit the `-f` flag.
+> 如果您想略去`-f`参数，您可以在`dev/containers`目录运行`docker-compose`命令。
 {.is-info}
 
-## Stopping the project
-1. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd>
-2. Run `docker-compose -f dev/containers/docker-compose.yml stop`
+## 停止项目
+1. 按下 <kbd>Ctrl</kbd>+<kbd>C</kbd>
+2. 执行 `docker-compose -f dev/containers/docker-compose.yml stop`
 
-## Removing the containers
+## 删除项目
 ```
 docker-compose -f dev/containers/docker-compose.yml down
 ```
-To wipe the database as well, use
+要同时擦除数据库，请运行：
 ```
 docker-compose -f dev/containers/docker-compose.yml down --volumes
 ```
 
-# Manually
+# 手动安装
 
-## Prerequisites
+## 要求
 
-* All standard Wiki.js [prerequisites](/install/requirements)
+* Wiki.js的全部标准安装[要求](/install/requirements)
 * Yarn 1.x \(`npm i -g yarn`\)
-* Native compilation dependencies
+* 本机编译依赖
   * Ubuntu:  `apt-get install build-essential`
-  * Windows: from an administrator Powershell: `npm i -g --production windows-build-tools`
+  * Windows: 在具有管理员权限的Powershell中： `npm i -g --production windows-build-tools`
 
-## Installing the project
+## 安装项目
 
-1. Clone the project from GitHub \(make sure to use the `dev` branch\).
-2. From the project folder, run the command: `yarn`
-3. Rename `config.sample.yml` to `config.yml`.
-4. Edit `config.yml` with your local dev machine settings *(port, database, etc.)*
+1. 从[GitHub](https://github.com/Requarks/wiki) clone此项目。 \(确保使用 `dev` 分支\).
+2. 在项目目录内，运行如下命令： `yarn`
+3. 将 `config.sample.yml` 重命名为 `config.yml`.
+4. 根据您本地开发设备的情况填写 `config.yml` *(端口，数据库等)*
 
-## Run the project
+## 运行项目
 
-From the project folder, simply run `yarn dev`
+在项目目录下，执行 `yarn dev`
 
-This will start Wiki.js in dev mode. Client assets are compiled first \(using Webpack\), then the server will start automatically. Wait for this process to complete before loading the app!
+这个命令将以开发模式启动Wiki.js。程序将首先构建客户端资源（使用Webpack），然后自动启动服务端。请等待此过程完成后再打开app。
 
-Browse to the site, using the configuration you defined in `config.yml`. For example, if using port 3000 on your local machine, you would browse to http://localhost:3000/.
+转到您在`config.yml`中设定的站点地址。例如，如果您使用了本地的3000端口，您应该打开 http://localhost:3000/ 。
 
-The first time you load the wiki, you'll get greeted with the setup wizard. Complete all the steps to finish the installation.
+首次进入wiki时，您将看到安装向导，您需要完成向导的所有步骤以完成安装。
 
-## Building production assets
+## 构建生产环境资源
 
-Once you're ready to deploy your changes, you need to build the client assets into a production optimized bundle:
+准备好部署您的修改后，您需要将客户端资源构建到生产优化捆绑包中：
 
 ```bash
 yarn build
 ```
 
-# Notes
+# 备注
 
-## Recommended IDE
+## 推荐 IDE
 
-Wiki.js is built using [Visual Studio Code](https://code.visualstudio.com) and comes with pre-defined extension recommendations, project settings and debug configuration. You can use your favorite IDE but Visual Studio Code is highly recommended.
+Wiki.js 使用 [Visual Studio Code](https://code.visualstudio.com) 开发构建，并附带预置的拓展建议、项目设置与调试配置。您可以使用自己喜欢的IDE，但强烈建议您使用Visual Studio Code。
 
-## Development
+## 开发
 
-Any changes made to client files will automatically trigger a build and the site will be updated live automatically. If the changes cannot be replaced inline, the page will reload automatically.
+对客户端文件所做的任何更改都将自动触发构建，站点将自动实时更新。如果无法内联替换更改，则页面将自动重新加载。
 
-Any changes made to the server files will automatically trigger a server restart. You can also force a restart by typing `rs` in the terminal followed by **Enter**.
+对服务端文件所做的任何更改都将自动触发服务端重启。您也可以在终端中输入`rs`，然后**回车**来强制重新启动。
 
-To stop the development server, use **CTRL-C** until the process exits.
+要停止开发服务端，请按**CTRL-C**直到进程退出。
 
-## Build Production Images
+## 构建生产镜像
 
-Production docker images can be built using the following command:
+可以使用以下命令构建用于生产环境的docker镜像：
 ```bash
 docker build -t requarks/wiki -f dev/build/Dockerfile .
 ```
 
 ### ARM
 
-Multi-architecture images for arm64 and arm/v7 can be built using the Docker experimental **buildx** plugin and **QEMU**. You can read more about how it works in [this article](https://engineering.docker.com/2019/04/multi-arch-images/).
-
+arm64与arm/v7的多架构镜像可以使用Docker的实验性**buildx**插件与**QEMU**构建。您可以在[此文](https://engineering.docker.com/2019/04/multi-arch-images/)中了解有关它如何工作的更多信息。
 ```bash
 docker buildx build --platform linux/arm64,linux/arm/v7 -t requarks/wiki:arm --push -f dev/build/Dockerfile .
 ```
 
-Multiple architectures can be merged into a single manifest file using the `docker manifest` command. In the example below, the first reference is the final manifest list, followed by a list of docker image digest SHA256 that should be included in the manifest list:
+您可以使用`docker manifest`命令将多个架构合并到单个清单文件中。在下面的示例中，第一个引用的是最终清单列表，后面是应包含在清单列表中的docker镜像的SHA256摘要的列表：
 
 ```bash
 docker manifest create requarks/wiki:arm requarks/wiki@sha256:abcdef123456 requarks/wiki@sha256:fedcba654321
 docker manifest push -p requarks/wiki:arm
 ```
 
-## Official Builds
+## 官方构建
 
-Because the master branch contains pre-release code, it is not recommended to build directly from the source code. Doing so will result in a red warning banner being displayed during setup and in the header on all pages. **You should instead follow the [installation instructions](/install).**
+因为主分支包含预发布代码，所以不建议直接从源代码构建。直接构建的版本将在设置区及所有页面标题中显示红色警告横幅。**您应该根据[安装指南](/install)进行操作**。
 
-A reproducable build workflow is however available [here](https://github.com/requarks/wiki/blob/main/.github/workflows/build.yml) should you want to build it yourself **from a production release tag**.
+但是，如果您希望自己从生产环境发布标签构建，[此处](https://github.com/requarks/wiki/blob/main/.github/workflows/build.yml)提供了可复现构建工作流。
 
 ![](https://a.icons8.com/mZbXwZWa/PdY3mQ/svg.svg){.align-abstopright}
