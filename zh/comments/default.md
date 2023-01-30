@@ -1,38 +1,41 @@
 ---
 title: Default
-description: Comments Module
+description: 评论模块
 published: true
-date: 2020-05-31T22:41:50.697Z
-tags: module, comments
+date: 2023-01-30T04:00:07.641Z
+tags: comments, module, 模块, 评论
+editor: markdown
+dateCreated: 2023-01-08T10:34:42.210Z
 ---
 
-This is the default, built-in commenting module for Wiki.js
+该模块是Wiki.js内置的默认评论模块
 
-# Setup
+# 配置
 
-1. In the **Administration Area** of your wiki, click on **Comments** in the left navigation.
-1. Click on **Default**.
-1. Click **Apply** on the upper right of the page to save and apply the configuration.
 
-The built-in comments UI will now be displayed at the end of all your wiki pages.
+1. 在您wiki的**管理区**, 点击左侧边栏中的**评论**。
+1. 点击**默认**.
+1. 点击右上角的**应用**以保存并应用配置。
 
-# Spam Protection
+内置评论UI将在所有wiki页面的末尾显示。
+
+# 垃圾评论防护
 
 ## Akismet
 
-New comments can optionally be verified against the Akismet service. This is the same service used by Wordpress to prevent and block spam comments.
+作为可选选项，您可以使用Akismet服务验证新评论。这也是Wordpress用于阻止垃圾评论的服务。
 
-In order to use it, you need to create a free account on https://akismet.com/ and get an **API key**.
+要使用该服务，您需要在 https://akismet.com/ 创建一个免费账户并获取**API密钥**。
 
-## Minimum Post Delay
+## 最小发布间隔
 
-You can set the minimum delay (in seconds) between new posts per account. The default value is **30** seconds. Note that while you can set a value lower than 15, the rate limiter (see below) will automatically trigger for any new comment request made before a 15 seconds delay for their IP.
+您可以设置每个账户发布新评论之间的最小间隔（以秒为单位）。默认值为**30**秒。请注意，虽然您可以设置低于15的值，但速率限制器将被自动触发，阻止同一IP发布评论后15秒内的任何新评论请求。
 
-> If you allowed guests to post comments, note that they are considered as a single account and the delay will therefore apply to all guests.
+> 如果您允许游客发表评论。请注意，他们将被视为一个账户，因此延迟设定将对所有游客生效。
 {.is-info}
 
-## Rate Limiting
+## 速率限制
 
-The endpoint for posting new comments is protected by a rate limiting of one request per IP every 15 seconds. This limit is hardcoded and cannot be changed.
+发布新评论的endpoint受到速率限制保护，每15秒一个IP请求。此限制是硬编码的，无法更改。
 
-Since rate limiter works per unique IP addresses, each guest is a different user (unlike the above Minimum Post Delay).
+由于速率限制器根据唯一IP地址工作，因此每个访客都是不同的用户（与最小发布间隔不同）。
