@@ -2,13 +2,11 @@
 title: 身份验证
 description: 身份验证模块开发指南
 published: true
-date: 2023-01-30T08:34:27.283Z
+date: 2023-01-30T09:05:41.404Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:34:51.033Z
 ---
-
-An authentication module adds new ways for users to login to the application. It consists of properties that can be set by the user as well as methods that are called on certain events \(e.g. during initialization\). All authentication modules are based on Passport.js implementation, which is the de facto authentication library for Node.js.
 
 身份验证模块为用户添加了登录应用程序的新方式。它包括用户可以设置的属性及在某些事件上调用的方法（例如在初始化期间）。所有身份验证模块都基于Passport.js实现，它事实上是Node.js的身份验证库。
 
