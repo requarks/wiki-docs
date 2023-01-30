@@ -2,7 +2,7 @@
 title: Commento
 description: 评论模块
 published: true
-date: 2023-01-29T14:37:26.331Z
+date: 2023-01-30T03:52:38.710Z
 tags: comments, module, 模块, 评论
 editor: markdown
 dateCreated: 2023-01-08T10:34:39.423Z
@@ -21,7 +21,7 @@ Commento是一个快速、注重隐私的评论平台，提供云或自托管选
 
 ## B)在Wiki.js中启用Commento提供者
 
-1. 在您wiki的**管理区**, 点击左侧边栏中的**Comments**。
+1. 在您wiki的**管理区**, 点击左侧边栏中的**评论**。
 1. 点击**Commento**.
 1. 点击右上角的**应用**以保存并应用配置。
 
