@@ -1,8 +1,8 @@
 ---
-title: Build Process
-description: Reproducable build process of Wiki.js
+title: 构建流程
+description: Wiki.js的可复现构建流程
 published: true
-date: 2023-01-30T08:54:04.808Z
+date: 2023-01-30T08:54:44.317Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:34:53.861Z
