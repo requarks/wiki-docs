@@ -1,35 +1,37 @@
 ---
-title: Comments
-description: Developer guide for Commenting modules
+title: 评论
+description: 评论模块开发者指南
 published: true
-date: 2020-05-26T01:25:37.326Z
+date: 2023-01-30T09:46:24.128Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:34:56.776Z
 ---
 
-> Available from version **2.4 and up**
+> 在**2.4及以上版本**可用。
 {.is-info}
 
-An comments module adds discussion capabitilies to your wiki. It consists of properties that can be set by the user as well as methods that are called on certain events \(e.g. posting a new comment\).
+评论模块为wiki添加评论功能。它包括用户可以设置的属性及在某些事件上调用的方法（例如：发布新评论）。
 
-Comments modules are located in `/server/modules/comments`.
+评论模块位于`/server/modules/comments`.
 
-There're 2 supported formats for comments modules:
+评论模块有2种支持格式：
 
-- **Code Templates**: External services where you embed an HTML / JS code in your page to display the comments. (e.g. Disqus)
-- **Native**: Use Wiki.js UI to display and post comments. Comments are processed server-side.
+- **代码模板**: 在页面种嵌入外部服务的HTML/JS代码以显示评论。
+- **原生**: 使用Wiki.js的界面来显示与发送评论。评论在服务端处理。
 
-A unique folder is created for each module. The folder must contains these files:
+每个模块对应创建一个唯一目录，此目录须包含以下文件：
 
 * **definition.yml**
-* **code.yml** *(Code Template only)*
-* **comment.js** *(Native only)*
+* **code.yml** *(仅代码模板)*
+* **comment.js** *(仅原生)*
 
 ## definition.yml
 
-This file contains information about your module.
+此文件包含有关模块的信息：
 ```yaml
-key: example
-title: Example Comments Provider
+key: 示例
+title: 示例评论提供程序
 author: John Doe
 logo: https://static.requarks.io/logo/example.svg
 website: https://example.com/
@@ -40,20 +42,20 @@ props:
   secondExampleProperty: Number
 ```
 
-### Properties
+### 属性
 
-* **key**: A short, unique and camelCase-formatted name for this module. It must match exactly the module folder name!
-* **title**: The full name of the module.
-* **author**: The name of the author of the module.
-* **logo**: The URL to the module logo.
-* **website**: The URL to the module website / developer website.
-* **codeTemplate**: Whether to use Code Template format (`true`) or native (`false`)
-* **isAvailable**: Whether the user can use the module or not.
-* **props**: An object of user editable properties. See [Module Properties](/dev/module-properties) for more info.
+* **key**: 此模块的简短、唯一的驼峰格式名称。它必须与模块所在的目录名称完全一致。
+* **title**: 此模块的全名。
+* **author**: 此模块的作者。
+* **logo**: 指向此模块徽标的URL
+* **website**: 指向此模块的官网/开发者站点的URL
+* **codeTemplate**: 指定使用代码模板格式 (`true`) 还是原生格式 (`false`)
+* **isAvailable**: 用户是否可以使用此模块。
+* **props**:用户可编辑属性对象。 更多信息参见[模块属性](/dev/module-properties)。
 
 ## code.yml
 
-This file contains the code snippets to inject into the head, body and comment slot.
+该文件包含要插入到头部、正文和评论区中的代码片段。
 
 ```yaml
 main: |
@@ -64,7 +66,7 @@ body: |
   </script>
 ```
 
-### Properties
+### 属性
 
 * **main**: The HTML code snippet where the comments will be displayed. *(Required, HTML only)*
 * **head**: The HTML code snippet to inject in the page head. *(Optional, JS and CSS only)*
@@ -72,7 +74,7 @@ body: |
 
 ## comment.js
 
-This file contains methods that will be called on specific events.
+此文件包含将在特定事件上调用的方法。
 
 ```js
 // ------------------------------------
@@ -95,4 +97,4 @@ module.exports = {
 }
 ```
 
-All methods are required and must be implemented.
+所有方法都必须实现。
