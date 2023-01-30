@@ -2,23 +2,25 @@
 title: Build Process
 description: Reproducable build process of Wiki.js
 published: true
-date: 2020-03-13T23:53:00.326Z
+date: 2023-01-30T08:54:04.808Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:34:53.861Z
 ---
 
-# Build & Deployment Flow
+# 构建与部署工作流
 
-All builds are done via Azure DevOps and can be [viewed online](https://dev.azure.com/requarks/wiki/_build?definitionId=9).
+所有构建均通过Azure DevOps完成，可[在线查看](https://dev.azure.com/requarks/wiki/_build?definitionId=9).
 
-Every commit generates a new build and increments the build number by one *(MAJOR.MINOR.BUILD)*.
+每次提交都会生成一个新版，并递增一次构建版本号 *(大版本.小版本.构建版本)*
 
-The following processes are documented for understanding how the builds are produced. They are not meant to be used as a deployment method for production usage. Please use the prebuilt packages / images [as detailed in the docs](/install) instead.
+以下文档用于了解构建如何生成，不是用于生产用途的部署方法。请使用[在此文档链接中已详细说明的](/install)预购键包/镜像。
 
-# Build Process
+# 构建过程
 
-## Task 1 - Disable dev Flag
+## 任务 1 - 禁用开发标识
 
-Using the **Command Line** task:
+使用**命令行**任务：
 
 ```bash
 sudo apt-get install jq -y
@@ -27,17 +29,17 @@ jq -r '.dev |= false' pkg-temp.json > package.json
 rm pkg-temp.json
 ```
 
-## Task 2 - Set Build Version
+## 任务 2 - 设定构建版本
 
-Using the [Version JSON File](https://github.com/rfennell/AzurePipelines/wiki/Version-Assemblies-and-Packages-Tasks) task, inject the `version` field in `package.json` with value `$(Build.BuildNumber)`
+使用[Version JSON文件](https://github.com/rfennell/AzurePipelines/wiki/Version-Assemblies-and-Packages-Tasks) 任务, 在`package.json`的`version`字段插入`$(Build.BuildNumber)`值。
 
-## Task 3 - Compile Assets
+## 任务 3 - 构建资源
+使用**Docker**任务, 构建并推送 `requarks/wiki` 镜像, 使用`dev/build/Dockerfile`附加`canary` 标签
 
-Using the **Docker** task, build and push the image `requarks/wiki`, with tag `canary` using Dockerfile `dev/build/Dockerfile`
+## 任务 4 - 提取已编译的资源
 
-## Task 4 - Extract Compiled Assets
+使用**命令行**任务：
 
-Using the **Command Line** task:
 
 ```bash
 docker create --name wiki requarks/wiki:canary
@@ -49,13 +51,13 @@ cp $(System.DefaultWorkingDirectory)/config.sample.yml $(Build.StagingDirectory)
 find $(Build.StagingDirectory)/wiki/ -printf "%P\n" | tar -czf wiki-js.tar.gz --no-recursion -C $(Build.StagingDirectory)/wiki/ -T -
 ```
 
-## Task 5 - Publish Artifact
+## 任务 5 - 发布构建产物
 
-Using the **Publish build artifacts** task, publish the `wiki-js.tar.gz` file as artifact `drop` to Azure Pipelines.
+使用 **发布构建产物** 任务, 将`wiki-js.tar.gz`作为产物 `drop` 至 Azure 流水线。
 
-# Release Process
+# 发布过程
 
-When the latest build is selected for release, the following steps are executed in Azure DevOps:
+选择最新版本发布后，将在Azure DevOps中执行以下步骤：
 
 ## BETA
 
@@ -65,15 +67,15 @@ docker tag requarks/wiki:canary requarks/wiki:beta
 docker push requarks/wiki:beta
 ```
 
-The artifacts from the build are also published as a **GitHub Release** using the associated source version + tag. An auto-generated changelog listing all commits since the last release is added as content. The release is set as **Pre-release**.
+构建好的产物使用关联的源版本+标记发布为GitHub版本。自动列出自上次发布以来的所有提交，作为更新日志。作为**预发布**版本。
 
-The following assets, coming from the build artifacts, are attached to the release:
+来自构建产物的如下资源被添加到此次发布的版本中：
 ```
 $(System.DefaultWorkingDirectory)/_build/drop/*.tar.gz
 $(System.DefaultWorkingDirectory)/_build/drop-win/*.tar.gz
 ```
 
-Upon completion, the release pipeline is gated until manual approval.
+完成后，释出管道关闭，等待手动批准。
 
 ## GA
 
@@ -100,4 +102,4 @@ docker push requarks/wiki:$MAJORMINOR
 docker push requarks/wiki:latest
 ```
 
-The GitHub Release is also modified to remove the Pre-Release flag.
+GitHub版本同时被修改，删除预发布标志。
