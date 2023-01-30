@@ -1,15 +1,17 @@
 ---
 title: Disqus
-description: Comments Module
+description: 评论模块
 published: true
-date: 2020-05-23T05:23:09.180Z
-tags: module, comments
+date: 2023-01-30T05:34:07.400Z
+tags: comments, module, 模块, 评论
+editor: markdown
+dateCreated: 2023-01-08T10:34:45.086Z
 ---
 
-Disqus is a discussion service to add commenting and sharing capabilities to all your wiki pages.
+Disqus是一个讨论服务，可为所有wiki页面添加评论和共享功能。
 [disqus.com](https://disqus.com)
 
-# Setup
+# 评论
 
 ## A) Create Disqus Site
 
