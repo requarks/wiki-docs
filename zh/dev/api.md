@@ -1,53 +1,55 @@
 ---
 title: GraphQL API
-description: Access ressources and perform actions using the GraphQL API
+description: 使用GraphQL API访问资源并执行操作
 published: true
-date: 2022-07-20T06:33:13.763Z
-tags: dev, api
+date: 2023-02-04T13:27:48.837Z
+tags: dev, api, 开发
 editor: markdown
-dateCreated: 2019-05-21T01:34:03.418Z
+dateCreated: 2023-01-08T10:34:47.855Z
 ---
 
-# Overview
+# 概述
 
-Wiki.js exposes a [GraphQL](https://graphql.org/) API from which you can access and modify all the resources of your wiki. If you are new to GraphQL, the site [How to GraphQL](https://www.howtographql.com/) is a great learning resource.
+Wiki.js公开了一个[GraphQL](https://graphql.org/) API，您可以从中访问和修改Wiki的所有资源。如果您是GraphQL新手，那么[How to GraphQL](https://www.howtographql.com/)网站是一个很好的学习资源。
 
-> The **GraphQL endpoint** is located at `/graphql` on your wiki.js site.
+> 您wiki的 **GraphQL endpoint** 位于站点的 `/graphql` 路径下。
 {.is-success}
 
-You can access this endpoint from your browser to load the **GraphQL Playground** tool which lets you build and test queries, as well as explore all the possible resources you can access. The docs for all available queries and mutations are accessible on the right side of the screen.
+您可以从浏览器访问此endpoint，以加载**GraphQL Playground**工具，该工具允许您构建和测试查询语句，以及探索您可以访问的所有可能资源。所有可用查询和修改语句的文档都可以在屏幕右侧访问。
 
-There're various [client libraries](https://github.com/chentsulin/awesome-graphql#libraries) available for most programming languages to easily make GraphQL queries. Desktop API clients like **Postman**, **Insomnia** and **Firecamp** all support GraphQL queries.
+大多数编程语言都有各种[客户端库](https://github.com/chentsulin/awesome-graphql#libraries) ，可以轻松地进行GraphQL查询。**Postman**、 **Insomnia** 和**Firecamp**等桌面API客户端都支持GraphQL查询。
 
-# Authentication
+# 身份验证
 
-> The API Access feature is available from version **2.2 and up**.
+> API访问功能在 **2.2及以上版本**可用.
 {.is-info}
 
-Access to resources requires a **valid API token**, which can be generated from the **Administration Area** (under **API Access**).
+访问资源需要**合法API令牌**，该令牌可以从**管理区**（在**API访问**下）生成。
 
-The token must be passed in the `Authorization` header, as a `Bearer` token, of any request made to the GraphQL endpoint, e.g.:
+该令牌必须以`Bearer`令牌格式置于`Authorization`请求头中，包含于向GraphQL endpoint发出的任何请求，例如：
+
 ```css
 Authorization: Bearer eyJhbGc...aXczt18H6437W
 ```
 
-Different **permission scopes** are required based on the resource you wish to query / mutate. Ensure the API token you created contains these permission scopes.
+要查询/修改的资源不同，需要的权限范围也不同。请确保您创建的API令牌包含这些权限范围。
 
-# Examples
+# 示例
 
-The following examples expect a valid bearer token to be provided in the `Authorization` header, as explained in the [Authentication](#authentication) section above.
+以下示例期望在`Authorization`请求头中提供有效的Bearer令牌，如上面的[身份验证](#authentication)部分所述。
 
-For GraphQL Playground, you would use the following format in the **HTTP Headers** panel:
+对于GraphQL Playground，您可以在**HTTP请求头面板**中使用以下格式：
+
 ```json
 { "Authorization": "Bearer eyJhbGc...aXczt18H6437W" }
 ```
 
-> Note that for simplicity, the examples below have hardcoded values. In a real-world application, it is best practice to use [variables](https://graphql.org/learn/queries/#variables) instead.
+> 注意，为了简单起见，下面的示例使用了硬编码值。在实际应用程序中，最好使用[变量](https://graphql.org/learn/queries/#variables)。
 {.is-info}
 
-## Fetch all pages
+## 获取所有页面
 
-Query to fetch a list of all pages, ordered by title, returning only the `id`, `path` and `title` properties.
+获取按标题排序的所有页面的列表，只返回`id`、`path`和`title`属性。
 
 ```graphql
 {
@@ -61,9 +63,9 @@ Query to fetch a list of all pages, ordered by title, returning only the `id`, `
 }
 ```
 
-## Fetch a specific page
+## 获取特定页面
 
-Query to fetch a single page, with ID `15`, returning only the `path`, `title`, `createdAt` and `updatedAt` properties.
+获取ID为`15`的单个页面，只返回`path`、`title`、`createdAt`和`updatedAt`属性。
 
 ```graphql
 {
@@ -79,9 +81,9 @@ Query to fetch a single page, with ID `15`, returning only the `path`, `title`, 
 ```
 
 
-## Fetch all groups
+## 获取所有用户组
 
-Query to fetch all user groups, returning only the `id` and `name` properties.
+获取所有用户组，只返回`id`和`name`属性。
 
 ```graphql
 {
@@ -94,9 +96,9 @@ Query to fetch all user groups, returning only the `id` and `name` properties.
 }
 ```
 
-## Search users
+## 搜索用户
 
-Query to list all users matching `john` in their name or email address, returning only the `id`, `name` and `email` properties.
+列出姓名或电子邮件地址中与`john`匹配的所有用户，只返回`id`、`name`和`email`属性。
 
 ```graphql
 {
@@ -110,9 +112,9 @@ Query to list all users matching `john` in their name or email address, returnin
 }
 ```
 
-## Create New User
+## 创建新用户
 
-Mutation to create a new local user, assign it to group ID `1` and return the generated user `id`. The property `succeeded` will be `true` in the response if the operation succeeded. Otherwise, the `message` property will contain the error message that prevented the user creation.
+创建一个新的本地用户，将其分配ID为`1`的用户组并返回生成的用户`ID`。如果操作成功，则响应中的属性`successed`将为`true`。否则，`message`属性将包含阻止用户创建的错误消息。
 
 ```graphql
 mutation {
@@ -141,9 +143,10 @@ mutation {
 ```
 
 
-# Error Reference
+# 错误参照
 
-Mutations always return a `responseResult` property object of type `ResponseStatus`:
+修改语句始终返回具有`responseResult`属性的`ResponseStatus`类的对象：
+
 ```graphql
 type ResponseStatus {
   succeeded: Boolean!
@@ -153,7 +156,7 @@ type ResponseStatus {
 }
 ```
 
-*Example Response:*
+*示例回复：*
 ```json
 {
   "responseResult": {
@@ -165,120 +168,120 @@ type ResponseStatus {
 }
 ```
 
-Use the reference below to match codes to their slugs and detailed message.
+使用下面的代码参照表查找错误代码对应的错误简称与详细信息。
 
-## Authentication / Users
+## 身份验证 / 用户
 
-Error codes in the **1xxx** range are dedicated to authentication / users errors.
+**1xxx**范围内的错误代码专用于身份验证/用户错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 1001 | AuthGenericError | An unexpected error occured during login. |
-| 1002 | AuthLoginFailed | Invalid email / username or password. |
-| 1003 | AuthProviderInvalid | Invalid authentication provider. |
-| 1004 | AuthAccountAlreadyExists | An account already exists using this email address. |
-| 1005 | AuthTFAFailed | Incorrect TFA Security Code. |
-| 1006 | AuthTFAInvalid | Invalid TFA Security Code or Login Token. |
-| 1007 | BruteInstanceIsInvalid | Invalid Brute Force Instance. |
-| 1008 | BruteTooManyAttempts | Too many attempts! Try again later. |
-| 1009 | UserCreationFailed | An unexpected error occured during user creation. |
-| 1010 | AuthRegistrationDisabled | Registration is disabled. Contact your system administrator. |
-| 1011 | AuthRegistrationDomainUnauthorized | You are not authorized to register. Your domain is not whitelisted. |
-| 1012 | InputInvalid | Input data is invalid. |
-| 1013 | AuthAccountBanned | Your account has been disabled. |
-| 1014 | AuthAccountNotVerified | You must verify your account before your can login. |
-| 1015 | AuthValidationTokenInvalid | Invalid validation token. |
-| 1016 | UserNotFound | This user does not exist. |
-| 1017 | UserDeleteForeignConstraint | Cannot delete user because of content relational constraints. |
-| 1018 | UserDeleteProtected | Cannot delete a protected system account. |
-| 1019 | AuthRequired | You must be authenticated to access this resource. |
-| 1020 | AuthPasswordInvalid | Password is incorrect. |
+| 错误代码 | 错误简称                           | 详细信息                           |
+| -------- | ---------------------------------- | ---------------------------------- |
+| 1001     | AuthGenericError                   | 登录期间发生意外错误。             |
+| 1002     | AuthLoginFailed                    | 电子邮件/用户名或密码无效。        |
+| 1003     | AuthProviderInvalid                | 身份验证提供程序无效。             |
+| 1004     | AuthAccountAlreadyExists           | 使用此电子邮件地址的帐户已存在。   |
+| 1005     | AuthTFAFailed                      | 两步验证安全代码不正确。           |
+| 1006     | AuthTFAInvalid                     | 两步验证安全代码或登录令牌无效。   |
+| 1007     | BruteInstanceIsInvalid             | Brute Force实例无效。              |
+| 1008     | BruteTooManyAttempts               | 尝试次数太多！请稍后再试。         |
+| 1009     | UserCreationFailed                 | 创建用户时发生意外错误。           |
+| 1010     | AuthRegistrationDisabled           | 注册已禁用。请与系统管理员联系。   |
+| 1011     | AuthRegistrationDomainUnauthorized | 您无权注册。您的域名未列入白名单。 |
+| 1012     | InputInvalid                       | 输入数据非法。                     |
+| 1013     | AuthAccountBanned                  | 您的帐户已被停用。                 |
+| 1014     | AuthAccountNotVerified             | 您必须验证您的帐户才能登录。       |
+| 1015     | AuthValidationTokenInvalid         | 验证令牌无效。                     |
+| 1016     | UserNotFound                       | 用户不存在。                       |
+| 1017     | UserDeleteForeignConstraint        | 由于内容关系约束，无法删除用户。   |
+| 1018     | UserDeleteProtected                | 无法删除受保护的系统帐户。         |
+| 1019     | AuthRequired                       | 您必须经过身份验证才能访问此资源。 |
+| 1020     | AuthPasswordInvalid                | 密码不正确。                       |
 
-## Assets
+## 资源
 
-Error codes in the **2xxx** range are dedicated to assets errors.
+**2xxx**范围内的错误代码专用于资源错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 2001 | AssetGenericError | An unexpected error occured during asset operation. |
-| 2002 | AssetFolderExists | An asset folder with the same name already exists. |
-| 2003 | AssetDeleteForbidden | You are not authorized to delete this asset. |
-| 2004 | AssetInvalid | This asset does not exist or is invalid. |
-| 2005 | AssetRenameCollision | An asset with the same filename in the same folder already exists. |
-| 2006 | AssetRenameForbidden | You are not authorized to rename this asset. |
-| 2007 | AssetRenameInvalid | The new asset filename is invalid. |
-| 2008 | AssetRenameInvalidExt | The file extension cannot be changed on an existing asset. |
-| 2009 | AssetRenameTargetForbidden | You are not authorized to rename this asset to the requested name. |
+| 错误代码 | 错误简称                   | 详细信息                           |
+| -------- | -------------------------- | ---------------------------------- |
+| 2001     | AssetGenericError          | 操作资源期间发生意外错误。         |
+| 2002     | AssetFolderExists          | 目录下已存在同名资源文件夹。       |
+| 2003     | AssetDeleteForbidden       | 您无权删除此资源                   |
+| 2004     | AssetInvalid               | 资源不存在或非法。                 |
+| 2005     | AssetRenameCollision       | 该目录下已存在同名资源。           |
+| 2006     | AssetRenameForbidden       | 您无权重命名此资源。               |
+| 2007     | AssetRenameInvalid         | 资源新名称不合法。                 |
+| 2008     | AssetRenameInvalidExt      | 无法更改现有资源的文件扩展名。     |
+| 2009     | AssetRenameTargetForbidden | 您无权将此资源重命名为请求的名称。 |
 
-## Mail
+## 邮件
 
-Error codes in the **3xxx** range are dedicated to mail errors.
+**3xxx**范围内的错误代码专用于邮件错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 3001 | MailGenericError | An unexpected error occured during mail operation. |
-| 3002 | MailNotConfigured | The mail configuration is incomplete or invalid. |
-| 3003 | MailTemplateFailed | Mail template failed to load. |
-| 3004 | MailInvalidRecipient | The recipient email address is invalid. |
+| 错误代码 | 错误简称             | 详细信息                   |
+| -------- | -------------------- | -------------------------- |
+| 3001     | MailGenericError     | 邮件操作期间发生意外错误。 |
+| 3002     | MailNotConfigured    | 邮件配置不完整或无效。     |
+| 3003     | MailTemplateFailed   | 无法加载邮件模板。         |
+| 3004     | MailInvalidRecipient | 收件人的电子邮件地址无效。 |
 
-## Search
+## 搜索
 
-Error codes in the **4xxx** range are dedicated to search errors.
+**4xxx**范围内的错误代码专用于搜索错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 4001 | SearchGenericError | An unexpected error occured during search operation. |
-| 4002 | SearchActivationFailed | Search Engine activation failed. |
+| 错误代码 | 错误简称               | 详细信息                   |
+| -------- | ---------------------- | -------------------------- |
+| 4001     | SearchGenericError     | 搜索操作期间发生意外错误。 |
+| 4002     | SearchActivationFailed | 搜索引擎激活失败。         |
 
-## Localization
+## 本地化
 
-Error codes in the **5xxx** range are dedicated to localization errors.
+**5xxx**范围内的错误代码专用于本地化错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 5001 | LocaleGenericError | An unexpected error occured during locale operation. |
-| 5002 | LocaleInvalidNamespace | Invalid locale or namespace. |
+| 错误代码 | 错误简称               | 详细信息                     |
+| -------- | ---------------------- | ---------------------------- |
+| 5001     | LocaleGenericError     | 本地化操作期间发生意外错误。 |
+| 5002     | LocaleInvalidNamespace | 区域设置或命名空间无效。     |
 
-## Pages
+## 页面
 
-Error codes in the **6xxx** range are dedicated to pages / rendering errors.
+**6xxx**范围内的错误代码专用于页面/渲染错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 6001 | PageGenericError | An unexpected error occured during a page operation. |
-| 6002 | PageDuplicateCreate | Cannot create this page because an entry already exists at the same path. |
-| 6003 | PageNotFound | This page does not exist. |
-| 6004 | PageEmptyContent | Page content cannot be empty. |
-| 6005 | PageIllegalPath | Page path cannot contains illegal characters. |
-| 6006 | PagePathCollision | Destination page path already exists. |
-| 6007 | PageMoveForbidden | You are not authorized to move this page. |
-| 6008 | PageCreateForbidden | You are not authorized to create this page. |
-| 6009 | PageUpdateForbidden | You are not authorized to update this page. |
-| 6010 | PageDeleteForbidden | You are not authorized to delete this page. |
-| 6011 | PageRestoreForbidden | You are not authorized to restore this page version. |
-| 6012 | PageHistoryForbidden | You are not authorized to view the history of this page. |
-| 6013 | PageViewForbidden | You are not authorized to view this page. |
+| 错误代码 | 错误简称             | 详细信息                                   |
+| -------- | -------------------- | ------------------------------------------ |
+| 6001     | PageGenericError     | 页面操作期间发生意外错误。                 |
+| 6002     | PageDuplicateCreate  | 无法创建此页，因为同一路径下已存在此条目。 |
+| 6003     | PageNotFound         | 页面不存在。                               |
+| 6004     | PageEmptyContent     | 页面内容不可为空。                         |
+| 6005     | PageIllegalPath      | 页面路径不能包含非法字符。                 |
+| 6006     | PagePathCollision    | 页面目标路径已存在。                       |
+| 6007     | PageMoveForbidden    | 您无权移动此页面。                         |
+| 6008     | PageCreateForbidden  | 您无权创建此页面。                         |
+| 6009     | PageUpdateForbidden  | 您无权更新此页面，                         |
+| 6010     | PageDeleteForbidden  | 您无权删除此页面。                         |
+| 6011     | PageRestoreForbidden | 您无权回滚此页面历史版本。                 |
+| 6012     | PageHistoryForbidden | 您无权查看此页的编辑历史。                 |
+| 6013     | PageViewForbidden    | 您无权查看此页面。                         |
 
-## System
+## 系统
 
-Error codes in the **7xxx** range are dedicated to system related errors.
+**7xxx**范围内的错误代码专用于系统相关错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 7001 | SystemGenericError | An unexpected error occured. |
-| 7002 | SystemSSLDisabled | SSL is not enabled. |
-| 7003 | SystemSSLRenewInvalidProvider | Current provider does not support SSL certificate renewal. |
-| 7004 | SystemSSLLEUnavailable | Let's Encrypt is not initialized. |
+| 错误代码 | 错误简称                      | 详细信息                        |
+| -------- | ----------------------------- | ------------------------------- |
+| 7001     | SystemGenericError            | 发生未知错误。                  |
+| 7002     | SystemSSLDisabled             | SSL未启用。                     |
+| 7003     | SystemSSLRenewInvalidProvider | 当前提供程序不支持SSL证书续订。 |
+| 7004     | SystemSSLLEUnavailable        | Let's Encrypt 尚未初始化。      |
 
-## Comments
+## 评论
 
-Error codes in the **8xxx** range are dedicated to comments related errors.
+**8xxx**范围内的错误代码专用于评论相关错误。
 
-| Code | Slug | Message |
-|------|------------------|-------------------------------------------|
-| 8001 | CommentGenericError | An unexpected error occured. |
-| 8002 | CommentPostForbidden | You are not authorized to post a comment on this page. |
-| 8003 | CommentContentMissing | Comment content is missing or too short. |
-| 8004 | CommentManageForbidden | You are not authorized to manage comments on this page. |
-| 8005 | CommentNotFound | This comment does not exist. |
-| 8006 | CommentViewForbidden | You are not authorized to view comments for this page. |
+| 错误代码 | 错误简称               | 详细信息                 |
+| -------- | ---------------------- | ------------------------ |
+| 8001     | CommentGenericError    | 发生未知错误。           |
+| 8002     | CommentPostForbidden   | 您无权在此页发布评论。   |
+| 8003     | CommentContentMissing  | 评论内容缺失或过短。     |
+| 8004     | CommentManageForbidden | 您无权管理此页面的评论。 |
+| 8005     | CommentNotFound        | 该评论不存在。           |
+| 8006     | CommentViewForbidden   | 您无权查看此页面的评论。 |
