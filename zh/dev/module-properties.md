@@ -1,24 +1,26 @@
 ---
-title: Module Properties
+title: 模块属性
 description: Structure of module properties
 published: true
-date: 2020-05-15T20:31:20.527Z
+date: 2023-02-05T02:51:44.929Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:34:59.676Z
 ---
 
-Module properties are settings that can be changed by the user from the administration area.
+模块属性指用户可从管理区更改的设置。
 
-A property must be in **camelCase**. They must be assigned a `type`, and optionally a `default` value, `title`, `hint`, `enum` list, `multiline`, and `order`.
+属性须以驼峰命名法明明。必须为它们分配一个`type`（类型），作为可选项，也可以为其分配 `default`（默认）值, `title`（标题）, `hint`（提示）, `enum` 列表, `multiline`和 `order`.
 
-## Property Types
+## 属性类型
 
-Only the following types are allowed:
+只允许分配如下类型：
 
 * String
 * Number
 * Boolean
 
-## Example
+## 示例
 
 ```yaml
 props:
@@ -44,15 +46,15 @@ props:
         multiline: true
 ```
 
-## Options
+## 选项
 
 ### type
 
-The type is **required**. It can be either the property direct value _\(as shown in the first two examples above\)_ or as an object property named `type`. Must be one of the allowed types listed [above](#property-types).
+类型是**必须分配**的模块属性。它可以是属性直接值 _（如前两个示例所示）_，也可以是名为`type`的对象属性。分配的类型必须是[上面](#属性类型)列出的允许类型之一。
 
 ### default
 
-The default value is **optional**. If omitted, the type default value will be inferred:
+默认值是**可选**的。如果省略，系统将根据类型推断默认值：
 
 * String: `""` _\(empty string\)_
 * Number: `0`
@@ -60,20 +62,20 @@ The default value is **optional**. If omitted, the type default value will be in
 
 ### enum
 
-The enum value is **optional** and only applies to properties with type String. If provided, it must be an **array of strings**. A dropdown select will be presented to the user with the values of the array as possible choices. When using enum, the `default` value must be provided as well.
+enum值是**可选**的，仅适用于String类型的属性。如果提供，它必须是字符串数组。系统将向用户显示一个下拉选择菜单，其中包含数组的值作为可能的选项。使用枚举时，还必须提供`default`值。
 
 ### title
 
-The title value is **optional**. If omitted, the title will be inferred from the property name with a start case formatting applied.
+title值是**可选**的。如果省略，系统将把属性名称开头大写作为title。
 
 ### hint
 
-The hint value is **optional**. The hint is displayed below the text field to provide the user with helpful info. If omitted, no hint will be displayed.
+hint值是**可选**的。它显示在文本字段下方，为用户提供有用信息。如果省略，则不会显示任何提示。
 
 ### multiline
 
-The multiline value is **optional** and only applies to properties with type String. If this is `true` then a multiline textarea will be used instead of a single-line text field. If both enum and multiline properties are specified, multiline property will be ignored. If omitted, defaults to `false`.
+multiline值是**可选**的，仅适用于String类型的属性。如果值为`true`，系统将使用多行文本字段而非单行文本字段。如果同时指定enum与multiline属性，multiline属性将被忽略。如果省略，则回落到默认值`false`。
 
 ### order
 
-The order value is **optional**. This value controls the order in which properties are displayed. If two values have the same order, ties will be broken by the order they appear in definition.yml. If omitted, defaults to 100. 
+order值是**可选**的。它控制属性的显示顺序。如果两个值具有相同顺序，则转而按definition.yml中的顺序排列。如果省略，则回落到默认值100。
