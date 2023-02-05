@@ -1,23 +1,23 @@
 ---
-title: Storage
-description: Developing storage modules
+title: 存储
+description: 开发存储模块
 published: true
-date: 2019-09-07T16:00:04.223Z
+date: 2023-02-05T05:11:27.202Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:35:11.490Z
 ---
 
-A storage module connects Wiki.js with a local or remote storage provider, to act as backup or source of truth for content. It consists of properties that can be set by the user as well as methods that are called on certain events, such as to create, update and delete content.
+存储模块将Wiki.js与本地或远程存储提供者连接起来，作为内容的备份或直接来源。它由用户可以设置的属性以及在某些事件（例如创建、更新和删除内容）上调用的方法组成。
 
-Storage modules are located in `/server/modules/storage`.
-
-A unique folder is created for each module. The folder contains two files:
+每个模块对应一个唯一目录，该目录包含两个文件：
 
 * **definition.yml**
 * **storage.js**
 
 ## definition.yml
 
-This file contains information about your module.
+这个文件包含您的模块的信息。
 
 ```yaml
 key: example
@@ -42,28 +42,28 @@ actions:
 
 ### Properties
 
-* **key**: A short, unique and camelCase-formatted name for this module. It must match exactly the module folder name!
-* **title**: The full name of the module.
-* **description**: A short description of the module.
-* **author**: The name of the author of the module.
-* **logo**: Absolute URL to the logo of the module provider. An SVG vector is required.
-* **website**: URL to the website of the module provider.
-* **isAvailable**: Whether the module can be activated / configured by the administrator.
-* **supportedModes**: A list of supported modes. Unless your module specifically supports bi-directional sync, only the `push` option should be listed. Possible values:
-	* `sync`: Content is first pulled from the storage target. Any newer content overwrites local content. New content since last sync is then pushed to the storage target, overwriting any content on target if present.
-  * `push`: Content is always pushed to the storage target, overwriting any existing content.
-  * `pull`: Content is always pulled from the storage target, overwriting any local content which already exists.
-* **defaultMode**: The default value from the choices listed above. Usually `push`.
-* **schedule**: An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals) formatted time interval at which the sync function will be triggered or `false` to disable.
-* **props**: An object of user editable properties. See [Module Properties](/dev/module-properties) for more info.
-* **actions**: *(optional)* A list of manual actions the administrator can execute on this storage module.
-  * **handler**: Function name that will be called
-  * **label**: Pretty name of the function
-  * **hint**: Description of what the action does.
+* **key**: 此模块的简短、唯一的驼峰格式名称。它必须与模块所在的目录名称完全一致。
+* **title**: 此模块的全名。
+* **description**: 该模块的简短描述。
+* **author**: 此模块的作者。
+* **logo**: 指向此模块徽标的绝对URL，使用SVG矢量图。
+* **website**: 指向此模块的官网的URL
+* **isAvailable**: 模块是否可以由管理员激活/配置。
+* **supportedModes**: 支持的同步模式列表。除非您的模块支持双向同步，否则只应列出“推送（push）”选项。可能值由：
+	* `sync`: 首先从存储目标中拉取内容。任何更新的内容都将覆盖本地内容。之后，自上次同步以来的新内容被推送到存储目标，覆盖目标上的任何内容（如果存在）。
+  * `push`: 内容始终被推送到存储目标，覆盖任何现有内容。
+  * `pull`: 始终从存储目标中拉取内容，覆盖任何已存在的本地内容。
+* **defaultMode**: 上面列出的选项中的默认值。一般为 `push`.
+* **schedule**: 一个[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals)格式的时间间隔，在该时间间隔内同步功能将被触发，设为`false`以禁用。
+* **props**: 用户可编辑属性对象。 更多信息参见[模块属性](/dev/module-properties)。
+* **actions**: *(可选)* 管理员可以在此存储模块上执行的手动操作列表。
+  * **handler**: 将调用的函数名
+  * **label**: 函数名称
+  * **hint**: 对该操作内容的描述
 
 ## storage.js
 
-This file contains methods that will be called when a new page is created, modified, deleted, etc.
+此文件包含创建、修改、删除等新页面时将调用的方法。
 
 ```javascript
 module.exports = {
@@ -94,53 +94,53 @@ module.exports = {
 }
 ```
 
-All methods are required and must be implemented unless specified otherwise.
+除非另有规定，否则必须实现所有方法。
 
 ### activated
 
-Upon activation of the storage module from the administration area. This is usually where storage prerequisites are checked _\(e.g. check settings, try to connect, create container, initialize repository, etc.\)._ 
+从管理区激活存储模块后调用此方法。这通常是检查存储前提条件的地方 _（例如，检查设置、尝试连接、创建容器、初始化存储库等）_。
 
 ```javascript
 async activated () { }
 ```
 
-Use **this.config** inside the method to access the configuration of the storage strategy. For example, if you defined properties `clientId` and `clientSecret` for the module props, `this.config` will be an object with properties `clientId` and `clientSecret` containing the values entered by the user in the administration area.
+在此方法中，使用**this.config**可访问存储策略的配置。例如，如果在模块属性中定义了`clientId` 和 `clientSecret`属性，`this.config`将是一个具有`clientId` 和 `clientSecret`属性的对象，其值为用户在管理区中输入的值。
 
-Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be enabled.
+任何抛出的错误（或返回被拒绝的promise）都将报告给用户，并且不会启用存储策略。
 
 ### deactivated
 
-Upon deactivation of the storage module from the administration area. This is where you disconnect from the storage provider if required. You should **never delete any content** upon deactivation, as the user may choose to re-enable this storage strategy later or simply want to keep the current content as backup.
+从管理区域停用存储模块后调用此方法。如果需要，可以在此处断开与存储提供程序的连接。您不应在停用时删除任何内容，因为用户可能会选择稍后重新启用此存储策略，或者只是想保留当前内容作为备份。
 
 ```javascript
 async deactivated () { }
 ```
 
-**this.config** is an object containing the configuration of the storage strategy. See the [activated](#activated) event for more details.
+**this.config**是包含存储策略配置的对象。详细信息请参考[activated](#activated)事件。
 
-Any error thrown \(or returning a rejected promise\) will be reported to the user and the storage strategy will not be disabled.
+任何抛出的错误（或返回被拒绝的promise）都将报告给用户，并且不会停用存储策略。
 
 ### init
 
-Upon initialization of Wiki.js \(both startups or restarts\) and directly after the `activated` event. This is useful to establish a connection in some storage strategies.
+在初始化Wiki.js（启动或重新启动）时和`activated`事件后调用此方法。这对在某些存储策略中建立连接有用。
 
 ```javascript
 async init () { }
 ```
 
-**this.config** is an object containing the configuration of the storage strategy. See the [activated](#activated) event for more details.
+**this.config**是包含存储策略配置的对象。详细信息请参考[activated](#activated)事件。
 
-Any error thrown \(or returning a rejected promise\) will prevent the storage strategy from being used until Wiki.js is restarted or the error is acknowledged by the user in the administration area.
+任何抛出的错误（或返回被拒绝的promise）都阻止存储策略并报告给用户，直到Wiki.js重新启动或用户在管理区确认错误。
 
 ### created
 
-Upon creation of a new page.
+在页面创建时调用的方法。
 
 ```javascript
 async created (page) { }
 ```
 
-Use **this** context inside the method to access following properties:
+在方法中使用**this**上下文可访问以下属性：
 
 ```javascript
 {
@@ -148,83 +148,77 @@ Use **this** context inside the method to access following properties:
 }
 ```
 
-The first argument **page** has the following properties:
+第一个参数**pages**具有以下属性：
 
 ```javascript
     {
-        id: Number, // Unique ID of the page
-        localeCode: String, // 2 letter code (e.g. en).
-        path: String, // Unique path of the page (e.g. some/page)
-        title: String, // Title of the page
-        description: String, // Short description of the page
-        isPrivate: Boolean, // Is the page inside the user private namespace
-        isPublished: Boolean, // Is the page published
-        publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-        publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-        contentType: String, // The content original type (e.g. markdown, html, etc.)
-        content: String, // The content
-        createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-        authorId: Number, // The Unique ID of the author
-        authorName: String, // The full name of the author
-        authorEmail: String // The email address of the author
+        id: Number, // 该页的唯一ID
+        localeCode: String, // 2字符的语言代码 (如： en).
+        path: String, // 该页面的唯一路径 (e.g. some/page)
+        title: String, // 页面标题
+        description: String, // 页面描述
+        isPrivate: Boolean, // 页面是否位于用户私有命名空间内
+        isPublished: Boolean, // 页面是否已发布
+        publishStartDate: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        publishEndDate: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        contentType: String, // 页面内容的原始格式 (如： markdown, html等)
+        content: String, // 页面内容
+        createdAt: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        authorId: Number, // 作者唯一ID
+        authorName: String, // 作者全名
+        authorEmail: String // 作者的电子邮件地址
     }
 ```
 
-Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being created internally.
+任何抛出的错误（或返回被拒绝的promise）都将被记录，但不会阻止页面的创建。
 
 ### updated
 
-Upon modification of a page contents.
+页面内容被修改时会调用此方法。
 
 ```javascript
 async updated (page) { }
 ```
 
-Use **this** context inside the method to access following properties:
+在方法中使用**this**上下文可访问以下属性：
 
 ```javascript
 {
     config: Object // Object containing the storage configuration
 }
 ```
-
-The first argument **page** has the following properties:
+第一个参数**pages**具有以下属性：
 
 ```javascript
-{
-    id: Number, // Unique ID of the page
-    localeCode: String, // 2 letter code (e.g. en).
-    path: String, // Unique path of the page (e.g. some/page)
-    title: String, // Title of the page
-    description: String, // Short description of the page
-    isPrivate: Boolean, // Is the page inside the user private namespace
-    isPublished: Boolean, // Is the page published
-    publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    contentType: String, // The content original type (e.g. markdown, html, etc.)
-    content: String, // The content
-    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    updatedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    authorId: Number, // The Unique ID of the author (user updating the page)
-    authorName: String, // The full name of the author (user updating the page)
-    authorEmail: String, // The email address of the author (user updating the page)
-    creatorId: Number, // The Unique ID of the user that first created the page
-    creatorName: String, // The full name of the user that first created the page
-    creatorEmail: String // The email address of the user that first created the page
-}
+    {
+        id: Number, // 该页的唯一ID
+        localeCode: String, // 2字符的语言代码 (如： en).
+        path: String, // 该页面的唯一路径 (e.g. some/page)
+        title: String, // 页面标题
+        description: String, // 页面描述
+        isPrivate: Boolean, // 页面是否位于用户私有命名空间内
+        isPublished: Boolean, // 页面是否已发布
+        publishStartDate: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        publishEndDate: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        contentType: String, // 页面内容的原始格式 (如： markdown, html等)
+        content: String, // 页面内容
+        createdAt: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        creatorId: Number, // 首次创建页面的用户的唯一ID
+        creatorName: String, // 首次创建页面的用户的全名
+        creatorEmail: String // 首次创建页面的用户的电子邮件地址
+    }
 ```
-
-Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being updated internally.
+任何抛出的错误（或返回被拒绝的promise）都将被记录，但不会阻止页面的修改。
 
 ### deleted
 
-Upon deletion of a page.
+删除页面时将调用此方法。
 
 ```javascript
 async deleted (page) { }
 ```
 
-Use **this** context inside the method to access following properties:
+在方法中使用**this**上下文可访问以下属性：
 
 ```javascript
 {
@@ -232,28 +226,28 @@ Use **this** context inside the method to access following properties:
 }
 ```
 
-The first argument **page** has the following properties:
+第一个参数**pages**具有以下属性：
 
 ```javascript
-{
-    id: Number, // Unique ID of the page
-    localeCode: String, // 2 letter code (e.g. en).
-    path: String, // Unique path of the page (e.g. some/page)
-    title: String, // Title of the page
-    description: String, // Short description of the page
-    isPrivate: Boolean, // Is the page inside the user private namespace
-    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    deletedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    authorId: Number, // The Unique ID of the author (user deleting the page)
-    authorName: String, // The full name of the author (user deleting the page)
-    authorEmail: String, // The email address of the author (user deleting the page)
-    creatorId: Number, // The Unique ID of the user that first created the page
-    creatorName: String, // The full name of the user that first created the page
-    creatorEmail: String // The email address of the user that first created the page
-}
+    {
+        id: Number, // 该页的唯一ID
+        localeCode: String, // 2字符的语言代码 (如： en).
+        path: String, // 该页面的唯一路径 (e.g. some/page)
+        title: String, // 页面标题
+        description: String, // 页面描述
+        isPrivate: Boolean, // 页面是否位于用户私有命名空间内
+        createdAt: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        deletedAt: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+        authorId: Number, // 作者唯一ID
+        authorName: String, // 作者全名
+        authorEmail: String // 作者的电子邮件地址
+        creatorId: Number, // 首次创建页面的用户的唯一ID
+        creatorName: String, // 首次创建页面的用户的全名
+        creatorEmail: String // 首次创建页面的用户的电子邮件地址
+    }
 ```
 
-Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being deleted internally.
+任何抛出的错误（或返回被拒绝的promise）都将被记录，但不会阻止页面被删除。
 
 ### renamed
 
