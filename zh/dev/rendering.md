@@ -2,7 +2,7 @@
 title: 渲染
 description: 开发渲染模块
 published: true
-date: 2023-02-05T03:17:09.633Z
+date: 2023-02-05T03:17:29.697Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:35:05.760Z
@@ -14,10 +14,10 @@ dateCreated: 2023-01-08T10:35:05.760Z
 
 ## 创建新页面
 
-![Create Page Flow Diagram](/assets/diagrams/diag-create-page-flow.jpg =1000x){.decor-shadow .radius-4}
+![创建新页面流程图](/assets/diagrams/diag-create-page-flow.jpg =1000x){.decor-shadow .radius-4}
 
 ## 查看页面
-![View Page Flow Diagram](/assets/diagrams/diag-view-page-flow.jpg =1000x){.decor-shadow .radius-4}
+![查看页面流程图](/assets/diagrams/diag-view-page-flow.jpg =1000x){.decor-shadow .radius-4}
 
 # 渲染模块
 
