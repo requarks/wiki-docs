@@ -1,47 +1,47 @@
 ---
-title: Code
-description: Editor
+title: 代码编辑器
+description: 编辑器
 published: true
-date: 2020-06-09T21:58:10.931Z
-tags: editors
+date: 2023-02-06T03:39:41.746Z
+tags: editors, 编辑器
 editor: markdown
+dateCreated: 2023-01-08T10:35:23.478Z
 ---
 
-# Overview
+# 概述
 
-The Code editor is a basic raw HTML editor.
+代码编辑器是一个基本的纯HTML编辑器。
 
-> *It's generaly not recommended to use this editor to write new content. This editor is provided as a convenience to import existing content from older systems which is only available in raw HTML.*
+> *通常不建议使用此编辑器编写新内容。提供此编辑器是为了方便从旧系统中导入现有内容，旧系统仅可使用纯HTML。*
 {.is-warning}
 
-# User Guide
+# 用户指南
 
-Only Wiki.js specific stylings are listed below.
+下面只列出了Wiki.js特定的样式。
 
-## Content Tabs
+## 内容标签
 
 ### Tab {.tabset}
 
 #### Usage
 
-> This feature is only available from version 2.4 and up.
+> 此功能仅适用于2.4及以上版本。
 {.is-info}
 
-Using headers and adding the `tabset` css class to the parent header. The parent header text will not be shown in the final result.
+使用标题标签并将tabset css类添加到父级标题标签。父标题文本不会显示在最终结果中。
+请注意，您可以使用任何标题标签级别，只要比子标题高一级即可。例如，如果父标题使用`<h3>`，则选项卡标题必须使用`<h4>`。最深标头级别是父级标题使用`<h5>`，子标题使用`<h6>`。
 
-Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `<h3>`, the tabs headers must be `<h4>`. The maximum header level for a parent being `<h5>` and the children `<h6>`.
-
-#### Code Example
+#### 代码示例
 
 ```html
-<h2 class="tabset">Tabs</h2>
+<h2 class="tabset">标签</h2>
 
-<h3>First Tab</h3>
-<p>Any content here will go into the first tab...</p>
+<h3>第一个选项卡</h3>
+<p>这里的任何内容都将进入第一个选项卡。。。</p>
 
-<h3>Second Tab</h3>
-<p>Any content here will go into the second tab...</p>
+<h3>第二个选项卡</h3>
+<p>这里的任何内容都将进入第二个选项卡。。。</p>
 
-<h3>Third Tab</h3>
-<p>Any content here will go into the third tab...</p>
+<h3>第三个选项卡</h3>
+<p>这里的任何内容都将进入第三个选项卡。。。</p>
 ```
