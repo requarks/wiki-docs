@@ -2,7 +2,7 @@
 title: Markdown
 description: 编辑器
 published: true
-date: 2023-02-06T04:06:39.472Z
+date: 2023-02-06T08:36:02.577Z
 tags: editors, 编辑器
 editor: markdown
 dateCreated: 2023-01-08T10:35:26.343Z
@@ -125,28 +125,28 @@ function lorem (ipsum) {
 
 #### 用法
 
-> This feature is only available from version 2.4 and up.
+> 此功能仅适用于2.4及更高版本。
 {.is-info}
 
-Using headers and adding the `{.tabset}` class to the parent header. The parent header text will not be shown in the final result.
+使用标题并将`｛.tabset｝`类添加到父标题。父标题文本不会显示在最终结果中。
 
-Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `###` *(h3)*, the tabs headers must be `####` *(h4)*. The maximum header level for a parent being 5 and the children 6.
+请注意，您可以使用任何标题级别，只要子标题高一级即可。例如，如果父标题为`###`*（h3）*，则选项卡标题必须为`####`*（h4）*。父标题的最大标头级别为5，子标题为6。
 
 #### 示例
 
 ```
 # Tabs {.tabset}
-## First Tab
+## 第一个选项卡
 
-Any content here will go into the first tab...
+这里的任何内容都将进入第一个选项卡。。。
 
-## Second Tab
+## 第二个选项卡
 
-Any content here will go into the second tab...
+这里的任何内容都将进入第二个选项卡。。。
 
-## Third Tab
+## 第三个选项卡
 
-Any content here will go into the third tab...
+这里的任何内容都将进入第三个选项卡。。。
 ```
 
 ## Emojis
@@ -155,21 +155,21 @@ Any content here will go into the third tab...
 
 #### 用法
 
-Using the syntax `:identifier:`
+使用语法 `:identifier:`
 
-See the [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) for the full list of possible options.
+所有可使用emoji参见[Emoji速查表](https://www.webfx.com/tools/emoji-cheat-sheet/)。
 
 #### 示例
 
 ```markdown
 :apple:
 
-Can be also be used :fire: inline
+也可以在行内 :fire: 使用
 ```
 
 :apple:
 
-Can also be used :fire: inline.
+也可以在行内 :fire: 使用
 
 ## 脚注
 
@@ -177,20 +177,20 @@ Can also be used :fire: inline.
 
 #### 用法
 
-Use the syntax `[^1]` for the location of the footnote in the main text, and `[^1]: this is a footnote` for the actual footnote.  Footnotes themselves will automatically appear at the bottom of the page under a horizontal line.
+在需要设置脚注的位置使用如下语法 `[^1]`， 使用语法 `[^1]: 这是一段脚注` 来添加具体的脚注。脚注本身将自动显示在页面底部的水平线下。
 
 #### 示例
 
 ```markdown
-This sentence[^1] needs a few footnotes.[^2]
+这句话[^1] 需要一些脚注。[^2]
 
-[^1]: A string of syntactic words.
-[^2]: A useful example sentence.
+[^1]: 一串句法单词。
+[^2]: 一个有用的例句。
 ```
-This sentence[^1] needs a few footnotes.[^2]
+这句话[^1] 需要一些脚注。[^2]
 
-[^1]: A string of syntactic words.
-[^2]: A useful example sentence.
+[^1]: 一串句法单词。
+[^2]: 一个有用的例句。
 
 ## 标题
 
@@ -198,22 +198,22 @@ This sentence[^1] needs a few footnotes.[^2]
 
 #### 用法
 
-Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the text selection.
+在要添加标题的文本前另起一行，使用1到6个**标签号（井号）**，后跟空格。
 
 #### 快捷方式
-- On the desired line, then clicking the ![Header](/assets/ui/ui-markdown-headers.png =x30){.radius-4} dropdown button in the toolbar.
-- On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Right</kbd> to increase the header level.
-- On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Left</kbd> to decrease the header level.
+- 将光标置于要添加标题的行上，然后点击工具栏中的 ![标题](/assets/ui/ui-markdown-headers.png =x30){.radius-4} 下拉按钮。
+- 将光标置于有标题的行上，按下 <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Right</kbd> 来增加标题级数。
+- 将光标置于有标题的行上，按下 <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Left</kbd> 来减少标题级数。
 
 #### 示例
 
 ```
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
 ```
 
 ## 分割线
@@ -222,10 +222,10 @@ Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the tex
 
 #### 用法
 
-Using **triple dash** symbols on a dedicated line.
+另起一行，添加**三个划线符号**。
 
 #### 快捷方法
-- By clicking the ![Horizontal Rule](/assets/ui/ui-markdown-hr.png =x30){.radius-4} button in the toolbar.
+- 点击工具栏种的 ![水平线](/assets/ui/ui-markdown-hr.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -249,14 +249,13 @@ Consectetur adipiscing elit
 
 #### 用法
 
-Using the syntax `![Image alt text](Image source "Image title")`.
+使用如下语法 `![Image alt text](Image source "Image title")`.
 
-Image alt text - text that is displayed when the image could not be loaded
-Image source - file path of image
-Image title - is displayed when the user hovers over the picture
-
+Image alt text - 无法加载图像时显示的文本
+Image source - 图像文件路径
+Image title - 当用户悬停在图片上时显示
 #### 快捷方法
-- Using the **Assets** tool in the left toolbar.
+- 使用左侧工具栏中的**插入图片**工具。
 
 #### 示例
 
@@ -268,22 +267,22 @@ Consectetur ![adipiscing](/link/to/image.jpg) elit
 
 #### 大小
 
-Sometimes images are too large or maybe you want the image to fill up all the available space.
+有时图像太大，或者您希望图像填满所有可用空间。
 
-Simply at the dimensions at the end of the image path in the following format:
+此时只需按以下格式在图像路径末端指定尺寸：
 
 ```
 ![Image](/link/to/image.jpg =100x50)
 ```
 
-You can also omit one of the values to automatically keep the image ratio:
+您还可以省略其中一个值以自动保持图像比例：
 
 ```
 ![Image](/link/to/image.jpg =100x)
 ![Image](/link/to/image.jpg =x50)
 ```
 
-It's also possible to use other units, like %. Useful when you need the image to take all the available space:
+也可以使用其他单位，例如%。当您需要图像来获取所有可用空间时很有用：
 
 ```
 ![Image](/link/to/image.jpg =100%x)
@@ -295,10 +294,10 @@ It's also possible to use other units, like %. Useful when you need the image to
 
 #### 用法
 
-Using a **backtick** symbol before and after the text selection.
+在要设为行内代码的文本前后添加一个**反引号**。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Inline Code](/assets/ui/ui-markdown-inlinecode.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后点击工具栏中的![行内代码](/assets/ui/ui-markdown-inlinecode.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -314,11 +313,11 @@ Lorem `ipsum` dolor
 
 #### 用法
 
-Using a **single asterisk** symbol before and after the text selection.
+在要设为斜体的文本前后分别添加**一个星号**。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Italic](/assets/ui/ui-markdown-italic.png =x30){.radius-4} button in the toolbar.
-- By selecting text, then pressing <kbd>CTRL</kbd> + <kbd>I</kbd>
+- 选中文本，然后点击工具栏中的 ![斜体](/assets/ui/ui-markdown-italic.png =x30){.radius-4} 按钮。
+- 选中文本，然后按 <kbd>CTRL</kbd> + <kbd>I</kbd>。
 
 #### 示例
 
@@ -334,10 +333,10 @@ Lorem *ipsum* dolor
 
 #### 用法
 
-Using `<kbd>` before and `</kbd>` after the text selection.
+在要标记的文本前后分别添加 `<kbd>` 和 `</kbd>` 。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Keyboard Keys](/assets/ui/ui-markdown-kbd.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后点击工具栏中的 ![键盘按键](/assets/ui/ui-markdown-kbd.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -353,10 +352,10 @@ Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
 
 #### 用法
 
-Using the syntax `[Link Text](Link Target)`.
+使用语法 `[Link Text](Link Target)`.
 
 #### 快捷方法
-- Using the **Link** tool in the left toolbar.
+- 使用左侧工具栏中的**插入链接**工具。
 
 #### 示例
 
@@ -376,9 +375,9 @@ Consectetur [adipiscing](/install/requirements) elit
 
 #### 用法
 
-Using a code block with the language **mermaid**.
+添加使用**mermaid**语言的代码区块。
 
-Refer to [Mermaid website](https://mermaid-js.github.io/mermaid) for the language reference.
+语言参考详见[Mermaid 官网](https://mermaid-js.github.io/mermaid)。
 
 #### 示例
 
@@ -402,10 +401,10 @@ sequenceDiagram
 
 #### 用法
 
-Using an **number**, followed by a **dot** symbol, followed by a space, before each line of text.
+在每行文本之前使用**数字**，后跟**英文句号（点）**，后跟空格。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ol.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后点击工具栏中的![有序列表](/assets/ui/ui-markdown-ol.png =x30){.radius-4}按钮。
 
 #### 示例
 
@@ -419,7 +418,7 @@ Using an **number**, followed by a **dot** symbol, followed by a space, before e
 1. Consectetur adipiscing elit
 1. Morbi vehicula aliquam
 
-> While you can number each line numerically in order, it's easier to use the number **1** on each line. The final result will be incremented automatically. This way you don't need to re-number every single line when adding or removing a line later on.
+> 虽然您可以按顺序对每一行进行数字编号，但在每一行上使用数字**1**更容易。最终结果将自动递增。这样，以后添加或删除一行时，就不需要对每一行重新编号。
 {.is-info}
 
 ## PlantUML 图表
@@ -428,9 +427,9 @@ Using an **number**, followed by a **dot** symbol, followed by a space, before e
 
 #### 用法
 
-Using a code block with the language **plantuml**.
+添加使用**plantuml**语言的代码块。
 
-Refer to [PlantUML website](https://plantuml.com/) for the language reference.
+语言参考详见[PlantUML官网](https://plantuml.com/)。
 
 #### 示例
 
@@ -450,10 +449,10 @@ Bob->Alice : hello
 
 #### 用法
 
-Using **double tildes** symbols before and after the text selection.
+在选中的文本前后添加**两个波浪符号**。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Strikethrough](/assets/ui/ui-markdown-strike.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后点击工具栏上的 ![删除线](/assets/ui/ui-markdown-strike.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -469,10 +468,10 @@ Lorem ~~ipsum~~ dolor
 
 #### 用法
 
-Using a **single tilde** symbol before and after the text selection.
+在选择的文本前后添加**一个波浪符号**。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Subscript](/assets/ui/ui-markdown-sub.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后点击工具栏上的 ![下标](/assets/ui/ui-markdown-sub.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -488,10 +487,10 @@ Lorem ~ipsum~ dolor
 
 #### 用法
 
-Using a **single caret** symbol before and after the text selection.
+在选择的文本前后添加**一个插入符号**。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Superscript](/assets/ui/ui-markdown-sup.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后点击工具栏的 ![上标](/assets/ui/ui-markdown-sup.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -507,47 +506,46 @@ Lorem ^ipsum^ dolor
 
 #### 用法
 
-Using the syntax:
+使用如下语法：
 
 ```md
-| Header A1 | Header B1 | Header C1 |
+| 表头 A1 | 表头 B1 | 表头 C1 |
 |-----------|-----------|-----------|
-| Cell A2   | Cell B2   | Cell C2   |
-| Cell A3   | Cell B3   | Cell C3   |
+| 单元格 A2   | 单元格 B2   | 单元格 C2   |
+| 单元格 A3   | 单元格 B3   | 单元格 C3   |
 ...
 ```
 
 #### 示例
 
 ```md
-| Header 1 | Header 2 | Header 3 |
+| 表头 1 | 表头 2 | 表头 3 |
 |----------|----------|----------|
 | Foo      | Bar      | Xyz      |
 | Abc      | Def      | 123      |
 ```
 
-will result in:
+将转换为：
 
-| Header 1 | Header 2 | Header 3 |
+| 表头 1 | 表头 2 | 表头 3 |
 |----------|----------|----------|
 | Foo      | Bar      | Xyz      |
 | Abc      | Def      | 123      |
 
 #### 样式
 
-By adding the class `dense` on a separate line, after the table, you can make the table use a smaller font and smaller padding. For example:
-
+如果在表格后另起一行并添加 `dense` 类, 这样可以使表格使用较常规更小的字体与行距。
 ```md
-| Header 1 | Header 2 | Header 3 |
+| 表头 1 | 表头 2 | 表头 3 |
 |----------|----------|----------|
 | Foo      | Bar      | Xyz      |
 | Abc      | Def      | 123      |
 {.dense}
 ```
 
-will result in:
+将转换为：
 
-| Header 1 | Header 2 | Header 3 |
+| 表头 1 | 表头 2 | 表头 3 |
 |----------|----------|----------|
 | Foo      | Bar      | Xyz      |
 | Abc      | Def      | 123      |
@@ -560,19 +558,19 @@ will result in:
 
 #### 用法
 
-Using the syntax `- [ ]` or a `- [x]`.
+使用语法 `- [ ]` 或 `- [x]`.
 
 #### 示例
 
 ```
-- [x] Checked task item
-- [x] Another checked task item
-- [ ] Unchecked task item
+- [x] 选中的任务项
+- [x] 另一个选中的任务项
+- [ ] 未选中的任务项
 ```
 
-- [x] Checked task item
-- [x] Another checked task item
-- [ ] Unchecked task item
+- [x] 选中的任务项
+- [x] 另一个选中的任务项
+- [ ] 未选中的任务项
 
 ## 无序列表
 
@@ -580,10 +578,10 @@ Using the syntax `- [ ]` or a `- [x]`.
 
 #### 用法
 
-Using an **asterisk** or a **dash** symbol, followed by a space, before each line of text.
+在每行文本之前使用**星号**或**英文破折号**，后跟空格。
 
 #### 快捷方法
-- By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ul.png =x30){.radius-4} button in the toolbar.
+- 选中文本，然后单击工具栏中的 ![无序列表](/assets/ui/ui-markdown-ul.png =x30){.radius-4} 按钮。
 
 #### 示例
 
@@ -599,37 +597,37 @@ Using an **asterisk** or a **dash** symbol, followed by a space, before each lin
 
 #### 样式
 
-By adding a class on a separate line, after the list, you can change the look of the list:
+通过在列表后另起一行并添加类，可以更改列表的外观：
 
 - `links-list`
 - `grid-list`
 
-For example:
+例如：
 
 ```markdown
-- Grid Item 1
-- Grid Item 2
-- Grid Item 3
+- 网格列表项 1
+- 网格列表项 2
+- 网格列表项 3
 {.grid-list}
 
-- [Lorem ipsum dolor sit amet *Subtitle description here*](https://www.google.com)
-- [Consectetur adipiscing elit *Another subtitle description here*](https://www.google.com)
-- [Morbi vehicula aliquam *Third subtitle description here*](https://www.google.com)
+- [Lorem ipsum dolor sit amet *这里是子标题描述*](https://www.google.com)
+- [Consectetur adipiscing elit *这里是另一个子标题描述*](https://www.google.com)
+- [Morbi vehicula aliquam *这里是第三个子标题描述*](https://www.google.com)
 {.links-list}
 ```
-will result in:
+将转换为
 
-- Grid Item 1
-- Grid Item 2
-- Grid Item 3
+- 网格列表项 1
+- 网格列表项 2
+- 网格列表项 3
 {.grid-list}
 
-and:
+和：
 
-- [Link Title 1 *Subtitle description here*](https://www.google.com)
-- [Link Title 2 *Another subtitle description here*](https://www.google.com)
-- [Link Title 3 *Third subtitle description here*](https://www.google.com)
+- [Lorem ipsum dolor sit amet *这里是子标题描述*](https://www.google.com)
+- [Consectetur adipiscing elit *这里是另一个子标题描述*](https://www.google.com)
+- [Morbi vehicula aliquam *这里是第三个子标题描述*](https://www.google.com)
 {.links-list}
 
-> Note that these stylings are specific to Wiki.js and will fallback to standard list styling in other applications.
+> 请注意，这些样式是Wiki.js特有的，将在其他应用程序中回退到标准列表样式。
 {.is-warning}
