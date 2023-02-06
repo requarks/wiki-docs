@@ -1,56 +1,56 @@
 ---
-title: Editors
-description: Using the various editors of Wiki.js
+title: 编辑器
+description: 使用Wiki.js的多种编辑器
 published: true
-date: 2022-12-24T02:46:24.542Z
-tags: editors
+date: 2023-02-06T03:32:49.790Z
+tags: editors, 编辑器
 editor: markdown
-dateCreated: 2019-05-22T03:11:37.479Z
+dateCreated: 2023-01-08T10:33:24.814Z
 ---
 
-When creating a page, you can use the editor of your choice. Some users prefer to write content in Markdown while others might prefer a more visual editor.
+创建页面时，可以使用您选择的编辑器。一些用户更喜欢用Markdown编写内容，而另一些用户可能更喜欢更直观的编辑器。
 
-# List of  Editors
+# 编辑器列表
 
-- [AsciiDoc *Plain Text Formatting*](/editors/asciidoc) 
-- [Code *Raw HTML*](/editors/code)
-- [Markdown *Plain Text Formatting*](/editors/markdown)
-- [Visual Editor *Rich-Text WYSIWYG*](/editors/visualeditor)
+- [AsciiDoc *纯文本格式*](/editors/asciidoc) 
+- [代码 *纯HTML*](/editors/code)
+- [Markdown *纯文本格式*](/editors/markdown)
+- [可视编辑器 *富文本，所见即所得*](/editors/visualeditor)
 {.links-list}
 
-# Change Editor
+# 更改编辑器
 
-> This feature is available from version **2.5.201 and up**.
+> 仅在版本 **2.5.201及以上**可用。
 {.is-info}
 
-You can change the editor used for any page using the **Convert** action. This will attempt to convert the content to be used by the newly selected editor. For example, a page previously created with the Markdown editor can be converted to HTML to be used with the Visual Editor.
+您可以使用**转换**操作更改用于任何页面的编辑器。这将使wiki尝试将内容转换至可被新编辑器使用的内容。例如，以前使用Markdown编辑器创建的页面可以转换为HTML，以便与可视化编辑器一起使用。
 
-From the **Page Actions** menus (located at the top-right corner and bottom-right corner), select **Convert**. The following dialog is shown:
+页面操作菜单（右上角和右下角）将显示如下对话框：
 
 ![ui-convert-page-dialog.png](/assets/ui/ui-convert-page-dialog.png =550x){.radius-5 .decor-shadow}
 
-Select the editor you want to use going forward and click **Convert**.
+选择要继续使用的编辑器，然后单击**转换**。
 
-> :warning: **Important**
+> :warning: **重要**
 >
-> Because of differences between editor / format capabilities, some formatting or non-rendered content may be lost after the conversion.
+> 由于编辑器/格式功能之间的差异，某些格式或未渲染的内容可能会在转换后丢失。
 >
-> A snapshot of the page is **automatically taken before the conversion** and you can revert or refer to this version **at any time afterwards** from the page history.
+> 系统在**转换之前会自动抓取**页面快照，您可以在之后的任何时间从页面历史记录中还原或引用此版本。
 >
-> _Examples_
+> _示例_
 >
-> &#8727; When going from Markdown to HTML, `draw.io` diagrams will be kept as their final rendered image. You will no longer be able to edit the diagram.
-> &#8727; When going from Markdown to HTML, tabsets will be reverted to standard headers and paragraphs (as seen in the markdown editor).
-> &#8727; When going from HTML to Markdown, custom CSS classes and HTML elements that don't exist in the Markdown language will not be preserved.
+> &#8727; 当从Markdown转换为HTML时，`draw.io`图表将变为其最终渲染图像保留。您将无法再编辑图表。
+> &#8727; 从Markdown转换为HTML时，标签集将恢复为标准标题和段落（如Markdown编辑器中所示）。
+> &#8727; 当从HTML转到Markdown时，Markdown语言中不存在的自定义CSS类和HTML元素将不会被保留。
 {.is-warning}
 
-As a reference, the following format conversions occur based on the source / target editor selected:
+作为参考，以下格式转换基于所选的源/目标编辑器进行：
 
-| Source | Target | Format Conversion
+| 源编辑器 | 目标编辑器 | 格式转换
 | -- | -- | -- |
-| Markdown | Visual Editor | Markdown -> HTML |
-| Markdown | Raw HTML | Markdown -> HTML |
-| Visual Editor | Markdown | HTML -> Markdown |
-| Visual Editor | Raw HTML | *no format conversion needed*{.caption} |
-| Raw HTML | Markdown | HTML -> Markdown |
-| Raw HTML | Visual Editor | *no format conversion needed*{.caption} |
+| Markdown | 可视编辑器 | Markdown -> HTML |
+| Markdown | 纯HTML | Markdown -> HTML |
+| 可视编辑器 | Markdown | HTML -> Markdown |
+| 可视编辑器 | 纯HTML | *无需进行格式转换*{.caption} |
+| 纯HTML | Markdown | HTML -> Markdown |
+| 纯HTML | 可视编辑器 | *无需进行格式转换*{.caption} |
