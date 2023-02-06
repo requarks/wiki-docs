@@ -1,88 +1,88 @@
 ---
-title: Themes
-description: Customize the look & feel of your wiki
+title: 主题
+description: 自定义您wiki的外观
 published: true
-date: 2020-12-31T19:11:02.344Z
+date: 2023-02-06T03:01:12.636Z
 tags: 
 editor: markdown
-dateCreated: 2020-04-26T03:57:51.368Z
+dateCreated: 2023-01-08T10:35:14.633Z
 ---
 
-# Overview
+# 概述
 
-Wiki.js comes bundled with a default theme, which supports both light and dark mode, and should be sufficient for most users.
+Wiki.js附带了一个默认主题，它支持亮色模式和暗色模式，对于大多数用户来说应该足够了。
 
-# Download new themes
+# 下载新主题
 
-**It's not yet possible to change or download new themes.** This is planned for a future release.
+**现在还无法更改或下载新主题**。此功能计划在未来发布。
 
-# Create your own theme
+# 创建自己的主题
 
-> :warning: **Custom themes are not yet fully supported.** It's however possible to manually create one and compile it as part of the bundle.
+> :warning: **目前尚未完全支持自定义主题** 但可以手动创建一个主题并将其编译为捆绑包的一部分。
 >
-> *The instructions below are for developers that are comfortable with Node.js / Vue.js development.*
+> *以下说明适用于熟悉Node.js/Vue.js开发的开发人员。*
 {.is-danger}
 
-## What can be customized
+## 可以定制的内容
 
-All aspects of a content page can be modified, **with the except of the header** (top black navigation bar). Because the header is dynamic and used consistently across all parts of the wiki (admin, editor, profile, etc.), it cannot be modified.
+内容页的所有地方都可以修改，但**标题（顶部的黑色导航栏）除外**。因为标题是动态的，并且在wiki的所有部分（管理员、编辑器、配置文件等）中都一致使用，所以不能修改它。
 
-## Getting Started
+## 开始定制
 
-You'll first need to [setup your dev environment](/dev) before going any further.
+在进一步操作之前，您首先需要[配置开发环境](/dev)。
 
-## Theme Structure
+## 主题结构
 
-From the `client/themes` folder. Create a copy of the `default` folder and rename it to anything you like (e.g. `mytheme`). The folder name must be lowercase, no spaces or special characters.
+在`client/themes`目录中，创建`default`文件夹的副本，并将其重命名为任何您喜欢的名称（例如：`mytheme`）。文件夹名称必须小写，不能有空格或特殊字符。
 
-A theme folder is composed of the following elements:
+主题文件夹由以下元素组成：
 
-- **components**: Vue components (the view) for page, sidebar, footer, etc. elements. The entry point is `page.vue` and is mandatory.
-- **js**: Javascript code specific to your theme. The entry point is `app.js` and is mandatory *(can be an empty file)*.
-- **scss**: SCSS code specific to your theme. The entry point is `app.scss` and is mandatory *(can be an empty file)*.
-- **theme.yml**: Your theme manifest (info about your theme).
-- **thumbnail.png**: A thumbnail preview image of your theme.
+- **components**: 页面、侧边栏、页脚等元素的Vue组件（视图）。入口点是`page.vue`，是必需的。
+- **js**: 特定于主题的Javascript代码。入口点是`app.js`，并且是必需的*（可以是空文件）*。
+- **scss**: 特定于主题的SCSS代码。入口点是`app.scss`，并且是必需的*（可以是空文件）*。
+- **theme.yml**: 主题清单文件（关于主题的信息）。
+- **thumbnail.png**: 主题的缩略预览图。
 
-## Development
+## 开发
 
-Use the `yarn dev` command to start Wiki.js in development mode. Any changes you make to your theme will automatically rebuild the client assets.
+使用`yarn dev`命令以开发模式启动Wiki.js。对主题所做的任何更改都将自动重新构建客户端资源。
 
-### Activate your custom theme
+### 激活您的自定义主题
 
-In order for Wiki.js to use your theme, you must first set it as the active theme. It's not possible to do it via the Administration Area just yet. You'll need to modify the database directly:
+为了让Wiki.js使用您的主题，您必须首先将其设置为激活主题。目前这还不能通过管理区完成。您需要直接修改数据库：
 
-- In the `settings` table, locate the `theming` row and edit the JSON value field.
-- Change the `theme` property to the name of the folder you created earlier and commit the change.
-- Restart your wiki for the change to be applied. (You can type `rs` + <kbd>ENTER</kbd> in your terminal to automatically reload the server)
-- Your theme is now active.
+- 在 `settings` 表中, 找到 `theming` 列并编辑JSON字段值。
+- 将主题属性更改为先前创建的文件夹的名称并提交更改。
+- 重新启动wiki以应用更改。（您可以在终端中键入`rs` + <kbd>ENTER</kbd>以自动重新加载服务端）
+- 您的主题现已激活。
 
-### Modify components
+### 编辑组件
 
-The `components/page.vue` is the main view. You can include other components from here.
+`components/page.vue` 是主视图。您可以在此处引入其他组件。
 
-> The `props` object and the `created()` method **must stay intact**! This is where page data is persisted to the store and is used across the application. Altering them can break the whole page!
+> `props`对象和`created()`方法**必须保持原样**！这些方法将页面数据持久化到存储中，并被应用（在其它地方）调用。更改它们可能会破坏整个页面！
 {.is-warning}
 
-## Compile + Deploy
+## 编译 + 部署
 
-Once your theme is ready, you need to compile the project for deployment.
+主题准备就绪后，您需要编译项目以进行部署。
 
-> Note that you will need to modify your production database to use your custom theme as well. Use the same instructions as above.
+> 请注意，您还需要使用与上述相同的说明修改生产数据库以使用自定义主题。
 {.is-info}
 
-### Using Docker
+### 使用 Docker
 
-Run the docker build command below (changing the tag to your own docker repository name):
+运行下面的docker build命令（将tag更改为您自己的docker库名称）：
 
 ```bash
 docker build -f dev/build/Dockerfile -t my-org/wiki:some-tag .
 ```
 
-### Manually
+### 手动编译
 
-Run the build command:
+运行下面的构建指令：
 ```bash
 yarn build
 ```
 
-This will generate a new folder named `assets` along with views under the `/server/views` folder. Copy + Paste both folders to your production server and restart your wiki.
+这将生成一个名为`assets`的新文件夹，以及`/server/views`文件夹下的视图。将两个文件夹复制并粘贴到生产服务器，然后重新启动wiki。
