@@ -405,7 +405,7 @@ sequenceDiagram
 Using an **number**, followed by a **dot** symbol, followed by a space, before each line of text.
 
 #### Shortcuts
-- By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ol.png =x30){.radius-4} button in the toolbar.
+- By selecting text, then clicking the ![Ordered List](/assets/ui/ui-markdown-ol.png =x30){.radius-4} button in the toolbar.
 
 #### Examples
 
@@ -583,7 +583,7 @@ Using the syntax `- [ ]` or a `- [x]`.
 Using an **asterisk** or a **dash** symbol, followed by a space, before each line of text.
 
 #### Shortcuts
-- By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ul.png =x30){.radius-4} button in the toolbar.
+- By selecting text, then clicking the ![Unordered List](/assets/ui/ui-markdown-ul.png =x30){.radius-4} button in the toolbar.
 
 #### Examples
 
