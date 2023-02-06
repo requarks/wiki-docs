@@ -2,7 +2,7 @@
 title: 存储
 description: 开发存储模块
 published: true
-date: 2023-02-05T05:11:27.202Z
+date: 2023-02-06T02:37:12.413Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:35:11.490Z
@@ -144,7 +144,7 @@ async created (page) { }
 
 ```javascript
 {
-    config: Object // Object containing the storage configuration
+    config: Object // 包含存储配置的对象
 }
 ```
 
@@ -184,7 +184,7 @@ async updated (page) { }
 
 ```javascript
 {
-    config: Object // Object containing the storage configuration
+    config: Object // 包含存储配置的对象
 }
 ```
 第一个参数**pages**具有以下属性：
@@ -222,7 +222,7 @@ async deleted (page) { }
 
 ```javascript
 {
-    config: Object // Object containing the storage configuration
+    config: Object // 包含存储配置的对象
 }
 ```
 
@@ -251,66 +251,67 @@ async deleted (page) { }
 
 ### renamed
 
-Upon rename of a page or when a page is moved to another location.
+重命名页面或将页面移动到其他位置时调用此方法。
 
 ```javascript
 async renamed (page) { }
 ```
 
-Use **this** context inside the method to access following properties:
+在方法中使用**this**上下文可访问以下属性：
 
 ```javascript
 {
-    config: Object // Object containing the storage configuration
+    config: Object // 包含存储配置的对象
 }
 ```
 
-The first argument **page** has the following properties:
+第一个参数**pages**具有以下属性：
 
 ```javascript
 {
-    id: Number, // Unique ID of the page
-    localeCode: String, // 2 letter code (e.g. en).
-    sourcePath: String, // Previous path of the page (e.g. some/oldpage)
-    destinationPath: String, // New path of the page (e.g. some/newpage)
-    title: String, // Title of the page
-    description: String, // Short description of the page
-    isPrivate: Boolean, // Is the page inside the user private namespace
-    isPublished: Boolean, // Is the page published
-    publishStartDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    publishEndDate: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    contentType: String, // The content original type (e.g. markdown, html, etc.)
-    content: String, // The content
-    createdAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    updatedAt: String, // ISO-8601 Date (YYYY-MM-DDTHH:mm:ss.sssZ)
-    authorId: Number, // The Unique ID of the author (user renaming the page)
-    authorName: String, // The full name of the author (user renaming the page)
-    authorEmail: String, // The email address of the author (user renaming the page)
-    creatorId: Number, // The Unique ID of the user that first created the page
-    creatorName: String, // The full name of the user that first created the page
-    creatorEmail: String // The email address of the user that first created the page
+		id: Number, // 该页的唯一ID
+    localeCode: String, // 2字符的语言代码 (如： en).
+    sourcePath: String, // 页面之前的路径（如：some/oldpage）
+    destinationPath: String, // 页面的新路径 (如： some/newpage)
+    title: String, // 页面标题
+    description: String, // 页面描述
+    isPrivate: Boolean, // 页面是否位于用户私有命名空间内
+    isPublished: Boolean, // 页面是否已被发布
+    publishStartDate: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+    publishEndDate: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+    contentType: String, // 页面内容的原始格式 (如： markdown, html等)
+    content: String, // 页面内容
+    createdAt: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+    updatedAt: String, // ISO-8601 格式的日期 (YYYY-MM-DDTHH:mm:ss.sssZ)
+    authorId: Number, // 作者唯一ID
+    authorName: String, // 作者全名
+    authorEmail: String // 作者的电子邮件地址
+    creatorId: Number, // 首次创建页面的用户的唯一ID
+    creatorName: String, // 首次创建页面的用户的全名
+    creatorEmail: String // 首次创建页面的用户的电子邮件地址
 }
 ```
 
-Any error thrown \(or returning a rejected promise\) will be logged but will not prevent the page from being renamed internally.
+任何抛出的错误（或返回拒绝的promise）都将被记录，但不会阻止页面被重命名。
 
 ### sync
 
-> *Should only be implemented if a schedule is defined in the module properties.*
+> *仅在模块财产中定义了计划同步属性才需实现此方法。*
 
-Upon schedule trigger.
+按同步计划触发此方法。
 
 ```javascript
 async sync () { }
 ```
 
-Use **this** context inside the method to access following properties:
+
+在方法中使用**this**上下文可访问以下属性：
 
 ```javascript
 {
-    config: Object, // Object containing the storage configuration
-    mode: String // The selected sync mode (sync, push or pull)
+    config: Object, // 包含存储配置的对象
+    mode: String // 选定的同步模式（同步、推送或拉取）
 }
 ```
 
-Any error thrown \(or returning a rejected promise\) will be logged.
+任何抛出的错误（或返回被拒绝的promise）都将被记录。
