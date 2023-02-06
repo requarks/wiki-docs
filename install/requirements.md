@@ -2,7 +2,7 @@
 title: Requirements
 description: Prerequisites to install Wiki.js
 published: true
-date: 2022-12-17T23:43:22.615Z
+date: 2023-02-05T00:22:18.536Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:21:32.940Z
@@ -74,7 +74,7 @@ The [Node.js](https://nodejs.org/) runtime is required. The following versions a
 - **Node.js 16**: version **16.0** or later.
 {.grid-list}
 
-> Wiki.js 2.x is not compatible with Node.js **18**.
+> **Wiki.js 2.x is not compatible with Node.js 18** (or later).
 > Support for Node.js **18 and later** is coming in Wiki.js 3.0.
 >
 > Odd-numbered versions (e.g. `13.x`, `15.x`, `17.x`) are **NOT** officially supported.
