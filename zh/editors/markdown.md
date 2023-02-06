@@ -1,33 +1,33 @@
 ---
 title: Markdown
-description: Editor
+description: 编辑器
 published: true
-date: 2022-11-09T06:34:32.121Z
-tags: editors
+date: 2023-02-06T04:06:39.472Z
+tags: editors, 编辑器
 editor: markdown
-dateCreated: 2019-05-22T02:59:46.078Z
+dateCreated: 2023-01-08T10:35:26.343Z
 ---
 
-# Overview
+# 概述
 
-Markdown is a lightweight markup language with plain text formatting syntax. It's the de-facto syntax for writing documentation on major code repositories such as GitHub.
+Markdown是一种具有纯文本格式语法的轻量级标记语言。这是在GitHub等主要代码库上编写文档的事实语法。
 
-Wiki.js supports the full [CommonMark specification](https://spec.commonmark.org/) + adds some useful extensions (including the Github Flavored Markdown addons).
+Wiki.js支持完整的[CommonMark specification](https://spec.commonmark.org/)，并添加了一些有用的扩展（包括Github Flavored Markdown插件）。
 
-# User Guide
+# 用户指南
 
-## Blockquotes
+## 引用
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
-Using a **greater-than** symbol, followed by a space, before each line of text.
+在每行文本之前使用**大于号**，后跟空格。
 
-#### Shortcuts
-- By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-blockquotes.png =x30){.radius-4} button in the toolbar.
+#### 快捷方法
+- 选择文本，让后单击工具栏中的 ![引用](/assets/ui/ui-markdown-blockquotes.png =x30){.radius-4} 按钮。
 
-#### Examples
+#### 示例
 
 ```js
 > Lorem ipsum dolor sit amet
@@ -37,9 +37,9 @@ Using a **greater-than** symbol, followed by a space, before each line of text.
 > Lorem ipsum dolor sit amet
 > Consectetur adipiscing elit
 
-#### Stylings
+#### 样式
 
-By adding a class on a separate line, after the blockquote, you can change the look of the blockquote. Note that these stylings are specific to Wiki.js and will fallback to standard blockquote styling in other applications.
+通过在块引号之后空出一行，并在这一行上添加类，您可以更改块引号的外观。请注意，这些样式是Wiki.js特有的，将在其他应用程序中回退到标准的blockquote样式。
 
 - Blue: `is-info`
 - Green: `is-success`
@@ -52,33 +52,33 @@ By adding a class on a separate line, after the blockquote, you can change the l
 {.is-info}
 ```
 
-> This is a default unstyled blockquote.
+> 这是默认的未设置样式的块引用。
 
-> This is a `{.is-info}` blockquote.
+> 这是信息型块引用。
 {.is-info}
 
-> This is a `{.is-success}` blockquote.
+> 这是成功型块引用。
 {.is-success}
 
-> This is a `{.is-warning}` blockquote.
+> 这是警告型块引用。
 {.is-warning}
 
-> This is a `{.is-danger}` blockquote.
+> 这是错误型块引用。
 {.is-danger}
 
-## Bold
+## 加粗
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
-Using **double asterisks** symbols before and after the text selection.
+在要加粗的文本前后分别添加**两个星号**。
 
-#### Shortcuts
-- By selecting text, then clicking the ![Bold](/assets/ui/ui-markdown-bold.png =x30){.radius-4} button in the toolbar.
-- By selecting text, then pressing <kbd>CTRL</kbd> + <kbd>B</kbd>
+#### 快捷方法
+- 选择文本，然后单击工具栏中的 ![粗体](/assets/ui/ui-markdown-bold.png =x30){.radius-4} 按钮。
+- 选择文本，然后按 <kbd>CTRL</kbd> + <kbd>B</kbd>
 
-#### Examples
+#### 示例
 
 ```js
 Lorem **ipsum** dolor
@@ -86,18 +86,18 @@ Lorem **ipsum** dolor
 
 Lorem **ipsum** dolor
 
-## Code Blocks
+## 代码块
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
-Using **triple backticks** symbols before and after the text selection, on dedicated lines.
+在代码前后分别空出一行，添加三个反引号。
 
-#### Shortcuts
-- Using the **Code Block** tool in the left toolbar.
+#### 快捷方法
+- 使用左侧工具栏中的**代码块**工具。
 
-#### Examples
+#### 示例
 
 ````
 ```
@@ -107,9 +107,9 @@ function lorem (ipsum) {
 ```
 ````
 
-#### Syntax Highlighting
+#### 代码高亮
 
-By default, a code block is rendered as plain preformatted text. It's however preferable to use syntax highlighting for programming code, allowing for easier readability. To specify the programming language used in the code block, simply add the language keyword right after the opening triple backticks:
+默认情况下，代码块呈现为预格式化纯文本文本。然而，编程代码最好使用语法高亮显示，这样可读性更好。要指定代码块中使用的编程语言，只需在开头的三个反引号后面添加语言关键字：
 
 ````java
 ```java
@@ -117,13 +117,13 @@ By default, a code block is rendered as plain preformatted text. It's however pr
 ```
 ````
 
-Refer to the [reference list](https://github.com/highlightjs/highlight.js#supported-languages) of about 185 supported programming languages.
+您可以查看支持高亮的185种编程语言的[参考列表](https://github.com/highlightjs/highlight.js#supported-languages)。
 
-## Content Tabs
+## 内容标签
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 > This feature is only available from version 2.4 and up.
 {.is-info}
@@ -132,7 +132,7 @@ Using headers and adding the `{.tabset}` class to the parent header. The parent 
 
 Note that you can use any header level, as long as the children headers are one level higher. For example, if a parent header is `###` *(h3)*, the tabs headers must be `####` *(h4)*. The maximum header level for a parent being 5 and the children 6.
 
-#### Examples
+#### 示例
 
 ```
 # Tabs {.tabset}
@@ -153,13 +153,13 @@ Any content here will go into the third tab...
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using the syntax `:identifier:`
 
 See the [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) for the full list of possible options.
 
-#### Examples
+#### 示例
 
 ```markdown
 :apple:
@@ -171,15 +171,15 @@ Can be also be used :fire: inline
 
 Can also be used :fire: inline.
 
-## Footnotes
+## 脚注
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Use the syntax `[^1]` for the location of the footnote in the main text, and `[^1]: this is a footnote` for the actual footnote.  Footnotes themselves will automatically appear at the bottom of the page under a horizontal line.
 
-#### Examples
+#### 示例
 
 ```markdown
 This sentence[^1] needs a few footnotes.[^2]
@@ -192,20 +192,20 @@ This sentence[^1] needs a few footnotes.[^2]
 [^1]: A string of syntactic words.
 [^2]: A useful example sentence.
 
-## Headers
+## 标题
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the text selection.
 
-#### Shortcuts
+#### 快捷方式
 - On the desired line, then clicking the ![Header](/assets/ui/ui-markdown-headers.png =x30){.radius-4} dropdown button in the toolbar.
 - On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Right</kbd> to increase the header level.
 - On the desired line, press <kbd>CTRL</kbd> + <kbd>ALT</kbd> +  <kbd>Left</kbd> to decrease the header level.
 
-#### Examples
+#### 示例
 
 ```
 # Header 1
@@ -216,18 +216,18 @@ Using between 1 and 6 **hashtag** symbol(s), followed by a space, before the tex
 ###### Header 6
 ```
 
-## Horizontal Line
+## 分割线
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using **triple dash** symbols on a dedicated line.
 
-#### Shortcuts
+#### 快捷方法
 - By clicking the ![Horizontal Rule](/assets/ui/ui-markdown-hr.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```js
 Lorem ipsum dolor
@@ -243,11 +243,11 @@ Lorem ipsum dolor
 
 Consectetur adipiscing elit
 
-## Images
+## 图片
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using the syntax `![Image alt text](Image source "Image title")`.
 
@@ -255,10 +255,10 @@ Image alt text - text that is displayed when the image could not be loaded
 Image source - file path of image
 Image title - is displayed when the user hovers over the picture
 
-#### Shortcuts
+#### 快捷方法
 - Using the **Assets** tool in the left toolbar.
 
-#### Examples
+#### 示例
 
 ```markdown
 ![Lorem ipsum](https://dolor.example.com/sit/amet.jpg "Lorem ipsum")
@@ -266,7 +266,7 @@ Image title - is displayed when the user hovers over the picture
 Consectetur ![adipiscing](/link/to/image.jpg) elit
 ```
 
-#### Dimensions
+#### 大小
 
 Sometimes images are too large or maybe you want the image to fill up all the available space.
 
@@ -289,18 +289,18 @@ It's also possible to use other units, like %. Useful when you need the image to
 ![Image](/link/to/image.jpg =100%x)
 ```
 
-## Inline Code
+## 行内代码
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using a **backtick** symbol before and after the text selection.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Inline Code](/assets/ui/ui-markdown-inlinecode.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```js
 Lorem `ipsum` dolor
@@ -308,19 +308,19 @@ Lorem `ipsum` dolor
 
 Lorem `ipsum` dolor
 
-## Italic
+## 斜体
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using a **single asterisk** symbol before and after the text selection.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Italic](/assets/ui/ui-markdown-italic.png =x30){.radius-4} button in the toolbar.
 - By selecting text, then pressing <kbd>CTRL</kbd> + <kbd>I</kbd>
 
-#### Examples
+#### 示例
 
 ```js
 Lorem *ipsum* dolor
@@ -328,18 +328,18 @@ Lorem *ipsum* dolor
 
 Lorem *ipsum* dolor
 
-## Keyboard Keys
+## 键盘按键
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using `<kbd>` before and `</kbd>` after the text selection.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Keyboard Keys](/assets/ui/ui-markdown-kbd.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```html
 Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
@@ -347,18 +347,18 @@ Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
 
 Lorem ipsum dolor <kbd>CTRL</kbd> + <kbd>C</kbd>
 
-## Links
+## 链接
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using the syntax `[Link Text](Link Target)`.
 
-#### Shortcuts
+#### 快捷方法
 - Using the **Link** tool in the left toolbar.
 
-#### Examples
+#### 示例
 
 ```markdown
 [Lorem ipsum](https://wiki.js.org/about)
@@ -370,17 +370,17 @@ Consectetur [adipiscing](/install/requirements) elit
 
 Consectetur [adipiscing](/install/requirements) elit
 
-## Mermaid Diagrams
+## Mermaid图标
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using a code block with the language **mermaid**.
 
 Refer to [Mermaid website](https://mermaid-js.github.io/mermaid) for the language reference.
 
-#### Examples
+#### 示例
 
 ````
 ```mermaid
@@ -396,18 +396,18 @@ sequenceDiagram
 ```
 ````
 
-## Ordered Lists
+## 有序列表
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using an **number**, followed by a **dot** symbol, followed by a space, before each line of text.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ol.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```
 1. Lorem ipsum dolor sit amet
@@ -422,17 +422,17 @@ Using an **number**, followed by a **dot** symbol, followed by a space, before e
 > While you can number each line numerically in order, it's easier to use the number **1** on each line. The final result will be incremented automatically. This way you don't need to re-number every single line when adding or removing a line later on.
 {.is-info}
 
-## PlantUML Diagrams
+## PlantUML 图表
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using a code block with the language **plantuml**.
 
 Refer to [PlantUML website](https://plantuml.com/) for the language reference.
 
-#### Examples
+#### 示例
 
 ````
 ```plantuml
@@ -444,18 +444,18 @@ Bob->Alice : hello
 Bob->Alice : hello
 ```
 
-## Strikethrough
+## 删除线
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using **double tildes** symbols before and after the text selection.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Strikethrough](/assets/ui/ui-markdown-strike.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```js
 Lorem ~~ipsum~~ dolor
@@ -463,18 +463,18 @@ Lorem ~~ipsum~~ dolor
 
 Lorem ~~ipsum~~ dolor
 
-## Subscript
+## 下标
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using a **single tilde** symbol before and after the text selection.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Subscript](/assets/ui/ui-markdown-sub.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```js
 Lorem ~ipsum~ dolor
@@ -482,18 +482,18 @@ Lorem ~ipsum~ dolor
 
 Lorem ~ipsum~ dolor
 
-## Superscript
+## 上标
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using a **single caret** symbol before and after the text selection.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Superscript](/assets/ui/ui-markdown-sup.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```js
 Lorem ^ipsum^ dolor
@@ -501,11 +501,11 @@ Lorem ^ipsum^ dolor
 
 Lorem ^ipsum^ dolor
 
-## Table
+## 表格
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using the syntax:
 
@@ -517,7 +517,7 @@ Using the syntax:
 ...
 ```
 
-#### Examples
+#### 示例
 
 ```md
 | Header 1 | Header 2 | Header 3 |
@@ -533,7 +533,7 @@ will result in:
 | Foo      | Bar      | Xyz      |
 | Abc      | Def      | 123      |
 
-#### Stylings
+#### 样式
 
 By adding the class `dense` on a separate line, after the table, you can make the table use a smaller font and smaller padding. For example:
 
@@ -554,15 +554,15 @@ will result in:
 {.dense}
 
 
-## Task Lists
+## 任务清单
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using the syntax `- [ ]` or a `- [x]`.
 
-#### Examples
+#### 示例
 
 ```
 - [x] Checked task item
@@ -574,18 +574,18 @@ Using the syntax `- [ ]` or a `- [x]`.
 - [x] Another checked task item
 - [ ] Unchecked task item
 
-## Unordered Lists
+## 无序列表
 
 ### Tab {.tabset}
 
-#### Usage
+#### 用法
 
 Using an **asterisk** or a **dash** symbol, followed by a space, before each line of text.
 
-#### Shortcuts
+#### 快捷方法
 - By selecting text, then clicking the ![Blockquote](/assets/ui/ui-markdown-ul.png =x30){.radius-4} button in the toolbar.
 
-#### Examples
+#### 示例
 
 ```
 - Lorem ipsum dolor sit amet
@@ -597,7 +597,7 @@ Using an **asterisk** or a **dash** symbol, followed by a space, before each lin
 - Consectetur adipiscing elit
 - Morbi vehicula aliquam
 
-#### Stylings
+#### 样式
 
 By adding a class on a separate line, after the list, you can change the look of the list:
 
