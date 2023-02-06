@@ -1,50 +1,51 @@
 ---
-title: Translations
-description: Contribute a new language or test new keys
+title: 翻译
+description: 贡献新语言或测试新语言键
 published: true
-date: 2020-05-17T06:05:42.143Z
-tags: dev, localization
+date: 2023-02-06T03:24:52.240Z
+tags: dev, localization, 本地化, 开发
+editor: markdown
+dateCreated: 2023-01-08T10:35:17.685Z
 ---
 
-# Contribute a new / existing language
+# 贡献新/现有语言
 
-We are always looking for translation contributors to make Wiki.js accessible in as many language as possible!
+我们一直在寻找翻译贡献者，以使Wiki.js支持尽可能多的语言！
 
-You can join our Lokalise project below to gain access to the translation tools. No coding required! Feel free to contact us on [Slack](https://wiki.requarks.io/slack) if you have any questions!
+您可以加入下面的Lokalise项目以获取翻译工具。无需编写代码！如果您有任何问题，请随时在[Slack](https://wiki.requarks.io/slack)上与我们联系！
 
-> **Only select the language(s) you're going to actively contribute to!** Users that select too many or all languages at once will be removed.
+> **请只选择您将会积极参与贡献的语言！** 同时选择过多或所有语言的用户将被删除。
 {.is-warning}
 
 [![btn-join-the-project.png](/assets/buttons/btn-join-the-project.png)](https://lokalise.com/public/2994254859f751ea605a00.03473540/)
 
-If you can't find your language in the list, contact us on [Slack](https://wiki.requarks.io/slack) and we'll add it!
+如果您在列表中找不到您的语言，请在[Slack](https://wiki.requarks.io/slack)上与我们联系，我们会添加这个语言！
 
-# View latest changes on your wiki
+# 查看wiki上的最新更改
 
-There're various layers of cache before changes made to translations become visible in your wiki:
+对翻译所做的更改在您wiki中出现之前，需要途径各种缓存层：
 
-- The Requarks GraphQL server caches translations **every 5 minutes**.
-- Your wiki installation fetches changes from the Requarks GraphQL server **every 24 hours**.
-- If you're using offline sideloading, [locale files](https://github.com/Requarks/wiki-localization) are updated every day at **12:00 AM Eastern Standard Time (EST)**.
+- Reguarks GraphQL服务端**每5分钟**缓存一次翻译。
+- 您的wiki实例**每24小时**从Requarks GraphQL服务端获取一次更改。
+- 如果您使用离线侧载， [语言文件](https://github.com/Requarks/wiki-localization) 将在每天**东部标准时间（EST）上午12：00**更新。
 
-It's possible to force changes to be fetched immediately by restarting your Wiki.js instance. A job to fetch updated translations will start immediately after initialization. *Note that you must still wait the 5 minutes delay from the Requarks GraphQL server before seeing any updates.*
+您可以通过重新启动Wiki.js实例强制立即获取更改。获取新翻译的job将在初始化后立即启动。*请注意，您需要等待Reguarks GraphQL服务端的5分钟缓存过期后才能看到更改。*
 
-> **Browser Cache**
+> **浏览器缓存**
 >
-> Translations are kept in the browser cache for 24h. Even though your Wiki.js instance could have the latest changes, you will not see them until the browser cache expires. You can flush this cache from the **Administration Area** > **Utilities** > **Flush Cache** > **Flush Client-Side Locale Cache**.
+> 翻译在浏览器缓存中保存24小时。尽管Wiki.js实例可能有最新的更改，但在浏览器缓存过期之前，您将无法看到这些更改。您可在  **管理区** > **其它** > **刷新缓存** > **刷新客户端语言缓存**.
 {.is-info}
 
-# How contributions are selected
+# 如何选择贡献的翻译版本
 
-Since multiple users can contribute to the same language, the following process is used:
+由于多个用户可以贡献同一种语言，因此使用以下过程来选择翻译版本：
 
-- The edit with the most votes will be used;
-- Otherwise, the most recent edit will be used;
+- 使用投票最多的翻译版本。
+- 否则，使用最后编辑的翻译版本。
 
+# 开发模式
 
-# Development Mode
-
-If you need to add new keys and test them live in your dev environment, simply create a {LANG}.yml file in the `server/locales` folder containing the values you want to test. e.g.:
+如果您需要添加新键并在开发环境中实时测试，只需在`server/locales`目录中创建一个包含要测试的值的{LANG}.yml文件即可，例如：
 
 ### en.yml
 ```yml
@@ -53,6 +54,6 @@ admin:
   auth.title: 'Authentication'
 ```
 
-The official localization keys will still be loaded first, but your local files will overwrite any existing keys (and add new ones).
+官方语言键仍将首先加载，但本地文件将覆盖所有现有键（并添加新键）。
 
-Note that you must restart Wiki.js to load any changes made to the files, which happens automatically on save when in dev mode.
+请注意，必须重新启动Wiki.js才能加载对文件所做的任何更改，在开发模式下保存文件时会自动重启。
