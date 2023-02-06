@@ -1,17 +1,19 @@
 ---
-title: Visual Editor
-description: Rich-Text WYSIWYG Editor
+title: 可视编辑器
+description: 富文本所见即所得编辑器
 published: true
-date: 2019-11-10T21:39:22.167Z
-tags: editors
+date: 2023-02-06T04:08:24.267Z
+tags: editors, 编辑器
+editor: markdown
+dateCreated: 2023-01-08T10:35:29.572Z
 ---
 
-# Overview
+# 概述
 
-The Visual Editor is perfect for non-technical users who prefer a direct visual representation of what they are writing. It's based on the popular [CKEditor 5](https://ckeditor.com/) software.
+可视化编辑器非常适合非技术用户，他们更喜欢直接直观地表示他们正在编写的内容。它基于流行的[CKEditor 5](https://ckeditor.com/)软件。
 
-# User Guide
+# 用户指南
 
 All formatting is done via the toolbar located above the editing area.
 
-*-- Coming Soon --*
+*-- 即将到来 --*
