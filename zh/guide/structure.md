@@ -1,68 +1,68 @@
 ---
-title: Folder Structure & Tags
-description: Learn how to categorize your pages for easier navigation.
+title: 目录结构 & 标签
+description: 了解如何对页面进行分类以便于导航。
 published: true
-date: 2022-05-26T07:30:51.103Z
-tags: user-guide
+date: 2023-02-07T14:04:17.761Z
+tags: user-guide, 用户指南
 editor: markdown
-dateCreated: 2019-11-10T18:15:56.841Z
+dateCreated: 2023-01-08T10:35:40.771Z
 ---
 
-# Folder Structure
+# 目录结构
 
-Wiki.js doesn't have a folder structure in the traditional sense. You never need to create folders in order to create new pages. Instead, you create pages directly at the path of your choice.
+Wiki.js没有传统意义上的目录结构。您不需要先创建目录再创建新页面。相反，您可以直接在您选择的路径上创建页面。
 
-For example, in order to create a page at `/universe/planets/earth`, you don't need to create the folders `universe` and `planets` in the first place. They'll be inferred automatically.
+例如，为了在/universe/planets/earth上创建页面，您不需要首先创建universe和planet目录。它们将被系统自动推断。
 
-![Folder Structure](/assets/diagrams/diag-folder-structure.jpg =650x){.decor-shadow .radius-5}
+![目录结构](/assets/diagrams/diag-folder-structure.jpg =650x){.decor-shadow .radius-5}
 
-This system allows for greater flexibility and less dependencies between pages. However that doesn't mean you can't use a traditional folder system should you want to. The folder structure is still available when creating and moving pages. The only difference being you don't have to manage folders, they are inferred automatically from pages paths.
+这种系统具有更大的灵活性和更少的页面之间的依赖性。然而，这并不意味着你不能使用传统的目录系统。在创建和移动页面时，目录结构仍然可用。唯一的区别是不必管理目录，它们是从页面路径自动推断出来的。
 
-## Breadcrumbs
+## 面包屑导航
 
-The breadcrumbs bar shown on top of every page is generated automatically from the path.
+显示在每个页面顶部的面包屑导航条是根据路径自动生成的。
 
-## Nesting
+## 嵌套
 
-When creating multi-level pages, you may want to have a landing page for each of the virtual folders.
+在创建多级页面时，您可能希望每个虚拟目录都有一个对应页面。
 
-For example, if you have a page at path `/foo/bar`, you should create a new page at path `/foo`. This will ensure that clicking the "**foo**" breadcrumbs link on the `/foo/bar` page leads to the `/foo` page.
+例如，如果您有一个位于路径`/foo/bar`的页面，则应该在路径`/foo`创建一个新页面。这酱确保单击`/foo/bar`页面上的“**foo**”面包屑链接会指向`/foo`页面。
 
-If you're using the **Site Tree** navigation mode (or **Custom Navigation**), the page title for each level is taken from its corresponding page.
+如果您使用的是**站点树**导航模式（或**自定义导航**），则每个级别的页面标题都取自相应的页面。
 
-### Nesting Example
+### 嵌套示例
 
-For example, by creating the following pages:
+例如，创建如下页面：
 
-- Page at path `/universe` with title "*The Universe*"
-- Page at path `/universe/planets` with title "*The Planets*"
-- Page at path `/universe/planets/earth` with title "*The Blue Marble*"
+- 位于路径 `/universe`，标题为 "*The Universe*" 的页面
+- 位于路径 `/universe/planets` ，标题为 "*The Planets*" 的页面
+- 位于路径 `/universe/planets/earth` ，标题为 "*The Blue Marble*" 的页面
 
-would create a site tree with the following entries:
+系统将创建包含以下条目的站点树：
 - **The Universe**
 	- **The Planets**
   		- **The Blue Marble**
       
-On "*The Blue Marble*" page, you would have a breadcrumb similar to:
+在 "*The Blue Marble*" 页面中，你将看到这样的面包屑导航：
 
 *:*{.mdi .mdi-home} / **universe** / **planets** / **earth**
 
-with each link corresponding to the 3 pages created above.
+每一级导航对应上面创建的页面。
 
-# Tags
+# 标签
 
-Tags are a great way to categorize your pages and easily find related content. They are a much leaner alternative to using a complex system of folders to categorize your content. Tags are simple labels attached to a page.
+标签是对页面进行分类并轻松查找相关内容的好方法。与使用复杂的目录系统对内容进行分类相比，它们是一种更精简的选择。标记是附加到页面的简单标签。
 
-## Set Tags
+## 设定标签
 
-Multiple tags can be added to a page.
+同一页面可以添加多个标签。
 
-For example, for a page about the city **Montreal**, you could add tags `cities`, `canada`, `north-america`. These tags can then be used to quickly find the page afterwards. By browsing by tags `canada` and `cities`, the page **Montreal** will come up in the results because both of these tags are present on the page.
+例如，对于关于城市**蒙特利尔**的页面，您可以添加标签`城市`、`加拿大`、`北美`。然后可以使用这些标记来快速查找页面。通过按标签`加拿大`和`城市`浏览，结果中会出现**蒙特利尔**页面(因为这两个标签都出现在页面上)。
 
-More tags can be added or removed from a page at any time.
+您还可以随时向页面添加更多标签或移除标签。
 
-## Browse Tags
+## 浏览标签
 
-Use the **Browse by Tags** link (located next to the search bar, or in the navigation menu) to see a list of all tags available in the wiki.
+使用**按标签浏览**链接（位于搜索栏旁边或导航菜单中）查看wiki中所有可用标签的列表。
 
-Select one or multiple tags to view a list of pages matching the selection.
+选择一个或多个标签以查看与所选标签匹配的页面列表。
