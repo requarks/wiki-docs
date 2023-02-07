@@ -1,65 +1,66 @@
 ---
-title: Media Assets
-description: Add images and documents to your pages
+title: 媒体资源
+description: 向你的页面添加图片与文档
 published: true
-date: 2019-11-11T19:26:42.333Z
+date: 2023-02-07T15:49:56.432Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:35:32.290Z
 ---
 
-# Basics
+# 基本操作
 
-All editors have a button to open the Assets dialog. Refer to the documentation of each [editor](/editors) for more information.
+所有编辑器都有一个按钮来打开“资源”对话框。有关详细信息，请参阅每个[编辑器](/editors)的文档。
 
-![Assets Dialog](/assets/ui/ui-assets-dialog.png =750x){.elevation-3 .radius-5}
+![资源对话框](/assets/ui/ui-assets-dialog.png =750x){.elevation-3 .radius-5}
 
-The assets can be of any file type; images, documents, zip, etc.
+资源可以是任何类型的文件；图像、文档、zip压缩文件等。
 
-Images will automatically be displayed as images while other file types will simply display a standard link.
+图像将自动显示为图片，而其他文件类型仅显示标准链接。
 
-## Upload an Asset
+## 上传资源
 
-Use the **Upload Assets** section to upload new assets. You can either click on **Browse...** button, on the grey area just below or by drag-n-drop files onto the grey area directly.
+使用**上传资源**部分上传新资源。您可以单击**浏览...** 按钮或直接将文件拖放至灰色区域。
 
-Once ready, click the **Upload** button to initiate the upload for all files.
+准备好后，点击**上传**按钮来启动所有文件的上传。
 
-## Use an Asset
+## 使用资源
 
-Select the asset you want to insert, then click the **Insert** button.
+选择你要插入的资源，然后点击**插入**按钮。
 
-### Image Alignment
+### 图片对齐
 
-When inserting an image, you can also set a specic alignment using the **Image Alignment** dropdown menu (to the right of dialog).
+插入图片时，还可以使用**图片对齐**下拉菜单（对话框右侧）设置特定对齐。
 
-- **Left**: Align to the left of the page.
-- **Centered**: Align to the center of the page.
-- **Right**: Align to the right of the page.
-- **Absolute Top Right**: Display as a logo in the top-right corner of the page.
+- **左对齐**: 对齐页面左侧。
+- **居中**: 对齐页面中央。
+- **右对齐**: 对齐页面右侧。
+- **页面右上角绝对对齐**: 在页面右上角作为页面徽标显示。
 
-## Manage an Asset
+## 管理资源
 
-![Manage an Asset](/assets/ui/ui-assets-manage.png =750x){.elevation-3 .radius-5}
+![管理资源](/assets/ui/ui-assets-manage.png =750x){.elevation-3 .radius-5}
 
-To perform any action on an asset, such as rename, delete or edit, click on the <kbd>...</kbd> button to the right of the asset list item. A dropdown menu will appear with all possible actions.
+要对资源执行任何操作，如重命名、删除或编辑，请单击对应资源右侧的<kbd>...</kbd>按钮。下拉菜单将显示所有可能的操作。
 
-*Note that disabled actions are not yet available and are coming in a future release.*
+*请注意，灰色（禁用）的操作尚不可用，将在将来的版本中提供*
 
-# Asset Folders
+# 资源文件夹
 
-## Create an Asset Folder
+## 创建资源文件夹
 
-Click on the **New Folder** button, located at the top of the assets dialog. Enter a new name that respects the naming restrictions listed below.
+单击位于资源对话框顶部的**新建文件夹**按钮。输入一个符合下面列出的命名限制的新名称。
 
-## Manage Asset Folders
+## 管理资源文件夹
+*-- 即将支持 --*
 
-*-- Coming soon --*
+## 命名限制
 
-## Naming Restrictions
+文件夹名称必须遵守以下规则：
 
-Folders must respect these naming rules:
-
-- No spaces allowed.
-- No uppercase latin characters.
-- No special characters with the exception of dash `-` and underscore `_`.
-- Must be at least 2 characters in length.
-- Cannot consist of only latin letters (A-Z) in the pattern `ZZ` or `ZZ-ZZ` (reserved for locales).
-- Cannot start or end with a special character.
+- 不允许出现空格
+- 不允许大写拉丁字符
+- 除英文破折号 `-` 和下划线外 `_`，不允许其它特殊字符
+- 长度必须至少为2个字符
+- 当名称符合样式`ZZ` 或 `ZZ-ZZ` (语言保留样式)时，不能只包含拉丁字母（A-Z).
+- 不能以特殊字符开头或结尾。
