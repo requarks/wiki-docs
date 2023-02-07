@@ -2,7 +2,7 @@
 title: Wiki.js简介
 description: 教你创建第一页等
 published: true
-date: 2023-02-07T14:34:11.953Z
+date: 2023-02-07T15:17:05.150Z
 tags: user-guide, 用户指南
 editor: markdown
 dateCreated: 2023-01-08T10:35:35.169Z
@@ -36,38 +36,38 @@ dateCreated: 2023-01-08T10:35:35.169Z
 要创建新页面，请单击页面右上角的**新建页面**按钮。
 
 系统将弹出如下对话框：
-![New Page Dialog](/assets/ui/ui-newpage-dialog.png =600x){.elevation-3 .radius-5}
+![新建页面对话框](/assets/ui/ui-newpage-dialog.png =600x){.elevation-3 .radius-5}
 
-1. Select the language to create the page for *(the current locale is selected by default)*.
-2. Enter the full path to the page you want to create.
-	- The path should contain no spaces *(use dashes instead)*, no periods and consists of URL-safe characters.
-  	- **DO NOT** put a trailing slash.
-  	- You don't need to create folders. Enter the full path you want to create and folders will be created automatically. For example, enter `universe/planets/earth` to automatically create the universe and planets subfolders.
-3. Click **Select** to proceed.
+1. 选择要新建的页面的语言 *(默认为当前语言)*.
+2. 输入要创建的页面的完整路径。
+	- 路径不能含有空格 *(请改用破折号)*, 无句点，且由URL安全字符组成
+  	- **请勿** 在路径结尾添加斜杠。
+  	- 您不需要创建目录。输入要创建的完整路径，系统将自动创建目录。例如，输入`宇宙/行星/地球`以自动创建宇宙和行星子文件夹。
+3. 点击 **选择** 以继续。
 
-## Select an Editor
+## 选择编辑器
 
-When creating a new page, you'll be prompted with the following dialog:
+创建新页面时，系统弹出以下对话框：
 
-![Select Editor Dialog](/assets/ui/ui-selecteditor-dialog.png =600x){.elevation-3 .radius-5}
+![编辑器选择对话框](/assets/ui/ui-selecteditor-dialog.png =600x){.elevation-3 .radius-5}
 
-Wiki.js offers various editors depending on the type of content you want to write or simply user preference. Developers will usually go with the Markdown editor while non-technical users may prefer the Visual Editor.
+Wiki.js提供了各种编辑器，编辑器的选择具体取决于您要编写的内容类型或用户偏好。开发人员通常使用Markdown编辑器，非技术用户可能更喜欢可视编辑器。
 
-For a complete list of editors and how to use them, refer to the [Editors](/editors) section.
+有关编辑器的完整列表及如何使用，请参阅[编辑器](/editors)部分。
 
-## Enter Page Metadata
+## 输入页面元信息
 
-Upon selecting an editor, you'll be prompted with the Page Metadata dialog:
+选择好编辑器后，系统会弹出页面元信息对话框：
 
-![Page Metadata Dialog](/assets/ui/ui-pageprops-dialog.png =600x){.elevation-3 .radius-5}
+![页面元信息对话框](/assets/ui/ui-pageprops-dialog.png =600x){.elevation-3 .radius-5}
 
-Enter a **title**, **description** and **tags** for your page.
+输入你要新建的页面的**标题**、**描述**和**标签**。
 
-Finally, click **OK** to close the dialog and start writing!
+最后，点击**确定**来关闭对话框并开始写作！
 
-> You can always return to the Page Metadata dialog later by clicking the **Page** button, located in the upper-right corner of the page.
+> 你始终可以单击位于右上角的**页面**按钮，返回页面元数据对话框。
 {.is-info}
 
-## Save
+## 保存
 
-Your page is not created until you hit the **Create** button (located in the upper-right corner of the page). It will be saved and rendered, after which you'll automatically be redirected to the final result. Simply click the edit button to go back to editing!
+在单击**创建**按钮（位于页面右上角）之前，系统不会创建页面。单击后页面将被保存和渲染，之后将自动跳转到最终结果。只需单击编辑按钮即可返回编辑！
