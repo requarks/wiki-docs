@@ -2,7 +2,7 @@
 title: 目录结构 & 标签
 description: 了解如何对页面进行分类以便于导航。
 published: true
-date: 2023-02-07T14:04:17.761Z
+date: 2023-02-07T15:59:39.703Z
 tags: user-guide, 用户指南
 editor: markdown
 dateCreated: 2023-01-08T10:35:40.771Z
@@ -12,7 +12,7 @@ dateCreated: 2023-01-08T10:35:40.771Z
 
 Wiki.js没有传统意义上的目录结构。您不需要先创建目录再创建新页面。相反，您可以直接在您选择的路径上创建页面。
 
-例如，为了在/universe/planets/earth上创建页面，您不需要首先创建universe和planet目录。它们将被系统自动推断。
+例如，为了在`/universe/planets/earth`上创建页面，您不需要首先创建`universe`和`planet`目录。它们将被系统自动推断。
 
 ![目录结构](/assets/diagrams/diag-folder-structure.jpg =650x){.decor-shadow .radius-5}
 
