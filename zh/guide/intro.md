@@ -1,39 +1,41 @@
 ---
-title: Introduction to Wiki.js
-description: How to create your first page and more
+title: Wiki.js简介
+description: 教你创建第一页等
 published: true
-date: 2020-03-22T23:59:08.462Z
-tags: user-guide
+date: 2023-02-07T14:34:11.953Z
+tags: user-guide, 用户指南
+editor: markdown
+dateCreated: 2023-01-08T10:35:35.169Z
 ---
 
-# The Interface
+# 界面
 
-![Interface](/assets/ui/ui-basics.jpg){.decor-radius .decor-shadow}
+![界面](/assets/ui/ui-basics.jpg){.decor-radius .decor-shadow}
 
-### Global
-- **Global Navigation** - A persistent navigation menu, displayed on all pages. Usually consists of important pages or links to external websites.
-- **Global Search** - Quickly find a page by performing a search.
-- **Create New Page** - Create a new page.
-- **User Menu** - User-specific actions such as View Profile, Administration and Logout.
+### 全局组件
+- **全局导航** - 固定导航菜单，显示在所有页面上。通常由重要页面或指向外部网站的链接组成。
+- **全局搜索** - 通过执行搜索快速查找页面。
+- **创建新页面** - 创建一个新页面。
+- **用户菜单** - 特定于用户的操作，如查看配置文件、管理和注销。
 {.grid-list .body-2}
 
-### Per Page
-- **Page Actions** - List of actions on the current page, such as Edit, Move, Delete, History, etc.
-- **Breadcrumbs** - Full Path to the current page. Represents the folder structure.
-- **Table of Contents** - Sections of the current page. Based on the headers in the content.
-- **Page Tags** - Tags associated to the current page. See related pages by clicking on a tag.
-- **Author** - View the author and date of the last modification of the page.
-- **Social Links** - Sharing / Printing Links for the current page.
-- **Edit Page / Page Actions** - Quick access menu to edit or perform other actions on the current page.
+### 页面组件
+- **页面操作** - 当前页面上的操作列表，如编辑、移动、删除、历史记录等。
+- **面包屑导航** - 当前页面的完整路径。表示目录结构。
+- **目录** - 页面各部分导航，基于内容中的标题。
+- **页面标签** - 与当前页面关联的标签。单击标签可查看相关页面。
+- **作者** - （点击可以）查看页面的作者和上次修改日期。
+- **社交链接** - 分享/打印当前页面的链接。
+- **编辑页面/页面操作** - 快速访问菜单，用于在当前页面上编辑或执行其他操作。
 {.grid-list .body-2}
 
-# Basics
+# 基础操作
 
-## Create New Page
+## 创建新页面
 
-In order to create a new page, click the **New Page** button, located in the top right corner of the page.
+要创建新页面，请单击页面右上角的**新建页面**按钮。
 
-The following dialog will appear:
+系统将弹出如下对话框：
 ![New Page Dialog](/assets/ui/ui-newpage-dialog.png =600x){.elevation-3 .radius-5}
 
 1. Select the language to create the page for *(the current locale is selected by default)*.
