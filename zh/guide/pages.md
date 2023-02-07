@@ -1,74 +1,74 @@
 ---
-title: Pages
-description: Create and edit content
+title: 页面
+description: 创建和编辑内容
 published: true
-date: 2020-05-15T17:55:58.198Z
+date: 2023-02-07T16:05:38.473Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:35:37.988Z
 ---
 
-# Create a Page
+# 创建页面
 
-There're multiple ways to create a new pages:
+您可以通过多种方式来创建新页面。
 
-- From the **New Page** button, located at the top-right corner of the page.
-- By clicking a link pointing to a non-existing page.
-- Manually type the path in the browser address bar.
+- 单击位于页面右上角的 **新建页面** 按钮。
+- 单击指向不存在页面的链接。
+- 手动在浏览器地址栏打出要创建的页面的路径。
 
-Check out the [Basics](/guide/intro) guide on how to create your first page step-by-step.
+查看 [Wiki.js简介](/guide/intro) 了解如何逐步创建您的第一个页面。
 
+# 编辑页面
 
-# Edit a Page
+您可以通过单击任何页面右下角的**铅笔**图标或使用位于页面右上角的**页面菜单**来编辑现有页面。
 
-You can edit an existing page by clicking the **Pencil** icon at the bottom-right corner of any page or using the **Page Menu**, located at the top-right corner of the page.
+首次创建页面时选择的编辑器将自动加载。请注意，一旦创建了页面，就不可能更改编辑器。
 
-The editor selected when first creating the page will be loaded automatically. Note that it's not possible to change editor once a page is created at the moment.
+# 目录
 
-# Folders
+Wiki.js没有传统意义上的目录结构。您不需要先创建目录再创建新页面。相反，您可以直接在您选择的路径上创建页面。
 
-Wiki.js doesn't rely on a traditional folder structure to organize pages. Instead, the path of the page is used.
+例如，在传统系统中，为了在`宇宙/行星/地球`上创建页面，您需要首先创建一个目录`宇宙`，然后打开该目录并创建一个名为`行星`的子目录，最后才能在其中创建名为`地球`的页面。
 
-For example, on a traditional system, in order to create a page at `universe/planets/earth`, you'd need to first create a folder `universe`, then open this folder and create a sub-folder named `planets` to finally be able to create a page inside named `earth`.
+在Wiki.js中，你可以直接在路径`宇宙/行星/地球`上创建页面，`universe`和`planet`目录将被系统自动推断，但它们并不真正存在于页面路径上下文之外。因此，您不必管理目录，而可以只关注页面所需的路径。
 
-In Wiki.js, you can directly create a page at path `universe/planets/earth`. Folders `universe` and `planets` will be automatically inferred, but they don't really exist outside of the page path context. Therefore, you don't have to manage folders and you can instead focus solely on the path you want for your pages.
+因此，没有创建目录的选项。您只需键入所需的完整路径。系统将在创建时自动推断目录。
 
-For this reason, there's no option to create folders. Simply type the full path you want. Folders will be inferred automatically upon creation.
+详细信息参见[目录结构 & 标签](/guide/structure)。
 
-Check out the [Folder Structure & Tags](/guide/structure) guide for more details.
+# 命名限制
+以下路径不能用于内容，而是保留给系统使用。
 
-# Naming Restrictions
+## 单字符页面
 
-The following paths cannot be used for content and are reserved for system use.
+**所有**单字符路径都是保留路径，以便访问Wiki的各个部分：
 
-## Single-character pages
-
-**All** single character paths are reserved to access various parts of the Wiki:
-
-- `a`: Administration Area
-- `c`: Comments
-- `e`: Page Editor
-- `f`: Assets Manager
-- `h`: Page History
-- `i`: Browse Page by ID
-- `p`: User Profile
-- `s`: Page Source
-- `t`: Tags
-- `u`: Upload Endpoint *(API)*
-- `w`: Personal Wiki
+- `a`: 管理区
+- `c`: 评论
+- `e`: 页面编辑器
+- `f`: 资源管理器
+- `h`: 页面历史
+- `i`: 按id浏览页面
+- `p`: 用户个人资料
+- `s`: 页面源代码
+- `t`: 标签
+- `u`: 上传Endpoint *(API)*
+- `w`: 个人Wiki
 {.grid-list}
 
-## IETF Language tags
+## IETF 语言标签
 
-Language tags in the formats listed below are reserved to specify the locale namespace to use.
+以下格式的语言标记保留用于指定要使用的语言环境命名空间。
 
-- Two-letter language code (e.g. `en`, `fr`)
-- Country specific locale code (e.g. `en-us`, `fr-ca`)
+- 双字母语言代码 (如： `en`, `fr`)
+- 特定于国家/地区的区域设置代码 (如： `en-us`, `fr-ca`)
 {.grid-list}
 
-## Words
+## 单词
 
-Paths cannot match exactly the terms below or be the first part of path. For example, `register` or `register/test` are not valid paths, but `registering` is fine.
+路径不能与下面的术语完全匹配，也不能是路径的第一部分。例如，`register`或`register/test`不是有效路径，但`registering`是有效路径。
 
-### 2.4 and later
+### 2.4 及以上版本
 
 - _assets
 - favicon *\[.ico]*
@@ -80,7 +80,7 @@ Paths cannot match exactly the terms below or be the first part of path. For exa
 - register
 {.grid-list}
 
-### 2.0 to 2.3
+### 2.0 到 2.3 版本
 
 - browserconfig *\[.xml]*
 - css
@@ -99,10 +99,10 @@ Paths cannot match exactly the terms below or be the first part of path. For exa
 - svg
 {.grid-list}
 
-## Illegal Characters
+## 非法字符
 
-Paths cannot contain the following characters:
+路径不能包含以下字符：
 
-- Space *(use dashes instead)*
-- Period *(reserved for file extensions)*
-- Unsafe URL characters *(such as punctuation marks, quotes, math symbols, etc.)*
+- 空格 *(请以英文破折号代替)*
+- 句点 *(为文件拓展名保留)*
+- 不安全的 URL 字符 *(例如标点符号、引号、数学符号等。)*
