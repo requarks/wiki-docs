@@ -1,8 +1,8 @@
 ---
-title: Installation
-description: How to install Wiki.js
+title: 安装
+description: 如何安装Wiki.js
 published: true
-date: 2023-02-08T01:01:24.543Z
+date: 2023-02-08T01:02:02.522Z
 tags: setup
 editor: markdown
 dateCreated: 2023-01-08T10:33:33.587Z
