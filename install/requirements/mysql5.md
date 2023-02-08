@@ -1,21 +1,23 @@
 ---
-title: MySQL 5.7 Notice
+title: MySQL 5.7 注意事项
 description: Limited support for this MySQL version
 published: true
-date: 2019-05-27T02:00:03.838Z
+date: 2023-02-08T01:30:04.768Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:37:17.593Z
 ---
 
-# Affected versions
+# 受影响的版本
 
-- MySQL **5.7.8** and up in the 5.7.x range.
+- MySQL**5.7.8**以及5.7.x范围内的更高版本。
 
-# Limited Functionality
+# 有限功能
 
-## Uploads
+## 上传
 
-Uploading assets is only possible in the root folder. It's not possible to upload files in a folder or nested folders. Doing so will result in an error at upload time.
+只能在根目录中上传资源。无法上传目录或嵌套目录中的文件。这样做将导致上传时出错。
 
-# Cause
+# 原因
 
-MySQL 5.7.x does not support the `WITH RECURSIVE` expression, which is required to fetch the folder hierarchy. This expression was introduced in version 8.0.
+MySQL 5.7.x不支持提取目录层次结构所需的`WITH RECURSIVE`表达式。此表达式在8.0版=版本中引入。
