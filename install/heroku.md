@@ -1,31 +1,30 @@
 ---
 title: Heroku
-description: Getting started with a Wiki.js installation on Heroku
+description: 在Heroku上安装Wiki.js
 published: true
-date: 2021-03-01T06:39:40.092Z
-tags: setup
+date: 2023-02-09T04:56:43.630Z
+tags: setup, 安装
 editor: markdown
-dateCreated: 2019-05-04T04:37:42.209Z
+dateCreated: 2023-01-08T10:36:01.197Z
 ---
 
-Heroku is a popular platform to quickly run any type of web application.
-
-A preconfigured deploy template is provided for convenience:
+Heroku是一个流行的平台，可以快速运行任何类型的web应用程序。
+为方便起见，提供了预配置的部署模板：
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/requarks/wiki-heroku/tree/2.x)
 
-# Important Notes
+# 重要提示
 
-- The deployment template will use the default PostgreSQL plan, which is the Hobby Dev (free) plan. You can upgrade to a larger plan afterwards as detailed in the [Heroku docs](https://devcenter.heroku.com/articles/updating-heroku-postgres-databases). Another option is to clone the [wiki-heroku](https://github.com/Requarks/wiki-heroku/tree/2.x) repository and edit the manifest to use the specific plan you need.
-- While the initial deployment is extremely quick and easy, **upgrading to a new version is not**. You'll need to push a new commit to your app git repo in order to trigger a new build. Unless you are comfortable with the Heroku workflow for deployments, you may want to look into alternative hosting solutions instead.
-- The free dyno plan (default) will "sleep" after 30 mins of inactivity. The first page load after such event will take several seconds to complete, as it must spin a new instance. Upgrade to a paid dyno plan to remove this limitation.
-- The database endpoint must be provided as `DATABASE_URL` environment variable to the app (default).
+- 部署模板将使用默认的PostgreSQL计划，即Hobby Dev（免费）计划。之后，您可以根据[Heroku文档](https://devcenter.heroku.com/articles/updating-heroku-postgres-databases)升级到更大的计划。另一个选项是克隆wiki heroku存储库并编辑清单文件，以使用您需要的特定计划。
+- 虽然最初的部署非常快速和简单，但**升级到新版本却不是这样**。您需要向应用程序的git仓库推送新的提交，以便触发新的构建。除非您熟悉Heroku部署工作流，否则您可能需要寻找替代的托管解决方案。
+- 免费dyno计划（默认）将在30分钟不活动后“休眠”。此类事件后的第一个页面加载将需要几秒钟才能完成，因为它必须生成一个新实例。升级到付费dyno计划以删除此限制。
+- 数据库endpoint必须作为`DATABASE_URL`环境变量提供给应用程序（默认）。
 
-# DB Connection Bug
+# 数据库连接Bug
 
-A Heroku-specific bug preventing Wiki.js from connecting to the database by default. The root cause has not yet been identified.
+默认情况下，一个特定于Heroku的错误阻止Wiki.js连接到数据库。根本原因尚未查明。
 
-A workaround, which involves downgrading the database to PostgreSQL 10, is provided in this ticket:
+此issue中提供了一种解决方法，包括将数据库降级到PostgreSQL 10：
 
 https://github.com/Requarks/wiki/issues/2949#issuecomment-773412440
 
