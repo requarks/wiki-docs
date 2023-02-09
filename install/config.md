@@ -1,43 +1,43 @@
 ---
-title: Configuration
-description: Detailed configuration options for Wiki.js
+title: 配置
+description: Wiki.js的详细配置选项
 published: true
-date: 2021-02-22T18:32:32.630Z
+date: 2023-02-09T03:07:40.821Z
 tags: 
 editor: markdown
-dateCreated: 2020-01-12T21:12:06.291Z
+dateCreated: 2023-01-08T10:35:49.445Z
 ---
 
-A config file, named `config.yml`, must be located at the root of your Wiki.js installation.
+Wiki.js的配置文件名为`config.yml`，必须位于Wiki.js安装的根目录下。
 
-> **Note:** If you downloaded Wiki.js as a zip / tar.gz package, you must rename the file `config.sample.yml` to `config.yml`
+> **注意:** 如果你下载的是Wiki.js的zip/tar.gz压缩包，则必须将文件`config.sample.yml`重命名为`config.yml`。
 {.is-info}
 
-Listed below are all the possible options that can be entered in your `config.yml` file.
+下面列出了可以在`config.yml`文件中输入的所有可选项。
 
-# Basics
+# 基础设置
 
-The configuration settings in the basics section are **required** and must be defined in your config.yml file.
+基础设置中的配置是**必需设置的**，必须在config.yml文件中定义。
 
 ## HTTP
 
-Specify the port the HTTP server will listen on. This is usually `80` for a standalone server that is directly accessible or `3000` if behind a reverse-proxy.
+指定HTTP服务器将侦听的端口。对于可直接访问的独立服务器，该端口通常为`80`，如果是反向代理，则为`3000`。
 
 ```yml
 port: 3000
 ```
 
-Note that if you choose to listen directly on port `80`, some operating systems requires special permissions to be enabled first. An error will be displayed when starting Wiki.js if that is the case.
+请注意，如果您选择在端口`80`上直接侦听，某些操作系统需要先启用特殊权限。如果权限不足，启动Wiki.js时将显示一个错误。
 
-## Database
+## 数据库
 
-Wiki.js requires one of the many [supported database engines](/install/requirements#database).
+Wiki.js 需要一个在 [受支持的数据库](/install/requirements#database) 列表中的数据库。
 
 ### Tabset {.tabset}
 
 #### PostgreSQL
 
-> **PostgreSQL** is the recommended engine for best performance, features and future compatibility.
+> **PostgreSQL**（推荐使用）是性能、功能和未来兼容性最佳的引擎。
 {.is-success}
 
 ```yml
@@ -49,9 +49,9 @@ db:
   pass: wikijsrocks
   db: wiki
 ```
-**Notes**:
-- The database must already be created. Wiki.js will **not** create it for you.
-- If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
+**注意**:
+- 数据库必须已创建。Wiki.js**不会**为您创建它。
+- 如果数据库需要SSL连接，请检查[通过SSL连接的数据库](#database-over-ssl)部分。
 
 #### MySQL
 
@@ -64,9 +64,9 @@ db:
   pass: wikijsrocks
   db: wiki
 ```
-**Notes**:
-- The database must already be created. Wiki.js will **not** create it for you.
-- If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
+**注意**:
+- 数据库必须已创建。Wiki.js**不会**为您创建它。
+- 如果数据库需要SSL连接，请检查[通过SSL连接的数据库](#database-over-ssl)部分。
 
 #### MariaDB
 
@@ -79,9 +79,9 @@ db:
   pass: wikijsrocks
   db: wiki
 ```
-**Notes**:
-- The database must already be created. Wiki.js will **not** create it for you.
-- If your database requires an SSL connection, check the [Database over SSL](#database-over-ssl) section.
+**注意**:
+- 数据库必须已创建。Wiki.js**不会**为您创建它。
+- 如果数据库需要SSL连接，请检查[通过SSL连接的数据库](#database-over-ssl)部分。
 
 #### MS SQL Server
 
@@ -95,12 +95,12 @@ db:
   db: wiki
 ```
 
-**Notes**:
-- The database must already be created. Wiki.js will **not** create it for you.
+**注意**:
+- 数据库必须已创建。Wiki.js**不会**为您创建它。
 
 #### SQLite
 
-> **SQLite** is not recommended for production use. It is only provided for low-end systems and development purposes.
+> **SQLite**不建议用于生产环境。它仅用于低端系统和开发目的。
 {.is-warning}
 
 ```yml
@@ -109,23 +109,23 @@ db:
   storage: db.sqlite
 ```
 
-The `storage` value is a path to the file where the database will be saved. This path must be **writable** by the Wiki.js node process. It can be either an absolute path or relative to the Wiki.js directory.
+`storage`值是将保存数据库的文件的路径。此路径必须可由Wiki.js node进程写入。它可以是绝对路径，也可以是相对于Wiki.js目录的路径。
 
-# Advanced
+# 高级设置
 
-The configuration settings in the advanced section are optional and can be omitted if not needed.
+高级部分中的配置设置是可选的，如果不需要，可以省略。
 
 ## HTTPS
 
-Wiki.js supports both user-provided custom certificates or automated Let's Encrypt certificate provisioning.
+Wiki.js支持用户提供的自定义证书或自动Let's Encrypt证书配置。
 
-> If you have a reverse-proxy server (e.g. **nginx** / **apache**)  in front of Wiki.js, the SSL termination should be handled by the reverse-proxy, **NOT** Wiki.js.
->  The instructions below are meant for use cases where Wiki.js is exposed directly to the internet.
+> 如果在Wiki.js前面有一个反向代理服务器（例如**nginx**/**apache**），那么SSL应该由反向代理**而非**Wiki.js处理。
+> 以下说明适用于Wiki.js直接暴露于互联网的使用情况。
 {.is-warning}
 
-### Custom Certificate
+### 自定义证书
 
-You need both the **private key** (`key`) and **certificate** (`cert`) in **PEM** format:
+您需要**PEM**格式的**私钥**（`key`）和**证书**（`cert`）：
 
 ```yml
 ssl:
@@ -140,7 +140,7 @@ ssl:
   dhparam: null
 ```
 
-It's also possible to use a **PFX** (`pem`) formatted certificate instead:
+也可以使用**PFX**（`pem`）格式的证书：
 
 ```yml
 ssl:
@@ -154,19 +154,19 @@ ssl:
   dhparam: null
 ```
 
-The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
-The `passphrase` is optional and is only required when the certificate is encrypted passphrase. It should be set to `null` otherwise.
-The `dhparam` is optional and can be used to set the Diffie Hellman parameters, with a key length being greater or equal to 1024 bits. It should be set to `null` if not used.
+`port`是HTTPS服务端将监听的端口。**它不能与HTTP端口相同**
+`passphrase`是可选的，仅当证书被短语加密是才需要，否则应设为`null`
+`dhparam`是可选的，可用于设置Diffie-Hellman参数（密钥长度须大于或等于1024位）。如果未使用，则应将其设置为空。
 
-> It's recommended to automatically redirect all insecure requests made on the HTTP port to HTTPS by [enabling the HTTP to HTTPS Redirection](#http-to-https-redirection) option.
+> 建议通过[启用HTTP到HTTPS重定向](#HTTP到HTTPS重定向)选项，将HTTP端口上的所有不安全请求自动重定向到HTTPS。
 {.is-warning}
 
 ### Let's Encrypt
 
-> This feature is available from version **2.1 and up**.
+> 此功能在 **2.1及以上版本**可用。
 {.is-info}
 
-Let's Encrypt allows for free, automated and auto-renewing SSL certificates for your wiki.
+Let's Encrypt允许为您的wiki免费自动签发和续订SSL证书。
 
 ```yml
 ssl:
@@ -178,32 +178,32 @@ ssl:
   subscriberEmail: admin@example.com
 ```
 
-The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
+`port`是HTTPS服务端将监听的端口。**它不能与HTTP端口相同**
 
-> The non-secure HTTP port **must be accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, you can automatically redirect all insecure requests made on the HTTP port to HTTPS by [enabling the HTTP to HTTPS Redirection](#http-to-https-redirection) option.
+> 非安全HTTP端口**必须始终可以从互联网访问**，以便完成Let's Encrypt challenge过程以及自动续订证书。完成初始验证后，您可以通过[启用HTTP到HTTPS重定向](#HTTP到HTTPS重定向)选项，将在HTTP端口上发出的所有不安全请求自动重定向到HTTPS。
 {.is-warning}
 
-The `domain` is the fully-qualified domain name pointing to the wiki. **It must already resolve to the server.**
+`domain`是指向wiki的完全域名。它必须**已有到服务器的解析**。
 
-The `subscriberEmail` is the email used when authenticating with Let's Encrypt to request a certificate. It should be set to your sysadmin so that important emails concerning the domain SSL certificate can be received.
+`subscriberEmail`是使用Let's Encrypt进行身份验证以请求证书时使用的电子邮件。它应该设置为您的系统管理员邮箱，以便接收有关SSL证书的重要电子邮件。
 
-The following diagram details the certificate provisioning process. Although all these steps are performed automatically for you, it gives you a better understanding of the process.
+下图详细说明了证书配置过程。尽管所有这些步骤都是为您自动执行的，但它可以让您更好地理解过程。
 
-![Let's Encrypt Process](/assets/diagrams/diag-letsencrypt.png =800x){.decor-shadow .radius-5}
+![Let's Encrypt 配置过程](/assets/diagrams/diag-letsencrypt.png =800x){.decor-shadow .radius-5}
 
-### HTTP to HTTPS Redirection
+### HTTP到HTTPS重定向
 
-Once your HTTPS is up and working correctly, you can enable HTTP to HTTPS redirection under the **Administration Area** > **SSL**.
+一旦HTTPS启动并正常工作，就可以在**管理区**>**SSL**下启用HTTP到HTTPS重定向。
 
-## Database over SSL
+## 使用SSL连接数据库
 
-Some database servers require an SSL connection for extra security.
+一些数据库服务器需要SSL连接以获得额外的安全性。
 
-### Automatic
+### 自动
 
-In most scenarios, the SSL connection can be automatically established by the database client driver. You simply need to set the `db.ssl` parameter to `true`:
+在大多数情况下，SSL连接可以由数据库客户端驱动程序自动建立。您只需将`db.ssl`参数设置为`true`即可：
 
-For example, using a PostgreSQL configuration, note the additional `db.ssl` flag:
+例如，使用PostgreSQL配置时，请注意附加的`db.ssl`标志：
 
 ```yaml
 db:
@@ -216,12 +216,12 @@ db:
   ssl: true
 ```
 
-### Custom
+### 自定义
 
-> This feature is available from version **2.1 and up**.
+> 此功能在 **2.1及以上版本**可用。
 {.is-info}
 
-If your server requires a specific or self-generated certificate, you can specify the custom TLS options in the `db.sslOptions` parameter (in addition to setting the `db.ssl` flag to `true`):
+如果服务器需要特定或自行生成的证书，则可以在`db.sslOptions`参数中指定自定义TLS选项（将`db.ssl`标志设置为`true`之外）：
 
 ```yaml
 db:
@@ -243,16 +243,16 @@ db:
     passphrase: xyz123
 ```
 
-The `auto` flag must be set to `false`. Comment the lines you don't need.
+`auto`标志必须设置为`false`。并注释掉您不需要的行。
 
-You can find a complete list of accepted parameters for the `sslOptions` object in the [Node.js TLS documentation](https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options).
+您可以在[Node.js TLS文档](https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options)中找到sslOptions对象可接受参数的完整列表。
 
-## Database Connection Pool
+## 数据库连接池
 
-> It's not recommended to change these settings unless you know what you're doing.
+> 除非您知道自己在做什么，否则不建议更改这些设置。
 {.is-warning}
 
-Wiki.js uses a pool of connections to the database to efficiently manage requests. You can change the default settings using the `pool` option:
+Wiki.js使用到数据库的连接池来高效地管理请求。您可以使用`pool`选项更改默认设置：
 
 ```yml
 pool:
@@ -260,35 +260,35 @@ pool:
   max: 10
 ```
 
-Refer to to the [tarn.js](https://github.com/vincit/tarn.js) project page for all possible options.
+有关所有可能的选项，请参阅[tarn.js](https://github.com/vincit/tarn.js)项目页面。
 
-## Bind IP
+## 绑定IP地址
 
-If you have multiple ethernet interfaces and would like to specify which IP should be used for listening, use the `bindIP` parameter:
+如果您有多个以太网接口，并且希望指定应使用哪个IP进行侦听，请使用`bindIP`参数：
 
 ```yml
 bindIP: 0.0.0.0
 ```
 
-Leave the default `0.0.0.0` to listen on all interfaces.
+保留默认值`0.0.0.0`以侦听所有接口。
 
 
-## Logging
+## 日志
 
-Define how much logs you want printed to the output by defining the `logLevel` parameter.
+通过定义`logLevel`参数，定义要打印到输出的日志数量。
 
 ```yml
 logLevel: info
 ```
 
-The accepted values are: `error`, `warn`, `info` *(default)*, `verbose`, `debug`, `silly`.
+接受的值有: `error`, `warn`, `info` *(默认)*, `verbose`, `debug`, `silly`.
 
-## Upload Limits
+## 上传限制
 
-> **This option was deprecated in 2.4** and is now controlled via the administration web interface.
+> **此选项在2.4版本中已弃用**，现在它通过web管理界面进行控制。
 {.is-danger}
 
-Set the maximum file size for user uploads:
+设置用户上传的最大文件大小：
 
 ```yml
 uploads:
@@ -296,50 +296,50 @@ uploads:
   maxFiles: 10
 ```
 
-The `maxFileSize` parameter is defined in bytes. The default is `5242880`, which translates to 5MB.
-The `maxFiles` parameter defines the maximum number of files accepted in a single upload. The default is `10`.
+`maxFileSize`参数以字节为单位定义。默认值为`5242880`，即5MB。
+`maxFiles`参数定义一次上传中接受的最大文件数。默认值为`10`。
 
-## Offline Mode
+## 离线模式
 
-If your wiki installation cannot access the internet, set the `offline` parameter to `true`.  This will prevent the wiki from attempting to download the latest file updates.
+如果您的wiki实例无法访问internet，请将`offline`参数设置为`true`。这将阻止wiki尝试下载最新的文件更新。
 
-Setting this option will also enable [sideloading](/install/sideload).
+启用此选项后[侧载](/install/sideload)也将被启用。
 
 ```yml
 offline: true
 ```
 
-## High-Availability
+## 高可用
 
-> This feature is available from version **2.3 and up**.
+> 此功能在 **2.3及以上版本** 可用。
 {.is-info}
 
-> PostgreSQL is **required** to enable this option.
+> 启用此功能**需要**PostgreSQL。
 >
-> **You must deploy a single instance in order to setup the application.** Once setup is completed, you can increase the number of replicas to any amount.
+> **您必须部署单个实例才能安装应用程序。** 安装完成后，可以将副本数量增加到任意数量。
 {.is-warning}
 
-Set to `true` if you have multiple concurrent instances running off the same DB (e.g. Kubernetes pods / load balanced instances). Leave `false` otherwise.
+如果在同一数据库上运行多个并发实例（例如Kubernetes pods/负载均衡实例），则设置为`true`。否则保留`false`。
 
 ```yml
 ha: true
 ```
 
-## Data Paths
+## 数据路径
 
-Wiki.js needs a folder to write temporary data. By default, this path is `./data` which is relative to the wiki installation. If write access cannot be given to this path, you can change it by setting the `dataPath` parameter:
+Wiki.js需要一个文件夹来写入临时数据。默认情况下，此路径为相对于wiki安装路径的`./data`。如果无法向该路径授予写访问权限，则可以通过设置“dataPath”参数来更改该路径：
 
 ```yml
 dataPath: /path/to/directory
 ```
 
-# ENV Variables Interpolation
+# 环境变量插值
 
-Any value can be replaced with `$(ENV_NAME)` to be interpolated at runtime with an environment variable.
+配置文件中的任何值都可以替换为`$(ENV_NAME)`，以便在运行时使用环境变量进行插值。
 
-### Example
+### 示例
 
-Using the following `config.yml` example:
+对以下`config.yml`示例:
 ```yaml
 db:
   type: $(DB_TYPE)
@@ -348,7 +348,7 @@ db:
   user: '$(DB_USER)'
   pass: '$(DB_PASS)'
 ```
-and the following environment variables:
+及以下环境变量而言：
 - DB_TYPE=postgres
 - DB_HOST=db.example.com
 - DB_PORT=5432
@@ -356,7 +356,7 @@ and the following environment variables:
 - DB_PASS=secret
 {.grid-list}
 
-would result in the following config being used at runtime:
+系统将生成以下运行时配置：
 ```yaml
 db:
   type: postgres
@@ -366,6 +366,6 @@ db:
   pass: 'secret'
 ```
 
-# Sample Config File
+# 示例配置文件
 
-The latest version of the complete sample config file can be found on [GitHub](https://github.com/Requarks/wiki/blob/master/config.sample.yml).
+完整示例配置文件的最新版本可以在[GitHub](https://github.com/Requarks/wiki/blob/master/config.sample.yml)上找到。
