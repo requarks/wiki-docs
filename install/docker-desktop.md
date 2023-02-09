@@ -1,32 +1,32 @@
 ---
-title: Install locally with Docker Desktop
-description: The easiest and quickest way to install Wiki.js on your local machine
+title: 使用Docker Desktop在本地安装
+description: 在本地计算机上安装Wiki.js的最简单快捷的方法
 published: true
-date: 2022-06-12T21:00:47.228Z
-tags: setup, guide
+date: 2023-02-09T05:01:23.835Z
+tags: setup, guide, 指南, 安装
 editor: markdown
-dateCreated: 2022-06-12T21:00:47.228Z
+dateCreated: 2023-01-08T10:35:55.379Z
 ---
 
-# Overview
+# 概述
 
-This guide is a quick and simple guide to run Wiki.js on your local **macOS** or **Windows** machine.
+本指南是在本地**macOS**或**Windows**计算机上运行Wiki.js的快速简单指南。
 
-# Installation
+# 安装
 
-## 1. Install Docker Desktop
+## 1. 安装 Docker Desktop
 
-Install Docker Desktop which includes both Docker and Docker Compose:
+安装包含Docker和Docker Compose的Docker Desktop：
 
 - [macOS (Apple Silicon)](https://desktop.docker.com/mac/main/arm64/Docker.dmg)
 - [macOS (Intel)](https://desktop.docker.com/mac/main/amd64/Docker.dmg)
 - [Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 
-## 2. Create the Installation Folder
+## 2. 创建安装目录
 
-Create a new folder named `wiki` at the location of your choice.
+在您选择的位置创建名为`wiki`的新文件夹。
 
-Inside this folder, create a new file named `docker-compose.yaml` and paste the following contents inside:
+在此文件夹中，创建一个名为`docker-compose.yaml`的新文件，并在其中粘贴以下内容：
 
 ```yaml
 version: "3"
@@ -63,23 +63,23 @@ volumes:
   db-data:
 ```
 
-This file simply defines a PostgreSQL container *(our database)* and the Wiki.js container.
+这个文件只定义了PostgreSQL容器*（我们的数据库）*和Wiki.js容器。
 
-## 3. Open Terminal / Command Prompt
+## 3. 打开终端/命令提示符
 
-On **macOS**, launch **Terminal** and navigate to the `wiki` folder you created earlier.
+在**macOS**上，启动**终端**并导航到您先前创建的`wiki`文件夹。
 
-On **Windows**, open the folder `wiki` you created earlier in **File Explorer**.  
-In the address bar, type `cmd` and press <kbd>ENTER</kbd> to launch a **Command Prompt** at that location.
+在**Windows**上，打开之前在**文件资源管理器**中创建的文件夹`wiki`。
+在地址栏中，键入“cmd”，然后按<kbd>ENTER</kbd>在该位置启动**命令提示符**。
 
-## 4. Launch Wiki.js
+## 4. 启动 Wiki.js
 
-Type the following command in the **Terminal** / **Command Prompt** to start Wiki.js:
+在**终端**/**命令提示符**中键入以下命令以启动Wiki.js：
 
 ```sh
 docker compose up -d
 ```
 
-## 5. Browse to Wiki.js
+## 5. 浏览Wiki.js
 
-Open your browser and navigate to http://localhost to complete the installation and use Wiki.js!
+打开浏览器并导航到http://localhost以完成安装并使用Wiki.js！
