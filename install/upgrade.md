@@ -2,7 +2,7 @@
 title: Upgrade
 description: How to upgrade to the latest version
 published: true
-date: 2022-04-04T19:35:30.094Z
+date: 2023-02-07T05:38:49.811Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T23:53:12.166Z
@@ -46,7 +46,7 @@ The following commands will pull the latest image and recreate the containers de
 
 ```bash
 docker-compose pull wiki
-docker-compose up --force-recreate
+docker-compose up --force-recreate -d
 ```
 
 ### Linux / macOS <i class="mdi mdi-ubuntu"></i>
