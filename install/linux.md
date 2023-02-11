@@ -1,9 +1,9 @@
 ---
 title: Linux
-description: Getting started with a Wiki.js installation on Linux
+description: 在Linux上安装Wiki.js
 published: true
-date: 2023-02-11T10:52:57.857Z
-tags: setup
+date: 2023-02-11T10:53:52.479Z
+tags: setup, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:36:06.981Z
 ---
