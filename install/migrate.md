@@ -1,65 +1,67 @@
 ---
-title: Migrate from Wiki.js v1.x
-description: How to import content and users from an older v1.x installation.
+title: 从Wiki.js v1.x迁移
+description: 如何从旧的v1.x安装中导入内容和用户。
 published: true
-date: 2019-10-26T16:34:59.862Z
+date: 2023-02-11T11:19:03.450Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:36:12.770Z
 ---
 
-# Overview
+# 概述
 
-In order to upgrade from an older 1.x version of Wiki.js, you need to first install Wiki.js 2.x using the standard [installation instructions](/install).
+为了从旧的1.x版本的Wiki.js升级，您需要首先使用标准[安装指南](/install)安装Wiki.js2.x。
 
-Because of the significant architecture differences between v1 and v2, **you cannot do an in-place upgrade**.
-You need to first do a fresh v2 installation from which you'll import content, uploads and users into.
+由于v1和v2之间存在显著的体系结构差异，**您无法进行原地升级**。
+您需要首先进行新的v2安装，从中导入内容、上传资源和用户。
 
-Once your new v2 installation is working, follow the instructions below to bring content, uploads and users from your older v1 installation into your new v2 installation.
+新的v2安装工作后，请按照以下说明将旧v1实例中的内容、上传资源和用户导入新的v2实例。
 
-# Import
+# 导入
 
-1. Navigate to the **Administration Area** *(click your avatar at the top right of the page)*.
-1. Click on **Utilities** in the left sidebar navigation.
-1. Click on **Import from Wiki.js 1.x**.
-1. Select whether you want to import **Content + Uploads**, **Users** or both.
+1. 转到**管理区** *（单击页面右上方的头像）*。
+1. 单击左侧导航栏中的**实用程序**。
+1. 单击**从Wiki.js 1.x**导入。
+1. 选择是要导入**内容+上传资源**、**用户**还是同时导入两者。
 
-## Content + Uploads
+## 内容+上传资源
 
-If you were using a remote Git repository to sync content to in your v1 installation, choose **Import from Git connection**.
-Otherwise, choose **Import from local folder**.
+如果您使用远程Git存储库在v1安装中同步内容，请选择**从Git导入**。
+否则，选择**从本地目录导入**。
 
-### Import from Git connection
+### 从Git导入
 
-Enter all the required connection information to connect to your remote Git repository. These settings should be the same as the one entered in your v1 `config.yml` file under the **git** section.
+输入连接到远程Git存储库所需的所有连接信息。这些设置应与在**git**部分下的v1`config.yml`文件中输入的设置相同。
 
-If using the **SSH** authentication method, you'll need to copy the contents of the file you were referencing in v1 into the **Private Key Contents** field.
+如果使用**SSH**身份验证方法，则需要将在v1中引用的文件的内容复制到**私钥内容**字段中。
 
-> :warning: **WARNING**
+> :warning: **警告**
 >
-> For most scenarios, you should leave the default value of `./data/repo` for the **Local Repository Path** field. This folder should be empty and dedicated to v2.
-> **DO NOT** point to your current v1 local repository folder.
+> 大多数情况下，应保留默认值`/data/repo`作为**本地存储库路径**字段的值。此目录应为专用于v2的空目录。
+> **不要**指向当前的v1本地存储库文件夹。
 {.is-danger}
 
-### Import from local folder
+### 从本地目录导入
 
-Enter the path to the local repository folder used in your v1 installation.
+输入v1安装中使用的本地存储库目录的路径。
 
-## Users
+## 用户
 
-Enter the MongoDB database connection string, as entered in your v1 installation `config.yml` file.
+输入在v1实例的`config.yml`文件中输入的MongoDB数据库连接字符串。
 
-Select how groups and permissions should be created. *It's recommended to use the first option which will put users that have the same permissions into the same group.*
+选择应如何创建组和权限。*建议使用第一个选项，将具有相同权限的用户放入同一组*
 
-## Start Import
+## 开始导入
 
-When ready, click the **Start Import** button to initiate the migration process. You'll be notified of any failure in importing content and a list of users that could not be imported will be displayed.
+准备就绪后，单击**开始导入**按钮启动迁移过程。如果导入失败，您将收到对应的导入失败的内容的通知，系统将显示无法导入的用户列表。
 
-> It's safe to retry the migration process as many times as needed. No duplication will occur as users that already exists will be skipped and content will be updated.
+> 根据需要多次重试迁移过程不会造成损害。不会发生重复，因为系统将跳过已存在的用户并更新内容。
 {.is-info}
 
-# Post-migration
+# 迁移后的工作
 
-Once the migration is completed and you've verified that content, uploads and users were successfully copied over, make sure to read the following recommendations:
+一旦迁移完成，并且验证了内容、上传资源和用户已复制成功，请确保阅读以下建议：
 
-- If you've imported content using the **Import from Git connection** option, it's recommended that you shutdown your v1 installation. While it's possible to run both v1 and v2 installations connected to the same Git repository in parallel, you should ensure that editing is only done on one of them. Editing the same page on both installations within the same time frame can result in merge conflicts.
-- If you've imported content using the **Import from local folder** option, it's highly recommended to change the path so that it no longer points to your v1 installation. To do so, click on **Storage** in the left sidebar navigation, then click on **Local File System**. Change the path to something else (e.g.: `./data/content`). Additionally, unless you want content to be exported to disk on change, you may disable the **Local File System** storage module completely.
+- 如果您使用**从Git导入**选项导入内容，建议您关闭v1实例。虽然可以并行运行连接到同一个Git存储库的v1和v2实例，但您应该确保只对其中一个进行编辑。在同一时间范围内编辑两个安装上的同一页面可能会导致合并冲突。
+- 如果您使用**从本地目录导入**选项导入内容，强烈建议您更改路径，使其不再指向v1实例。为此，请单击左侧导航栏中的**存储**，然后单击**本地文件系统**。将路径更改为其他路径（例如：`./data/content`）。此外，除非您希望内容在更改时导出到磁盘，否则可以完全禁用**本地文件系统**存储模块。
 
