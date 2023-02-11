@@ -1,18 +1,20 @@
 ---
-title: Install using Portainer
-description: Step-by-step installation guide
+title: 在Portainer上安装
+description: 详细安装指南
 published: true
-date: 2019-12-04T21:03:41.924Z
-tags: setup, guide
+date: 2023-02-11T07:40:17.004Z
+tags: setup, guide, 指南, 安装
+editor: markdown
+dateCreated: 2023-01-08T10:36:15.572Z
 ---
 
-This guide details the step-by-step procedure to install Wiki.js on a machine running **Portainer**.
+本指南详细介绍了在运行**Portainer**的计算机上安装Wiki.js的分步步骤。
 
-1. Click on **Stacks** in the left sidebar navigation.
-1. Click on the **+ Add stack** button.
-1. Enter a name for the stack (e.g. `wiki`).
-1. Select **Web editor** as the Build method.
-1. In the Web editor below, paste the following block of code:
+1. 单击左侧边栏导航中的**堆栈**。
+1. 单击 **\+ 添加堆栈** 按钮。
+1. 输入堆栈的名称（例如`wiki`）。
+1. 选择**Web编辑器**作为构建方法。
+1. 在下面的Web编辑器中，粘贴以下代码块：
     ```yaml
     version: '2'
     services:
@@ -46,7 +48,7 @@ This guide details the step-by-step procedure to install Wiki.js on a machine ru
     volumes:
       db-data:
     ```
-1. Click on **Deploy the stack** button.
-1. There's no step 7, it was that easy.
+1. 单击**部署堆栈**按钮。
+1. 没有第7步了，就是这么简单。
 
-You can now navigate to the IP / domain of your server to complete the configuration and start using Wiki.js!
+现在，您可以导航到服务器的IP/域名以完成配置并开始使用Wiki.js！
