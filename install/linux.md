@@ -2,7 +2,7 @@
 title: Linux
 description: 在Linux上安装Wiki.js
 published: true
-date: 2023-02-11T10:53:52.479Z
+date: 2023-02-11T10:58:11.442Z
 tags: setup, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:36:06.981Z
@@ -19,7 +19,7 @@ dateCreated: 2023-01-08T10:36:06.981Z
   ```bash
   wget https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
   ```
-2. 解压安装包到安装目录：
+2. 解压安装包到你选择的安装目录：
   ```bash
   mkdir wiki
   tar xzf wiki-js.tar.gz -C ./wiki
