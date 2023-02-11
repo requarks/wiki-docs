@@ -1,38 +1,38 @@
 ---
-title: About
-description: Timeline of new releases and general notes
+title: 关于
+description: 新版本时间表及常见问题说明
 published: true
-date: 2021-01-19T19:49:40.543Z
+date: 2023-02-11T13:55:30.678Z
 tags: 
 editor: markdown
-dateCreated: 2019-12-16T23:23:45.080Z
+dateCreated: 2023-01-08T10:36:39.043Z
 ---
 
-Wiki.js is built almost exclusively by 1 developer, without compensation, on his free time (weeknights and weekends). **Please be mindful of this fact** when writing comments like:
+Wiki.js几乎是完全由一名开发人员在空闲时间（周末和周末）免费开发的，**在撰写以下评论时，请注意这一事实**：
 
-- *I need feature X urgently! When can I expect feature X? My company needs it now!*
-- *Why don't you have a fully detailed timeline, with precise dates for new releases?*
-- *Feature X is most important to us. Please work on it as a priority.*
-- *I posted a ticket on GitHub a few hours ago and you haven't replied yet!*
-- *This feature was marked as Planned 2 months ago and it's still not released!*
+- *我急需功能XXX！我什么时候可以看到功能XXX？我的公司现在需要它！*
+- *为什么你没有一个详细的时间表，以及新版本的确切日期？*
+- *功能XXX对我们来说最重要。请优先考虑。*
+- *几小时前我在GitHub上发布了一个issue，但你还没有回复！*
+- *此功能在2个月前被标记为“计划开发”，但至今仍未发布！*
 
-With the exception of issues that are deamed **critical** *(security hole, major crash, etc.)* that are usually fixed within days, it's simply not possible to have a clear release schedule planned for months in advance and with fixed release dates.
+除了通常要在几天内解决的**关键***问题（安全漏洞、重大崩溃等）*外，根本不可能提前几个月制定一个明确的发布时间表，并确定发布日期。
 
-You can track the progress of the next release on the [Release Notes](/releases) page along with planned features.
+您可以在[发行说明](/releases)页面上跟踪下一版本的进度以及计划发布的功能。
 
-## How can I help?
+## 我能做些什么
 
-### Pull Requests
+### 合并请求（Pull requests）
 
-Pull requests to fix bugs or submit a new feature are always welcome! Look at [current issues](https://github.com/Requarks/wiki/issues) on what can be worked on. Most issues are tagged with the level of difficulty expected to resolve the issue.
+随时欢迎您提交合并请求来修复错误或提交新功能！查看[当前issue]以了解可以解决的问题。大多数问题都标有解决问题的难度级别。
 
-### Donations
+### 捐助
 
-You can contribute financially in order to support this project. Contributions help cover the costs of servers and networking services, along with some developer tools.
+你可以出资支持这个项目。捐款有助于支付服务器和网络服务以及一些开发人员工具的费用。
 
-If a large amount of recurring donations is achieved, it would then be possible for the lead developer to work full-time on the project.
+如果实现了大量的经常性捐赠，那么核心开发者就有可能全职参与项目。
 
-You can donate on various platforms:
+您可以在各种平台上捐款：
 
 - [GitHub Sponsors](https://github.com/users/NGPixel/sponsorship)
 - [Patreon](https://www.patreon.com/bePatron?u=16744039)
