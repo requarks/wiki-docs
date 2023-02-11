@@ -2,56 +2,56 @@
 title: Windows
 description: Getting started with a Wiki.js installation on Windows
 published: true
-date: 2022-04-04T19:36:52.733Z
+date: 2023-02-11T12:39:03.555Z
 tags: setup
 editor: markdown
-dateCreated: 2019-05-04T04:36:05.505Z
+dateCreated: 2023-01-08T10:36:32.850Z
 ---
 
-Before going any further, make sure your system meets all the [requirements](/install/requirements).
+在进一步操作之前，请确保您的系统满足所有[要求](/install/requirements)。
 
-# Install
+# 安装
 
-1. Open a **Powershell** prompt in administrator mode.
-2. If you are using **Windows 7 / Windows Server 2008 R2 or older**, you must run the following command. *(otherwise skip this step)*
+1. 在管理员模式下打开**Powershell**提示符。
+2. 如果您使用的是**Windows 7/Windows Server 2008 R2或更旧版本**，则必须运行以下命令 *（否则跳过此步骤）*
   ```powershell
   [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
   ```
-3. Download the latest version of Wiki.js:
+3. 下载最新版本的Wiki.js。
   ```powershell
   Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/latest/download/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
-4. Extract the package to the final destination of your choice:
+4. 解压程序包到您选择的安装位置：
   ```powershell
   New-Item -Path "C:\" -Name "wiki" -ItemType "directory"
   tar xzf wiki-js.tar.gz -C "C:\wiki"
   cd C:\wiki
   ```
-  > The **tar** utility is only available on Windows 10 and later. On earlier versions, you'll need a 3rd-party utility like [7-zip](https://www.7-zip.org/) to extract the file.
+  > tar程序仅在Windows 10上可用。在早期版本中，您需要第三方实用程序（如[7-zip](https://www.7-zip.org/)）来提取文件。
   {.is-warning}
-5. Rename the sample config file to `config.yml`:
+5. 将示例配置文件重命名为`config.yml`：
   ```powershell
   Rename-Item -Path config.sample.yml -NewName config.yml
   ```
-6. Edit the config file using your favorite text editor (e.g. Notepad) and fill in your database and port settings ([Configuration Reference](/install/config)):
+6. 使用您熟悉的文本编辑器（如记事本）编辑配置文件并填写数据库和端口设置（[配置参考](/install/config)）：
   ```powershell
   notepad .\config.yml
   ```
-7. ***For SQLite installations only:*** *(skip this step otherwise)* Fetch native bindings for SQLite3:
+7. ***仅适用于SQLite安装：** *（否则跳过此步骤）* 为本机获取SQLite3原生捆绑：
   ```bash
   npm rebuild sqlite3
   ```
-8. Run Wiki.js
+8. 运行 Wiki.js
   ```powershell
   node server
   ```
-9. Wait until you are invited to open to the setup page in your browser.
-10. Complete the setup wizard to finish the installation.
+9. 等待一会，直至系统提示您打开浏览器中的设置页面。
+10. 完成安装向导以完成安装。
 
-# Run as service
+# 作为服务运行
 
-There are several solutions to run Wiki.js as a background service, e.g.:
+有几种解决方案可以将Wiki.js作为后台服务运行，例如：
 
 - [AlwaysUp](https://www.coretechnologies.com/products/AlwaysUp/)
 - [PM2](http://pm2.keymetrics.io/) / [pm2-windows-service](https://www.npmjs.com/package/pm2-windows-service)
