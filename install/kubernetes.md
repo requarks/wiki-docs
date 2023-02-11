@@ -1,116 +1,116 @@
 ---
 title: Kubernetes
-description: Getting started with a Kubernetes installation using Helm Charts
+description: 使用Helm Charts开始Kubernetes安装
 published: true
-date: 2022-04-10T00:31:01.610Z
-tags: setup, docker
+date: 2023-02-11T08:46:01.924Z
+tags: setup, docker, 安装
 editor: markdown
-dateCreated: 2019-03-31T01:25:29.636Z
+dateCreated: 2023-01-08T10:36:03.943Z
 ---
 
-# Prerequisites
+# 要求
 
-- A Kubernetes cluster
-- PostgreSQL Database
+- 一个Kubernetes集群
+- PostgreSQL数据库
 
-# Important
+# 重要提示
 
-- **You must deploy a single instance in order to setup the application.** Once setup is completed, you can increase the number of replicas to any amount.
-- Even though Wiki.js supports other database engines, using **PostgreSQL is a requirement** for multiple replicas.
+- **您必须部署单个实例才能安装应用程序。**安装完成后，可以将副本数量增加到任意数量。
+- 尽管Wiki.js支持其他数据库引擎，但使用多个副本要求使用**PostgreSQL**。
 
-# Using Helm
+# 使用 Helm
 
-## Introduction
+## 介绍
 
-This chart bootstraps a Wiki.js deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+此图表使用[Helm](https://helm.sh)包管理器在[Kubernetes](http://kubernetes.io)集群上引导Wiki.js部署。
 
-It also optionally packages the [PostgreSQL](https://github.com/kubernetes/charts/tree/master/stable/postgresql) as the database but you are free to bring your own.
+它还可以选择将[PostgreSQL](https://github.com/kubernetes/charts/tree/master/stable/postgresql)打包为数据库，但您可以自由引入自己的数据库。
 
-## Prerequisites
+## 要求
 
-- PV provisioner support in the underlying infrastructure (with persistence storage enabled) if you want data persistance
+- 如果您需要数据持久性，则在基础基础架构中支持PV provisioner（启用持久性存储）
 
-## Adding the Wiki.js Helm Repository
+## 添加Wiki.js Helm存储库
 
 ```bash
 helm repo add requarks https://charts.js.wiki
 ```
 
-## Installing the Chart
+## 安装图表
 
-To install the chart with the release name `my-release` run the following:
+要安装名为`my release`的图表，请执行以下操作：
 
-### Using Helm 3:
+### Helm 3:
 ```console
 helm install my-release requarks/wiki
 ```
-### Using Helm 2:
+### Helm 2:
 ```console
 helm install --name my-release requarks/wiki
 ```
 
-The command deploys Wiki.js on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
+该命令以默认配置在Kubernetes集群上部署Wiki.js。[配置](#配置)部分列出了安装期间可以配置的参数。
 
-> **Tip**: List all releases using `helm list`
+> **提示**: 使用`helm list`列出所有release
 {.is-info}
 
-## Uninstalling the Chart
+## 卸载图表
 
-To uninstall/delete the `my-release` deployment:
+要卸载/删除部署好的`my-release`，请执行以下操作：
 
 ```console
 helm delete my-release
 ```
 
-The command removes all the Kubernetes components associated with the chart and deletes the release.
+该命令删除与图表关联的所有Kubernetes组件并删除release。
 
-> **Warning**: Persistant Volume Claims for the database are not deleted automatically. They need to be manually deleted
+> **警告**: 数据库的持久卷声明不会自动删除。您需要手动删除它们
 {.is-warning}
 
 ```console
 kubectl delete pvc/data-wiki-postgresql-0
 ```
 
-## Configuration
+## 配置
 
-The following table lists the configurable parameters of the Wiki.js chart and their default values.
+下表列出了Wiki.js图表的可配置参数及其默认值。
 
-| Parameter                            | Description                                 | Default                                                    |
-| -------------------------------      | -------------------------------             | ---------------------------------------------------------- |
-| `image.repository`                   | Wiki.js image                                | `requarks/wiki`                                           |
-| `image.tag`                          | Wiki.js image tag                            | `latest`                                                      |
-| `imagePullPolicy`                    | Image pull policy                           | `IfNotPresent`                                             |
-| `replicacount`                   | Amount of wiki.js service pods to run                   | `1`                                                        |
-| `revisionHistoryLimit`                   | Total amount of revision history points                   | `10`                                        |
-| `resources.limits`               | wiki.js service resource limits                         | `nil`                               |
-| `resources.requests`             | wiki.js service resource requests                       | `nil`                               |
-| `nodeSelector`                   | Node labels for wiki.js pod assignment          | `{}`                                                       |
-| `affinity`                       | Affinity settings for wiki.js pod assignment    | `{}`                                                       |
-| `schedulerName`                  | Name of an alternate scheduler for wiki.js pod  | `nil`                                                      |
-| `tolerations`                    | Toleration labels for wiki.jsk pod assignment    | `[]`                                                       |
-| `ingress.enabled`                    | Enable ingress controller resource          | `false`                                                    |
-| `ingress.annotations`                | Ingress annotations                         | `{}`                                                       |
-| `ingress.hosts`                      | List of ingress rules                        | `[{"host": "wiki.local", "paths": ["/"]}]`                |
-| `ingress.tls`                        | Ingress TLS configuration                   | `[]`                                                       |
-| `sideload.enabled`                   | Enable sideloading of locale files from git | `false`                                                    |
-| `sideload.repoURL`                   | Git repository URL containing locale files  | `https://github.com/Requarks/wiki-localization`            |
-| `sideload.env`                       | Environment variables for sideload Container | `{}`                                                      |
-| `postgresql.enabled`                 | Deploy postgres server (see below)          | `true`                                                     |
-| `postgresql.postgresqlDatabase`        | Postgres database name                      | `wiki`                                                   |
-| `postgresql.postgresqlUser`            | Postgres username                           | `postgres`                                                   |
-| `postgresql.postgresqlHost`            | External postgres host                      | `nil`                                                      |
-| `postgresql.postgresqlPassword`        | External postgres password                  | `nil`                                                      |
-| `postgresql.existingSecret`            | Provide an existing `Secret` for postgres   | `nil`                                                      |
-| `postgresql.existingSecretKey`          | The postgres password key in the existing `Secret`   | `postgresql-password`                              |
-| `postgresql.postgresqlPort`            | External postgres port                      | `5432`                                                     |
-| `postgresql.ssl`                       | Enable external postgres SSL connection     | `false`                                                   |
-| `postgresql.ca`                        | Certificate of Authority path for postgres  | `nil`                                                     |
-| `postgresql.persistence.enabled`                | Enable postgres persistence using PVC                | `true`                                                     |
-| `postgresql.persistence.existingClaim`          | Provide an existing `PersistentVolumeClaim` for postgres | `nil`                                                      |
-| `postgresql.persistence.storageClass`           | Postgres PVC Storage Class (example: `nfs`)                           | `nil`                 |
-| `postgresql.persistence.size`                   | Postgers PVC Storage Request                         | `8Gi`                                                     |
+| 参数                                   | 描述                                                      | 默认值                                          |
+| -------------------------------------- | --------------------------------------------------------- | ----------------------------------------------- |
+| `image.repository`                     | Wiki.js 映像                                              | `requarks/wiki`                                 |
+| `image.tag`                            | Wiki.js 映像标签                                          | `latest`                                        |
+| `imagePullPolicy`                      | 映像拉取策略                                              | `IfNotPresent`                                  |
+| `replicacount`                         | 要运行的Wiki.js服务节点的数量                             | `1`                                             |
+| `revisionHistoryLimit`                 | 历史修订节点总数                                          | `10`                                            |
+| `resources.limits`                     | wiki.js服务资源限制                                       | `nil`                                           |
+| `resources.requests`                   | wiki.js服务资源请求                                       | `nil`                                           |
+| `nodeSelector`                         | Wiki.js 节点分配的标签                                    | `{}`                                            |
+| `affinity`                             | Wiki.js 节点分配的相关性设置                              | `{}`                                            |
+| `schedulerName`                        | Wiki.js节点备用调度程序名称                               | `nil`                                           |
+| `tolerations`                          | Wiki.jsk 节点分配的宽容（toleration）标签                 | `[]`                                            |
+| `ingress.enabled`                      | 启用入口控制器资源                                        | `false`                                         |
+| `ingress.annotations`                  | 入口注释                                                  | `{}`                                            |
+| `ingress.hosts`                        | 入口规则列表                                              | `[{"host": "wiki.local", "paths": ["/"]}]`      |
+| `ingress.tls`                          | 入口TLS配置                                               | `[]`                                            |
+| `sideload.enabled`                     | 启用从git侧加载区域设置文件                               | `false`                                         |
+| `sideload.repoURL`                     | 包含区域设置文件的Git存储库URL                            | `https://github.com/Requarks/wiki-localization` |
+| `sideload.env`                         | 侧载容器的环境变量                                        | `{}`                                            |
+| `postgresql.enabled`                   | 部署postgres服务器（见下文）                              | `true`                                          |
+| `postgresql.postgresqlDatabase`        | Postgres数据库名称                                        | `wiki`                                          |
+| `postgresql.postgresqlUser`            | Postgres用户名                                            | `postgres`                                      |
+| `postgresql.postgresqlHost`            | 外部postgres主机                                          | `nil`                                           |
+| `postgresql.postgresqlPassword`        | 外部postgres密码                                          | `nil`                                           |
+| `postgresql.existingSecret`            | 为postgres提供现有的`Secret`                              | `nil`                                           |
+| `postgresql.existingSecretKey`         | 现有`Secret`中的postgres密码键（password key）            | `postgresql-password`                           |
+| `postgresql.postgresqlPort`            | 外部postgres端口                                          | `5432`                                          |
+| `postgresql.ssl`                       | 启用外部postgres SSL连接                                  | `false`                                         |
+| `postgresql.ca`                        | postgres的证书路径                                        | `nil`                                           |
+| `postgresql.persistence.enabled`       | 使用PVC启用postgres持久化                                 | `true`                                          |
+| `postgresql.persistence.existingClaim` | 为postgres提供现有的`PersistentVolumeClaim`（持久卷声明） | `nil`                                           |
+| `postgresql.persistence.storageClass`  | Postgres PVC存储类（示例：`nfs`）                         | `nil`                                           |
+| `postgresql.persistence.size`          | Postgers PVC存储请求                                      | `8Gi`                                           |
 
-Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
+在`helm install`中使用`--set key=value[,key=value]`来指定参数。例如：
 
 ```console
 helm install --name my-release \
@@ -118,26 +118,26 @@ helm install --name my-release \
     requarks/wiki
 ```
 
-Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
+或者，可以在安装图表时提供指定上述参数值的YAML文件。例如
 
 ```console
 helm install --name my-release -f values.yaml requarks/wiki
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **提示**: 你可以使用默认的 [values.yaml](values.yaml)
 {.is-info}
 
 ## PostgresSQL
 
-By default, PostgreSQL is installed as part of the chart.
+默认情况下，PostgreSQL作为图表的一部分安装。
 
-### Using an external PostgreSQL server
+### 使用外部PostgreSQL服务器
 
-To use an external PostgreSQL server, set `postgresql.enabled` to `false` and then set `postgresql.postgresqlHost` and `postgresql.postgresqlPassword`. To use an existing `Secret`, set `postgresql.existingSecret`. The other options (`postgresql.postgresqlDatabase`, `postgresql.postgresqlUser`, `postgresql.postgresqlPort` and `postgresql.existingSecretKey`) may also want changing from their default values.
+要使用外部PostgreSQL服务器，请将`postgresql.enabled`设置为`false`，然后设置`postgresql.postgresqlHost`和`postgresql.postgresqlPassword`。要使用现有`Secret`，设置`postgresql.existingSecret`。其他选项（`postgressql.postgresqlDatabase`、`postgresql.postgresqlUser`、`postgresql.postgressqlPort`和`postgresql.existingSecretKey`）也可能需要更改默认值。
 
-To use an SSL connection you can set `postgresql.ssl` to `true` and if needed the path to a Certificate of Authority can be set using `postgresql.ca` to `/path/to/ca`. Default `postgresql.ssl` value is `false`.
+要使用SSL连接，可以将`postgresql.ssl`设置为`true`，如果需要，可以将`postgressql.ca`设为`/path/To/ca`(证书路径)。`postgresql.ssl`的默认值为`false`。
 
-If `postgresql.existingSecret` is not specified, you also need to add the following Helm template to your deployment in order to create the postgresql `Secret`:
+如果还未指定`postgresql.existingSecret`，则还需要将以下Helm模板添加到部署中，以创建postgresql`Secret`：
 
 ```yaml
 kind: Secret
@@ -148,15 +148,15 @@ data:
   {{ template "wiki.postgresql.secretKey" . }}: "{{ .Values.postgresql.postgresqlPassword | b64enc }}"
 ```
 
-## Persistence
+## 持久化
 
-Persistent Volume Claims are used to keep the data across deployments. This is known to work in GCE, AWS, and minikube.
-See the [Configuration](#configuration) section to configure the PVC or to disable persistence.
+持久卷声明用于跨部署保留数据。这在GCE、AWS和minikube中是众所周知的。
+请参阅[配置](#配置)部分以配置PVC或禁用持久化。
 
-## Ingress
+## 入口（Ingress）
 
-This chart provides support for Ingress resource. If you have an available Ingress Controller such as Nginx or Traefik you maybe want to set `ingress.enabled` to true and add `ingress.hosts` for the URL. Then, you should be able to access the installation using that address.
+此图表为入口资源提供支持。如果您有一个可用的入口控制器，例如Nginx或Traefik，您可能希望将`ingress.enabled`设置为true，并为URL添加`ingress.hosts`。然后，您应该能够使用该地址访问实例。
 
-## Chart Source
+## 图表来源
 
-See the [Wiki.js Helm repo](https://github.com/Requarks/wiki/tree/dev/dev/helm#introduction) for the chart source.
+有关图表来源，参见[Wiki.js Helm repo](https://github.com/Requarks/wiki/tree/dev/dev/helm#introduction)。
