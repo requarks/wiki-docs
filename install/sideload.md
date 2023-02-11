@@ -1,54 +1,56 @@
 ---
-title: Sideloading
-description: Enable your wiki to run without internet access
+title: 侧载
+description: 允许wiki在没有Internet访问的情况下运行
 published: true
-date: 2020-07-04T21:15:31.336Z
+date: 2023-02-11T11:41:16.815Z
 tags: 
 editor: markdown
+dateCreated: 2023-01-08T10:36:21.519Z
 ---
 
-# Basics
+# 基本信息
 
-If your wiki is installed in an environment which is isolated from the internet, you can sideload data that would normally be downloaded from the internet.
+如果您的wiki安装在与Internet隔离的环境中，您可以侧载本应从Internet上下载的数据。
 
-This is achieved by manually downloading a set of files and placing them in a specific directory in your wiki installation. These files will be imported during initialization.
+这是通过手动下载一组文件并将其放置在wiki实例的特定目录中实现的。这些文件将在初始化期间导入。
 
-## Getting Started
+## 开始
 
-**Create a new folder** at path `data/sideload` inside your Wiki.js installation folder.
-*For example, if your wiki is installed at path `/home/wiki`, you'd need to create a folder at path `/home/wiki/data/sideload`*
+在Wiki.js安装文件夹中的路径`data/sideload`处**创建一个新目录**。
 
-# Locales
+*例如，如果wiki安装在路径`/home/wiki`，则需要在路径`/home/wiki/data/sideload`创建目录*
 
-In order to install locale packages, you need the **master locale file** + at least one **locale package file**.
+# 语言
 
-> The files can be downloaded from https://github.com/Requarks/wiki-localization. These files are made up to date every night.
+为了安装语言环境包，您需要**主语言环境文件***+至少一个**语言环境包文件**。
+
+> 文件可以从 https://github.com/Requarks/wiki-localization 下载，这些文件每天更新一次。
 {.is-info}
 
-## 1 - Master File
+## 1 - 主语言环境文件
 
-The master file `locales.json` contains information about all available languages and is **REQUIRED** to install any locale.
+主文件`locales.json`包含所有可用语言的信息，安装任何语言环境都**需要**此文件。
 
-Place this file inside the `sideload` folder created previously.
+将此文件放在先前创建的`sideload`目录中。
 
-## 2 - Locale Packages
+## 2 - 语言环境包文件
 
-The locale package file `xx.json` or `xx-zz.json` contains all the translations for the language(s) of your choice. You can sideload any number of locales at the same time.
+语言环境包文件`xx.json`或`xx-zz.json`包含您选择的语言的所有翻译。您可以同时加载任意数量的语言环境包文件。
 
-> The English package `en.json` is **REQUIRED**, as this is the default language during installation. You can change the language afterwards.
+> 英文语言包`en.json`是**必需**加载的，因为这是安装期间的默认语言。之后您可以更改语言。
 {.is-warning}
 
-Place the file(s) inside the `sideload` folder created previously alongside the master file. You should now have `locales.json`, `en.json` and any additional languages in your folder.
+将文件放在主文件旁边先前创建的`sideload`目录中。现在，文件夹中应该有`locales.json`、`en.json`和其他语言。
 
-## 3 - Sideload
+## 3 - 侧载
 
-Run Wiki.js (or restart the process if already running) to automatically sideload the files localed in the `data/sideload` folder.
+运行Wiki.js（如果已经运行，则重新启动进程）以自动侧载`data/sideload`目录中的本地文件。
 
-> Because of a bug in versions prior to 2.5, the locale files are loaded in incorrect order, causing the clients to be unable to fetch the translations.
+> 由于2.5之前版本中的一个bug，语言文件的加载顺序不正确，导致客户端无法获取翻译。
 > 
-> As a workaround, once Wiki.js is fully started, restart the server again. The locale data (which is now in the database) will be loaded correctly.
+> 解决方法是，Wiki.js完全启动后，请重新启动服务器。将正确加载语言数据（现在已存储在数据库中）。
 {.is-danger}
 
-# Themes
+# 主题
 
-*Coming soon*
+*即将支持*
