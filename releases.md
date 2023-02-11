@@ -1,8 +1,8 @@
 ---
-title: Release Notes
-description: List of new features, bug fixes and improvements
+title: 发行说明
+description: 新功能、错误修复和改进列表
 published: true
-date: 2023-02-11T12:43:37.087Z
+date: 2023-02-11T12:43:53.617Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:42.323Z
