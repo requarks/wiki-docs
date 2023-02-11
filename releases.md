@@ -2,33 +2,33 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2023-02-04T21:11:01.120Z
+date: 2023-02-11T12:43:37.087Z
 tags: 
 editor: markdown
-dateCreated: 2019-05-26T03:34:27.819Z
+dateCreated: 2023-01-08T10:33:42.323Z
 ---
 
-- [Roadmap *See planned features / improvements for future releases.*](/releases/roadmap)
-- [FAQ / Questions *Where's the detailed timeline? When is feature X being released?*](/releases/about)
+- [产品规划 *查看未来版本的计划功能/改进。*](/releases/roadmap)
+- [FAQ / 问题解答 *详细的时间表在哪里？功能XXX何时发布？*](/releases/about)
 {.links-list}
 
-# DEV - 3.0
+# 开发版 - 3.0
 
-> This build is **under active development** and has not yet been released.
+> 此版本**正在积极开发**，尚未发布。
 >
-> **ETA: H1 2023**
+> **预计时间: 2023年上半年**
 {.is-warning}
 
-See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
+到 https://blog.js.wiki/news?tag=3.x 查看关于此版本的最新消息。
 
-# STABLE - 2.5.296
+# 稳定版 - 2.5.295
 
-Release notes have moved to GitHub:
+发行说明已移至GitHub：
 > https://github.com/requarks/wiki/releases
 {.is-info}
 
-# Previous Releases
+# 以前的版本
 
-- [2.5.117 to 2.5.276 Releases](/releases/2p5)
-- [2.0 to 2.4 Releases](/releases/previous)
-- [2.0 Beta Releases](/releases/beta)
+- [2.5.117 - 2.5.276 发行说明](/releases/2p5)
+- [2.0 - 2.4 发行说明](/releases/previous)
+- [2.0 测试版 发行说明](/releases/beta)
