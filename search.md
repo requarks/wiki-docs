@@ -2,21 +2,21 @@
 title: Search
 description: List of supported search engines
 published: true
-date: 2022-06-12T21:06:40.734Z
+date: 2023-02-12T08:05:49.467Z
 tags: search engine
 editor: markdown
-dateCreated: 2019-03-17T19:15:31.159Z
+dateCreated: 2023-01-08T10:33:48.287Z
 ---
 
-Search Engine modules provides search capabilities for your wiki.
+搜索引擎模块为您的 wiki 提供搜索功能。 
 
-# Modules
+# 模块
 
 - [Algolia](/search/algolia)
-- [AWS CloudSearch](/search/aws)
-- [Azure Search](/search/azure)
-- [DB - Basic](/search/db)
-- [DB - PostgreSQL](/search/postgres)
+- [AWS 云搜索](/search/aws)
+- [Azure 搜索](/search/azure)
+- [数据库 - 基本搜索](/search/db)
+- [数据库 - PostgreSQL](/search/postgres)
 - [Elasticsearch](/search/elasticsearch)
 {.links-list}
 
