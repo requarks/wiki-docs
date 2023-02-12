@@ -1,22 +1,24 @@
 ---
-title: DB - Basic
-description: Search Engine Module
+title: 数据库 - 基本搜索
+description: 搜索引擎模块
 published: true
-date: 2019-09-15T02:44:15.478Z
+date: 2023-02-12T08:47:05.120Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:37:02.982Z
 ---
 
-This is the default search engine for Wiki.js and provides basic search capabilities out-of-the-box.
+这是 Wiki.js 的默认搜索引擎，提供开箱即用的基本搜索功能。 
 
-> :warning: This engine is very limited *(basic title + description search)* and it's recommended to switch to a more capable engine if possible.
+> :warning: 该引擎非常有限 *（基本标题 + 描述搜索）* 如果可能，建议切换到功能更强大的引擎。
 {.is-warning}
 
-This engine has no configuration options and is selected by default when installing Wiki.js.
+该引擎没有配置选项，在安装 Wiki.js 时默认选中。 
 
 # Setup
 
-1. In the Wiki.js administration area, click on **Search Engine** in the sidebar.
-1. Select **DB - Basic** as the search engine.
-1. Click the **Apply** button to save and initialize the search engine.
+1. 在 Wiki.js 管理区中，单击侧边栏中的 **搜索引擎**。
+1. 将 **数据库 - 基本搜索** 作为搜索引擎
+1. 单击 **应用** 按钮保存并初始化搜索引擎。
 
-Note that the **Rebuild Index** function doesn't do anything on this engine.
+请注意，**重建索引** 函数不会在此引擎上执行任何操作。
