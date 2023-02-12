@@ -1,42 +1,44 @@
 ---
-title: AWS CloudSearch
-description: Search Engine Module
+title: AWS 云搜索
+description: 搜索引擎模块
 published: true
-date: 2019-09-15T02:43:38.607Z
+date: 2023-02-12T08:41:17.745Z
 tags: 
+editor: markdown
+dateCreated: 2023-01-08T10:36:57.632Z
 ---
 
-Amazon CloudSearch is a managed service in the AWS Cloud that makes it simple and cost-effective to set up, manage, and scale a search solution for your website or application.
+Amazon 云搜索是 AWS 云中的一项托管服务，可让您以简单且经济高效的方式为您的网站或应用程序设置、管理和扩展搜索解决方案。
 
-# Setup
+# 配置
 
-## Create the Search Domain
+## 创建搜索域名
 
-1. Login to your [AWS Console](https://console.aws.amazon.com)
-1. Create a new **CloudSearch** domain.
-1. Name your domain, choose the desired instance type and click **Continue**.
-1. At the **Configure Index** step, select **Manual Configuration**. Click **Continue**.
-1. At the **Review Index Configuration** step, leave everything empty and click **Continue**.
-1. Enter an Access Policy and **Continue**. It's recommended to limit by the IP of the server onto which Wiki.js is installed.
-1. Finally create the domain.
+1. 登录您的 [AWS 控制台](https://console.aws.amazon.com)
+1. 创建一个新的**云搜索**域名。
+1. 给您的域起一个名字，选择所需的实例类型，然后单击 **继续**。
+1. 在 **配置索引** 步骤中，选择 **手动配置索引**。单击 **继续**。
+1. 在 **检查索引配置** 步骤中，将所有内容留空并单击 **继续**。
+1. 输入访问策略并**继续**。建议通过安装 Wiki.js 的服务器的 IP 进行限制。
+1. 最后，创建域名。
 
-## Create the Search User
+## 创建搜索用户
 
-1. In [IAM](https://console.aws.amazon.com/iam), click on **Users**.
-1. Click on **Add User**.
-1. Enter a **User name** (e.g. wikisearch) and make sure **Programmatic access** is enabled. Click on **Next: Permissions**.
-1. Choose **Attach existing policies directly** and search for **CloudSearchFullAccess** and select it.
-1. Continue through the next steps to create the user.
-1. Make note of the **Access Key ID** and the **Secret Access Key**.
+1. 在 [IAM](https://console.aws.amazon.com/iam)中, 点击**用户**.
+1. 点击 **添加用户**.
+1. 输入一个 **用户名** (例如： wikisearch) 并确保 **编程访问** 已被启用。 点击 **下一步: 权限**.
+1. 选择 **直接附加现有策略** ，搜索 **CloudSearchFullAccess** 并选择它。
+1. 继续执行后续步骤以创建用户。
+1. 记下 **Access Key ID** 和 **Secret Access Key**。
 
-## Configure in Wiki.js
-1. In the Wiki.js administration area, click on **Search Engine** in the sidebar.
-1. Select **AWS CloudSearch** as the search engine.
-1. Enter the **Search Domain** of the AWS CloudSearch domain you just created. This is the name you entered when creating the new domain.
-1. Enter the **Document Endpoint**, found in the dashboard of the search domain in the AWS console.
-1. Select the **Region** where the search domain was created.
-1. Enter the **Access Key ID** and **Secret Access Key** generated earlier.
-1. Select the language to use for the Analysis Scheme.
-1. Click the **Apply** button to save and initialize the search engine. An index will be created automatically.
+## 配置 Wiki.js
+1. 在 Wiki.js 管理区中，单击侧边栏中的 **搜索引擎**。
+1. 选择 **AWS 云搜索** 作为搜索引擎。
+1. 输入您刚刚创建的 AWS 云端搜索域的 **搜索域名**。这是您在创建新域时输入的名称。
+1. 输入 **文档 Endpoint**，可在 AWS 控制台的搜索域仪表板中找到。
+1. 选择创建搜索域时设定的**区域**。
+1. 输入之前生成的**Access Key ID**和**Secret Access Key**。
+1. 选择用于分析方案的语言。
+1. 单击 **应用** 按钮保存并初始化搜索引擎。系统将自动创建一个索引。
 
-Note that if you already have content in your wiki, you must click on **Rebuild Index** afterwards to import all your existing content into the search engine. Any change (new, edit, delete page) will be handled automatically from this point forward.
+请注意，如果您的 wiki 中已有内容，则必须在之后单击 **重建索引** 以将所有现有内容导入搜索引擎。从此时起，任何更改（新建、编辑、删除页面）都将自动处理。
