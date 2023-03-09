@@ -2,7 +2,7 @@
 title: 发行说明
 description: 新功能、错误修复和改进列表
 published: true
-date: 2023-02-11T12:43:53.617Z
+date: 2023-02-17T05:49:17.185Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:42.323Z
@@ -16,12 +16,12 @@ dateCreated: 2023-01-08T10:33:42.323Z
 
 > 此版本**正在积极开发**，尚未发布。
 >
-> **预计时间: 2023年上半年**
+> **预计时间：2023年下半年**
 {.is-warning}
 
 到 https://blog.js.wiki/news?tag=3.x 查看关于此版本的最新消息。
 
-# 稳定版 - 2.5.295
+# 稳定版 - 2.5.297
 
 发行说明已移至GitHub：
 > https://github.com/requarks/wiki/releases
