@@ -1,22 +1,22 @@
 ---
-title: 搜索
-description: 支持的搜索引擎列表
+title: Search
+description: List of supported search engines
 published: true
-date: 2023-02-12T08:19:35.114Z
-tags: search engine, 搜索引擎
+date: 2022-06-12T21:06:40.734Z
+tags: search engine
 editor: markdown
-dateCreated: 2023-01-08T10:33:48.287Z
+dateCreated: 2019-03-17T19:15:31.159Z
 ---
 
-搜索引擎模块为您的 wiki 提供搜索功能。 
+Search Engine modules provides search capabilities for your wiki.
 
-# 模块
+# Modules
 
 - [Algolia](/search/algolia)
-- [AWS 云搜索](/search/aws)
-- [Azure 搜索](/search/azure)
-- [数据库 - 基本搜索](/search/db)
-- [数据库 - PostgreSQL](/search/postgres)
+- [AWS CloudSearch](/search/aws)
+- [Azure Search](/search/azure)
+- [DB - Basic](/search/db)
+- [DB - PostgreSQL](/search/postgres)
 - [Elasticsearch](/search/elasticsearch)
 {.links-list}
 

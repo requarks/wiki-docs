@@ -1,48 +1,48 @@
 ---
 title: Upgrade
-description: 如何升级到最新版本
+description: How to upgrade to the latest version
 published: true
-date: 2023-02-11T12:30:32.029Z
-tags: setup, 安装
+date: 2023-02-07T05:38:49.811Z
+tags: setup
 editor: markdown
-dateCreated: 2023-01-08T10:36:30.160Z
+dateCreated: 2019-02-15T23:53:12.166Z
 ---
 
-> **请勿使用以下说明从1.0.x升级**！请改用[从Wiki.js v1.x迁移](/install/migrate)教程。这些说明适用于`2.x`实例。
+> **DO NOT** upgrade from `1.0.x` using these instructions! Use the [Migrate from Wiki.js v1.x](/install/migrate) instructions instead. These instructions are for `2.x` installations.
 {.is-danger}
 
-> 虽然升级通常是安全的，而且不太可能导致数据丢失，但**您有责任在执行升级之前对数据库进行适当的备份。** 请注意，一旦数据库架构升级，就不可能回退到以前版本的Wiki.js。
+> While upgrades are generally safe and it's very unlikely that it would result in data loss, **it's your responsibility to have a proper backup of your database before performing an upgrade.** Note that it's not possible to go back to a previous version of Wiki.js once the database schema has been upgraded.
 {.is-warning}
 
-# 原地升级
+# In-place Upgrade
 
-选择您的平台：
+Select your platform:
 
 ## Platforms {.tabset}
 
 ### Docker <i class="mdi mdi-docker"></i>
 
-#### 独立容器
+#### Standalone Container
 
-只需使用最新的映像版本重新创建容器即可升级：
+Upgrading is simply a matter of recreating the container with the latest image version:
 
 ```bash
-# 停止并删除容器`wiki`
+# Stop and remove container named "wiki"
 docker stop wiki
 docker rm wiki
 
-# 拉取Wiki.js的最新映像
+# Pull latest image of Wiki.js
 docker pull ghcr.io/requarks/wiki:2
 
-# 在最新映像上创建新容器
+# Create new container of Wiki.js based on latest image
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
-查看[Docker安装指南](/install/docker)，了解创建Wiki.js容器时的所有可能选项。
+Check out the [Docker installation guide](/install/docker) for all the possible options when creating a Wiki.js container.
 
 #### Docker Compose
 
-以下命令将拉取最新映像并重新创建docker compose文件中定义的容器：
+The following commands will pull the latest image and recreate the containers defined in the docker-compose file:
 
 ```bash
 docker-compose pull wiki
@@ -51,80 +51,80 @@ docker-compose up --force-recreate -d
 
 ### Linux / macOS <i class="mdi mdi-ubuntu"></i>
 
-> 下面的命令假定Wiki.js安装在名为 `wiki`的子目录下.
+> The commands below assume an installation within a subfolder named `wiki`.
 {.is-info}
 
-1) 停止正在运行的Wiki.js实例
-2) 备份`config.yml`文件。
+1) Stop the running Wiki.js instance
+2) Make a backup of your `config.yml` file.
   ```bash
   cp wiki/config.yml ~/config.yml.bak
   ```
-3) 删除应用程序文件夹。
+3) Delete the application folder.
   ```bash
   rm -rf wiki/*
   ```
-4) 下载最新版本的Wiki.js。
+4) Download the latest version of Wiki.js.
   ```bash
   wget https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
   ```
-5) 解压程序包
+5) Extract the package
   ```bash
   tar xzf wiki-js.tar.gz -C ./wiki
   cd wiki
   ```
-6) 将config.yml还原到其原始位置。
+6) Restore your config.yml back to its original location.
   ```bash
   cp ~/config.yml.bak ./config.yml
   ```
-7) 启动 Wiki.js
+7) Start Wiki.js
   ```bash
   node server
   ```
 
 ### Windows <i class="mdi mdi-microsoft-windows"></i>
 
-> 下面的命令假定Wiki.js安装在 `C:\wiki`.
+> The commands below assume an installation at folder location `C:\wiki`.
 {.is-info}
 
-1. 在管理员模式下打开**Powershell**提示符。
-1. 备份`config.yml`文件。
+1. Open a **Powershell** prompt in administrator mode.
+1. Make a backup of `config.yml` file.
   ```powershell
   Copy-Item "C:\wiki\config.yml" -Destination "C:\config.yml.bak"
   ```
-3. 删除应用程序文件夹。
+3. Delete the application folder contents.
   ```powershell
   Clear-Content "C:\wiki\*"
   ```
-4. 如果您使用的是**Windows 7/Windows Server 2008 R2或更旧版本**，则必须运行以下命令 *（否则跳过此步骤）*
+4. If you are using **Windows 7 / Windows Server 2008 R2 or older**, you must run the following command. *(otherwise skip this step)*
   ```powershell
   [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
   ```
-5. 下载最新版本的Wiki.js。
+5. Download the latest version of Wiki.js:
   ```powershell
   Invoke-WebRequest -Uri "https://github.com/Requarks/wiki/releases/latest/download/wiki-js-windows.tar.gz" -OutFile "wiki-js.tar.gz"
   ```
 
-4. 解压程序包
+4. Extract the package to the final destination of your choice:
   ```powershell
   tar xzf wiki-js.tar.gz -C "C:\wiki"
   cd C:\wiki
   ```
-  > tar程序仅在Windows 10上可用。在早期版本中，您需要第三方实用程序（如[7-zip](https://www.7-zip.org/)）来提取文件。
+  > The **tar** utility is only available on Windows 10. On earlier versions, you'll need a 3rd-party utility like [7-zip](https://www.7-zip.org/) to extract the file.
   {.is-warning}
-5. 将`config.yml`备份文件复制回其原始位置。
+5. Copy your `config.yml` backup file back to it's original location.
   ```powershell
   Copy-Item "C:\config.yml.bak" -Destination "C:\wiki\config.yml"
   ```
-6. 启动Wiki.js
+6. Run Wiki.js
   ```powershell
   node server
   ```
   
-# 在服务器之间迁移
+# Migrate between servers
 
-阅读[服务器间迁移](/install/transfe)指南，了解如何将现有的2.x Wiki.js实例迁移至新服务器。
+Read the [transfer between servers](/install/transfer) guide to learn how to move an existing 2.x Wiki.js installation to a new server.
 
-> 注意，新服务器Wiki.js版本不需要与旧服务器匹配。还原后，实例将自动更新到最新版本。例如，将旧服务器上的2.2版本实例迁移到新服务器上的2.5版本实例是非常安全的。
+> Note that the new server Wiki.js version doesn't need to match the old server. The installation will automatically be updated to the latest version upon restore. For example, it's perfectly safe to migrate a 2.2 installation on the old server to 2.5 on the new server.
 {.is-info}
 
 ![](https://a.icons8.com/YTSPoggQ/4CQtQD/svg.svg){.align-abstopright}

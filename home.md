@@ -2,10 +2,10 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2023-01-30T13:39:30.599Z
+date: 2022-06-12T21:20:29.807Z
 tags: 
 editor: markdown
-dateCreated: 2023-01-08T10:29:41.926Z
+dateCreated: 2019-02-15T04:20:30.188Z
 ---
 
 > This documentation site is running on Wiki.js!

@@ -1,24 +1,22 @@
 ---
 title: Algolia
-description: 搜索引擎模块
+description: Search Engine Module
 published: true
-date: 2023-02-12T08:24:23.359Z
+date: 2019-09-15T02:43:22.304Z
 tags: 
-editor: markdown
-dateCreated: 2023-01-08T10:36:54.753Z
 ---
 
-Algolia 是一种功能强大的搜索即服务解决方案，可轻松与 API 客户端、UI 库和预构建集成一起使用。 
+Algolia is a powerful search-as-a-service solution, made easy to use with API clients, UI libraries, and pre-built integrations.
 
-# 配置
+# Setup
 
-1. 在 Wiki.js 管理区中，单击侧边栏中的 **搜索引擎**。
-1. 选择 **Algolia** 作为搜索引擎
-1. 输入您的 **应用 ID**（在fAlgolia面板中的**API 密钥**下查看）.
-1. 输入您的 **管理API密钥**（与上一步的查看位置相同）. 您还可以创建一个特定于您的 wiki 的密钥。
-1. 输入一个索引名称 (默认值: wiki).
-1. 单击 **应用** 按钮保存并初始化搜索引擎。系统将自动创建一个索引。
+1. In the Wiki.js administration area, click on **Search Engine** in the sidebar.
+1. Select **Algolia** as the search engine.
+1. Enter your **Application ID**, found under the **API Keys** in your Algolia dashboard.
+1. Enter your **Admin API Key**, found on the same page as before. You may also create a key specific to your wiki.
+1. Enter the desired index name (default: wiki).
+1. Click the **Apply** button to save and initialize the search engine. An index will be created automatically.
 
-请注意，如果您的 wiki 中已有内容，则必须在之后单击 **重建索引** 以将所有现有内容导入搜索引擎。从此时起，任何更改（新建、编辑、删除页面）都将自动处理。
+Note that if you already have content in your wiki, you must click on **Rebuild Index** afterwards to import all your existing content into the search engine. Any change (new, edit, delete page) will be handled automatically from this point forward.
 
 ![](https://static.requarks.io/logo/algolia.svg =x50){.align-abstopright}

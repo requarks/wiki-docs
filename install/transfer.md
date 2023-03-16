@@ -1,75 +1,76 @@
 ---
-title: 在服务器之间迁移Wiki.js
-description: 如何将Wiki.js迁移到新服务器
+title: Transfer Wiki.js between servers
+description: How to migrate your installation to a new server
 published: true
-date: 2023-02-11T12:17:05.089Z
+date: 2023-01-29T21:57:54.346Z
 tags: 
 editor: markdown
-dateCreated: 2023-01-08T10:36:24.308Z
+dateCreated: 2020-09-13T03:44:51.774Z
 ---
 
-# 开始迁移
+# Getting Started
 
-本指南假设您当前正在使用运行在Linux Docker上的Wiki.js2.x的PostgreSQL数据库安装，详细信息请参阅[Ubuntu上的安装指南](/install/ubuntu)。这是DigitalOcean和AWS 市场一键映像采用的默认安装方法。
+This guide assumes you're currently using a **PostgreSQL** database installation of Wiki.js 2.x running on Docker on Linux, as detailed in the [Ubuntu installation guide](/install/ubuntu). This is the default installation method for 1-click images for DigitalOcean and AWS Marketplace.
 
-> 请注意，**不能**从不同的数据库引擎 *（例如MySQL、MSSQL或SQLite）*“转换”安装。您应该手动将内容导出到磁盘，然后将其重新导入到新安装中。
+> Note that it is **NOT** possible to "convert" an installation from a different database engine *(e.g. MySQL, MSSQL or SQLite)*. You should instead export content manually to disk and re-import it into a new installation.
 {.is-danger}
 
-# 1. 配置新服务端
+# 1. Setup New Server
 
-***环境:** 新服务器*{.caption}
+***Context:** New server*{.caption}
 
-让我们从设置目标服务器开始。遵循[Ubuntu安装指南](/install/ubuntu)，直到“**访问安装向导**”步骤 *（不要执行此步骤，在启动Docker容器后立即停止）*。
+Let's start by setting up the destination server. Follow the [Ubuntu installation guide](/install/ubuntu) up until the "**Access the setup wizard**" step *(don't do this step, stop right after starting the Docker containers)*.
 
-现在，您应该拥有一个完全初始化的服务器，其中包含PostgreSQL数据库、Wiki.js实例和Wiki.js自动更新程序，所有这些都在Docker容器中运行。
+You should now have a fully setup server with a PostgreSQL database, a Wiki.js installation and the Wiki.js auto-updater all running in Docker containers.
 
-# 2. 备份数据库
+# 2. Backup Database
 
-***环境:** 旧服务器*{.caption}
+***Context:** Old server*{.caption}
 
-在之前安装的旧服务器上，进行数据库完整转储：
+On your old server where your previous installation is located, make a full database dump:
 ```bash
 docker exec db pg_dump wiki -U wiki -F c > wikibackup.dump
 ```
-> 在上面的命令中，PostgreSQL docker容器名为`db`，我们使用的是数据库名`wiki`和用户`wiki`。如果您遵循了上面“入门”部分中提到的安装指南，那么这是默认设置。
+> In the above command, the PostgreSQL docker container is named `db` and we're using the database name `wiki` and user `wiki`. This is the default if you followed the tutorial mentionned in the Getting Started section above.
 {.is-info}
 
-这将在当前目录中创建一个新文件`wikibackup.sql`。
+This will create a new file `wikibackup.dump` in the current directory.
 
-# 3. 迁移备份
-***环境:** 旧服务器*{.caption}
+# 3. Transfer Backup
 
-现在，我们将备份文件传输到新服务器上。有几种方法可以在服务器之间复制文件，但我们将在本例中使用rsync。将下面命令中的`YOUR-NEW-SERVER-IP`替换为新服务器的IP地址。
+***Context:** Old server*{.caption}
+
+We'll now transfer the backup file onto the new server. There're several methods to copy files between servers but we'll use rsync for this example. Replace `YOUR-NEW-SERVER-IP` in the command below with the IP address of your new server.
 
 ```bash
 rsync -P wikibackup.dump root@YOUR-NEW-SERVER-IP:~/wikibackup.dump
 ```
 
-> 这假设您之前已将新服务器配置为接受来自旧服务器的SSH连接。为此，需要将旧服务器的公钥添加到新服务器的authorized_keys中。您可以在[此教程](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-22-04)中学习。
+> This assumes that you have previously configured your new server to accept SSH connections from your old server. To do so, you need to add the public key of the old server into the authorized_keys of the new server. You can learn how [in this tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-22-04).
 {.is-info}
 
-# 4. 恢复数据库
+# 4. Restore Database
 
-***环境:** 新数据库*{.caption}
+***Context:** New server*{.caption}
 
-现在，我们准备将数据库转储还原到新数据库中。
+We're now ready to restore the database dump into the new database.
 
-在新服务器上，停止docker容器`wiki`：
+On the new server, stop the `wiki` docker container:
 
 ```bash
 docker stop wiki
 ```
 
-将`wikibackup.dump`文件还原到新数据库中，首先删除现有的空数据库：
+Restore the `wikibackup.dump` file into a new database, first dropping the existing empty DB:
 ```bash
 docker exec -it db dropdb -U wiki wiki
 docker exec -it db createdb -U wiki wiki
 cat ~/wikibackup.dump | docker exec -i db pg_restore -U wiki -d wiki
 ```
 
-我们现在可以重新启动`wiki`容器：
+We can now restart the `wiki` container:
 ```
 docker start wiki
 ```
 
-以上就是全部迁移过程！
+That's it!

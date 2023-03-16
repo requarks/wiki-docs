@@ -1,35 +1,33 @@
 ---
-title: 互联网访问
-description: 了解Wiki.js从互联网下载的内容
+title: Internet Access
+description: Learn about what content is downloaded from the Internet
 published: true
-date: 2023-02-08T01:27:38.964Z
+date: 2019-11-10T17:56:23.669Z
 tags: 
-editor: markdown
-dateCreated: 2023-01-08T10:37:14.705Z
 ---
 
-Wiki.js将定期检查新内容和更新。
-这可以确保您的wiki始终是最新的，并且可以在管理区中通知您Wiki.js的新版本。
+Wiki.js will regularly check for new content and updates.
+This ensures your wiki is always up-to-date and that you can be notified of new versions of Wiki.js in the administration area.
 
-# 系统请求
+# System Requests
 
-- 每24小时检查一次新版本 **更新**
-- 每24小时检查一次 **翻译更新**
+- New **updates** are checked every 24h.
+- New **language updates** are checked every 24h.
 
-这些请求是向`graphic.requirks.io`发出的，这是一个由Wiki.js开发人员管理的云服务。不会向服务器发送有关Wiki的跟踪数据或私人信息。仅发送处理您当前请求所需的数据（如您的IP和请求的数据），之后不会存储。
+These requests are made to `graph.requarks.io`, a cloud service managed by the developers of Wiki.js. No tracking data or private information about your wiki is sent to the servers. Only the data necessary to process your request at hand is sent (such as your IP and the data requested) and is not stored afterwards.
 
-Wiki.js提供[侧载内容](/install/sideload)（如语言文件）的方法，以允许完全脱机安装。
+An alternate method of downloading and [sideloading content](/install/sideload) (such as language files) is provided to allow for full offline installations.
 
-# 模块请求
+# Module Requests
 
-某些模块需要互联网才能运行。
+Some modules require internet access to function.
 
-- 您启用的任何**存储**模块都将按照您在管理区中指定的计划间隔与相关服务提供商进行通信。
-- 您启用的任何**身份验证**、**日志记录**和**搜索**模块都将与相关服务提供商就特定事件（如登录、搜索查询和日志记录事件）进行通信。
+- Any **storage** modules you enable will communicate with the associated service provider at the schedule interval you specified in the administration area.
+- Any **authentication**, **logging** and **search** modules you enable will communicate with the associated service provider on specific events (such as login, search queries and logging event).
 
-> 注意，有些模块使用服务提供商提供的库，这些库可以跟踪和收集数据。在启用模块之前，请确保您信任服务提供商。
+> Note that some modules use libraries provided by service providers which may track and collect data. Make sure you trust the service provider before enabling a module.
 {.is-warning}
 
-# 遥测
+# Telemetry
 
-遥测为开发人员提供了改进Wiki.js的有用数据，更多信息参见[遥测](/telemetry)文章。
+Telemetry provides useful insights to the developers to improve Wiki.js, as detailed in the [Telemetry](/telemetry) article.
