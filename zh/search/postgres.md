@@ -1,31 +1,32 @@
 ---
-title: DB - PostgreSQL
-description: Search Engine Module
+title: 数据库 - PostgreSQL
+description: 搜索引擎模块
 published: true
-date: 2020-06-07T17:15:39.358Z
+date: 2023-03-16T08:45:000Z
 tags: 
 editor: markdown
 ---
 
-This engine makes use of the advanced capabilities of PostgreSQL to provide a "good enough" search solution.
+该引擎利用了PostgreSQL的高级功能，提供了一个“足够好”的搜索解决方案。
 
-> You must be running Wiki.js using a PostgreSQL database in order to use this engine!
+> 为了使用此引擎，您必须使用PostgreSQL数据库运行Wiki.js！
 {.is-warning}
 
-# Requirements
+# 要求
 
-The **pg_trgm** extension must be enabled on the PostgreSQL for this engine to function correctly. It is enabled by default on most installations, but if that's not the case, you can enable it by running:
+对于此引擎正常工作，必须在PostgreSQL上启用**pg_trgm**扩展。它在大多数安装中默认启用，但如果不是这种情况，则可以通过运行以下命令来启用它：
 
 ```sql
 CREATE EXTENSION pg_trgm;
 ```
-> The extension has to be activated **per database** so make sure to enable it for your Wiki.js database.{.is-info}
+> 扩展程序必须针对每个数据库进行激活，请确保为您的Wiki.js数据库启用它。
+{.is-info}
 
-# Setup
+# 设置
 
-1. In the Wiki.js administration area, click on **Search Engine** in the sidebar.
-1. Select **DB - PostgreSQL** as the search engine.
-1. Select the dictionary language to use in the dropdown list.
-1. Click the **Apply** button to save and initialize the search engine. An index will be created automatically.
+1. 在Wiki.js管理区中，在侧边栏中单击 **Search Engine（搜索引擎）**。
+2. 选择 **数据库 - PostgreSQL** 作为搜索引擎。
+3. 在下拉列表中选择要使用的字典语言。
+4. 单击 **应用** 按钮以保存和初始化搜索引擎。将自动创建索引。
 
-Note that if you already have content in your wiki, you must click on **Rebuild Index** afterwards to import all your existing content into the search engine. Any change (new, edit, delete page) will be handled automatically from this point forward.
+请注意，如果您的wiki之前已有内容，则必须单击 **重建索引** 将所有现有内容导入到搜索引擎中。从此时起任何更改(新建、编辑、删除页面)都将自动处理。

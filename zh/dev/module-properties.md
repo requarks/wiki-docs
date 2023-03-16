@@ -2,7 +2,7 @@
 title: 模块属性
 description: Structure of module properties
 published: true
-date: 2023-02-05T02:51:44.929Z
+date: 2023-03-16T08:45:000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:34:59.676Z

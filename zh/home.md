@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Wiki.js 2.x 官方文档的中文版
 published: true
-date: 2023-01-08T13:49:45.632Z
+date: 2023-03-16T08:45:000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:30.645Z

@@ -1,30 +1,30 @@
 ---
-title: Storage
-description: List of supported storage targets
+title: 存储
+description: 受支持的存储目标列表
 published: true
-date: 2021-06-24T20:28:08.078Z
-tags: storage
+date: 2023-03-16T08:45:000Z
+tags: storage, 存储
 editor: markdown
-dateCreated: 2019-02-17T22:46:42.792Z
+dateCreated: 2023-01-08T10:33:51.198Z
 ---
 
-Storage modules allow for simple content backup and synchronization.
+存储模块可使您能够进行简单的内容备份和同步。
 
-All content is stored in the database. However, you may want to save that content in various locations as well. You can enable any of the storage modules below to do so.
+所有内容都存储在数据库中。然而，您可能也想将该内容保存在其他位置。您可以启用以下任何存储模块来实现这一点。
 
-Some modules are also capable of synchronizing content in both directions (such as Git). This allows for content to be created and modified in other applications and still be available in Wiki.js.
+一些模块还可以实现内容的双向同步（例如Git）。这使得内容可以在其他应用程序中创建和修改，同时仍然可以在Wiki.js中使用。
 
-# Modules
+# 模块
 
 - [AWS S3](/storage/s3)
 - [Azure Blob Storage](/storage/azure)
-- [Box *coming soon*]()
+- [Box *即将支持*]()
 - [DigitalOcean Spaces](/storage/digitalocean)
-- [Dropbox *coming soon*]()
+- [Dropbox *即将支持*]()
 - [Git](/storage/git)
-- [Google Drive *coming soon*]()
-- [Local File System](/storage/disk)
-- [Microsoft OneDrive *coming soon*]()
+- [Google Drive *即将支持*]()
+- [本地文件系统](/storage/disk)
+- [Microsoft OneDrive *即将支持*]()
 - [SFTP](/storage/sftp)
 {.links-list}
 

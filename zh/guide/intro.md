@@ -2,7 +2,7 @@
 title: Wiki.js简介
 description: 教你创建第一页等
 published: true
-date: 2023-02-07T15:17:05.150Z
+date: 2023-03-16T08:45:000Z
 tags: user-guide, 用户指南
 editor: markdown
 dateCreated: 2023-01-08T10:35:35.169Z

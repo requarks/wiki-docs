@@ -2,7 +2,7 @@
 title: 遥测
 description: 帮助我们改善Wiki.js！
 published: true
-date: 2023-01-22T08:04:32.614Z
+date: 2023-03-16T08:45:000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:33:53.954Z

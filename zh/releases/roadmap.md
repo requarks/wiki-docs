@@ -1,105 +1,105 @@
 ---
-title: Roadmap
-description: Planned features / improvements for future releases
+title: 开发规划
+description: 未来版本计划发布的功能/改进
 published: true
-date: 2021-04-09T20:31:32.980Z
+date: 2023-03-16T08:45:000Z
 tags: 
 editor: markdown
-dateCreated: 2020-02-02T21:19:26.210Z
+dateCreated: 2023-01-08T10:36:51.888Z
 ---
 
-This page list possible important features and refactoring ideas for future major versions.
+本页列出了未来主要版本可能的重要功能和重构思路。
 
-> These are not set in stone and only serve as a discussion point.
+> 以下内容并非一成不变，只是作为一个讨论点。
 {.is-warning}
 
-[Suggest new features / improvements](https://requarks.canny.io/wiki)
+[提出新功能/改进建议](https://requarks.canny.io/wiki)
 
 # 3.0
 
-## Switch to a full SPA model for navigation
+## 全部导航切换至SPA
 
-At the moment, only the administration area is using a SPA navigation model (switch views without reloading the page). Standard view pages don't use this model for easier SEO.
+目前，只有管理区使用SPA（在不重新加载页面的情况下切换视图）。标准视图页面不使用此模型以便于搜索引擎优化。
 
-In 3.x, site-wide SPA should be implemented in addition to server-side rendering of page contents.
+在3.x中，除页面内容的服务器端呈现之外，还应实现站点范围的SPA。
 
-## Switch to Quasar Vue framework
+## 切换到Quasar Vue框架
 
-- Allows for easier server-side rendering and mobile capabilities.
-- Better components *(specifically the table component)*
+- 方便服务器端渲染和更多移动功能。
+- 优化组件 *（特别是表格组件）*
 
-## Use PostgreSQL as sole database engine
+## 使用PostgreSQL作为唯一的数据库引擎
 
-The current implementation for database handling is done via Knex.js and Objection.js, which allows for various drivers to be used for PostgreSQL, MySQL, MariaDB, SQL Server and SQLite. While it offers broad compatibility for users, it also brings major limitations for the architecture and development in general:
+当前的数据库处理实现是通过Knex.js和Objection.js完成的，它允许各种用于PostgreSQL、MySQL、MariaDB、SQL Server和SQLite的驱动程序。虽然它为用户提供了广泛的兼容性，但也给总体架构和开发带来了重大限制：
 
-- Many different configurations to support
-- Some functions require different implementations based on the driver
-- Some functions are simply not implemented in some database engines:
-	- *Recursive Queries*
-  - *Pub/Sub Notification*
-  - *Advanced Search Capabilities*
-- Some migrations can be complex (specifically MS SQL Server)
+- 要支持许多不同的配置
+- 根据驱动程序，某些功能需要不同的实现
+- 部分函数在某些数据库引擎中根本没有实现
+	- *递归查询*
+  - *Pub/Sub通知*
+  - *高级搜索功能*
+- 某些迁移可能很复杂（尤其是MS SQL Server）
 
-Supporting PostgreSQL as the only database engine in 3.x would greatly simplify development.
+把PostgreSQL作为3.x中唯一的数据库引擎将大大简化开发。
 
 # 3.x
 
-## Authentication
-- Account Linking
-- CAS Module
-- Map LDAP groups to Wiki.js groups
-- Microsoft Account Module
-- View As capability
+## 身份验证
+- 帐户绑定
+- CAS模块
+- 将LDAP组映射到Wiki.js组
+- Microsoft帐户模块
+- “以...身份查看”功能
 
-## Editor
-- ASCIIDoc Editor
-- Asciinema Support
-- API Editor *(REST/GraphQL)*
-- Autosave Draft
-- Blog Editor
-- Create Redirect Page
-- Columns for content
-- Commit message upon saving
-- Draw&#46;io Diagrams Integration for Visual Editor
-- Directory Page (List children)
-- Inline Templates (Content Transclusion)
-- Paste images into editor
-- Previous / Next Links
+## 编辑器
+- ASCIIDoc 编辑器
+- Asciinema 支持
+- API 编辑器 *(REST/GraphQL)*
+- 自动保存草稿
+- 博客编辑器
+- 创建重定向页面
+- 为内容创建列
+- 自定义保存时的commit信息
+- 为可视编辑器集成Draw&#46;io 图表
+- 目录页（展示目录下所有子页）
+- 内联模板（内容转换）
+- 将图片直接粘贴到编辑器中
+- 上一页/下一页链接
 
-## Media Assets
-- Compress Images
-- Edit Image (crop, resize, filters, etc.)
-- Edit / Delete Folders
-- Search Assets
+## 媒体资源
+- 压缩图片
+- 编辑图片 (裁剪, 调整大小, 滤镜等)
+- 编辑/删除目录
+- 资源搜索
 
-## Page Management
-- Batch rename / move pages
-- Bookmark / Collections
-- Delete orphaned tags automatically
-- Export to PDF
-- Import Content
-  - From Wikimedia
-  - From DokuWiki
-  - From Confluence
-- Purge old history automatically
-- Recycle Bin
+## 页面管理
+- 批量重命名/移动页面
+- 书签/收藏
+- 自动删除孤立标签
+- 导出为PDF
+- 导入内容
+  - 从 Wikimedia 导入
+  - 从 DokuWiki 导入
+  - 从 Confluence 导入
+- 自动清除旧历史记录
+- 回收站
 
-## Site Administration
-- Change Favicon
-- Save Navigation configuration into storage
-- Statistics / Reports
+## 站点管理
+- 修改 Favicon
+- 将导航配置保存到存储中
+- 统计/报告
 - Webhooks
 
-## Storage
-- Multi-git repository support
-- IPFS Module
-- Box, Dropbox, Google Drive, OneDrive Modules
+## 存储
+- 多Git存储库支持
+- IPFS模块
+- Box, Dropbox, Google Drive, OneDrive 模块
 
-## Theme / Layout
-- Hide TOC block / Move to right
-- Hide Last Edited By block
+## 主题 / 外观
+- 隐藏目录区块/在右侧显示
+- 隐藏上次编辑者块
 
-## User Interaction
-- Page Rating
-- Embed mode for Pages
-- Messaging System
+## 用户交互
+- 页面评分
+- 页面的嵌入模式
+- 私信系统

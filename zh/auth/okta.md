@@ -1,9 +1,9 @@
 ---
 title: Okta
-description: Authentication Module
+description: 身份认证模块
 published: true
-date: 2023-01-29T13:10:36.921Z
-tags: auth, module
+date: 2023-03-16T08:45:000Z
+tags: auth, module, 身份认证, 模块
 editor: markdown
 dateCreated: 2023-01-08T10:34:31.005Z
 ---

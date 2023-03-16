@@ -2,7 +2,7 @@
 title: 翻译
 description: 贡献新语言或测试新语言键
 published: true
-date: 2023-02-06T03:24:52.240Z
+date: 2023-03-16T08:45:000Z
 tags: dev, localization, 本地化, 开发
 editor: markdown
 dateCreated: 2023-01-08T10:35:17.685Z

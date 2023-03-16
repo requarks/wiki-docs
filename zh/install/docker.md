@@ -1,144 +1,144 @@
 ---
 title: Docker
-description: Getting started with the Docker image
+description: Docker映像入门
 published: true
-date: 2022-02-11T22:48:39.365Z
-tags: setup, docker
+date: 2023-03-16T08:45:000Z
+tags: setup, docker, 安装
 editor: markdown
-dateCreated: 2019-02-15T04:23:08.720Z
+dateCreated: 2023-01-08T10:35:58.261Z
 ---
 
-> Before proceeding, make sure you meet the [system requirements](/install/requirements).
+> 在继续之前，请确保您满足[系统要求](/install/requirements)。
 {.is-info}
 
-# Using the Docker image
+# 使用Docker映像
 
-Wiki.js is published as a Docker image on GitHub Packages as `ghcr.io/requarks/wiki` and on Docker Hub as `requarks/wiki`.
+Wiki.js在GitHub Packages上以`ghcr.io/reqarks/wiki`发布Docker映像，在Docker Hub上以`reqarks/wiki`的形式发布。
 
-> It's highly recommended that you don't use the `latest` tag but instead the major version you need, e.g. `ghcr.io/requarks/wiki:2`
+> 强烈建议您不要使用`latest`标签，而是使用所需的主要版本，例如`ghcr.io/reqarks/wiki:2`
 >
-> It's also possible to point to a specific minor version (e.g. `ghcr.io/requarks/wiki:2.5`), although you will not automatically get the latest features when pulling the latest image.
+> 您也可以将映像指向特定的次要版本（例如`ghcr.io/remarks/wiki:2.5`），尽管在拉取映像时不会自动获得最新功能。
 {.is-info}
 
-- View on [GitHub Packages](https://github.com/Requarks/wiki/pkgs/container/wiki)
-- View on [Docker Hub](https://hub.docker.com/r/requarks/wiki)
+- 在[GitHub Packages](https://github.com/Requarks/wiki/pkgs/container/wiki)查看
+- 在[Docker Hub](https://hub.docker.com/r/requarks/wiki)查看
 
-## Environment Variables
-You must set the following environment variables. They are all **required** unless specified otherwise.
+## 环境变量
+必须设置以下环境变量。除非另有规定，否则均为**必需**。
 
-### Database
+### 数据库
 
-- **DB_TYPE** : Type of database (`mysql`, `postgres`, `mariadb`, `mssql` or `sqlite`)
+- **DB_TYPE** : 数据库类型 (`mysql`, `postgres`, `mariadb`, `mssql` 或 `sqlite`)
 {.grid-list}
 
-*For PostgreSQL, MySQL, MariaDB and MSSQL only:*
+*以下仅适用于PostgreSQL, MySQL, MariaDB 和 MSSQL:*
 
-- **DB_HOST** : Hostname or IP of the database
-- **DB_PORT** : Port of the database
-- **DB_USER** : Username to connect to the database
-- **DB_PASS** : Password to connect to the database
-- **DB_NAME** : Database name
+- **DB_HOST** : 数据库主机名或IP
+- **DB_PORT** : 数据库端口
+- **DB_USER** : 连接到数据库的用户名
+- **DB_PASS** : 连接到数据库的密码
+- **DB_NAME** : 数据库名称
 {.grid-list}
 
-*When connecting to a database server with SSL enforced:*
+*当要连接到强制要求SSL连接的数据库时:*
 
-- **DB_SSL** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
-- **DB_SSL_CA** : Database CA certificate content, as a single line string (without spaces or new lines), without the prefix and suffix lines. *(optional, requires 2.3+)*
+- **DB_SSL** : 设为 `1` 或 `true` 以启用。 *(可选，如果省略则默认关闭)*
+- **DB_SSL_CA** : 数据库CA证书内容，作为单行字符串（不带空格或结尾空白行），不带前缀和后缀行。*(可选，需要2.3及以上版本)*
 {.grid-list}
 
-*Alternative way to provide the database password, via a local file secret:*
+*通过本地文件secret提供数据库密码的另一种方法:*
 
-- **DB_PASS_FILE**: Path to the mapped file containing to the database password. *(optional, replaces DB_PASS)*
+- **DB_PASS_FILE**: 包含数据库密码的映射文件的路径。 *(可选，代替DB_PASS变量)*
 {.grid-list}
 
-*For SQLite only:*
+*仅适用于SQLite:*
 
-- **DB_FILEPATH** : Path to the SQLite file
+- **DB_FILEPATH** : SQLite文件的路径
 {.grid-list}
 
 ### HTTPS
 
-> This feature is only available from version **2.1 and up**
+> 此功能只在**2.1及以上版本可用**
 {.is-info}
 
-Environment variables are provided for easy Let's Encrypt configuration.
-If you want to provide your own SSL certificate configuration, you must instead mount a config file [as explained below](#alternative-mount-the-config-file).
+Wiki.js提供了环境变量以方便Let's Encrypt配置。
+如果要提供自己的SSL证书配置，则必须[按下面的说明](#alternative-mount-the-config-file)挂载配置文件。
 
-- **SSL_ACTIVE** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
-- **LETSENCRYPT_DOMAIN** : The domain / sub-domain to use when requesting a certificate from Let's Encrypt (e.g. `wiki.example.com`)
-- **LETSENCRYPT_EMAIL** : The administrator email used when requesting a certificate from Let's Encrypt.
+- **SSL_ACTIVE** : 设为 `1` 或 `true` 以启用。 *(可选，如果省略则默认关闭)*
+- **LETSENCRYPT_DOMAIN** : 从Let's Encrypt请求证书时使用的域/子域（例如“wiki.example.com”）
+- **LETSENCRYPT_EMAIL** : 从Let's Encrypt请求证书时使用的管理员电子邮件。
 {.grid-list}
 
-The exposed HTTPS port is `3443`. Both HTTP and HTTPS ports must be exposed when using Let's Encrypt.
+暴露的HTTPS端口为`3443`。使用Let's Encrypt时，必须开放HTTP和HTTPS端口。
 
-> **The HTTP port must be accessible from the internet for the certificate provisioning to complete!**
-> Once the certificate is generated, you can enable automatic HTTPS redirection from the **Administration** area, under the **SSL** section.
+> **HTTP端口必须可从internet访问，证书设置才能完成！**
+> 生成证书后，您可以从**管理区**的**SSL**部分下启用自动HTTPS重定向。
 > 
-> Note that you must leave the HTTP port open and accessible at all times for the certificate renewal process to work. This is **NOT** a security risk when the above option (HTTPS Redirection) is enabled.
+> 请注意，为了使证书续订过程正常工作，必须始终保持HTTP端口打开并可访问。启用上述选项（HTTPS重定向）时，这**不是**安全风险。
 {.is-warning}
 
-### High-Availability
+### 高可用
 
-> This feature is only available from version **2.3 and up**
+> 此功能只在**2.3及以上版本可用**
 {.is-info}
 
-When running Wiki.js with multiple replicas (e.g. Kubernetes cluster / Docker Swarm), you must enable High-Availability to ensure any change is propagated to other instances.
+当使用多个副本（例如Kubernetes cluster/Docker Swarm）运行Wiki.js时，必须启用高可用，以确保将任何更改传播到其他实例。
 
-- **HA_ACTIVE** : Set to either `1` or `true` to enable. *(optional, off if omitted)*
+- **HA_ACTIVE** : 设为 `1` 或 `true` 以启用。 *(可选，如果省略则默认关闭)*
 {.grid-list}
 
-> You must be using a **PostgreSQL** database in order to enable this feature. It will not work with any other database engine!
+> 您必须使用**PostgreSQL**数据库才能启用此功能。它不能与任何其他数据库引擎一起工作！
 {.is-warning}
 
-## Examples
+## 示例
 
-Here's an example of a command to run Wiki.js connecting to a PostgreSQL database:
+下面是一个运行Wiki.js连接到PostgreSQL数据库的命令示例：
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
-or to a MySQL database:
+连接到MySQL的示例：
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -e "DB_TYPE=mysql" -e "DB_HOST=db" -e "DB_PORT=3306" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
-> Both examples assume you have a database running in another container named `db` on the same network.
-> Wiki.js does **NOT** come with a database engine. See the [requirements](/install/requirements) for more details.
+> 这两个示例都假设在同一网络上的另一个名为“db”的容器中运行数据库。
+> Wiki.js**没有**附带数据库引擎。有关详细信息，请参阅[安装要求]（/install/requirements）。
 {.is-warning}
 
-Let's Encrypt example:
+Let's Encrypt 示例:
 ```bash
 docker run -d -p 80:3000 -p 443:3443 -e "LETSENCRYPT_DOMAIN=wiki.example.com" -e "LETSENCRYPT_EMAIL=admin@example.com" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
-## Alternative: Mount the config file
+## 备选方案：挂载配置文件
 
-If using environment variables is not your cup of tea, you can also mount a config file instead.
+如果你不喜欢使用环境变量，你也可以挂载一个配置文件。
 
-Create a new file based on the [sample config file](https://github.com/Requarks/wiki/blob/master/config.sample.yml) and modify the values to match your setup. You can then mount the config file in the container:
+根据[示例配置文件](https://github.com/Requarks/wiki/blob/master/config.sample.yml)创建一个新文件，并修改值以匹配您的设置。然后可以在容器中挂载配置文件：
 
 ```bash
 docker run -d -p 8080:3000 --name wiki --restart unless-stopped -v YOUR-FILE.yml:/wiki/config.yml ghcr.io/requarks/wiki:2
 ```
 
-It's also possible to define an alternate location for the config file to be loaded from, using the CONFIG_FILE env variable. This is useful in scenarios where you want to mount a configuration folder instead.
+还可以使用 CONFIG_FILE 环境变量为要从中加载的配置文件定义另一个位置。这在您希望呱噪配置文件夹的情况下非常有用。
 
-- **CONFIG_FILE** : Path to the config.yml file
+- **CONFIG_FILE** : config.yml文件的路径
 {.grid-list}
 
-## Change User Mode
+## 更改用户
 
-By default, Wiki.js runs as user `wiki`. If you get permissions issues while mounting files (such as SQLite db or private keys), you can override the runtime user to run as `root` using the `-u` parameter, e.g.:
+默认情况下，Wiki.js以用户`wiki`的身份运行。如果在装载文件（如SQLite 数据库或私钥）时遇到权限问题，可以使用`-u`参数重写运行时用户以`root`身份运行，例如：
 
 ```bash
 docker run -d -p 8080:3000 -u="root" --name wiki --restart unless-stopped -e "DB_TYPE=postgres" -e "DB_HOST=db" -e "DB_PORT=5432" -e "DB_USER=wikijs" -e "DB_PASS=wikijsrocks" -e "DB_NAME=wiki" ghcr.io/requarks/wiki:2
 ```
 
-This is however not a secure way to run containers. Make sure you understand the security implications before doing so.
+然而，这不是运行容器的安全方法。在这样做之前，请确保您了解安全影响。
 
-# Using Docker Compose
+# 使用 Docker Compose
 
-Here's a full example of a Docker Compose file for Wiki.js, using PostgreSQL, listening on port 80:
+下面是一个完整的Wiki.js Docker Compose文件示例，使用PostgreSQL，监听端口80：
 
 ```yaml
 version: "3"
@@ -177,18 +177,18 @@ volumes:
 
 ![](https://a.icons8.com/jihZbhdR/4WJoF7/svg.svg){.align-abstopright}
 
-# ARM images
+# ARM 映像
 
-> Since version **2.4**, ARMv7 and ARM64 images are part of the same docker image tags as AMD64. Simply use the same tags as above.
+> 自**2.4版本**起，ARMv7和ARM64图像与AMD64是同一docker映像标签的一部分。只需使用与上述相同的标签。
 {.is-info}
 
-This image is compatible with:
+此映像兼容：
 
-- **ARM64**: Raspberry Pi 4, 3 and later Raspberry Pi 2 (v1.2)
-- **ARMv7**: Early Raspberry Pi 2 (v1.1)
+- **ARM64**: 树莓派4，3和更高版本树莓派2（v1.2）
+- **ARMv7**: 早期版本的树莓派2（v1.1）
 
-The original, first-generation Raspberry Pi is **not** supported *(ARMv6)*.
+最初的第一代树莓派**不受支持** *（ARMv6）*。
 
 # OpenShift
 
-An example OpenShift-compatible Dockerfile is available [here](https://github.com/Requarks/wiki/blob/master/dev/openshift/Dockerfile).
+[此处](https://github.com/Requarks/wiki/blob/master/dev/openshift/Dockerfile)提供了一个与OpenShift兼容的Dockerfile示例。

@@ -2,7 +2,7 @@
 title: 身份验证
 description: 支持的身份验证模块列表
 published: true
-date: 2023-01-26T12:43:46.462Z
+date: 2023-03-16T08:45:000Z
 tags: auth, 身份验证
 editor: markdown
 dateCreated: 2023-01-08T10:33:13.500Z
@@ -53,8 +53,6 @@ dateCreated: 2023-01-08T10:33:13.500Z
 最后，选择一个新用户首次登录会被自动分配到的用户组。
 
 点击**应用**来保存这项设置。
-
-![](https://a.icons8.com/dhhZkYZk/0ICOP9/svg.svg){.align-abstopright}
 
 # 两步验证
 
