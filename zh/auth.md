@@ -2,7 +2,7 @@
 title: 身份验证
 description: 支持的身份验证模块列表
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: auth, 身份验证
 editor: markdown
 dateCreated: 2023-01-08T10:33:13.500Z

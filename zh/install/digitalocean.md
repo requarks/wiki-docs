@@ -2,7 +2,7 @@
 title: 在DigitalOcean上安装
 description: 使用DigitalOcean市场上的预构建镜像
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: install, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:35:52.439Z

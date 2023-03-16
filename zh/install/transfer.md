@@ -2,7 +2,7 @@
 title: 在服务器之间迁移Wiki.js
 description: 如何将Wiki.js迁移到新服务器
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:36:24.308Z

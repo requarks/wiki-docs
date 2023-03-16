@@ -2,7 +2,7 @@
 title: GraphQL API
 description: 使用GraphQL API访问资源并执行操作
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: dev, api, 开发
 editor: markdown
 dateCreated: 2023-01-08T10:34:47.855Z

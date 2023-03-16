@@ -2,7 +2,7 @@
 title: Auth0
 description: 身份验证模块
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: auth, module, 身份验证, 模块
 editor: markdown
 dateCreated: 2023-01-08T10:34:05.382Z

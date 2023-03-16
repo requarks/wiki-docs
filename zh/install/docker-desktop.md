@@ -2,7 +2,7 @@
 title: 使用Docker Desktop在本地安装
 description: 在本地计算机上安装Wiki.js的最简单快捷的方法
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: setup, guide, 指南, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:35:55.379Z

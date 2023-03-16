@@ -2,7 +2,7 @@
 title: 主题
 description: 自定义您wiki的外观
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:35:14.633Z

@@ -2,7 +2,7 @@
 title: 从Wiki.js v1.x迁移
 description: 如何从旧的v1.x安装中导入内容和用户。
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:36:12.770Z

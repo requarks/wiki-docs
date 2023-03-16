@@ -2,7 +2,7 @@
 title: 在Ubuntu 18.04 / 20.04 / 22.04 LTS上安装
 description: 完整的Wiki.js安装和全功能配置指南
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: setup, guide, 指南, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:36:27.239Z

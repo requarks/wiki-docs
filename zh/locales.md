@@ -2,7 +2,7 @@
 title: 语言环境
 description: 语言与区域设置
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: localization, 本地化
 editor: markdown
 dateCreated: 2023-01-08T10:33:36.534Z

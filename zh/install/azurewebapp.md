@@ -2,7 +2,7 @@
 title: Azure Web App
 description: 安装指南
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: setup, guide, 指南, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:35:46.596Z

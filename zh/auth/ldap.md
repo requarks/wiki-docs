@@ -2,7 +2,7 @@
 title: LDAP / Active Directory
 description: 身份认证模块
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: auth, module, 模块, 身份认证
 editor: markdown
 dateCreated: 2023-01-08T10:34:25.546Z

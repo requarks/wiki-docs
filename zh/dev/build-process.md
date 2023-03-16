@@ -2,7 +2,7 @@
 title: 构建流程
 description: Wiki.js的可复现构建流程
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-08T10:34:53.861Z

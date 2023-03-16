@@ -2,7 +2,7 @@
 title: Kubernetes
 description: 使用Helm Charts开始Kubernetes安装
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: setup, docker, 安装
 editor: markdown
 dateCreated: 2023-01-08T10:36:03.943Z

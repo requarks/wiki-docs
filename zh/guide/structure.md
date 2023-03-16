@@ -2,7 +2,7 @@
 title: 目录结构 & 标签
 description: 了解如何对页面进行分类以便于导航。
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: user-guide, 用户指南
 editor: markdown
 dateCreated: 2023-01-08T10:35:40.771Z

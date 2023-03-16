@@ -2,7 +2,7 @@
 title: Windows
 description: 在Windows上部署一个Wiki.js实例。
 published: true
-date: 2023-03-16T08:45:000Z
+date: 2023-03-16T08:45:00.000Z
 tags: setup
 editor: markdown
 dateCreated: 2023-01-08T10:36:32.850Z
