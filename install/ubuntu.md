@@ -17,7 +17,7 @@ This guide is a fully detailed guide to install everything necessary to run Wiki
 At the end of the guide, you'll have a fully working Wiki.js instance with the following components:
 
 - Docker
-- PostgreSQL 11 *(dockerized)*{.caption}
+- PostgreSQL 15 *(dockerized)*{.caption}
 - Wiki.js 2.x *(dockerized, accessible via port 80)*{.caption}
 - Wiki.js Update Companion *(dockerized)*{.caption}
 - OpenSSH with UFW Firewall preconfigured for SSH, HTTP and HTTPS
@@ -68,7 +68,7 @@ docker network create wikinet
 docker volume create pgdata
 
 # Create the containers
-docker create --name=db -e POSTGRES_DB=wiki -e POSTGRES_USER=wiki -e POSTGRES_PASSWORD_FILE=/etc/wiki/.db-secret -v /etc/wiki/.db-secret:/etc/wiki/.db-secret:ro -v pgdata:/var/lib/postgresql/data --restart=unless-stopped -h db --network=wikinet postgres:11
+docker create --name=db -e POSTGRES_DB=wiki -e POSTGRES_USER=wiki -e POSTGRES_PASSWORD_FILE=/etc/wiki/.db-secret -v /etc/wiki/.db-secret:/etc/wiki/.db-secret:ro -v pgdata:/var/lib/postgresql/data --restart=unless-stopped -h db --network=wikinet postgres:15
 docker create --name=wiki -e DB_TYPE=postgres -e DB_HOST=db -e DB_PORT=5432 -e DB_PASS_FILE=/etc/wiki/.db-secret -v /etc/wiki/.db-secret:/etc/wiki/.db-secret:ro -e DB_USER=wiki -e DB_NAME=wiki -e UPGRADE_COMPANION=1 --restart=unless-stopped -h wiki --network=wikinet -p 80:3000 -p 443:3443 ghcr.io/requarks/wiki:2
 docker create --name=wiki-update-companion -v /var/run/docker.sock:/var/run/docker.sock:ro --restart=unless-stopped -h wiki-update-companion --network=wikinet ghcr.io/requarks/wiki-update-companion:latest
 ```
