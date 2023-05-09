@@ -285,7 +285,7 @@ The accepted values are: `error`, `warn`, `info` *(default)*, `verbose`, `debug`
 
 ## Upload Limits
 
-> **This option was deprecated in 2.4** and is now controlled via the administration web interface.
+> **This option was deprecated in 2.4** and is now controlled via the administration web interface: System > Security > Uploads.
 {.is-danger}
 
 Set the maximum file size for user uploads:
