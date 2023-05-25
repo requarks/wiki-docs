@@ -2,7 +2,7 @@
 title: Installation
 description: How to install Wiki.js
 published: true
-date: 2022-12-11T07:02:38.163Z
+date: 2023-05-25T22:35:46.343Z
 tags: setup
 editor: markdown
 dateCreated: 2019-02-15T04:22:28.058Z
