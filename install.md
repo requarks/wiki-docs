@@ -29,6 +29,7 @@ dateCreated: 2019-02-15T04:22:28.058Z
 > These guides are provided by the community and not officially supported.
 {.is-warning}
 <!-- - [Install on AWS EC2 *using the free Marketplace Image*](/install/aws) -->
+- [Install on AWS ECS](/install/awsecs)
 - [Install on Azure Web App](/install/azurewebapp)
 - [Install on Heroku](/install/heroku)
 - [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
