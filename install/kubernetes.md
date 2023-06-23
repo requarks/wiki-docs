@@ -124,7 +124,7 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 helm install --name my-release -f values.yaml requarks/wiki
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default [values.yaml](https://github.com/requarks/wiki/blob/main/dev/helm/values.yaml)
 {.is-info}
 
 ## PostgresSQL
