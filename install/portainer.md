@@ -17,7 +17,7 @@ This guide details the step-by-step procedure to install Wiki.js on a machine ru
     version: '2'
     services:
       db:
-        image: postgres:11-alpine
+        image: postgres:15-alpine
         environment:
           POSTGRES_DB: wiki
           POSTGRES_PASSWORD: wikijsrocks
