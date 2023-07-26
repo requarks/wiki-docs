@@ -175,6 +175,10 @@ volumes:
   db-data:
 ```
 
+`DB_HOST` should match the service name (in this case, `db`). If `container_name` is specified for the service, its value should be used instead.
+
+The above Docker Compose file should be compatible with rootless Podman Compose by default as long as you have `aardvark-dns` installed on the host.
+
 ![](https://a.icons8.com/jihZbhdR/4WJoF7/svg.svg){.align-abstopright}
 
 # ARM images
