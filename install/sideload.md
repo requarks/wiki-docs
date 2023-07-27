@@ -40,7 +40,12 @@ The locale package file `xx.json` or `xx-zz.json` contains all the translations 
 
 Place the file(s) inside the `sideload` folder created previously alongside the master file. You should now have `locales.json`, `en.json` and any additional languages in your folder.
 
-## 3 - Sideload
+## 3 - Edit config.yml to enable offline sideloading
+
+The config must be adjusted so that automatic sideload can work offline.
+Therefore set `offline:true` within your `config.yml`.
+
+## 4 - Sideload
 
 Run Wiki.js (or restart the process if already running) to automatically sideload the files localed in the `data/sideload` folder.
 
