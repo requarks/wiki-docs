@@ -2,11 +2,14 @@
 title: AWS ECS
 description: Getting started with a Wiki.js installation on AWS ECS
 published: true
-date: 2023-05-24T22:23:10.816Z
+date: 2023-09-01T02:32:37.749Z
 tags: 
 editor: markdown
-dateCreated: 2023-05-22T09:40:40.705Z
+dateCreated: 2023-05-25T22:35:20.633Z
 ---
+
+> This guide was contributed by the community and may be incomplete or become outdated.
+{.is-warning}
 
 # Overview
 
