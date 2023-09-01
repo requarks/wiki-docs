@@ -2,9 +2,14 @@
 title: Azure Web App
 description: Installation Guide
 published: true
-date: 2019-11-18T04:08:41.158Z
+date: 2023-09-01T02:32:54.266Z
 tags: setup, guide
+editor: markdown
+dateCreated: 2019-05-31T22:40:09.408Z
 ---
+
+> This guide was contributed by the community and may be incomplete or become outdated.
+{.is-warning}
 
 This guide details the step-by-step procedure to install Wiki.js on an **Azure Web App** with an **Azure Database for PostgreSQL**.
 
