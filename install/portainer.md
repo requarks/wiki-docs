@@ -2,9 +2,14 @@
 title: Install using Portainer
 description: Step-by-step installation guide
 published: true
-date: 2019-12-04T21:03:41.924Z
+date: 2023-09-01T02:33:42.510Z
 tags: setup, guide
+editor: markdown
+dateCreated: 2019-12-04T21:03:41.924Z
 ---
+
+> This guide was contributed by the community and may be incomplete or become outdated.
+{.is-warning}
 
 This guide details the step-by-step procedure to install Wiki.js on a machine running **Portainer**.
 
