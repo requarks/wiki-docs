@@ -17,7 +17,7 @@ LDAP / Active Directory is an enterprise authentication solution developed by Mi
 1. Enter the distinguished name in **Admin Bind DN** of the account used for binding.
 1. Enter the password in **Admin Bind Credentials** for the account specified above.
 1. Enter the base DN to search users from, in the **Search Base** field.
-1. Enter the query to match a user with the entered username/email in the **Search Filter** field. The value MUST include the `{{username}}` tag. For example, if the username is stored in the `uid` field, the query would be `(uid={{username}})`. The `{{username}}` tag will be interpolated at runtime when performing the search.
+1. Enter the query to match a user with the entered username/email in the **Search Filter** field. The value MUST include the `{{username}}` tag. For example, if the username is stored in the `uid` field, the query would be `(uid={{username}})`. The `{{username}}` tag will be interpolated at runtime when performing the search (the active directory default setting should be `(sAMAccountName={{username}})`) .
 1. If a TLS certificate must be provided to the LDAP server, enable the **Use TLS** option and enter the absolute path to the certificate file in the **TLS Certificate Path** field.
 1. In case your directory fields are different than those used by Wiki.js, you can specify a mapping for each using the following fields:
 	- **Unique ID Field Mapping**
