@@ -12,7 +12,7 @@ dateCreated: 2019-07-20T15:31:49.465Z
 
 # Setup
 
-## A) Copy the redirect URI
+## A) Copy the redirect URI - THANKS TO F****ING MICROSOFT AZURE TEAM, THE FOLLOWING INSTRUCTIONS NOW DON'T WORK.
 
 1. In the **Administration Area** of your wiki, click on **Authentication** in the left navigation.
 1. Add a new **Azure Active Directory** auth strategy.
