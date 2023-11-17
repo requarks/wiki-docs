@@ -31,6 +31,6 @@ You'll automatically be redirected to your newly created page.
 
 The administration area contains a vast array of customization options.
 
-Click on the <kbd><i class="mdi mdi-account-circle"></i></kbd> **Account** icon in the top-right corner of the page, then select **Administration**.
+Click on the <kbd><i class="mdi mdi-cog"></i></kbd> **Settings** icon in the top-right corner of the page to enter the **Administration Area**.
 
 Explore the various sections from the left side navigation.
