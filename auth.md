@@ -26,6 +26,7 @@ Most strategies require some configuration. Check out the links below for module
 - [Facebook](/auth/facebook)
 - Firebase
 - [GitHub](/auth/github)
+- [GitLab](/auth/gitlab)
 - [Google](/auth/google)
 - [Keycloak OpenID Connect](/auth/keycloak)
 - [LDAP / Active Directory](/auth/ldap)
