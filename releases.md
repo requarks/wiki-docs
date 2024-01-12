@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2023-12-23T03:43:50.740Z
+date: 2024-01-12T05:58:25.513Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -16,10 +16,11 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 > This build is **under active development** and has not yet been released.
 >
-> **ETA: January 2024**
+> **Beta Release ETA**: January-February 2024
+> **Stable Release ETA**: When [feature parity](https://github.com/requarks/wiki/issues/6844) with 2.x is achieved. No ETA.
 {.is-warning}
 
-See https://blog.js.wiki/news?tag=3.x for latest news about this upcoming release.
+See https://beta.js.wiki/blog for latest news about this upcoming release.
 
 # STABLE - 2.5.300
 
