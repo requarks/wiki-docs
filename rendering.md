@@ -177,7 +177,7 @@ Generate visual Math / Chemical expressions from TeX expressions, using the Math
 Generate diagrams from PlantUML description.
 
 #### Parameters
-- **Kroki Server**: PlantUML server used for image generation.
+- **PlantUML Server**: PlantUML server used for image generation.
 - **Open Marker**: String to use as opening delimiter.
 - **Close Marker**: String to use as closing delimiter.
 - **Image Format**: Format to use for rendered PlantUML images
