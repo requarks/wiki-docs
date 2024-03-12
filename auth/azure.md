@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory
+title: Entra ID
 description: Authentication Module
 published: true
 date: 2022-08-31T17:01:57.649Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2019-07-20T15:31:49.465Z
 ---
 
-[Azure Active Directory (Azure AD)](https://azure.microsoft.com/en-ca/services/active-directory/) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources.
+[Microsoft Entra ID (Formally Azure AD)](https://www.microsoft.com/en-ca/security/business/identity-access/microsoft-entra-id) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources.
 
 # Setup
 
@@ -18,9 +18,9 @@ dateCreated: 2019-07-20T15:31:49.465Z
 1. Add a new **Azure Active Directory** auth strategy.
 1. Copy the **Redirect URI** value found under the configuration reference section. Keep this page opened. We'll come back to it later.
 
-## B) Create Azure AD Application
+## B) Create Microsoft Entra ID Application
 
-1. From the Azure Portal, open the **Azure Active Directory** resource.
+1. From the Azure Portal, open the **Microsoft Entra ID** resource.
 1. Click on **App registrations** in the left navigation and then click **New registration** at the top.
 1. Enter a **Name** (e.g. Wiki.js) and enter the **Redirect URI** you copied earlier.
 1. Click **Register**.
@@ -40,5 +40,5 @@ dateCreated: 2019-07-20T15:31:49.465Z
 1. Make sure the checkbox next to **Azure Active Directory** in the list of strategies is checked. The text should now say that the strategy is **active**.
 1. Click **Apply** on the upper right of the page to save and apply the configuration.
 
-<img src="https://static.requarks.io/logo/azure.svg" class="align-abstopright" style="width:150px;" />
+<img src="https://serv.husky.nz/ffd/Microsoft-Azure-Logo.png" class="align-abstopright" style="width:150px;" />
   
