@@ -37,7 +37,7 @@ Telemetry is used by developers to improve Wiki.js, mostly for the following rea
 
 Only authorized developers have access to the crash debug data. It is not shared to any 3rd party nor is it used for any other application than improving Wiki.js.
 
-> :chart_with_upwards_trend: The aggregated anonymized telemetry stats are public and available at all times [here](https://wiki.js.org/telemetry).
+> :chart_with_upwards_trend: The aggregated anonymized telemetry stats are public and available at all times [here](https://js.wiki/telemetry).
 {.is-info}
 
 # How to enable / disable telemetry
