@@ -60,6 +60,6 @@ Folders must respect these naming rules:
 - No spaces allowed.
 - No uppercase latin characters.
 - No special characters with the exception of dash `-` and underscore `_`.
-- Must be at least 2 characters in length.
+- Must be at least 3 characters in length.
 - Cannot consist of only latin letters (A-Z) in the pattern `ZZ` or `ZZ-ZZ` (reserved for locales).
 - Cannot start or end with a special character.
