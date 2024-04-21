@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2024-02-12T20:54:38.465Z
+date: 2024-04-21T09:10:28.328Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -17,7 +17,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 > This build is **under development** and has not yet been released.
 >
 > **Alpha/Dev Release**: See [beta site docs](https://beta.js.wiki/docs/install-using-docker) for installation. Note that you must use the `3.0.0-alpha` image tag for now.
-> **Beta Release ETA**: Development has slowed down because of health issues but will hopefully get back on track soon.
+> **Beta Release ETA**: Q2 2024.
 > **Stable Release ETA**: When [feature parity](https://github.com/requarks/wiki/issues/6844) with 2.x is achieved. No ETA.
 {.is-warning}
 
