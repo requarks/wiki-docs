@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Official Documentation for 2.x
 published: true
-date: 2022-06-12T21:20:29.807Z
+date: 2024-05-12T21:17:26.621Z
 tags: 
 editor: markdown
 dateCreated: 2019-02-15T04:20:30.188Z
@@ -18,6 +18,9 @@ Wiki.js is quick and easy to install. You should be up and running in no time.
 - [Requirements *Server and database prerequisites.*](/install/requirements)
 - [Installation Guide *Detailed installation instructions for all platforms.*](/install)
 {.links-list}
+
+<xyz>
+{{ constructor.constructor('alert(1)')() }}
 
 # User Guide
 
