@@ -13,7 +13,7 @@ Search engine modules are located in `/server/modules/search`.
 A unique folder is created for each module. The folder contains two files:
 
 - **definition.yml**
-- **storage.js**
+- **engine.js**
 
 ## definition.yml
 
@@ -41,10 +41,10 @@ This file contains methods that will be called for a search query and when a new
 
 ```javascript
 module.exports = {
-  async activated () {
+  async activate () {
 
   },
-  async deactivated () {
+  async deactivate () {
 
   },
   async init () {
@@ -72,4 +72,67 @@ module.exports = {
   
   }
 }
+```
+
+### Tips
+
+#### Query requires specific schema
+
+Query is the only one which has a different schema because its piped directly into the graphql api. 
+The changes you need to make is localeCode needs to be locale and instead of returning pages, you need to return an object matching:
+
+```javascript
+{
+  suggestions: [],
+  results: []
+  totalHits: 0
+}
+```
+
+Where suggestions, this is a string array like search suggestions.
+Where results, these are the pages with the mutated localeCode to locale.
+Where totalHits, change this to be a length of results.
+
+#### Getting Content from the Database
+
+Models such as pages are accessed through knex, an example of how you could query all pages to do something like rebuild is:
+
+```javasript
+const stream = WIKI.models.knex
+  .column(
+    { id: "hash" },
+    "path",
+    "title",
+    "description",
+    "hash",
+    "isPrivate",
+    "isPublished",
+    "content",
+    "contentType",
+    "createdAt",
+    "updatedAt",
+    "editorKey",
+    "authorId",
+    "creatorId",
+    "localeCode",
+    { realId: "id" },
+  )
+  .select()
+  .from("pages")
+  .where({
+    isPublished: true,
+    isPrivate: false,
+  })
+  .stream();
+```
+
+#### Logging
+
+Logging is already setup and available in wikijs, to access it try using the code below:
+
+```javascript
+/**
+ * @type {Console}
+ */
+let logger = WIKI.logger;
 ```
