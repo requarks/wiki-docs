@@ -2,7 +2,7 @@
 title: Docker
 description: Getting started with the Docker image
 published: true
-date: 2022-02-11T22:48:39.365Z
+date: 2024-09-18T01:09:44.271Z
 tags: setup, docker
 editor: markdown
 dateCreated: 2019-02-15T04:23:08.720Z
@@ -183,15 +183,13 @@ The above Docker Compose file should be compatible with rootless Podman Compose 
 
 # ARM images
 
-> Since version **2.4**, ARMv7 and ARM64 images are part of the same docker image tags as AMD64. Simply use the same tags as above.
+> Since version **2.4**, ARM64 images are part of the same docker image tags as AMD64. Simply use the same tags as above.
 {.is-info}
 
-This image is compatible with:
+This image is compatible with **ARM64** systems, such as the Raspberry Pi 4, 3 and later Raspberry Pi 2 (v1.2).
 
-- **ARM64**: Raspberry Pi 4, 3 and later Raspberry Pi 2 (v1.2)
-- **ARMv7**: Early Raspberry Pi 2 (v1.1)
-
-The original, first-generation Raspberry Pi is **not** supported *(ARMv6)*.
+Support for **ARMv7** (*early Raspberry Pi 2 (v1.1)*) was dropped as of v2.5.304. The last supported version for ARMv7 is v2.5.303.
+The original, first-generation Raspberry Pi is **NOT** supported *(ARMv6)*.
 
 # OpenShift
 
