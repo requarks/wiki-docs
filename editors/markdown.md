@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2022-11-09T06:34:32.121Z
+date: 2024-10-06T23:51:50.138Z
 tags: editors
 editor: markdown
 dateCreated: 2019-05-22T02:59:46.078Z
@@ -633,3 +633,26 @@ and:
 
 > Note that these stylings are specific to Wiki.js and will fallback to standard list styling in other applications.
 {.is-warning}
+
+# Decorate Syntax
+
+In some cases, using the `{.class-name}` syntax doesn't apply the styling class to the correct element because of ambiguous content. For example:
+
+```
+> Lorem ipsum
+> - Line 1
+> - Line 2
+{.is-info}
+```
+Because the parser doesn't know whether the `.is-info` class should be applied to the list or the blockquote, it ends up being applied to the wrong element (the deepest element preceding it).
+
+You can specify the correct target by using the decorate syntax `<!-- {tag-name:.class-name} -->` instead. For example:
+
+```
+> Lorem ipsum
+> - Line 1
+> - Line 2
+<!-- {blockquote:.is-info} -->
+```
+
+The `.is-info` class will now correctly be applied to the blockquote element.
