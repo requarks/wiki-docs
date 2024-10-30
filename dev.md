@@ -18,7 +18,9 @@ There are 3 methods to develop for Wiki.js. You can either use the dockerized de
 
 * Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
 * Linux / macOS / Windows 10-11 Pro or Enterprise
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) / [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
+
+> JetBrains WebStorm was recently, October 2024, made free with a community version for **non-commercial** use. For more details see §2, paragraph 3 of the [Toolbox Subscription Agreement for Non-Commercial Use](https://www.jetbrains.com/legal/docs/toolbox/license_non-commercial/){.is-info}
 
 ## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
