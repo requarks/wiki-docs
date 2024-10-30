@@ -10,7 +10,9 @@ dateCreated: 2019-02-15T04:25:01.768Z
 
 Wiki.js is fully modular, which allows any developer to write their own module.
 
-There are 3 methods to develop for Wiki.js. You can either use the dockerized development environment for VS Code *(recommended)*, a generic docker environment or install all dependencies manually on your machine.
+There are 4 methods to develop for Wiki.js. You can either use the dockerized development environment for VS Code *(recommended)*, the remote development environment for WebStorm, a generic docker environment or install all dependencies manually on your machine.
+
+> JetBrains WebStorm was recently, October 2024, made free with a community version for **non-commercial** use. For more details see §2, paragraph 3 of the [Toolbox Subscription Agreement for Non-Commercial Use](https://www.jetbrains.com/legal/docs/toolbox/license_non-commercial/){.is-info}
 
 # Using Docker + Visual Studio Code
 
@@ -18,9 +20,7 @@ There are 3 methods to develop for Wiki.js. You can either use the dockerized de
 
 * Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
 * Linux / macOS / Windows 10-11 Pro or Enterprise
-* [Visual Studio Code](https://code.visualstudio.com/) / [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
-
-> JetBrains WebStorm was recently, October 2024, made free with a community version for **non-commercial** use. For more details see §2, paragraph 3 of the [Toolbox Subscription Agreement for Non-Commercial Use](https://www.jetbrains.com/legal/docs/toolbox/license_non-commercial/){.is-info}
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
@@ -49,7 +49,47 @@ Click on **File > Close Remote Connection** to stop the containers and close the
 
 When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `wiki`.
 
+Alternatively, see the [generic method](#removing-the-containers-2) below.
+
+# Using Docker + JetBrains WebStorm
+
+> This section is under development
+
+## Prerequisites
+
+* Docker + Docker Compose (via [Docker Desktop](https://www.docker.com/products/docker-desktop/))
+* Linux / macOS / Windows 10-11 Pro or Enterprise
+* [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
+
+> WebStorm on Linux can either be setup from the downloadable tarball or installing via Flathub. If using the Flathub version of WebStorm it executes webstorm.sh instead of webstorm from the /bin directory of the application and will give you a notification on startup.{.is-info}
+
+> WebStorm (*version 2024.2.4*) by default only has a **4.19 GB (4000 MiB) heap size** and can crash during development tasks of Wiki.js. To expand the limit, go to **Help** > **Change Memory Settings** and enter in the new value in MiB. When done, click **Save and Restart** so the changes take effect.{.is-info}
+
+## Running the project
+1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
+2. Open the project folder in **WebStorm**
+3. From the **File** menu, go to Remote Development and create a new **Dev Container**
+5. Open the **Terminal** *(View > Terminal)* and select "**1: bash**" from the dropdown selector on the right:
+	![ui-dev-vscode-bash.png](/assets/ui/ui-dev-vscode-bash.png =400x){.radius-5 .decor-shadow .ml-5}
+6. From the command line, type the following command to start Wiki.js in development mode:
+    ```bash
+      yarn dev
+    ```
+7. Wait for the initialization to complete. You'll be prompted to load **http://localhost:3000/** when ready.
+8. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
+9. Complete the setup wizard to finish the installation.
+
+## Stopping the project
+
+Click on **File > Close Remote Connection** to stop the containers and close the Visual Studio Code instance.
+
+## Removing the containers
+
+When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `wiki`.
+
 Alternatively, see the [generic method](#removing-the-containers-1) below.
+
+
 
 # Using Docker (Generic)
 
