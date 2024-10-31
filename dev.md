@@ -68,7 +68,7 @@ Alternatively, see the [generic method](#removing-the-containers-2) below.
 ## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
 2. Open the project folder in **WebStorm**
-3. If a dev container is currently setup, right-click on the *devcontainer.json* file from the file tree and select **Dev Containers** > **Create Dev Container and Mount Sources** > **<ContainerName>** > **WebStorm** and skip to [Starting Dev Container](#starting-dev-container).
+3. If a dev container is currently setup, right-click on the *devcontainer.json* file from the file tree and select **Dev Containers** > **Create Dev Container and Mount Sources** > **ContainerName** > **WebStorm** and skip to [Starting Dev Container](#starting-dev-container).
 
 ### Setting Up A New Dev Container
 1. From the **File** menu, go to Remote Development and select the **Dev Containers** connections option
