@@ -68,7 +68,30 @@ Alternatively, see the [generic method](#removing-the-containers-2) below.
 ## Running the project
 1. Clone the project from [GitHub](https://github.com/Requarks/wiki).
 2. Open the project folder in **WebStorm**
-3. From the **File** menu, go to Remote Development and create a new **Dev Container**
+3. If a dev container is currently setup, right-click on the *devcontainer.json* file from the file tree and select **Dev Containers** > **Create Dev Container and Mount Sources** > **<ContainerName>** > **WebStorm** and skip to [Starting Dev Container](#starting-dev-container).
+
+### Setting Up A New Dev Container
+1. From the **File** menu, go to Remote Development and select the **Dev Containers** connections option
+2. Click on **New Dev Container** to start creating a new container.
+    ![ui-dev-webstorm-container-selection.png](/assets/ui/ui-dev-webstorm-container-selection.png =400x){.radius-5 .decor-shadow .ml-5}
+3. Change the dev container source to **From Local Project** from **From VCS Project** and either enter the path to the *devcontainer.json* file in the cloned repo or navigate to it by clicking on the folder icon.
+    ![ui-dev-webstorm-new-container-creation.png](/assets/ui/ui-dev-webstorm-new-container-creation.png =400px){.radius-5 .decor-shadow .ml-5}
+
+> The IDE can be changed to another product offered by JetBrains from WebStorm, but since development of Wiki.js is based in JavaScript there is no reason to change this.{.is-info}
+
+> If a red circle appears next to the name of the Docker container (*as shown in the above picture*) ensure that Docker Desktop is running on your machine.{.is-info}
+
+4. If a Docker Container already exists (*or was imported from VS Code to WebStorm*), skip this step and proceed to step 7 to start the development container.
+    1. To create a new Docker Container in WebStorm, click on the **...** next to the first drop-down list on the new dev container creation window.
+    2. Click on the **+** icon to create a new Docker container.
+    3. Setup the Docker daemon connection settings using either a *Unix socket* or a *TCP socket*. A **Unix Socket** is the easiest connection to setup as it works directly with Docker Desktop.
+    4. Change the name of the container, if desired, and click **OK** to complete the new container setup and initialize the Docker container startup.
+    ![ui-dev-webstorm-new-docker-connection-setup.png](/assets/ui/ui-dev-webstorm-new-docker-connection-setup =500px){.radius-5 .decor-shadow .ml-5}
+
+> If the connection for the selected Unix socket cannot locate the Docker daemon, choose from another available Docker Unix socket and see if the status changes to *Connection successful*.{.is-info}
+
+### Starting Dev Container
+
 5. Open the **Terminal** *(View > Terminal)* and select "**1: bash**" from the dropdown selector on the right:
 	![ui-dev-vscode-bash.png](/assets/ui/ui-dev-vscode-bash.png =400x){.radius-5 .decor-shadow .ml-5}
 6. From the command line, type the following command to start Wiki.js in development mode:
