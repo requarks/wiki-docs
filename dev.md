@@ -91,24 +91,24 @@ Alternatively, see the [generic method](#removing-the-containers-2) below.
 > If the connection for the selected Unix socket cannot locate the Docker daemon, choose from another available Docker Unix socket and see if the status changes to *Connection successful*.{.is-info}
 
 ### Starting Dev Container
-
-5. Open the **Terminal** *(View > Terminal)* and select "**1: bash**" from the dropdown selector on the right:
-	![ui-dev-vscode-bash.png](/assets/ui/ui-dev-vscode-bash.png =400x){.radius-5 .decor-shadow .ml-5}
-6. From the command line, type the following command to start Wiki.js in development mode:
+1. Once the container finishes initializing, a notification will pop up saying **Dev Container build is finished** and will prompt you to connect to the container. Click **Connect** from either the notification or from the Services pane to start the development connection.
+2. Once the development IDE instance is created a new IDE window will pop up and the title bar will now show the remote connection type. The connection dropdown can be clicked on to view information about the Docker environment. To start Wiki.js in development mode, open the *Terminal* pane and enter the following command:
     ```bash
       yarn dev
     ```
-7. Wait for the initialization to complete. You'll be prompted to load **http://localhost:3000/** when ready.
-8. Browse to **http://localhost:3000/** _(replace localhost with the hostname of your machine if applicable)_.
-9. Complete the setup wizard to finish the installation.
+3. Wait for the initialization to complete. Once the initialization process is completed, a message will appear above the terminal saying **Your application is listening on ports: 3000 forward to xxxx**.
+4. Click on the forwarded port number to expand the dropdown list and click on **Open in browser**.
+    ![ui-dev-webstorm-remote-project-intialization.png](ui/assets/ui-dev-webstorm-remote-project-intialization.png =400px){.radius-5 .decor-shadow .ml-5}
+
+5. Complete the setup wizard to finish the installation.
 
 ## Stopping the project
 
-Click on **File > Close Remote Connection** to stop the containers and close the Visual Studio Code instance.
+To stop the remote connection, simply close the remote IDE window and stop the dev container service in the main WebStorm IDE window.
 
 ## Removing the containers
 
-When you're done and no longer need the development environment, open the **Remote Explorer** tab and remove all containers starting with the name `wiki`.
+When you're done and no longer need the development environment, go back to **File** > **Remote Development** and remove any development containers created that are no longer needed.
 
 Alternatively, see the [generic method](#removing-the-containers-1) below.
 
