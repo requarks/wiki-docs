@@ -2,7 +2,7 @@
 title: AsciiDoc
 description: Editor
 published: true
-date: 2022-12-24T02:46:14.354Z
+date: 2024-11-12T23:20:00.000Z
 tags: editors
 editor: markdown
 dateCreated: 2022-12-24T02:46:14.354Z
@@ -21,3 +21,15 @@ See the [AsciiDoc Language Documentation](https://docs.asciidoctor.org/asciidoc/
 
 > Note that only a limited set of AsciiDoc features are supported at the moment.
 {.is-warning}
+
+# Stylings
+
+## Admonitions
+
+In addition to the **5** [standard types](https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/) provided by AsciiDoc, Wiki.js extends the syntax to include the **success** blockquote from the [Markdown Editor](../markdown.md).
+This extension is implemented as a [Block Processor](https://docs.asciidoctor.org/asciidoctor/latest/extensions/block-processor/) as follows:
+
+```adoc
+[Success]
+Success is now.
+```
