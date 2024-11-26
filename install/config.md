@@ -180,7 +180,7 @@ ssl:
 
 The `port` is the port the HTTPS server will listen on. **It cannot be the same as the HTTP port.**
 
-> The non-secure HTTP port **must be accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, you can automatically redirect all insecure requests made on the HTTP port to HTTPS by [enabling the HTTP to HTTPS Redirection](#http-to-https-redirection) option.
+> The non-secure HTTP port **must be [80](https://letsencrypt.org/docs/challenge-types/) and accessible from the internet, at all times,** in order for the Let's Encrypt challenge process to complete, as well as for automated certificate renewals. Once the initial verification is completed, you can automatically redirect all insecure requests made on the HTTP port to HTTPS by [enabling the HTTP to HTTPS Redirection](#http-to-https-redirection) option.
 {.is-warning}
 
 The `domain` is the fully-qualified domain name pointing to the wiki. **It must already resolve to the server.**
@@ -271,6 +271,7 @@ bindIP: 0.0.0.0
 ```
 
 Leave the default `0.0.0.0` to listen on all interfaces.
+If you want to listen on all interfaces on ipv6/ipv4 [leave the value blank](https://nodejs.org/api/net.html#net_server_listen_port_host_backlog_callback) 
 
 
 ## Logging
