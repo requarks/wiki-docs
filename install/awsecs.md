@@ -34,7 +34,7 @@ By the end of this we'll deploy
 We will need two security groups, one for the load balancer and another for the database.
 Navigate to the EC2 service, and select **Security Groups**.
 
-## Load Balancer Security Group
+## Database Security Group
 
 1. Click **Create Security Group**
 1. Complete the form
@@ -45,7 +45,7 @@ Navigate to the EC2 service, and select **Security Groups**.
     - Description: **PostgreSQL access for WikiJS**
 1. Click **Create Security Group**
 
-## Database Security Group
+## Load Balancer Security Group
 
 1. Click **Create Security Group**
 1. Complete the form
