@@ -141,7 +141,6 @@ This is however not a secure way to run containers. Make sure you understand the
 Here's a full example of a Docker Compose file for Wiki.js, using PostgreSQL, listening on port 80:
 
 ```yaml
-version: 3
 services:
 
   db:
@@ -169,7 +168,7 @@ services:
       DB_NAME: wiki
     restart: unless-stopped
     ports:
-      - 80:3000
+      - "80:3000"
 
 volumes:
   db-data:
