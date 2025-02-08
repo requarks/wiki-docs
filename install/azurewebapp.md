@@ -74,6 +74,39 @@ We can now create the App Service where our wiki will run.
 1. Navigate to the **Overview** tab and click **Restart**.
 1. Wait for the container to be ready. You can monitor the app status in the **Container settings** tab, using the **Logs** window. A message similar to `Container xyz_0 for site xyz initialized successfully and is ready to serve requests.` should be logged.
 
+## 2.3 Configure Custom Domain (non-App Service Domain)
+
+If you do not already have a domain then you can either purchase a new one from a domain hosting company, or you can purchase an **App Service Domain** directly from within App Services.
+
+These instructions assume that you already have a non-App Service domain you want to use.  You will need access to your domains DNS settings to complete this step.  
+
+1. Navigate to **Custom Domains**.
+1. Click **Add Custom Domain**.
+1. Enter the custom domain you would like to use e.g. www.example.com or a sub-domain like wiki.example.com
+1. Click **Validate**.  App Services will automatically detect whether you need to add an A record (for a top level domain) or a CNAME record for a www. or any subdomain.
+1. You will need to add two records to your domains DNS settings
+	- A TXT record which is used to verify domain ownership (note that the value provided for this TXT record remains constant for this App Service).
+	- An A, or CNAME, record that directs traffic to the App Service
+1. Use the values provided to create the required DNS records.   
+1. Click **Validate** again to attempt to validate the records.  Repeat until successful.
+	- Bear in mind that DNS changes can take up to 48 hours to propogate, although it is usually much quicker than this.  If it is taking a long time then you can leave App Services and then return later, although you will need to follow steps 1-4 again as the custom domain configuration cannot be saved until validation is complete.
+1.  Once the DNS records have been validated you will be able to click **Add custom domain** to complete the configuration.
+
+## 2.4 Configure SSL (using App Service Managed Certificates for a custom domain)
+
+Azure App Services provides **App Service Managed Certificates** that are free of cost and fully managed.  For App Services this is a good alternative to Let's Encrypt.  You will need to have completed the custom domain setup before configuring SSL for it.
+
+1. Navigate to **Certificatess** (at the time of writing this is in public preview).
+1. Click **Add certificate**.
+1. Select the custom domain from the drop down list.
+1. Click **Validate**.
+1. Assuming validation is successful, click **Add**.
+1. Navigate to **TLS/SSL settings**.
+1. Under **TLS/SSL bindings** click **Add TLS/SSL Binding**.
+1. Select the custom domain, Private Certificate Thumbprint (that matches the custom domain) and **SNI SSL** for TLS/SSL Type.
+1. Click **Add Binding** to complete the configuration.
+	- If you wish you can navigate back to **Custom Domains** to verify that yur custom domains now have a secure SSL state.
+
 # 3. Setup Wiki.js
 
 1. Browse to your app public URL. *(Can be found in the **Overview** tab of your web app resource)*
