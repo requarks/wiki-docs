@@ -1,6 +1,6 @@
 ---
 title: Install on Ubuntu 18.04 / 20.04 / 22.04 LTS
-description: Complete A to Z guide to setup a fully functioning Wiki.js installation
+description: Complete A to Z guide to set up a fully functioning Wiki.js installation
 published: true
 date: 2022-06-12T02:27:42.264Z
 tags: setup, guide
@@ -29,7 +29,7 @@ At the end of the guide, you'll have a fully working Wiki.js instance with the f
 First, let's make sure the machine is up to date.
 
 ```bash
-# Fetch latest updates
+# Fetch the latest updates
 sudo apt -qqy update
 
 # Install all updates automatically
@@ -47,7 +47,7 @@ sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Refresh package udpates and install Docker
+# Refresh package updates and install Docker
 sudo apt -qqy update
 sudo apt -qqy -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
@@ -55,13 +55,13 @@ sudo apt -qqy -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-c
 ## Setup Containers
 
 ```bash
-# Create installation directory for Wiki.js
+# Create an installation directory for Wiki.js
 mkdir -p /etc/wiki
 
 # Generate DB secret
 openssl rand -base64 32 > /etc/wiki/.db-secret
 
-# Create internal docker network
+# Create an internal docker network
 docker network create wikinet
 
 # Create data volume for PostgreSQL
@@ -95,7 +95,7 @@ docker start wiki-update-companion
 
 On your browser, navigate to your server IP / domain name (e.g. http://your-server-ip/ ).
 
-> If you can't load the page, wait 5 minutes and try again. It may take a few minutes for the containers to initialize on some systems.
+> If you can't load the page, wait 5 minutes and try again. The containers may take a few minutes to initialize on some systems.
 {.is-info}
 
 Complete the on-screen setup to finish your installation.
@@ -126,13 +126,13 @@ docker create --name=wiki -e LETSENCRYPT_DOMAIN=wiki.example.com -e LETSENCRYPT_
 docker start wiki
 ```
 
-7. **Wait** for the container to start and the Let's Encrypt provisioning process to complete. You can optionaly view the container logs by running the command:
+7. **Wait** for the container to start and the Let's Encrypt provisioning process to complete. You can optionally view the container logs by running the command:
 ```
 docker logs wiki
 ```
 > The process will be completed once you see the following lines in the logs:
 >
-> `(LETSENCRYPT) New certifiate received successfully: [ COMPLETED ]`
+> `(LETSENCRYPT) New certificate received successfully: [ COMPLETED ]`
 > `HTTPS Server on port: [ 3443 ]`
 > `HTTPS Server: [ RUNNING ]`
 {.is-success}
@@ -141,7 +141,7 @@ docker logs wiki
 
 ## Automatic HTTP to HTTPS Redirect
 
-By default, requests made to the HTTP port will not be redirect to HTTPS. You can enable this option using these instructions:
+By default, requests made to the HTTP port will not be redirected to HTTPS. You can enable this option using these instructions:
 
 1. Navigate to the **Administration Area** by clicking on your avatar at the top-right corner of the page.
 2. From the left navigation menu, click on **SSL**.
