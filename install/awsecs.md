@@ -14,11 +14,11 @@ dateCreated: 2023-05-25T22:35:20.633Z
 # Overview
 
 This guide details the step-by-step procedure to deploy Wiki.js on AWS using their managed service offerings. 
-We'll use Elastic Container Service to run the container and the Rational Database Service for the PostgreSQL database. 
+We'll use Elastic Container Service to run the container and the Relational Database Service for the PostgreSQL database. 
 
-Alternatively you could bundle run it all on a single EC2 instance but that is essentially already covered in the Linux installation guide.
+Alternatively, you could bundle run it all on a single EC2 instance but that is essentially already covered in the Linux installation guide.
 
-By the end of this we'll deploy
+By the end of this, we'll deploy
 - An ECS cluster running the WikiJS container
 - An Amazon RDS for Postgres instance
 - An Application Load Balancer
@@ -75,10 +75,10 @@ Navigate to the **IAM** service, then under **Roles**
 # Parameters
 
 We're going to store our database password in Systems Manager Parameter Store. 
-General wisedom is to use Secrets Manager to store passwords, but you get the same security for free with Secure Strings in Paramater Store.
+General wisdom is to use Secrets Manager to store passwords, but you get the same security for free with Secure Strings in Parameter Store.
 
 1. Navigate to **Systems Manager**
-1. Under **Parameter Store**, select **Create parmeter**
+1. Under **Parameter Store**, select **Create parameter**
 1. Complete the fields:
 	- Name: 
 	- Tier: Standard
