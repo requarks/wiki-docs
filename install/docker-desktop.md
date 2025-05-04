@@ -2,7 +2,7 @@
 title: Install locally with Docker Desktop
 description: The easiest and quickest way to install Wiki.js on your local machine
 published: true
-date: 2022-06-12T21:00:47.228Z
+date: 2025-05-04T03:54:13.172Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2022-06-12T21:00:47.228Z
@@ -33,7 +33,7 @@ version: "3"
 services:
 
   db:
-    image: postgres:15-alpine
+    image: postgres:17-alpine
     environment:
       POSTGRES_DB: wiki
       POSTGRES_PASSWORD: wikijsrocks
