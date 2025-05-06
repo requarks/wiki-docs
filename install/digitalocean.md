@@ -94,7 +94,7 @@ By default, requests made to the HTTP port will not be redirect to HTTPS. You ca
 
 ## Renew the Certificate
 
-You can renew the certificate at any time from the **Administration Area** > **SSL**.
+You can renew the certificate at any time from the **Administration Area** > **SSL**. 
 
 If your certificate has expired and you cannot load the wiki UI to renew it, simply restart the container:
 
@@ -103,6 +103,56 @@ docker restart wiki
 ```
 
 The renewal process will run automatically during initialization.
+
+The certificate will not be renewed, if it is not close enough to expiry (1 to 3 days). If a renewal is requested, the GUI will state that renewal has failed, while the docker logs will state that the certificate was issued due to being almost expired, but the old certificate was used, without explaining why. Example log:
+
+```
+root@wikiJS-GSO:~# docker logs wiki
+Loading configuration from /wiki/config.yml... OK
+.
+. random stuff
+.
+2024-12-10T22:03:26.988Z [MASTER] info: (LETSENCRYPT) Certificate is about to or has expired, requesting a new one...
+2024-12-10T22:03:26.989Z [MASTER] info: (LETSENCRYPT) Initializing Let's Encrypt client...
+2024-12-10T22:03:27.050Z [MASTER] info: HTTP Server: [ RUNNING ]
+2024-12-10T22:03:27.211Z [MASTER] info: (LETSENCRYPT) Generating certificate signing request (CSR)...
+2024-12-10T22:03:27.219Z [MASTER] info: (LETSENCRYPT) CSR generated successfully [ OK ]
+2024-12-10T22:03:27.220Z [MASTER] info: (LETSENCRYPT) Requesting certificate from Let's Encrypt...
+2024-12-10T22:03:27.225Z [MASTER] info: (LETSENCRYPT) Setting HTTP challenge for wiki.mywebsite.com: [ READY ]
+2024-12-10T22:03:27.225Z [MASTER] info: (LETSENCRYPT) Waiting for challenge to complete...
+2024-12-10T22:03:27.317Z [MASTER] info: Telemetry is active: [ OK ]
+2024-12-10T22:03:32.240Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:32.244Z [MASTER] info: (LETSENCRYPT) Removing HTTP challenge: [ OK ]
+2024-12-10T22:03:32.736Z [MASTER] info: (LETSENCRYPT) Setting HTTP challenge for wiki.mywebsite.com: [ READY ]
+2024-12-10T22:03:32.736Z [MASTER] info: (LETSENCRYPT) Waiting for challenge to complete...
+2024-12-10T22:03:37.741Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:38.025Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:38.424Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:38.451Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:38.679Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:38.681Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:39.078Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:39.272Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:39.319Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:39.529Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:39.649Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:03:39.929Z [MASTER] info: (LETSENCRYPT) Removing HTTP challenge: [ OK ]
+2024-12-10T22:03:40.280Z [MASTER] info: (LETSENCRYPT) New certificate received successfully: [ COMPLETED ]
+.
+. more stuff
+.
+2024-12-10T22:07:03.577Z [MASTER] info: (LETSENCRYPT) Initializing Let's Encrypt client...
+2024-12-10T22:07:03.699Z [MASTER] info: (LETSENCRYPT) Generating certificate signing request (CSR)...
+2024-12-10T22:07:03.703Z [MASTER] info: (LETSENCRYPT) CSR generated successfully [ OK ]
+2024-12-10T22:07:03.703Z [MASTER] info: (LETSENCRYPT) Requesting certificate from Let's Encrypt...
+2024-12-10T22:07:03.704Z [MASTER] info: (LETSENCRYPT) Setting HTTP challenge for wiki.mywebsite.com: [ READY ]
+2024-12-10T22:07:03.704Z [MASTER] info: (LETSENCRYPT) Waiting for challenge to complete...
+2024-12-10T22:07:08.708Z [MASTER] info: (LETSENCRYPT) Received valid challenge request. [ ACCEPTED ]
+2024-12-10T22:07:08.711Z [MASTER] info: (LETSENCRYPT) Removing HTTP challenge: [ OK ]
+2024-12-10T22:07:14.156Z [MASTER] info: (LETSENCRYPT) Removing HTTP challenge: [ OK ]
+2024-12-10T22:07:15.419Z [MASTER] info: (LETSENCRYPT) New certificate received successfully: [ COMPLETED ]
+2024-12-10T22:07:15.427Z [MASTER] info: (LETSENCRYPT) Using existing certificate for wiki.mywebsite.com, expires on 2024-12-17T22:07:08Z: [ OK ]
+```
 
 # Upgrade
 
