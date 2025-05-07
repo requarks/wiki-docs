@@ -90,7 +90,7 @@ The following table lists the configurable parameters of the Wiki.js chart and t
 | `tolerations`                    | Toleration labels for wiki.jsk pod assignment    | `[]`                                                       |
 | `ingress.enabled`                    | Enable ingress controller resource          | `false`                                                    |
 | `ingress.annotations`                | Ingress annotations                         | `{}`                                                       |
-| `ingress.hosts`                      | List of ingress rules                        | `[{"host": "wiki.local", "paths": ["/"]}]`                |
+| `ingress.hosts`                      | List of ingress rules                        | `[{"host": "wiki.local", "paths": [ { "path": "/", "pathType": "Prefix" }]}] |
 | `ingress.tls`                        | Ingress TLS configuration                   | `[]`                                                       |
 | `sideload.enabled`                   | Enable sideloading of locale files from git | `false`                                                    |
 | `sideload.repoURL`                   | Git repository URL containing locale files  | `https://github.com/Requarks/wiki-localization`            |
