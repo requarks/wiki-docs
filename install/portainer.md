@@ -32,6 +32,11 @@ This guide details the step-by-step procedure to install Wiki.js on a machine ru
         restart: unless-stopped
         volumes:
           - db-data:/var/lib/postgresql/data
+        healthcheck:
+          test: ["CMD", "pg_isready", "-q", "-d", "wiki", "-U", "wikijs"]
+          interval: 30s
+          timeout: 10s
+          retries: 3
 
       wiki:
         image: requarks/wiki:2
