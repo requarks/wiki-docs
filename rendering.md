@@ -8,7 +8,7 @@ tags:
 
 # Overview
 
-The rendering pipeline defines how your content is rendered into it's final readable form.
+The rendering pipeline defines how your content is rendered into its final readable form.
 
 Rendering modules are attached to a core language module. Depending on the editor used, content will go through several **core rendering modules <kbd>CRM</kbd>**. For example, using the Markdown editor will result in the content being transformed through the Markdown CRM, then by the HTML CRM modules.
 
