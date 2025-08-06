@@ -14,170 +14,225 @@ dateCreated: 2023-05-25T22:35:20.633Z
 # Overview
 
 This guide details the step-by-step procedure to deploy Wiki.js on AWS using their managed service offerings. 
-We'll use Elastic Container Service to run the container and the Relational Database Service for the PostgreSQL database. 
+We'll use Elastic Container Service to run the container and the Relational Database Service for the MySQL database. 
 
-Alternatively, you could bundle run it all on a single EC2 instance but that is essentially already covered in the Linux installation guide.
+Alternatively, you could run everything on a single EC2 instance, but this setup is already covered in the Linux installation guide.
 
-By the end of this, we'll deploy
-- An ECS cluster running the WikiJS container
-- An Amazon RDS for Postgres instance
+By the end of this, we'll deploy;
+- An Amazon RDS MySQL instance
+- A Secret in AWS Secrets Manager
+- An ECS cluster, service, and task running the WikiJS container
 - An Application Load Balancer
+
+> Please note WikiJS will move to PostgreSQL exclusively. https://beta.js.wiki/blog/2021-wiki-js-3-going-full-postgresql
+{.is-warning}
 
 # Prerequisites
 
 1. An AWS account
 1. Existing VPC with at least two subnets
-1. An EC2 instance to run PostgreSQL client.
+
+# Secrets Manager
+
+We will use Secrets Manager to store our Database master password following best practices.
+
+1. Navigate to **Secrets Manager**
+1. Click **Store a new secret**
+1. Secret type
+	- **Other type of secret** (Credentials for Amazon RDS database could be used, but won't be for simplicity in this guide)
+1. Key/value pairs
+	- Select **Plaintext**
+   	- Write: **\<Your Password>**
+1. Click **Next**
+1. Secret Name and description
+	- Secret Name: **wikijs/mysql**
+1. Click **Next**
+1. Click **Next**
+1. Click **Store**
+1. Navigate to the secret (you may need to refresh)
+1. Grab the **Secret ARN**
+
 
 # Security Groups
 
 We will need two security groups, one for the load balancer and another for the database.
-Navigate to the EC2 service, and select **Security Groups**.
 
-## Database Security Group
-
-1. Click **Create Security Group**
-1. Complete the form
-	- Security group name: **wikijs-database**
-	- Click **Add Rule** under Inbound rules
-  	- Type: **PostgreSQL**
-    - Source: **Custom** and your VPC CIDR (e.g. 10.0.0.0/24)
-    - Description: **PostgreSQL access for WikiJS**
-1. Click **Create Security Group**
+1. Navigate to **EC2**
+1. Select **Security Groups** (In the navigation column on the left under "Network & Security")
 
 ## Load Balancer Security Group
 
 1. Click **Create Security Group**
-1. Complete the form
+1. Basic details
 	- Security group name: **wikijs-elb**
-	- Click **Add Rule** under Inbound rules
+	- Description: **Security Group for WikiJS Load Balancer**
+	- VPC: Select your **VPC**
+1. Inbound rules
+	- Click **Add Rule**
   	- Type: **HTTP**
-    - Source: **Anywhere-IPv4**
-    - Description: **HTTP to wiki**
+	- Source: **Anywhere-IPV4** (0.0.0.0/0)
+	- Description: **HTTP to WikiJS**
+	- Click **Add Rule**
+  	- Type: **Custom TCP**
+     	- Port range: **3000**
+	- Source: **Anywhere-IPV4** (0.0.0.0/0)
+	- Description: **HTTP to WikiJS**
 1. Click **Create Security Group**
 
-# IAM Role
+## Database Security Group
 
-Navigate to the **IAM** service, then under **Roles** 
+1. Click **Create Security Group**
+1. Basic details
+	- Security group name: **wikijs-database**
+	- Description: **Security Group for WikiJS Database**
+	- VPC: Select your **VPC**
+1. Inbound rules
+	- Click **Add Rule**
+  	- Type: **MYSQL/Aurora**
+	- Source: **Custom** and your **wikijs-elb** Security Group
+	- Description: **MySQL access for WikiJS**
+1. Click **Create Security Group**
 
-1. Click **Create Role**.
-	- Trusted entity type: **AWS Service**
-	- Use case: **Elastic Container Service**, then **Elastic Container Service Task**
-	- Click **Next**
+# IAM
+
+We will need a custom IAM Policy and Role.
+
+## IAM Policy
+
+We need to make a custom IAM Policy to specifically grant access to the Secret we made prior.
+
+1. Navigate to the **IAM** service
+1. Select **Policies** (In the navigation column on the left under "Access Management")
+1. Click **Create Policy**
+1. Policy Editor
+	- Select **JSON**
+	- Write:
+>	 { <br>
+	"Version": "2012-10-17",<br>
+	"Statement": [<br>
+		{<br>
+			"Effect": "Allow",<br>
+			"Action": "secretsmanager:GetSecretValue",<br>
+			"Resource": "**wikijs/mysql Secret ARN**"<br>
+		}<br>
+	]<br>
+}
+1. Click **Next**
+1. Policy details
+	- Policy name: **WikiJS-Secret-Access**
+1. Click **Create policy**
+
+## IAM Role
+
+We will need an IAM Role to provide our containers access to our secret.
+
+1. Navigate to the **IAM** service
+1. Select **Roles** (In the navigation column on the left under "Access Management")
+1. Click **Create Role**
+1. Trusted entity type: 
+	- Select: **AWS Service**
+1. Use case 
+	- Service or use case: **Elastic Container Service**
+ 	- user case: **Elastic Container Service Task**
+1. Click **Next**
 1. Add permissions
-	- AmazonSSMReadOnlyAccess
-	- AmazonECSTaskExecutionRolePolicy
-  - Click **Next**
-
-1. Role name: **WikijsTaskExecutionRole**
+	- Find and select **WikiJS-Secret-Access**
+	- Find and select **AmazonECSTaskExecutionRolePolicy**
+1. Click **Next**
+1. Role details
+	- Role name: **WikijsTaskExecutionRole**
 1. Click **Create Role**
 
-# Parameters
 
-We're going to store our database password in Systems Manager Parameter Store. 
-General wisdom is to use Secrets Manager to store passwords, but you get the same security for free with Secure Strings in Parameter Store.
+# Database
 
-1. Navigate to **Systems Manager**
-1. Under **Parameter Store**, select **Create parameter**
-1. Complete the fields:
-	- Name: 
-	- Tier: Standard
-	- Type: SecureString
-	- Value: **M@d$ecur3P@ssw0rd**
+We'll need to create an RDS instance for the database for our wiki.
 
-# 1. Database
+This is a simple setup guide, therefore options chosen are cost effective and not necessarily following best practices.
 
-We'll first create an RDS instance for the database for our wiki.
-I have selected the most cost effective values here to keep the bill low. Best practice and performance should be followed but isn't required to get up and running.
-
-## 1.1 Create RDS Instance
+## Create RDS Instance
 
 1. Navigate to **Amazon RDS**
 1. On the dashboard, click **Create Database**
-1. Complete the form
-	- Choose a database creation method: **Standard Create**
-	- Engine type: **PostgreSQL**
-	- Engine Version: **Default (14.6 today)**
+1. Creation Method
+   	- Standard create
+1. Engine Options
+	- Engine type: **MySQL**
+	- Engine Version: **Default (8.0.40 today)**
+1. Templates
 	- Templates: **Free tier**
-	- DB instance identifier: **wikijs**
-	- Master username: **postgres**
-	- Master password: the value used in ***wikijs-db-password*** parameter
+1. Settings
+	- DB instance identifier: **wikijs-db**
+	- Master username: **wikijs_db_admin**
+	- Master password: the value used in the **wikijs/mysql** secret
+1. Instance Configuration
 	- DB instance class: Burstable classes - **db.t4g.micro**
-	- Storage type: **General Purpose SSD (GP3)**
+1. Storage
+	- Storage type: **General Purpose SSD (gp2)**
 	- Allocated storage: **20**
+1. Connectivity
+	- Virtual Private Cloud: Select your **VPC**
+	- DB Subnet Group: Select your **subnet group**
+	- VPC Security Group: **wikijs-database**
+1. Additional Configuration
+   	- Initial database name: **wikijs**
 1. Click **Create Database**
 
-## 1.2 Configure Database
-
-Log onto an EC2 instance with access to the database using your favourite PostgreSQL client then create the database.
-Here's an example using an Amazon Linux 2 instance
-```
-# Enable extra packages
-sudo amazon-linux-extras install postgresql14
-
-# Install postgresql client
-sudo yum install postgresql
-
-# Get IP of RDS instance
-host wikijs.random.region.rds.amazonaws.com
-
-# Connect to database
-psql "sslmode=disable dbname=postgres user=postgres hostaddr=10.1.0.113"
-
-# Create wikijs database 
-CREATE DATABASE wikijs;
-```
+Note: Settings not mentioned can largely be left as default values.
 
 # Elastic Container Service
 
 Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service that helps you easily deploy, manage, and scale containerized applications. 
 
-I've used the smallest possible values here to control costs but ECS allows easy vertical and horiztonal capacity scaling should you ever have the need.
+ECS requires three main parts, a Task Definition, a Cluster, and a Service. We will make them in that order. 
+
+I've used the smallest possible values here to control costs but ECS allows easy vertical and horizontal capacity scaling should you ever have the need.
 
 ## Create Task
 
 A task definition is required to run Docker containers in Amazon ECS.
 
 1. Navigate to **Amazon ECS**
-1. Under Task definitions, click **Create new task definition**
-1. Complete the fields for **Container 1**
-	- Task definition family: **wikijs**
-	- Container details:
-		- Name: **wikijs-2**
-		- Image URI: **ghcr.io/requarks/wiki:2**
-	- Port mapping
+1. Under Task definitions (on the left navigation column), click **Create new task definition**
+1. Task Definition Configuration
+   	- Task Definition Family Name: **wikijs**
+1. Infrastructure Requirements
+   	- Launch Type: **Fargate**
+   	- Operating System/Architecture: **Linux/X86_64**
+   	- CPU: **.25 vCPU**
+   	- Memory: **.5 GB**
+   	- Task Execution Role: **WikijsTaskExecutionRole**
+1. Container - 1
+	- Name: **wikijs-container**
+	- Image URI: **requarks/wiki:2.5**
+	- Port mapping:
 		- Container port: **3000**
 		- Protocol: **TCP**
 		- Port name: **wikijs-3000-tcp**
 		- App protocol: **HTTP**
-	- Environmental Variables
+	- Environmental Variables:
 
 	| Key		   | Type     	| Value                                |
 	|----------|------------|--------------------------------------|
-	| DB_TYPE  | Value      | postgres                             |
-	| DB_SSL   | Value   	  | false                                |
-	| DB_PORT  | Value      | 5432                                 |
-	| DB_HOST  | Value      | wikijs.blah.region.rds.amazonaws.com |
+	| DB_TYPE  | Value      | mysql                             |
+	| DB_PORT  | Value      | 3306                                 |
+	| DB_HOST  | Value      | \<Wikijs-db endpoint URL> |
 	| DB_NAME  | Value      | wikijs                               |
-	| DB_USER  | Value      | postgres                             |
-	| DB_PASS  | ValueFrom  | wikijs-db-password (parameter path   |
+	| DB_USER  | Value      | wikijs_db_admin                             |
+	| DB_PASS  | ValueFrom  | \<wikijs/mysql secret ARN>   |
 	{.dense}
 
-1. Complete the fields for **Environment**
-	- Task size: **.25 vCPU** and **.5GB memory**
+1. Create
 
 ## Create Cluster
 
 An Amazon ECS cluster is a logical grouping of tasks or services.
 
 1. Navigate to **Amazon ECS**
-1. Under **Clusters**, click **Create Cluster**
-1. Complete the fields
-	- Cluster name: **wikijs**
-	- VPC: **your-vpc-id**
-	- Subnets: **pick two**
-	- Infrastructure: **AWS Fargate (serverless)**
-1. Click **Create Cluster**
+1. Under **Clusters** (on the left navigation column), click **Create Cluster**
+1. Cluster Configuration
+	- Cluster Name: **wikijs-cluster**
+1. Create
 
 ## Create Service
 
@@ -190,21 +245,20 @@ Use the following values:
 
 1. Environment
 	- Compute options: **Launch Type**
-	- Launch type: FARGATE
-	- Platform version: LATEST
-
+	- Launch type: **FARGATE**
+	- Platform version: **LATEST**
 1. Deployment configuration
-	- Application type: **Service**
-	- Family: **wikijs**
+	- Task Definition Family: **wikijs**
 	- Revision: **Latest**
-	- Service name: wikijs
+	- Service name: **wikijs-service**
 	- Desired tasks: **1**
-
 1. Networking
-	-	Security group: **wikijs-elb**
-	- Public IP: **turned off**
-
+	- VPC: **\<Your VPC>**
+	- Subnets: **\<Your Subnet(s)>**
+ 	- Security group: **wikijs-elb**
+	- Public IP: **turned on**
 1. Load balancing
+	- Check **Use Load Balancing**
 	- Load balancer type: **Application Load Balancer**
 	- Application Load Balancer: **Create a new load balancer**
 	- Load balancer name: **wikijs-public**
@@ -213,8 +267,7 @@ Use the following values:
 	- Target group: **Create new target group**
 	- Target group name: **wikijs-workers**
 	- Protocol: HTTP
-
-Click **Create**
+1. Create
 
 Once the container has downloaded and started running your cluster should have 1 service and 1 running task. Click into the task and drill down to review logs if anything appears to be not working.
 
@@ -224,6 +277,7 @@ Head on over to **EC2** service, under **Load Balancers**, you should see your n
 
 You should now be up and running with WikiJS but if you have time to spare consider the following tasks...
 
-- Get yourself a free SSL certificate from [Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) and apply it to your load balancer
-- Configure automatic backups for your database
-- Add [Web Application Firewall](https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html) to the load balancer
+- Get yourself a free SSL certificate from [Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) and apply it to your load balancer.
+- Configure automatic backups for your database.
+- Configure autoscaling.
+- Add [Web Application Firewall](https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html) to the load balancer.
