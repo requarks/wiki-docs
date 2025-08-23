@@ -2,7 +2,7 @@
 title: Markdown
 description: Editor
 published: true
-date: 2024-10-06T23:51:50.138Z
+date: 2024-11-12T23:20:00.000Z
 tags: editors
 editor: markdown
 dateCreated: 2019-05-22T02:59:46.078Z
@@ -42,7 +42,8 @@ Using a **greater-than** symbol, followed by a space, before each line of text.
 By adding a class on a separate line, after the blockquote, you can change the look of the blockquote. Note that these stylings are specific to Wiki.js and will fallback to standard blockquote styling in other applications.
 
 - Blue: `is-info`
-- Green: `is-success`
+- Green: `is-success` & `is-tip`
+- Purple: `is-caution`
 - Yellow: `is-warning`
 - Red: `is-danger`
 
@@ -59,6 +60,12 @@ By adding a class on a separate line, after the blockquote, you can change the l
 
 > This is a `{.is-success}` blockquote.
 {.is-success}
+
+> This is a `{.is-tip}` blockquote.
+{.is-tip}
+
+> This is a `{.is-caution}` blockquote.
+{.is-caution}
 
 > This is a `{.is-warning}` blockquote.
 {.is-warning}
