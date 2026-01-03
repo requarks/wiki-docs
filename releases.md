@@ -2,7 +2,7 @@
 title: Release Notes
 description: List of new features, bug fixes and improvements
 published: true
-date: 2025-08-13T07:31:19.073Z
+date: 2026-01-03T08:52:50.887Z
 tags: 
 editor: markdown
 dateCreated: 2019-05-26T03:34:27.819Z
@@ -22,7 +22,7 @@ dateCreated: 2019-05-26T03:34:27.819Z
 
 See https://beta.js.wiki/blog for latest news about this upcoming release.
 
-# STABLE - 2.5.308
+# STABLE - 2.5.309
 
 Release notes have moved to GitHub:
 > https://github.com/requarks/wiki/releases
