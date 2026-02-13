@@ -18,6 +18,7 @@ dateCreated: 2019-02-15T04:22:28.058Z
 {.links-list}
 
 ## By Platform
+- [Cloudron](https://www.cloudron.io/store/org.wikijs.cloudronapp.html)
 - [Docker](/install/docker)
 - [Kubernetes](/install/kubernetes)
 - [Linux](/install/linux)
