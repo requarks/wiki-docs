@@ -154,6 +154,11 @@ services:
     restart: unless-stopped
     volumes:
       - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "wiki", "-U", "wikijs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   wiki:
     image: ghcr.io/requarks/wiki:2
