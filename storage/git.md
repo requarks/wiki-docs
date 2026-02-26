@@ -94,6 +94,21 @@ When enabling the Git storage module for the first time with a remote repository
 
 To force an import of all content currently present in the local repository, load the **Git** module settings tab in the Administration Area (under **Storage**), scroll to the very bottom of the page and click **Run** button on the **Import Everything** action card.
 
+### The import process
+
+Wiki.js is a powerful platform that automatically imports eligible files from your repository into a database as a page.  
+It achieves this by walking your repository directory structure.  
+
+The directory structure of your repository is leveraged to generate unique URLs for each page.  
+For instance, suppose you have a root directory called `mygitdoc` and a child page named `page1.md`.  
+In that case, the page will be accessible at the path `http://YouWiki/mygitdoc/page1`.
+
+It is important to note that you can still make edits to your pages using these editors.  
+However, it is crucial to avoid conflicts between the paths of pages created using the built-in editor and those generated from your repository's directory structure.
+
+Moreover, you can customize your markdown files further by including additional properties such as tags, descriptions, and titles using a simple YAML header.  
+For example, see [the plain code of this page](https://github.com/requarks/wiki-docs/blob/master/storage/git.md?plain=1) for a sample.
+
 ## Missing Content in Remote Repository
 
 If content was created in Wiki.js before you enabled the Git storage module or if you temporarily disabled the module, that content will be missing from the remote Git repository.
