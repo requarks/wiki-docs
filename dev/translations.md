@@ -15,7 +15,7 @@ You can join our Lokalise project below to gain access to the translation tools.
 > **Only select the language(s) you're going to actively contribute to!** Users that select too many or all languages at once will be removed.
 {.is-warning}
 
-[![btn-join-the-project.png](/assets/buttons/btn-join-the-project.png)](https://lokalise.com/public/2994254859f751ea605a00.03473540/)
+[![btn-join-the-project.png](/assets/buttons/btn-join-the-project.png)](https://app.lokalise.com/public/2994254859f751ea605a00.03473540/)
 
 If you can't find your language in the list, contact us on [Slack](https://wiki.requarks.io/slack) and we'll add it!
 
