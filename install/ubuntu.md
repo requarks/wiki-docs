@@ -2,7 +2,7 @@
 title: Install on Ubuntu 18.04 / 20.04 / 22.04 LTS
 description: Complete A to Z guide to setup a fully functioning Wiki.js installation
 published: true
-date: 2025-05-04T03:54:42.313Z
+date: 2026-02-26T23:41:22.483Z
 tags: setup, guide
 editor: markdown
 dateCreated: 2019-12-23T18:29:29.240Z
@@ -10,7 +10,7 @@ dateCreated: 2019-12-23T18:29:29.240Z
 
 # Overview
 
-This guide is a fully detailed guide to install everything necessary to run Wiki.js on a brand new Ubuntu 18.04 / 20.04 / 22.04 LTS machine.
+This guide is a fully detailed guide to install everything necessary to run Wiki.js on a brand new Ubuntu 24.04 / 22.04 / 20.04 / 18.04 LTS machine.
 
 ## What's Included
 
@@ -38,6 +38,28 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -qqy -o Dpkg::Options::='--force-con
 
 ## Install Docker
 
+### {.tabset}
+#### Ubuntu 24 and newer
+```bash
+# Add Docker's official GPG key:
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+# Install Docker
+sudo apt -qqy update
+sudo apt -qqy install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+#### Ubuntu 18-22
 ```bash
 # Install dependencies to install Docker
 sudo apt -qqy -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' install ca-certificates curl gnupg lsb-release
