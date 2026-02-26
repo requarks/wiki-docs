@@ -2,7 +2,7 @@
 title: Install on DigitalOcean
 description: Using the DigitalOcean Marketplace Pre-Built Image
 published: true
-date: 2022-02-18T07:50:53.766Z
+date: 2026-02-26T11:10:33.982Z
 tags: install
 editor: markdown
 dateCreated: 2019-11-23T18:58:05.122Z
@@ -14,10 +14,10 @@ The DigitalOcean Marketplace Wiki.js image is a pre-configured environment, made
 
 ## Image Specifications
 
-Ubuntu 20.04 LTS with the following software pre-installed:
+Ubuntu 24.04 LTS with the following software pre-installed:
 
 - Docker
-- PostgreSQL 11 *(dockerized)*{.caption}
+- PostgreSQL 17 *(dockerized)*{.caption}
 - Wiki.js 2.x *(dockerized, accessible via port 80)*{.caption}
 - Wiki.js Update Companion *(dockerized)*{.caption}
 - OpenSSH with UFW Firewall preconfigured for SSH, HTTP and HTTPS
