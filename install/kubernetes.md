@@ -131,7 +131,7 @@ helm install --name my-release -f values.yaml requarks/wiki
 
 By default, PostgreSQL is installed as part of the chart.
 
-## Using an external PostgreSQL server
+### Using an external PostgreSQL server
 
 To use an external PostgreSQL server, set `postgresql.enabled` to `false` and then configure the `externalPostgresql` object. Use an existing `Secret` by setting `externalPostgresql.existingSecret` and `externalPostgresql.existingSecretKey`.
 
