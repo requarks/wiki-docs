@@ -131,21 +131,33 @@ helm install --name my-release -f values.yaml requarks/wiki
 
 By default, PostgreSQL is installed as part of the chart.
 
-### Using an external PostgreSQL server
+## Using an external PostgreSQL server
 
-To use an external PostgreSQL server, set `postgresql.enabled` to `false` and then set `postgresql.postgresqlHost` and `postgresql.postgresqlPassword`. To use an existing `Secret`, set `postgresql.existingSecret`. The other options (`postgresql.postgresqlDatabase`, `postgresql.postgresqlUser`, `postgresql.postgresqlPort` and `postgresql.existingSecretKey`) may also want changing from their default values.
+To use an external PostgreSQL server, set `postgresql.enabled` to `false` and then configure the `externalPostgresql` object. Use an existing `Secret` by setting `externalPostgresql.existingSecret` and `externalPostgresql.existingSecretKey`.
 
-To use an SSL connection you can set `postgresql.ssl` to `true` and if needed the path to a Certificate of Authority can be set using `postgresql.ca` to `/path/to/ca`. Default `postgresql.ssl` value is `false`.
+To use an SSL connection you can set `externalPostgresql.ssl` to `true` and if needed the path to a Certificate of Authority can be set using `externalPostgresql.ca` to `/path/to/ca`. Default `externalPostgresql.ssl` value is `false`.
 
-If `postgresql.existingSecret` is not specified, you also need to add the following Helm template to your deployment in order to create the postgresql `Secret`:
+Example values:
+
+```yaml
+externalPostgresql:
+  host: your-db-host.example.com
+  port: 5432
+  database: wikijs
+  username: wikijsuser
+  existingSecret: wikijs-db-secret  # Kubernetes Secret containing password
+  existingSecretKey: password        # Key in the Secret containing the DB password
+  ssl: false                         # Enable SSL if needed
+  ca: /path/to/ca.pem                # Optional CA path for SSL
+```
 
 ```yaml
 kind: Secret
 apiVersion: v1
 metadata:
-  name: {{ template "wiki.postgresql.secret" . }}
+  name: wikijs-db-secret
 data:
-  {{ template "wiki.postgresql.secretKey" . }}: "{{ .Values.postgresql.postgresqlPassword | b64enc }}"
+  password: SECRET_KEY
 ```
 
 ## Persistence
