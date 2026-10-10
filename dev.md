@@ -156,6 +156,6 @@ docker manifest push -p requarks/wiki:arm
 
 Because the master branch contains pre-release code, it is not recommended to build directly from the source code. Doing so will result in a red warning banner being displayed during setup and in the header on all pages. **You should instead follow the [installation instructions](/install).**
 
-A reproducable build workflow is however available [here](https://github.com/requarks/wiki/blob/main/.github/workflows/build.yml) should you want to build it yourself **from a production release tag**.
+A reproducible build workflow is however available [here](https://github.com/requarks/wiki/blob/main/.github/workflows/build.yml) should you want to build it yourself **from a production release tag**.
 
 ![](https://a.icons8.com/mZbXwZWa/PdY3mQ/svg.svg){.align-abstopright}

@@ -126,11 +126,11 @@ docker exec db psql -U wiki -d wiki -c "UPDATE users SET password = 'HASH-PASSWO
 
 **Cause**: You did not set the `Site URL` in the **Administration Area**.
 
-**Resolution**: In the **Administrator Area**, under **General**, set the **Site Url**.
+**Resolution**: In the **Administration Area**, under **General**, set the **Site Url**.
 
 # MySQL - Client does not support authentication protocol requested by server; consider upgrading MySQL client
 
-**Cause**: The user used by Wiki.js to connect to the DB must use `mysql_native_password`. The newer `caching_sha2_password` method introduced in MySQL 8.0 is not yet supported in Node.js. Support will be added when the functionnality is made available in Node.js drivers.
+**Cause**: The user used by Wiki.js to connect to the DB must use `mysql_native_password`. The newer `caching_sha2_password` method introduced in MySQL 8.0 is not yet supported in Node.js. Support will be added when the functionality is made available in Node.js drivers.
 
 **Resolution**: You can change an existing user to use a `mysql_native_password` using:
 

@@ -43,7 +43,7 @@ Place the file(s) inside the `sideload` folder created previously alongside the 
 
 ## 3 - Sideload
 
-Run Wiki.js (or restart the process if already running) to automatically sideload the files localed in the `data/sideload` folder.
+Run Wiki.js (or restart the process if already running) to automatically sideload the files located in the `data/sideload` folder.
 
 > Because of a bug in versions prior to 2.5, the locale files are loaded in incorrect order, causing the clients to be unable to fetch the translations.
 > 

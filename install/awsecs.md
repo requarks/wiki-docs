@@ -16,7 +16,7 @@ dateCreated: 2023-05-25T22:35:20.633Z
 This guide details the step-by-step procedure to deploy Wiki.js on AWS using their managed service offerings. 
 We'll use Elastic Container Service to run the container and the Relational Database Service for the PostgreSQL database. 
 
-Alternatively, you could bundle run it all on a single EC2 instance but that is essentially already covered in the Linux installation guide.
+Alternatively, you could bundle and run it all on a single EC2 instance but that is essentially already covered in the Linux installation guide.
 
 By the end of this, we'll deploy
 - An ECS cluster running the WikiJS container
@@ -132,7 +132,7 @@ CREATE DATABASE wikijs;
 
 Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service that helps you easily deploy, manage, and scale containerized applications. 
 
-I've used the smallest possible values here to control costs but ECS allows easy vertical and horiztonal capacity scaling should you ever have the need.
+I've used the smallest possible values here to control costs but ECS allows easy vertical and horizontal capacity scaling should you ever have the need.
 
 ## Create Task
 
@@ -183,7 +183,7 @@ An Amazon ECS cluster is a logical grouping of tasks or services.
 
 An Amazon ECS service is used to run and maintain a specified number of instances of a task definition simultaneously in a cluster. If one of your tasks fails or stops, the service scheduler launches another instance of your task definition to replace it. This helps maintain your desired number of tasks in the service.
 
-We will be deploying an Elastic Load Balancer as part of the service. The load balancer to be the public presence of our wiki on the internet. It will also distributes traffic across the tasks if you decide to scale beyond a single container for high availability.
+We will be deploying an Elastic Load Balancer as part of the service. The load balancer to be the public presence of our wiki on the internet. It will also distribute traffic across the tasks if you decide to scale beyond a single container for high availability.
 
 Once your cluster is created, click **Create** under the **Services** tab.
 Use the following values:

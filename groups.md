@@ -31,7 +31,7 @@ A **group** defines what users can see and what they can do. This is achieved by
 
 A **global permission** gives the right to a user to perform a very specific action. For example, the global permission `read:pages` allows the user to view pages, while the global permission `write:assets` allows the user to upload images and files. These global permissions act as a master switch to **allow or deny** a specific action on the wiki.
 
-While global permissions are great a limiting the user to perform only a specific set of actions, it lacks control on **where** these permissions are applied. For example, you might want a user to be able to view pages under `/cities` but not pages under `/secret`. This is where **Page Rules** come into play.
+While global permissions are great at limiting the user to perform only a specific set of actions, it lacks control on **where** these permissions are applied. For example, you might want a user to be able to view pages under `/cities` but not pages under `/secret`. This is where **Page Rules** come into play.
 
 A **page rule** specifies exactly where permissions are applicable.
 
@@ -74,7 +74,7 @@ When 2 rules have the same path specificity AND the same match type, `Deny` will
 
 ***What is the default behavior for a permission?***
 
-Unless you explicitely grant `Allow` on a permission, it will always be denied by default. Therefore, giving no permission is the same as adding a `Deny` rule for all permissions. As such, `Deny` rules are only needed to override a previous `Allow` rule. You do not need to add a `Deny` rule if you didn't `Allow` it in the first place at a lower level.
+Unless you explicitly grant `Allow` on a permission, it will always be denied by default. Therefore, giving no permission is the same as adding a `Deny` rule for all permissions. As such, `Deny` rules are only needed to override a previous `Allow` rule. You do not need to add a `Deny` rule if you didn't `Allow` it in the first place at a lower level.
 
 ***Why have global permissions at all, instead of simply using page rules?***
 
@@ -141,7 +141,7 @@ If the user was unable to verify their account or didn't receive the verificatio
 
 ## Delete User
 
-While it's possible to delete an account, it's not recommended. It's always preferrable to deactivate the user instead.
+While it's possible to delete an account, it's not recommended. It's always preferable to deactivate the user instead.
 
 To delete a user, select the account from the **Users** list, click the **Actions** button and select **Delete**. Confirm that you want to delete the account to proceed.
 

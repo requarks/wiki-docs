@@ -9,7 +9,7 @@ tags:
 > Available from version **2.4 and up**
 {.is-info}
 
-An comments module adds discussion capabitilies to your wiki. It consists of properties that can be set by the user as well as methods that are called on certain events \(e.g. posting a new comment\).
+A comments module adds discussion capabilities to your wiki. It consists of properties that can be set by the user as well as methods that are called on certain events \(e.g. posting a new comment\).
 
 Comments modules are located in `/server/modules/comments`.
 

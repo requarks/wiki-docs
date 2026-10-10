@@ -22,7 +22,7 @@ tags: auth, module
 
 ### Creating a Keycloak client
 1. At the Keycloak administration page, go to the `Clients` menu, and click `Create` button on the right
-2. Enter a **Client ID**, for example `wikijs` (You wil need the `Client ID` later)
+2. Enter a **Client ID**, for example `wikijs` (You will need the `Client ID` later)
 3. Select **openid-connect** as `Client Protocol`
 4. And **Root URL** is the base URL to Wikijs (for example `https://wiki.example.com`)
 5. Click **Save**

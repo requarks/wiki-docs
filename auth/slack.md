@@ -14,7 +14,7 @@ Slack is a cloud-based set of proprietary team collaboration tools and services.
 ## A) Create Slack Application
 
 1. If not already the case, create a workspace for your organization on [Slack](https://slack.com/).
-1. Nagivate to the [Your Apps](https://api.slack.com/apps?new_app=1) page to create a new app.
+1. Navigate to the [Your Apps](https://api.slack.com/apps?new_app=1) page to create a new app.
 1. Enter a **name** (e.g. Wiki) and select your workspace.
 1. Click **Create App**.
 1. Once the app is created, click on **OAuth & Permissions** from the left sidebar.

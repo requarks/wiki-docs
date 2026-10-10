@@ -25,7 +25,7 @@ Ubuntu 18.04 LTS with the following software pre-installed:
 
 Wiki.js requires at least the **t3.micro** instance size. *The **t3.nano** instance type is not supported.*{.red--text}
 
-However, for best performance, we recommend using at least the **t3.small** or preferrably the **c5.large** instance size. Wiki.js use background processes for CPU intensive tasks (e.g. page rendering). Therefore, having at least 2 dedicated CPU cores will results in improved performance for such tasks.
+However, for best performance, we recommend using at least the **t3.small** or preferably the **c5.large** instance size. Wiki.js use background processes for CPU intensive tasks (e.g. page rendering). Therefore, having at least 2 dedicated CPU cores will results in improved performance for such tasks.
 
 # Getting Started
 

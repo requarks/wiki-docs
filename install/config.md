@@ -260,7 +260,7 @@ pool:
   max: 10
 ```
 
-Refer to to the [tarn.js](https://github.com/vincit/tarn.js) project page for all possible options.
+Refer to the [tarn.js](https://github.com/vincit/tarn.js) project page for all possible options.
 
 ## Bind IP
 

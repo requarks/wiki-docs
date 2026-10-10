@@ -28,7 +28,7 @@ It also optionally packages the [PostgreSQL](https://github.com/kubernetes/chart
 
 ## Prerequisites
 
-- PV provisioner support in the underlying infrastructure (with persistence storage enabled) if you want data persistance
+- PV provisioner support in the underlying infrastructure (with persistence storage enabled) if you want data persistence
 
 ## Adding the Wiki.js Helm Repository
 
@@ -64,7 +64,7 @@ helm delete my-release
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
 
-> **Warning**: Persistant Volume Claims for the database are not deleted automatically. They need to be manually deleted
+> **Warning**: Persistent Volume Claims for the database are not deleted automatically. They need to be manually deleted
 {.is-warning}
 
 ```console
@@ -108,7 +108,7 @@ The following table lists the configurable parameters of the Wiki.js chart and t
 | `postgresql.persistence.enabled`                | Enable postgres persistence using PVC                | `true`                                                     |
 | `postgresql.persistence.existingClaim`          | Provide an existing `PersistentVolumeClaim` for postgres | `nil`                                                      |
 | `postgresql.persistence.storageClass`           | Postgres PVC Storage Class (example: `nfs`)                           | `nil`                 |
-| `postgresql.persistence.size`                   | Postgers PVC Storage Request                         | `8Gi`                                                     |
+| `postgresql.persistence.size`                   | Postgres PVC Storage Request                         | `8Gi`                                                     |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
@@ -127,7 +127,7 @@ helm install --name my-release -f values.yaml requarks/wiki
 > **Tip**: You can use the default [values.yaml](values.yaml)
 {.is-info}
 
-## PostgresSQL
+## PostgreSQL
 
 By default, PostgreSQL is installed as part of the chart.
 

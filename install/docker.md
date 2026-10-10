@@ -48,7 +48,7 @@ You must set the following environment variables. They are all **required** unle
 
 *Alternative way to provide the database password, via a local file secret:*
 
-- **DB_PASS_FILE**: Path to the mapped file containing to the database password. *(optional, replaces DB_PASS)*
+- **DB_PASS_FILE**: Path to the mapped file containing the database password. *(optional, replaces DB_PASS)*
 {.grid-list}
 
 *For SQLite only:*

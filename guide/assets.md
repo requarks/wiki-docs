@@ -28,7 +28,7 @@ Select the asset you want to insert, then click the **Insert** button.
 
 ### Image Alignment
 
-When inserting an image, you can also set a specic alignment using the **Image Alignment** dropdown menu (to the right of dialog).
+When inserting an image, you can also set a specific alignment using the **Image Alignment** dropdown menu (to the right of dialog).
 
 - **Left**: Align to the left of the page.
 - **Centered**: Align to the center of the page.

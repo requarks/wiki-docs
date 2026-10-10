@@ -24,7 +24,7 @@ Each module can be enabled / disabled individually and configured in the **Admin
 Converts Markdown content into HTML.
 
 ### Parameters
-- **Allow HTML**: Enable HTML tabs in content.
+- **Allow HTML**: Enable HTML tags in content.
 - **Automatically convert links**: Links will automatically be converted into clickable links.
 - **Automatically convert line breaks**: Add linebreaks within paragraphs.
 - **Typographer**: Enable some language-neutral replacement + quotes beautification.
@@ -202,7 +202,7 @@ Exp<sup>10</sup>
 
 #### Parameters
 - **Subscript**: Enable subscript tags.
-- **Superscript**: Enable supercript tags
+- **Superscript**: Enable superscript tags
 {.grid-list}
 
 
