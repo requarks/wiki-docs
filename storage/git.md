@@ -77,7 +77,14 @@ For convenience, instructions for the most popular Git providers are listed belo
 5. Set the **Sync Direction** to **Bi-directional**.
 6. Set the **Sync Schedule** to **5 minutes**.
 7. Click the **Apply Changes** button at the top of the page.
-8. Wait for the **Status** panel to update. A new entry for **Git** should appear in green. If the bar is red, it means you have an error in your configuration. Go back to the Git tab, fix the error and try again.
+8. Wait for the **Status** panel to update. A new entry for **Git** should appear in green. If the bar is red, it means you have an error in your configuration. Go back to the Git tab, fix the error, and try again.
+
+### Edit on Github Button
+
+To add an "Edit on Github" button on all of your pages:
+1. Go to Administration and click **General** in the left navigation menu.
+2. Toggle to `Display External Edit Button`
+3. Update the `Button URL` at the bottom with your own Github organization and repo name where the content is stored. 
 
 ## GitLab
 
