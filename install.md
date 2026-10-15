@@ -33,6 +33,7 @@ dateCreated: 2019-02-15T04:22:28.058Z
 - [Install on Azure Web App](/install/azurewebapp)
 - [Install on Heroku](/install/heroku)
 - [Install on IBM Cloud Foundry](https://github.com/Requarks/wiki-ibm-cloud-foundry)
+- [Install on Pethost](https://pethost.dev/templates/wiki-js/)
 - [Install on PikaPods](https://www.pikapods.com/pods?run=wiki-js)
 - [Install using Portainer](/install/portainer)
 {.links-list}
